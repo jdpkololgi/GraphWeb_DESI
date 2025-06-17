@@ -63,17 +63,49 @@ metadata_catalogs = fastspec_catalogs
 ## The quantities available can be found in the fastspecfit data model: 
 ## https://fastspecfit.readthedocs.io/en/latest/fastspec.html
 
+# cols_selection_metadata = [
+#     'TARGETID', 'SURVEY', 'PROGRAM', 'DESI_TARGET', 'BGS_TARGET', 'SV1_BGS_TARGET', 'SV2_BGS_TARGET', 'SV3_BGS_TARGET', 'HEALPIX', 
+#     'RA', 'DEC', 'Z', 'ZWARN', 'DELTACHI2', 'SPECTYPE', 'EBV', 
+#     'FLUX_G', 'FLUX_R', 'FLUX_Z', 'FLUX_W1', 'FLUX_W2', 'FLUX_W3', 'FLUX_W4', 
+#     'FLUX_IVAR_G', 'FLUX_IVAR_R', 'FLUX_IVAR_Z', 'FLUX_IVAR_W1', 'FLUX_IVAR_W2', 'FLUX_IVAR_W3', 'FLUX_IVAR_W4']
+
+# cols_selection_specphot = [
+#     'RCHI2', 'RCHI2_LINE', 'RCHI2_CONT', 
+#     'VDISP', 'VDISP_IVAR', 'TAUV', 'TAUV_IVAR', 'AGE', 'AGE_IVAR', 'ZZSUN', 'ZZSUN_IVAR', 
+#     'DN4000', 'DN4000_OBS', 'DN4000_IVAR', 'DN4000_MODEL', 'DN4000_MODEL_IVAR', 
+#     'LOGMSTAR', 'LOGMSTAR_IVAR', 'SFR', 'SFR_IVAR']
+
+# cols_selection_fastspec = [
+#     'APERCORR', 'APERCORR_R',
+#     'INIT_BALMER_BROAD', 'INIT_SIGMA_NARROW', 'INIT_SIGMA_BALMER', 
+#     'HALPHA_AMP', 'HALPHA_AMP_IVAR', 'HALPHA_FLUX', 'HALPHA_FLUX_IVAR', 'HALPHA_EW', 'HALPHA_SIGMA', 'HALPHA_SIGMA_IVAR',
+#     'HALPHA_BROAD_AMP', 'HALPHA_BROAD_AMP_IVAR', 'HALPHA_BROAD_FLUX', 'HALPHA_BROAD_FLUX_IVAR', 'HALPHA_BROAD_SIGMA', 'HALPHA_BROAD_SIGMA_IVAR',
+#     'HBETA_AMP', 'HBETA_AMP_IVAR', 'HBETA_FLUX', 'HBETA_FLUX_IVAR', 'HBETA_EW', 'HBETA_SIGMA', 'HBETA_SIGMA_IVAR',
+#     'HBETA_BROAD_AMP', 'HBETA_BROAD_AMP_IVAR', 'HBETA_BROAD_FLUX', 'HBETA_BROAD_FLUX_IVAR', 'HBETA_BROAD_SIGMA', 'HBETA_BROAD_SIGMA_IVAR',
+#     'OIII_5007_AMP', 'OIII_5007_AMP_IVAR', 'OIII_5007_FLUX', 'OIII_5007_FLUX_IVAR', 'OIII_5007_SIGMA', 'OIII_5007_SIGMA_IVAR', 
+#     'OII_3726_AMP', 'OII_3726_AMP_IVAR', 'OII_3726_FLUX', 'OII_3726_FLUX_IVAR', 'OII_3726_SIGMA', 'OII_3726_SIGMA_IVAR', 
+#     'OII_3729_AMP', 'OII_3729_AMP_IVAR', 'OII_3729_FLUX', 'OII_3729_FLUX_IVAR', 'OII_3729_SIGMA', 'OII_3729_SIGMA_IVAR', 
+#     'NII_6548_AMP', 'NII_6548_AMP_IVAR', 'NII_6548_FLUX', 'NII_6548_FLUX_IVAR', 'NII_6548_SIGMA', 'NII_6548_SIGMA_IVAR', 
+#     'NII_6584_AMP', 'NII_6584_AMP_IVAR', 'NII_6584_FLUX', 'NII_6584_FLUX_IVAR', 'NII_6584_SIGMA', 'NII_6584_SIGMA_IVAR', 
+#     'OIII_5007_CONT', 'OIII_5007_CONT_IVAR', 'HALPHA_CONT', 'HALPHA_CONT_IVAR']
+
+#############
+# From manasvee
+
 cols_selection_metadata = [
-    'TARGETID', 'SURVEY', 'PROGRAM', 'DESI_TARGET', 'HEALPIX', 
-    'RA', 'DEC', 'Z', 'ZWARN', 'DELTACHI2', 'SPECTYPE', 'EBV', 
-    'FLUX_G', 'FLUX_R', 'FLUX_Z', 'FLUX_W1', 'FLUX_W2', 'FLUX_W3', 'FLUX_W4', 
-    'FLUX_IVAR_G', 'FLUX_IVAR_R', 'FLUX_IVAR_Z', 'FLUX_IVAR_W1', 'FLUX_IVAR_W2', 'FLUX_IVAR_W3', 'FLUX_IVAR_W4']
+    'TARGETID', 'SURVEY', 'PROGRAM',
+    'RA', 'DEC', # deg
+    'BGS_TARGET', #'SV1_BGS_TARGET', 'SV2_BGS_TARGET', 'SV3_BGS_TARGET',
+    'Z', 'ZWARN', 'DELTACHI2', 'SPECTYPE', # Redshift based on Redrock or QuasarNet (for QSO targets only).
+    'FLUX_G', 'FLUX_R', 'FLUX_Z', # nmgy; Total g, r and z-band flux corrected for Galactic extinction.
+    'FLUX_IVAR_G', 'FLUX_IVAR_R', 'FLUX_IVAR_Z', # 1 / nmgy2
+    ]
 
 cols_selection_specphot = [
-    'RCHI2', 'RCHI2_LINE', 'RCHI2_CONT', 
-    'VDISP', 'VDISP_IVAR', 'TAUV', 'TAUV_IVAR', 'AGE', 'AGE_IVAR', 'ZZSUN', 'ZZSUN_IVAR', 
-    'DN4000', 'DN4000_OBS', 'DN4000_IVAR', 'DN4000_MODEL', 'DN4000_MODEL_IVAR', 
-    'LOGMSTAR', 'LOGMSTAR_IVAR', 'SFR', 'SFR_IVAR']
+    'LOGMSTAR', 'LOGMSTAR_IVAR', # Msun; Logarithmic stellar mass (h=1.0, Chabrier+2003 initial mass function).
+    'ABSMAG01_SDSS_U', 'ABSMAG01_SDSS_G', 'ABSMAG01_SDSS_R', 'ABSMAG01_SDSS_I', 'ABSMAG01_SDSS_Z', # Absolute magnitude in SDSS u-band band-shifted to z=0.1 assuming h=1.0.
+    'ABSMAG01_IVAR_SDSS_U', 'ABSMAG01_IVAR_SDSS_G', 'ABSMAG01_IVAR_SDSS_R', 'ABSMAG01_IVAR_SDSS_I', 'ABSMAG01_IVAR_SDSS_Z',
+    ] 
 
 cols_selection_fastspec = [
     'APERCORR', 'APERCORR_R',
@@ -89,31 +121,39 @@ cols_selection_fastspec = [
     'NII_6584_AMP', 'NII_6584_AMP_IVAR', 'NII_6584_FLUX', 'NII_6584_FLUX_IVAR', 'NII_6584_SIGMA', 'NII_6584_SIGMA_IVAR', 
     'OIII_5007_CONT', 'OIII_5007_CONT_IVAR', 'HALPHA_CONT', 'HALPHA_CONT_IVAR']
 
+#############
 
 ## Define the function which determines which galaxies to extract from the entire Loa sample. 
 ## In the example here, I select all galaxies which have SPECTYPE=GALAXY and z<0.05
 
 def get_selected_rows_metadata(cat):
     '''Return boolean array of rows that meet criteria.'''
-    rows = ((cat['SPECTYPE']=='GALAXY') &    # Flag for galaxies
-            (cat['Z']>0.01) &                # Lower limit on redshift   
-            (cat['Z']<0.1))                # Upper limit on redshift
-            # (cat['DELTACHI2']>25) &          # Lower limit on delta chi2: increases with purity of correctly identified redshifts
-            # (cat['ZWARN']==0))               # Flag for redshift/spectype fitting problems (ZWARN=0 is good)
+    no_row = len(cat)
+    rows = (
+        (cat['SPECTYPE'] == 'GALAXY') &    # Flag for galaxies
+        (cat['Z'] >= 0.01) &                # Lower limit on redshift   
+        (cat['Z'] <= 0.06)                  # Upper limit on redshift
+        # (cat['DELTACHI2'] >= 25) &        # Lower limit on delta chi2: increases with purity of correctly identified redshifts
+        # (cat['ZWARN'] == 0) &             # Flag for redshift/spectype fitting problems (ZWARN=0 is good)
+        # (cat['BGS_TARGET'] != 0.)
+    )
 
-    return rows
+    return rows, no_row
 
 ## Now we go through all the fastspecfit sub-catalogs and identify the objects that match our selection criteria: 
 print('Looking for galaxies matching the criteria in the  fastspecfit files')
 
 all_rows = []
+counter = 0
 for i in range(len(fastspec_catalogs)):
     print('Processing ' + fastspec_catalogs[i])
     cat_meta = fitsio.read(fastspec_path+metadata_catalogs[i], 'METADATA', columns=cols_selection_metadata)
-    rows = get_selected_rows_metadata(cat_meta)
+    rows, no_row = get_selected_rows_metadata(cat_meta)
     rows = np.arange(len(rows))[rows] # change to row numbers instead of boolean
     all_rows.append(rows)
-
+    counter += no_row
+print(f'Found {counter:,} galaxies matching the criteria in the fastspecfit catalogs')
+print(len(all_rows), 'sub-catalogs processed')
 
 ## We can now loop through all the sub-catlogs, and extract the galaxies we want 
 
@@ -165,7 +205,7 @@ zcatfile = '/global/cfs/cdirs/desi/spectro/redux/loa/zcatalog/v1/zall-pix-loa.fi
 ## the row numbers of my objects of interest. (this should obviously be modified as need be, for whatever selection criteria are desired) 
 
 zcat = fitsio.read(zcatfile, columns=['Z', 'SPECTYPE'])
-rows = get_selected_rows_metadata(zcat)
+rows, _ = get_selected_rows_metadata(zcat)
 rows = np.arange(len(rows))[rows]  # transform into indices rather than boolean array
 
 ## Read in those rows, transform the result into an Astropy table, select which columns to keep, and
@@ -237,5 +277,5 @@ tractor.keep_columns(['TARGETID', 'TYPE', 'FRACFLUX_G', 'FRACFLUX_R', 'FRACFLUX_
 
 cat_withphot = join(cat, tractor, join_type='left', keys=['TARGETID'])
 cat_withphot.write('./loa-combined-lowz-fastspec-phot.fits', overwrite=True)
-
+print(len(cat_withphot), 'objects in the final catalog')
 print('Done')

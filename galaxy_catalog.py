@@ -10,13 +10,15 @@ import numpy as np
 
 import matplotlib.pyplot as plt
 
-class GalaxyCatalogue:
-    def __init__(self, PATH):
+class GalaxyCatalog:
+    def __init__(self, PATH, LOGMSTAR=9.):
         self.zcat = Table(fitsio.read(PATH))
         # self.zcat = Table(fitsio.read(f'{specprod_dir}/zcatalog/v1/zpix-main-bright.fits', "ZCATALOG", columns=columns))
-        # self.zcat = self.zcat[self.zcat['SPECTYPE'] == 'GALAXY'] # Filter for galaxies only
         self.zcat = self.zcat[self.zcat['ZWARN'] == 0] # Filter for successful redshifts
-        self.zcat = self.zcat[self.zcat['DELTACHI2'] > 25] # Filter for good quality redshifts
+        self.zcat = self.zcat[self.zcat['DELTACHI2'] >= 25.] # Filter for good quality redshifts
+        self.zcat = self.zcat[self.zcat['LOGMSTAR'] >= LOGMSTAR] # Filter for galaxies with M_STAR > LOGMSTAR
+        self.zcat = self.zcat[self.zcat['BGS_TARGET'] != 0.] # Filter for BGS targets
+
         print(f"Raw number of zcat entries: {len(self.zcat):,}")
 
     def select_gal_classes(self, gal_class='BGS', M_STAR=9):
@@ -134,10 +136,10 @@ class GalaxyCatalogue:
         plt.show()
 
         
-
-PATH = '/global/homes/d/dkololgi/GraphWeb_DESI/loa-combined-lowz-fastspec-phot.fits'
-
-data = GalaxyCatalogue(PATH)
-data.select_gal_classes('BGS') # Example usage to select BGS galaxies
-data.sky_coord(plot=True, globeplot=False) # Example usage to plot sky coordinates
-data.cartesian_coord() # Example usage to compute Cartesian coordinates
+if __name__ == "__main__":
+    # PATH = '/global/homes/d/dkololgi/GraphWeb_DESI/test.fits'
+    PATH='/global/homes/d/dkololgi/GraphWeb_DESI/loa-combined-lowz.fits'
+    data = GalaxyCatalog(PATH)
+    # data.select_gal_classes('BGS') # Example usage to select BGS galaxies
+    data.sky_coord(plot=True, globeplot=False) # Example usage to plot sky coordinates
+    data.cartesian_coord() # Example usage to compute Cartesian coordinates
