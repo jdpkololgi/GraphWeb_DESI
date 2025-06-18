@@ -119,7 +119,7 @@ inference_model.load_state_dict(
 )
 
 inference_model.eval()
-
+print('Inference model loaded and set to eval mode')
 with torch.no_grad():
     DESI_out = inference_model(
         DESI_geom.x, 
@@ -128,11 +128,8 @@ with torch.no_grad():
     )
     DESI_pred = DESI_out.argmax(dim=1).numpy()
     DESI_probs = DESI_out.numpy()
-
-plt.hist(DESI_pred)
-plt.xlabel('CW Environment')
-plt.ylabel('Count')
-
+print('Inference completed, predictions and probabilities obtained')
+# Define environment labels and custom palette
 environ_dicts = {
     0: 'Void',
     1: 'Wall',
@@ -153,6 +150,20 @@ custom_palette = {
     3: 'yellow'   # plum pink
 }
 
+# Historgram of counts with labels giving percentage of each environment
+plt.figure(figsize=(10, 6))
+plt.hist(DESI_pred, bins=np.arange(5)-0.5, rwidth=0.8, color='skyblue', edgecolor='black')
+plt.xticks(np.arange(4), [environ_dicts[i] for i in range(4)])
+plt.xlabel('Cosmic Web Environment')
+plt.ylabel('Count')
+plt.title('Distribution of Cosmic Web Environments in DESI Network')
+plt.grid(axis='y', linestyle='--', alpha=0.7)
+plt.show()
+
+# plt.hist(DESI_pred)
+# plt.xlabel('CW Environment')
+# plt.ylabel('Count')
+
 import plotly.io as pio
 pio.renderers.default = "vscode"
 import plotly.graph_objects as go
@@ -161,6 +172,30 @@ import plotly.express as px
 # Map labels and colors
 labels = [environ_dicts[int(label)] for label in DESI_pred]
 colors = [custom_palette[int(label)] for label in DESI_pred]
+
+# 2D projection plot of DESI galaxies with cosmic web predictions
+zlims = (-50, 0)  # Set z slab limits in Mpc
+fig = plt.figure(figsize=(10, 8))
+ax = fig.add_subplot()
+# set z slab between -10 and 10 Mpc
+proj_x = DESI_geom.pos[:, 0][(DESI_geom.pos[:,2]<zlims[1])&(DESI_geom.pos[:,2]>zlims[0])]
+proj_y = DESI_geom.pos[:, 1][(DESI_geom.pos[:,2]<zlims[1])&(DESI_geom.pos[:,2]>zlims[0])]
+ax.scatter(
+    proj_x,
+    proj_y,
+    c=[custom_palette[int(label)] for label in DESI_pred[(DESI_geom.pos[:,2]<zlims[1])&(DESI_geom.pos[:,2]>zlims[0])]],
+    s=1,  # Size of points
+    alpha=0.8,  # Transparency
+    edgecolor='none'  # No edge color
+)
+ax.set_xlabel('X (Mpc)')
+ax.set_ylabel('Y (Mpc)')
+ax.set_title('DESI Galaxy Network with Cosmic Web Predictions (2D Projection)')
+# Set aspect ratio to equal for better visualization
+ax.set_aspect('equal', adjustable='box')
+# Show the plot
+plt.show()
+
 
 # Build the interactive plot
 fig = go.Figure(data=[go.Scatter3d(
@@ -207,36 +242,79 @@ for i in range(4):
 # This code is for creating a galaxy network from the DESI BGS catalog and predicting the cosmic web environment using a GAT model.
 
 FLUXG = DESI_NETWORK.DESI_GAL_CAT.zcat['FLUX_G']
-
-fig, axs = plt.subplots(2, 2, figsize=(12, 10), sharex=False, sharey=False, layout='constrained')
-axs = axs.flatten()
-for i in range(4):
-    mask = DESI_pred == i
-    axs[i].hist(FLUXG[mask], bins=50, alpha=0.7, label=f'{environ_dicts[i]}', density=True, color=custom_palette[i])
-    axs[i].set_xlabel('Total g Band Flux')
-    axs[i].set_ylabel('Frequency')
-    axs[i].legend()
-
 FLUXR = DESI_NETWORK.DESI_GAL_CAT.zcat['FLUX_R']
-fig, axs = plt.subplots(2, 2, figsize=(12, 10), sharex=False, sharey=False, layout='constrained')
-axs = axs.flatten()
-for i in range(4):
-    mask = DESI_pred == i
-    axs[i].hist(FLUXR[mask], bins=50, alpha=0.7, label=f'{environ_dicts[i]}', density=True, color=custom_palette[i])
-    axs[i].set_xlabel('Total r Band Flux')
-    axs[i].set_ylabel('Frequency')
-    axs[i].legend()
-
 FLUXZ = DESI_NETWORK.DESI_GAL_CAT.zcat['FLUX_Z']
+
+G_MAG_mask = FLUXG > 0
+R_MAG_mask = FLUXR > 0
+Z_MAG_mask = FLUXZ > 0
+
+G_MAG = 22.5 - 2.5*np.log10(FLUXG[np.where(G_MAG_mask)[0]])
+R_MAG = 22.5 - 2.5*np.log10(FLUXR[np.where(R_MAG_mask)[0]])
+Z_MAG = 22.5 - 2.5*np.log10(FLUXZ[np.where(Z_MAG_mask)[0]])
+
+
 fig, axs = plt.subplots(2, 2, figsize=(12, 10), sharex=False, sharey=False, layout='constrained')
 axs = axs.flatten()
 for i in range(4):
-    mask = DESI_pred == i
-    axs[i].hist(FLUXZ[mask], bins=50, alpha=0.7, label=f'{environ_dicts[i]}', density=True, color=custom_palette[i])
-    axs[i].set_xlabel('Total z Band Flux')
+    mask = (DESI_pred == i)[G_MAG_mask]
+    axs[i].hist(G_MAG[mask], bins=50, alpha=0.7, label=f'{environ_dicts[i]}', density=True, color=custom_palette[i])
+    axs[i].set_xlabel('g Mag.')
     axs[i].set_ylabel('Frequency')
     axs[i].legend()
 
+
+fig, axs = plt.subplots(2, 2, figsize=(12, 10), sharex=False, sharey=False, layout='constrained')
+axs = axs.flatten()
+for i in range(4):
+    mask = (DESI_pred == i)[R_MAG_mask]
+    axs[i].hist(R_MAG[mask], bins=50, alpha=0.7, label=f'{environ_dicts[i]}', density=True, color=custom_palette[i])
+    axs[i].set_xlabel('r Mag.')
+    axs[i].set_ylabel('Frequency')
+    axs[i].legend()
+
+
+fig, axs = plt.subplots(2, 2, figsize=(12, 10), sharex=False, sharey=False, layout='constrained')
+axs = axs.flatten()
+for i in range(4):
+    mask = (DESI_pred == i)[Z_MAG_mask]
+    axs[i].hist(Z_MAG[mask], bins=50, alpha=0.7, label=f'{environ_dicts[i]}', density=True, color=custom_palette[i])
+    axs[i].set_xlabel('z Mag.')
+    axs[i].set_ylabel('Frequency')
+    axs[i].legend()
+
+# g-r color, removing all galaxies with negative or zero flux in either band
+BAD_GAL = np.unique(list(np.where((FLUXG<=0))[0])+list(np.where((FLUXR<=0))[0])+list(np.where((FLUXZ<=0))[0]))
+GOOD_FLUXG = np.delete(FLUXG, BAD_GAL)
+GOOD_FLUXR = np.delete(FLUXR, BAD_GAL)
+GOOD_FLUXZ = np.delete(FLUXZ, BAD_GAL)
+
+GOOD_G_MAG = 22.5 - 2.5*np.log10(GOOD_FLUXG)
+GOOD_R_MAG = 22.5 - 2.5*np.log10(GOOD_FLUXR)
+GOOD_Z_MAG = 22.5 - 2.5*np.log10(GOOD_FLUXZ)
+
+g_r = GOOD_G_MAG-GOOD_R_MAG
+#Plotting g-r color for each environment
+fig, axs = plt.subplots(2, 2, figsize=(12, 10), sharex=False, sharey=False, layout='constrained')
+axs = axs.flatten()
+for i in range(4):
+    mask = np.delete((DESI_pred == i), BAD_GAL)
+    axs[i].hist(g_r[mask], bins=50, alpha=0.7, label=f'{environ_dicts[i]}', density=True, color=custom_palette[i])
+    axs[i].set_xlabel('g-r Color')
+    axs[i].set_ylabel('Frequency')
+    axs[i].legend()
+
+#Plotting g-r color for each environment
+fig, axs = plt.subplots(2,2, figsize=(12, 10), sharex=False, sharey=False, layout='constrained')
+axs = axs.flatten()
+for i in range(4):
+    mask = np.delete((DESI_pred == i), BAD_GAL)
+    axs[i].scatter(GOOD_R_MAG[mask],g_r[mask],marker='.',  alpha=0.5, label=f'{environ_dicts[i]}', color=custom_palette[i])
+    axs[i].set_yscale('log')
+    axs[i].set_ylim([1e-2,1e1])
+    axs[i].set_xlabel('r Mag.')
+    axs[i].set_ylabel('g-r Colour')
+    axs[i].legend()
 
 # DESI_GAL_CAT = GalaxyCatalogue(
 #     PATH="/global/homes/d/dkololgi/GraphWeb_DESI/loa-combined-lowz.fits" # Path to reduced fastspecfit BGS catalog

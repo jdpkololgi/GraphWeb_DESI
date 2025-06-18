@@ -7,7 +7,6 @@ from astropy.io import fits
 import fitsio
 import os
 import numpy as np
-
 import matplotlib.pyplot as plt
 
 class GalaxyCatalog:
@@ -100,26 +99,56 @@ class GalaxyCatalog:
                 plt.grid()
                 plt.show()
 
+        self.comoving_distance = cosmo.comoving_distance(self.zcat['Z']).to(u.Mpc)
 
-        self.sky_coord = SkyCoord(ra=self.zcat['RA'], dec=self.zcat['DEC'], unit=(u.deg, u.deg))
-
-    def cartesian_coord(self):
+        self.sky_coord = SkyCoord(ra=self.zcat['RA'], dec=self.zcat['DEC'], unit=(u.deg, u.deg), distance=self.comoving_distance)
+        self.sky_coord_galactic = self.sky_coord.galactic
+        self.galactic_north_mask = self.sky_coord_galactic.b.deg > 0.
+        self.galactic_south_mask = self.sky_coord_galactic.b.deg < 0.
+        self.sky_coord_galactic_north = self.sky_coord_galactic[self.galactic_north_mask]
+        self.sky_coord_galactic_south = self.sky_coord_galactic[self.galactic_south_mask]
+        
+    def cartesian_coord(self, xyzplot='full'):
         '''
         Return the Cartesian coordinates of the galaxies in the catalogue assuming a Planck 2018 cosmology.
         '''
-        self.comoving_distance = cosmo.comoving_distance(self.zcat['Z']).to(u.Mpc)
-        self.cartesian_coord = SkyCoord(ra=self.zcat['RA'], dec=self.zcat['DEC'], unit=(u.deg, u.deg), distance=self.comoving_distance)
+        self.sky_coord(plot=False, globeplot=False)  # Ensure sky coordinates are computed first
 
-        self.X = self.cartesian_coord.cartesian.x.to(u.Mpc).value
-        self.Y = self.cartesian_coord.cartesian.y.to(u.Mpc).value
-        self.Z = self.cartesian_coord.cartesian.z.to(u.Mpc).value
+        self.X = self.sky_coord.cartesian.x.to(u.Mpc).value
+        self.Xn = self.sky_coord_galactic_north.cartesian.x.to(u.Mpc).value
+        self.Xs = self.sky_coord_galactic_south.cartesian.x.to(u.Mpc).value
+        self.Y = self.sky_coord.cartesian.y.to(u.Mpc).value
+        self.Yn = self.sky_coord_galactic_north.cartesian.y.to(u.Mpc).value
+        self.Ys = self.sky_coord_galactic_south.cartesian.y.to(u.Mpc).value
+        self.Z = self.sky_coord.cartesian.z.to(u.Mpc).value
+        self.Zn = self.sky_coord_galactic_north.cartesian.z.to(u.Mpc).value
+        self.Zs = self.sky_coord_galactic_south.cartesian.z.to(u.Mpc).value
 
-        plt.style.use('dark_background')
+        if xyzplot == 'north':
+            self.X = self.Xn
+            self.Y = self.Yn
+            self.Z = self.Zn
+            redshifts = self.zcat['Z'][self.galactic_north_mask]
+        elif xyzplot == 'south':
+            self.X = self.Xs
+            self.Y = self.Ys
+            self.Z = self.Zs
+            redshifts = self.zcat['Z'][self.galactic_south_mask]
+        elif xyzplot == 'full':
+            redshifts = self.zcat['Z']
+            pass
+        else:
+            raise ValueError("xyzplot must be one of ['north', 'south', 'full']")
+        plt.style.use('seaborn-v0_8-darkgrid')
+        plt.rcParams["text.usetex"] = False
         plt.rcParams.update({'font.size': 14})
         
         fig = plt.figure(figsize=(18, 12))
         ax = fig.add_subplot(111, projection='3d')
-        ax.scatter(self.X, self.Y, self.Z, c=self.zcat['Z'], cmap='inferno_r', s=0.1, alpha=0.5, marker='.')
+        ax.scatter(self.X, self.Y, self.Z, c=redshifts, cmap='inferno_r', s=0.1, alpha=0.5, marker='.')
+        ax.set_xlim([-300, 300])
+        ax.set_ylim([-300, 300])
+        ax.set_zlim([-300, 300])
         ax.set_xlabel('X (Mpc)')
         ax.set_ylabel('Y (Mpc)')
         ax.set_zlabel('Z (Mpc)')
@@ -130,7 +159,7 @@ class GalaxyCatalog:
         ax.xaxis.set_pane_color((1.0, 1.0, 1.0, 0.0))
         ax.yaxis.set_pane_color((1.0, 1.0, 1.0, 0.0))
         ax.zaxis.set_pane_color((1.0, 1.0, 1.0, 0.0))
-        ax.set_title(f'DESI_BGS_cartesian_10_9_dark ({len(self.zcat):,} galaxies)')
+        ax.set_title(f'DESI_BGS_cartesian_10_9_dark_{xyzplot} ({len(self.zcat):,} galaxies)')
         plt.colorbar(ax.collections[0], label='Redshift (z)')
         fig.savefig('DESI_BGS_cartesian_10_9_dark.pdf')
         plt.show()
@@ -141,5 +170,5 @@ if __name__ == "__main__":
     PATH='/global/homes/d/dkololgi/GraphWeb_DESI/loa-combined-lowz.fits'
     data = GalaxyCatalog(PATH)
     # data.select_gal_classes('BGS') # Example usage to select BGS galaxies
-    data.sky_coord(plot=True, globeplot=False) # Example usage to plot sky coordinates
-    data.cartesian_coord() # Example usage to compute Cartesian coordinates
+    # data.sky_coord(plot=True, globeplot=False) # Example usage to plot sky coordinates
+    data.cartesian_coord(xyzplot='full') # Example usage to compute Cartesian coordinates
