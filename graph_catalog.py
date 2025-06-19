@@ -6,7 +6,6 @@ import numpy as np
 from sklearn.preprocessing import PowerTransformer
 
 import scienceplots
-plt.style.use(['science', 'no-latex']) 
 
 
 sys.path.append("../")
@@ -24,6 +23,7 @@ DESI_NETWORK = network(
     masscut=9.,
     from_DESI=True
 )
+
 print('DESI network object created')
 G=DESI_NETWORK.subhalo_delauany_network(xyzplot=False)
 print('DESI delaunay graph created')
@@ -136,18 +136,18 @@ environ_dicts = {
     2: 'Filament',
     3: 'Cluster'}
 
-custom_palette = {
-    0: '#4c78a8',     # deep teal
-    1: '#a05eb5',     # violet
-    2: '#76b7b2', # sky teal
-    3: '#e17c9a'   # plum pink
-}
+# custom_palette = {
+#     0: '#4c78a8',     # deep teal
+#     1: '#a05eb5',     # violet
+#     2: '#76b7b2', # sky teal
+#     3: '#e17c9a'   # plum pink
+# }
 
 custom_palette = {
-    0: 'red',     # void
-    1: 'green',     # wall
-    2: 'blue', # filament
-    3: 'yellow'   # plum pink
+    0: 'blue',     # void
+    1: 'yellow',     # wall
+    2: 'orange', # filament
+    3: 'red'   # clusters
 }
 
 # Historgram of counts with labels giving percentage of each environment
@@ -174,8 +174,8 @@ labels = [environ_dicts[int(label)] for label in DESI_pred]
 colors = [custom_palette[int(label)] for label in DESI_pred]
 
 # 2D projection plot of DESI galaxies with cosmic web predictions
-zlims = (-50, 0)  # Set z slab limits in Mpc
-fig = plt.figure(figsize=(10, 8))
+zlims = (-10, 10)  # Set z slab limits in Mpc
+fig = plt.figure(figsize=(10, 8), facecolor='white')
 ax = fig.add_subplot()
 # set z slab between -10 and 10 Mpc
 proj_x = DESI_geom.pos[:, 0][(DESI_geom.pos[:,2]<zlims[1])&(DESI_geom.pos[:,2]>zlims[0])]
@@ -185,9 +185,15 @@ ax.scatter(
     proj_y,
     c=[custom_palette[int(label)] for label in DESI_pred[(DESI_geom.pos[:,2]<zlims[1])&(DESI_geom.pos[:,2]>zlims[0])]],
     s=1,  # Size of points
-    alpha=0.8,  # Transparency
+    # alpha=0,  # Transparency
     edgecolor='none'  # No edge color
 )
+ax.grid(False)
+ax.legend(handles=[
+    plt.Line2D([0], [0], marker='o', color='w', label=environ_dicts[i],
+               markerfacecolor=custom_palette[i], markersize=5) for i in range(4)
+], title='Cosmic Web Environments', loc='best')
+
 ax.set_xlabel('X (Mpc)')
 ax.set_ylabel('Y (Mpc)')
 ax.set_title('DESI Galaxy Network with Cosmic Web Predictions (2D Projection)')

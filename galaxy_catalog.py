@@ -70,7 +70,7 @@ class GalaxyCatalog:
         # Filter for galaxies with M_STAR > 9
         self.zcat = self.zcat[self.zcat['LOGMSTAR'] > M_STAR]
 
-    def sky_coord(self, plot=True, globeplot=True):
+    def compute_sky_coord(self, plot=True, globeplot=True):
         '''
         Return the SkyCoord object for the galaxies in the catalogue.
         '''
@@ -101,51 +101,74 @@ class GalaxyCatalog:
 
         self.comoving_distance = cosmo.comoving_distance(self.zcat['Z']).to(u.Mpc)
 
-        self.sky_coord = SkyCoord(ra=self.zcat['RA'], dec=self.zcat['DEC'], unit=(u.deg, u.deg), distance=self.comoving_distance)
-        self.sky_coord_galactic = self.sky_coord.galactic
-        self.galactic_north_mask = self.sky_coord_galactic.b.deg > 0.
-        self.galactic_south_mask = self.sky_coord_galactic.b.deg < 0.
-        self.sky_coord_galactic_north = self.sky_coord_galactic[self.galactic_north_mask]
-        self.sky_coord_galactic_south = self.sky_coord_galactic[self.galactic_south_mask]
+        self.sky_coord_icrs = SkyCoord(
+            ra=self.zcat['RA'],
+            dec=self.zcat['DEC'], 
+            unit=(u.deg, u.deg), 
+            distance=self.comoving_distance,
+            frame='icrs'
+        )
+        # Convert to Galactic coordinates
+        sky_gal = self.sky_coord_icrs.galactic
+        self.galactic_north_mask = sky_gal.b.deg > 0.
+        self.galactic_south_mask = ~self.galactic_north_mask
+
+        # self.sky_coord_galactic = self.sky_coord.galactic
+        # self.galactic_north_mask = self.sky_coord_galactic.b.deg > 0.
+        # self.galactic_south_mask = self.sky_coord_galactic.b.deg < 0.
+        # self.sky_coord_galactic_north = self.sky_coord_galactic[self.galactic_north_mask]
+        # self.sky_coord_galactic_south = self.sky_coord_galactic[self.galactic_south_mask]
         
-    def cartesian_coord(self, xyzplot='full'):
+    def cartesian_coord(self, xyzplot='hemispheres'):
         '''
         Return the Cartesian coordinates of the galaxies in the catalogue assuming a Planck 2018 cosmology.
         '''
-        self.sky_coord(plot=False, globeplot=False)  # Ensure sky coordinates are computed first
+        self.compute_sky_coord(plot=False, globeplot=False)  # Ensure sky coordinates are computed first
 
-        self.X = self.sky_coord.cartesian.x.to(u.Mpc).value
-        self.Xn = self.sky_coord_galactic_north.cartesian.x.to(u.Mpc).value
-        self.Xs = self.sky_coord_galactic_south.cartesian.x.to(u.Mpc).value
-        self.Y = self.sky_coord.cartesian.y.to(u.Mpc).value
-        self.Yn = self.sky_coord_galactic_north.cartesian.y.to(u.Mpc).value
-        self.Ys = self.sky_coord_galactic_south.cartesian.y.to(u.Mpc).value
-        self.Z = self.sky_coord.cartesian.z.to(u.Mpc).value
-        self.Zn = self.sky_coord_galactic_north.cartesian.z.to(u.Mpc).value
-        self.Zs = self.sky_coord_galactic_south.cartesian.z.to(u.Mpc).value
+        # get full cartesian coordinates
+        cart = self.sky_coord_icrs.cartesian
+        self.X = cart.x.to(u.Mpc).value
+        self.Xn = cart[self.galactic_north_mask].x.to(u.Mpc).value
+        self.Xs = cart[self.galactic_south_mask].x.to(u.Mpc).value
 
-        if xyzplot == 'north':
-            self.X = self.Xn
-            self.Y = self.Yn
-            self.Z = self.Zn
-            redshifts = self.zcat['Z'][self.galactic_north_mask]
-        elif xyzplot == 'south':
-            self.X = self.Xs
-            self.Y = self.Ys
-            self.Z = self.Zs
-            redshifts = self.zcat['Z'][self.galactic_south_mask]
+        self.Y = cart.y.to(u.Mpc).value
+        self.Yn = cart[self.galactic_north_mask].y.to(u.Mpc).value
+        self.Ys = cart[self.galactic_south_mask].y.to(u.Mpc).value
+
+        self.Z = cart.z.to(u.Mpc).value
+        self.Zn = cart[self.galactic_north_mask].z.to(u.Mpc).value
+        self.Zs = cart[self.galactic_south_mask].z.to(u.Mpc).value
+
+        # self.X = self.sky_coord.cartesian.x.to(u.Mpc).value
+        # self.Xn = self.sky_coord_galactic_north.cartesian.x.to(u.Mpc).value
+        # self.Xs = self.sky_coord_galactic_south.cartesian.x.to(u.Mpc).value
+        # self.Y = self.sky_coord.cartesian.y.to(u.Mpc).value
+        # self.Yn = self.sky_coord_galactic_north.cartesian.y.to(u.Mpc).value
+        # self.Ys = self.sky_coord_galactic_south.cartesian.y.to(u.Mpc).value
+        # self.Z = self.sky_coord.cartesian.z.to(u.Mpc).value
+        # self.Zn = self.sky_coord_galactic_north.cartesian.z.to(u.Mpc).value
+        # self.Zs = self.sky_coord_galactic_south.cartesian.z.to(u.Mpc).value
+
+        if xyzplot == 'hemispheres':
+            redshifts = np.concatenate((self.zcat['Z'][self.galactic_north_mask], self.zcat['Z'][self.galactic_south_mask]))
+            X = np.concatenate((self.Xn, self.Xs))
+            Y = np.concatenate((self.Yn, self.Ys))
+            Z = np.concatenate((self.Zn, self.Zs))
         elif xyzplot == 'full':
             redshifts = self.zcat['Z']
-            pass
+            X = self.X
+            Y = self.Y
+            Z = self.Z
         else:
-            raise ValueError("xyzplot must be one of ['north', 'south', 'full']")
+            raise ValueError("xyzplot must be one of ['hemispheres', 'full']")
+
         plt.style.use('seaborn-v0_8-darkgrid')
         plt.rcParams["text.usetex"] = False
         plt.rcParams.update({'font.size': 14})
         
         fig = plt.figure(figsize=(18, 12))
         ax = fig.add_subplot(111, projection='3d')
-        ax.scatter(self.X, self.Y, self.Z, c=redshifts, cmap='inferno_r', s=0.1, alpha=0.5, marker='.')
+        ax.scatter(X, Y, Z, c=redshifts, cmap='inferno_r', s=0.1, alpha=0.5, marker='.')
         ax.set_xlim([-300, 300])
         ax.set_ylim([-300, 300])
         ax.set_zlim([-300, 300])
@@ -171,4 +194,4 @@ if __name__ == "__main__":
     data = GalaxyCatalog(PATH)
     # data.select_gal_classes('BGS') # Example usage to select BGS galaxies
     # data.sky_coord(plot=True, globeplot=False) # Example usage to plot sky coordinates
-    data.cartesian_coord(xyzplot='full') # Example usage to compute Cartesian coordinates
+    data.cartesian_coord(xyzplot='hemispheres') # Example usage to compute Cartesian coordinates
