@@ -145,7 +145,7 @@ environ_dicts = {
 
 custom_palette = {
     0: 'blue',     # void
-    1: 'yellow',     # wall
+    1: 'green',     # wall
     2: 'orange', # filament
     3: 'red'   # clusters
 }
