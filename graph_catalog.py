@@ -136,19 +136,15 @@ environ_dicts = {
     2: 'Filament',
     3: 'Cluster'}
 
-# custom_palette = {
-#     0: '#4c78a8',     # deep teal
-#     1: '#a05eb5',     # violet
-#     2: '#76b7b2', # sky teal
-#     3: '#e17c9a'   # plum pink
-# }
-
 custom_palette = {
     0: 'blue',     # void
     1: 'green',     # wall
     2: 'orange', # filament
     3: 'red'   # clusters
 }
+
+cmap4 = plt.get_cmap('magma', 4)
+custom_palette2 = cmap4(np.arange(4))
 
 # Historgram of counts with labels giving percentage of each environment
 plt.figure(figsize=(10, 6))
@@ -174,9 +170,11 @@ labels = [environ_dicts[int(label)] for label in DESI_pred]
 colors = [custom_palette[int(label)] for label in DESI_pred]
 
 # 2D projection plot of DESI galaxies with cosmic web predictions
+ax.set_facecolor('none')    # makes axes transparent
+
 zlims = (-10, 10)  # Set z slab limits in Mpc
 fig = plt.figure(figsize=(10, 8), facecolor='white')
-ax = fig.add_subplot()
+ax = fig.add_subplot(facecolor='white')
 # set z slab between -10 and 10 Mpc
 proj_x = DESI_geom.pos[:, 0][(DESI_geom.pos[:,2]<zlims[1])&(DESI_geom.pos[:,2]>zlims[0])]
 proj_y = DESI_geom.pos[:, 1][(DESI_geom.pos[:,2]<zlims[1])&(DESI_geom.pos[:,2]>zlims[0])]
@@ -184,7 +182,7 @@ ax.scatter(
     proj_x,
     proj_y,
     c=[custom_palette[int(label)] for label in DESI_pred[(DESI_geom.pos[:,2]<zlims[1])&(DESI_geom.pos[:,2]>zlims[0])]],
-    s=1,  # Size of points
+    s=2,  # Size of points
     # alpha=0,  # Transparency
     edgecolor='none'  # No edge color
 )
@@ -193,7 +191,8 @@ ax.legend(handles=[
     plt.Line2D([0], [0], marker='o', color='w', label=environ_dicts[i],
                markerfacecolor=custom_palette[i], markersize=5) for i in range(4)
 ], title='Cosmic Web Environments', loc='best')
-
+ax.set_xlim(0, 300)  # Set x limits in Mpc
+ax.set_ylim(0, 300)  # Set y limits in Mpc
 ax.set_xlabel('X (Mpc)')
 ax.set_ylabel('Y (Mpc)')
 ax.set_title('DESI Galaxy Network with Cosmic Web Predictions (2D Projection)')
@@ -342,51 +341,12 @@ def update(frame):
     sc.set_color(colors)
     ax.set_title(f'z in [{z0}, {z1}] Mpc')
     return sc,
-
-ani = animation.FuncAnimation(fig, update, frames=60, interval=200, blit=True)
-ani.save("cosmic_web_z_slab.gif", writer="pillow", fps=5)
-
-######
-
 from IPython.display import HTML
 
-# Replace these with your actual data
-pos = DESI_geom.pos         # shape (N, 3)
-labels = DESI_pred          # array of integers: 0 (void), 1 (wall), etc.
-
-# Custom color palette
-custom_palette = {
-    0: '#4c78a8',     # Void
-    1: '#a05eb5',     # Wall
-    2: '#76b7b2',     # Filament
-    3: '#e17c9a'      # Cluster
-}
-
-# Set up figure
-fig, ax = plt.subplots(figsize=(10, 8))
-sc = ax.scatter([], [], s=1, alpha=0.8)
-ax.set_xlim(-310, 310)
-ax.set_ylim(-310, 310)
-ax.set_xlabel('X (Mpc)')
-ax.set_ylabel('Y (Mpc)')
-ax.set_aspect('equal', adjustable='box')
-
-# Animation function
-def update(frame):
-    z0, z1 = -300 + frame * 10, -300 + frame * 10 + 10
-    mask = (pos[:, 2] > z0) & (pos[:, 2] < z1)
-    x, y = pos[mask, 0], pos[mask, 1]
-    c = [custom_palette[int(l)] for l in labels[mask]]
-    sc.set_offsets(np.c_[x, y])
-    sc.set_color(c)
-    ax.set_title(f'z in [{z0:.1f}, {z1:.1f}] Mpc')
-    return sc,
-
-# Create animation
 ani = animation.FuncAnimation(fig, update, frames=60, interval=200, blit=True)
-
-# Display in Jupyter
 HTML(ani.to_jshtml())
+
+# ani.save("cosmic_web_z_slab.gif", writer="pillow", fps=5)
 
 # DESI_GAL_CAT = GalaxyCatalogue(
 #     PATH="/global/homes/d/dkololgi/GraphWeb_DESI/loa-combined-lowz.fits" # Path to reduced fastspecfit BGS catalog
