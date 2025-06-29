@@ -7,17 +7,21 @@ from sklearn.preprocessing import PowerTransformer
 
 import scienceplots
 
-
 sys.path.append("../")
 import os
 os.chdir("/global/homes/d/dkololgi/TNG/Illustris/")
 # from TNG.Illustris.Network_stats import network
 from Network_stats import network
+from Utilities import cat
 # from TNG.Illustris import Utilities
 
 import torch
 from torch_geometric.data import Data
 from torch_geometric.utils import from_networkx
+
+plt.rcdefaults()
+# background = 'white'  # Set background to dark for better visibility
+plt.style.use(['science', 'no-latex'])#, 'light_background' if background == 'light' else 'dark_background'])
 
 DESI_NETWORK = network(
     masscut=9.,
@@ -35,6 +39,8 @@ scaler = PowerTransformer(method = 'box-cox')
 DESI_features = pd.DataFrame(scaler.fit_transform(DESI_NETWORK.data), index=DESI_NETWORK.data.index, columns=DESI_NETWORK.data.columns)
 DESI_geom.x = torch.tensor(DESI_features.values, dtype=torch.float32)
 print('DESI features scaled and converted to torch tensor')
+testcat = cat(path=r'/global/homes/d/dkololgi/TNG300-1', snapno=99, masscut=1e9)
+print('Created cat object for TNG300 galaxies')
 # Declare model for inference
 import torch.nn as nn
 import torch.optim as optim
@@ -128,6 +134,7 @@ with torch.no_grad():
     )
     DESI_pred = DESI_out.argmax(dim=1).numpy()
     DESI_probs = DESI_out.numpy()
+
 print('Inference completed, predictions and probabilities obtained')
 # Define environment labels and custom palette
 environ_dicts = {
@@ -136,12 +143,102 @@ environ_dicts = {
     2: 'Filament',
     3: 'Cluster'}
 
+# custom_palette = {
+#     0: 'blue',     # void
+#     1: 'green',     # wall
+#     2: 'orange', # filament
+#     3: 'red'   # clusters
+# }
+
+# custom_palette = {
+#     0: '#5d2e8c',#2ec4b6
+#     1: '#20a4f3',
+#     2: '#ffbf69',
+#     3: '#f35b04'
+# }
+
+# custom_palette = {
+#     0: '#072ac8',
+#     1: '#20a4f3',
+#     2: '#ffbf69',
+#     3: '#f35b04'
+# }
+
+# custom_palette = {
+#     0: '#072ac8',  # void — deep blue
+#     1: '#1e81b0',  # wall — teal-blue (cool but distinct from void)
+#     2: '#ffc857',  # filament — warm yellow-orange
+#     3: '#d62828'   # node — deep red
+# }
+
+# custom_palette = {
+#     0: '#072ac8', 
+#     1: '#ffadd5', 
+#     2: '#ff6392', 
+#     3: '#d90429'  
+# }
+
+# custom_palette = {
+#     0: '#89CFF0',  # Void — soft sky blue
+#     1: '#a29bfe',  # Wall — periwinkle
+#     2: '#e17055',  # Filament — burnt orange
+#     3: '#6c0e23'   # Cluster — deep wine red
+# }
+
+# custom_palette = {
+#     0: '#56cfe1',  # Void — icy cyan
+#     1: '#72efdd',  # Wall — aquamarine
+#     2: '#ffba08',  # Filament — strong yellow
+#     3: '#d00000'   # Cluster — intense red
+# }
+
+# custom_palette = {
+#     0: '#4cc9f0',  # Void — light blue
+#     1: '#f72585',  # Wall — magenta
+#     2: '#b5179e',  # Filament — plum
+#     3: '#720026'   # Cluster — dark red
+# }
+
+# custom_palette = {
+#     0: '#4cc9f0',  # Void — neon blue
+#     1: '#f72585',  # Wall — electric pink
+#     2: '#b5179e',  # Filament — rich plum
+#     3: '#ff004d'   # Cluster — hot magenta-red (strong contrast!)
+# }
+
+# For black background
 custom_palette = {
-    0: 'blue',     # void
-    1: 'green',     # wall
-    2: 'orange', # filament
-    3: 'red'   # clusters
+    0: '#80ffdb',  # Void — mint-teal neon (distinct from blue wall)
+    1: '#3a86ff',  # Wall — neon blue
+    2: '#ff006e',  # Filament — hot pink
+    3: '#ffbe0b'   # Cluster — neon yellow-orange
 }
+
+# # For white background
+# custom_palette = {
+#     0: '#0077b6',  # Void — deep blue
+#     1: '#2ec4b6',  # Wall — turquoise
+#     2: '#ffb703',  # Filament — golden yellow
+#     3: '#d62828'   # Cluster — deep red
+# }
+
+# plt.style.use('dark_background')
+# cosmic_web_palettes = {
+#     'white': {
+#         0: '#072ac8',  # Void — deep blue
+#         1: '#2ec4b6',  # Wall — turquoise
+#         2: '#ffb703',  # Filament — golden yellow
+#         3: '#d62828'   # Node — deep red
+#     },
+#     'black': {
+#         0: '#00bfff',  # Void — bright cyan
+#         1: '#00ff99',  # Wall — mint green
+#         2: '#ffcc00',  # Filament — bright yellow-orange
+#         3: '#ff5733'   # Node — orange-red
+#     }
+# }
+
+# custom_palette = cosmic_web_palettes[background if background in cosmic_web_palettes else 'white']
 
 cmap4 = plt.get_cmap('magma', 4)
 custom_palette2 = cmap4(np.arange(4))
@@ -164,43 +261,77 @@ import plotly.io as pio
 pio.renderers.default = "vscode"
 import plotly.graph_objects as go
 import plotly.express as px
+import astropy.units as u
 
 # Map labels and colors
 labels = [environ_dicts[int(label)] for label in DESI_pred]
 colors = [custom_palette[int(label)] for label in DESI_pred]
 
-# 2D projection plot of DESI galaxies with cosmic web predictions
-ax.set_facecolor('none')    # makes axes transparent
+# 2D projection plot of DESI galaxies with cosmic web predictions with side by side of simulation tweb classification
+testcat.cweb_classify(xyzplot=False)
+plt.style.use(['science', 'no-latex', 'dark_background'])  # Use dark background for better contrast
+
+stars = (testcat.object['subhalos']['SubhaloMassType'][:,4]) #stellar mass of subhalos
+mc = testcat.masscut*testcat.hub/1e10 #mass cut for subhalos
+stars_indices = np.where(stars>=mc)[0] #indices of subhalos with stellar mass greater than masscut
+
+# Get the spatial coordinates of the subhalos above the masscut
+sim_x = testcat.x[stars_indices]
+sim_y = testcat.y[stars_indices]
+sim_z = testcat.z[stars_indices]
 
 zlims = (-10, 10)  # Set z slab limits in Mpc
-fig = plt.figure(figsize=(10, 8), facecolor='white')
-ax = fig.add_subplot(facecolor='white')
+# fig = plt.figure(figsize=(10, 8), dpi = 300, constrained_layout=True)
+fig, (ax1, ax2) = plt.subplots(1,2, figsize=(20, 8), dpi=300)
+fig.patch.set_alpha(0.0)
+ax1.patch.set_alpha(0.0)
+ax2.patch.set_alpha(0.0)
+zlims_sim = (-10, 10)*u.Mpc  # Set z slab limits in Mpc            
+# ax1 = fig.add_subplot()
 # set z slab between -10 and 10 Mpc
+mask = (sim_z.to('Mpc') >= zlims_sim[0]) & (sim_z.to('Mpc') <= zlims_sim[1])
+ax1.scatter(sim_x[mask].to('Mpc'), sim_y[mask].to('Mpc'), c=[custom_palette[c] for c in testcat.cweb[mask]], s=5, edgecolor='none')
+ax1.set_facecolor('none')    # makes axes transparent
+ax1.grid(False)
+ax1.set_xlim(0, 300)
+ax1.set_ylim(0, 300)
+ax1.tick_params(axis='both', labelsize=16)
+
+ax1.set_xlabel('X (Mpc)', fontsize=16, labelpad=10)
+ax1.set_ylabel('Y (Mpc)', fontsize=16, labelpad=10)
+ax1.set_title('IllustrisTNG-300 by T-WEB Environments', fontsize=18, pad=10)
+# Set aspect ratio to equal for better visualization
+ax1.set_aspect('equal', adjustable='box')
+
+# ax = fig.add_subplot()
+# set z slab between -10 and 10 Mpc
+ax2.set_facecolor('none')    # makes axes transparent
+
 proj_x = DESI_geom.pos[:, 0][(DESI_geom.pos[:,2]<zlims[1])&(DESI_geom.pos[:,2]>zlims[0])]
 proj_y = DESI_geom.pos[:, 1][(DESI_geom.pos[:,2]<zlims[1])&(DESI_geom.pos[:,2]>zlims[0])]
-ax.scatter(
+ax2.scatter(
     proj_x,
     proj_y,
     c=[custom_palette[int(label)] for label in DESI_pred[(DESI_geom.pos[:,2]<zlims[1])&(DESI_geom.pos[:,2]>zlims[0])]],
-    s=2,  # Size of points
-    # alpha=0,  # Transparency
-    edgecolor='none'  # No edge color
-)
-ax.grid(False)
-ax.legend(handles=[
-    plt.Line2D([0], [0], marker='o', color='w', label=environ_dicts[i],
-               markerfacecolor=custom_palette[i], markersize=5) for i in range(4)
-], title='Cosmic Web Environments', loc='best')
-ax.set_xlim(0, 300)  # Set x limits in Mpc
-ax.set_ylim(0, 300)  # Set y limits in Mpc
-ax.set_xlabel('X (Mpc)')
-ax.set_ylabel('Y (Mpc)')
-ax.set_title('DESI Galaxy Network with Cosmic Web Predictions (2D Projection)')
+    s=5,
+    edgecolor='none'
+    )
+ax2.grid(False)
+# ax2.legend(handles=[
+#     plt.Line2D([0], [0], marker='o', color='k', label=environ_dicts[i],
+#                markerfacecolor=custom_palette[i], markersize=10) for i in range(4)
+# ], loc='upper center')
+ax2.tick_params(axis='both', labelsize=16)
+ax2.set_xlim(0, 300)  # Set x limits in Mpc
+ax2.set_ylim(-150, 150)  # Set y limits in Mpc
+ax2.set_xlabel('X (Mpc)', fontsize=16, labelpad=10)
+ax2.set_ylabel('Y (Mpc)', fontsize=16, labelpad=10)
+ax2.set_title('Inferred BGS Environments (0.01 $\leq$ z $\leq$ 0.06)', fontsize=18, pad=10)
 # Set aspect ratio to equal for better visualization
-ax.set_aspect('equal', adjustable='box')
+ax2.set_aspect('equal', adjustable='box')
 # Show the plot
 plt.show()
-
+plt.savefig('sim_bgs_side.png', transparent=True)
 
 # Build the interactive plot
 fig = go.Figure(data=[go.Scatter3d(
@@ -346,7 +477,7 @@ from IPython.display import HTML
 ani = animation.FuncAnimation(fig, update, frames=60, interval=200, blit=True)
 HTML(ani.to_jshtml())
 
-# ani.save("cosmic_web_z_slab.gif", writer="pillow", fps=5)
+# ani.save("cosmic_web_z_slab.mov", writer="pillow", fps=60)
 
 # DESI_GAL_CAT = GalaxyCatalogue(
 #     PATH="/global/homes/d/dkololgi/GraphWeb_DESI/loa-combined-lowz.fits" # Path to reduced fastspecfit BGS catalog
