@@ -305,10 +305,25 @@ ax1.set_aspect('equal', adjustable='box')
 
 # ax = fig.add_subplot()
 # set z slab between -10 and 10 Mpc
+
+theta = -np.deg2rad(30)  # Rotate by 30 degrees
+R = np.array([[np.cos(theta), -np.sin(theta)],
+              [np.sin(theta), np.cos(theta)]])
+
 ax2.set_facecolor('none')    # makes axes transparent
 
 proj_x = DESI_geom.pos[:, 0][(DESI_geom.pos[:,2]<zlims[1])&(DESI_geom.pos[:,2]>zlims[0])]
 proj_y = DESI_geom.pos[:, 1][(DESI_geom.pos[:,2]<zlims[1])&(DESI_geom.pos[:,2]>zlims[0])]
+
+# stack the x and y coordinates
+xy = np.vstack((proj_x, proj_y))
+# Rotate the coordinates
+
+xy_rot = R @ xy # Apply rotation
+
+proj_x, proj_y = xy_rot[0], xy_rot[1] # rotated x and y coordinates
+
+
 ax2.scatter(
     proj_x,
     proj_y,
