@@ -282,7 +282,7 @@ sim_z = testcat.z[stars_indices]
 
 zlims = (-10, 10)  # Set z slab limits in Mpc
 # fig = plt.figure(figsize=(10, 8), dpi = 300, constrained_layout=True)
-fig, (ax1, ax2) = plt.subplots(1,2, figsize=(20, 8), dpi=300)
+fig, (ax1, ax2) = plt.subplots(1,2, figsize=(20, 8))
 fig.patch.set_alpha(0.0)
 ax1.patch.set_alpha(0.0)
 ax2.patch.set_alpha(0.0)
@@ -306,7 +306,7 @@ ax1.set_aspect('equal', adjustable='box')
 # ax = fig.add_subplot()
 # set z slab between -10 and 10 Mpc
 
-theta = -np.deg2rad(30)  # Rotate by 30 degrees
+theta = -np.deg2rad(12)  # Rotate by 12 degrees
 R = np.array([[np.cos(theta), -np.sin(theta)],
               [np.sin(theta), np.cos(theta)]])
 
@@ -345,8 +345,9 @@ ax2.set_title('Inferred BGS Environments (0.01 $\leq$ z $\leq$ 0.06)', fontsize=
 # Set aspect ratio to equal for better visualization
 ax2.set_aspect('equal', adjustable='box')
 # Show the plot
+plt.savefig('sim_bgs_side.png', transparent=True, dpi=400)
 plt.show()
-plt.savefig('sim_bgs_side.png', transparent=True)
+
 
 # Build the interactive plot
 fig = go.Figure(data=[go.Scatter3d(
