@@ -4,7 +4,8 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
 from sklearn.preprocessing import PowerTransformer
-
+from IPython.display import HTML
+import os
 import scienceplots
 
 sys.path.append("../")
@@ -28,19 +29,44 @@ DESI_NETWORK = network(
     from_DESI=True
 )
 
-print('DESI network object created')
-G=DESI_NETWORK.subhalo_delauany_network(xyzplot=False)
-print('DESI delaunay graph created')
-DESI_NETWORK.network_stats_delaunay()
-print('DESI delaunay network stats calculated')
-DESI_geom = from_networkx(G, group_edge_attrs='all')
-print('DESI delaunay graph converted to torch_geometric Data object')
-scaler = PowerTransformer(method = 'box-cox')
-DESI_features = pd.DataFrame(scaler.fit_transform(DESI_NETWORK.data), index=DESI_NETWORK.data.index, columns=DESI_NETWORK.data.columns)
-DESI_geom.x = torch.tensor(DESI_features.values, dtype=torch.float32)
-print('DESI features scaled and converted to torch tensor')
-testcat = cat(path=r'/global/homes/d/dkololgi/TNG300-1', snapno=99, masscut=1e9)
-print('Created cat object for TNG300 galaxies')
+# Define cache file paths
+cache_dir = "/global/homes/d/dkololgi/GraphWeb_DESI/cache"
+os.makedirs(cache_dir, exist_ok=True)
+graph_cache_path = os.path.join(cache_dir, "DESI_delaunay_graph.pt")
+geom_cache_path = os.path.join(cache_dir, "DESI_geom.pt")
+features_cache_path = os.path.join(cache_dir, "DESI_features.pt")
+testcat_cache_path = os.path.join(cache_dir, "testcat.pt")
+
+# Check if cached files exist
+if os.path.exists(graph_cache_path) and os.path.exists(geom_cache_path) and os.path.exists(features_cache_path) and os.path.exists(testcat_cache_path):
+    print("Loading cached data...")
+    G = torch.load(graph_cache_path)
+    DESI_geom = torch.load(geom_cache_path)
+    DESI_features = pd.read_pickle(features_cache_path)
+    testcat = torch.load(testcat_cache_path)
+    print("Cached data loaded successfully.")
+else:
+    print('DESI network object created')
+    G = DESI_NETWORK.subhalo_delauany_network(xyzplot=False)
+    print('DESI delaunay graph created')
+    DESI_NETWORK.network_stats_delaunay()
+    print('DESI delaunay network stats calculated')
+    DESI_geom = from_networkx(G, group_edge_attrs='all')
+    print('DESI delaunay graph converted to torch_geometric Data object')
+    scaler = PowerTransformer(method='box-cox')
+    DESI_features = pd.DataFrame(scaler.fit_transform(DESI_NETWORK.data), index=DESI_NETWORK.data.index, columns=DESI_NETWORK.data.columns)
+    DESI_geom.x = torch.tensor(DESI_features.values, dtype=torch.float32)
+    print('DESI features scaled and converted to torch tensor')
+    testcat = cat(path=r'/global/homes/d/dkololgi/TNG300-1', snapno=99, masscut=1e9)
+    print('Created cat object for TNG300 galaxies')
+
+    # Save to cache
+    print("Saving data to cache...")
+    torch.save(G, graph_cache_path)
+    torch.save(DESI_geom, geom_cache_path)
+    DESI_features.to_pickle(features_cache_path)
+    torch.save(testcat, testcat_cache_path)
+    print("Data cached successfully.")
 # Declare model for inference
 import torch.nn as nn
 import torch.optim as optim
@@ -488,7 +514,6 @@ def update(frame):
     sc.set_color(colors)
     ax.set_title(f'z in [{z0}, {z1}] Mpc')
     return sc,
-from IPython.display import HTML
 
 ani = animation.FuncAnimation(fig, update, frames=60, interval=200, blit=True)
 HTML(ani.to_jshtml())
