@@ -583,7 +583,7 @@ def update(frame):
 
 ani = animation.FuncAnimation(fig, update, frames=60, interval=200, blit=False)
 
-ani.save(filename='DESI_galaxy_animation.gif', writer='pillow')
+ani.save(filename='DESI_galaxy_animation_black_bg.gif', writer='pillow', savefig_kwargs={'facecolor': 'black'})
 
 HTML(ani.to_jshtml())
 
