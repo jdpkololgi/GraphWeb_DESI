@@ -29,21 +29,24 @@ DESI_NETWORK = network(
     from_DESI=True
 )
 
+testcat = cat(path=r'/global/homes/d/dkololgi/TNG300-1', snapno=99, masscut=1e9)
+print('Created cat object for TNG300 galaxies')
+
 # Define cache file paths
 cache_dir = "/global/homes/d/dkololgi/GraphWeb_DESI/cache"
 os.makedirs(cache_dir, exist_ok=True)
 graph_cache_path = os.path.join(cache_dir, "DESI_delaunay_graph.pt")
 geom_cache_path = os.path.join(cache_dir, "DESI_geom.pt")
 features_cache_path = os.path.join(cache_dir, "DESI_features.pt")
-testcat_cache_path = os.path.join(cache_dir, "testcat.pt")
+# testcat_cache_path = os.path.join(cache_dir, "testcat.pt")
 
 # Check if cached files exist
-if os.path.exists(graph_cache_path) and os.path.exists(geom_cache_path) and os.path.exists(features_cache_path) and os.path.exists(testcat_cache_path):
+if os.path.exists(graph_cache_path) and os.path.exists(geom_cache_path) and os.path.exists(features_cache_path):
     print("Loading cached data...")
-    G = torch.load(graph_cache_path)
-    DESI_geom = torch.load(geom_cache_path)
+    G = torch.load(graph_cache_path, weights_only=False)
+    DESI_geom = torch.load(geom_cache_path, weights_only=False)
     DESI_features = pd.read_pickle(features_cache_path)
-    testcat = torch.load(testcat_cache_path)
+    # testcat = torch.load(testcat_cache_path)
     print("Cached data loaded successfully.")
 else:
     print('DESI network object created')
@@ -57,15 +60,58 @@ else:
     DESI_features = pd.DataFrame(scaler.fit_transform(DESI_NETWORK.data), index=DESI_NETWORK.data.index, columns=DESI_NETWORK.data.columns)
     DESI_geom.x = torch.tensor(DESI_features.values, dtype=torch.float32)
     print('DESI features scaled and converted to torch tensor')
-    testcat = cat(path=r'/global/homes/d/dkololgi/TNG300-1', snapno=99, masscut=1e9)
-    print('Created cat object for TNG300 galaxies')
 
-    # Save to cache
+    # Save to cache with memory management
     print("Saving data to cache...")
-    torch.save(G, graph_cache_path)
-    torch.save(DESI_geom, geom_cache_path)
-    DESI_features.to_pickle(features_cache_path)
-    torch.save(testcat, testcat_cache_path)
+    
+    # Save one at a time with memory cleanup
+    import gc
+    import psutil
+    import pickle
+
+    def save_with_memory_check(obj, path, obj_name):
+        """Save object with memory monitoring and error handling."""
+        try:
+            # Check available memory
+            available_memory = psutil.virtual_memory().available / (1024**3)  # GB
+            print(f"Available memory before saving {obj_name}: {available_memory:.2f} GB")
+            
+            if available_memory < 2.0:  # Less than 2GB available
+                print(f"Warning: Low memory before saving {obj_name}")
+                gc.collect()  # Force garbage collection
+            
+            print(f"Saving {obj_name} to {path}...")
+            torch.save(obj, path)
+            print(f"Successfully saved {obj_name}")
+            
+            # Clean up immediately after saving
+            del obj
+            gc.collect()
+            
+        except Exception as e:
+            print(f"Error saving {obj_name}: {e}")
+            # Try alternative saving method
+            try:
+                with open(path, 'wb') as f:
+                    pickle.dump(obj, f, protocol=pickle.HIGHEST_PROTOCOL)
+                print(f"Successfully saved {obj_name} using pickle")
+            except Exception as e2:
+                print(f"Failed to save {obj_name} with both methods: {e2}")
+                return False
+        return True
+
+    save_with_memory_check(G, graph_cache_path, "Graph")
+    save_with_memory_check(DESI_geom, geom_cache_path, "DESI_geom")
+    
+    # For pandas DataFrame, use pickle
+    try:
+        DESI_features.to_pickle(features_cache_path)
+        print("Successfully saved DESI_features")
+    except Exception as e:
+        print(f"Error saving DESI_features: {e}")
+    
+    # save_with_memory_check(testcat, testcat_cache_path, "testcat")
+    
     print("Data cached successfully.")
 # Declare model for inference
 import torch.nn as nn
@@ -271,11 +317,31 @@ custom_palette2 = cmap4(np.arange(4))
 
 # Historgram of counts with labels giving percentage of each environment
 plt.figure(figsize=(10, 6))
-plt.hist(DESI_pred, bins=np.arange(5)-0.5, rwidth=0.8, color='skyblue', edgecolor='black')
-plt.xticks(np.arange(4), [environ_dicts[i] for i in range(4)])
+
+# Calculate histogram data for DESI_pred and testcat.cweb
+bins = np.arange(5) - 0.5
+desi_hist, _ = np.histogram(DESI_pred, bins=bins, density=True)
+tweb_hist, _ = np.histogram(testcat.cweb, bins=bins, density=True)
+
+# Define bar width and positions
+bar_width = 0.4
+x = np.arange(4)  # Positions for the bars
+
+# Plot side-by-side histograms
+plt.bar(x - bar_width / 2, desi_hist, width=bar_width, color='#80ffdb', edgecolor='black', label='BGS Network')
+plt.bar(x + bar_width / 2, tweb_hist, width=bar_width, color='#3a86ff', edgecolor='black', alpha=0.7, label='IllustrisTNG T-WEB')
+
+# Add labels to each bar
+for i in range(4):
+    plt.text(x[i] - bar_width / 2, desi_hist[i] + 0.01, f'{desi_hist[i]*100:.1f}%', ha='center', va='bottom', fontsize=10)
+    plt.text(x[i] + bar_width / 2, tweb_hist[i] + 0.01, f'{tweb_hist[i]*100:.1f}%', ha='center', va='bottom', fontsize=10)
+
+# Add labels and formatting
+plt.xticks(x, [environ_dicts[i] for i in range(4)])
 plt.xlabel('Cosmic Web Environment')
-plt.ylabel('Count')
+plt.ylabel('Frequency')
 plt.title('Distribution of Cosmic Web Environments in DESI Network')
+plt.legend()
 plt.grid(axis='y', linestyle='--', alpha=0.7)
 plt.show()
 
@@ -515,10 +581,13 @@ def update(frame):
     ax.set_title(f'z in [{z0}, {z1}] Mpc')
     return sc,
 
-ani = animation.FuncAnimation(fig, update, frames=60, interval=200, blit=True)
+ani = animation.FuncAnimation(fig, update, frames=60, interval=200, blit=False)
+
+ani.save(filename='DESI_galaxy_animation.gif', writer='pillow')
+
 HTML(ani.to_jshtml())
 
-# ani.save("cosmic_web_z_slab.mov", writer="pillow", fps=60)
+
 
 # DESI_GAL_CAT = GalaxyCatalogue(
 #     PATH="/global/homes/d/dkololgi/GraphWeb_DESI/loa-combined-lowz.fits" # Path to reduced fastspecfit BGS catalog
