@@ -311,6 +311,7 @@ custom_palette = {
 # }
 
 # custom_palette = cosmic_web_palettes[background if background in cosmic_web_palettes else 'white']
+testcat.cweb_classify(xyzplot=False)
 
 cmap4 = plt.get_cmap('magma', 4)
 custom_palette2 = cmap4(np.arange(4))
@@ -328,7 +329,7 @@ bar_width = 0.4
 x = np.arange(4)  # Positions for the bars
 
 # Plot side-by-side histograms
-plt.bar(x - bar_width / 2, desi_hist, width=bar_width, color='#80ffdb', edgecolor='black', label='BGS Network')
+plt.bar(x - bar_width / 2, desi_hist, width=bar_width, color='#80ffdb', edgecolor='black', label='BGS')
 plt.bar(x + bar_width / 2, tweb_hist, width=bar_width, color='#3a86ff', edgecolor='black', alpha=0.7, label='IllustrisTNG T-WEB')
 
 # Add labels to each bar
@@ -360,7 +361,6 @@ labels = [environ_dicts[int(label)] for label in DESI_pred]
 colors = [custom_palette[int(label)] for label in DESI_pred]
 
 # 2D projection plot of DESI galaxies with cosmic web predictions with side by side of simulation tweb classification
-testcat.cweb_classify(xyzplot=False)
 plt.style.use(['science', 'no-latex', 'dark_background'])  # Use dark background for better contrast
 
 stars = (testcat.object['subhalos']['SubhaloMassType'][:,4]) #stellar mass of subhalos
