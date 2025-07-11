@@ -316,7 +316,12 @@ testcat.cweb_classify(xyzplot=False)
 cmap4 = plt.get_cmap('magma', 4)
 custom_palette2 = cmap4(np.arange(4))
 
+# Verify the mapping of labels to environments
+unique_desi_pred = np.unique(DESI_pred)
+unique_testcat_cweb = np.unique(testcat.cweb)
+
 # Historgram of counts with labels giving percentage of each environment
+
 plt.figure(figsize=(10, 6))
 
 # Calculate histogram data for DESI_pred and testcat.cweb
@@ -334,8 +339,8 @@ plt.bar(x + bar_width / 2, tweb_hist, width=bar_width, color='#3a86ff', edgecolo
 
 # Add labels to each bar
 for i in range(4):
-    plt.text(x[i] - bar_width / 2, desi_hist[i] + 0.01, f'{desi_hist[i]*100:.1f}%', ha='center', va='bottom', fontsize=10)
-    plt.text(x[i] + bar_width / 2, tweb_hist[i] + 0.01, f'{tweb_hist[i]*100:.1f}%', ha='center', va='bottom', fontsize=10)
+    plt.text(x[i] - bar_width / 2, desi_hist[i] + 0.005, f'{desi_hist[i]*100:.1f}%', ha='center', va='bottom', fontsize=10)
+    plt.text(x[i] + bar_width / 2, tweb_hist[i] + 0.005, f'{tweb_hist[i]*100:.1f}%', ha='center', va='bottom', fontsize=10)
 
 # Add labels and formatting
 plt.xticks(x, [environ_dicts[i] for i in range(4)])
