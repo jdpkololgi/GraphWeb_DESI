@@ -22,7 +22,7 @@ from torch_geometric.utils import from_networkx
 
 plt.rcdefaults()
 # background = 'white'  # Set background to dark for better visibility
-plt.style.use(['science', 'no-latex'])#, 'light_background' if background == 'light' else 'dark_background'])
+plt.style.use(['science', 'no-latex', 'dark_background'])#, 'light_background' if background == 'light' else 'dark_background'])
 
 DESI_NETWORK = network(
     masscut=9.,
