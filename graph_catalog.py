@@ -194,7 +194,7 @@ inference_model = SimpleGAT(
 )
 inference_model.load_state_dict(
     # torch.load("/global/homes/d/dkololgi/TNG/Illustris/trained_gat_simulation.pth", map_location='cpu')
-    torch.load("/global/homes/d/dkololgi/TNG/Illustris/trained_gat_.pth", map_location='cpu') # From gcn_pipeline.py
+    torch.load("/global/homes/d/dkololgi/TNG/Illustris/trained_gat_model_ddp.pth", map_location='cpu') # From gcn_pipeline.py
 )
 
 inference_model.eval()
