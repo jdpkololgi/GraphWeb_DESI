@@ -133,7 +133,6 @@ class SimpleGAT(nn.Module):
         hidden_dim = 20  # per-head output size
         total_hidden = hidden_dim * num_heads  # total output size if concat=True
 
-
         # self.gat_layer1 = GATv2Conv(input_dim, 15, edge_dim=1, heads=num_heads, concat=True)
         # self.gat_layer2 = GATv2Conv(15, 15, edge_dim=1, heads=num_heads, concat=True)
         # self.gat_layer3 = GATv2Conv(15, output_dim, edge_dim=1, heads=num_heads, concat=False)
@@ -216,69 +215,6 @@ environ_dicts = {
     2: 'Filament',
     3: 'Cluster'}
 
-# custom_palette = {
-#     0: 'blue',     # void
-#     1: 'green',     # wall
-#     2: 'orange', # filament
-#     3: 'red'   # clusters
-# }
-
-# custom_palette = {
-#     0: '#5d2e8c',#2ec4b6
-#     1: '#20a4f3',
-#     2: '#ffbf69',
-#     3: '#f35b04'
-# }
-
-# custom_palette = {
-#     0: '#072ac8',
-#     1: '#20a4f3',
-#     2: '#ffbf69',
-#     3: '#f35b04'
-# }
-
-# custom_palette = {
-#     0: '#072ac8',  # void — deep blue
-#     1: '#1e81b0',  # wall — teal-blue (cool but distinct from void)
-#     2: '#ffc857',  # filament — warm yellow-orange
-#     3: '#d62828'   # node — deep red
-# }
-
-# custom_palette = {
-#     0: '#072ac8', 
-#     1: '#ffadd5', 
-#     2: '#ff6392', 
-#     3: '#d90429'  
-# }
-
-# custom_palette = {
-#     0: '#89CFF0',  # Void — soft sky blue
-#     1: '#a29bfe',  # Wall — periwinkle
-#     2: '#e17055',  # Filament — burnt orange
-#     3: '#6c0e23'   # Cluster — deep wine red
-# }
-
-# custom_palette = {
-#     0: '#56cfe1',  # Void — icy cyan
-#     1: '#72efdd',  # Wall — aquamarine
-#     2: '#ffba08',  # Filament — strong yellow
-#     3: '#d00000'   # Cluster — intense red
-# }
-
-# custom_palette = {
-#     0: '#4cc9f0',  # Void — light blue
-#     1: '#f72585',  # Wall — magenta
-#     2: '#b5179e',  # Filament — plum
-#     3: '#720026'   # Cluster — dark red
-# }
-
-# custom_palette = {
-#     0: '#4cc9f0',  # Void — neon blue
-#     1: '#f72585',  # Wall — electric pink
-#     2: '#b5179e',  # Filament — rich plum
-#     3: '#ff004d'   # Cluster — hot magenta-red (strong contrast!)
-# }
-
 # For black background
 custom_palette = {
     0: '#80ffdb',  # Void — mint-teal neon (distinct from blue wall)
@@ -293,22 +229,6 @@ custom_palette = {
 #     1: '#2ec4b6',  # Wall — turquoise
 #     2: '#ffb703',  # Filament — golden yellow
 #     3: '#d62828'   # Cluster — deep red
-# }
-
-# plt.style.use('dark_background')
-# cosmic_web_palettes = {
-#     'white': {
-#         0: '#072ac8',  # Void — deep blue
-#         1: '#2ec4b6',  # Wall — turquoise
-#         2: '#ffb703',  # Filament — golden yellow
-#         3: '#d62828'   # Node — deep red
-#     },
-#     'black': {
-#         0: '#00bfff',  # Void — bright cyan
-#         1: '#00ff99',  # Wall — mint green
-#         2: '#ffcc00',  # Filament — bright yellow-orange
-#         3: '#ff5733'   # Node — orange-red
-#     }
 # }
 
 # custom_palette = cosmic_web_palettes[background if background in cosmic_web_palettes else 'white']
