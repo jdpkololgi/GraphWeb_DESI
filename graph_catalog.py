@@ -126,6 +126,8 @@ else:
     
     print("Data cached successfully.")
     zcat = DESI_NETWORK.DESI_GAL_CAT.zcat
+    del DESI_NETWORK  # Clean up memory after saving
+    gc.collect()  # Clean up memory after saving
     
 # Declare model for inference
 import torch.nn as nn
