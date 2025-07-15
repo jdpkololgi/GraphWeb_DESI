@@ -36,13 +36,19 @@ geom_cache_path = os.path.join(cache_dir, "DESI_geom.pt")
 features_cache_path = os.path.join(cache_dir, "DESI_features.pt")
 desi_zcat_cache_path = os.path.join(cache_dir, "DESI_NETWORK.zcat.pt")
 
+def all_cache_exists(paths):
+    return all(os.path.exists(p) for p in paths)
+
+cache_paths = [graph_cache_path, geom_cache_path, features_cache_path, desi_zcat_cache_path]
+
 # Check if cached files exist
-if os.path.exists(graph_cache_path) and os.path.exists(geom_cache_path) and os.path.exists(features_cache_path) and os.path.exists(desi_zcat_cache_path):
+if all_cache_exists(cache_paths):
     print("Loading cached data...")
     G = torch.load(graph_cache_path, weights_only=False)
     DESI_geom = torch.load(geom_cache_path, weights_only=False)
     DESI_features = pd.read_pickle(features_cache_path)
-    zcat = pickle.load(open(desi_zcat_cache_path, 'rb'))
+    with open(desi_zcat_cache_path, 'rb') as f:
+        zcat = pickle.load(f)
     print("Cached data loaded successfully.")
 else:
     print('Cached data missing or incomplete, creating new objects...')
