@@ -7,6 +7,7 @@ from sklearn.preprocessing import PowerTransformer
 from IPython.display import HTML
 import os
 import scienceplots
+import pickle
 
 sys.path.append("../")
 import os
@@ -24,11 +25,6 @@ plt.rcdefaults()
 # background = 'white'  # Set background to dark for better visibility
 plt.style.use(['science', 'no-latex', 'dark_background'])#, 'light_background' if background == 'light' else 'dark_background'])
 
-DESI_NETWORK = network(
-    masscut=9.,
-    from_DESI=True
-)
-
 testcat = cat(path=r'/global/homes/d/dkololgi/TNG300-1', snapno=99, masscut=1e9)
 print('Created cat object for TNG300 galaxies')
 
@@ -38,17 +34,20 @@ os.makedirs(cache_dir, exist_ok=True)
 graph_cache_path = os.path.join(cache_dir, "DESI_delaunay_graph.pt")
 geom_cache_path = os.path.join(cache_dir, "DESI_geom.pt")
 features_cache_path = os.path.join(cache_dir, "DESI_features.pt")
-# testcat_cache_path = os.path.join(cache_dir, "testcat.pt")
+desi_zcat_cache_path = os.path.join(cache_dir, "DESI_NETWORK.zcat.pt")
 
 # Check if cached files exist
-if os.path.exists(graph_cache_path) and os.path.exists(geom_cache_path) and os.path.exists(features_cache_path):
+if os.path.exists(graph_cache_path) and os.path.exists(geom_cache_path) and os.path.exists(features_cache_path) and os.path.exists(desi_zcat_cache_path):
     print("Loading cached data...")
     G = torch.load(graph_cache_path, weights_only=False)
     DESI_geom = torch.load(geom_cache_path, weights_only=False)
     DESI_features = pd.read_pickle(features_cache_path)
-    # testcat = torch.load(testcat_cache_path)
+    zcat = pickle.load(open(desi_zcat_cache_path, 'rb'))
     print("Cached data loaded successfully.")
 else:
+    print('Cached data missing or incomplete, creating new objects...')
+    print('Creating network object for DESI BGS galaxies...')
+    DESI_NETWORK = network(masscut=9., from_DESI=True)
     print('DESI network object created')
     G = DESI_NETWORK.subhalo_delauany_network(xyzplot=False)
     print('DESI delaunay graph created')
@@ -110,9 +109,18 @@ else:
     except Exception as e:
         print(f"Error saving DESI_features: {e}")
     
-    # save_with_memory_check(testcat, testcat_cache_path, "testcat")
+    try:
+        # Fix: astropy Tables don't have to_pickle() method, use pickle.dump() instead
+        with open(desi_zcat_cache_path, 'wb') as f:
+            pickle.dump(DESI_NETWORK.DESI_GAL_CAT.zcat, f)
+        print("Successfully saved DESI_NETWORK.zcat")
+
+    except Exception as e:
+        print(f"Error saving DESI_NETWORK.zcat: {e}")
     
     print("Data cached successfully.")
+    zcat = DESI_NETWORK.DESI_GAL_CAT.zcat
+    
 # Declare model for inference
 import torch.nn as nn
 import torch.optim as optim
@@ -397,7 +405,7 @@ fig.update_layout(
 fig.show()
 
 # Histograms of stellar mass and colour for each environment
-LOGMSTAR = DESI_NETWORK.DESI_GAL_CAT.zcat['LOGMSTAR']
+LOGMSTAR = zcat['LOGMSTAR']
 
 fig, axs = plt.subplots(2, 2, figsize=(12, 10), sharex=False, sharey=False, layout='constrained')
 axs = axs.flatten()
@@ -411,9 +419,9 @@ for i in range(4):
     axs[i].legend()
 # This code is for creating a galaxy network from the DESI BGS catalog and predicting the cosmic web environment using a GAT model.
 
-FLUXG = DESI_NETWORK.DESI_GAL_CAT.zcat['FLUX_G']
-FLUXR = DESI_NETWORK.DESI_GAL_CAT.zcat['FLUX_R']
-FLUXZ = DESI_NETWORK.DESI_GAL_CAT.zcat['FLUX_Z']
+FLUXG = zcat['FLUX_G']
+FLUXR = zcat['FLUX_R']
+FLUXZ = zcat['FLUX_Z']
 
 G_MAG_mask = FLUXG > 0
 R_MAG_mask = FLUXR > 0
