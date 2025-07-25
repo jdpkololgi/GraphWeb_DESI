@@ -355,10 +355,10 @@ ax2.scatter(
     edgecolor='none'
     )
 ax2.grid(False)
-# ax2.legend(handles=[
-#     plt.Line2D([0], [0], marker='o', color='k', label=environ_dicts[i],
+# fig.legend(handles=[
+#     plt.Line2D([0], [0], marker='o', color='w', label=environ_dicts[i],
 #                markerfacecolor=custom_palette[i], markersize=10) for i in range(4)
-# ], loc='upper center')
+# ], loc='upper center', bbox_to_anchor=(0.5, 0.96), ncol=4, frameon=False)
 ax2.tick_params(axis='both', labelsize=16)
 ax2.set_xlim(0, 300)  # Set x limits in Mpc
 ax2.set_ylim(-150, 150)  # Set y limits in Mpc
