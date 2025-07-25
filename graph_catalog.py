@@ -7,7 +7,6 @@ from sklearn.preprocessing import PowerTransformer
 from IPython.display import HTML
 import os
 import scienceplots
-import pickle
 
 sys.path.append("../")
 import os
@@ -36,19 +35,13 @@ geom_cache_path = os.path.join(cache_dir, "DESI_geom.pt")
 features_cache_path = os.path.join(cache_dir, "DESI_features.pt")
 desi_zcat_cache_path = os.path.join(cache_dir, "DESI_NETWORK.zcat.pt")
 
-def all_cache_exists(paths):
-    return all(os.path.exists(p) for p in paths)
-
-cache_paths = [graph_cache_path, geom_cache_path, features_cache_path, desi_zcat_cache_path]
-
 # Check if cached files exist
-if all_cache_exists(cache_paths):
+if os.path.exists(graph_cache_path) and os.path.exists(geom_cache_path) and os.path.exists(features_cache_path) and os.path.exists(desi_zcat_cache_path):
     print("Loading cached data...")
     G = torch.load(graph_cache_path, weights_only=False)
     DESI_geom = torch.load(geom_cache_path, weights_only=False)
     DESI_features = pd.read_pickle(features_cache_path)
-    with open(desi_zcat_cache_path, 'rb') as f:
-        zcat = pickle.load(f)
+    zcat = pd.read_pickle(desi_zcat_cache_path)
     print("Cached data loaded successfully.")
 else:
     print('Cached data missing or incomplete, creating new objects...')
@@ -116,9 +109,7 @@ else:
         print(f"Error saving DESI_features: {e}")
     
     try:
-        # Fix: astropy Tables don't have to_pickle() method, use pickle.dump() instead
-        with open(desi_zcat_cache_path, 'wb') as f:
-            pickle.dump(DESI_NETWORK.DESI_GAL_CAT.zcat, f)
+        DESI_NETWORK.DESI_GAL_CAT.zcat.to_pickle(desi_zcat_cache_path)
         print("Successfully saved DESI_NETWORK.zcat")
 
     except Exception as e:
@@ -126,8 +117,6 @@ else:
     
     print("Data cached successfully.")
     zcat = DESI_NETWORK.DESI_GAL_CAT.zcat
-    del DESI_NETWORK  # Clean up memory after saving
-    gc.collect()  # Clean up memory after saving
     
 # Declare model for inference
 import torch.nn as nn
