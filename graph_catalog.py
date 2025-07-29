@@ -17,6 +17,7 @@ from Utilities import cat
 # from TNG.Illustris import Utilities
 
 import torch
+import torch.nn.functional as F
 from torch_geometric.data import Data
 from torch_geometric.utils import from_networkx
 
@@ -210,7 +211,7 @@ with torch.no_grad():
         edge_weight=DESI_geom.edge_attr
     )
     DESI_pred = DESI_out.argmax(dim=1).numpy()
-    DESI_probs = DESI_out.numpy()
+    DESI_probs = F.softmax(DESI_out, dim=1).numpy()
 
 print('Inference completed, predictions and probabilities obtained')
 # Define environment labels and custom palette
@@ -220,21 +221,21 @@ environ_dicts = {
     2: 'Filament',
     3: 'Cluster'}
 
-# For black background
-custom_palette = {
-    0: '#80ffdb',  # Void — mint-teal neon (distinct from blue wall)
-    1: '#3a86ff',  # Wall — neon blue
-    2: '#ff006e',  # Filament — hot pink
-    3: '#ffbe0b'   # Cluster — neon yellow-orange
-}
-
-# # For white background
+# # For black background
 # custom_palette = {
-#     0: '#0077b6',  # Void — deep blue
-#     1: '#2ec4b6',  # Wall — turquoise
-#     2: '#ffb703',  # Filament — golden yellow
-#     3: '#d62828'   # Cluster — deep red
+#     0: '#80ffdb',  # Void — mint-teal neon (distinct from blue wall)
+#     1: '#3a86ff',  # Wall — neon blue
+#     2: '#ff006e',  # Filament — hot pink
+#     3: '#ffbe0b'   # Cluster — neon yellow-orange
 # }
+
+# For white background
+custom_palette = {
+    0: '#0077b6',  # Void — deep blue
+    1: '#2ec4b6',  # Wall — turquoise
+    2: '#ffb703',  # Filament — golden yellow
+    3: '#d62828'   # Cluster — deep red
+}
 
 # custom_palette = cosmic_web_palettes[background if background in cosmic_web_palettes else 'white']
 testcat.cweb_classify(xyzplot=False)
@@ -292,8 +293,9 @@ labels = [environ_dicts[int(label)] for label in DESI_pred]
 colors = [custom_palette[int(label)] for label in DESI_pred]
 
 # 2D projection plot of DESI galaxies with cosmic web predictions with side by side of simulation tweb classification
-plt.style.use(['science', 'no-latex', 'dark_background'])  # Use dark background for better contrast
-
+# plt.style.use(['science', 'no-latex', 'dark_background'])  # Use dark background for better contrast
+plt.style.use('default')
+plt.style.use(['science', 'no-latex'])  # Use default background for better contrast
 stars = (testcat.object['subhalos']['SubhaloMassType'][:,4]) #stellar mass of subhalos
 mc = testcat.masscut*testcat.hub/1e10 #mass cut for subhalos
 stars_indices = np.where(stars>=mc)[0] #indices of subhalos with stellar mass greater than masscut
@@ -314,7 +316,7 @@ zlims_sim = (-10, 10)*u.Mpc  # Set z slab limits in Mpc
 # set z slab between -10 and 10 Mpc
 mask = (sim_z.to('Mpc') >= zlims_sim[0]) & (sim_z.to('Mpc') <= zlims_sim[1])
 ax1.scatter(sim_x[mask].to('Mpc'), sim_y[mask].to('Mpc'), c=[custom_palette[c] for c in testcat.cweb[mask]], s=5, edgecolor='none')
-ax1.set_facecolor('none')    # makes axes transparent
+# ax1.set_facecolor('none')    # makes axes transparent
 ax1.grid(False)
 ax1.set_xlim(0, 300)
 ax1.set_ylim(0, 300)
@@ -333,7 +335,7 @@ theta = -np.deg2rad(12)  # Rotate by 12 degrees
 R = np.array([[np.cos(theta), -np.sin(theta)],
               [np.sin(theta), np.cos(theta)]])
 
-ax2.set_facecolor('none')    # makes axes transparent
+# ax2.set_facecolor('none')    # makes axes transparent
 
 proj_x = DESI_geom.pos[:, 0][(DESI_geom.pos[:,2]<zlims[1])&(DESI_geom.pos[:,2]>zlims[0])]
 proj_y = DESI_geom.pos[:, 1][(DESI_geom.pos[:,2]<zlims[1])&(DESI_geom.pos[:,2]>zlims[0])]
@@ -355,13 +357,13 @@ ax2.scatter(
     edgecolor='none'
     )
 ax2.grid(False)
-# fig.legend(handles=[
-#     plt.Line2D([0], [0], marker='o', color='w', label=environ_dicts[i],
-#                markerfacecolor=custom_palette[i], markersize=10) for i in range(4)
-# ], loc='upper center', bbox_to_anchor=(0.5, 0.96), ncol=4, frameon=False)
+fig.legend(handles=[
+    plt.Line2D([0], [0], marker='o', color='w', label=environ_dicts[i],
+               markerfacecolor=custom_palette[i], markersize=10) for i in range(4)
+], loc='upper center', bbox_to_anchor=(0.5, 0.97), ncol=4, frameon=False, fontsize=16)
 ax2.tick_params(axis='both', labelsize=16)
-ax2.set_xlim(0, 300)  # Set x limits in Mpc
-ax2.set_ylim(-150, 150)  # Set y limits in Mpc
+ax2.set_xlim(-300, 300)  # Set x limits in Mpc
+ax2.set_ylim(-300, 300)  # Set y limits in Mpc
 ax2.set_xlabel('X (Mpc)', fontsize=16, labelpad=10)
 ax2.set_ylabel('Y (Mpc)', fontsize=16, labelpad=10)
 ax2.set_title('Inferred BGS Environments (0.01 $\leq$ z $\leq$ 0.06)', fontsize=18, pad=10)
