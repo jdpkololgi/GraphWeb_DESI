@@ -25,7 +25,7 @@ plt.rcdefaults()
 # background = 'white'  # Set background to dark for better visibility
 plt.style.use(['science', 'no-latex', 'dark_background'])#, 'light_background' if background == 'light' else 'dark_background'])
 
-testcat = cat(path=r'/global/homes/d/dkololgi/TNG300-1', snapno=99, masscut=1e9)
+testcat = cat(path=r'/pscratch/sd/d/dkololgi/TNG300-1', snapno=99, masscut=1e9)
 print('Created cat object for TNG300 galaxies')
 
 # Define cache file paths
@@ -110,7 +110,7 @@ else:
         print(f"Error saving DESI_features: {e}")
     
     try:
-        DESI_NETWORK.DESI_GAL_CAT.zcat.to_pickle(desi_zcat_cache_path)
+        DESI_NETWORK.DESI_GAL_CAT.zcat.to_pandas().to_pickle(desi_zcat_cache_path)
         print("Successfully saved DESI_NETWORK.zcat")
 
     except Exception as e:
@@ -198,8 +198,8 @@ inference_model = SimpleGAT(
     10, 4, num_heads=4
 )
 inference_model.load_state_dict(
-    # torch.load("/global/homes/d/dkololgi/TNG/Illustris/trained_gat_simulation.pth", map_location='cpu')
-    torch.load("/global/homes/d/dkololgi/TNG/Illustris/trained_gat_model_ddp.pth", map_location='cpu') # From gcn_pipeline.py
+    torch.load("/global/homes/d/dkololgi/TNG/Illustris/trained_gat_simulation.pth", map_location='cpu') # From GCN_test.py
+    # torch.load("/global/homes/d/dkololgi/TNG/Illustris/trained_gat_model_ddp.pth", map_location='cpu') # From gcn_pipeline.py
 )
 
 inference_model.eval()
@@ -214,6 +214,15 @@ with torch.no_grad():
     DESI_probs = F.softmax(DESI_out, dim=1).numpy()
 
 print('Inference completed, predictions and probabilities obtained')
+
+print('Saving pre-release VAC of DESI BGS galaxies with cosmic web predictions...')
+zcat['GAT_ENV'] = DESI_pred
+zcat['GAT_VOID_PROB'] = DESI_probs[:, 0]
+zcat['GAT_WALL_PROB'] = DESI_probs[:, 1]
+zcat['GAT_FILAMENT_PROB'] = DESI_probs[:, 2]
+zcat['GAT_CLUSTER_PROB'] = DESI_probs[:, 3]
+zcat.to_pickle('/global/homes/d/dkololgi/GraphWeb_DESI/DESI_BGS_PRERELEASE_VAC.pkl')
+
 # Define environment labels and custom palette
 environ_dicts = {
     0: 'Void',
@@ -480,6 +489,14 @@ for i in range(4):
     axs[i].set_xlabel('g-r Color')
     axs[i].set_ylabel('Frequency')
     axs[i].legend()
+
+fig, axs = plt.subplots(1, figsize=(12,10)) # plot all environments overlapping
+for i in range(4):
+    mask = np.delete((DESI_pred == i), BAD_GAL)
+    axs.hist(g_r[mask], bins=50, alpha=0.7, label=f'{environ_dicts[i]}', density=True, color=custom_palette[i])
+axs.set_xlabel('g-r Color')
+axs.set_ylabel('Frequency')
+axs.legend()
 
 #Plotting g-r color for each environment
 fig, axs = plt.subplots(2,2, figsize=(12, 10), sharex=False, sharey=False, layout='constrained')

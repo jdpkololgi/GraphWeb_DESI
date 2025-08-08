@@ -19,7 +19,13 @@ class GalaxyCatalog:
         self.zcat = self.zcat[self.zcat['BGS_TARGET'] != 0.] # Filter for BGS targets
 
         print(f"Raw number of zcat entries: {len(self.zcat):,}")
-
+        self.cartesian_coord() # Generate Cartesian coordinates for north and south on initialization
+        print(f'Reordering zcat to match [north, south] Cartesian coordinates...')
+        self.zcat_north = self.zcat[self.galactic_north_mask].copy()
+        self.zcat_south = self.zcat[self.galactic_south_mask].copy()
+        self.zcat = vstack([self.zcat_north, self.zcat_south])
+        print(f"Number of zcat entries after filtering: {len(self.zcat):,}")
+    
     def select_gal_classes(self, gal_class='BGS', M_STAR=9):
         '''
         Select galaxies based on their class.
@@ -194,4 +200,4 @@ if __name__ == "__main__":
     data = GalaxyCatalog(PATH)
     # data.select_gal_classes('BGS') # Example usage to select BGS galaxies
     # data.sky_coord(plot=True, globeplot=False) # Example usage to plot sky coordinates
-    data.cartesian_coord(xyzplot='hemispheres') # Example usage to compute Cartesian coordinates
+    # data.cartesian_coord(xyzplot='hemispheres') # Example usage to compute Cartesian coordinates

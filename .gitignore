@@ -16,3 +16,8 @@ cache/DESI_delaunay_graph.pt
 cache/DESI_geom.pt
 cache/DESI_features.pt
 cache/DESI_NETWORK.zcat.pt
+cache/DESI_delaunay_graph_old.pt
+cache/DESI_features_old.pt
+cache/DESI_geom_old.pt
+cache/DESI_NETWORK.zcat_old.pt
+DESI_BGS_PRERELEASE_VAC.pkl
