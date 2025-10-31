@@ -521,6 +521,13 @@ ax.set_xlabel('X (Mpc)')
 ax.set_ylabel('Y (Mpc)')
 ax.set_aspect('equal')
 
+# Add legend for cosmic web environments
+legend_handles = [
+    plt.Line2D([0], [0], marker='o', color='w', label=environ_dicts[i],
+               markerfacecolor=custom_palette[i], markersize=10) for i in range(4)
+]
+ax.legend(handles=legend_handles, loc='upper right', frameon=True, fontsize=12)
+
 def update(frame):
     z0, z1 = -300 + frame * 10, -300 + frame * 10 + 10
     mask = (DESI_geom.pos[:, 2] > z0) & (DESI_geom.pos[:, 2] < z1)
