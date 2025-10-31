@@ -212,7 +212,7 @@ with torch.no_grad():
     )
     DESI_pred = DESI_out.argmax(dim=1).numpy()
     DESI_probs = F.softmax(DESI_out, dim=1).numpy()
-
+    
 print('Inference completed, predictions and probabilities obtained')
 
 print('Saving pre-release VAC of DESI BGS galaxies with cosmic web predictions...')
