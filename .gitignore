@@ -6,8 +6,9 @@ DESI_BGS_cartesian_10_9_dark.pdf
 Delaunay_Cube.pdf
 Delaunay_Slice.pdf
 test.fits
-__pycache__/galaxy_catalog.cpython-310.pyc
-__pycache__/galaxy_catalogue.cpython-310.pyc
+__pycache__/
+*.pyc
+*.pyo
 1_loaSampleSelection_forDK.ipynb
 2_loaSelectedSample_massCompletenessCut_forDK.ipynb
 5_loa+LSSsample_massCompletenessCut.ipynb
