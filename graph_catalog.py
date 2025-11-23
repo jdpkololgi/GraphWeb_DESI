@@ -329,7 +329,7 @@ ax1.scatter(sim_x[mask].to('Mpc'), sim_y[mask].to('Mpc'), c=[custom_palette[c] f
 ax1.grid(False)
 ax1.set_xlim(0, 300)
 ax1.set_ylim(0, 300)
-ax1.tick_params(axis='both', labelsize=16)
+ax1.tick_params(axis='both', labelsize=20)
 
 ax1.set_xlabel('X (Mpc)', fontsize=16, labelpad=10)
 ax1.set_ylabel('Y (Mpc)', fontsize=16, labelpad=10)
@@ -396,7 +396,7 @@ def test_nocolors():
     ax1.grid(False)
     ax1.set_xlim(0, 300)
     ax1.set_ylim(0, 300)
-    ax1.tick_params(axis='both', labelsize=16)
+    ax1.tick_params(axis='both', labelsize=20)
 
     ax1.set_xlabel('X (Mpc)', fontsize=16, labelpad=10)
     ax1.set_ylabel('Y (Mpc)', fontsize=16, labelpad=10)
@@ -585,8 +585,9 @@ fig, ax = plt.subplots(figsize=(10, 8))
 sc = ax.scatter([], [], s=1, alpha=0.8)
 ax.set_xlim(-310, 310)
 ax.set_ylim(-310, 310)
-ax.set_xlabel('X (Mpc)')
-ax.set_ylabel('Y (Mpc)')
+ax.set_xlabel('X (Mpc)', fontsize=20)
+ax.set_ylabel('Y (Mpc)', fontsize=20)
+ax.tick_params(axis='both', labelsize=20)
 ax.set_aspect('equal')
 
 def update(frame):
@@ -596,12 +597,12 @@ def update(frame):
     colors = [custom_palette[int(l)] for l in DESI_pred[mask]]
     sc.set_offsets(np.c_[x, y])
     sc.set_color(colors)
-    ax.set_title(f'z in [{z0}, {z1}] Mpc')
+    ax.set_title(f'z in [{z0}, {z1}] Mpc', fontsize=20)
     return sc,
 
 ani = animation.FuncAnimation(fig, update, frames=60, interval=200, blit=False)
 
-ani.save(filename='DESI_galaxy_animation_black_bg.gif', writer='pillow', savefig_kwargs={'facecolor': 'black'})
+ani.save(filename='DESI_galaxy_animation_black_bg.gif', writer='pillow', savefig_kwargs={'facecolor': 'black', 'transparent': True, 'dpi':300})
 
 HTML(ani.to_jshtml())
 
