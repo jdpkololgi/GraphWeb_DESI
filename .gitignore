@@ -22,3 +22,10 @@ cache/DESI_features_old.pt
 cache/DESI_geom_old.pt
 cache/DESI_NETWORK.zcat_old.pt
 DESI_BGS_PRERELEASE_VAC.pkl
+DESI_galaxy_animation_black_bg.gif
+edge_length_distribution.png
+Interactive - graph_catalog.py.ipynb
+long_edges_spatial.png
+sim_bgs_side_nocolors.pdf
+sim_bgs_side.pdf
+cache/

@@ -9,10 +9,13 @@ import os
 import scienceplots
 
 sys.path.append("../")
+sys.path.append("/global/homes/d/dkololgi/TNG/Illustris/")
 import os
-os.chdir("/global/homes/d/dkololgi/TNG/Illustris/")
-# from TNG.Illustris.Network_stats import network
+# print(os.getcwd())
+# os.chdir("/global/homes/d/dkololgi/TNG/Illustris/")
+# print(os.getcwd())
 from Network_stats import network
+# from Network_stats import network
 from Utilities import cat
 # from TNG.Illustris import Utilities
 
@@ -21,7 +24,7 @@ import torch.nn.functional as F
 from torch_geometric.data import Data
 from torch_geometric.utils import from_networkx
 
-plt.rcdefaults()
+# plt.rcdefaults()
 # background = 'white'  # Set background to dark for better visibility
 plt.style.use(['science', 'no-latex', 'dark_background'])#, 'light_background' if background == 'light' else 'dark_background'])
 
@@ -31,10 +34,17 @@ print('Created cat object for TNG300 galaxies')
 # Define cache file paths
 cache_dir = "/global/homes/d/dkololgi/GraphWeb_DESI/cache"
 os.makedirs(cache_dir, exist_ok=True)
-graph_cache_path = os.path.join(cache_dir, "DESI_delaunay_graph.pt")
-geom_cache_path = os.path.join(cache_dir, "DESI_geom.pt")
-features_cache_path = os.path.join(cache_dir, "DESI_features.pt")
-desi_zcat_cache_path = os.path.join(cache_dir, "DESI_NETWORK.zcat.pt")
+alpha_graph = True
+if alpha_graph:
+    graph_cache_path = os.path.join(cache_dir, "DESI_alpha_graph.pt")#"DESI_delaunay_graph.pt")
+    geom_cache_path = os.path.join(cache_dir, "DESI_alpha_geom.pt")#"DESI_geom.pt")
+    features_cache_path = os.path.join(cache_dir, "DESI_alpha_features.pt")#"DESI_features.pt")
+    desi_zcat_cache_path = os.path.join(cache_dir, "DESI_NETWORKalpha_zcat.pt")#"DESI_NETWORK.zcat.pt")
+else:
+    graph_cache_path = os.path.join(cache_dir, "DESI_delaunay_graph.pt")
+    geom_cache_path = os.path.join(cache_dir, "DESI_delaunay_geom.pt")
+    features_cache_path = os.path.join(cache_dir, "DESI_delaunay_features.pt")
+    desi_zcat_cache_path = os.path.join(cache_dir, "DESI_NETWORK_delaunay_zcat.pt")
 
 # Check if cached files exist
 if os.path.exists(graph_cache_path) and os.path.exists(geom_cache_path) and os.path.exists(features_cache_path) and os.path.exists(desi_zcat_cache_path):
@@ -44,23 +54,40 @@ if os.path.exists(graph_cache_path) and os.path.exists(geom_cache_path) and os.p
     DESI_features = pd.read_pickle(features_cache_path)
     zcat = pd.read_pickle(desi_zcat_cache_path)
     print("Cached data loaded successfully.")
-else:
+elif alpha_graph:
     print('Cached data missing or incomplete, creating new objects...')
-    print('Creating network object for DESI BGS galaxies...')
+    print('Creating alpha complex network object for DESI BGS galaxies...')
     DESI_NETWORK = network(masscut=9., from_DESI=True)
     print('DESI network object created')
-    G = DESI_NETWORK.subhalo_delauany_network(xyzplot=False)
-    print('DESI delaunay graph created')
-    DESI_NETWORK.network_stats_delaunay()
-    print('DESI delaunay network stats calculated')
-    DESI_geom = from_networkx(G, group_edge_attrs='all')
-    print('DESI delaunay graph converted to torch_geometric Data object')
+    zcat = DESI_NETWORK.DESI_GAL_CAT.zcat.to_pandas()
+    G = DESI_NETWORK.galaxy_alpha_complex_network(xyzplot=False) #subhalo_delauany_network(xyzplot=False)
+    print('DESI alpha complex graph created') # delaunay graph created')
+    DESI_NETWORK.network_stats_alpha(G=G) #network_stats_delaunay()
+    print('DESI alpha complex network stats calculated') # delaunay network stats calculated')
+    DESI_geom = from_networkx(G, group_edge_attrs=['length'])
+    print('DESI alpha complex graph converted to torch_geometric Data object') # delaunay graph converted to torch_geometric Data object')
+    
+    scaler = PowerTransformer(method='box-cox')
+    DESI_features = pd.DataFrame(scaler.fit_transform(DESI_NETWORK.data + 1e-6), index=DESI_NETWORK.data.index, columns=DESI_NETWORK.data.columns)
+    DESI_geom.x = torch.tensor(DESI_features.values, dtype=torch.float32)
+    print('DESI features scaled and converted to torch tensor')
+elif alpha_graph == False:
+    print('Cached data missing or incomplete, creating new objects...')
+    print('Creating delaunay network object for DESI BGS galaxies...')
+    DESI_NETWORK = network(masscut=9., from_DESI=True)
+    print('DESI network object created')
+    zcat = DESI_NETWORK.DESI_GAL_CAT.zcat.to_pandas()
+    G = DESI_NETWORK.subhalo_delaunay_network(xyzplot=False) #subhalo_delauany_network(xyzplot=False)
+    print('DESI delaunay graph created') # delaunay graph created')
+    DESI_NETWORK.network_stats_delaunay() #network_stats_delaunay()
+    print('DESI delaunay network stats calculated') # delaunay network stats calculated')
+    DESI_geom = from_networkx(G, group_edge_attrs=['length'])
+    print('DESI delaunay graph converted to torch_geometric Data object') # delaunay graph converted to torch_geometric Data object')
     scaler = PowerTransformer(method='box-cox')
     DESI_features = pd.DataFrame(scaler.fit_transform(DESI_NETWORK.data), index=DESI_NETWORK.data.index, columns=DESI_NETWORK.data.columns)
     DESI_geom.x = torch.tensor(DESI_features.values, dtype=torch.float32)
     print('DESI features scaled and converted to torch tensor')
-
-    # Save to cache with memory management
+    # Save to cache with memory managements
     print("Saving data to cache...")
     
     # Save one at a time with memory cleanup
@@ -212,7 +239,7 @@ with torch.no_grad():
     )
     DESI_pred = DESI_out.argmax(dim=1).numpy()
     DESI_probs = F.softmax(DESI_out, dim=1).numpy()
-    
+
 print('Inference completed, predictions and probabilities obtained')
 
 print('Saving pre-release VAC of DESI BGS galaxies with cosmic web predictions...')
@@ -221,6 +248,8 @@ zcat['GAT_VOID_PROB'] = DESI_probs[:, 0]
 zcat['GAT_WALL_PROB'] = DESI_probs[:, 1]
 zcat['GAT_FILAMENT_PROB'] = DESI_probs[:, 2]
 zcat['GAT_CLUSTER_PROB'] = DESI_probs[:, 3]
+if hasattr(zcat, 'to_pandas'):
+    zcat = zcat.to_pandas()
 zcat.to_pickle('/global/homes/d/dkololgi/GraphWeb_DESI/DESI_BGS_PRERELEASE_VAC.pkl')
 
 # Define environment labels and custom palette
@@ -478,7 +507,7 @@ fig.update_layout(
     height=800
 )
 
-fig.show()
+# fig.show()
 
 # Histograms of stellar mass and colour for each environment
 LOGMSTAR = zcat['LOGMSTAR']
@@ -609,9 +638,9 @@ def update(frame):
 
 ani = animation.FuncAnimation(fig, update, frames=60, interval=200, blit=False)
 
-ani.save(filename='DESI_galaxy_animation_black_bg.gif', writer='pillow', savefig_kwargs={'facecolor': 'black', 'transparent': True, 'dpi':300})
+ani.save(filename='DESI_galaxy_animation_black_bg.gif', writer='pillow', dpi=300, savefig_kwargs={'facecolor': 'black', 'transparent': True})
 
-HTML(ani.to_jshtml())
+# HTML(ani.to_jshtml())
 
 
 
