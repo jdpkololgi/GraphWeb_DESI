@@ -1,4 +1,5 @@
 import argparse
+import importlib.util
 import os
 import sys
 from dataclasses import dataclass
@@ -36,11 +37,32 @@ from config_paths import (
 
 # Workflow status: ACTIVE (canonical GraphWeb DESI inference pipeline)
 
-sys.path.append("../")
-if ILLUSTRIS_REPO_ROOT not in sys.path:
-    sys.path.append(ILLUSTRIS_REPO_ROOT)
-from Network_stats import network
-from Utilities import cat
+def _load_illustris_module(module_filename: str, alias: str):
+    """Load Illustris module by file path to avoid package-name collisions."""
+    module_path = Path(ILLUSTRIS_REPO_ROOT) / "workflows" / "gcn_paper" / module_filename
+    gcn_dir = str(module_path.parent)
+    if gcn_dir not in sys.path:
+        sys.path.insert(0, gcn_dir)
+    if ILLUSTRIS_REPO_ROOT not in sys.path:
+        sys.path.insert(0, ILLUSTRIS_REPO_ROOT)
+    spec = importlib.util.spec_from_file_location(alias, module_path)
+    if spec is None or spec.loader is None:
+        raise ImportError(f"Unable to load Illustris module at {module_path}")
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
+_illustris_network_stats = _load_illustris_module(
+    module_filename="Network_stats.py",
+    alias="illustris_network_stats",
+)
+_illustris_utilities = _load_illustris_module(
+    module_filename="Utilities.py",
+    alias="illustris_utilities",
+)
+network = _illustris_network_stats.network
+cat = _illustris_utilities.cat
 
 
 plt.style.use(["science", "no-latex", "dark_background"])
@@ -180,6 +202,11 @@ class SimpleGAT(nn.Module):
 
 
 def run_inference(desi_geom, model_path: str):
+    if not os.path.exists(model_path):
+        raise FileNotFoundError(
+            f"Inference model file not found: {model_path}. "
+            "Set GRAPHWEB/Illustris model path via --model-path or ILLUSTRIS_GAT_MODEL_PATH."
+        )
     model = SimpleGAT(10, 4, num_heads=4)
     model.load_state_dict(torch.load(model_path, map_location="cpu"))
     model.eval()

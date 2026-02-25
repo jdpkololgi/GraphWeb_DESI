@@ -7,7 +7,35 @@ from pathlib import Path
 import fitsio
 import numpy as np
 from astropy.table import Table, hstack, join, vstack
-from desimodel.footprint import radec2pix
+
+# Fallback DESI Python paths for environments where DESI packages are not on
+# sys.path by default (e.g. custom conda env without full desienv activation).
+DESI_FALLBACK_SITE_PACKAGES = (
+    "/global/common/software/desi/perlmutter/desiconda/20240425-2.2.0/"
+    "code/desiutil/3.5.0/lib/python3.10/site-packages",
+    "/global/common/software/desi/perlmutter/desiconda/20240425-2.2.0/"
+    "code/desimodel/0.19.3/lib/python3.10/site-packages",
+)
+
+
+def _import_radec2pix():
+    try:
+        from desimodel.footprint import radec2pix as _radec2pix
+
+        return _radec2pix
+    except ImportError:
+        for site_path in DESI_FALLBACK_SITE_PACKAGES:
+            if os.path.isdir(site_path) and site_path not in sys.path:
+                sys.path.insert(0, site_path)
+        try:
+            from desimodel.footprint import radec2pix as _radec2pix
+
+            return _radec2pix
+        except ImportError:
+            return None
+
+
+radec2pix = _import_radec2pix()
 
 # Allow canonical workflow scripts to resolve repo-root modules after reorganization.
 REPO_ROOT = Path(__file__).resolve().parents[2]
@@ -182,6 +210,11 @@ def get_selected_rows_metadata(cat, z_min: float, z_max: float) -> np.ndarray:
 
 
 def read_tractorphot(cat, vacdir: str, specprod: str = "loa", verbose: bool = False) -> Table:
+    if radec2pix is None:
+        raise ImportError(
+            "load_catalog.py requires the DESI package `desimodel` (missing `desimodel.footprint`). "
+            "Activate a DESI environment or install desimodel before running catalog assembly."
+        )
     tractorphotfiles = glob(os.path.join(vacdir, "tractorphot", f"tractorphot-nside4-hp???-{specprod}.fits"))
     if not tractorphotfiles:
         return Table()
