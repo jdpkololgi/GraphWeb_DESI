@@ -9,9 +9,7 @@ from config_paths import GRAPHWEB_CACHE_DIR
 
 # Workflow status: ACTIVE utility (edge-length QA diagnostics)
 
-# Paths
-# POINTS_PATH = "/pscratch/sd/d/dkololgi/abacus/abacus_cartesian_coords.npy"
-# EDGES_PATH = "/pscratch/sd/d/dkololgi/abacus/abacus_delaunay_edges_combined_idx.npy"
+# Path is config-driven via `GRAPHWEB_CACHE_DIR`.
 CACHE_PATH = os.path.join(GRAPHWEB_CACHE_DIR, "DESI_alpha_geom.pt")
 
 def main():

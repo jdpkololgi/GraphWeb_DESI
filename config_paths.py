@@ -1,6 +1,8 @@
 """Centralized path configuration for GraphWeb_DESI workflows.
 
-Defaults preserve current behavior and can be overridden by environment vars.
+Phase 1.5 goal:
+- Preserve current defaults.
+- Add canonical pscratch layout targets for gradual migration.
 """
 
 from __future__ import annotations
@@ -17,6 +19,8 @@ GRAPHWEB_REPO_ROOT = _env(
     "GRAPHWEB_REPO_ROOT",
     str(Path(__file__).resolve().parent),
 )
+DK_SCRATCH_ROOT = _env("DK_SCRATCH_ROOT", "/pscratch/sd/d/dkololgi")
+GRAPHWEB_SCRATCH_ROOT = _env("GRAPHWEB_SCRATCH_ROOT", f"{DK_SCRATCH_ROOT}/graphweb_desi")
 GRAPHWEB_CACHE_DIR = _env(
     "GRAPHWEB_CACHE_DIR",
     f"{GRAPHWEB_REPO_ROOT}/cache",
@@ -32,6 +36,20 @@ GRAPHWEB_VAC_OUTPUT_PATH = _env(
 GRAPHWEB_CATALOG_PATH = _env(
     "GRAPHWEB_CATALOG_PATH",
     f"{GRAPHWEB_REPO_ROOT}/loa-combined-lowz.fits",
+)
+
+# Canonical pscratch layout (opt-in via env vars in current migration stage)
+GRAPHWEB_CANONICAL_CACHE_DIR = _env(
+    "GRAPHWEB_CANONICAL_CACHE_DIR",
+    f"{GRAPHWEB_SCRATCH_ROOT}/cache",
+)
+GRAPHWEB_CANONICAL_OUTPUT_DIR = _env(
+    "GRAPHWEB_CANONICAL_OUTPUT_DIR",
+    f"{GRAPHWEB_SCRATCH_ROOT}/outputs",
+)
+GRAPHWEB_CANONICAL_FIGURE_DIR = _env(
+    "GRAPHWEB_CANONICAL_FIGURE_DIR",
+    f"{GRAPHWEB_SCRATCH_ROOT}/figures",
 )
 
 ILLUSTRIS_REPO_ROOT = _env(

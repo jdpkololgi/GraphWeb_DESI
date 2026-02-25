@@ -23,8 +23,6 @@ if ILLUSTRIS_REPO_ROOT not in sys.path:
     sys.path.append(ILLUSTRIS_REPO_ROOT)
 import os
 # print(os.getcwd())
-# os.chdir("/global/homes/d/dkololgi/TNG/Illustris/")
-# print(os.getcwd())
 from Network_stats import network
 # from Network_stats import network
 from Utilities import cat
@@ -290,6 +288,7 @@ zcat['GAT_FILAMENT_PROB'] = DESI_probs[:, 2]
 zcat['GAT_CLUSTER_PROB'] = DESI_probs[:, 3]
 if hasattr(zcat, 'to_pandas'):
     zcat = zcat.to_pandas()
+os.makedirs(os.path.dirname(GRAPHWEB_VAC_OUTPUT_PATH), exist_ok=True)
 zcat.to_pickle(GRAPHWEB_VAC_OUTPUT_PATH)
 
 # Define environment labels and custom palette
