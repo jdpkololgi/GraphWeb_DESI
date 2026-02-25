@@ -6,13 +6,16 @@ from astropy.io import fits
 import fitsio
 import os
 import numpy as np
+from config_paths import DESI_FASTSPEC_CATALOGS_DIR, DESI_TRACTORPHOT_DIR, DESI_ZCAT_FILE
+
+# Workflow status: ACTIVE (low-z catalog assembly)
 
 ## Set up the path to the fastscpec fit catalogs, and create the array with the list of all the various fastspec-loa catalogs 
 ## The list below is correct as of 28.3.25 for v1 of the Loa processing 
 ## This includes the patch to fix the emission line flux uncertaintites 
 
 # fastspec_path = '/pscratch/sd/i/ioannis/fastspecfit/data/loa-bug/catalogs/'
-fastspec_path = '/global/cfs/cdirs/desi/vac/dr2/fastspecfit/loa/v1.0/catalogs/'
+fastspec_path = DESI_FASTSPEC_CATALOGS_DIR
 
 fastspec_catalogs = [
     'fastspec-loa-cmx-other.fits',
@@ -199,7 +202,7 @@ print('Finished with the base extraction')
 ## Let's start with the redshift catalog 
 print('Matching with the resdhift catalog')
 
-zcatfile = '/global/cfs/cdirs/desi/spectro/redux/loa/zcatalog/v1/zall-pix-loa.fits'
+zcatfile = DESI_ZCAT_FILE
 
 ## Read only the redshift and spectype columns to be able to use my get_selected_rows_metadata function to determine 
 ## the row numbers of my objects of interest. (this should obviously be modified as need be, for whatever selection criteria are desired) 
@@ -228,7 +231,7 @@ cat.write('loa-combined-lowz-zflags.fits', overwrite=True)
 print('Matching with the Legacy Survey catalog')
 
 specprod = 'loa'
-vacdir = '/global/cfs/cdirs/desi/vac/dr2/lsdr9-photometry/loa/v1.0/observed-targets'
+vacdir = DESI_TRACTORPHOT_DIR
 
 def read_tractorphot(cat, specprod='loa', verbose=False):
     """Gather Tractor photometry for an input catalog. Note that this function 

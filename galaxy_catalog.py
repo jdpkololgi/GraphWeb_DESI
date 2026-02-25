@@ -8,6 +8,9 @@ import fitsio
 import os
 import numpy as np
 import matplotlib.pyplot as plt
+from config_paths import GRAPHWEB_CATALOG_PATH
+
+# Workflow status: ACTIVE utility (catalog filtering and coordinate transforms)
 
 class GalaxyCatalog:
     def __init__(self, PATH, LOGMSTAR=9.):
@@ -196,7 +199,7 @@ class GalaxyCatalog:
         
 if __name__ == "__main__":
     # PATH = '/global/homes/d/dkololgi/GraphWeb_DESI/test.fits'
-    PATH='/global/homes/d/dkololgi/GraphWeb_DESI/loa-combined-lowz.fits'
+    PATH = GRAPHWEB_CATALOG_PATH
     data = GalaxyCatalog(PATH)
     # data.select_gal_classes('BGS') # Example usage to select BGS galaxies
     # data.sky_coord(plot=True, globeplot=False) # Example usage to plot sky coordinates

@@ -5,11 +5,14 @@ from mpl_toolkits.mplot3d.art3d import Line3DCollection
 import torch
 import os
 from torch_geometric.data import Data
+from config_paths import GRAPHWEB_CACHE_DIR
+
+# Workflow status: ACTIVE utility (edge-length QA diagnostics)
 
 # Paths
 # POINTS_PATH = "/pscratch/sd/d/dkololgi/abacus/abacus_cartesian_coords.npy"
 # EDGES_PATH = "/pscratch/sd/d/dkololgi/abacus/abacus_delaunay_edges_combined_idx.npy"
-CACHE_PATH = "/global/homes/d/dkololgi/GraphWeb_DESI/cache/DESI_alpha_geom.pt"
+CACHE_PATH = os.path.join(GRAPHWEB_CACHE_DIR, "DESI_alpha_geom.pt")
 
 def main():
     print("Loading data...")

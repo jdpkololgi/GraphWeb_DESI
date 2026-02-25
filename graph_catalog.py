@@ -7,9 +7,20 @@ from sklearn.preprocessing import PowerTransformer
 from IPython.display import HTML
 import os
 import scienceplots
+from config_paths import (
+    GRAPHWEB_CACHE_DIR,
+    GRAPHWEB_VAC_OUTPUT_PATH,
+    ILLUSTRIS_GAT_MODEL_PATH,
+    ILLUSTRIS_REPO_ROOT,
+    ILLUSTRIS_SCALER_PATH,
+    TNG_REFERENCE_CATALOG_PATH,
+)
+
+# Workflow status: ACTIVE (canonical GraphWeb DESI inference pipeline)
 
 sys.path.append("../")
-sys.path.append("/global/homes/d/dkololgi/TNG/Illustris/")
+if ILLUSTRIS_REPO_ROOT not in sys.path:
+    sys.path.append(ILLUSTRIS_REPO_ROOT)
 import os
 # print(os.getcwd())
 # os.chdir("/global/homes/d/dkololgi/TNG/Illustris/")
@@ -28,11 +39,11 @@ from torch_geometric.utils import from_networkx
 # background = 'white'  # Set background to dark for better visibility
 plt.style.use(['science', 'no-latex', 'dark_background'])#, 'light_background' if background == 'light' else 'dark_background'])
 
-testcat = cat(path=r'/pscratch/sd/d/dkololgi/TNG300-1', snapno=99, masscut=1e9)
+testcat = cat(path=TNG_REFERENCE_CATALOG_PATH, snapno=99, masscut=1e9)
 print('Created cat object for TNG300 galaxies')
 
 # Define cache file paths
-cache_dir = "/global/homes/d/dkololgi/GraphWeb_DESI/cache/"
+cache_dir = GRAPHWEB_CACHE_DIR
 os.makedirs(cache_dir, exist_ok=True)
 alpha_graph = True
 update_cache = True
@@ -71,7 +82,7 @@ elif alpha_graph:
     print('DESI alpha complex graph converted to torch_geometric Data object') # delaunay graph converted to torch_geometric Data object')
     
     if first_moment_matching:
-        scaler = torch.load('/global/homes/d/dkololgi/TNG/Illustris/features_scaler.pkl', weights_only=False)
+        scaler = torch.load(ILLUSTRIS_SCALER_PATH, weights_only=False)
         features_data = scaler.transform(DESI_NETWORK.data + 1e-6)
     else:
         scaler = PowerTransformer(method='box-cox')
@@ -99,7 +110,7 @@ elif alpha_graph == False:
     print('DESI delaunay graph converted to torch_geometric Data object') # delaunay graph converted to torch_geometric Data object')
     # scaler = PowerTransformer(method='box-cox')
     if first_moment_matching:
-        scaler = torch.load('/global/homes/d/dkololgi/TNG/Illustris/features_scaler.pkl', weights_only=False)
+        scaler = torch.load(ILLUSTRIS_SCALER_PATH, weights_only=False)
         features_data = scaler.transform(DESI_NETWORK.data)
     else:
         scaler = PowerTransformer(method='box-cox')
@@ -253,7 +264,7 @@ inference_model = SimpleGAT(
     10, 4, num_heads=4
 )
 inference_model.load_state_dict(
-    torch.load("/global/homes/d/dkololgi/TNG/Illustris/trained_gat_model_ddp_2026-01-15.pth", map_location='cpu') # From GCN_test.py
+    torch.load(ILLUSTRIS_GAT_MODEL_PATH, map_location='cpu') # From GCN_test.py
     # torch.load("/global/homes/d/dkololgi/TNG/Illustris/trained_gat_simulation.pth", map_location='cpu') # From GCN_test.py
     # torch.load("/global/homes/d/dkololgi/TNG/Illustris/trained_gat_model_ddp.pth", map_location='cpu') # From gcn_pipeline.py
 )
@@ -279,7 +290,7 @@ zcat['GAT_FILAMENT_PROB'] = DESI_probs[:, 2]
 zcat['GAT_CLUSTER_PROB'] = DESI_probs[:, 3]
 if hasattr(zcat, 'to_pandas'):
     zcat = zcat.to_pandas()
-zcat.to_pickle('/global/homes/d/dkololgi/GraphWeb_DESI/DESI_BGS_PRERELEASE_VAC.pkl')
+zcat.to_pickle(GRAPHWEB_VAC_OUTPUT_PATH)
 
 # Define environment labels and custom palette
 environ_dicts = {
