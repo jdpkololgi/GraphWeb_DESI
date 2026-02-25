@@ -1,4 +1,5 @@
 import sys
+from dataclasses import dataclass
 from galaxy_catalog import GalaxyCatalog
 import matplotlib.pyplot as plt
 import pandas as pd
@@ -37,149 +38,156 @@ from torch_geometric.utils import from_networkx
 # background = 'white'  # Set background to dark for better visibility
 plt.style.use(['science', 'no-latex', 'dark_background'])#, 'light_background' if background == 'light' else 'dark_background'])
 
+@dataclass(frozen=True)
+class CachePaths:
+    graph: str
+    geom: str
+    features: str
+    zcat: str
+
+
+def build_cache_paths(cache_dir: str, alpha_graph: bool) -> CachePaths:
+    if alpha_graph:
+        return CachePaths(
+            graph=os.path.join(cache_dir, "DESI_alpha_graph.pt"),
+            geom=os.path.join(cache_dir, "DESI_alpha_geom.pt"),
+            features=os.path.join(cache_dir, "DESI_alpha_features.pt"),
+            zcat=os.path.join(cache_dir, "DESI_NETWORKalpha_zcat.pt"),
+        )
+    return CachePaths(
+        graph=os.path.join(cache_dir, "DESI_delaunay_graph.pt"),
+        geom=os.path.join(cache_dir, "DESI_delaunay_geom.pt"),
+        features=os.path.join(cache_dir, "DESI_delaunay_features.pt"),
+        zcat=os.path.join(cache_dir, "DESI_NETWORK_delaunay_zcat.pt"),
+    )
+
+
+def cache_exists(paths: CachePaths) -> bool:
+    return (
+        os.path.exists(paths.graph)
+        and os.path.exists(paths.geom)
+        and os.path.exists(paths.features)
+        and os.path.exists(paths.zcat)
+    )
+
+
+def load_cached_bundle(paths: CachePaths):
+    print("Loading cached data...")
+    graph = torch.load(paths.graph, weights_only=False)
+    desi_geom = torch.load(paths.geom, weights_only=False)
+    desi_features = pd.read_pickle(paths.features)
+    zcat = pd.read_pickle(paths.zcat)
+    print("Cached data loaded successfully.")
+    return graph, desi_geom, desi_features, zcat
+
+
+def save_with_memory_check(obj, path, obj_name):
+    """Save object with memory monitoring and fallback pickle."""
+    import gc
+    import psutil
+    import pickle
+
+    try:
+        available_memory = psutil.virtual_memory().available / (1024**3)
+        print(f"Available memory before saving {obj_name}: {available_memory:.2f} GB")
+        if available_memory < 2.0:
+            print(f"Warning: Low memory before saving {obj_name}")
+            gc.collect()
+
+        print(f"Saving {obj_name} to {path}...")
+        torch.save(obj, path)
+        print(f"Successfully saved {obj_name}")
+        del obj
+        gc.collect()
+    except Exception as e:
+        print(f"Error saving {obj_name}: {e}")
+        try:
+            with open(path, 'wb') as f:
+                pickle.dump(obj, f, protocol=pickle.HIGHEST_PROTOCOL)
+            print(f"Successfully saved {obj_name} using pickle")
+        except Exception as e2:
+            print(f"Failed to save {obj_name} with both methods: {e2}")
+            return False
+    return True
+
+
+def build_desi_graph_bundle(alpha_graph: bool, first_moment_matching: bool):
+    print('Cached data missing or incomplete, creating new objects...')
+    mode_label = 'alpha complex' if alpha_graph else 'delaunay'
+    print(f'Creating {mode_label} network object for DESI BGS galaxies...')
+    desi_network = network(masscut=9., from_DESI=True)
+    print('DESI network object created')
+    zcat = desi_network.DESI_GAL_CAT.zcat.to_pandas()
+
+    if alpha_graph:
+        graph = desi_network.galaxy_alpha_complex_network(xyzplot=False)
+        print('DESI alpha complex graph created')
+        desi_network.network_stats_alpha(G=graph)
+        print('DESI alpha complex network stats calculated')
+    else:
+        graph = desi_network.subhalo_delaunay_network(xyzplot=False)
+        print('DESI delaunay graph created')
+        desi_network.network_stats_delaunay()
+        print('DESI delaunay network stats calculated')
+
+    desi_geom = from_networkx(graph, group_edge_attrs=['length'])
+    print('DESI graph converted to torch_geometric Data object')
+
+    if first_moment_matching:
+        scaler = torch.load(ILLUSTRIS_SCALER_PATH, weights_only=False)
+        features_data = scaler.transform(desi_network.data + 1e-6)
+    else:
+        scaler = PowerTransformer(method='box-cox')
+        features_data = scaler.fit_transform(desi_network.data + 1e-6)
+    desi_features = pd.DataFrame(
+        features_data,
+        index=desi_network.data.index,
+        columns=desi_network.data.columns,
+    )
+
+    print("Applying Domain Adaptation: Centering DESI features to Mean=0...")
+    desi_features = desi_features - desi_features.mean()
+    desi_geom.x = torch.tensor(desi_features.values, dtype=torch.float32)
+    print('DESI features scaled and converted to torch tensor')
+    return graph, desi_geom, desi_features, zcat, desi_network
+
+
 testcat = cat(path=TNG_REFERENCE_CATALOG_PATH, snapno=99, masscut=1e9)
 print('Created cat object for TNG300 galaxies')
 
-# Define cache file paths
 cache_dir = GRAPHWEB_CACHE_DIR
 os.makedirs(cache_dir, exist_ok=True)
 alpha_graph = True
 update_cache = True
 first_moment_matching = False
-if alpha_graph:
-    graph_cache_path = os.path.join(cache_dir, "DESI_alpha_graph.pt")#"DESI_delaunay_graph.pt")
-    geom_cache_path = os.path.join(cache_dir, "DESI_alpha_geom.pt")#"DESI_geom.pt")
-    features_cache_path = os.path.join(cache_dir, "DESI_alpha_features.pt")#"DESI_features.pt")
-    desi_zcat_cache_path = os.path.join(cache_dir, "DESI_NETWORKalpha_zcat.pt")#"DESI_NETWORK.zcat.pt")
+cache_paths = build_cache_paths(cache_dir=cache_dir, alpha_graph=alpha_graph)
+
+if (not update_cache) and cache_exists(cache_paths):
+    G, DESI_geom, DESI_features, zcat = load_cached_bundle(cache_paths)
 else:
-    graph_cache_path = os.path.join(cache_dir, "DESI_delaunay_graph.pt")
-    geom_cache_path = os.path.join(cache_dir, "DESI_delaunay_geom.pt")
-    features_cache_path = os.path.join(cache_dir, "DESI_delaunay_features.pt")
-    desi_zcat_cache_path = os.path.join(cache_dir, "DESI_NETWORK_delaunay_zcat.pt")
-
-# Check if cached files exist
-if (not update_cache) and os.path.exists(graph_cache_path) and os.path.exists(geom_cache_path) and os.path.exists(features_cache_path) and os.path.exists(desi_zcat_cache_path):
-    print("Loading cached data...")
-    G = torch.load(graph_cache_path, weights_only=False)
-    DESI_geom = torch.load(geom_cache_path, weights_only=False)
-    DESI_features = pd.read_pickle(features_cache_path)
-    zcat = pd.read_pickle(desi_zcat_cache_path)
-    print("Cached data loaded successfully.")
-elif alpha_graph:
     update_cache = True
-    print('Cached data missing or incomplete, creating new objects...')
-    print('Creating alpha complex network object for DESI BGS galaxies...')
-    DESI_NETWORK = network(masscut=9., from_DESI=True)
-    print('DESI network object created')
-    zcat = DESI_NETWORK.DESI_GAL_CAT.zcat.to_pandas()
-    G = DESI_NETWORK.galaxy_alpha_complex_network(xyzplot=False) #subhalo_delauany_network(xyzplot=False)
-    print('DESI alpha complex graph created') # delaunay graph created')
-    DESI_NETWORK.network_stats_alpha(G=G) #network_stats_delaunay()
-    print('DESI alpha complex network stats calculated') # delaunay network stats calculated')
-    DESI_geom = from_networkx(G, group_edge_attrs=['length'])
-    print('DESI alpha complex graph converted to torch_geometric Data object') # delaunay graph converted to torch_geometric Data object')
-    
-    if first_moment_matching:
-        scaler = torch.load(ILLUSTRIS_SCALER_PATH, weights_only=False)
-        features_data = scaler.transform(DESI_NETWORK.data + 1e-6)
-    else:
-        scaler = PowerTransformer(method='box-cox')
-        features_data = scaler.fit_transform(DESI_NETWORK.data + 1e-6)
-    DESI_features = pd.DataFrame(features_data, index=DESI_NETWORK.data.index, columns=DESI_NETWORK.data.columns)
-    
-    # Domain Adaptation: Center DESI features to Mean=0
-    print("Applying Domain Adaptation: Centering DESI features to Mean=0...")
-    DESI_features = DESI_features - DESI_features.mean()
-
-    DESI_geom.x = torch.tensor(DESI_features.values, dtype=torch.float32)
-    print('DESI features scaled and converted to torch tensor')
-elif alpha_graph == False:
-    update_cache = True
-    print('Cached data missing or incomplete, creating new objects...')
-    print('Creating delaunay network object for DESI BGS galaxies...')
-    DESI_NETWORK = network(masscut=9., from_DESI=True)
-    print('DESI network object created')
-    zcat = DESI_NETWORK.DESI_GAL_CAT.zcat.to_pandas()
-    G = DESI_NETWORK.subhalo_delaunay_network(xyzplot=False) #subhalo_delauany_network(xyzplot=False)
-    print('DESI delaunay graph created') # delaunay graph created')
-    DESI_NETWORK.network_stats_delaunay() #network_stats_delaunay()
-    print('DESI delaunay network stats calculated') # delaunay network stats calculated')
-    DESI_geom = from_networkx(G, group_edge_attrs=['length'])
-    print('DESI delaunay graph converted to torch_geometric Data object') # delaunay graph converted to torch_geometric Data object')
-    # scaler = PowerTransformer(method='box-cox')
-    if first_moment_matching:
-        scaler = torch.load(ILLUSTRIS_SCALER_PATH, weights_only=False)
-        features_data = scaler.transform(DESI_NETWORK.data)
-    else:
-        scaler = PowerTransformer(method='box-cox')
-        features_data = scaler.fit_transform(DESI_NETWORK.data + 1e-6)
-    DESI_features = pd.DataFrame(features_data, index=DESI_NETWORK.data.index, columns=DESI_NETWORK.data.columns)
-    
-    # Domain Adaptation: Center DESI features to Mean=0
-    print("Applying Domain Adaptation: Centering DESI features to Mean=0...")
-    DESI_features = DESI_features - DESI_features.mean()
-
-    DESI_geom.x = torch.tensor(DESI_features.values, dtype=torch.float32)
-    print('DESI features scaled and converted to torch tensor')
+    G, DESI_geom, DESI_features, zcat, DESI_NETWORK = build_desi_graph_bundle(
+        alpha_graph=alpha_graph,
+        first_moment_matching=first_moment_matching,
+    )
 
 if update_cache:
-
-    # Save to cache with memory managements if the paths do not exist
     print("Saving data to cache...")
-    
-    # Save one at a time with memory cleanup
-    import gc
-    import psutil
-    import pickle
+    save_with_memory_check(G, cache_paths.graph, "Graph")
+    save_with_memory_check(DESI_geom, cache_paths.geom, "DESI_geom")
 
-    def save_with_memory_check(obj, path, obj_name):
-        """Save object with memory monitoring and error handling."""
-        try:
-            # Check available memory
-            available_memory = psutil.virtual_memory().available / (1024**3)  # GB
-            print(f"Available memory before saving {obj_name}: {available_memory:.2f} GB")
-            
-            if available_memory < 2.0:  # Less than 2GB available
-                print(f"Warning: Low memory before saving {obj_name}")
-                gc.collect()  # Force garbage collection
-            
-            print(f"Saving {obj_name} to {path}...")
-            torch.save(obj, path)
-            print(f"Successfully saved {obj_name}")
-            
-            # Clean up immediately after saving
-            del obj
-            gc.collect()
-            
-        except Exception as e:
-            print(f"Error saving {obj_name}: {e}")
-            # Try alternative saving method
-            try:
-                with open(path, 'wb') as f:
-                    pickle.dump(obj, f, protocol=pickle.HIGHEST_PROTOCOL)
-                print(f"Successfully saved {obj_name} using pickle")
-            except Exception as e2:
-                print(f"Failed to save {obj_name} with both methods: {e2}")
-                return False
-        return True
-
-    save_with_memory_check(G, graph_cache_path, "Graph")
-    save_with_memory_check(DESI_geom, geom_cache_path, "DESI_geom")
-    
-    # For pandas DataFrame, use pickle
     try:
-        DESI_features.to_pickle(features_cache_path)
+        DESI_features.to_pickle(cache_paths.features)
         print("Successfully saved DESI_features")
     except Exception as e:
         print(f"Error saving DESI_features: {e}")
-    
-    try:
-        DESI_NETWORK.DESI_GAL_CAT.zcat.to_pandas().to_pickle(desi_zcat_cache_path)
-        print("Successfully saved DESI_NETWORK.zcat")
 
+    try:
+        DESI_NETWORK.DESI_GAL_CAT.zcat.to_pandas().to_pickle(cache_paths.zcat)
+        print("Successfully saved DESI_NETWORK.zcat")
     except Exception as e:
         print(f"Error saving DESI_NETWORK.zcat: {e}")
-    
+
     print("Data cached successfully.")
     zcat = DESI_NETWORK.DESI_GAL_CAT.zcat
     
