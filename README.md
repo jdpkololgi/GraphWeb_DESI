@@ -4,7 +4,8 @@ GraphWeb_DESI builds a graph from DESI BGS galaxies and applies a pretrained GAT
 
 ## Main entrypoint
 
-- `graph_catalog.py`
+- Canonical: `workflows/graph_inference/graph_catalog.py`
+- Compatibility wrapper: `graph_catalog.py`
 
 This script now has an explicit CLI and no longer runs large ad-hoc plotting blocks by default.
 
@@ -15,6 +16,17 @@ Run from repo root:
 ```bash
 python graph_catalog.py
 ```
+
+Canonical path form:
+
+```bash
+python workflows/graph_inference/graph_catalog.py
+```
+
+Other entrypoints follow the same pattern:
+- `workflows/catalog/load_catalog.py` (shim: `load_catalog.py`)
+- `workflows/utilities/galaxy_catalog.py` (shim: `galaxy_catalog.py`)
+- `workflows/utilities/investigate_edges.py` (shim: `investigate_edges.py`)
 
 Default behavior:
 - graph type: `alpha`
