@@ -32,9 +32,11 @@ testcat = cat(path=r'/pscratch/sd/d/dkololgi/TNG300-1', snapno=99, masscut=1e9)
 print('Created cat object for TNG300 galaxies')
 
 # Define cache file paths
-cache_dir = "/global/homes/d/dkololgi/GraphWeb_DESI/cache"
+cache_dir = "/global/homes/d/dkololgi/GraphWeb_DESI/cache/"
 os.makedirs(cache_dir, exist_ok=True)
 alpha_graph = True
+update_cache = True
+first_moment_matching = False
 if alpha_graph:
     graph_cache_path = os.path.join(cache_dir, "DESI_alpha_graph.pt")#"DESI_delaunay_graph.pt")
     geom_cache_path = os.path.join(cache_dir, "DESI_alpha_geom.pt")#"DESI_geom.pt")
@@ -47,7 +49,7 @@ else:
     desi_zcat_cache_path = os.path.join(cache_dir, "DESI_NETWORK_delaunay_zcat.pt")
 
 # Check if cached files exist
-if os.path.exists(graph_cache_path) and os.path.exists(geom_cache_path) and os.path.exists(features_cache_path) and os.path.exists(desi_zcat_cache_path):
+if (not update_cache) and os.path.exists(graph_cache_path) and os.path.exists(geom_cache_path) and os.path.exists(features_cache_path) and os.path.exists(desi_zcat_cache_path):
     print("Loading cached data...")
     G = torch.load(graph_cache_path, weights_only=False)
     DESI_geom = torch.load(geom_cache_path, weights_only=False)
@@ -55,6 +57,7 @@ if os.path.exists(graph_cache_path) and os.path.exists(geom_cache_path) and os.p
     zcat = pd.read_pickle(desi_zcat_cache_path)
     print("Cached data loaded successfully.")
 elif alpha_graph:
+    update_cache = True
     print('Cached data missing or incomplete, creating new objects...')
     print('Creating alpha complex network object for DESI BGS galaxies...')
     DESI_NETWORK = network(masscut=9., from_DESI=True)
@@ -67,11 +70,22 @@ elif alpha_graph:
     DESI_geom = from_networkx(G, group_edge_attrs=['length'])
     print('DESI alpha complex graph converted to torch_geometric Data object') # delaunay graph converted to torch_geometric Data object')
     
-    scaler = PowerTransformer(method='box-cox')
-    DESI_features = pd.DataFrame(scaler.fit_transform(DESI_NETWORK.data + 1e-6), index=DESI_NETWORK.data.index, columns=DESI_NETWORK.data.columns)
+    if first_moment_matching:
+        scaler = torch.load('/global/homes/d/dkololgi/TNG/Illustris/features_scaler.pkl', weights_only=False)
+        features_data = scaler.transform(DESI_NETWORK.data + 1e-6)
+    else:
+        scaler = PowerTransformer(method='box-cox')
+        features_data = scaler.fit_transform(DESI_NETWORK.data + 1e-6)
+    DESI_features = pd.DataFrame(features_data, index=DESI_NETWORK.data.index, columns=DESI_NETWORK.data.columns)
+    
+    # Domain Adaptation: Center DESI features to Mean=0
+    print("Applying Domain Adaptation: Centering DESI features to Mean=0...")
+    DESI_features = DESI_features - DESI_features.mean()
+
     DESI_geom.x = torch.tensor(DESI_features.values, dtype=torch.float32)
     print('DESI features scaled and converted to torch tensor')
 elif alpha_graph == False:
+    update_cache = True
     print('Cached data missing or incomplete, creating new objects...')
     print('Creating delaunay network object for DESI BGS galaxies...')
     DESI_NETWORK = network(masscut=9., from_DESI=True)
@@ -83,11 +97,25 @@ elif alpha_graph == False:
     print('DESI delaunay network stats calculated') # delaunay network stats calculated')
     DESI_geom = from_networkx(G, group_edge_attrs=['length'])
     print('DESI delaunay graph converted to torch_geometric Data object') # delaunay graph converted to torch_geometric Data object')
-    scaler = PowerTransformer(method='box-cox')
-    DESI_features = pd.DataFrame(scaler.fit_transform(DESI_NETWORK.data), index=DESI_NETWORK.data.index, columns=DESI_NETWORK.data.columns)
+    # scaler = PowerTransformer(method='box-cox')
+    if first_moment_matching:
+        scaler = torch.load('/global/homes/d/dkololgi/TNG/Illustris/features_scaler.pkl', weights_only=False)
+        features_data = scaler.transform(DESI_NETWORK.data)
+    else:
+        scaler = PowerTransformer(method='box-cox')
+        features_data = scaler.fit_transform(DESI_NETWORK.data + 1e-6)
+    DESI_features = pd.DataFrame(features_data, index=DESI_NETWORK.data.index, columns=DESI_NETWORK.data.columns)
+    
+    # Domain Adaptation: Center DESI features to Mean=0
+    print("Applying Domain Adaptation: Centering DESI features to Mean=0...")
+    DESI_features = DESI_features - DESI_features.mean()
+
     DESI_geom.x = torch.tensor(DESI_features.values, dtype=torch.float32)
     print('DESI features scaled and converted to torch tensor')
-    # Save to cache with memory managements
+
+if update_cache:
+
+    # Save to cache with memory managements if the paths do not exist
     print("Saving data to cache...")
     
     # Save one at a time with memory cleanup
@@ -225,7 +253,8 @@ inference_model = SimpleGAT(
     10, 4, num_heads=4
 )
 inference_model.load_state_dict(
-    torch.load("/global/homes/d/dkololgi/TNG/Illustris/trained_gat_simulation.pth", map_location='cpu') # From GCN_test.py
+    torch.load("/global/homes/d/dkololgi/TNG/Illustris/trained_gat_model_ddp_2026-01-15.pth", map_location='cpu') # From GCN_test.py
+    # torch.load("/global/homes/d/dkololgi/TNG/Illustris/trained_gat_simulation.pth", map_location='cpu') # From GCN_test.py
     # torch.load("/global/homes/d/dkololgi/TNG/Illustris/trained_gat_model_ddp.pth", map_location='cpu') # From gcn_pipeline.py
 )
 
