@@ -4,43 +4,185 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
 from sklearn.preprocessing import PowerTransformer
-
+from IPython.display import HTML
+import os
 import scienceplots
+from config_paths import (
+    GRAPHWEB_CACHE_DIR,
+    GRAPHWEB_VAC_OUTPUT_PATH,
+    ILLUSTRIS_GAT_MODEL_PATH,
+    ILLUSTRIS_REPO_ROOT,
+    ILLUSTRIS_SCALER_PATH,
+    TNG_REFERENCE_CATALOG_PATH,
+)
+
+# Workflow status: ACTIVE (canonical GraphWeb DESI inference pipeline)
 
 sys.path.append("../")
+if ILLUSTRIS_REPO_ROOT not in sys.path:
+    sys.path.append(ILLUSTRIS_REPO_ROOT)
 import os
-os.chdir("/global/homes/d/dkololgi/TNG/Illustris/")
-# from TNG.Illustris.Network_stats import network
+# print(os.getcwd())
 from Network_stats import network
+# from Network_stats import network
 from Utilities import cat
 # from TNG.Illustris import Utilities
 
 import torch
+import torch.nn.functional as F
 from torch_geometric.data import Data
 from torch_geometric.utils import from_networkx
 
-plt.rcdefaults()
+# plt.rcdefaults()
 # background = 'white'  # Set background to dark for better visibility
-plt.style.use(['science', 'no-latex'])#, 'light_background' if background == 'light' else 'dark_background'])
+plt.style.use(['science', 'no-latex', 'dark_background'])#, 'light_background' if background == 'light' else 'dark_background'])
 
-DESI_NETWORK = network(
-    masscut=9.,
-    from_DESI=True
-)
-
-print('DESI network object created')
-G=DESI_NETWORK.subhalo_delauany_network(xyzplot=False)
-print('DESI delaunay graph created')
-DESI_NETWORK.network_stats_delaunay()
-print('DESI delaunay network stats calculated')
-DESI_geom = from_networkx(G, group_edge_attrs='all')
-print('DESI delaunay graph converted to torch_geometric Data object')
-scaler = PowerTransformer(method = 'box-cox')
-DESI_features = pd.DataFrame(scaler.fit_transform(DESI_NETWORK.data), index=DESI_NETWORK.data.index, columns=DESI_NETWORK.data.columns)
-DESI_geom.x = torch.tensor(DESI_features.values, dtype=torch.float32)
-print('DESI features scaled and converted to torch tensor')
-testcat = cat(path=r'/global/homes/d/dkololgi/TNG300-1', snapno=99, masscut=1e9)
+testcat = cat(path=TNG_REFERENCE_CATALOG_PATH, snapno=99, masscut=1e9)
 print('Created cat object for TNG300 galaxies')
+
+# Define cache file paths
+cache_dir = GRAPHWEB_CACHE_DIR
+os.makedirs(cache_dir, exist_ok=True)
+alpha_graph = True
+update_cache = True
+first_moment_matching = False
+if alpha_graph:
+    graph_cache_path = os.path.join(cache_dir, "DESI_alpha_graph.pt")#"DESI_delaunay_graph.pt")
+    geom_cache_path = os.path.join(cache_dir, "DESI_alpha_geom.pt")#"DESI_geom.pt")
+    features_cache_path = os.path.join(cache_dir, "DESI_alpha_features.pt")#"DESI_features.pt")
+    desi_zcat_cache_path = os.path.join(cache_dir, "DESI_NETWORKalpha_zcat.pt")#"DESI_NETWORK.zcat.pt")
+else:
+    graph_cache_path = os.path.join(cache_dir, "DESI_delaunay_graph.pt")
+    geom_cache_path = os.path.join(cache_dir, "DESI_delaunay_geom.pt")
+    features_cache_path = os.path.join(cache_dir, "DESI_delaunay_features.pt")
+    desi_zcat_cache_path = os.path.join(cache_dir, "DESI_NETWORK_delaunay_zcat.pt")
+
+# Check if cached files exist
+if (not update_cache) and os.path.exists(graph_cache_path) and os.path.exists(geom_cache_path) and os.path.exists(features_cache_path) and os.path.exists(desi_zcat_cache_path):
+    print("Loading cached data...")
+    G = torch.load(graph_cache_path, weights_only=False)
+    DESI_geom = torch.load(geom_cache_path, weights_only=False)
+    DESI_features = pd.read_pickle(features_cache_path)
+    zcat = pd.read_pickle(desi_zcat_cache_path)
+    print("Cached data loaded successfully.")
+elif alpha_graph:
+    update_cache = True
+    print('Cached data missing or incomplete, creating new objects...')
+    print('Creating alpha complex network object for DESI BGS galaxies...')
+    DESI_NETWORK = network(masscut=9., from_DESI=True)
+    print('DESI network object created')
+    zcat = DESI_NETWORK.DESI_GAL_CAT.zcat.to_pandas()
+    G = DESI_NETWORK.galaxy_alpha_complex_network(xyzplot=False) #subhalo_delauany_network(xyzplot=False)
+    print('DESI alpha complex graph created') # delaunay graph created')
+    DESI_NETWORK.network_stats_alpha(G=G) #network_stats_delaunay()
+    print('DESI alpha complex network stats calculated') # delaunay network stats calculated')
+    DESI_geom = from_networkx(G, group_edge_attrs=['length'])
+    print('DESI alpha complex graph converted to torch_geometric Data object') # delaunay graph converted to torch_geometric Data object')
+    
+    if first_moment_matching:
+        scaler = torch.load(ILLUSTRIS_SCALER_PATH, weights_only=False)
+        features_data = scaler.transform(DESI_NETWORK.data + 1e-6)
+    else:
+        scaler = PowerTransformer(method='box-cox')
+        features_data = scaler.fit_transform(DESI_NETWORK.data + 1e-6)
+    DESI_features = pd.DataFrame(features_data, index=DESI_NETWORK.data.index, columns=DESI_NETWORK.data.columns)
+    
+    # Domain Adaptation: Center DESI features to Mean=0
+    print("Applying Domain Adaptation: Centering DESI features to Mean=0...")
+    DESI_features = DESI_features - DESI_features.mean()
+
+    DESI_geom.x = torch.tensor(DESI_features.values, dtype=torch.float32)
+    print('DESI features scaled and converted to torch tensor')
+elif alpha_graph == False:
+    update_cache = True
+    print('Cached data missing or incomplete, creating new objects...')
+    print('Creating delaunay network object for DESI BGS galaxies...')
+    DESI_NETWORK = network(masscut=9., from_DESI=True)
+    print('DESI network object created')
+    zcat = DESI_NETWORK.DESI_GAL_CAT.zcat.to_pandas()
+    G = DESI_NETWORK.subhalo_delaunay_network(xyzplot=False) #subhalo_delauany_network(xyzplot=False)
+    print('DESI delaunay graph created') # delaunay graph created')
+    DESI_NETWORK.network_stats_delaunay() #network_stats_delaunay()
+    print('DESI delaunay network stats calculated') # delaunay network stats calculated')
+    DESI_geom = from_networkx(G, group_edge_attrs=['length'])
+    print('DESI delaunay graph converted to torch_geometric Data object') # delaunay graph converted to torch_geometric Data object')
+    # scaler = PowerTransformer(method='box-cox')
+    if first_moment_matching:
+        scaler = torch.load(ILLUSTRIS_SCALER_PATH, weights_only=False)
+        features_data = scaler.transform(DESI_NETWORK.data)
+    else:
+        scaler = PowerTransformer(method='box-cox')
+        features_data = scaler.fit_transform(DESI_NETWORK.data + 1e-6)
+    DESI_features = pd.DataFrame(features_data, index=DESI_NETWORK.data.index, columns=DESI_NETWORK.data.columns)
+    
+    # Domain Adaptation: Center DESI features to Mean=0
+    print("Applying Domain Adaptation: Centering DESI features to Mean=0...")
+    DESI_features = DESI_features - DESI_features.mean()
+
+    DESI_geom.x = torch.tensor(DESI_features.values, dtype=torch.float32)
+    print('DESI features scaled and converted to torch tensor')
+
+if update_cache:
+
+    # Save to cache with memory managements if the paths do not exist
+    print("Saving data to cache...")
+    
+    # Save one at a time with memory cleanup
+    import gc
+    import psutil
+    import pickle
+
+    def save_with_memory_check(obj, path, obj_name):
+        """Save object with memory monitoring and error handling."""
+        try:
+            # Check available memory
+            available_memory = psutil.virtual_memory().available / (1024**3)  # GB
+            print(f"Available memory before saving {obj_name}: {available_memory:.2f} GB")
+            
+            if available_memory < 2.0:  # Less than 2GB available
+                print(f"Warning: Low memory before saving {obj_name}")
+                gc.collect()  # Force garbage collection
+            
+            print(f"Saving {obj_name} to {path}...")
+            torch.save(obj, path)
+            print(f"Successfully saved {obj_name}")
+            
+            # Clean up immediately after saving
+            del obj
+            gc.collect()
+            
+        except Exception as e:
+            print(f"Error saving {obj_name}: {e}")
+            # Try alternative saving method
+            try:
+                with open(path, 'wb') as f:
+                    pickle.dump(obj, f, protocol=pickle.HIGHEST_PROTOCOL)
+                print(f"Successfully saved {obj_name} using pickle")
+            except Exception as e2:
+                print(f"Failed to save {obj_name} with both methods: {e2}")
+                return False
+        return True
+
+    save_with_memory_check(G, graph_cache_path, "Graph")
+    save_with_memory_check(DESI_geom, geom_cache_path, "DESI_geom")
+    
+    # For pandas DataFrame, use pickle
+    try:
+        DESI_features.to_pickle(features_cache_path)
+        print("Successfully saved DESI_features")
+    except Exception as e:
+        print(f"Error saving DESI_features: {e}")
+    
+    try:
+        DESI_NETWORK.DESI_GAL_CAT.zcat.to_pandas().to_pickle(desi_zcat_cache_path)
+        print("Successfully saved DESI_NETWORK.zcat")
+
+    except Exception as e:
+        print(f"Error saving DESI_NETWORK.zcat: {e}")
+    
+    print("Data cached successfully.")
+    zcat = DESI_NETWORK.DESI_GAL_CAT.zcat
+    
 # Declare model for inference
 import torch.nn as nn
 import torch.optim as optim
@@ -60,7 +202,6 @@ class SimpleGAT(nn.Module):
 
         hidden_dim = 20  # per-head output size
         total_hidden = hidden_dim * num_heads  # total output size if concat=True
-
 
         # self.gat_layer1 = GATv2Conv(input_dim, 15, edge_dim=1, heads=num_heads, concat=True)
         # self.gat_layer2 = GATv2Conv(15, 15, edge_dim=1, heads=num_heads, concat=True)
@@ -121,7 +262,9 @@ inference_model = SimpleGAT(
     10, 4, num_heads=4
 )
 inference_model.load_state_dict(
-    torch.load("/global/homes/d/dkololgi/TNG/Illustris/trained_gat_simulation.pth", map_location='cpu')
+    torch.load(ILLUSTRIS_GAT_MODEL_PATH, map_location='cpu') # From GCN_test.py
+    # torch.load("/global/homes/d/dkololgi/TNG/Illustris/trained_gat_simulation.pth", map_location='cpu') # From GCN_test.py
+    # torch.load("/global/homes/d/dkololgi/TNG/Illustris/trained_gat_model_ddp.pth", map_location='cpu') # From gcn_pipeline.py
 )
 
 inference_model.eval()
@@ -133,9 +276,21 @@ with torch.no_grad():
         edge_weight=DESI_geom.edge_attr
     )
     DESI_pred = DESI_out.argmax(dim=1).numpy()
-    DESI_probs = DESI_out.numpy()
+    DESI_probs = F.softmax(DESI_out, dim=1).numpy()
 
 print('Inference completed, predictions and probabilities obtained')
+
+print('Saving pre-release VAC of DESI BGS galaxies with cosmic web predictions...')
+zcat['GAT_ENV'] = DESI_pred
+zcat['GAT_VOID_PROB'] = DESI_probs[:, 0]
+zcat['GAT_WALL_PROB'] = DESI_probs[:, 1]
+zcat['GAT_FILAMENT_PROB'] = DESI_probs[:, 2]
+zcat['GAT_CLUSTER_PROB'] = DESI_probs[:, 3]
+if hasattr(zcat, 'to_pandas'):
+    zcat = zcat.to_pandas()
+os.makedirs(os.path.dirname(GRAPHWEB_VAC_OUTPUT_PATH), exist_ok=True)
+zcat.to_pickle(GRAPHWEB_VAC_OUTPUT_PATH)
+
 # Define environment labels and custom palette
 environ_dicts = {
     0: 'Void',
@@ -143,70 +298,7 @@ environ_dicts = {
     2: 'Filament',
     3: 'Cluster'}
 
-# custom_palette = {
-#     0: 'blue',     # void
-#     1: 'green',     # wall
-#     2: 'orange', # filament
-#     3: 'red'   # clusters
-# }
-
-# custom_palette = {
-#     0: '#5d2e8c',#2ec4b6
-#     1: '#20a4f3',
-#     2: '#ffbf69',
-#     3: '#f35b04'
-# }
-
-# custom_palette = {
-#     0: '#072ac8',
-#     1: '#20a4f3',
-#     2: '#ffbf69',
-#     3: '#f35b04'
-# }
-
-# custom_palette = {
-#     0: '#072ac8',  # void — deep blue
-#     1: '#1e81b0',  # wall — teal-blue (cool but distinct from void)
-#     2: '#ffc857',  # filament — warm yellow-orange
-#     3: '#d62828'   # node — deep red
-# }
-
-# custom_palette = {
-#     0: '#072ac8', 
-#     1: '#ffadd5', 
-#     2: '#ff6392', 
-#     3: '#d90429'  
-# }
-
-# custom_palette = {
-#     0: '#89CFF0',  # Void — soft sky blue
-#     1: '#a29bfe',  # Wall — periwinkle
-#     2: '#e17055',  # Filament — burnt orange
-#     3: '#6c0e23'   # Cluster — deep wine red
-# }
-
-# custom_palette = {
-#     0: '#56cfe1',  # Void — icy cyan
-#     1: '#72efdd',  # Wall — aquamarine
-#     2: '#ffba08',  # Filament — strong yellow
-#     3: '#d00000'   # Cluster — intense red
-# }
-
-# custom_palette = {
-#     0: '#4cc9f0',  # Void — light blue
-#     1: '#f72585',  # Wall — magenta
-#     2: '#b5179e',  # Filament — plum
-#     3: '#720026'   # Cluster — dark red
-# }
-
-# custom_palette = {
-#     0: '#4cc9f0',  # Void — neon blue
-#     1: '#f72585',  # Wall — electric pink
-#     2: '#b5179e',  # Filament — rich plum
-#     3: '#ff004d'   # Cluster — hot magenta-red (strong contrast!)
-# }
-
-# For black background
+# # For black background
 custom_palette = {
     0: '#80ffdb',  # Void — mint-teal neon (distinct from blue wall)
     1: '#3a86ff',  # Wall — neon blue
@@ -214,7 +306,7 @@ custom_palette = {
     3: '#ffbe0b'   # Cluster — neon yellow-orange
 }
 
-# # For white background
+# For white background
 # custom_palette = {
 #     0: '#0077b6',  # Void — deep blue
 #     1: '#2ec4b6',  # Wall — turquoise
@@ -222,34 +314,44 @@ custom_palette = {
 #     3: '#d62828'   # Cluster — deep red
 # }
 
-# plt.style.use('dark_background')
-# cosmic_web_palettes = {
-#     'white': {
-#         0: '#072ac8',  # Void — deep blue
-#         1: '#2ec4b6',  # Wall — turquoise
-#         2: '#ffb703',  # Filament — golden yellow
-#         3: '#d62828'   # Node — deep red
-#     },
-#     'black': {
-#         0: '#00bfff',  # Void — bright cyan
-#         1: '#00ff99',  # Wall — mint green
-#         2: '#ffcc00',  # Filament — bright yellow-orange
-#         3: '#ff5733'   # Node — orange-red
-#     }
-# }
-
 # custom_palette = cosmic_web_palettes[background if background in cosmic_web_palettes else 'white']
+testcat.cweb_classify(xyzplot=False)
 
 cmap4 = plt.get_cmap('magma', 4)
 custom_palette2 = cmap4(np.arange(4))
 
+# Verify the mapping of labels to environments
+unique_desi_pred = np.unique(DESI_pred)
+unique_testcat_cweb = np.unique(testcat.cweb)
+
 # Historgram of counts with labels giving percentage of each environment
+
 plt.figure(figsize=(10, 6))
-plt.hist(DESI_pred, bins=np.arange(5)-0.5, rwidth=0.8, color='skyblue', edgecolor='black')
-plt.xticks(np.arange(4), [environ_dicts[i] for i in range(4)])
+
+# Calculate histogram data for DESI_pred and testcat.cweb
+bins = np.arange(5) - 0.5
+desi_hist, _ = np.histogram(DESI_pred, bins=bins, density=True)
+tweb_hist, _ = np.histogram(testcat.cweb, bins=bins, density=True)
+
+# Define bar width and positions
+bar_width = 0.4
+x = np.arange(4)  # Positions for the bars
+
+# Plot side-by-side histograms
+plt.bar(x - bar_width / 2, desi_hist, width=bar_width, color='#80ffdb', edgecolor='black', label='BGS')
+plt.bar(x + bar_width / 2, tweb_hist, width=bar_width, color='#3a86ff', edgecolor='black', alpha=0.7, label='IllustrisTNG T-WEB')
+
+# Add labels to each bar
+for i in range(4):
+    plt.text(x[i] - bar_width / 2, desi_hist[i] + 0.005, f'{desi_hist[i]*100:.1f}%', ha='center', va='bottom', fontsize=10)
+    plt.text(x[i] + bar_width / 2, tweb_hist[i] + 0.005, f'{tweb_hist[i]*100:.1f}%', ha='center', va='bottom', fontsize=10)
+
+# Add labels and formatting
+plt.xticks(x, [environ_dicts[i] for i in range(4)])
 plt.xlabel('Cosmic Web Environment')
-plt.ylabel('Count')
+plt.ylabel('Frequency')
 plt.title('Distribution of Cosmic Web Environments in DESI Network')
+plt.legend()
 plt.grid(axis='y', linestyle='--', alpha=0.7)
 plt.show()
 
@@ -268,9 +370,9 @@ labels = [environ_dicts[int(label)] for label in DESI_pred]
 colors = [custom_palette[int(label)] for label in DESI_pred]
 
 # 2D projection plot of DESI galaxies with cosmic web predictions with side by side of simulation tweb classification
-testcat.cweb_classify(xyzplot=False)
-plt.style.use(['science', 'no-latex', 'dark_background'])  # Use dark background for better contrast
-
+# plt.style.use(['science', 'no-latex', 'dark_background'])  # Use dark background for better contrast
+# plt.style.use('default')
+# plt.style.use(['science', 'no-latex'])  # Use default background for better contrast
 stars = (testcat.object['subhalos']['SubhaloMassType'][:,4]) #stellar mass of subhalos
 mc = testcat.masscut*testcat.hub/1e10 #mass cut for subhalos
 stars_indices = np.where(stars>=mc)[0] #indices of subhalos with stellar mass greater than masscut
@@ -291,15 +393,15 @@ zlims_sim = (-10, 10)*u.Mpc  # Set z slab limits in Mpc
 # set z slab between -10 and 10 Mpc
 mask = (sim_z.to('Mpc') >= zlims_sim[0]) & (sim_z.to('Mpc') <= zlims_sim[1])
 ax1.scatter(sim_x[mask].to('Mpc'), sim_y[mask].to('Mpc'), c=[custom_palette[c] for c in testcat.cweb[mask]], s=5, edgecolor='none')
-ax1.set_facecolor('none')    # makes axes transparent
+# ax1.set_facecolor('none')    # makes axes transparent
 ax1.grid(False)
 ax1.set_xlim(0, 300)
 ax1.set_ylim(0, 300)
-ax1.tick_params(axis='both', labelsize=16)
+ax1.tick_params(axis='both', labelsize=20)
 
 ax1.set_xlabel('X (Mpc)', fontsize=16, labelpad=10)
 ax1.set_ylabel('Y (Mpc)', fontsize=16, labelpad=10)
-ax1.set_title('IllustrisTNG-300 by T-WEB Environments', fontsize=18, pad=10)
+ax1.set_title('IllustrisTNG-300 by T-WEB Environments', fontsize=20, pad=10)
 # Set aspect ratio to equal for better visualization
 ax1.set_aspect('equal', adjustable='box')
 
@@ -310,7 +412,7 @@ theta = -np.deg2rad(12)  # Rotate by 12 degrees
 R = np.array([[np.cos(theta), -np.sin(theta)],
               [np.sin(theta), np.cos(theta)]])
 
-ax2.set_facecolor('none')    # makes axes transparent
+# ax2.set_facecolor('none')    # makes axes transparent
 
 proj_x = DESI_geom.pos[:, 0][(DESI_geom.pos[:,2]<zlims[1])&(DESI_geom.pos[:,2]>zlims[0])]
 proj_y = DESI_geom.pos[:, 1][(DESI_geom.pos[:,2]<zlims[1])&(DESI_geom.pos[:,2]>zlims[0])]
@@ -332,22 +434,90 @@ ax2.scatter(
     edgecolor='none'
     )
 ax2.grid(False)
-# ax2.legend(handles=[
-#     plt.Line2D([0], [0], marker='o', color='k', label=environ_dicts[i],
+# fig.legend(handles=[
+#     plt.Line2D([0], [0], marker='o', color='w', label=environ_dicts[i],
 #                markerfacecolor=custom_palette[i], markersize=10) for i in range(4)
-# ], loc='upper center')
-ax2.tick_params(axis='both', labelsize=16)
-ax2.set_xlim(0, 300)  # Set x limits in Mpc
-ax2.set_ylim(-150, 150)  # Set y limits in Mpc
-ax2.set_xlabel('X (Mpc)', fontsize=16, labelpad=10)
-ax2.set_ylabel('Y (Mpc)', fontsize=16, labelpad=10)
-ax2.set_title('Inferred BGS Environments (0.01 $\leq$ z $\leq$ 0.06)', fontsize=18, pad=10)
+# ], loc='upper center', bbox_to_anchor=(0.5, 0.97), ncol=4, frameon=False, fontsize=16)
+ax2.tick_params(axis='both', labelsize=20)
+ax2.set_xlim(-300, 300)  # Set x limits in Mpc
+ax2.set_ylim(-300, 300)  # Set y limits in Mpc
+ax2.set_xlabel('X (Mpc)', fontsize=20, labelpad=10)
+ax2.set_ylabel('Y (Mpc)', fontsize=20, labelpad=10)
+ax2.set_title('Inferred BGS Environments (0.01 $\leq$ z $\leq$ 0.06)', fontsize=20, pad=10)
 # Set aspect ratio to equal for better visualization
 ax2.set_aspect('equal', adjustable='box')
 # Show the plot
-plt.savefig('sim_bgs_side.png', transparent=True, dpi=400)
+plt.savefig('sim_bgs_side.pdf', transparent=True, dpi=600)
 plt.show()
 
+def test_nocolors():
+    fig, (ax1, ax2) = plt.subplots(1,2, figsize=(20, 8))
+    fig.patch.set_alpha(0.0)
+    ax1.patch.set_alpha(0.0)
+    ax2.patch.set_alpha(0.0)
+    zlims_sim = (-10, 10)*u.Mpc  # Set z slab limits in Mpc            
+    # ax1 = fig.add_subplot()
+    # set z slab between -10 and 10 Mpc
+    mask = (sim_z.to('Mpc') >= zlims_sim[0]) & (sim_z.to('Mpc') <= zlims_sim[1])
+    ax1.scatter(sim_x[mask].to('Mpc'), sim_y[mask].to('Mpc'), c='white', s=5, edgecolor='none')
+    # ax1.set_facecolor('none')    # makes axes transparent
+    ax1.grid(False)
+    ax1.set_xlim(0, 300)
+    ax1.set_ylim(0, 300)
+    ax1.tick_params(axis='both', labelsize=20)
+
+    ax1.set_xlabel('X (Mpc)', fontsize=16, labelpad=10)
+    ax1.set_ylabel('Y (Mpc)', fontsize=16, labelpad=10)
+    ax1.set_title('IllustrisTNG-300 Mock Galaxies', fontsize=20, pad=10)
+    # Set aspect ratio to equal for better visualization
+    ax1.set_aspect('equal', adjustable='box')
+
+    # ax = fig.add_subplot()
+    # set z slab between -10 and 10 Mpc
+
+    theta = -np.deg2rad(12)  # Rotate by 12 degrees
+    R = np.array([[np.cos(theta), -np.sin(theta)],
+                [np.sin(theta), np.cos(theta)]])
+
+    # ax2.set_facecolor('none')    # makes axes transparent
+
+    proj_x = DESI_geom.pos[:, 0][(DESI_geom.pos[:,2]<zlims[1])&(DESI_geom.pos[:,2]>zlims[0])]
+    proj_y = DESI_geom.pos[:, 1][(DESI_geom.pos[:,2]<zlims[1])&(DESI_geom.pos[:,2]>zlims[0])]
+
+    # stack the x and y coordinates
+    xy = np.vstack((proj_x, proj_y))
+    # Rotate the coordinates
+
+    xy_rot = R @ xy # Apply rotation
+
+    proj_x, proj_y = xy_rot[0], xy_rot[1] # rotated x and y coordinates
+
+
+    ax2.scatter(
+        proj_x,
+        proj_y,
+        c='white',
+        s=5,
+        edgecolor='none'
+        )
+    ax2.grid(False)
+    # fig.legend(handles=[
+    #     plt.Line2D([0], [0], marker='o', color='w', label=environ_dicts[i],
+    #             markerfacecolor=custom_palette[i], markersize=10) for i in range(4)
+    # ], loc='upper center', bbox_to_anchor=(0.5, 0.97), ncol=4, frameon=False, fontsize=16)
+    ax2.tick_params(axis='both', labelsize=20)
+    ax2.set_xlim(-300, 300)  # Set x limits in Mpc
+    ax2.set_ylim(-300, 300)  # Set y limits in Mpc
+    ax2.set_xlabel('X (Mpc)', fontsize=20, labelpad=10)
+    ax2.set_ylabel('Y (Mpc)', fontsize=20, labelpad=10)
+    ax2.set_title('DESI BGS Galaxies (0.01 $\leq$ z $\leq$ 0.06)', fontsize=20, pad=10)
+    # Set aspect ratio to equal for better visualization
+    ax2.set_aspect('equal', adjustable='box')
+    # Show the plot
+    plt.show()
+    fig.savefig('sim_bgs_side_nocolors.pdf', transparent=True, dpi=600)
+
+test_nocolors()
 
 # Build the interactive plot
 fig = go.Figure(data=[go.Scatter3d(
@@ -376,10 +546,10 @@ fig.update_layout(
     height=800
 )
 
-fig.show()
+# fig.show()
 
 # Histograms of stellar mass and colour for each environment
-LOGMSTAR = DESI_NETWORK.DESI_GAL_CAT.zcat['LOGMSTAR']
+LOGMSTAR = zcat['LOGMSTAR']
 
 fig, axs = plt.subplots(2, 2, figsize=(12, 10), sharex=False, sharey=False, layout='constrained')
 axs = axs.flatten()
@@ -393,9 +563,9 @@ for i in range(4):
     axs[i].legend()
 # This code is for creating a galaxy network from the DESI BGS catalog and predicting the cosmic web environment using a GAT model.
 
-FLUXG = DESI_NETWORK.DESI_GAL_CAT.zcat['FLUX_G']
-FLUXR = DESI_NETWORK.DESI_GAL_CAT.zcat['FLUX_R']
-FLUXZ = DESI_NETWORK.DESI_GAL_CAT.zcat['FLUX_Z']
+FLUXG = zcat['FLUX_G']
+FLUXR = zcat['FLUX_R']
+FLUXZ = zcat['FLUX_Z']
 
 G_MAG_mask = FLUXG > 0
 R_MAG_mask = FLUXR > 0
@@ -456,6 +626,14 @@ for i in range(4):
     axs[i].set_ylabel('Frequency')
     axs[i].legend()
 
+fig, axs = plt.subplots(1, figsize=(12,10)) # plot all environments overlapping
+for i in range(4):
+    mask = np.delete((DESI_pred == i), BAD_GAL)
+    axs.hist(g_r[mask], bins=50, alpha=0.7, label=f'{environ_dicts[i]}', density=True, color=custom_palette[i])
+axs.set_xlabel('g-r Color')
+axs.set_ylabel('Frequency')
+axs.legend()
+
 #Plotting g-r color for each environment
 fig, axs = plt.subplots(2,2, figsize=(12, 10), sharex=False, sharey=False, layout='constrained')
 axs = axs.flatten()
@@ -475,9 +653,17 @@ fig, ax = plt.subplots(figsize=(10, 8))
 sc = ax.scatter([], [], s=1, alpha=0.8)
 ax.set_xlim(-310, 310)
 ax.set_ylim(-310, 310)
-ax.set_xlabel('X (Mpc)')
-ax.set_ylabel('Y (Mpc)')
+ax.set_xlabel('X (Mpc)', fontsize=20)
+ax.set_ylabel('Y (Mpc)', fontsize=20)
+ax.tick_params(axis='both', labelsize=20)
 ax.set_aspect('equal')
+
+# Add legend for cosmic web environments
+legend_handles = [
+    plt.Line2D([0], [0], marker='o', color='w', label=environ_dicts[i],
+               markerfacecolor=custom_palette[i], markersize=10) for i in range(4)
+]
+ax.legend(handles=legend_handles, loc='upper right', frameon=True, fontsize=12)
 
 def update(frame):
     z0, z1 = -300 + frame * 10, -300 + frame * 10 + 10
@@ -486,14 +672,16 @@ def update(frame):
     colors = [custom_palette[int(l)] for l in DESI_pred[mask]]
     sc.set_offsets(np.c_[x, y])
     sc.set_color(colors)
-    ax.set_title(f'z in [{z0}, {z1}] Mpc')
+    ax.set_title(f'z in [{z0}, {z1}] Mpc', fontsize=20)
     return sc,
-from IPython.display import HTML
 
-ani = animation.FuncAnimation(fig, update, frames=60, interval=200, blit=True)
-HTML(ani.to_jshtml())
+ani = animation.FuncAnimation(fig, update, frames=60, interval=200, blit=False)
 
-# ani.save("cosmic_web_z_slab.mov", writer="pillow", fps=60)
+ani.save(filename='DESI_galaxy_animation_black_bg.gif', writer='pillow', dpi=300, savefig_kwargs={'facecolor': 'black', 'transparent': True})
+
+# HTML(ani.to_jshtml())
+
+
 
 # DESI_GAL_CAT = GalaxyCatalogue(
 #     PATH="/global/homes/d/dkololgi/GraphWeb_DESI/loa-combined-lowz.fits" # Path to reduced fastspecfit BGS catalog
