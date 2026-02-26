@@ -28,3 +28,4 @@ For pscratch organization and migration env vars, see `/global/homes/d/dkololgi/
 
 - Root-level script names are temporary wrappers to keep existing commands working.
 - Prefer calling canonical workflow paths for new scripts, docs, and SLURM launchers.
+- Config paths canonical module: `shared/config_paths.py` (shim: `config_paths.py`)
