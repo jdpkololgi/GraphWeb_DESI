@@ -1,5 +1,15 @@
 """Compatibility wrapper for migrated module."""
 
+import warnings
+
+# DEPRECATION SHIM WARNING
+warnings.warn(
+    "galaxy_catalog.py is a deprecated compatibility shim. Use `workflows.utilities.galaxy_catalog` directly.",
+    FutureWarning,
+    stacklevel=2,
+)
+
+
 if __name__ == "__main__":
     import runpy
 

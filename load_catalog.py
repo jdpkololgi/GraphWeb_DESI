@@ -1,5 +1,15 @@
 """Compatibility wrapper for migrated module."""
 
+import warnings
+
+# DEPRECATION SHIM WARNING
+warnings.warn(
+    "load_catalog.py is a deprecated compatibility shim. Use `workflows.catalog.load_catalog` directly.",
+    FutureWarning,
+    stacklevel=2,
+)
+
+
 if __name__ == "__main__":
     import runpy
 

@@ -1,5 +1,15 @@
 """Compatibility wrapper for migrated module."""
 
+import warnings
+
+# DEPRECATION SHIM WARNING
+warnings.warn(
+    "graph_catalog.py is a deprecated compatibility shim. Use `workflows.graph_inference.graph_catalog` directly.",
+    FutureWarning,
+    stacklevel=2,
+)
+
+
 if __name__ == "__main__":
     import runpy
 
