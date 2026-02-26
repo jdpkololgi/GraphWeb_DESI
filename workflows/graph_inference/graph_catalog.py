@@ -37,7 +37,7 @@ from config_paths import (
 
 # Workflow status: ACTIVE (canonical GraphWeb DESI inference pipeline)
 
-def _load_illustris_module(module_filename: str, alias: str):
+def _load_illustris_module(module_filename: str, alias: str, register_as: str | None = None):
     """Load Illustris module by file path to avoid package-name collisions."""
     module_path = Path(ILLUSTRIS_REPO_ROOT) / "workflows" / "gcn_paper" / module_filename
     gcn_dir = str(module_path.parent)
@@ -49,17 +49,21 @@ def _load_illustris_module(module_filename: str, alias: str):
     if spec is None or spec.loader is None:
         raise ImportError(f"Unable to load Illustris module at {module_path}")
     module = importlib.util.module_from_spec(spec)
+    if register_as is not None:
+        sys.modules[register_as] = module
     spec.loader.exec_module(module)
     return module
 
 
-_illustris_network_stats = _load_illustris_module(
-    module_filename="Network_stats.py",
-    alias="illustris_network_stats",
-)
 _illustris_utilities = _load_illustris_module(
     module_filename="Utilities.py",
     alias="illustris_utilities",
+    register_as="Utilities",
+)
+_illustris_network_stats = _load_illustris_module(
+    module_filename="Network_stats.py",
+    alias="illustris_network_stats",
+    register_as="Network_stats",
 )
 network = _illustris_network_stats.network
 cat = _illustris_utilities.cat
