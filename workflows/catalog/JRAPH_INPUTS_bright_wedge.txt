@@ -1,0 +1,29 @@
+# DESI BGS bright wedge — Jraph inference inputs (after STEP=3 completes)
+# Generated: 2026-05-19T12:49:22Z
+
+WEDGE_DIR=/pscratch/sd/d/dkololgi/graphweb_desi/outputs/desi_wedge_ra120_140_dec16p5_26p7_z0p25_0p30_bright_from_fullgraph
+WEDGE_PREFIX=desi_delaunay_wedge_ra120_140_dec16p5_26p7_z0p25_0p30_bright
+
+DESI_GNN_ARRAYS=/pscratch/sd/d/dkololgi/graphweb_desi/outputs/desi_wedge_ra120_140_dec16p5_26p7_z0p25_0p30_bright_from_fullgraph/desi_delaunay_wedge_ra120_140_dec16p5_26p7_z0p25_0p30_bright_gnn_arrays.npz
+DESI_GNN_METADATA=/pscratch/sd/d/dkololgi/graphweb_desi/outputs/desi_wedge_ra120_140_dec16p5_26p7_z0p25_0p30_bright_from_fullgraph/desi_delaunay_wedge_ra120_140_dec16p5_26p7_z0p25_0p30_bright_gnn_metadata.json
+DESI_GLOBAL_NODE_IDS=/pscratch/sd/d/dkololgi/graphweb_desi/outputs/desi_wedge_ra120_140_dec16p5_26p7_z0p25_0p30_bright_from_fullgraph/desi_delaunay_wedge_ra120_140_dec16p5_26p7_z0p25_0p30_bright_global_node_ids.npy
+DESI_WEDGE_CATALOG_NPZ=/pscratch/sd/d/dkololgi/graphweb_desi/outputs/desi_wedge_ra120_140_dec16p5_26p7_z0p25_0p30_bright_from_fullgraph/desi_delaunay_wedge_ra120_140_dec16p5_26p7_z0p25_0p30_bright_wedge_catalog_minimal.npz
+
+GRAPH_DIR=/pscratch/sd/d/dkololgi/graphweb_desi/outputs/gudhi_hemi_full_alphasq_inf_seed42_bright
+PARENT_GNN_ARRAYS=${GRAPH_DIR}/desi_bgs_cugraph_gnn_arrays.npz
+PARENT_GNN_METADATA=${GRAPH_DIR}/desi_bgs_cugraph_gnn_metadata.json
+
+LOGDIR=/pscratch/sd/d/dkololgi/graphweb_desi/logs/desi_bgs_bright_pipeline
+
+# Abacus wedge SBI cache (training population; target_scaler for DESI inference)
+CALIBRATION_CACHE=/pscratch/sd/d/dkololgi/abacus/sbi_caches/abacus_delaunay_wedge_ra120_140_dec16p5_26p7_z0p25_0p30_rs7_15d_sbi_cache.pkl
+ABACUS_WEDGE_GNN_METADATA=/pscratch/sd/d/dkololgi/abacus/graph_constructions/abacus_delaunay_wedge_ra120_140_dec16p5_26p7_z0p25_0p30_rs7_15d_cugraph_gnn_metadata.json
+
+# Staged mock stage3 (train/eval on mock truth — build cache via submit_staged_mock_wedge_jraph_stack.slurm)
+MOCK_STAGE3_TRUTH_NPZ=/pscratch/sd/d/dkololgi/abacus/SecondGen_Mocks/ph000/wedge/staged_mock_wedge_stage3_postcollision_rs7.npz
+MOCK_STAGE3_SBI_CACHE=/pscratch/sd/d/dkololgi/abacus/sbi_caches/staged_mock_wedge_stage3_postcollision_rs7_sbi_cache.pkl
+
+# Stage3 mock wedge targets (NPZ row order; graph/cuGraph still pending on 2026-05-19)
+MOCK_STAGE3_WEDGE_TARGETS_FITS=/pscratch/sd/d/dkololgi/abacus/graph_constructions/staged_mock_wedge_stage3_postcollision_rs7_wedge_targets.fits
+MOCK_STAGE3_GNN_METADATA=/pscratch/sd/d/dkololgi/abacus/graph_constructions/staged_mock_wedge_stage3_postcollision_rs7_cugraph_gnn_metadata.json
+# DESI bright wedge: no LAMBDA* in catalog — truth regression cache not buildable; use CALIBRATION_CACHE for inference scaler

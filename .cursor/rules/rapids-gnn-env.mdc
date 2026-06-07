@@ -1,0 +1,36 @@
+---
+description: Use rapids-gnn conda env for cuGraph/RAPIDS scripts
+globs: GraphWeb_DESI/workflows/graph_construction/*cugraph*.py
+alwaysApply: false
+---
+
+# RAPIDS / cuGraph environment rule
+
+When running any GraphWeb_DESI script that imports **`cugraph`** or **`cudf`** (e.g. `desi_graph_features_cugraph.py`), always:
+
+- Activate **`rapids-gnn`** conda environment before running.
+- Use a **GPU node** allocation (cuGraph requires GPUs).
+- Use a **single Slurm task** (`srun -n 1 ...`) unless the script explicitly supports multi-process execution.
+
+Critical (prevents login/compute mismatch):
+
+- Inside `srun ... bash -lc`, always:
+  - `unset PYTHONPATH PYTHONHOME` and `export PYTHONNOUSERSITE=1`
+  - `source "$(conda info --base)/etc/profile.d/conda.sh"`
+  - Prefer `conda run -n rapids-gnn python ...` (or the env’s absolute `.../envs/rapids-gnn/bin/python`)
+  - Add a quick sanity check: `python -c "import cudf, cugraph; print('OK')"`
+
+Canonical run pattern:
+
+```bash
+ srun -n 1 --gpus=1 -c 64 --cpu-bind=cores bash -lc '
+ set -euo pipefail
+ unset PYTHONPATH PYTHONHOME
+ export PYTHONNOUSERSITE=1
+ source "$(conda info --base)/etc/profile.d/conda.sh"
+ conda run -n rapids-gnn python -c "import cudf, cugraph; print(\"cudf/cugraph OK\")"
+ conda run -n rapids-gnn python3 -u GraphWeb_DESI/workflows/graph_construction/desi_graph_features_cugraph.py \
+   --metadata-path <...>
+ '
+```
+

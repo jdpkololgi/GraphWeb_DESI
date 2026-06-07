@@ -15,7 +15,7 @@ Output pickle contains:
 - graph: jraph.GraphsTuple (nodes + edges + senders/receivers)
 - node_feature_names: list[str] (7 columns expected by Abacus-trained models)
 - galaxy_table: pandas.DataFrame (subset, aligned to graph node order)
-- xyz_mpc_h: np.ndarray [N,3] float64 (derived from RA/DEC/Z)
+- xyz_mpc: np.ndarray [N,3] float64 comoving Mpc (derived from RA/DEC/Z; Abacus parity)
 """
 
 from __future__ import annotations
@@ -93,17 +93,10 @@ def _parse_args() -> argparse.Namespace:
     return p.parse_args()
 
 
-def _radec_z_to_xyz_mpc_h(ra_deg: np.ndarray, dec_deg: np.ndarray, z: np.ndarray) -> np.ndarray:
-    from astropy.cosmology import Planck18 as cosmo
+def _radec_z_to_xyz_mpc(ra_deg: np.ndarray, dec_deg: np.ndarray, z: np.ndarray) -> np.ndarray:
+    from shared.abacus_gnn_parity import sky_to_xyz_mpc
 
-    ra = np.deg2rad(np.asarray(ra_deg, dtype=np.float64))
-    dec = np.deg2rad(np.asarray(dec_deg, dtype=np.float64))
-    zz = np.asarray(z, dtype=np.float64)
-    dist_mpc_h = cosmo.comoving_distance(zz).value * float(cosmo.h)
-
-    x = dist_mpc_h * np.cos(dec) * np.cos(ra)
-    y = dist_mpc_h * np.cos(dec) * np.sin(ra)
-    zc = dist_mpc_h * np.sin(dec)
+    x, y, zc = sky_to_xyz_mpc(ra_deg, dec_deg, z)
     return np.stack([x, y, zc], axis=-1)
 
 
@@ -178,7 +171,7 @@ def main() -> None:
     gal_sub.insert(0, "NODE_ID_OLD", np.asarray(nodes_old, dtype=np.int64))
     gal_sub.insert(1, "NODE_ID", np.arange(N, dtype=np.int64))
 
-    xyz = _radec_z_to_xyz_mpc_h(
+    xyz = _radec_z_to_xyz_mpc(
         gal_sub["RA"].to_numpy(), gal_sub["DEC"].to_numpy(), gal_sub[args.use_z_col].to_numpy()
     )
 
@@ -222,7 +215,8 @@ def main() -> None:
         "graph": graph,
         "node_feature_names": list(NODE_FEATURE_NAMES),
         "galaxy_table": gal_sub,
-        "xyz_mpc_h": xyz,
+        "xyz_mpc": xyz,
+        "coordinate_units": "Mpc",
         "wedge_bounds": {
             "ra_min": float(args.ra_min),
             "ra_max": float(args.ra_max),

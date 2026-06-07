@@ -16,6 +16,11 @@ For pscratch organization and migration env vars, see `/global/homes/d/dkololgi/
   - Canonical: `workflows/utilities/investigate_edges.py`
   - Compatibility shims: `galaxy_catalog.py`, `investigate_edges.py`
 
+## Visualization
+
+- Active: `workflows/visualization/visualize_desi_wedge_cweb_3d.ipynb`
+- Archived notebooks: `workflows/visualization/archive/` (LOA catalog, graph subvolume; see README)
+
 ## Experimental
 
 - Notebook-driven variants under this repo are exploratory unless explicitly promoted.

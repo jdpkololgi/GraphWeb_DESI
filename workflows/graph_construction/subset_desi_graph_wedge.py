@@ -118,6 +118,7 @@ def main() -> None:
         raise FileNotFoundError(meta_path)
 
     meta = _load_json(meta_path)
+    coord_units = meta.get("coordinate_units", "Mpc")
     base_dir = meta_path.parent
     files = meta.get("files", {})
     # DESI Abacus-style metadata always provides points_xyz/edges/tets/vols in files dict.
@@ -289,6 +290,8 @@ def main() -> None:
     out_meta = {
         "prefix": args.out_prefix,
         "parent_graph_metadata": str(meta_path),
+        "coordinate_units": coord_units,
+        "volume_units": meta.get("volume_units", f"{coord_units}^3"),
         "mode": meta.get("mode"),
         "alpha_sq": meta.get("alpha_sq"),
         "split_hemispheres": bool(meta.get("split_hemispheres", True)),
@@ -348,6 +351,7 @@ def main() -> None:
                 raise FileNotFoundError(gmeta_in)
             gmeta = _load_json(gmeta_in)
             gmeta_out = out_dir / f"{args.out_prefix}_gnn_metadata.json"
+            gmeta["coordinate_units"] = gmeta.get("coordinate_units", coord_units)
             gmeta["input_parent_gnn_metadata_path"] = str(gmeta_in)
             gmeta["input_wedge_graph_metadata_path"] = str(meta_out)
             gmeta["n_points"] = int(x_sub.shape[0])

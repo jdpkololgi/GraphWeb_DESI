@@ -109,6 +109,34 @@ def _load_metadata(path: Path) -> dict:
         return json.load(f)
 
 
+def _resolve_graph_artifact(meta: dict, meta_path: Path, *, top_key: str, files_key: str) -> Path:
+    """Resolve a graph artifact path from legacy or Abacus-style metadata."""
+    base_dir = meta_path.parent.resolve()
+    if top_key in meta:
+        return Path(meta[top_key]).expanduser().resolve()
+    files = meta.get("files")
+    if isinstance(files, dict) and files_key in files:
+        p = Path(files[files_key])
+        if not p.is_absolute():
+            p = base_dir / p
+        return p.expanduser().resolve()
+    prefix = str(meta.get("prefix", "desi_delaunay"))
+    fallbacks = {
+        "points_xyz_path": f"{prefix}_points_xyz.npy",
+        "edges_path": f"{prefix}_edges_combined_idx.npy",
+        "tetrahedra_idx_path": f"{prefix}_tetrahedra_idx.npy",
+        "tetrahedra_volumes_path": f"{prefix}_tetrahedra_volumes.npy",
+    }
+    if top_key in fallbacks:
+        p = base_dir / fallbacks[top_key]
+        if p.exists():
+            return p.resolve()
+    raise KeyError(
+        f"Metadata {meta_path} missing {top_key!r} (and files[{files_key!r}]). "
+        "Use graph_metadata.json or desi_delaunay_metadata.json from build_desi_bgs_gudhi_graph.py."
+    )
+
+
 def _edge_lengths(points_xyz: np.ndarray, edges: np.ndarray, batch_size: int) -> np.ndarray:
     out = np.empty((edges.shape[0],), dtype=np.float32)
     for i in range(0, edges.shape[0], batch_size):
@@ -369,20 +397,30 @@ def main() -> None:
 
     meta_path = args.metadata_path.expanduser().resolve()
     meta = _load_metadata(meta_path)
+    coord_units = meta.get("coordinate_units")
+    if coord_units is None:
+        print(
+            "WARNING: graph metadata missing coordinate_units; assuming Mpc (rebuild graph with "
+            "build_desi_bgs_gudhi_graph.py --coord-units mpc).",
+            flush=True,
+        )
+        coord_units = "Mpc"
+    elif str(coord_units).lower() in ("mpc/h", "mpc_per_h"):
+        print(
+            "WARNING: coordinate_units is Mpc/h; Abacus training uses Mpc. Rebuild with --coord-units mpc.",
+            flush=True,
+        )
     out_dir = (args.out_dir.expanduser().resolve() if args.out_dir else meta_path.parent.resolve())
     out_dir.mkdir(parents=True, exist_ok=True)
 
-    points_path = Path(meta["points_xyz_path"]).expanduser().resolve()
-    edges_path = Path(meta["edges_path"]).expanduser().resolve()
-    tetra_path_raw = meta.get("tetrahedra_idx_path")
-    vol_path_raw = meta.get("tetrahedra_volumes_path")
-    if tetra_path_raw is None or vol_path_raw is None:
-        raise ValueError(
-            "Metadata is missing tetrahedra paths. Rebuild graph with updated builder so "
-            "tetrahedra_idx/tetrahedra_volumes are exported."
-        )
-    tetra_path = Path(tetra_path_raw).expanduser().resolve()
-    vol_path = Path(vol_path_raw).expanduser().resolve()
+    points_path = _resolve_graph_artifact(meta, meta_path, top_key="points_xyz_path", files_key="points_xyz")
+    edges_path = _resolve_graph_artifact(meta, meta_path, top_key="edges_path", files_key="edges")
+    tetra_path = _resolve_graph_artifact(
+        meta, meta_path, top_key="tetrahedra_idx_path", files_key="tetrahedra_idx"
+    )
+    vol_path = _resolve_graph_artifact(
+        meta, meta_path, top_key="tetrahedra_volumes_path", files_key="tetrahedra_volumes"
+    )
     if not points_path.exists():
         raise FileNotFoundError(points_path)
     if not edges_path.exists():
@@ -560,6 +598,7 @@ def main() -> None:
     meta_out = out_dir / f"{args.out_prefix}_gnn_metadata.json"
     payload = {
         "input_metadata_path": str(meta_path),
+        "coordinate_units": str(coord_units),
         "points_xyz_path": str(points_path),
         "edges_path": str(edges_path),
         "tetrahedra_idx_path": str(tetra_path),
@@ -570,6 +609,7 @@ def main() -> None:
         "node_feature_columns": NODE_COLS,
         "edge_feature_columns": EDGE_COLS,
         "density_definition": "density = (node_tetra_count / node_tetra_volume) / weighted_degree",
+        "edge_attr_physical_units": "edge_length and coords in coordinate_units; log+z-score applied at Jraph cache/infer only",
         "outputs": {
             "gnn_arrays_npz": str(out_npz),
         },

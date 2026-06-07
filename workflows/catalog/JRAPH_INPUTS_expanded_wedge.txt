@@ -1,0 +1,50 @@
+# DESI BGS bright expanded wedge — Jraph inference (RA 120–160°, Dec 14.5–30.6°, z 0.2–0.3)
+# Mpc-parity graph stack (2026-05-29)
+
+# --- DESI catalog + parent full graph (Mpc coords) ---
+CATALOG=/pscratch/sd/d/dkololgi/graphweb_desi/catalogs/bgs_maglim_bright_galaxy_zwarn0_dchi2ge25.fits
+GRAPH_DIR=/pscratch/sd/d/dkololgi/graphweb_desi/outputs/gudhi_hemi_full_alphasq_inf_seed42_bright_mpc
+PARENT_GNN_ARRAYS=${GRAPH_DIR}/desi_bgs_cugraph_gnn_arrays.npz
+PARENT_GNN_METADATA=${GRAPH_DIR}/desi_bgs_cugraph_gnn_metadata.json
+PARENT_GRAPH_METADATA=${GRAPH_DIR}/desi_delaunay_metadata.json
+
+# --- Expanded DESI wedge (Abacus training wedge bounds) ---
+WEDGE_DIR=/pscratch/sd/d/dkololgi/graphweb_desi/outputs/desi_wedge_expanded_ra120_160_dec14p5_30p6_z0p2_0p3_bright_mpc_from_fullgraph
+WEDGE_PREFIX=desi_delaunay_wedge_expanded_ra120_160_dec14p5_30p6_z0p2_0p3_bright_mpc
+WEDGE_BOUNDS="RA[120,160] Dec[14.5,30.6] z[0.2,0.3]"
+
+DESI_GNN_ARRAYS=${WEDGE_DIR}/${WEDGE_PREFIX}_gnn_arrays.npz
+DESI_GNN_METADATA=${WEDGE_DIR}/${WEDGE_PREFIX}_gnn_metadata.json
+DESI_GLOBAL_NODE_IDS=${WEDGE_DIR}/${WEDGE_PREFIX}_global_node_ids.npy
+DESI_WEDGE_CATALOG_NPZ=${WEDGE_DIR}/${WEDGE_PREFIX}_wedge_catalog_minimal.npz
+
+# --- Abacus stage-3 halo_xcom training (calibration + checkpoint) ---
+ABACUS_RUN_DIR=/pscratch/sd/d/dkololgi/abacus/jraph_runs/staged_mock_stage3_postcollision_full_rs7_wedge_v_limited_incomplete_expanded_ra120_160_dec14p5_30p6_z0p2_0p3_15d_halo_xcom
+ABACUS_BEST_EPOCH=25427
+ABACUS_BEST_CKPT=${ABACUS_RUN_DIR}/checkpoints/ckpt_regression_seed_42_20260528_074529_best.pkl
+CALIBRATION_CACHE=/pscratch/sd/d/dkololgi/abacus/sbi_caches/staged_mock_stage3_postcollision_full_rs7_wedge_v_limited_incomplete_expanded_ra120_160_dec14p5_30p6_z0p2_0p3_sbi_cache_15d_halo_xcom.pkl
+EVAL_OUT_DIR=${ABACUS_RUN_DIR}/eval_best_ckpt_epoch25427
+ABACUS_WEDGE_GNN_ARRAYS=/pscratch/sd/d/dkololgi/abacus/graph_constructions/staged_mock_stage3_postcollision_full_rs7_wedge_v_limited_incomplete_expanded_ra120_160_dec14p5_30p6_z0p2_0p3_cugraph_gnn_arrays.npz
+ABACUS_WEDGE_GNN_METADATA=/pscratch/sd/d/dkololgi/abacus/graph_constructions/staged_mock_stage3_postcollision_full_rs7_wedge_v_limited_incomplete_expanded_ra120_160_dec14p5_30p6_z0p2_0p3_cugraph_gnn_metadata.json
+ABACUS_WEDGE_METADATA=/pscratch/sd/d/dkololgi/abacus/graph_constructions/staged_mock_stage3_postcollision_full_rs7_wedge_v_limited_incomplete_expanded_ra120_160_dec14p5_30p6_z0p2_0p3_metadata.json
+
+# --- DESI inference output ---
+INFER_RUN_NAME=infer_expanded_ra120_160_dec14p5_30p6_z0p2_0p3_best_epoch25427_eigfix_edgescale_mpc
+INFER_DIR=/pscratch/sd/d/dkololgi/graphweb_desi/inference_outputs/${INFER_RUN_NAME}
+INFER_NPZ=${INFER_DIR}/desi_wedge_index_and_preds.npz
+
+# Deprecated (Mpc/h coords, raw edges at infer): outputs/to-delete/
+
+LOGDIR=/pscratch/sd/d/dkololgi/graphweb_desi/logs
+
+# Model hparams (must match training)
+LATENT_SIZE=96
+NUM_HEADS=8
+NUM_PASSES=8
+DROPOUT=0.15
+SEED=42
+LAMBDA_THRESHOLD=0.2
+
+# Env for inference
+ILLUSTRIS_ROOT=/global/homes/d/dkololgi/TNG/Illustris
+PY_COSMIC=/pscratch/sd/d/dkololgi/conda/envs/cosmic_env/bin/python

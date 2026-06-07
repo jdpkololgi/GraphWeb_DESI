@@ -3,7 +3,7 @@
 
 This intentionally mimics the Abacus `build_abacus_graph.py` behavior:
 
-- Convert (TARGET_RA, TARGET_DEC, Z) to comoving Cartesian (Mpc/h) using Planck18.
+- Convert (TARGET_RA, TARGET_DEC, Z) to comoving Cartesian **Mpc** using Planck18 (Abacus parity).
 - Split Galactic hemispheres (b>0 vs b<=0) and build **one** AlphaComplex per hemisphere.
 - Extract undirected edges and merge them into a single edge list using global row indices.
 
@@ -14,11 +14,11 @@ Important:
   Use --max-points-per-hemi for smoke tests and incremental development.
 
 Outputs (in --out-dir):
-- points_xyz_mpc_h.npy                  : full xyz memmap (float32) for reproducibility
+- points_xyz_mpc.npy                    : full xyz memmap (float32) in comoving Mpc
 - hemisphere_flag.npy                   : int8 array (1=north, 0=south) aligned to catalog row order
 - edges_combined_idx.npy                : undirected edges (u,v) in global row indices (int32, sorted) [legacy]
 - tetrahedra_idx.npy                    : tetrahedra vertex indices (T,4) in global row indices (int32) [legacy]
-- tetrahedra_volumes.npy                : tetrahedra volumes (T,) in (Mpc/h)^3 (float64) [legacy]
+- tetrahedra_volumes.npy                : tetrahedra volumes (T,) in Mpc^3 (float64) [legacy]
 - graph_metadata.json                   : summary and provenance [legacy]
 
 Additionally, Abacus-style outputs (to keep workflows identical):
@@ -34,6 +34,7 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import sys
 import time
 import threading
 from pathlib import Path
@@ -41,8 +42,13 @@ from pathlib import Path
 import numpy as np
 import fitsio
 from astropy.coordinates import SkyCoord
-from astropy.cosmology import Planck18 as cosmo
 import astropy.units as u
+
+REPO_ROOT = Path(__file__).resolve().parents[2]
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
+
+from shared.abacus_gnn_parity import sky_to_xyz  # noqa: E402
 
 
 def _fmt_int(x: int) -> str:
@@ -141,6 +147,13 @@ def parse_args() -> argparse.Namespace:
         help="Optional cap per hemisphere (0 disables). Randomly subsamples for smoke tests.",
     )
     p.add_argument("--seed", type=int, default=42)
+    p.add_argument(
+        "--coord-units",
+        type=str,
+        choices=("mpc", "mpc_per_h"),
+        default="mpc",
+        help="Comoving coordinate units for Delaunay (default mpc = Abacus training parity).",
+    )
     return p.parse_args()
 
 
@@ -165,6 +178,8 @@ def main() -> None:
     _print_kv("alpha_sq", args.alpha_sq)
     _print_kv("max_points_per_hemi", args.max_points_per_hemi)
     _print_kv("seed", args.seed)
+    _print_kv("coord_units", args.coord_units)
+    coord_units_label = "Mpc" if args.coord_units == "mpc" else "Mpc/h"
     print("-" * 90, flush=True)
 
     # Columns in the maglim catalog.
@@ -180,7 +195,7 @@ def main() -> None:
         nrows = int(h.get_nrows())
         _print_kv("rows_total", _fmt_int(nrows))
 
-        xyz_path = out_dir / "points_xyz_mpc_h.npy"
+        xyz_path = out_dir / ("points_xyz_mpc.npy" if args.coord_units == "mpc" else "points_xyz_mpc_h.npy")
         xyz = np.lib.format.open_memmap(xyz_path, mode="w+", dtype=np.float32, shape=(nrows, 3))
         hemi = np.empty((nrows,), dtype=np.int8)  # 1 north, 0 south
 
@@ -195,12 +210,7 @@ def main() -> None:
             b = sc.galactic.b.deg
             hemi[start:stop] = (b > 0).astype(np.int8)
 
-            dist = cosmo.comoving_distance(zz).value * float(cosmo.h)  # Mpc/h
-            r = np.deg2rad(ra)
-            d = np.deg2rad(dec)
-            xx = dist * np.cos(d) * np.cos(r)
-            yy = dist * np.cos(d) * np.sin(r)
-            zz_c = dist * np.sin(d)
+            xx, yy, zz_c = sky_to_xyz(ra, dec, zz, units=args.coord_units)
             xyz[start:stop, 0] = xx.astype(np.float32)
             xyz[start:stop, 1] = yy.astype(np.float32)
             xyz[start:stop, 2] = zz_c.astype(np.float32)
@@ -335,6 +345,8 @@ def main() -> None:
         "catalog_path": str(cat_path),
         "nrows": int(nrows),
         "alpha_sq": float(args.alpha_sq),
+        "coordinate_units": coord_units_label,
+        "coord_units_arg": str(args.coord_units),
         "hemisphere_split": True,
         "max_points_per_hemi": int(args.max_points_per_hemi),
         "seed": int(args.seed),
@@ -364,6 +376,7 @@ def main() -> None:
         "prefix": prefix,
         "mode": "delaunay" if np.isinf(float(args.alpha_sq)) else "alpha",
         "alpha_sq": None if np.isinf(float(args.alpha_sq)) else float(args.alpha_sq),
+        "coordinate_units": coord_units_label,
         "split_hemispheres": True,
         "source": "catalog",
         "source_path": str(cat_path),
@@ -371,6 +384,7 @@ def main() -> None:
         "n_point_columns": 3,
         "n_edges": int(edges_arr.shape[0]),
         "n_tetrahedra": int(tets_arr.shape[0]),
+        "volume_units": f"{coord_units_label}^3",
         "catalog_filters": None,
         "files": {
             "points_xyz": points_xyz_abacus.name,

@@ -1,0 +1,41 @@
+---
+description: For Slurm srun runs, always use explicit conda init + env python path (prevents compute/login mismatch)
+globs: GraphWeb_DESI/workflows/graph_construction/*.py
+alwaysApply: false
+---
+
+# Slurm + conda environment robustness rule
+
+We have repeatedly seen failures where a package imports on the login node but fails on the compute node, even after `conda activate` inside `srun ... bash -lc` (e.g. `ModuleNotFoundError: gudhi`).
+
+For any **Slurm** run of GraphWeb_DESI graph-construction scripts:
+
+- Always isolate environment variables:
+  - `unset PYTHONPATH PYTHONHOME`
+  - `export PYTHONNOUSERSITE=1`
+- Always initialize conda inside the `bash -lc` block:
+  - `source "$(conda info --base)/etc/profile.d/conda.sh"`
+- Prefer using the environment’s **absolute python path**, not `python`:
+  - e.g. `PY=/pscratch/sd/d/dkololgi/conda/envs/cosmic_env/bin/python`
+  - (for RAPIDS/cuGraph scripts, use the `rapids-gnn` env python path)
+- Include a 1-line sanity check before expensive work:
+
+```bash
+$PY -c "import sys; print(sys.executable)"
+```
+
+Example (CPU / Gudhi):
+
+```bash
+srun -n 1 -c 64 --cpu-bind=cores bash -lc '
+set -euo pipefail
+unset PYTHONPATH PYTHONHOME
+export PYTHONNOUSERSITE=1
+source "$(conda info --base)/etc/profile.d/conda.sh"
+conda activate cosmic_env
+PY=/pscratch/sd/d/dkololgi/conda/envs/cosmic_env/bin/python
+$PY -c "import gudhi; print(gudhi.__version__)"
+$PY GraphWeb_DESI/workflows/graph_construction/build_desi_bgs_gudhi_graph.py ...
+'
+```
+
