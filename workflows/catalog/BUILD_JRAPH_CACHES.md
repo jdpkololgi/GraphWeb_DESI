@@ -59,34 +59,61 @@ srun -n1 -c32 python workflows/abacus_tweb/build_abacus_sbi_cache.py \
 
 ---
 
-## B. DESI BGS bright wedge (LOA) — inference, not training
+## B. DESI BGS expanded bright wedge (LOA) — inference, not training
+
+**Canonical DESI wedge:** use the expanded Mpc-parity manifest in
+`JRAPH_INPUTS_expanded_wedge.txt`. The older narrow bright-wedge manifest
+(`JRAPH_INPUTS_bright_wedge.txt`) points at Mpc/h-era artifacts and should be
+treated as legacy unless rebuilt with `--coord-units mpc`.
 
 | Artifact | Path |
 |----------|------|
-| Wedge dir | `/pscratch/sd/d/dkololgi/graphweb_desi/outputs/desi_wedge_ra120_140_dec16p5_26p7_z0p25_0p30_bright_from_fullgraph` |
-| GNN arrays | `.../desi_delaunay_wedge_ra120_140_dec16p5_26p7_z0p25_0p30_bright_gnn_arrays.npz` (17,557 nodes) |
-| Catalog | `.../desi_delaunay_wedge_*_wedge_catalog_minimal.npz` (RA/DEC/Z only — **no truth λ**) |
+| Input manifest | `GraphWeb_DESI/workflows/catalog/JRAPH_INPUTS_expanded_wedge.txt` |
+| Full graph dir | `/pscratch/sd/d/dkololgi/graphweb_desi/outputs/gudhi_hemi_full_alphasq_inf_seed42_bright_mpc` |
+| Wedge dir | `/pscratch/sd/d/dkololgi/graphweb_desi/outputs/desi_wedge_expanded_ra120_160_dec14p5_30p6_z0p2_0p3_bright_mpc_from_fullgraph` |
+| GNN arrays | `.../desi_delaunay_wedge_expanded_*_bright_mpc_gnn_arrays.npz` |
+| Catalog | `.../desi_delaunay_wedge_expanded_*_bright_mpc_wedge_catalog_minimal.npz` (RA/DEC/Z only — **no truth λ**) |
 
 **No DESI regression cache is required for inference.** LOA has no T-Web eigenvalues; the model predicts them. Use the **Abacus wedge calibration cache** for `target_scaler` and optional truth comparison on the Abacus mock population:
 
 ```bash
-CALIBRATION_CACHE=/pscratch/sd/d/dkololgi/abacus/sbi_caches/abacus_delaunay_wedge_ra120_140_dec16p5_26p7_z0p25_0p30_rs7_15d_sbi_cache.pkl
+source /global/homes/d/dkololgi/GraphWeb_DESI/workflows/catalog/JRAPH_INPUTS_expanded_wedge.txt
 ```
 
-**Inference (CPU or GPU):** see `GraphWeb_DESI/workflows/jraph_inference/jraph_infer_desi_wedge_from_gnn_npz.py` and `JRAPH_INPUTS_bright_wedge.txt`.
+**Graph construction chain:** build the bright catalog with
+`workflows/catalog/build_bgs_maglim_catalog.py`, build the full Mpc graph with
+`workflows/graph_construction/build_desi_bgs_gudhi_graph.py`, export features
+with `workflows/graph_construction/desi_graph_features_cugraph.py`, and induce
+the wedge with `workflows/graph_construction/subset_desi_graph_wedge.py`.
+
+**Inference prerequisites from the code path:**
+
+- The calibration cache should contain the training `target_scaler` and, for the
+  validated 15-d run, `node_feature_scaler`.
+- DESI edges are duplicated to the bidirectional Abacus cache convention before
+  the Jraph forward pass.
+- Edge length and density-contrast columns are log-transformed and standardized
+  from the Abacus GNN NPZ; pass `--abacus-gnn-arrays`.
+
+**Inference (CPU or GPU):** see
+`GraphWeb_DESI/workflows/jraph_inference/jraph_infer_desi_wedge_from_gnn_npz.py`
+and `JRAPH_INPUTS_expanded_wedge.txt`.
 
 ```bash
 conda activate cosmic_env
 cd /global/homes/d/dkololgi/GraphWeb_DESI
+source workflows/catalog/JRAPH_INPUTS_expanded_wedge.txt
 
 python workflows/jraph_inference/jraph_infer_desi_wedge_from_gnn_npz.py \
-  --abacus-run-dir /pscratch/sd/d/dkololgi/abacus/jraph_runs/wedge_rs7_15d_regression \
+  --abacus-run-dir "${ABACUS_RUN_DIR}" \
   --calibration-cache "${CALIBRATION_CACHE}" \
-  --desi-gnn-arrays /pscratch/sd/d/dkololgi/graphweb_desi/outputs/desi_wedge_ra120_140_dec16p5_26p7_z0p25_0p30_bright_from_fullgraph/desi_delaunay_wedge_ra120_140_dec16p5_26p7_z0p25_0p30_bright_gnn_arrays.npz \
-  --desi-gnn-metadata .../desi_delaunay_wedge_ra120_140_dec16p5_26p7_z0p25_0p30_bright_gnn_metadata.json \
-  --desi-global-node-ids .../desi_delaunay_wedge_ra120_140_dec16p5_26p7_z0p25_0p30_bright_global_node_ids.npy \
-  --desi-wedge-catalog-npz .../desi_delaunay_wedge_ra120_140_dec16p5_26p7_z0p25_0p30_bright_wedge_catalog_minimal.npz \
-  --output-dir /pscratch/sd/d/dkololgi/graphweb_desi/jraph_inference/desi_bright_wedge
+  --abacus-gnn-arrays "${ABACUS_WEDGE_GNN_ARRAYS}" \
+  --desi-gnn-arrays "${DESI_GNN_ARRAYS}" \
+  --desi-gnn-metadata "${DESI_GNN_METADATA}" \
+  --desi-global-node-ids "${DESI_GLOBAL_NODE_IDS}" \
+  --desi-wedge-catalog-npz "${DESI_WEDGE_CATALOG_NPZ}" \
+  --output-dir "$(dirname "${INFER_DIR}")" \
+  --run-name "${INFER_RUN_NAME}"
 ```
 
 **Training `jraph_pipeline` on DESI** needs per-node truth λ (cross-match to Abacus annotated CutSky or mock truth). That cache is **not** built here.
