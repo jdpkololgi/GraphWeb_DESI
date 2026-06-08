@@ -1,6 +1,7 @@
 # Deprecated DESI graph / inference stacks
 
-Move artifacts here with `workflows/catalog/deprecate_mpc_h_stack.sh` after the Mpc-parity rebuild validates.
+This folder is for retired DESI wedge artifacts after the Mpc-parity rebuild
+validates.
 
 ## Why deprecated
 
@@ -16,4 +17,10 @@ Move artifacts here with `workflows/catalog/deprecate_mpc_h_stack.sh` after the 
 - Expanded wedge: `outputs/desi_wedge_expanded_*_bright_mpc_from_fullgraph`
 - Inference: `inference_outputs/infer_expanded_*_eigfix_edgescale_mpc`
 
-Rebuild: `workflows/catalog/rerun_desi_bgs_bright_graph_wedge_mpc.sh`
+Rebuild with the Python workflow chain:
+
+1. `workflows/catalog/build_bgs_maglim_catalog.py`
+2. `workflows/graph_construction/build_desi_bgs_gudhi_graph.py --coord-units mpc`
+3. `workflows/graph_construction/desi_graph_features_cugraph.py`
+4. `workflows/graph_construction/subset_desi_graph_wedge.py`
+5. `workflows/jraph_inference/jraph_infer_desi_wedge_from_gnn_npz.py`

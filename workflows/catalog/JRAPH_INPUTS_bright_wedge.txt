@@ -1,5 +1,7 @@
 # DESI BGS bright wedge — Jraph inference inputs (after STEP=3 completes)
 # Generated: 2026-05-19T12:49:22Z
+# Legacy narrow-wedge/Mpc-h-era manifest. Prefer JRAPH_INPUTS_expanded_wedge.txt
+# unless this stack is rebuilt with build_desi_bgs_gudhi_graph.py --coord-units mpc.
 
 WEDGE_DIR=/pscratch/sd/d/dkololgi/graphweb_desi/outputs/desi_wedge_ra120_140_dec16p5_26p7_z0p25_0p30_bright_from_fullgraph
 WEDGE_PREFIX=desi_delaunay_wedge_ra120_140_dec16p5_26p7_z0p25_0p30_bright
