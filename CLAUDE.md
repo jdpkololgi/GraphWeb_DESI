@@ -11,59 +11,104 @@ Guidance for Claude Code / automation agents working in this repository.
 - `~/.claude/CLAUDE.md` — cross-repo map, conda envs, and Perlmutter job recipes.
 - the `nersc` skill — NERSC/Slurm depth (auto-loads for Perlmutter work).
 
-## Project overview
+## Project Overview
 
-Processes DESI BGS (Bright Galaxy Survey) galaxy catalogs and applies graph
-neural network models trained on IllustrisTNG (in `../TNG/Illustris/`) to infer
-cosmic web environments (Void / Wall / Filament / Cluster) for observed galaxies.
+This repository processes DESI (Dark Energy Spectroscopic Instrument) BGS
+(Bright Galaxy Survey) galaxy catalogs and applies graph neural network models
+trained on simulations to infer cosmic-web environments for observed galaxies.
+It currently contains two analysis paths: a PyTorch GAT classifier for
+VAC-style environment labels and a Gudhi/cuGraph/Jraph wedge workflow for
+Abacus-parity eigenvalue regression.
 
-## Repository layout (post-reorg)
+## Running the Pipeline
 
-Canonical code lives under `workflows/` and `shared/`. Root-level scripts
-(`graph_catalog.py`, `load_catalog.py`, `galaxy_catalog.py`,
-`investigate_edges.py`, `config_paths.py`) are **thin compatibility shims** —
-prefer the canonical paths (see `scripts/SHIM_DEPRECATION.md`).
-
-| Path | Purpose | Env |
-| --- | --- | --- |
-| `workflows/catalog/load_catalog.py` | Assemble low-z combined DESI catalogs from CFS fastspecfit. | `cosmic_env` + `desienv` |
-| `workflows/utilities/galaxy_catalog.py` | `GalaxyCatalog`: quality/mass cuts, RA/Dec/Z → Cartesian (Planck18), N/S split. | `cosmic_env` |
-| `workflows/graph_construction/build_desi_bgs_gudhi_graph.py` | Build DESI BGS Gudhi alpha/Delaunay graph artifacts (CPU, memory-heavy). | `cosmic_env` |
-| `workflows/graph_construction/desi_graph_features_cugraph.py` | GPU/cuGraph node-feature extraction. | `rapids-gnn`, GPU node |
-| `workflows/graph_construction/subset_desi_graph_wedge.py` | Subset a graph to an RA/Dec/z wedge. | `cosmic_env` |
-| `workflows/graph_inference/graph_catalog.py` | **Main inference driver:** graph → features → GAT → VAC. | `cosmic_env` |
-| `workflows/utilities/investigate_edges.py` | Long-edge QA diagnostics. | `cosmic_env` |
-| `workflows/visualization/` | 3D wedge cosmic-web notebooks (+ archived ones). | `cosmic_env` |
-| `shared/config_paths.py` | Env-var-driven path configuration. | — |
-
-## Running the pipeline
-
-See `RUNBOOK.md` for exact commands. Canonical inference entrypoint:
+The main GAT classification pipeline is in
+`workflows/graph_inference/graph_catalog.py`:
 
 ```bash
-python workflows/graph_inference/graph_catalog.py --help
+python workflows/graph_inference/graph_catalog.py
 ```
 
-It loads or builds a DESI graph (alpha-complex or Delaunay), engineers and
-Box-Cox-scales node features, applies the pre-trained GAT, and writes per-galaxy
-predictions to `DESI_BGS_PRERELEASE_VAC.pkl`. Processed graphs are cached under
-`cache/` (`DESI_alpha_*`, `DESI_delaunay_*`).
+This script:
+1. Loads or constructs a graph from DESI BGS galaxies (Delaunay or alpha-complex)
+2. Applies a pre-trained GAT model from the Illustris repository
+3. Outputs predictions to `DESI_BGS_PRERELEASE_VAC.pkl`
 
-cuGraph feature extraction is the GPU-heavy step — see the Perlmutter recipes in
-`~/.claude/CLAUDE.md` and the `.cursor/rules/rapids-gnn-env.mdc` rule.
+The root-level `graph_catalog.py` is a compatibility shim. Prefer canonical
+`workflows/...` paths in new commands and docs.
 
-## Cross-repo dependency
+The Jraph wedge workflow is a separate path:
 
-`graph_catalog.py` imports `Network_stats` / `Utilities` from
-`../TNG/Illustris/` and loads its pre-trained GAT weights
-(`trained_gat_model_ddp_*.pth`). The graph machinery is shared so DESI and TNG
-point clouds run through identical construction/feature code.
+1. `workflows/catalog/build_bgs_maglim_catalog.py`
+2. `workflows/graph_construction/build_desi_bgs_gudhi_graph.py`
+3. `workflows/graph_construction/desi_graph_features_cugraph.py`
+4. `workflows/graph_construction/subset_desi_graph_wedge.py`
+5. `workflows/jraph_inference/jraph_infer_desi_wedge_from_gnn_npz.py`
 
-## Environment classification
+Use `--coord-units mpc` (the default) in the Gudhi graph builder for Abacus
+training parity. The cuGraph feature step runs in the `rapids-gnn` env on a GPU
+node; everything else uses `cosmic_env` (see `~/.claude/CLAUDE.md` and
+`.cursor/rules/rapids-gnn-env.mdc`).
 
-Four T-Web classes: `0 = Void`, `1 = Wall`, `2 = Filament`, `3 = Cluster`.
+## Architecture
 
-## Data locations on NERSC
+### Data Flow
+
+1. **Low-z Catalog Loading** (`workflows/catalog/load_catalog.py`)
+   - Reads DESI fastspecfit catalogs from NERSC CFS: `/global/cfs/cdirs/desi/vac/dr2/fastspecfit/loa/v1.0/catalogs/`
+   - Selects galaxies with 0.01 ≤ z ≤ 0.06, SPECTYPE=GALAXY
+   - Joins with redshift flags and Legacy Survey photometry
+   - Outputs: `loa-combined-lowz.fits`, `loa-combined-lowz-zflags.fits`, `loa-combined-lowz-fastspec-phot.fits`
+
+2. **Galaxy Catalog Processing** (`workflows/utilities/galaxy_catalog.py`)
+   - `GalaxyCatalog` class: loads FITS files, filters by ZWARN, DELTACHI2, LOGMSTAR, BGS_TARGET
+   - Converts RA/Dec to Cartesian coordinates (Mpc) using Planck18 cosmology
+   - Separates galactic north/south hemispheres
+
+3. **GAT Graph Construction & Inference** (`workflows/graph_inference/graph_catalog.py`)
+   - Creates a DESI-aware Illustris `network` object
+   - Builds alpha-complex or Delaunay graph from galaxy positions
+   - Extracts node features, scales with Box-Cox transform
+   - Loads pre-trained GAT model from Illustris repo
+   - Outputs per-galaxy environment predictions and probabilities
+
+4. **Jraph Wedge Inference** (`workflows/jraph_inference/`)
+   - Starts from a bright BGS zall-derived catalog with no redshift or stellar-mass cuts
+   - Builds a hemisphere-split Gudhi graph in comoving Mpc
+   - Exports seven node features and five edge features with Abacus-style names
+   - Subsets an RA/Dec/z wedge and runs an Abacus-trained Jraph checkpoint
+   - Outputs predicted λ1, λ2, λ3 eigenvalues, T-Web-like classes, and diagnostic plots
+
+### Key Dependencies
+
+- **Illustris Repository**: `/global/homes/d/dkololgi/TNG/Illustris` by default
+  - GAT path uses `ILLUSTRIS_REPO_ROOT` from `shared/config_paths.py`
+  - Jraph path uses `ILLUSTRIS_ROOT` to import `shared/graph_net_models.py`
+  - Pre-trained GAT model weights: `trained_gat_model_ddp_*.pth`
+  - Abacus-trained Jraph checkpoints live under the Illustris/Abacus run outputs
+- **Path config**: use `shared/config_paths.py`; root-level `config_paths.py` is a shim.
+
+### Caching
+
+GAT processed graphs are cached in `cache/` by default:
+- `DESI_alpha_graph.pt` / `DESI_delaunay_graph.pt` - NetworkX graph
+- `DESI_alpha_geom.pt` / `DESI_delaunay_geom.pt` - PyTorch Geometric Data object
+- `DESI_alpha_features.pt` - Scaled node features
+- `DESI_NETWORKalpha_zcat.pt` - Galaxy catalog with predictions
+
+Jraph/Gudhi artifacts are typically written under
+`/pscratch/sd/d/dkololgi/graphweb_desi/outputs/` and documented in
+`workflows/catalog/JRAPH_INPUTS_expanded_wedge.txt`.
+
+## Environment Classification
+
+Four cosmic web classes (from T-Web formalism):
+- 0: Void
+- 1: Wall
+- 2: Filament
+- 3: Cluster
+
+## Data Locations on NERSC
 
 - Fastspecfit catalogs: `/global/cfs/cdirs/desi/vac/dr2/fastspecfit/loa/v1.0/catalogs/`
 - Redshift catalog: `/global/cfs/cdirs/desi/spectro/redux/loa/zcatalog/v1/zall-pix-loa.fits`

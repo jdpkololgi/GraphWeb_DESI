@@ -64,6 +64,67 @@ If model checkpoint path differs from config default:
 python workflows/graph_inference/graph_catalog.py --model-path /path/to/trained_gat_model.pth
 ```
 
+### Gudhi/cuGraph/Jraph wedge inference
+
+This path is for DESI wedge eigenvalue regression with an Abacus-trained Jraph
+model. It is not a replacement command for the all-sky GAT VAC workflow above.
+Run it on Perlmutter from an environment with DESI, Gudhi/cuGraph where needed,
+JAX/Haiku/Jraph, and access to the Illustris training repo.
+
+Build the bright BGS catalog if it does not already exist:
+
+```bash
+python workflows/catalog/build_bgs_maglim_catalog.py \
+  --out-path /pscratch/sd/d/dkololgi/graphweb_desi/catalogs/bgs_maglim_bright_galaxy_zwarn0_dchi2ge25.fits
+```
+
+Build the full Mpc-parity graph and export graph features:
+
+```bash
+python workflows/graph_construction/build_desi_bgs_gudhi_graph.py \
+  --catalog-path /pscratch/sd/d/dkololgi/graphweb_desi/catalogs/bgs_maglim_bright_galaxy_zwarn0_dchi2ge25.fits \
+  --out-dir /pscratch/sd/d/dkololgi/graphweb_desi/outputs/gudhi_hemi_full_alphasq_inf_seed42_bright_mpc \
+  --alpha-sq inf \
+  --coord-units mpc
+
+python workflows/graph_construction/desi_graph_features_cugraph.py \
+  --metadata-path /pscratch/sd/d/dkololgi/graphweb_desi/outputs/gudhi_hemi_full_alphasq_inf_seed42_bright_mpc/desi_delaunay_metadata.json \
+  --out-dir /pscratch/sd/d/dkololgi/graphweb_desi/outputs/gudhi_hemi_full_alphasq_inf_seed42_bright_mpc \
+  --out-prefix desi_bgs_cugraph
+```
+
+Subset the expanded Abacus-parity DESI wedge and run inference:
+
+```bash
+source workflows/catalog/JRAPH_INPUTS_expanded_wedge.txt
+
+python workflows/graph_construction/subset_desi_graph_wedge.py \
+  --graph-metadata /pscratch/sd/d/dkololgi/graphweb_desi/outputs/gudhi_hemi_full_alphasq_inf_seed42_bright_mpc/desi_delaunay_metadata.json \
+  --catalog-path /pscratch/sd/d/dkololgi/graphweb_desi/catalogs/bgs_maglim_bright_galaxy_zwarn0_dchi2ge25.fits \
+  --parent-gnn-arrays /pscratch/sd/d/dkololgi/graphweb_desi/outputs/gudhi_hemi_full_alphasq_inf_seed42_bright_mpc/desi_bgs_cugraph_gnn_arrays.npz \
+  --parent-gnn-metadata /pscratch/sd/d/dkololgi/graphweb_desi/outputs/gudhi_hemi_full_alphasq_inf_seed42_bright_mpc/desi_bgs_cugraph_gnn_metadata.json \
+  --out-dir /pscratch/sd/d/dkololgi/graphweb_desi/outputs/desi_wedge_expanded_ra120_160_dec14p5_30p6_z0p2_0p3_bright_mpc_from_fullgraph \
+  --out-prefix desi_delaunay_wedge_expanded_ra120_160_dec14p5_30p6_z0p2_0p3_bright_mpc \
+  --ra-min 120 --ra-max 160 --dec-min 14.5 --dec-max 30.6 --z-min 0.2 --z-max 0.3
+
+python workflows/jraph_inference/jraph_infer_desi_wedge_from_gnn_npz.py \
+  --abacus-run-dir "${ABACUS_RUN_DIR}" \
+  --calibration-cache "${CALIBRATION_CACHE}" \
+  --abacus-gnn-arrays "${ABACUS_WEDGE_GNN_ARRAYS}" \
+  --desi-gnn-arrays "${DESI_GNN_ARRAYS}" \
+  --desi-gnn-metadata "${DESI_GNN_METADATA}" \
+  --desi-global-node-ids "${DESI_GLOBAL_NODE_IDS}" \
+  --desi-wedge-catalog-npz "${DESI_WEDGE_CATALOG_NPZ}" \
+  --output-dir "$(dirname "${INFER_DIR}")" \
+  --run-name "${INFER_RUN_NAME}"
+```
+
+`INFER_DIR` in `workflows/catalog/JRAPH_INPUTS_expanded_wedge.txt` is the full
+intended run directory, so the command passes its parent as `--output-dir` and
+the basename as `--run-name`. Jraph inference uses `ILLUSTRIS_ROOT` to find
+`shared/graph_net_models.py`; the GAT classifier uses `ILLUSTRIS_REPO_ROOT` from
+`shared/config_paths.py`.
+
 ### Utility workflows
 
 Canonical:
