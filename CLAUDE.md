@@ -10,6 +10,10 @@ Guidance for Claude Code / automation agents working in this repository.
 - `RUNBOOK.md` — validated launch commands and environment setup.
 - `~/.claude/CLAUDE.md` — cross-repo map, conda envs, and Perlmutter job recipes.
 - the `nersc` skill — NERSC/Slurm depth (auto-loads for Perlmutter work).
+- **Science log** (shared with Claude Desktop): `SCIENCE_LOG.md` lives in the
+  Illustris repo (NERSC `~/TNG/Illustris/SCIENCE_LOG.md`) and is **cross-project** —
+  log DESI/GraphWeb decisions there too. Read it at session start; append
+  `[code]` entries.
 
 ## Project Overview
 
