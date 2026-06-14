@@ -1,7 +1,8 @@
 # Active Workflow Index
 
 This file is the Phase 0 quick reference for what to run in this repository now.
-For pscratch organization and migration env vars, see `/global/homes/d/dkololgi/PSCRATCH_LAYOUT.md`.
+For scratch layout, conda envs, and Perlmutter job recipes, see `~/.claude/CLAUDE.md`;
+for launch commands see `RUNBOOK.md`.
 
 ## Active
 
