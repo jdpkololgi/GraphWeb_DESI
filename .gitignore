@@ -1,37 +1,54 @@
+# ──────────────────────────────────────────────────────────────────────
+# GraphWeb_DESI repo .gitignore
+# Rule of thumb: TRACK source, configs, docs, small fixtures.
+#                IGNORE generated artifacts, large data, logs, secrets, cruft.
+# Force-track an exception with:  git add -f <path>
+# ──────────────────────────────────────────────────────────────────────
+
+# OS / editor cruft
 .DS_Store
 ._*
+.ipynb_checkpoints/
+.vscode/
 
-loa-combined-lowz.fits
-loa-combined-lowz-zflags.fits
-loa-combined-lowz-fastspec-phot.fits
-DESI_BGS_cartesian_10_9.pdf
-DESI_BGS_cartesian_10_9_dark.pdf
-Delaunay_Cube.pdf
-Delaunay_Slice.pdf
-test.fits
+# Python
 __pycache__/
 *.pyc
 *.pyo
+
+# Secrets / local environment (never commit)
+.env
+*.key
+*.pem
+
+# DESI catalogs & large data
+*.fits
+*.npy
+*.npz
+*.csv
+
+# Graph caches, model weights, pickled artifacts
+cache/
+*.pkl
+*.pt
+*.pth
+
+# Figures / rendered outputs
+*.pdf
+*.png
+*.gif
+*.html
+
+# Local scratch / experiments — keep throwaway run scripts here, off the remote
+scratch/
+sandbox/
+
+# Retired areas — hidden from git; delete the files on disk whenever you're ready
+archive/
+legacy/
+to-delete/
+
+# Exploratory notebooks intentionally kept out of the repo
 1_loaSampleSelection_forDK.ipynb
 2_loaSelectedSample_massCompletenessCut_forDK.ipynb
 5_loa+LSSsample_massCompletenessCut.ipynb
-TNG300-1_z=0_{self.filetype}_Subhalos.pdf
-cache/DESI_delaunay_graph.pt
-cache/DESI_geom.pt
-cache/DESI_features.pt
-cache/DESI_NETWORK.zcat.pt
-cache/DESI_delaunay_graph_old.pt
-cache/DESI_features_old.pt
-cache/DESI_geom_old.pt
-cache/DESI_NETWORK.zcat_old.pt
-DESI_BGS_PRERELEASE_VAC.pkl
-DESI_galaxy_animation_black_bg.gif
-edge_length_distribution.png
-Interactive - graph_catalog.py.ipynb
-long_edges_spatial.png
-sim_bgs_side_nocolors.pdf
-sim_bgs_side.pdf
-cache/
-WORKFLOWS_AND_REFACTOR_PLAN.md
-*.sh
-*.sbatch
