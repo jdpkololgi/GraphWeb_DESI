@@ -68,7 +68,8 @@ def duplicate_bidirectional_edges(
 
 
 def _log_edge_cols(edge_attr: np.ndarray) -> np.ndarray:
-    e = np.asarray(edge_attr, dtype=np.float64).copy()
+    """Log edge length (col 0) and density contrast (col 4) in float32."""
+    e = np.asarray(edge_attr, dtype=np.float32).copy()
     e[:, 0] = np.log(np.maximum(e[:, 0], _EDGE_LOG_EPS))
     e[:, 4] = np.log(np.maximum(e[:, 4], _EDGE_LOG_EPS))
     return e
@@ -81,7 +82,7 @@ def fit_edge_length_density_scaler_from_gnn_npz(
 ) -> StandardScaler:
     """Fit StandardScaler on log(edge_length) and log(density_contrast) (cols 0, 4)."""
     with np.load(Path(gnn_npz).expanduser().resolve()) as data:
-        edge_attr = np.asarray(data["edge_attr"], dtype=np.float64)
+        edge_attr = np.asarray(data["edge_attr"], dtype=np.float32)
         if make_bidirectional:
             edge_index = np.asarray(data["edge_index"], dtype=np.int64)
             _, edge_attr = duplicate_bidirectional_edges(edge_index, edge_attr)
@@ -98,11 +99,9 @@ def transform_edge_length_density(
     scaler: StandardScaler,
 ) -> np.ndarray:
     """Apply log + StandardScaler on cols 0 and 4 (in place on a copy)."""
-    e = np.asarray(edge_attr, dtype=np.float32).copy()
-    e[:, 0] = np.log(np.maximum(e[:, 0], _EDGE_LOG_EPS))
-    e[:, 4] = np.log(np.maximum(e[:, 4], _EDGE_LOG_EPS))
+    e = _log_edge_cols(edge_attr)
     e[:, [0, 4]] = scaler.transform(e[:, [0, 4]]).astype(np.float32)
-    return e
+    return e.astype(np.float32, copy=False)
 
 
 def prepare_edges_for_jraph_forward(
