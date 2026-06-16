@@ -52,3 +52,6 @@ to-delete/
 1_loaSampleSelection_forDK.ipynb
 2_loaSelectedSample_massCompletenessCut_forDK.ipynb
 5_loa+LSSsample_massCompletenessCut.ipynb
+
+# Graphify output
+graphify-out/
