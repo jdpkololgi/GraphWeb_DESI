@@ -108,24 +108,58 @@ def main(args):
     fig.colorbar(sc2, ax=axes[1], label="entropy [nats]")
     fig.savefig(out / "posterior_width_sky_map.png", bbox_inches="tight", dpi=200); plt.close(fig)
 
-    # ---- 4. domain-shift overlay: DESI inferred λ vs Abacus training λ ----
-    abacus_eig = None
-    if args.calibration_cache:
+    # ---- 4. eigenvalue distributions: Abacus truth vs Abacus NPE vs DESI NPE ----
+    # Localizes any λ-distribution shift: truth vs sim-NPE shows the TRAINING fit;
+    # sim-NPE vs DESI-NPE shows the TRANSFER shift.
+    abacus_truth = abacus_npe = None
+    aself = np.load(args.abacus_self_npz) if args.abacus_self_npz else None
+    if aself is not None:
+        abacus_truth, abacus_npe = aself["eig_truth"], aself["lambda_mean"]
+    elif args.calibration_cache:
         import pickle
         with open(args.calibration_cache, "rb") as f:
-            abacus_eig = np.asarray(pickle.load(f).get("eigenvalues_raw"))
+            abacus_truth = np.asarray(pickle.load(f).get("eigenvalues_raw"))
     fig, axes = plt.subplots(1, 3, figsize=(15, 4.5))
-    accent = [ACCENT_COLORS["blue"], ACCENT_COLORS["magenta"], ACCENT_COLORS["red"]]
     for k in range(3):
-        axes[k].hist(lam_mean[:, k], bins=80, density=True, alpha=0.8, color=accent[k], label="DESI NPE (post. mean)")
-        if abacus_eig is not None:
-            axes[k].hist(abacus_eig[:, k], bins=80, density=True, histtype="step", lw=2, color="#F2F2F2", label="Abacus train")
+        if abacus_truth is not None:
+            axes[k].hist(abacus_truth[:, k], bins=80, density=True, alpha=0.4, color="#9a9a93", label="Abacus truth")
+        if abacus_npe is not None:
+            axes[k].hist(abacus_npe[:, k], bins=80, density=True, histtype="step", lw=2,
+                         color=ACCENT_COLORS["blue"], label="Abacus NPE")
+        axes[k].hist(lam_mean[:, k], bins=80, density=True, histtype="step", lw=2,
+                     color=ACCENT_COLORS["magenta"], label="DESI NPE")
         axes[k].axvline(lam_th, ls=":", color="#F2F2F2", alpha=0.6)
         axes[k].set_xlabel(rf"$\lambda_{k+1}$"); axes[k].set_ylabel("density" if k == 0 else "")
         if k == 0:
             axes[k].legend(fontsize=9)
-    fig.suptitle("Domain-shift check: DESI inferred λ vs Abacus training λ")
-    fig.savefig(out / "domain_shift_overlay.png", bbox_inches="tight"); plt.close(fig)
+    fig.suptitle("Eigenvalue distributions: Abacus truth vs Abacus NPE vs DESI NPE (posterior mean)")
+    fig.savefig(out / "eigenvalue_distributions_3way.png", bbox_inches="tight"); plt.close(fig)
+
+    # ---- 4b. embedding space: PCA of GNN embeddings (domain shift + class structure) ----
+    if "embeddings" in d:
+        from sklearn.decomposition import PCA
+        emb_desi = np.asarray(d["embeddings"])
+        rng = np.random.default_rng(1)
+        sd = rng.choice(len(emb_desi), min(len(emb_desi), 15000), replace=False)
+        emb_ab = np.asarray(aself["embeddings"]) if (aself is not None and "embeddings" in aself) else None
+        # fit PCA on a combined sample so Abacus and DESI share axes (reveals domain shift)
+        fit_src = np.vstack([emb_desi[sd]] + ([emb_ab[rng.choice(len(emb_ab), min(len(emb_ab), 15000), replace=False)]] if emb_ab is not None else []))
+        pca = PCA(n_components=2).fit(fit_src)
+        pd_desi = pca.transform(emb_desi[sd])
+        fig, axes = plt.subplots(1, 2, figsize=(14, 6))
+        if emb_ab is not None:
+            sa = rng.choice(len(emb_ab), min(len(emb_ab), 15000), replace=False)
+            pd_ab = pca.transform(emb_ab[sa])
+            axes[0].scatter(pd_ab[:, 0], pd_ab[:, 1], s=3, c="#9a9a93", alpha=0.5, rasterized=True, label="Abacus")
+        axes[0].scatter(pd_desi[:, 0], pd_desi[:, 1], s=3, c=ACCENT_COLORS["magenta"], alpha=0.5, rasterized=True, label="DESI")
+        axes[0].set_title("GNN embedding PCA — domain shift (Abacus vs DESI)")
+        axes[0].set_xlabel("PC1"); axes[0].set_ylabel("PC2"); axes[0].legend(markerscale=3)
+        for k, c in enumerate(CLASS_ORDER):
+            m = hard[sd] == k
+            axes[1].scatter(pd_desi[m, 0], pd_desi[m, 1], s=3, c=COSMIC_WEB_COLORS[c], alpha=0.6, rasterized=True, label=c.capitalize())
+        axes[1].set_title("DESI embedding PCA — by inferred class")
+        axes[1].set_xlabel("PC1"); axes[1].set_ylabel("PC2"); axes[1].legend(markerscale=3)
+        fig.savefig(out / "embedding_pca.png", bbox_inches="tight", dpi=200); plt.close(fig)
 
     # ---- 5. width vs boundary distance (survey edge + class boundary) ----
     # normalized distance to nearest wedge footprint edge (RA/Dec/z), in [0, .5]
@@ -201,6 +235,8 @@ if __name__ == "__main__":
     ap.add_argument("--calibration-cache", default=None, help="for the Abacus-λ domain-shift overlay")
     ap.add_argument("--abacus-classprob-npz", default=None,
                     help="Abacus NPE per-galaxy class probs (4th class-fraction series)")
+    ap.add_argument("--abacus-self-npz", default=None,
+                    help="abacus_self_flowjax_preds.npz (3-way eigenvalue dists + embedding PCA)")
     ap.add_argument("--output-dir", default=None)
     ap.add_argument("--ra-min", type=float, default=120.0); ap.add_argument("--ra-max", type=float, default=160.0)
     ap.add_argument("--dec-min", type=float, default=14.5); ap.add_argument("--dec-max", type=float, default=30.6)
