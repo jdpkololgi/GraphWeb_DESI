@@ -27,59 +27,64 @@ EC = ["#3A86FF", "#FF006E", "#D62828"]  # λ1, λ2, λ3 curve colours
 TH = 0.2
 
 
+def _mixture(means, stds, xg):
+    """Per-bin eigenvalue density = mixture over galaxies of N(mean_g, std_g).
+    Uses every galaxy in the bin (mean+std available for all), so it is smooth and
+    correctly widens where the posteriors widen."""
+    stds = np.maximum(np.asarray(stds), 1e-3)
+    z = (xg[None, :] - means[:, None]) / stds[:, None]
+    return (np.exp(-0.5 * z * z) / (stds[:, None] * np.sqrt(2 * np.pi))).mean(0)
+
+
 def main(args):
     d = np.load(args.preds_npz)
     ra, dec, z = d["ra"], d["dec"], d["z"]
     classprob, hard = d["classprob"], d["hard_class"]
-    width = d["lambda_std"].mean(1)
-    sub_idx = d["sample_subset_idx"]
-    sub_samp = d["lambda_samples_subset"]  # [Nsub,K,3] (already sorted ascending)
+    lam_mean, lam_std = d["lambda_mean"], d["lambda_std"]
+    width = lam_std.mean(1)
 
-    # comoving XYZ + long-axis projection
     dist = cosmo.comoving_distance(z).value
     rar, decr = np.deg2rad(ra), np.deg2rad(dec)
-    X = dist * np.cos(decr) * np.cos(rar); Y = dist * np.cos(decr) * np.sin(rar); Zc = dist * np.sin(decr)
-    P = np.vstack([X, Y, Zc]).T
-    P = P - P.mean(0)
-    U, S, Vt = np.linalg.svd(P - P.mean(0), full_matrices=False)
-    s_all = P @ Vt[0]          # along long axis (Mpc)
-    t1_all = P @ Vt[1]         # transverse 1
-    s_sub = s_all[sub_idx]; t1_sub = t1_all[sub_idx]
 
-    s_lo, s_hi = np.percentile(s_all, [1, 99])
-    centers = np.linspace(s_lo, s_hi, args.n_frames)
-    win = (s_hi - s_lo) / args.n_frames * args.window_mult
-    tube = np.percentile(np.abs(t1_sub), args.tube_pct)  # transverse half-width with enough galaxies
+    # ---- radial line-of-sight pencil beam at the richest inferred CLUSTER's RA/Dec ----
+    # (a thin 3D line through a shell-like wedge would cut the empty interior; the
+    # physical "skewer" is a fixed-RA/Dec sightline binned in comoving distance, so the
+    # cluster — localized in distance — appears as a spike, with void/wall around it.)
+    clu = classprob[:, 3]
+    P = np.vstack([dist * np.cos(decr) * np.cos(rar), dist * np.cos(decr) * np.sin(rar), dist * np.sin(decr)]).T
+    near = np.linalg.norm(P - P[np.argmax(clu)], axis=1) < args.anchor_r
+    ra_c = float(np.average(ra[near], weights=clu[near])); dec_c = float(np.average(dec[near], weights=clu[near]))
+    rac, dcc = np.deg2rad(ra_c), np.deg2rad(dec_c)
+    ang = np.degrees(np.arccos(np.clip(np.sin(decr) * np.sin(dcc) + np.cos(decr) * np.cos(dcc) * np.cos(rar - rac), -1, 1)))
+    tube = ang < args.theta_deg                       # pencil beam
+    t_mpc = np.sign(dec - dec_c) * np.deg2rad(ang) * dist   # signed transverse offset (Mpc) for the panel
+    dmin, dmax = np.percentile(dist[tube], [1, 99])
+    print(f"LOS at RA={ra_c:.2f} Dec={dec_c:.2f}; beam θ<{args.theta_deg}° -> {int(tube.sum())} galaxies; "
+          f"distance {dmin:.0f}-{dmax:.0f} Mpc", flush=True)
 
-    xg = np.linspace(args.lmin, args.lmax, args.grid).tolist()
+    centers = np.linspace(dmin, dmax, args.n_frames)
+    binw = (dmax - dmin) / args.n_frames * 1.6
+    xg = np.linspace(args.lmin, args.lmax, args.grid)
     frames = []
     for c in centers:
-        m_all = (np.abs(s_all - c) < win)
-        m_sub = (np.abs(s_sub - c) < win) & (np.abs(t1_sub) < tube)
-        n_sub = int(m_sub.sum())
-        kdes = [[0.0] * args.grid, [0.0] * args.grid, [0.0] * args.grid]
-        if n_sub >= args.min_gal:
-            samp = sub_samp[m_sub]                      # [n,K,3]
-            for k in range(3):
-                vals = samp[:, :, k].ravel()
-                try:
-                    kdes[k] = gaussian_kde(vals)(xg).tolist()
-                except Exception:
-                    kdes[k] = np.histogram(vals, bins=args.grid, range=(args.lmin, args.lmax), density=True)[0].tolist()
-        probs = {c2: float(classprob[m_all, ORDER.index(c2)].mean()) if m_all.any() else 0.0 for c2 in ORDER}
-        frames.append({"s": float(c), "n": n_sub,
-                        "kde": kdes, "probs": probs,
-                        "width": float(width[m_all].mean()) if m_all.any() else 0.0})
+        m = tube & (np.abs(dist - c) < binw)
+        n = int(m.sum())
+        if n >= args.min_gal:
+            kdes = [_mixture(lam_mean[m, k], lam_std[m, k], xg).tolist() for k in range(3)]
+            probs = {c2: float(classprob[m, ORDER.index(c2)].mean()) for c2 in ORDER}
+            wid = float(width[m].mean())
+        else:
+            kdes = [[0.0] * args.grid] * 3; probs = {c2: 0.0 for c2 in ORDER}; wid = 0.0
+        frames.append({"s": float(c), "n": n, "kde": kdes, "probs": probs, "width": wid})
 
-    # galaxy scatter for the structure panel (downsample)
     rng = np.random.default_rng(0)
-    gi = rng.choice(len(s_all), min(len(s_all), args.scatter_points), replace=False)
-    gal = {"s": s_all[gi].round(2).tolist(), "t": t1_all[gi].round(2).tolist(),
-           "c": [ORDER[h] for h in hard[gi]]}
+    gi = np.where(tube)[0]
+    gi = rng.choice(gi, min(len(gi), args.scatter_points), replace=False)
+    gal = {"s": dist[gi].round(2).tolist(), "t": t_mpc[gi].round(2).tolist(), "c": [ORDER[h] for h in hard[gi]]}
 
-    payload = {"frames": frames, "xg": xg, "gal": gal, "th": TH, "cc": CC, "ec": EC,
+    payload = {"frames": frames, "xg": xg.tolist(), "gal": gal, "th": TH, "cc": CC, "ec": EC,
                "order": ORDER, "smin": float(centers[0]), "smax": float(centers[-1]),
-               "tmin": float(np.percentile(t1_all, 1)), "tmax": float(np.percentile(t1_all, 99))}
+               "tmin": float(np.percentile(t_mpc[gi], 2)), "tmax": float(np.percentile(t_mpc[gi], 98))}
 
     html = _HTML.replace("__DATA__", json.dumps(payload))
     out = Path(args.out)
@@ -156,8 +161,8 @@ if __name__ == "__main__":
     ap.add_argument("--preds-npz", required=True)
     ap.add_argument("--out", default=None)
     ap.add_argument("--n-frames", type=int, default=60)
-    ap.add_argument("--window-mult", type=float, default=1.5)
-    ap.add_argument("--tube-pct", type=float, default=40.0)
+    ap.add_argument("--theta-deg", type=float, default=1.5, help="pencil-beam angular radius (deg) around the sightline")
+    ap.add_argument("--anchor-r", type=float, default=15.0, help="radius (Mpc) to locate the cluster centroid")
     ap.add_argument("--min-gal", type=int, default=8)
     ap.add_argument("--grid", type=int, default=120)
     ap.add_argument("--lmin", type=float, default=-1.0); ap.add_argument("--lmax", type=float, default=2.0)

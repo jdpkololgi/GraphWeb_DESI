@@ -161,6 +161,66 @@ def main(args):
         axes[1].set_xlabel("PC1"); axes[1].set_ylabel("PC2"); axes[1].legend(markerscale=3)
         fig.savefig(out / "embedding_pca.png", bbox_inches="tight", dpi=200); plt.close(fig)
 
+        # ---- 4c. 3D PCA interactive (Abacus vs DESI) ----
+        try:
+            import plotly.graph_objects as go
+            pca3 = PCA(n_components=3).fit(fit_src)
+            q_desi = pca3.transform(emb_desi[sd])
+            f3 = go.Figure()
+            if emb_ab is not None:
+                q_ab = pca3.transform(emb_ab[sa])
+                f3.add_trace(go.Scatter3d(x=q_ab[:, 0], y=q_ab[:, 1], z=q_ab[:, 2], mode="markers",
+                             marker=dict(size=1.5, color="#9a9a93", opacity=0.5), name="Abacus"))
+            f3.add_trace(go.Scatter3d(x=q_desi[:, 0], y=q_desi[:, 1], z=q_desi[:, 2], mode="markers",
+                         marker=dict(size=1.5, color=ACCENT_COLORS["magenta"], opacity=0.5), name="DESI"))
+            f3.update_layout(template="plotly_dark", title="GNN embedding PCA (3D) — Abacus vs DESI",
+                             paper_bgcolor="#000000", scene=dict(xaxis_title="PC1", yaxis_title="PC2", zaxis_title="PC3"))
+            f3.write_html(str(out / "embedding_pca_3d.html"), include_plotlyjs="cdn")
+            print("  3D PCA:", out / "embedding_pca_3d.html")
+        except ImportError:
+            pass
+
+        # ---- 4d. UMAP (2D static + 3D interactive), fit on combined Abacus+DESI ----
+        try:
+            import umap
+            import plotly.graph_objects as go
+            n_um = args.umap_points
+            du = emb_desi[rng.choice(len(emb_desi), min(len(emb_desi), n_um), replace=False)]
+            hu = hard[rng.choice(len(emb_desi), min(len(emb_desi), n_um), replace=False)]
+            parts = [du]; labels = ["DESI"] * len(du)
+            if emb_ab is not None:
+                au = emb_ab[rng.choice(len(emb_ab), min(len(emb_ab), n_um), replace=False)]
+                parts.append(au); labels += ["Abacus"] * len(au)
+            comb = np.vstack(parts); is_desi = np.array(labels) == "DESI"
+            print(f"  UMAP fitting on {comb.shape[0]} embeddings ...", flush=True)
+            U2 = umap.UMAP(n_components=2, random_state=42, n_neighbors=30, min_dist=0.3).fit_transform(comb)
+            fig, axes = plt.subplots(1, 2, figsize=(14, 6))
+            if emb_ab is not None:
+                axes[0].scatter(U2[~is_desi, 0], U2[~is_desi, 1], s=3, c="#9a9a93", alpha=0.5, rasterized=True, label="Abacus")
+            axes[0].scatter(U2[is_desi, 0], U2[is_desi, 1], s=3, c=ACCENT_COLORS["magenta"], alpha=0.5, rasterized=True, label="DESI")
+            axes[0].set_title("GNN embedding UMAP — Abacus vs DESI"); axes[0].legend(markerscale=3)
+            Ud = U2[is_desi]
+            for k, c in enumerate(CLASS_ORDER):
+                m = hu == k
+                axes[1].scatter(Ud[m, 0], Ud[m, 1], s=3, c=COSMIC_WEB_COLORS[c], alpha=0.6, rasterized=True, label=c.capitalize())
+            axes[1].set_title("DESI embedding UMAP — by inferred class"); axes[1].legend(markerscale=3)
+            for a in axes:
+                a.set_xlabel("UMAP1"); a.set_ylabel("UMAP2")
+            fig.savefig(out / "embedding_umap.png", bbox_inches="tight", dpi=200); plt.close(fig)
+            # 3D UMAP interactive
+            U3 = umap.UMAP(n_components=3, random_state=42, n_neighbors=30, min_dist=0.3).fit_transform(comb)
+            f3 = go.Figure()
+            if emb_ab is not None:
+                f3.add_trace(go.Scatter3d(x=U3[~is_desi, 0], y=U3[~is_desi, 1], z=U3[~is_desi, 2], mode="markers",
+                             marker=dict(size=1.5, color="#9a9a93", opacity=0.5), name="Abacus"))
+            f3.add_trace(go.Scatter3d(x=U3[is_desi, 0], y=U3[is_desi, 1], z=U3[is_desi, 2], mode="markers",
+                         marker=dict(size=1.5, color=ACCENT_COLORS["magenta"], opacity=0.5), name="DESI"))
+            f3.update_layout(template="plotly_dark", title="GNN embedding UMAP (3D) — Abacus vs DESI", paper_bgcolor="#000000")
+            f3.write_html(str(out / "embedding_umap_3d.html"), include_plotlyjs="cdn")
+            print("  UMAP:", out / "embedding_umap.png", "+ embedding_umap_3d.html")
+        except ImportError as e:
+            print(f"  (umap unavailable, skipping: {e})")
+
     # ---- 5. width vs boundary distance (survey edge + class boundary) ----
     # normalized distance to nearest wedge footprint edge (RA/Dec/z), in [0, .5]
     def norm_edge_dist(v, lo, hi):
@@ -242,4 +302,5 @@ if __name__ == "__main__":
     ap.add_argument("--dec-min", type=float, default=14.5); ap.add_argument("--dec-max", type=float, default=30.6)
     ap.add_argument("--z-min", type=float, default=0.2); ap.add_argument("--z-max", type=float, default=0.3)
     ap.add_argument("--max-3d-points", type=int, default=60000)
+    ap.add_argument("--umap-points", type=int, default=12000, help="points per dataset for UMAP fit")
     main(ap.parse_args())
