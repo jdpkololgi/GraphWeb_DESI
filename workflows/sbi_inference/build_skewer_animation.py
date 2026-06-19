@@ -161,7 +161,7 @@ if __name__ == "__main__":
     ap.add_argument("--preds-npz", required=True)
     ap.add_argument("--out", default=None)
     ap.add_argument("--n-frames", type=int, default=60)
-    ap.add_argument("--theta-deg", type=float, default=1.5, help="pencil-beam angular radius (deg) around the sightline")
+    ap.add_argument("--theta-deg", type=float, default=0.6, help="pencil-beam angular radius (deg) around the sightline")
     ap.add_argument("--anchor-r", type=float, default=15.0, help="radius (Mpc) to locate the cluster centroid")
     ap.add_argument("--min-gal", type=int, default=8)
     ap.add_argument("--grid", type=int, default=120)
