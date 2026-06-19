@@ -169,6 +169,19 @@ def main(args):
         flow, embeddings, args.num_posterior_samples, jax.random.key(123), chunk_size=args.chunk_size)
     samples_raw = samples_to_raw_eigenvalues(samples_scaled, target_scaler, increment_mode)  # [N,K,3]
 
+    # TRUE ordering-violation rate (no ground truth needed): fraction of the flow's
+    # own posterior samples whose inverted (λ1,λ2,λ3) are NOT ascending — i.e. the
+    # flow drew a negative linear increment. This is a self-consistency property of
+    # the model's samples, not an accuracy claim.
+    asc = (samples_raw[..., 0] <= samples_raw[..., 1]) & (samples_raw[..., 1] <= samples_raw[..., 2])
+    viol_rate = float(np.mean(~asc))
+    print(f"TRUE ordering-violation rate (non-ascending samples): {viol_rate:.4f}", flush=True)
+    # Post-hoc fix: sort each posterior sample ascending. Physical eigenvalues are
+    # ordered and the T-web count is order-independent, so this is a monotonic,
+    # no-retraining correction applied at eval time.
+    if not args.no_sort:
+        samples_raw = np.sort(samples_raw, axis=-1)
+
     # --- per-galaxy posterior products ---
     lambda_mean = samples_raw.mean(axis=1)                # [N,3]
     lambda_std = samples_raw.std(axis=1)                  # [N,3] (NPE uncertainty)
@@ -196,11 +209,17 @@ def main(args):
         acp = posterior_to_classprobs(abacus_true_eigs[:, None, :], lambda_th=args.lambda_threshold)
         abacus_fracs = {c: float(np.mean(acp[c])) for c in CLASS_ORDER}
 
+    # Subsample of full posterior samples (for KDE distributions / the skewer) — full
+    # [N,128,3] would be ~170 MB; keep a representative random subset instead.
+    rng_sub = np.random.default_rng(0)
+    sub = np.sort(rng_sub.choice(n_nodes, min(n_nodes, args.save_sample_subset), replace=False))
     np.savez_compressed(
         out_dir / "desi_wedge_flowjax_preds.npz",
         global_node_id=global_ids, ra=ra, dec=dec, z=zz,
         lambda_mean=lambda_mean, lambda_std=lambda_std,
-        classprob=classprob, hard_class=hard_class, p_exceed=np.asarray(cp["p_exceed"]))
+        classprob=classprob, hard_class=hard_class, p_exceed=np.asarray(cp["p_exceed"]),
+        embeddings=embeddings.astype(np.float32),
+        sample_subset_idx=sub, lambda_samples_subset=samples_raw[sub].astype(np.float32))
     print(f"Saved: {out_dir/'desi_wedge_flowjax_preds.npz'}", flush=True)
 
     summary = {
@@ -219,6 +238,8 @@ def main(args):
         "node_post_boxcox_mean": col_mean.tolist(),
         "node_post_boxcox_std": col_std.tolist(),
         "classprob_consistency_max_abs_diff": consistency,
+        "true_ordering_violation_rate": viol_rate,
+        "post_hoc_sort_applied": (not args.no_sort),
         "desi": {"n_nodes": n_nodes, "n_edges": n_edges,
                  "class_fractions_npe": {CLASS_ORDER[k]: float(npe_fracs[k]) for k in range(4)}},
         "reference_fractions": {
@@ -244,6 +265,10 @@ if __name__ == "__main__":
     ap.add_argument("--num-posterior-samples", type=int, default=128)
     ap.add_argument("--lambda-threshold", type=float, default=0.2)
     ap.add_argument("--chunk-size", type=int, default=512)
+    ap.add_argument("--no-sort", action="store_true",
+                    help="Disable the post-hoc ascending sort of posterior samples (keep raw flow order).")
+    ap.add_argument("--save-sample-subset", type=int, default=20000,
+                    help="How many galaxies' full posterior samples to save (for KDE/skewer).")
     ap.add_argument("--seed", type=int, default=42)
     ap.add_argument("--output-dir", type=Path, default=Path("/pscratch/sd/d/dkololgi/graphweb_desi/flowjax_inference_outputs"))
     ap.add_argument("--run-name", type=str, default="desi_wedge_flowjax_linear")
