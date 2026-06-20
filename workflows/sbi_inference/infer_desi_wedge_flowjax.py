@@ -162,6 +162,9 @@ def main(args):
     print("node post-box-cox per-col std :", col_std.round(3), flush=True)
     if (np.abs(col_mean) > 0.5).any() or ((col_std < 0.7) | (col_std > 1.4)).any():
         print("WARNING: DESI node distribution drifted from training (~0/1); transfer may be degraded.", flush=True)
+    if args.node_domain_adapt:
+        x = ((x - x.mean(0)) / (x.std(0) + 1e-9)).astype(np.float32)
+        print("[node-domain-adapt] re-standardised DESI node features to training N(0,1)", flush=True)
 
     n_nodes, n_edges = int(x.shape[0]), int(edge_index_b.shape[1])
     graph = jraph.GraphsTuple(
@@ -280,6 +283,9 @@ if __name__ == "__main__":
     ap.add_argument("--edge-domain-adapt", action="store_true",
                     help="Phase-0a: re-standardise DESI scaled edge_length+density_contrast to "
                          "training N(0,1) (corrects the graph-scale domain shift).")
+    ap.add_argument("--node-domain-adapt", action="store_true",
+                    help="Re-standardise DESI box-cox node features to training N(0,1) "
+                         "(corrects the node-feature domain shift).")
     ap.add_argument("--no-sort", action="store_true",
                     help="Disable the post-hoc ascending sort of posterior samples (keep raw flow order).")
     ap.add_argument("--save-sample-subset", type=int, default=20000,
