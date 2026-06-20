@@ -143,6 +143,18 @@ def main(args):
     print(f"edge scaler OK: mean={edge_scaler.mean_.round(4)} scale={edge_scaler.scale_.round(4)}; "
           f"bidir edges={edge_attr_b.shape[0]}", flush=True)
 
+    # Phase-0a domain correction: the Abacus-fit scaler leaves DESI's scaled edge
+    # features off the training N(0,1) (graph-scale shift, ~-0.11σ on edge_length).
+    # Re-standardise the scaled edge_length (col 0) and density_contrast (col 4) to
+    # zero-mean/unit-std so the GNN sees the training edge distribution. Tests whether
+    # the cluster deficit is caused by the edge-scale domain shift.
+    if args.edge_domain_adapt:
+        edge_attr_b = np.array(edge_attr_b, dtype=np.float32, copy=True)
+        for col in (0, 4):
+            m, s = float(edge_attr_b[:, col].mean()), float(edge_attr_b[:, col].std())
+            edge_attr_b[:, col] = (edge_attr_b[:, col] - m) / (s + 1e-9)
+            print(f"[edge-domain-adapt] col{col}: DESI mean {m:+.3f} std {s:.3f} -> N(0,1)", flush=True)
+
     # --- nodes: box-cox (match training) + distribution parity check ---
     x = node_feature_scaler.transform(x_raw + 1e-6).astype(np.float32)
     col_mean, col_std = x.mean(0), x.std(0)
@@ -265,6 +277,9 @@ if __name__ == "__main__":
     ap.add_argument("--num-posterior-samples", type=int, default=128)
     ap.add_argument("--lambda-threshold", type=float, default=0.2)
     ap.add_argument("--chunk-size", type=int, default=512)
+    ap.add_argument("--edge-domain-adapt", action="store_true",
+                    help="Phase-0a: re-standardise DESI scaled edge_length+density_contrast to "
+                         "training N(0,1) (corrects the graph-scale domain shift).")
     ap.add_argument("--no-sort", action="store_true",
                     help="Disable the post-hoc ascending sort of posterior samples (keep raw flow order).")
     ap.add_argument("--save-sample-subset", type=int, default=20000,
