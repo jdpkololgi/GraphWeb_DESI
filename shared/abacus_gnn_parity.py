@@ -75,10 +75,20 @@ def _log_edge_cols(edge_attr: np.ndarray) -> np.ndarray:
     return e
 
 
+def _scale_invariant_edge_length(edge_attr: np.ndarray) -> np.ndarray:
+    """Divide edge_length (col 0) by its per-graph median -> dimensionless contrast.
+    Matches build_abacus_sbi_cache._build_graph_from_npz(scale_invariant=True)."""
+    e = np.asarray(edge_attr, dtype=np.float32).copy()
+    med = float(np.median(e[:, 0]))
+    e[:, 0] = e[:, 0] / max(med, 1e-6)
+    return e
+
+
 def fit_edge_length_density_scaler_from_gnn_npz(
     gnn_npz: Path | str,
     *,
     make_bidirectional: bool = True,
+    scale_invariant: bool = False,
 ) -> StandardScaler:
     """Fit StandardScaler on log(edge_length) and log(density_contrast) (cols 0, 4)."""
     with np.load(Path(gnn_npz).expanduser().resolve()) as data:
@@ -88,6 +98,8 @@ def fit_edge_length_density_scaler_from_gnn_npz(
             _, edge_attr = duplicate_bidirectional_edges(edge_index, edge_attr)
         else:
             edge_attr = edge_attr.copy()
+    if scale_invariant:
+        edge_attr = _scale_invariant_edge_length(edge_attr)
     edge_attr = _log_edge_cols(edge_attr)
     scaler = StandardScaler()
     scaler.fit(edge_attr[:, [0, 4]])
@@ -110,11 +122,15 @@ def prepare_edges_for_jraph_forward(
     edge_scaler: StandardScaler,
     *,
     make_bidirectional: bool = True,
+    scale_invariant: bool = False,
 ) -> tuple[np.ndarray, np.ndarray]:
-    """Bidirectional duplicate (optional) then log + z-score edge cols 0, 4."""
+    """Bidirectional duplicate (optional), optional per-graph-median edge_length
+    contrast, then log + z-score edge cols 0, 4."""
     ei = np.asarray(edge_index, dtype=np.int64)
     ea = np.asarray(edge_attr)
     if make_bidirectional:
         ei, ea = duplicate_bidirectional_edges(ei, ea)
+    if scale_invariant:
+        ea = _scale_invariant_edge_length(ea)
     ea = transform_edge_length_density(ea, edge_scaler)
     return ei, ea

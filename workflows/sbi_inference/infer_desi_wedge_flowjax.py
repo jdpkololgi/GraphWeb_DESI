@@ -131,15 +131,19 @@ def main(args):
 
     # --- edges: fit scaler on PATH1 wedge, assert constants, transform DESI edges ---
     edge_scaler = parity.fit_edge_length_density_scaler_from_gnn_npz(
-        args.abacus_gnn_arrays.expanduser().resolve(), make_bidirectional=True)
-    if not (np.allclose(edge_scaler.mean_, _PATH1_EDGE_SCALER_MEAN, atol=0.05)
-            and np.allclose(edge_scaler.scale_, _PATH1_EDGE_SCALER_SCALE, atol=0.05)):
-        raise SystemExit(
-            "Edge-scaler constants do not match the path1 fiberassign wedge — wrong --abacus-gnn-arrays?\n"
-            f"  got   mean={edge_scaler.mean_}, scale={edge_scaler.scale_}\n"
-            f"  want  mean≈{_PATH1_EDGE_SCALER_MEAN}, scale≈{_PATH1_EDGE_SCALER_SCALE}")
+        args.abacus_gnn_arrays.expanduser().resolve(), make_bidirectional=True,
+        scale_invariant=args.scale_invariant_features)
+    if not args.scale_invariant_features:
+        # constants only valid for the absolute-length path1 wedge; SI normalises away the scale
+        if not (np.allclose(edge_scaler.mean_, _PATH1_EDGE_SCALER_MEAN, atol=0.05)
+                and np.allclose(edge_scaler.scale_, _PATH1_EDGE_SCALER_SCALE, atol=0.05)):
+            raise SystemExit(
+                "Edge-scaler constants do not match the path1 fiberassign wedge — wrong --abacus-gnn-arrays?\n"
+                f"  got   mean={edge_scaler.mean_}, scale={edge_scaler.scale_}\n"
+                f"  want  mean≈{_PATH1_EDGE_SCALER_MEAN}, scale≈{_PATH1_EDGE_SCALER_SCALE}")
     edge_index_b, edge_attr_b = parity.prepare_edges_for_jraph_forward(
-        edge_index, edge_attr, edge_scaler, make_bidirectional=True)
+        edge_index, edge_attr, edge_scaler, make_bidirectional=True,
+        scale_invariant=args.scale_invariant_features)
     print(f"edge scaler OK: mean={edge_scaler.mean_.round(4)} scale={edge_scaler.scale_.round(4)}; "
           f"bidir edges={edge_attr_b.shape[0]}", flush=True)
 
@@ -156,6 +160,12 @@ def main(args):
             print(f"[edge-domain-adapt] col{col}: DESI mean {m:+.3f} std {s:.3f} -> N(0,1)", flush=True)
 
     # --- nodes: box-cox (match training) + distribution parity check ---
+    if args.scale_invariant_features:
+        # per-graph-median contrast on scale-carrying cols, matching the SI cache
+        for col in (0, 2, 3, 4, 5, 6):
+            med = float(np.median(x_raw[:, col]))
+            x_raw[:, col] = x_raw[:, col] / max(med, 1e-9)
+        print("[scale-invariant] per-graph-median normalised DESI node cols [0,2,3,4,5,6]", flush=True)
     x = node_feature_scaler.transform(x_raw + 1e-6).astype(np.float32)
     col_mean, col_std = x.mean(0), x.std(0)
     print("node post-box-cox per-col mean:", col_mean.round(3), flush=True)
@@ -280,6 +290,9 @@ if __name__ == "__main__":
     ap.add_argument("--num-posterior-samples", type=int, default=128)
     ap.add_argument("--lambda-threshold", type=float, default=0.2)
     ap.add_argument("--chunk-size", type=int, default=512)
+    ap.add_argument("--scale-invariant-features", action="store_true",
+                    help="Route A: per-graph-median normalise node+edge scale features to "
+                         "contrasts (must match a cache built with --scale-invariant-features).")
     ap.add_argument("--edge-domain-adapt", action="store_true",
                     help="Phase-0a: re-standardise DESI scaled edge_length+density_contrast to "
                          "training N(0,1) (corrects the graph-scale domain shift).")
