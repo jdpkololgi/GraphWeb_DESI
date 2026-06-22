@@ -16,5 +16,6 @@ DEST="${CANONICAL_ROOT}/${RUN_NAME}"
 
 mkdir -p "$DEST"
 rsync -av --include='*.png' --include='*.pdf' --include='*.html' --include='*.svg' \
+  --include='*.gif' --include='*.mp4' \
   --exclude='*' "$SRC"/ "$DEST"/
 echo "Synced figures: $SRC -> $DEST"
