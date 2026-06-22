@@ -64,15 +64,22 @@ def main(args):
         P = np.stack([np.asarray(an[c]) for c in CLASS_ORDER], axis=1)
         h = P.argmax(axis=1)
         abacus_npe = {c: float(np.mean(h == k)) for k, c in enumerate(CLASS_ORDER)}
-    series = [("Abacus truth", truth, 0.4), ("Abacus NPE", abacus_npe, 0.62),
-              ("Regression DESI", reg, 0.82), ("NPE DESI", npe, 1.0)]
+    # --no-regression drops the off-message "Regression DESI" bars (SBI room) and
+    # re-spaces to 3 shades: Abacus truth / Abacus NPE / NPE DESI.
+    if getattr(args, "no_regression", False):
+        series = [("Abacus truth", truth, 0.45), ("Abacus NPE", abacus_npe, 0.7),
+                  ("DESI NPE", npe, 1.0)]
+    else:
+        series = [("Abacus truth", truth, 0.4), ("Abacus NPE", abacus_npe, 0.62),
+                  ("Regression DESI", reg, 0.82), ("DESI NPE", npe, 1.0)]
+    n_series = len(series)
     fig, ax = plt.subplots(figsize=(11, 6))
-    x = np.arange(4); w = 0.2
+    x = np.arange(4); w = 0.8 / n_series
     cols = [COSMIC_WEB_COLORS[c] for c in CLASS_ORDER]
     from matplotlib.patches import Patch
     for i, (lab, frac, alpha) in enumerate(series):
         vals = [float(frac.get(c, np.nan)) for c in CLASS_ORDER]
-        bars = ax.bar(x + (i - 1.5) * w, vals, w, color=cols, alpha=alpha, edgecolor="#F2F2F2", lw=0.7)
+        bars = ax.bar(x + (i - (n_series - 1) / 2) * w, vals, w, color=cols, alpha=alpha, edgecolor="#F2F2F2", lw=0.7)
         for b, v in zip(bars, vals):
             if np.isfinite(v):
                 ax.text(b.get_x() + b.get_width() / 2, v + 0.012, f"{v:.2f}", ha="center", va="bottom", fontsize=8)
@@ -84,6 +91,9 @@ def main(args):
     handles = [Patch(facecolor="#F2F2F2", edgecolor="#F2F2F2", alpha=a, label=lab) for (lab, _, a) in series]
     ax.legend(handles=handles, ncol=2, title="shade = method  (colour = class)")
     fig.savefig(out / "class_fractions_comparison.png", bbox_inches="tight"); plt.close(fig)
+    if getattr(args, "only_class_fractions", False):
+        print(f"[plot] class_fractions_comparison.png -> {out}", flush=True)
+        return
 
     # ---- 2. class sky map + soft P(filament) ----
     fig, axes = plt.subplots(1, 2, figsize=(15, 6))
@@ -298,6 +308,10 @@ if __name__ == "__main__":
     ap.add_argument("--abacus-self-npz", default=None,
                     help="abacus_self_flowjax_preds.npz (3-way eigenvalue dists + embedding PCA)")
     ap.add_argument("--output-dir", default=None)
+    ap.add_argument("--no-regression", action="store_true",
+                    help="class-fractions: drop the 'Regression DESI' bars (SBI-room version).")
+    ap.add_argument("--only-class-fractions", action="store_true",
+                    help="regenerate only class_fractions_comparison.png and exit.")
     ap.add_argument("--ra-min", type=float, default=120.0); ap.add_argument("--ra-max", type=float, default=160.0)
     ap.add_argument("--dec-min", type=float, default=14.5); ap.add_argument("--dec-max", type=float, default=30.6)
     ap.add_argument("--z-min", type=float, default=0.2); ap.add_argument("--z-max", type=float, default=0.3)
