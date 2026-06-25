@@ -195,8 +195,13 @@ def main(args):
             import umap
             import plotly.graph_objects as go
             n_um = args.umap_points
-            du = emb_desi[rng.choice(len(emb_desi), min(len(emb_desi), n_um), replace=False)]
-            hu = hard[rng.choice(len(emb_desi), min(len(emb_desi), n_um), replace=False)]
+            # ONE index for both the embeddings and their class labels — drawing two
+            # separate rng.choice subsets misaligns colours from points (=> classes
+            # appear scattered at random in UMAP while PCA, which shares index `sd`,
+            # looks fine).
+            di = rng.choice(len(emb_desi), min(len(emb_desi), n_um), replace=False)
+            du = emb_desi[di]
+            hu = hard[di]
             parts = [du]; labels = ["DESI"] * len(du)
             if emb_ab is not None:
                 au = emb_ab[rng.choice(len(emb_ab), min(len(emb_ab), n_um), replace=False)]

@@ -218,19 +218,31 @@ def fig_continuous(d, outdir: Path, xaxis: str):
     print(f"[plot] wrote {p}", flush=True)
 
 
-def fig_mass_control(d, outdir: Path):
-    """Fig C: quenched fraction vs environment in stellar-mass bins."""
-    mp = d["has_props"]
-    logm = d["LOGMSTAR"][mp]
-    m_edges = np.quantile(logm, [0, 1 / 3, 2 / 3, 1.0])
-    labels = [rf"$\log M_*\!\in[{m_edges[i]:.1f},{m_edges[i+1]:.1f})$" for i in range(3)]
+def fig_mass_control(d, outdir: Path, mass_edges):
+    """Fig C: quenched fraction vs environment in FIXED stellar-mass bins.
 
-    fig, axes = plt.subplots(1, 2, figsize=(15, 5.5))
+    Bins use fixed edges (default brackets the M*~10.5 quenching-transition mass with
+    edges at 10.4 / 10.6 rather than splitting ON it), so each bin holds mass roughly
+    constant and the lowest bin sits clearly BELOW the transition. If the environment
+    trend persists there — where intrinsic mass quenching is weak — mass quenching cannot
+    account for it, i.e. evidence of *environmental* quenching.
+    """
+    mp = d["has_props"]
+    edges = np.asarray(mass_edges, float)
+    nb = len(edges) - 1
+    colors = plt.cm.plasma(np.linspace(0.30, 0.92, nb))   # ordered (low->high mass), not class colours
+    labels = [rf"$\log M_*\,[{edges[j]:.1f},{edges[j+1]:.1f})$" for j in range(nb)]
+
+    def mass_mask(j):
+        up = edges[j + 1] + (1e-6 if j == nb - 1 else 0.0)  # include the top edge in the last bin
+        return mp & (d["LOGMSTAR"] >= edges[j]) & (d["LOGMSTAR"] < up)
+
+    fig, axes = plt.subplots(1, 2, figsize=(15, 5.6))
     hc = d["hard_class"]; xpos = np.arange(4)
 
     # left: categorical, one line per mass bin
-    for j in range(3):
-        mb = mp & (d["LOGMSTAR"] >= m_edges[j]) & (d["LOGMSTAR"] < (m_edges[j + 1] + (1e-6 if j == 2 else 0)))
+    for j in range(nb):
+        mb = mass_mask(j)
         ys, los, his = [], [], []
         for k in range(4):
             m = mb & (hc == k)
@@ -238,29 +250,34 @@ def fig_mass_control(d, outdir: Path):
             ys.append(p); los.append(lo); his.append(hi)
         ys, los, his = np.array(ys), np.array(los), np.array(his)
         axes[0].errorbar(xpos, ys, yerr=[np.maximum(0, ys - los), np.maximum(0, his - ys)],
-                         fmt="-o", color=ACCENT3[j], capsize=3, label=labels[j])
+                         fmt="-o", color=colors[j], capsize=3, label=labels[j])
     axes[0].set_xticks(xpos); axes[0].set_xticklabels([c.capitalize() for c in CLASS_ORDER])
     finalize_axes(axes[0], "Quenched fraction vs class, at fixed mass",
-                  "inferred class", r"$f_{\rm quenched}$", legend=True)
+                  "inferred class", r"$f_{\rm quenched}$", legend=False)
 
     # right: continuous, one line per mass bin
     x_all = d["trace_lambda"]
-    for j in range(3):
-        mb = mp & (d["LOGMSTAR"] >= m_edges[j]) & (d["LOGMSTAR"] < (m_edges[j + 1] + (1e-6 if j == 2 else 0)))
-        edges = quantile_edges(x_all[mb], nbins=6)
-        xc, p, lo, hi = binned_fraction(x_all[mb], d["quenched"][mb], edges)
-        axes[1].fill_between(xc, lo, hi, color=ACCENT3[j], alpha=0.18)
-        axes[1].plot(xc, p, "-o", color=ACCENT3[j], label=labels[j])
+    for j in range(nb):
+        mb = mass_mask(j)
+        ed = quantile_edges(x_all[mb], nbins=6)
+        xc, p, lo, hi = binned_fraction(x_all[mb], d["quenched"][mb], ed)
+        axes[1].fill_between(xc, lo, hi, color=colors[j], alpha=0.16)
+        axes[1].plot(xc, p, "-o", color=colors[j], label=labels[j])
     finalize_axes(axes[1], "Quenched fraction vs environment, at fixed mass",
                   r"$E[\,\lambda_1+\lambda_2+\lambda_3\,]$ ($\propto$ density)",
-                  r"$f_{\rm quenched}$", legend=True)
+                  r"$f_{\rm quenched}$", legend=False)
 
-    fig.suptitle("Mass control: the environment trend survives at fixed stellar mass",
-                 fontsize=15)
-    fig.tight_layout(rect=(0, 0, 1, 0.95))
+    # ONE shared legend (both panels use the same mass bins), in the top margin where
+    # there is no data — avoids the duplicated, data-covering per-panel legends.
+    handles, labels = axes[0].get_legend_handles_labels()
+    fig.legend(handles, labels, loc="lower center", bbox_to_anchor=(0.5, 0.82),
+               ncol=nb, frameon=False, fontsize=12, columnspacing=1.4, handletextpad=0.2)
+    fig.suptitle(r"Mass control: the environment trend survives at fixed $M_*$ — "
+                 r"including below the $M_*\!\approx\!10.5$ quenching transition", fontsize=13)
+    fig.tight_layout(rect=(0, 0, 1, 0.87))
     p = outdir / "closure_mass_control.png"
     fig.savefig(p, bbox_inches="tight"); plt.close(fig)
-    print(f"[plot] wrote {p}", flush=True)
+    print(f"[plot] wrote {p}  (mass edges {list(edges)})", flush=True)
 
 
 def load_table(path: Path):
@@ -283,6 +300,10 @@ def main():
                     help="Continuous environment axis for Fig B (default: trace).")
     ap.add_argument("--outdir", type=Path, default=None,
                     help="Figure dir (default: <table dir>/closure/).")
+    ap.add_argument("--mass-edges", type=float, nargs="+",
+                    default=[9.8, 10.4, 10.6, 11.0, 11.6],
+                    help="logM* bin edges for the mass-control figure. Default brackets the "
+                         "M*~10.5 quenching transition (edges 10.4/10.6, not 10.5).")
     args = ap.parse_args()
 
     sys.path.insert(0, str(_REPO))
@@ -300,7 +321,7 @@ def main():
 
     fig_categorical(d, outdir)
     fig_continuous(d, outdir, args.xaxis)
-    fig_mass_control(d, outdir)
+    fig_mass_control(d, outdir, args.mass_edges)
     print(f"[plot] done -> {outdir}", flush=True)
 
 
