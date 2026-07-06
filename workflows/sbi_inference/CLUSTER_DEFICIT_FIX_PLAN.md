@@ -1,5 +1,14 @@
 # Cluster-deficit fix plan — graph-scale / N(z) (drafted 2026-06-19)
 
+## Status note
+
+This file records the original investigation plan. Parts of Phase 0 and Route A
+have since landed under `workflows/sbi_inference/`: `infer_desi_wedge_flowjax.py`
+now exposes `--edge-domain-adapt`, `--node-domain-adapt`, and
+`--scale-invariant-features`. Treat the detailed flag names below as historical
+planning notes where they differ from the current CLI, and use
+`workflows/sbi_inference/README.md` plus `RUNBOOK.md` for current commands.
+
 ## Context (what we know)
 The wedge NPE (and the Jraph regression) under-predict **clusters** on real DESI
 (fraction ~0.027 vs Abacus truth ~0.058 at λ_th=0.2). Systematic falsification ruled

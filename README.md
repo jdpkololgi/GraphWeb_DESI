@@ -3,8 +3,9 @@
 GraphWeb_DESI contains DESI BGS graph workflows for cosmic-web inference. The
 original production path builds a DESI graph and applies a pretrained PyTorch GAT
 model from `TNG/Illustris` to infer four environment classes. Newer wedge work
-uses Gudhi/cuGraph graph features and an Abacus-trained Jraph regression model to
-predict T-Web eigenvalues on DESI sky cuts.
+uses Gudhi/cuGraph graph features with Abacus-trained models: a Jraph regression
+model for point estimates of T-Web eigenvalues, and a FlowJAX/SBI neural
+posterior estimator for per-galaxy eigenvalue posteriors on DESI sky cuts.
 
 ## Main entrypoint
 
@@ -44,6 +45,30 @@ Details and canonical Perlmutter paths live in
 The validated Jraph path uses comoving Mpc coordinates (`--coord-units mpc`,
 the graph-builder default) for Abacus training parity. Older Mpc/h wedge
 artifacts are deprecated; see `workflows/catalog/to-delete_README.md`.
+
+### C. FlowJAX/SBI Posterior Inference
+
+Use `workflows/sbi_inference/infer_desi_wedge_flowjax.py` when the science
+question needs uncertainty-aware T-Web posteriors rather than a deterministic
+regression label. This path consumes the same Mpc-parity DESI wedge graph arrays
+as the Jraph stack, loads the Abacus-trained FlowJAX/GNN model from the sibling
+Illustris repo (`ILLUSTRIS_ROOT`), and writes per-galaxy posterior means,
+posterior widths, class probabilities, and hard classes.
+
+Primary companion scripts:
+
+- `workflows/sbi_inference/plot_desi_wedge_flowjax.py` for truth-free DESI
+  diagnostics and comparison plots.
+- `workflows/sbi_inference/infer_abacus_self_flowjax.py` for Abacus self
+  inference references used in DESI-vs-Abacus overlays.
+- `workflows/sbi_inference/build_desi_wedge_property_join.py` and
+  `plot_property_environment_closure.py` for joining inferred environments to
+  LOA FastSpecFit galaxy properties.
+- `scripts/sync_figures_to_canonical.sh` for mirroring finished figures into the
+  canonical figure tree.
+
+See `workflows/sbi_inference/README.md` for the validated command sequence,
+model/cache constraints, and common failure modes.
 
 ## Quick start
 
@@ -125,6 +150,10 @@ Jraph inference loads model code from the Illustris training repo with
 `ILLUSTRIS_ROOT` instead. In the current NERSC layout this usually points to the
 same directory as `ILLUSTRIS_REPO_ROOT`.
 
+FlowJAX/SBI inference also uses `ILLUSTRIS_ROOT`; it must resolve before this
+repo's local `shared/` package so that the trained GNN encoder, FlowJAX helpers,
+and eigenvalue transforms match the Abacus training code.
+
 Example:
 
 ```bash
@@ -143,3 +172,11 @@ Cached artifacts (in `GRAPHWEB_CACHE_DIR`):
 - torch geometric data (`*_geom.pt`)
 - scaled features (`*_features.pt`)
 - zcat snapshot (`*_zcat.pt`)
+
+SBI/FlowJAX wedge outputs live under a run directory, usually
+`$GRAPHWEB_SCRATCH_ROOT/flowjax_inference_outputs/<run-name>/`:
+- `desi_wedge_flowjax_preds.npz` with `lambda_mean`, `lambda_std`,
+  `classprob`, `hard_class`, `p_exceed`, sky coordinates, and `global_node_id`.
+- `summary.json` with provenance, scaler constants, class fractions, and
+  ordering/consistency diagnostics.
+- Figure products from `plot_desi_wedge_flowjax.py` and the closure-test scripts.

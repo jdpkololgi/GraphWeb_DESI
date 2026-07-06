@@ -24,6 +24,16 @@ for launch commands see `RUNBOOK.md`.
   - Active DESI wedge inference: `workflows/jraph_inference/jraph_infer_desi_wedge_from_gnn_npz.py`
   - Legacy PyG-cache wedge builder: `workflows/jraph_inference/build_desi_wedge_jraph_cache.py`
   - Feature-parity experiment: `workflows/jraph_inference/experiment_desi_feature_parity.py`
+- FlowJAX/SBI posterior inference:
+  - DESI wedge NPE inference: `workflows/sbi_inference/infer_desi_wedge_flowjax.py`
+  - Abacus self-reference inference: `workflows/sbi_inference/infer_abacus_self_flowjax.py`
+  - DESI diagnostics/figures: `workflows/sbi_inference/plot_desi_wedge_flowjax.py`
+  - Property/environment join and closure plots:
+    `workflows/sbi_inference/build_desi_wedge_property_join.py`,
+    `workflows/sbi_inference/plot_property_environment_closure.py`
+  - Figure mirroring: `scripts/sync_figures_to_canonical.sh`
+  - Uses the same expanded Mpc-parity DESI wedge arrays as the Jraph path, but
+    outputs posterior eigenvalue samples, widths, and class probabilities.
 - Utility:
   - Canonical: `workflows/utilities/galaxy_catalog.py`
   - Canonical: `workflows/utilities/investigate_edges.py`
@@ -39,6 +49,10 @@ for launch commands see `RUNBOOK.md`.
 
 ## Experimental
 
+- Most scripts under `workflows/sbi_inference/` beyond the NPE inference,
+  plotting, Abacus self-reference, and property-join CLIs are diagnostic
+  experiments for domain shift, cluster recovery, smoothing, velocity
+  dispersion, or presentation assets.
 - Notebook-driven variants under this repo are exploratory unless explicitly promoted.
 
 ## Legacy/To retire
