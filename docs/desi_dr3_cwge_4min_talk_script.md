@@ -37,8 +37,11 @@ Consequences:
 no NPE/flow tutorial needed. They care about: what the environment measure IS,
 whether it's trustworthy on real BGS data, and what environmental science it enables.
 
-**Throughline:** *"A calibrated posterior over the tidal tensor for every BGS galaxy —
-and the known environmental trends fall straight out of it."*
+**Throughline:** *"A calibrated posterior over the tidal tensor for every galaxy
+in the trained DESI BGS wedge — and the known environmental trends fall straight
+out of it."* (SCOPE: wedge subvolume only — trained on the matched Abacus
+subvolume/z-shell; the full BGS footprint is out-of-distribution and would need
+retraining. Do NOT claim a whole-catalogue VAC.)
 
 **Budget:** 5 slides, ~45–55 s each. Numbers below are reconciled to the final
 figures (SI production run `desi_wedge_flowjax_linear_si`, closure join 2026-06-21,
@@ -62,80 +65,112 @@ science."
 
 ---
 
-### Slide 2 — What we infer, and why posteriors (0:15–1:00)
-**Title:** The T-web, but with uncertainties
+### Slide 2 — Dynamical definition → why posteriors (0:15–1:00)
+**Title:** Dynamical definition of environment (keeps "dynamical" from the title)
+**Hero visual = the collapse LADDER** (the draft-slide-28 ladder, kept — the
+arrows are physically correct: N eigenvalues above λ_th = collapse along N axes,
+Void 0 → Wall 1 → Filament 2 → Cluster 3; this is the Zel'dovich/tidal-web
+picture and is exactly why the target is "dynamical"). Skewer video REMOVED; the
+pivot line below does its discrete→continuous job.
+**Layout (equation + ladder + 3 short lines only — cut the 4 λ-inequality rows,
+the 4 side notes, and the eigenvalue histogram → backup):**
+- top corner, small: `T_ij = ∂²Φ/∂x_i∂x_j → λ₁ ≥ λ₂ ≥ λ₃`
+- anchor line over the ladder (caption for the arrows): "Each eigenvalue above
+  λ_th = one axis of gravitational collapse"
+- caption under the ladder: "λ_th = 'collapsed within a Hubble time' — 0
+  (Hahn+07) vs 0.44 (Forero-Romero+09): arbitrary"
+- pivot line at the bottom (replaces skewer video + 'discrete imperfect' notes):
+  "Real galaxies sit between the rungs → we infer the full posterior over
+  (λ₁,λ₂,λ₃), not a hard label"
 **Opening bridge line:** "You've just seen geometric and classification
 catalogues — here the target is the tidal tensor itself, per galaxy, as a
-posterior."
-**Bullets (max 3):**
-- Target = the 3 eigenvalues (λ₁, λ₂, λ₃) of the tidal tensor at each galaxy —
-  the *continuous* quantity behind every T-web classification
-- Hard V/W/F/C labels need an arbitrary λ_th (0 in Hahn+07, 0.44 in
-  Forero-Romero+09); a posterior over (λ₁,λ₂,λ₃) subsumes them all — thresholding
-  posterior samples gives calibrated class probabilities at *any* λ_th
-- Per-galaxy uncertainty: boundary galaxies get honestly broad posteriors instead
-  of a confident wrong label
-**Visual:** `desi_wedge_flowjax_linear_si/eigenvalue_corner_environments.png`
-(corner coloured by class regions), or a single skewer frame from the Cambridge
-deck if it reads better at a glance.
-**Say:** stress "your favourite threshold, with error bars" — that's the hook for
-this room. One clause on magnitude mattering physically (tidal-torque/IA couples
-to the tensor, not the class).
+posterior." (Tidal tensor = the same object Qingyang Li reconstructs — free nod.)
+**Say:** the ladder is the discrete picture; the pivot line is the whole talk in
+one sentence — thresholding posterior samples then gives calibrated class probs
+at *any* λ_th, with error bars. One clause on magnitude mattering physically
+(tidal-torque/IA couples to the tensor, not the class).
+**Physics caveat (for you, not the slide):** eigenvalue>0 = "collapses eventually"
+(linear theory); λ_th>0 = collapse completes within a Hubble time (the FR09
+justification). Keep arrows INSIDE each rung (collapse directions of that
+environment) — do NOT let a between-row arrow imply voids evolve into clusters;
+voids are a distinct (expanding) fate, not an early cluster stage.
 
 ---
 
-### Slide 3 — How: mock-trained, calibration-tested (1:00–1:50)
-**Title:** Trained on AbacusSummit BGS, calibrated before touching data
-**Pipeline strip (text/diagram, reuse Cambridge pipeline slide):**
+### Slide 3 — How: mock-trained, recovers the true distributions (1:00–1:50)
+**Title:** Trained on AbacusSummit BGS — recovers the true eigenvalue distributions
+**Pipeline strip on the RIGHT (text/diagram, reuse Cambridge pipeline slide):**
 AbacusSummit CutSky BGS mock (fiberassign + n(z)-matched to Loa) → Delaunay graph
 on observed redshift-space positions → GNN encoder → normalizing-flow posterior
 (NPE) per galaxy
 **Bullets:**
 - Trained purely on the mock (~100k-galaxy fiberassign wedge); applied to DESI
   with per-graph feature normalisation to absorb the mock-vs-data graph-scale shift
-- Calibration on held-out mock: TARP coverage within the Monte-Carlo noise floor
-  (max |ECP−α| = 0.015, N=3000) + flat SBC ranks
+- **Recovered eigenvalue distributions track the truth** (grey = Abacus truth,
+  blue = Abacus NPE, magenta = DESI NPE overlaid): the trained-vs-true agreement
+  is the "it works" evidence for THIS audience — skip TARP/SBC (right idea, wrong
+  room; they read distribution alignment, not coverage curves)
 - Zero-shot on DESI: class fractions land on the Abacus truth — V/W/F/C
   0.23/0.43/0.30/0.05 vs truth 0.27/0.41/0.26/0.06 — including the rare 5–6%
   cluster class
-**Visual:** `desi_wedge_flowjax_linear_si/class_fractions_comparison.png`
-(hero, right half) + small `tarp_linear.png` inset (or TARP to backup).
-**Say:** "We do not show you anything on data that wasn't calibration-tested on
-the mock first." One breath on per-graph normalisation ("the mock and the data
-disagree about absolute graph scale; the model sees only relative geometry").
+**Visual/layout:** pipeline diagram RIGHT, VERTICAL 3-row eigenvalue distribution
+LEFT — `desi_wedge_flowjax_linear_si/eig_dist_vertical_3way.pdf` (all three
+series; use `eig_dist_vertical_abacus_only.pdf` to hold DESI back until slide 4).
+Vector PDF, native 7.0×7.3 in, labels/ticks 25 pt — place at native size for
+25 pt on the slide; script `workflows/sbi_inference/plot_eig_dist_vertical.py`
+(edit FS to rescale). `class_fractions_comparison.png` can move to slide 4 or sit
+here small.
+**Say:** "the recovered eigenvalue distributions land on the truth — and transfer
+to DESI without retraining." One breath on per-graph normalisation ("the mock and
+the data disagree about absolute graph scale; the model sees only relative
+geometry"). TARP/SBC calibration stays in backup for anyone who asks.
 
 ---
 
 ### Slide 4 — On DESI: cosmic-web cartography + closure (1:50–3:00) — HERO
 **Title:** Applied to DESI Loa: the trends you know fall out of the inferred web
-**Visual:** `desi2026_spotlight/spotlight_cartography_closure.png` — single
-composite: Abacus training wedge (true T-web) → arrow → DESI BGS wedge
-(NPE-inferred) on top; quenched fraction / (g−r) / sSFR vs E[Σλ] closure panels
-below. This one figure IS the slide.
+**Visual:** `desi_wedge_cigale_hz/spotlight_cartography_closure.png` (CIGALE-HZ
+version — regen'd 2026-07-09) — single composite: Abacus training wedge (true
+T-web) | DESI BGS wedge (NPE-inferred) sky maps on top; quenched fraction / (g−r)
+/ sSFR vs E[Σλ] closure panels below. This one figure IS the slide.
 **Say:**
-- "111,000 BGS Bright galaxies in this Loa wedge, each with a posterior. Joined
-  to FastSpecFit at 99.7%."
+- "~111k BGS Bright galaxies in this Loa wedge, each with a posterior; ~100k with
+  CIGALE-HZ SED masses+SFRs (90% match) for the closure."
 - "Truth-free closure test: against the *inferred* environment, quenched fraction
-  rises 0.74→0.84 void→cluster, galaxies redden 0.78→0.91 in (g−r), median sSFR
-  drops half a dex — monotonic in class AND continuous in the tidal-tensor trace,
-  at N=111k significance."
+  rises 0.39→0.58 void→cluster, galaxies redden 0.78→0.91 in (g−r), median sSFR
+  falls −10.2→−11.6 (1.4 dex) — monotonic in class AND continuous in the
+  tidal-tensor trace (ρ_s = +0.11 / +0.14 / −0.14), at N≈100k significance."
 - Honest clause: "environment is inferred from positions, so a density–quenching
   correlation is partly expected — the point is the *T-web decomposition* carries
   the signal, with calibrated uncertainty."
 
 ---
 
-### Slide 5 — Not just mass + take-home (3:00–4:00)
-**Title:** It's not just stellar mass — and you can use this
-**Visual:** `desi_wedge_flowjax_linear_si_closure/closure_mass_control.png`
-(left panel is enough: f_quenched vs class in 4 log M* bins, all rising).
+### Slide 5 — Mass–colour by environment + take-home (3:00–4:00)
+**Title:** Blue cloud → red sequence, void → cluster — and you can use this
+**Visual (preferred):** `desi_wedge_cigale_hz/sfms_by_environment.png` — with the
+CIGALE-HZ SFRs the SFR–M* plane is now CLEANLY BIMODAL (blue cloud + red sequence
++ green-valley gap), and the blob balance visibly shifts star-forming→quenched
+Void→Cluster (the FastSpecFit version smeared this out). `mstar_gr_by_environment.png`
+(2×2 M*–(g−r) contours) is the alt: Void bimodal, blue lobe shrinks to a single
+red-sequence peak by Cluster. Median (g−r) rises 0.780→0.825→0.868→0.907; median
+log M* (CIGALE) 10.72→10.77→10.81→10.85.
+**Alt visuals:** `desi_wedge_cigale_hz/{sfms_all,mstar_gr_all_bimodal}.png` (whole-
+wedge classic bimodality), `mstar_gr_overlay.png` (class-coloured contours),
+`sfms_eigen_continuous.png` (SFR–M* coloured by mean λ). Scripts
+`plot_sfms_environment.py`, `plot_mstar_color_environment.py` (both take
+`WEDGE_PARQUET`/`WEDGE_FIGDIR`); properties = CIGALE-HZ re-join `desi_wedge_cigale_hz`.
+**Data note:** full wedge N=111,503 (110,251 unique); ~100,679 (90%) have CIGALE-HZ
+SFR/mass. The ~22k figure = the thin 3° Dec fan slice, NOT the whole wedge.
 **Bullets:**
-- The environment trend survives at fixed M*: quenched fraction rises
-  void→cluster within *every* stellar-mass bin (e.g. 0.88→0.94 for
-  log M* > 11) — not a re-derivation of the mass–environment relation
-- Deliverable: per-galaxy (λ₁,λ₂,λ₃) posteriors + class probabilities for BGS —
-  wedge today, footprint-scalable (amortised: inference is a forward pass) —
-  planned as a VAC
+- The colour bimodality shifts blue→red with environment — the red/quenched
+  population grows void→wall→filament→cluster (consistent with the closure trend,
+  shown here as the full mass–colour distribution not just a fraction)
+- Deliverable: per-galaxy (λ₁,λ₂,λ₃) posteriors + class probabilities **within
+  the trained wedge** (RA 120–160°, z 0.20–0.30). These relations are validated
+  for wedge galaxies only — the model is trained on the matched Abacus subvolume,
+  so the full BGS footprint (lower z, different n(z)) is OUT of distribution and
+  would need RETRAINING on footprint-spanning mocks. Not a whole-catalogue VAC yet.
 - Use cases for this room: environmental quenching at fixed mass, IA/spin–tidal
   alignment (the tensor, not the class), void catalogues with membership
   probabilities, threshold-free comparisons between web-finders
@@ -198,9 +233,15 @@ There is NO per-talk Q&A: 10 min consolidated Q&A across all 7 speakers (expect
 6. **Graph construction sensitivity?** Delaunay on both training and inference
    sides (no mismatch); alpha-complex tried and worse. Edge features are
    pairwise geometry; per-graph normalisation removes absolute-scale dependence.
-7. **When/where can I get the labels?** Wedge catalogue (parquet: TARGETID,
-   posterior summaries, class probabilities) exists now; footprint runs are
-   amortised (no retraining) — VAC intended. (Adjust promise level to comfort.)
+7. **When/where can I get the labels? / Can you run the whole BGS catalogue?**
+   Wedge catalogue (parquet: TARGETID, posterior summaries, class probabilities)
+   exists NOW for the trained subvolume (RA 120–160°, z 0.20–0.30). It is NOT a
+   whole-footprint VAC: the model is trained on the matched Abacus subvolume, so
+   the rest of BGS (lower z, different n(z)/density regime) is out-of-distribution
+   — a full-catalogue VAC needs RETRAINING on footprint-spanning mocks (amortised
+   inference makes *running* cheap, but does not license extrapolation off the
+   training volume). Honest framing: a validated wedge demonstrator + a clear path
+   to the VAC, not the VAC itself yet.
 8. **Is the closure circular?** Partly by construction for *density*; the
    non-trivial content is (a) the T-web class decomposition ordering, (b)
    survival at fixed M*, (c) calibrated widths — a mislabeled or miscalibrated
@@ -215,6 +256,53 @@ There is NO per-talk Q&A: 10 min consolidated Q&A across all 7 speakers (expect
 - `desi_wedge_flowjax_linear_si/posterior_width_sky_map.png`, `class_sky_map.png`
 - `desi2026_spotlight/closure_{quenched,gr,ssfr}.png` (single-panel closure, if a
   question wants one metric big)
+
+## Deck review v3 (2026-07-07, vs ASTRA deck; draft slides 26–32)
+
+**What ASTRA's deck does right (emulate):** one idea per slide; one big visual
+per slide with almost no competing text; a "wow" full-bleed fan plot with zero
+words; coloured keyword highlighting instead of dense bullets; citations as tiny
+footnotes. Their content is *thinner* than ours — the polish is layout economy.
+
+**Slide-by-slide on the current draft:**
+- **27 (wedge video):** drop the video. Playback risk + it eats ~20 s of
+  attention for one message. Replace with the static **fan pair** (new
+  `fan/fan_abacus_truth` + `fan/fan_desi_inferred`, generation in progress):
+  trained-on (truth) → applied-to (inferred), full-bleed, legend only. This
+  becomes the deck's wow slide AND absorbs slide 30's sky-map panel.
+- **28 (dynamical definition):** REVISED — KEEP the collapse ladder (it's
+  physically correct and is the "dynamical" hook; see Slide 2 above for the
+  decluttered layout). The clutter to cut is the FOUR λ-inequality text rows, the
+  FOUR side notes, and the eigenvalue histogram — NOT the ladder/arrows. Reduce to
+  equation + ladder + anchor line + λ_th caption + pivot line. Skewer video
+  removed; the pivot line carries discrete→continuous.
+- **29 (How / train on Abacus):** keep the pipeline graphic; delete the three
+  eigenvalue histograms (calibration detail → backup). One proof line: "TARP
+  coverage at the MC noise floor before touching data". Check wording "HOD
+  mocks" — the production training set is the CutSky fiberassign+n(z)-matched
+  wedge; say what's true.
+- **30 (Inference on DESI):** currently ~4 visuals (sky map, repeated GraphNET
+  diagram, fractions inset, histograms). One message: zero-shot transfer,
+  fractions land on truth. Hero = `class_fractions_comparison.png` alone; the
+  sky map moves to the fan slide; never repeat the pipeline diagram.
+- **31 (closure):** right content. Use `closure_strip.png` (or the categorical
+  version) + the LEFT panel of `closure_mass_control.png` — "and it's not just
+  mass" is the beat this audience scores you on.
+- **32 (summary):** fine at 3 bullets; availability line must be SCOPED — "wedge
+  demonstrator now; full-footprint VAC needs retraining on footprint-spanning
+  mocks," NOT "whole-catalogue VAC." Don't imply the model runs on all of BGS.
+
+**Net structure (5 content slides):** title → fan pair (trained→applied) →
+lean definition/why-posteriors → method+calibration+fractions → closure+mass →
+summary. Matches the v2 timing plan above; the fan pair replaces both videos.
+
+**Fan-plot technique (for reference):** matplotlib polar axes — theta = RA
+(deg→rad) with `set_thetamin/thetamax` clipped to the wedge so it renders as a
+partial fan, r = z (or comoving distance, tick-labelled in z), thin ~2–4° Dec
+slice so structure stays filamentary, tiny points, class colours on black.
+DESI's famous slice visuals (Claire Lamman) are exactly this construction;
+`desiutil.plots` covers all-sky projections but not fans — plain matplotlib is
+the tool. Script + settings will live in `figures/desi2026_spotlight/fan/`.
 
 ## Timing notes
 - Hard cut discipline: slides 4–5 are the payload for this room; if running long,
