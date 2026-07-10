@@ -6,6 +6,7 @@ Guidance for Claude Code / automation agents working in this repository.
 ## Start here
 
 - `~/TNG/Illustris/SCIENCE_LOG.md` — **read first**: current scientific direction, open threads, and recent decisions shared between Desktop and NERSC agents. Lives in the Illustris repo; pull before reading.
+- `CONTEXT.md` — durable GraphWeb_DESI context. If it conflicts with the shared Illustris science log, follow the science log.
 - `README.md` — repository orientation.
 - `ACTIVE_WORKFLOWS.md` — current canonical entrypoints and their status.
 - `RUNBOOK.md` — validated launch commands and environment setup.
