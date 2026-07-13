@@ -24,6 +24,16 @@ for launch commands see `RUNBOOK.md`.
   - Active DESI wedge inference: `workflows/jraph_inference/jraph_infer_desi_wedge_from_gnn_npz.py`
   - Legacy PyG-cache wedge builder: `workflows/jraph_inference/build_desi_wedge_jraph_cache.py`
   - Feature-parity experiment: `workflows/jraph_inference/experiment_desi_feature_parity.py`
+- FlowJAX/SBI posterior inference:
+  - DESI wedge NPE inference: `workflows/sbi_inference/infer_desi_wedge_flowjax.py`
+  - Abacus self-inference reference: `workflows/sbi_inference/infer_abacus_self_flowjax.py`
+  - DESI posterior diagnostics: `workflows/sbi_inference/plot_desi_wedge_flowjax.py`
+  - Property-closure join and figures:
+    `workflows/sbi_inference/build_desi_wedge_property_join.py`,
+    `workflows/sbi_inference/plot_property_environment_closure.py`
+  - Workflow README: `workflows/sbi_inference/README.md`
+  - Uses Mpc-parity DESI wedge arrays, path1 fiberassign Abacus edge-scaler
+    arrays, and `ILLUSTRIS_ROOT` for the Illustris FlowJAX model code.
 - Utility:
   - Canonical: `workflows/utilities/galaxy_catalog.py`
   - Canonical: `workflows/utilities/investigate_edges.py`

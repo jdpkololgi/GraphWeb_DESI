@@ -3,8 +3,8 @@
 GraphWeb_DESI contains DESI BGS graph workflows for cosmic-web inference. The
 original production path builds a DESI graph and applies a pretrained PyTorch GAT
 model from `TNG/Illustris` to infer four environment classes. Newer wedge work
-uses Gudhi/cuGraph graph features and an Abacus-trained Jraph regression model to
-predict T-Web eigenvalues on DESI sky cuts.
+uses Gudhi/cuGraph graph features with Abacus-trained Jraph regression and
+FlowJAX/SBI posterior models to predict T-Web eigenvalues on DESI sky cuts.
 
 ## Main entrypoint
 
@@ -44,6 +44,25 @@ Details and canonical Perlmutter paths live in
 The validated Jraph path uses comoving Mpc coordinates (`--coord-units mpc`,
 the graph-builder default) for Abacus training parity. Older Mpc/h wedge
 artifacts are deprecated; see `workflows/catalog/to-delete_README.md`.
+
+### C. FlowJAX/SBI Posterior Inference
+
+Use `workflows/sbi_inference/infer_desi_wedge_flowjax.py` when the desired
+DESI product is a per-galaxy posterior over ordered T-Web eigenvalues rather
+than a point estimate. This path consumes the same Mpc-parity DESI wedge GNN
+arrays as the Jraph workflow, applies Abacus-parity node/edge transforms, and
+loads the Illustris FlowJAX NPE via `ILLUSTRIS_ROOT`.
+
+Key follow-up tools in `workflows/sbi_inference/`:
+
+- `plot_desi_wedge_flowjax.py` for truth-free DESI posterior diagnostics.
+- `infer_abacus_self_flowjax.py` for Abacus NPE reference predictions.
+- `build_desi_wedge_property_join.py` and
+  `plot_property_environment_closure.py` for FastSpecFit property-closure
+  checks.
+
+See `workflows/sbi_inference/README.md` for commands, parity constraints,
+domain-adaptation flags, and common pitfalls.
 
 ## Quick start
 
@@ -124,6 +143,9 @@ env vars for the GAT classification stack include:
 Jraph inference loads model code from the Illustris training repo with
 `ILLUSTRIS_ROOT` instead. In the current NERSC layout this usually points to the
 same directory as `ILLUSTRIS_REPO_ROOT`.
+
+FlowJAX/SBI inference also uses `ILLUSTRIS_ROOT` and writes run products under
+`$GRAPHWEB_SCRATCH_ROOT/flowjax_inference_outputs` by default.
 
 Example:
 
