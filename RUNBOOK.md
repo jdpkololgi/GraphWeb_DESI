@@ -144,14 +144,14 @@ Validated Perlmutter launcher:
 bash workflows/sbi_inference/run_infer_desi_wedge_flowjax.sh
 ```
 
-Manual command shape:
+Manual baseline command shape:
 
 ```bash
 export ILLUSTRIS_ROOT=/global/homes/d/dkololgi/TNG/Illustris
 source workflows/catalog/JRAPH_INPUTS_expanded_wedge.txt
 
 FLOWJAX_RUN=/pscratch/sd/d/dkololgi/abacus/sbi_runs/path1_wedge_flowjax_3d_Bcorrected_linear
-MODEL=${FLOWJAX_RUN}/flowjax_sbi_model_seed_42_<timestamp>.pkl
+MODEL="${FLOWJAX_RUN}/flowjax_sbi_model_seed_42_YYYYMMDD_HHMMSS.pkl"
 CACHE=/pscratch/sd/d/dkololgi/abacus/sbi_caches/path1_flowjax_3d_lineareig/processed_jraph_data_mc1e+09_v2_scaled_3_linear_eig.pkl
 PATH1_EDGE_ARRAYS=/pscratch/sd/d/dkololgi/abacus/graph_constructions/wedges/path1_fiberassign/path1_fiberassign_mock_bgs_maglim_rs7_wedge_ra120_160_dec14p5_30p6_z0p2_0p3_cugraph_gnn_arrays.npz
 
@@ -166,13 +166,14 @@ python -u workflows/sbi_inference/infer_desi_wedge_flowjax.py \
   --num-posterior-samples 128 \
   --lambda-threshold 0.2 \
   --output-dir /pscratch/sd/d/dkololgi/graphweb_desi/flowjax_inference_outputs \
-  --run-name desi_wedge_flowjax_linear_si \
-  --scale-invariant-features
+  --run-name desi_wedge_flowjax_linear
 ```
 
-`--scale-invariant-features` must match a scale-invariant training cache and
-model. For transfer diagnostics only, the script also exposes
-`--edge-domain-adapt` and `--node-domain-adapt`.
+For the scale-invariant production run, replace `MODEL` and `CACHE` with the
+matching scale-invariant training artifacts, set
+`--run-name desi_wedge_flowjax_linear_si`, and add
+`--scale-invariant-features`. For transfer diagnostics only, the script also
+exposes `--edge-domain-adapt` and `--node-domain-adapt`.
 
 Generate DESI diagnostics after inference:
 
