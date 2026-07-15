@@ -37,6 +37,25 @@ def main():
 
     os.environ["LSSCODE"] = args.lsscode
     sys.path.insert(0, f"{args.lsscode}/LSS/py")
+
+    # setuptools>=81 REMOVED the deprecated pkg_resources, but DESI_ke's smith_kcorr.py and
+    # findfile.py still `from pkg_resources import resource_filename`. It is a DEAD import there
+    # (the only call site, findfile.py:104, is commented out), so a minimal shim satisfies it
+    # without patching the shared read-only LSS checkout or polluting the DESI environment.
+    import types, importlib.util
+    if "pkg_resources" not in sys.modules:
+        _shim = types.ModuleType("pkg_resources")
+
+        def _resource_filename(package, resource):        # functional, in case it is ever called
+            spec = importlib.util.find_spec(package)
+            base = (os.path.dirname(spec.origin) if spec and spec.origin
+                    else os.environ.get("CODE_ROOT", "."))
+            return os.path.join(base, resource)
+
+        _shim.resource_filename = _resource_filename
+        sys.modules["pkg_resources"] = _shim
+        print("shimmed pkg_resources (setuptools>=81 removed it; DESI_ke still imports it)")
+
     import numpy as np
     import fitsio
     from astropy.table import Table
