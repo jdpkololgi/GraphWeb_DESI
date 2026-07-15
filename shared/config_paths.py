@@ -33,9 +33,24 @@ GRAPHWEB_VAC_OUTPUT_PATH = _env(
     "GRAPHWEB_VAC_OUTPUT_PATH",
     f"{GRAPHWEB_OUTPUT_DIR}/DESI_BGS_PRERELEASE_VAC.pkl",
 )
+# Catalogs live on pscratch (moved off the home quota 2026-07-15; home hit 100% and broke writes).
+# NOTE: the old default pointed at {GRAPHWEB_REPO_ROOT}/loa-combined-lowz.fits, which was already
+# stale (the files had been under data/). Canonical home is now GRAPHWEB_CATALOG_DIR on pscratch.
+GRAPHWEB_CATALOG_DIR = _env(
+    "GRAPHWEB_CATALOG_DIR",
+    f"{GRAPHWEB_SCRATCH_ROOT}/catalogs",
+)
 GRAPHWEB_CATALOG_PATH = _env(
     "GRAPHWEB_CATALOG_PATH",
-    f"{GRAPHWEB_REPO_ROOT}/loa-combined-lowz.fits",
+    f"{GRAPHWEB_CATALOG_DIR}/loa-combined-lowz.fits",
+)
+GRAPHWEB_CATALOG_ZFLAGS_PATH = _env(
+    "GRAPHWEB_CATALOG_ZFLAGS_PATH",
+    f"{GRAPHWEB_CATALOG_DIR}/loa-combined-lowz-zflags.fits",
+)
+GRAPHWEB_CATALOG_FASTSPEC_PATH = _env(
+    "GRAPHWEB_CATALOG_FASTSPEC_PATH",
+    f"{GRAPHWEB_CATALOG_DIR}/loa-combined-lowz-fastspec-phot.fits",
 )
 
 # Canonical pscratch layout (opt-in via env vars in current migration stage)

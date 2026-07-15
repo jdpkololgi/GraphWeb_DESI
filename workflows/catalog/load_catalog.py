@@ -200,7 +200,9 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--specprod", default="loa")
     parser.add_argument("--z-min", type=float, default=0.01)
     parser.add_argument("--z-max", type=float, default=0.06)
-    parser.add_argument("--out-dir", default=".")
+    # Catalogs live on pscratch, not in the repo/home (home hit its 40 GiB quota 2026-07-15).
+    parser.add_argument("--out-dir", default=os.environ.get(
+        "GRAPHWEB_CATALOG_DIR", "/pscratch/sd/d/dkololgi/graphweb_desi/catalogs"))
     parser.add_argument("--verbose", action="store_true")
     return parser.parse_args()
 

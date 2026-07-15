@@ -61,6 +61,14 @@ node; everything else uses `cosmic_env` (see `~/.claude/CLAUDE.md` and
    - Selects galaxies with 0.01 ≤ z ≤ 0.06, SPECTYPE=GALAXY
    - Joins with redshift flags and Legacy Survey photometry
    - Outputs: `loa-combined-lowz.fits`, `loa-combined-lowz-zflags.fits`, `loa-combined-lowz-fastspec-phot.fits`
+   - **Location (moved 2026-07-15):** these live on pscratch at
+     `/pscratch/sd/d/dkololgi/graphweb_desi/catalogs/` — NOT in the repo. Home hit its 40 GiB quota
+     (100%) and broke writes/commits, so ~1 GB of catalogs was moved off. Resolve paths via
+     `shared/config_paths.py`: `GRAPHWEB_CATALOG_DIR`, `GRAPHWEB_CATALOG_PATH`,
+     `GRAPHWEB_CATALOG_ZFLAGS_PATH`, `GRAPHWEB_CATALOG_FASTSPEC_PATH` (all env-overridable).
+     Do not re-add large data under the repo/home.
+   - Note: this low-z product covers **z ≈ 0.01–0.06 only** — it does NOT overlap the GraphWeb-BGS
+     VAC range (0.15–0.55), so it cannot supply M_abs/ABSMAG for that work.
 
 2. **Galaxy Catalog Processing** (`workflows/utilities/galaxy_catalog.py`)
    - `GalaxyCatalog` class: loads FITS files, filters by ZWARN, DELTACHI2, LOGMSTAR, BGS_TARGET
