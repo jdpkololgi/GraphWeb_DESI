@@ -30,9 +30,12 @@ def main():
     ap.add_argument("--lsscode", default=os.environ.get("LSSCODE", DEFAULT_LSSCODE))
     ap.add_argument("--wedge", default=WEDGE)
     ap.add_argument("--full", default=FULL)
-    ap.add_argument("--out", default="/pscratch/sd/d/dkololgi/graphweb_desi/catalogs/bgs_wedge_absmag_rp1.fits")
+    ap.add_argument("--out", default="/pscratch/sd/d/dkololgi/graphweb_desi/catalogs/bgs_absmag_rp1_gate_sub.fits")
     ap.add_argument("--zlo", type=float, default=0.15)
     ap.add_argument("--zhi", type=float, default=0.55)
+    ap.add_argument("--max-rows", dest="max_rows", type=int, default=400_000,
+                    help="subsample size for the support gate (0 = all rows; all 8.7M takes ~4h)")
+    ap.add_argument("--seed", type=int, default=42)
     args = ap.parse_args()
 
     os.environ["LSSCODE"] = args.lsscode
@@ -87,6 +90,19 @@ def main():
     good = (dat["flux_g_dered"] > 0) & (dat["flux_r_dered"] > 0) & (dat["Z"] > 0)
     dat = dat[good]
     print(f"after positive-flux cut: {len(dat):,}")
+
+    # add_ke is row-independent (per-galaxy k-corr + e-corr + distance modulus), so restricting to the
+    # VAC z-range and subsampling BEFORE it is exactly equivalent for the rows kept -- and necessary:
+    # its single-threaded rest_gmr solve measured ~15%/36min over all 8.7M rows (~4h), far past the
+    # interactive wall. This gate is a DISTRIBUTIONAL support comparison, so a few 1e5 rows pin the
+    # median to ~0.002 mag -- ample. Deployment over the full catalogue is a separate, longer run.
+    dat = dat[(dat["Z"] >= args.zlo) & (dat["Z"] < args.zhi)]
+    print(f"after z[{args.zlo},{args.zhi}) cut: {len(dat):,}")
+    if args.max_rows and len(dat) > args.max_rows:
+        pick = np.random.default_rng(args.seed).choice(len(dat), args.max_rows, replace=False)
+        dat = dat[np.sort(pick)]
+        print(f"subsampled for support gate: {len(dat):,} rows (seed {args.seed})")
+
     dat = add_ke(dat, zcol="Z")                          # -> ABSMAG_RP1/RP0, REST_GMR_0P1, KCORR_*
     dat["G_R_OBS"] = (22.5 - 2.5*np.log10(dat["flux_g_dered"])) - (22.5 - 2.5*np.log10(dat["flux_r_dered"]))
     dat.write(args.out, overwrite=True)
