@@ -125,6 +125,57 @@ the basename as `--run-name`. Jraph inference uses `ILLUSTRIS_ROOT` to find
 `shared/graph_net_models.py`; the GAT classifier uses `ILLUSTRIS_REPO_ROOT` from
 `shared/config_paths.py`.
 
+### DESI absolute-magnitude support diagnostic (experimental)
+
+`workflows/sbi_inference/desi_absmag_kcorr.py` evaluates whether a luminosity
+feature is worth further parity work. It joins BGS photometry by `TARGETID`,
+calls the official DESI LSS `add_dered_flux` and `add_ke` implementations, and
+writes k+e-corrected `ABSMAG_RP1`. It then prints marginal magnitude and colour
+statistics beside a fixed raw Abacus cut-sky sample.
+
+Run this in the DESI environment, not `cosmic_env`:
+
+```bash
+source /global/common/software/desi/desi_environment.sh main
+
+python workflows/sbi_inference/desi_absmag_kcorr.py \
+  --wedge /pscratch/sd/d/dkololgi/graphweb_desi/catalogs/bgs_maglim_bright_galaxy_zwarn0_dchi2ge25.fits \
+  --full /global/cfs/cdirs/desi/survey/catalogs/DA2/LSS/loa-v1/LSScats/v2.1/BGS_BRIGHT_full.dat.fits \
+  --out /pscratch/sd/d/dkololgi/graphweb_desi/catalogs/bgs_absmag_rp1_gate_sub.fits \
+  --zlo 0.15 --zhi 0.55 \
+  --max-rows 400000 --seed 42
+```
+
+The `--lsscode` checkout must contain both `LSS/py/LSS` and `DESI_ke`; its
+default is the complete shared NERSC checkout used when this workflow was
+developed. The input named `--wedge` must provide `TARGETID`, `Z`,
+`TARGET_RA`, and `TARGET_DEC`; `--full` supplies `FLUX_G`, `FLUX_R`, and the
+corresponding Milky Way transmissions. The current script does not apply an
+RA/Dec cut to the DESI input despite the historical option name.
+
+Operational constraints:
+
+- The default 400,000-row sample is selected reproducibly after the positive
+  flux and half-open `zlo <= Z < zhi` cuts. `--max-rows 0` processes every
+  selected row; the 8.7-million-row parent was projected to take about four
+  hours in the single-threaded `add_ke` solve.
+- The output is a support-study subsample, not a deployment catalogue.
+- The FITS output is written before the Abacus comparison runs. A later
+  comparison failure does not invalidate the k+e columns, but it does mean the
+  diagnostic did not complete.
+- The Abacus path and its fixed sky/magnitude selection are currently
+  hard-coded. There is no CLI pass threshold or nonzero exit status for a
+  support mismatch.
+
+Interpret the printed offsets as exploratory diagnostics only. The present
+comparison uses different DESI and Abacus footprints and unmatched redshift
+distributions, and it does not prove that DESI `ABSMAG_RP1` and Abacus
+`R_MAG_ABS` share the same band, reference-redshift, distance-modulus, and
+evolution-correction conventions. Before adding luminosity to production
+inference, compare the exact training and inference selections in redshift
+bins (or with matched `n(z)`), establish the magnitude convention explicitly,
+and define quantitative acceptance thresholds.
+
 ### Utility workflows
 
 Canonical:

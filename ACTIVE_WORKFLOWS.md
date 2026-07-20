@@ -40,6 +40,13 @@ for launch commands see `RUNBOOK.md`.
 ## Experimental
 
 - Notebook-driven variants under this repo are exploratory unless explicitly promoted.
+- Candidate luminosity-channel support diagnostic:
+  - `workflows/sbi_inference/desi_absmag_kcorr.py`
+  - Computes DESI `ABSMAG_RP1` with the DESI LSS k+e implementation and prints
+    a marginal comparison with a raw Abacus cut-sky sample.
+  - This is not a production pass/fail gate: the current DESI and Abacus
+    selections, redshift distributions, and magnitude conventions are not
+    matched. See `RUNBOOK.md` before interpreting its output.
 
 ## Legacy/To retire
 
