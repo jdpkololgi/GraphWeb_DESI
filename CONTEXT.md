@@ -41,6 +41,17 @@ products, not the fundamental inference target.
 - TARP/SBC validate the model inside the Abacus domain; DESI closure tests are
   the necessary truth-free observational check.
 
+Operational entrypoints in this repo (see `ACTIVE_WORKFLOWS.md` / `RUNBOOK.md`):
+
+- GAT VAC-style classification: `workflows/graph_inference/graph_catalog.py`
+- Jraph wedge point regression:
+  `workflows/jraph_inference/jraph_infer_desi_wedge_from_gnn_npz.py`
+- FlowJAX/SBI wedge posteriors: `workflows/sbi_inference/`
+  (README there is the detailed parity/runbook companion)
+
+Low-z GAT catalogs live on pscratch via `GRAPHWEB_CATALOG_*` in
+`shared/config_paths.py`; do not reintroduce large FITS products under home.
+
 ## Active scientific direction
 
 The Illustris-side priority is field-level, physics-grounded inference:
