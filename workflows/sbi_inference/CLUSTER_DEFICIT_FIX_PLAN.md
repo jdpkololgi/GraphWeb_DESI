@@ -22,10 +22,11 @@ Goal: prove (or kill) graph-scale as the *cause* before spending days. Two tests
 cheapest first; success metric = **DESI cluster fraction moves toward 0.058** and the
 edge-scale offset shrinks.
 
-**0a. Inference-time edge-scale correction (~30 min, 1×A100).**
-Add a `--edge-scale-shift` option to `infer_desi_wedge_flowjax.py`: after
-`prepare_edges_for_jraph_forward`, add +0.111 to the scaled edge_length column (col 0)
-so DESI's mean matches training (0.0). Re-run inference with the EXISTING linear model.
+**0a. Inference-time edge-domain correction (~30 min, 1×A100).**
+Run `infer_desi_wedge_flowjax.py` with the implemented `--edge-domain-adapt`
+option. After `prepare_edges_for_jraph_forward`, it re-standardizes DESI's
+scaled edge-length and density-contrast columns to training-like zero mean and
+unit variance. Re-run inference with the EXISTING linear model.
 - If clusters recover → the −0.11σ edge shift is the cause and the fix is a trivial
   inference-time domain correction (no mock rebuild at all). Best case.
 - Rebuild the diagnostics (`plot_lambda_th_sweep`, `eigenvalue_corner`,
