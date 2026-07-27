@@ -9,7 +9,8 @@ for launch commands see `RUNBOOK.md`.
 - Low-z catalog assembly for the GAT classifier:
   - Canonical: `workflows/catalog/load_catalog.py`
   - Compatibility shim: `load_catalog.py`
-- Bright BGS catalog assembly for Gudhi/Jraph:
+  - Writes to `GRAPHWEB_CATALOG_DIR` on pscratch by default (not the repo/home).
+- Bright BGS catalog assembly for Gudhi/Jraph/SBI:
   - Canonical: `workflows/catalog/build_bgs_maglim_catalog.py`
   - Produces the magnitude-limited FITS table used by the full-graph Gudhi stack.
 - GAT graph inference pipeline:
@@ -19,11 +20,21 @@ for launch commands see `RUNBOOK.md`.
   - Full graph: `workflows/graph_construction/build_desi_bgs_gudhi_graph.py`
   - Feature export: `workflows/graph_construction/desi_graph_features_cugraph.py`
   - Wedge subset: `workflows/graph_construction/subset_desi_graph_wedge.py`
-  - Use Mpc coordinates (`--coord-units mpc`, default) for Abacus/Jraph parity.
+  - Use Mpc coordinates (`--coord-units mpc`, default) for Abacus/Jraph/SBI parity.
 - Jraph inference:
   - Active DESI wedge inference: `workflows/jraph_inference/jraph_infer_desi_wedge_from_gnn_npz.py`
   - Legacy PyG-cache wedge builder: `workflows/jraph_inference/build_desi_wedge_jraph_cache.py`
   - Feature-parity experiment: `workflows/jraph_inference/experiment_desi_feature_parity.py`
+- FlowJAX/SBI posterior inference:
+  - DESI wedge NPE inference: `workflows/sbi_inference/infer_desi_wedge_flowjax.py`
+  - Abacus self-inference reference: `workflows/sbi_inference/infer_abacus_self_flowjax.py`
+  - DESI posterior diagnostics: `workflows/sbi_inference/plot_desi_wedge_flowjax.py`
+  - Property-closure join/plots:
+    `workflows/sbi_inference/build_desi_wedge_property_join.py`,
+    `workflows/sbi_inference/plot_property_environment_closure.py`
+  - Workflow README: `workflows/sbi_inference/README.md`
+  - Requires the same Mpc-parity DESI wedge products, path1 Abacus edge-scaler
+    arrays, and `ILLUSTRIS_ROOT` for the Illustris FlowJAX model code.
 - Utility:
   - Canonical: `workflows/utilities/galaxy_catalog.py`
   - Canonical: `workflows/utilities/investigate_edges.py`
@@ -40,6 +51,16 @@ for launch commands see `RUNBOOK.md`.
 ## Experimental
 
 - Notebook-driven variants under this repo are exploratory unless explicitly promoted.
+- Candidate luminosity-channel support diagnostic:
+  - `workflows/sbi_inference/desi_absmag_kcorr.py`
+  - Computes DESI `ABSMAG_RP1` with the DESI LSS k+e implementation and prints
+    a marginal comparison with a raw Abacus cut-sky sample.
+  - This is not a production pass/fail gate: the current DESI and Abacus
+    selections, redshift distributions, and magnitude conventions are not
+    matched. See `RUNBOOK.md` before interpreting its output.
+- Additional SBI investigation scripts under `workflows/sbi_inference/`
+  (coverage, FoG, velocity dispersion, smoothing-scale, mass-anchored recovery,
+  skewer animations, etc.) are research diagnostics, not canonical launch paths.
 
 ## Legacy/To retire
 
