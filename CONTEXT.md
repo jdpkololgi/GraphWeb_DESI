@@ -37,9 +37,24 @@ products, not the fundamental inference target.
 - Approximately 112,755 galaxies have zero-shot eigenvalue inference with a
   roughly 99.7% TARGETID match to FastSpecFit.
 - Environmental closure tests use observables such as quenched fraction and
-  sSFR at controlled stellar mass.
+  sSFR at controlled stellar mass; CIGALE-HZ rejoin is an optional property
+  swap for those plots when FastSpecFit SFRs are unsuitable.
+- Abacus-domain transfer gates (GNN vs GBM capacity, RSD/luminosity aperture
+  features, mock–DESI n(z)) live under `workflows/sbi_inference/` and inform
+  feature work — they are not DESI VAC acceptance criteria.
 - TARP/SBC validate the model inside the Abacus domain; DESI closure tests are
   the necessary truth-free observational check.
+
+Operational entrypoints in this repo (see `ACTIVE_WORKFLOWS.md` / `RUNBOOK.md`):
+
+- GAT VAC-style classification: `workflows/graph_inference/graph_catalog.py`
+- Jraph wedge point regression:
+  `workflows/jraph_inference/jraph_infer_desi_wedge_from_gnn_npz.py`
+- FlowJAX/SBI wedge posteriors: `workflows/sbi_inference/`
+  (README there is the detailed parity/runbook companion)
+
+Low-z GAT catalogs live on pscratch via `GRAPHWEB_CATALOG_*` in
+`shared/config_paths.py`; do not reintroduce large FITS products under home.
 
 ## Active scientific direction
 
