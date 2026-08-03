@@ -222,6 +222,11 @@ Mirror final top-level figures into the canonical figure root:
 scripts/sync_figures_to_canonical.sh "${RUN_DIR}" desi_wedge_flowjax_linear_si
 ```
 
+Optional property-science path (CIGALE-HZ mass/SFR swap + SFMS / M*–colour /
+mass-controlled figures) and Abacus-domain transfer gates (G1, G1.5/G2, n(z))
+are documented in `workflows/sbi_inference/README.md`. They are not part of the
+canonical inference launcher.
+
 ### DESI absolute-magnitude support diagnostic (experimental)
 
 `workflows/sbi_inference/desi_absmag_kcorr.py` evaluates whether a luminosity
@@ -306,6 +311,9 @@ python investigate_edges.py --help
 | `desi_absmag_kcorr.py` `pkg_resources` ImportError | Use the repo script (it shims `pkg_resources`); or pin setuptools `<81` only if you must call DESI_ke outside this wrapper. |
 | `add_ke` never finishes in interactive QOS | Keep the default `--max-rows 400000` z-cut subsample; full-catalogue k+e is a separate long job. |
 | Figures missing after sync | `sync_figures_to_canonical.sh` only mirrors top-level media files. |
+| Property plots still show FastSpecFit SFRs | Repoint `WEDGE_PARQUET` to the CIGALE-HZ parquet from `build_cigale_rejoin.py`. |
+| `plot_env_mass_continuous.py` cannot import `plot_style` | Script hard-codes the NERSC Illustris home path; other plot scripts use `ILLUSTRIS_ROOT`. |
+| Gate G1 assert fails | SI self-eval npz test rows / truth must match the SI training cache masks. |
 
 ## Notes
 

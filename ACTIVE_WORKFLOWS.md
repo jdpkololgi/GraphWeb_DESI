@@ -58,6 +58,14 @@ for launch commands see `RUNBOOK.md`.
   - This is not a production pass/fail gate: the current DESI and Abacus
     selections, redshift distributions, and magnitude conventions are not
     matched. See `RUNBOOK.md` before interpreting its output.
+- Transfer / capacity gates (Abacus-domain; see `workflows/sbi_inference/README.md`):
+  - `gate_g1_gnn_vs_gbm.py` — GNN vs HistGBM on identical SI features.
+  - `gate_g15_g2_rsd_luminosity.py` — RSD penalty and luminosity-weight gain.
+  - `measure_nz_mock_vs_desi.py` — path1 mock vs DESI BGS n(z) in a shared sky box.
+- Property-science follow-ups (env vars `WEDGE_PARQUET` / `WEDGE_FIGDIR`):
+  - `build_cigale_rejoin.py` — swap CIGALE-HZ mass/SFR onto SI wedge posteriors.
+  - `plot_sfms_environment.py`, `plot_mstar_color_environment.py`,
+    `plot_env_mass_continuous.py`, `investigate_env_property_signal.py`.
 - Additional SBI investigation scripts under `workflows/sbi_inference/`
   (coverage, FoG, velocity dispersion, smoothing-scale, mass-anchored recovery,
   skewer animations, etc.) are research diagnostics, not canonical launch paths.

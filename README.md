@@ -62,6 +62,10 @@ Key follow-up tools in `workflows/sbi_inference/`:
   checks.
 - `desi_absmag_kcorr.py` for an experimental luminosity-support diagnostic
   (DESI environment; not a production gate).
+- `build_cigale_rejoin.py` plus SFMS / M*–colour / mass-controlled plotters for
+  property-science figures; `gate_g1_gnn_vs_gbm.py`,
+  `gate_g15_g2_rsd_luminosity.py`, and `measure_nz_mock_vs_desi.py` for
+  Abacus-domain transfer diagnostics.
 
 See `workflows/sbi_inference/README.md` for commands, parity constraints,
 domain-adaptation flags, and common pitfalls. Launch recipes also live in

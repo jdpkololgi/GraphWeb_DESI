@@ -228,6 +228,115 @@ python workflows/sbi_inference/plot_property_environment_closure.py \
 Expected qualitative closure: quenched fraction and rest-frame `g-r` increase
 toward denser inferred environments, while median log sSFR decreases.
 
+### CIGALE property swap (Approach A)
+
+If FastSpecFit SFRs look pathological for science plots, re-join CIGALE-HZ
+stellar mass and SFR onto the **existing** SI wedge posteriors without
+re-running inference:
+
+```bash
+python workflows/sbi_inference/build_cigale_rejoin.py
+```
+
+Hard-coded defaults (edit the script if paths move):
+
+- input: SI FastSpecFit join parquet under `desi_wedge_flowjax_linear_si/`
+- CIGALE catalogue on CFS (`CG_15` fiducial; `CG_5` kept for provenance)
+- output: `.../desi_wedge_cigale_hz/desi_wedge_env_props.parquet`
+
+The output keeps the same column schema as the FastSpecFit join so downstream
+plot scripts can be repointed via `WEDGE_PARQUET` / `WEDGE_FIGDIR`. Coverage is
+~90% of wedge galaxies in the goodPhoto CIGALE catalogue. Environment
+inference (graph, posteriors, DELTACHI2>=25 parity) is unchanged.
+
+### Property-science figures
+
+These scripts are CPU-only, take no CLI flags, and read/write via env vars
+(defaults shown):
+
+```bash
+export WEDGE_PARQUET=/pscratch/sd/d/dkololgi/graphweb_desi/flowjax_inference_outputs/desi_wedge_cigale_hz/desi_wedge_env_props.parquet
+export WEDGE_FIGDIR=/pscratch/sd/d/dkololgi/graphweb_desi/figures/desi_wedge_cigale_hz
+export ILLUSTRIS_ROOT=/global/homes/d/dkololgi/TNG/Illustris
+
+python workflows/sbi_inference/plot_sfms_environment.py
+python workflows/sbi_inference/plot_mstar_color_environment.py
+python workflows/sbi_inference/plot_env_mass_continuous.py
+python workflows/sbi_inference/investigate_env_property_signal.py
+```
+
+Intent:
+
+- `plot_sfms_environment.py`: SFR–M* hexbins by inferred class and continuous
+  λ colouring (MS / green-valley / red-sequence bands).
+- `plot_mstar_color_environment.py`: M* vs `(g-r)` KDE contours by class.
+- `plot_env_mass_continuous.py`: mass-controlled quenched / sSFR / colour
+  surfaces and an animated mass slider (defaults to the CIGALE-HZ parquet).
+- `investigate_env_property_signal.py`: decompose weak env↔property signal into
+  inference noise vs local-density physics (kNN density contrast, mass tertiles,
+  Abacus self-eval accuracy, posterior-width checks). Hard-coded to the
+  CIGALE-HZ parquet + SI Abacus self-eval npz.
+
+Note: `plot_env_mass_continuous.py` currently inserts a hard-coded Illustris
+path for `shared.plot_style` rather than `ILLUSTRIS_ROOT`; set that path if you
+run off the usual NERSC home layout. Prefer `ILLUSTRIS_ROOT` for the other
+scripts.
+
+Talk-deck helper: `plot_eig_dist_vertical.py` is a tall 3-row λ overlay sized
+for Keynote (native figsize, no `bbox_inches=tight`).
+
+## Transfer / capacity gates (experimental)
+
+Roadmap Track 1/2 diagnostics. They guide feature and selection work; they are
+not production inference gates and do not replace DESI closure figures.
+
+### G1 — GNN vs GBM on identical features
+
+```bash
+python workflows/sbi_inference/gate_g1_gnn_vs_gbm.py \
+  --cache "${CACHE}" \
+  --self-eval-npz /pscratch/sd/d/dkololgi/graphweb_desi/flowjax_inference_outputs/abacus_self_linear_si/abacus_self_flowjax_preds.npz \
+  --lambda-th 0.2
+```
+
+Trains `HistGradientBoostingRegressor` on the SI cache train split and scores
+the same test rows as the Abacus self-eval npz. Adopt capacity / message-passing
+work if `R²_GNN(λ₁) − R²_GBM(λ₁) > ~0.03`; otherwise the hand-crafted feature
+set is likely information-limited. Asserts test-row and truth alignment between
+cache and npz.
+
+### G1.5 / G2 — RSD penalty and luminosity weighting
+
+```bash
+python workflows/sbi_inference/gate_g15_g2_rsd_luminosity.py \
+  --ra 120 160 --dec 14.5 30.6 --zr 0.2 0.3 \
+  --target-n 120000 --apertures-hmpc 3 7 10 14 \
+  --lambda-th 0.2 --mass-log-th 13.0 --folds 5 --seed 42
+```
+
+Builds aperture features on one downsampled BGS-like Abacus cutsky sample in a
+`{z-space, real-space} × {count, count+luminosity}` grid. Reports:
+
+- **G1.5** RSD penalty ≈ `R²(real, count) − R²(z, count)` (upper bound on
+  LOS-aware gains for this feature family);
+- **G2** luminosity gain ≈ `R²(z, count+lum) − R²(z, count)` (GO if `>~0.03`).
+
+Master cutsky path is hard-coded; needs `Z` and `Z_COSMO`, `R_MAG_ABS`, and
+rs7 `LAMBDA1` truth. CPU only.
+
+### A2 — mock vs DESI n(z)
+
+```bash
+python workflows/sbi_inference/measure_nz_mock_vs_desi.py \
+  --ra 120 160 --dec 14.5 30.6 \
+  --zmin 0.05 --zmax 0.55 --dz 0.01 \
+  --out-dir /pscratch/sd/d/dkololgi/abacus/nz_comparison_YYYYMMDD
+```
+
+Same RA/Dec box for path1 mock parent and DESI BGS bright catalogue so shell
+counts share solid angle. Explicitly counts and excludes mock sentinel phantoms
+near `z ≈ 0.59` before writing the per-shell table, figure, and JSON.
+
 ## Figure publishing
 
 During active runs, keep run directories as the source of truth. Mirror final
@@ -254,6 +363,11 @@ when the environment variable is unset.
   production needs an edited command with matching SI artifacts.
 - `SFR <= 0` is treated as quenched in closure fractions and excluded from median
   sSFR panels.
+- CIGALE and FastSpecFit property tables must not be mixed in one figure set
+  without noting `sfr_source`; repoint `WEDGE_PARQUET` explicitly.
+- Gate scripts (G1 / G1.5 / G2 / n(z)) hard-code Abacus/DESI paths and are
+  Abacus-domain diagnostics — do not treat their GO/NO-GO prints as DESI VAC
+  acceptance.
 - `scripts/sync_figures_to_canonical.sh` syncs only top-level matching image /
   video / HTML files from the source directory (`rsync --exclude='*'`); nested
   artifacts need a separate sync command.
