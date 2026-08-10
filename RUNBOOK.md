@@ -143,6 +143,48 @@ the basename as `--run-name`. Jraph inference uses `ILLUSTRIS_ROOT` to find
 `shared/graph_net_models.py`; the GAT classifier uses `ILLUSTRIS_REPO_ROOT` from
 `shared/config_paths.py`.
 
+Validated one-liner after the expanded Mpc wedge products exist:
+
+```bash
+bash workflows/catalog/run_infer_expanded_wedge_mpc.sh
+```
+
+That wrapper sources `JRAPH_INPUTS_expanded_wedge.txt`, forces `cosmic_env`
+Python with a clean `PYTHONPATH`, sets `JAX_PLATFORMS=cpu`, and writes under
+`/pscratch/sd/d/dkololgi/graphweb_desi/inference_outputs/${INFER_RUN_NAME}`.
+
+#### Perlmutter Slurm chain (graph → features → wedge)
+
+`workflows/catalog/sbatch_desi_bgs_bright_pipeline.sh` is the compute-node
+launcher for the Gudhi / cuGraph / wedge stages (never run those on login).
+Stages:
+
+| `STEP` | Role | Env / hardware |
+| --- | --- | --- |
+| `2` (default) | Full Gudhi graph (`build_desi_bgs_gudhi_graph.py`) | `cosmic_env`, CPU, long walltime |
+| `2b` | cuGraph GNN feature export | `rapids-gnn`, GPU |
+| `3` | RA/Dec/z wedge subset | `cosmic_env`, CPU |
+
+Chain from login (lightweight submit only):
+
+```bash
+SUBMIT_CHAIN=1 bash workflows/catalog/sbatch_desi_bgs_bright_pipeline.sh
+```
+
+Or submit stages explicitly with dependencies (see the script header for the
+full `sbatch` flags). Logs land under
+`/pscratch/sd/d/dkololgi/graphweb_desi/logs/desi_bgs_bright_pipeline/`.
+
+**Important path caveat:** the checked-in launcher still hard-codes the older
+narrow bright-wedge directory names and sky cut
+(`gudhi_hemi_full_alphasq_inf_seed42_bright`, RA 120–140 / Dec 16.5–26.7 /
+z 0.25–0.3, no `_mpc` suffix). Graph build uses the script default
+`--coord-units mpc`, but those output paths are **not** the validated expanded
+Mpc products in `JRAPH_INPUTS_expanded_wedge.txt`. For Abacus-parity Jraph/SBI
+work, prefer the expanded-wedge commands in this runbook (or edit the launcher
+paths/`--ra-*`/`--dec-*`/`--z-*` before submitting). Step `2b` still requires
+the `rapids-gnn` GPU env regardless of which wedge geometry you choose.
+
 ### FlowJAX/SBI DESI wedge posterior inference
 
 This path runs an Abacus-trained FlowJAX neural posterior estimator on the DESI
@@ -314,6 +356,8 @@ python investigate_edges.py --help
 | Property plots still show FastSpecFit SFRs | Repoint `WEDGE_PARQUET` to the CIGALE-HZ parquet from `build_cigale_rejoin.py`. |
 | `plot_env_mass_continuous.py` cannot import `plot_style` | Script hard-codes the NERSC Illustris home path; other plot scripts use `ILLUSTRIS_ROOT`. |
 | Gate G1 assert fails | SI self-eval npz test rows / truth must match the SI training cache masks. |
+| Slurm graph products do not match `JRAPH_INPUTS_expanded_wedge.txt` | `sbatch_desi_bgs_bright_pipeline.sh` still targets the older narrow wedge dirs/sky cut; retarget or use the expanded-wedge runbook commands. |
+| Cluster-deficit diagnostic scripts read the wrong run | Many FoG/coverage/shape helpers hard-code baseline `desi_wedge_flowjax_linear` paths — retarget before comparing to SI production. |
 
 ## Notes
 

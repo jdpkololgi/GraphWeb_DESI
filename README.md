@@ -68,8 +68,9 @@ Key follow-up tools in `workflows/sbi_inference/`:
   Abacus-domain transfer diagnostics.
 
 See `workflows/sbi_inference/README.md` for commands, parity constraints,
-domain-adaptation flags, and common pitfalls. Launch recipes also live in
-`RUNBOOK.md`.
+domain-adaptation flags, cluster-deficit diagnostic index, and common pitfalls.
+Launch recipes also live in `RUNBOOK.md` (including the Perlmutter Slurm chain
+for Gudhi/cuGraph/wedge stages and the expanded-wedge Jraph wrapper).
 
 ## Quick start
 

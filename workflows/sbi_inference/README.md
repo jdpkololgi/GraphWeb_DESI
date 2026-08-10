@@ -189,11 +189,38 @@ Common products include:
 
 For the cluster-deficit transfer story, see:
 
-- `CLUSTER_DEFICIT_FIX_PLAN.md`;
-- `plot_edge_scale.py`;
-- `plot_cluster_recovery_bars.py`;
-- `plot_eigenvalue_corner.py`;
-- `plot_eig_dist_buildup.py`.
+- `CLUSTER_DEFICIT_FIX_PLAN.md` (decision tree: Phase 0 domain correction →
+  Route A scale-invariant features → optional mock densification);
+- `plot_edge_scale.py` / `plot_cluster_recovery_bars.py` (graph-scale offset and
+  recovery summary);
+- `plot_eigenvalue_corner.py` / `plot_eig_dist_buildup.py` (λ joint structure).
+
+### Cluster-deficit falsification index
+
+These scripts recorded the June 2026 falsification of FoG / under-density /
+training-extrapolation / dense-structure-shape as the *sole* cause of the DESI
+cluster deficit. Most are CPU-only, take few or no CLI flags, and still
+hard-code the **baseline** `desi_wedge_flowjax_linear` (or matching Abacus
+self-eval) paths — retarget before comparing against SI production runs.
+
+| Script | Intent |
+| --- | --- |
+| `plot_fog_los_alignment.py` | FoG test: major inertia eigenvector vs LOS (`\|cos θ\|`) on DESI vs Abacus. |
+| `plot_training_coverage.py` | Baseline box-cox support: DESI vs Abacus train p99.9 / max per node feature. |
+| `desi_abacus_coverage_report.py` | Same idea in **SI** model-input space (per-graph-median cols + cache PowerTransformer). CLI: `--si-cache`, `--desi-gnn-arrays`, `--preds-npz`. |
+| `plot_shape_misclassification.py` | Dense-galaxy cluster rate vs local anisotropy; Oaxaca-style gap split. |
+| `mmd_misspecification_check.py` | Unbiased RBF MMD² on GNN embeddings vs Abacus split-half floor. CLI: `--abacus-npz`, `--desi-npz`. |
+| `plot_lambda_th_sweep.py` | Class fractions vs `λ_th` for Abacus truth / Abacus NPE / DESI NPE (+ Plotly morph). |
+| `build_skewer_animation.py` | LOS pencil-beam animation from real NPE posterior samples (`--theta-deg` default 0.6). |
+| `build_skewer_idealised.py` / `render_skewer_video.py` / `render_class3d_video.py` | Idealised / rendered talk visuals (not inference). |
+
+Related longer investigations (also non-canonical; often hard-coded Abacus
+cutsky or CompaSO paths): `velocity_dispersion_*.py`,
+`smoothing_scale_investigation.py`, `plot_smoothing_scale_study.py`,
+`cluster_recovery_vs_smoothing.py`, `mass_anchored_cluster_test.py`,
+`plot_mass_anchored_recovery.py`, `property_ceiling_ablation.py`,
+`threshold_limit_investigation.py`, `probe_halo_mass_join.py`. Use them when
+reproducing a specific SCIENCE_LOG note, not as weekly launch defaults.
 
 ## Luminosity support diagnostic (experimental)
 
@@ -368,6 +395,8 @@ when the environment variable is unset.
 - Gate scripts (G1 / G1.5 / G2 / n(z)) hard-code Abacus/DESI paths and are
   Abacus-domain diagnostics — do not treat their GO/NO-GO prints as DESI VAC
   acceptance.
+- Cluster-deficit falsification helpers often hard-code baseline
+  `desi_wedge_flowjax_linear` products; retarget before SI comparisons.
 - `scripts/sync_figures_to_canonical.sh` syncs only top-level matching image /
   video / HTML files from the source directory (`rsync --exclude='*'`); nested
   artifacts need a separate sync command.
