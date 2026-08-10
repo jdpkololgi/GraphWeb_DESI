@@ -3,8 +3,8 @@
 GraphWeb_DESI contains DESI BGS graph workflows for cosmic-web inference. The
 original production path builds a DESI graph and applies a pretrained PyTorch GAT
 model from `TNG/Illustris` to infer four environment classes. Newer wedge work
-uses Gudhi/cuGraph graph features and an Abacus-trained Jraph regression model to
-predict T-Web eigenvalues on DESI sky cuts.
+uses Gudhi/cuGraph graph features with Abacus-trained Jraph regression and
+FlowJAX/SBI posterior models to predict T-Web eigenvalues on DESI sky cuts.
 
 ## Main entrypoint
 
@@ -44,6 +44,33 @@ Details and canonical Perlmutter paths live in
 The validated Jraph path uses comoving Mpc coordinates (`--coord-units mpc`,
 the graph-builder default) for Abacus training parity. Older Mpc/h wedge
 artifacts are deprecated; see `workflows/catalog/to-delete_README.md`.
+
+### C. FlowJAX/SBI Posterior Inference
+
+Use `workflows/sbi_inference/infer_desi_wedge_flowjax.py` when the desired
+DESI product is a per-galaxy posterior over ordered T-Web eigenvalues rather
+than a point estimate. This path consumes the same Mpc-parity DESI wedge GNN
+arrays as the Jraph workflow, applies Abacus-parity node/edge transforms, and
+loads the Illustris FlowJAX NPE via `ILLUSTRIS_ROOT`.
+
+Key follow-up tools in `workflows/sbi_inference/`:
+
+- `plot_desi_wedge_flowjax.py` for truth-free DESI posterior diagnostics.
+- `infer_abacus_self_flowjax.py` for Abacus NPE reference predictions.
+- `build_desi_wedge_property_join.py` and
+  `plot_property_environment_closure.py` for FastSpecFit property-closure
+  checks.
+- `desi_absmag_kcorr.py` for an experimental luminosity-support diagnostic
+  (DESI environment; not a production gate).
+- `build_cigale_rejoin.py` plus SFMS / M*–colour / mass-controlled plotters for
+  property-science figures; `gate_g1_gnn_vs_gbm.py`,
+  `gate_g15_g2_rsd_luminosity.py`, and `measure_nz_mock_vs_desi.py` for
+  Abacus-domain transfer diagnostics.
+
+See `workflows/sbi_inference/README.md` for commands, parity constraints,
+domain-adaptation flags, cluster-deficit diagnostic index, and common pitfalls.
+Launch recipes also live in `RUNBOOK.md` (including the Perlmutter Slurm chain
+for Gudhi/cuGraph/wedge stages and the expanded-wedge Jraph wrapper).
 
 ## Quick start
 
@@ -116,19 +143,22 @@ env vars for the GAT classification stack include:
 
 - `GRAPHWEB_CACHE_DIR`
 - `GRAPHWEB_VAC_OUTPUT_PATH`
+- `GRAPHWEB_CATALOG_DIR` / `GRAPHWEB_CATALOG_PATH` (low-z FITS on pscratch)
 - `ILLUSTRIS_REPO_ROOT`
 - `ILLUSTRIS_GAT_MODEL_PATH`
 - `ILLUSTRIS_SCALER_PATH`
 - `TNG_REFERENCE_CATALOG_PATH`
 
-Jraph inference loads model code from the Illustris training repo with
-`ILLUSTRIS_ROOT` instead. In the current NERSC layout this usually points to the
-same directory as `ILLUSTRIS_REPO_ROOT`.
+Jraph and FlowJAX/SBI inference load model code from the Illustris training repo
+with `ILLUSTRIS_ROOT` instead. In the current NERSC layout this usually points to
+the same directory as `ILLUSTRIS_REPO_ROOT`. FlowJAX run products typically land
+under `/pscratch/sd/d/dkololgi/graphweb_desi/flowjax_inference_outputs/`.
 
 Example:
 
 ```bash
 export GRAPHWEB_CACHE_DIR=/pscratch/sd/d/dkololgi/graphweb_desi/cache
+export GRAPHWEB_CATALOG_DIR=/pscratch/sd/d/dkololgi/graphweb_desi/catalogs
 export GRAPHWEB_VAC_OUTPUT_PATH=/pscratch/sd/d/dkololgi/graphweb_desi/outputs/DESI_BGS_PRERELEASE_VAC.pkl
 python graph_catalog.py --cache-mode prefer-cache
 ```
