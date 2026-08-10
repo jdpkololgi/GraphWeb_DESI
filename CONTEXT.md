@@ -50,8 +50,11 @@ Operational entrypoints in this repo (see `ACTIVE_WORKFLOWS.md` / `RUNBOOK.md`):
 - GAT VAC-style classification: `workflows/graph_inference/graph_catalog.py`
 - Jraph wedge point regression:
   `workflows/jraph_inference/jraph_infer_desi_wedge_from_gnn_npz.py`
+  (expanded-wedge wrapper: `workflows/catalog/run_infer_expanded_wedge_mpc.sh`)
 - FlowJAX/SBI wedge posteriors: `workflows/sbi_inference/`
   (README there is the detailed parity/runbook companion)
+- Gudhi/cuGraph Slurm stages: `workflows/catalog/sbatch_desi_bgs_bright_pipeline.sh`
+  (retarget before treating outputs as the expanded Mpc-parity wedge)
 
 Low-z GAT catalogs live on pscratch via `GRAPHWEB_CATALOG_*` in
 `shared/config_paths.py`; do not reintroduce large FITS products under home.

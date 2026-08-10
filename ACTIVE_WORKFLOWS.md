@@ -21,8 +21,13 @@ for launch commands see `RUNBOOK.md`.
   - Feature export: `workflows/graph_construction/desi_graph_features_cugraph.py`
   - Wedge subset: `workflows/graph_construction/subset_desi_graph_wedge.py`
   - Use Mpc coordinates (`--coord-units mpc`, default) for Abacus/Jraph/SBI parity.
+  - Perlmutter Slurm wrapper: `workflows/catalog/sbatch_desi_bgs_bright_pipeline.sh`
+    (`STEP=2|2b|3`, or `SUBMIT_CHAIN=1`). Still hard-codes the older narrow
+    wedge dirs/sky cut — see `RUNBOOK.md` before treating its outputs as the
+    expanded Mpc-parity products.
 - Jraph inference:
   - Active DESI wedge inference: `workflows/jraph_inference/jraph_infer_desi_wedge_from_gnn_npz.py`
+  - Expanded-wedge launcher: `workflows/catalog/run_infer_expanded_wedge_mpc.sh`
   - Legacy PyG-cache wedge builder: `workflows/jraph_inference/build_desi_wedge_jraph_cache.py`
   - Feature-parity experiment: `workflows/jraph_inference/experiment_desi_feature_parity.py`
 - FlowJAX/SBI posterior inference:
@@ -66,9 +71,13 @@ for launch commands see `RUNBOOK.md`.
   - `build_cigale_rejoin.py` — swap CIGALE-HZ mass/SFR onto SI wedge posteriors.
   - `plot_sfms_environment.py`, `plot_mstar_color_environment.py`,
     `plot_env_mass_continuous.py`, `investigate_env_property_signal.py`.
-- Additional SBI investigation scripts under `workflows/sbi_inference/`
-  (coverage, FoG, velocity dispersion, smoothing-scale, mass-anchored recovery,
-  skewer animations, etc.) are research diagnostics, not canonical launch paths.
+- Cluster-deficit falsification / transfer diagnostics (indexed in
+  `workflows/sbi_inference/README.md`, plan in `CLUSTER_DEFICIT_FIX_PLAN.md`):
+  FoG LOS alignment, training-support / SI coverage, shape misclassification,
+  embedding MMD, λ_th sweep, edge-scale / recovery bars, skewer animations, plus
+  velocity-dispersion / smoothing-scale / mass-anchored investigations. These
+  are research diagnostics, not canonical launch paths; many hard-code baseline
+  run directories.
 
 ## Legacy/To retire
 
