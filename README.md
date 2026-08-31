@@ -93,9 +93,9 @@ Other GAT-stack entrypoints follow the same pattern:
 
 Default behavior:
 - graph type: `alpha`
-- cache mode: `rebuild`
-- writes VAC to `GRAPHWEB_VAC_OUTPUT_PATH` (from config)
-- shows a summary histogram plot
+- cache mode: `rebuild` (writes under `{repo}/cache` unless `GRAPHWEB_CACHE_DIR` is set)
+- writes VAC to `GRAPHWEB_VAC_OUTPUT_PATH` (repo-root pickle unless overridden)
+- shows a summary histogram plot (TNG300 catalog is still loaded if you pass `--no-summary-plot`)
 
 ## Common run modes
 
@@ -128,7 +128,8 @@ python graph_catalog.py --no-summary-plot
 Key options:
 - `--graph-type {alpha,delaunay}`
 - `--cache-mode {rebuild,prefer-cache,cache-only}`
-- `--first-moment-matching`
+- `--first-moment-matching` — apply the Illustris training scaler, then still
+  subtract DESI column means (omitted from the `--help` fast-exit usage line)
 - `--cache-dir <path>`
 - `--model-path <path>`
 - `--scaler-path <path>`
@@ -141,8 +142,11 @@ Key options:
 Defaults come from `shared/config_paths.py` (shim: `config_paths.py`). Useful
 env vars for the GAT classification stack include:
 
-- `GRAPHWEB_CACHE_DIR`
-- `GRAPHWEB_VAC_OUTPUT_PATH`
+- `GRAPHWEB_CACHE_DIR` — **defaults to `{repo}/cache`**, not pscratch
+- `GRAPHWEB_VAC_OUTPUT_PATH` — **defaults to `{repo}/DESI_BGS_PRERELEASE_VAC.pkl`**
+- `GRAPHWEB_CANONICAL_CACHE_DIR` / `GRAPHWEB_CANONICAL_OUTPUT_DIR` — pscratch
+  layout targets; GAT inference does not read them unless you copy the values
+  into `GRAPHWEB_CACHE_DIR` / `--cache-dir`
 - `GRAPHWEB_CATALOG_DIR` / `GRAPHWEB_CATALOG_PATH` (low-z FITS on pscratch)
 - `ILLUSTRIS_REPO_ROOT`
 - `ILLUSTRIS_GAT_MODEL_PATH`

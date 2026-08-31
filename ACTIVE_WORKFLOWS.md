@@ -16,6 +16,9 @@ for launch commands see `RUNBOOK.md`.
 - GAT graph inference pipeline:
   - Canonical: `workflows/graph_inference/graph_catalog.py`
   - Compatibility shim: `graph_catalog.py`
+  - Cache/VAC still default to the **repo**, not `GRAPHWEB_CANONICAL_CACHE_DIR`.
+    Point `GRAPHWEB_CACHE_DIR` / `GRAPHWEB_VAC_OUTPUT_PATH` at pscratch before
+    `rebuild`. `--no-summary-plot` still loads TNG300. See `RUNBOOK.md`.
 - Gudhi/cuGraph graph construction:
   - Full graph: `workflows/graph_construction/build_desi_bgs_gudhi_graph.py`
   - Feature export: `workflows/graph_construction/desi_graph_features_cugraph.py`
@@ -28,8 +31,10 @@ for launch commands see `RUNBOOK.md`.
 - Jraph inference:
   - Active DESI wedge inference: `workflows/jraph_inference/jraph_infer_desi_wedge_from_gnn_npz.py`
   - Expanded-wedge launcher: `workflows/catalog/run_infer_expanded_wedge_mpc.sh`
-  - Legacy PyG-cache wedge builder: `workflows/jraph_inference/build_desi_wedge_jraph_cache.py`
-  - Feature-parity experiment: `workflows/jraph_inference/experiment_desi_feature_parity.py`
+  - Requires Abacus `node_feature_scaler` + 15-d increment reconstruction; see
+    `RUNBOOK.md` / `workflows/catalog/BUILD_JRAPH_CACHES.md`.
+  - Legacy GAT-Delaunay pickle builder (not production):
+    `workflows/jraph_inference/build_desi_wedge_jraph_cache.py`
 - FlowJAX/SBI posterior inference:
   - DESI wedge NPE inference: `workflows/sbi_inference/infer_desi_wedge_flowjax.py`
   - Abacus self-inference reference: `workflows/sbi_inference/infer_abacus_self_flowjax.py`
@@ -47,10 +52,18 @@ for launch commands see `RUNBOOK.md`.
 - Shared helpers:
   - Config paths: `shared/config_paths.py` (shim: `config_paths.py`)
   - Abacus/Jraph coordinate and edge-feature parity: `shared/abacus_gnn_parity.py`
+    (`mpc` vs legacy `mpc_per_h`; reverse edges negate direction and take
+    `1/density_contrast`, then log+z-score cols 0 and 4)
 
 ## Visualization
 
-- Active: `workflows/visualization/visualize_desi_wedge_cweb_3d.ipynb`
+- Active Jraph path1 3D CWEB / embedding notebook:
+  `workflows/visualization/visualize_desi_wedge_cweb_3d.ipynb`
+  Edit cell 1 for paths; HTML is written under `INFER_DIR`. This is **not**
+  the FlowJAX plotter (`plot_desi_wedge_flowjax.py`).
+- `workflows/visualization/path1_desi_wedge_inference_summary.md` is a
+  NERSC-only symlink into pscratch (`.../path1_epoch8056_on_desi_expanded_wedge_boxcox_fix/INFERENCE_SUMMARY.md`);
+  it is dangling off Perlmutter and should not be treated as in-repo docs.
 - Archived notebooks: `workflows/visualization/archive/` (LOA catalog, graph subvolume; see README)
 
 ## Experimental
@@ -78,6 +91,9 @@ for launch commands see `RUNBOOK.md`.
   velocity-dispersion / smoothing-scale / mass-anchored investigations. These
   are research diagnostics, not canonical launch paths; many hard-code baseline
   run directories.
+- Historical Jraph unit-parity one-off (Mpc/h DESI arrays, 2026-05-29; do not
+  re-run on current Mpc products):
+  `workflows/jraph_inference/experiment_desi_feature_parity.py`
 
 ## Legacy/To retire
 

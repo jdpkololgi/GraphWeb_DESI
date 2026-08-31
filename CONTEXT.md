@@ -83,6 +83,9 @@ Key caveats:
 - Preserve TARGETID joins and provenance for every derived prediction.
 - Keep coordinate units explicitly documented; the Gudhi graph builder uses
   comoving Mpc by default for Abacus-training parity.
+- GAT alpha/Delaunay graphs (Illustris `network` + `graph_catalog.py`) are a
+  different construction from the Gudhi/cuGraph Mpc wedge graph. Do not feed
+  GAT cache pickles into Jraph/SBI inference.
 - Keep observational catalog processing separate from simulation-side model
   training.
 - Never overwrite a release/VAC artefact without a reproducible replacement

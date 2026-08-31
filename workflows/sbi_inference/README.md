@@ -214,13 +214,18 @@ self-eval) paths — retarget before comparing against SI production runs.
 | `build_skewer_animation.py` | LOS pencil-beam animation from real NPE posterior samples (`--theta-deg` default 0.6). |
 | `build_skewer_idealised.py` / `render_skewer_video.py` / `render_class3d_video.py` | Idealised / rendered talk visuals (not inference). |
 
-Related longer investigations (also non-canonical; often hard-coded Abacus
-cutsky or CompaSO paths): `velocity_dispersion_*.py`,
-`smoothing_scale_investigation.py`, `plot_smoothing_scale_study.py`,
-`cluster_recovery_vs_smoothing.py`, `mass_anchored_cluster_test.py`,
-`plot_mass_anchored_recovery.py`, `property_ceiling_ablation.py`,
-`threshold_limit_investigation.py`, `probe_halo_mass_join.py`. Use them when
-reproducing a specific SCIENCE_LOG note, not as weekly launch defaults.
+Related longer investigations (also non-canonical). Use them when reproducing a
+specific SCIENCE_LOG note, not as weekly launch defaults.
+
+| Script | Intent / constraint |
+| --- | --- |
+| `velocity_dispersion_precheck.py` | Phase-0 FoGAniso from Delaunay-neighbour LOS scatter. CLI: `--desi-preds-npz`, `--desi-gnn-arrays`, mock xyz/GNN/targets. CPU. |
+| `velocity_dispersion_aperture_precheck.py` | Same kinematics at fixed apertures (~7 Mpc/h T-web scale). Neighbour Delaunay scale had no cluster signal; this tests the matched smoothing scale. |
+| `velocity_dispersion_eigenvalue_precheck.py` / `threshold_limit_investigation.py` | Boundary-zone λ₁ predictability / metric artifact vs noise floor. Mock truth. |
+| `smoothing_scale_investigation.py` / `plot_smoothing_scale_study.py` / `cluster_recovery_vs_smoothing.py` | Features fixed, T-web **target** smoothing varies (rs 6–24 Mpc/h cutsky FITS, hard-coded). High-memory CPU. |
+| `mass_anchored_cluster_test.py` / `plot_mass_anchored_recovery.py` | Anchor “cluster” to `HALO_MASS` (column is **1e10 Msun/h**; `log10(M/[Msun/h]) = log10(HALO_MASS)+10`). Master cutsky is row-aligned with the rs catalogs. |
+| `property_ceiling_ablation.py` | Redundancy of FastSpecFit properties vs 80-d GNN embedding (CLI: `--preds-npz`, `--closure-parquet`). DESI has no true env label, so this is the honest headroom proxy. |
+| `probe_halo_mass_join.py` / `join_validate.py` | Abacus CompaSO `(FILE_NUM, BOX_INDEX)` indexing probes. **Not** the DESI FastSpecFit property join. Hard-coded path1 / halo_info paths. |
 
 ## Luminosity support diagnostic (experimental)
 
@@ -400,3 +405,7 @@ when the environment variable is unset.
 - `scripts/sync_figures_to_canonical.sh` syncs only top-level matching image /
   video / HTML files from the source directory (`rsync --exclude='*'`); nested
   artifacts need a separate sync command.
+- `join_validate.py` is an Abacus CompaSO index check, not the DESI property
+  join (`build_desi_wedge_property_join.py`).
+- `HALO_MASS` on the master cutsky is in **1e10 Msun/h**; mass-anchored scripts
+  add +10 after `log10`.

@@ -73,8 +73,26 @@ python graph_catalog.py --help
 Example no-plot cache-only probe:
 
 ```bash
+export GRAPHWEB_CACHE_DIR=/pscratch/sd/d/dkololgi/graphweb_desi/cache
+export GRAPHWEB_VAC_OUTPUT_PATH=/pscratch/sd/d/dkololgi/graphweb_desi/outputs/DESI_BGS_PRERELEASE_VAC.pkl
 python workflows/graph_inference/graph_catalog.py --cache-mode cache-only --no-summary-plot
 ```
+
+Defaults still write under the **repo** (`GRAPHWEB_CACHE_DIR={repo}/cache`,
+`GRAPHWEB_VAC_OUTPUT_PATH={repo}/DESI_BGS_PRERELEASE_VAC.pkl`).
+`GRAPHWEB_CANONICAL_CACHE_DIR` on pscratch is unused by this script — set the
+env vars (or `--cache-dir` / `--vac-output-path`) before a `rebuild`, or home
+quota fills the same way the low-z FITS catalogs did.
+
+`--no-summary-plot` skips the histogram but still constructs a TNG300 `cat`
+from `--reference-catalog-path` (`TNG_REFERENCE_CATALOG_PATH`). A missing TNG
+tree fails even a cache-only no-plot probe.
+
+`--first-moment-matching` applies the Illustris training `features_scaler.pkl`
+instead of fitting a Box-Cox `PowerTransformer` on DESI, then **still**
+subtracts DESI column means. The `--help` fast-exit usage line omits this flag;
+it exists on the real argparse parser. Leave it off unless you are deliberately
+matching the TNG scaler.
 
 If model checkpoint path differs from config default:
 
@@ -152,6 +170,38 @@ bash workflows/catalog/run_infer_expanded_wedge_mpc.sh
 That wrapper sources `JRAPH_INPUTS_expanded_wedge.txt`, forces `cosmic_env`
 Python with a clean `PYTHONPATH`, sets `JAX_PLATFORMS=cpu`, and writes under
 `/pscratch/sd/d/dkololgi/graphweb_desi/inference_outputs/${INFER_RUN_NAME}`.
+
+The inference script loads `shared/abacus_gnn_parity.py` from **this** repo
+(bidirectional edges, `1/density_contrast` on the reverse, log+z-score of
+length and density-contrast) and `shared/graph_net_models.py` from
+`ILLUSTRIS_ROOT`. Do not put GraphWeb_DESI on `sys.path` ahead of Illustris or
+the wrong `shared` package wins.
+
+Validated 15-d caches store **ordered linear increments** after
+`target_scaler.inverse_transform`: `v1=λ1`, `v2=λ2−λ1`, `v3=λ3−λ2`. Reconstruct
+with `λ2=λ1+max(v2,ε)`, `λ3=λ2+max(v3,ε)`. Do not treat `v2`/`v3` as λ₂/λ₃.
+If the calibration cache has `node_feature_scaler` (training
+`--power-scale-node-features`), DESI raw `x` must be
+`scaler.transform(x+1e-6)` before the forward pass; skipping that step
+collapses class fractions (~100% void). The script warns and continues if the
+scaler key is missing.
+
+Do **not** use these as substitutes for the Gudhi NPZ path:
+
+- `workflows/jraph_inference/build_desi_wedge_jraph_cache.py` — induced wedge
+  from the GAT Delaunay NetworkX cache under `{repo}/cache/`, not cuGraph
+  arrays. Reverse density-contrast is stored as `-dc`, which does not match
+  Abacus `1/dc` in `shared/abacus_gnn_parity.py`.
+- `workflows/jraph_inference/experiment_desi_feature_parity.py` — frozen
+  2026-05-29 one-off against **Mpc/h** DESI arrays
+  (`..._bright_from_fullgraph/`, no `_mpc` suffix). It diagnosed the unit
+  mismatch; do not re-run it against current Mpc products.
+
+Path-1 Jraph 3D comparison notebook:
+`workflows/visualization/visualize_desi_wedge_cweb_3d.ipynb` (edit cell 1 for
+paths; HTML lands under `INFER_DIR`).
+`workflows/visualization/path1_desi_wedge_inference_summary.md` is a NERSC-only
+symlink into pscratch and is dangling off Perlmutter.
 
 #### Perlmutter Slurm chain (graph → features → wedge)
 
@@ -346,7 +396,12 @@ python investigate_edges.py --help
 
 | Symptom | Likely cause / fix |
 | --- | --- |
-| Home disk full / cannot commit | Catalogs and large outputs belong on pscratch (`GRAPHWEB_CATALOG_DIR`, `GRAPHWEB_SCRATCH_ROOT`). |
+| Home disk full / cannot commit | Catalogs **and** GAT cache/VAC defaults belong on pscratch. `GRAPHWEB_CACHE_DIR` / `GRAPHWEB_VAC_OUTPUT_PATH` still default to the repo; `GRAPHWEB_CATALOG_DIR` already points at pscratch. |
+| GAT `--no-summary-plot` still fails | `graph_catalog.py` always constructs a TNG300 `cat` from `TNG_REFERENCE_CATALOG_PATH` before inference. |
+| Jraph ~100% void | Calibration cache missing / unused `node_feature_scaler` while training used `--power-scale-node-features`. |
+| Jraph λ₂/λ₃ look like increments | 15-d caches store `v2=λ2−λ1`, `v3=λ3−λ2`; reconstruct before classifying. |
+| Jraph `shared.*` import is GraphWeb_DESI | `ILLUSTRIS_ROOT` must precede this repo on `sys.path` (`run_infer_expanded_wedge_mpc.sh` already does). |
+| GAT-cache Jraph pickle vs Abacus | `build_desi_wedge_jraph_cache.py` is not the Gudhi NPZ path; reverse density-contrast convention differs. |
 | FlowJAX abort on coordinate units | Rebuild DESI wedge with `--coord-units mpc`; do not use legacy Mpc/h products. |
 | SI vs baseline mismatch | Match `--scale-invariant-features` to the training cache/model; the checked-in launcher is baseline-only. |
 | Edge scaler looks wrong | Pass path1 fiberassign Abacus arrays to `--abacus-gnn-arrays`, not the regression wedge. |
