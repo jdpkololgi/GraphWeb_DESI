@@ -37,9 +37,31 @@ products, not the fundamental inference target.
 - Approximately 112,755 galaxies have zero-shot eigenvalue inference with a
   roughly 99.7% TARGETID match to FastSpecFit.
 - Environmental closure tests use observables such as quenched fraction and
-  sSFR at controlled stellar mass.
+  sSFR at controlled stellar mass; CIGALE-HZ rejoin is an optional property
+  swap for those plots when FastSpecFit SFRs are unsuitable.
+- Abacus-domain transfer gates (GNN vs GBM capacity, RSD/luminosity aperture
+  features, mock–DESI n(z)) live under `workflows/sbi_inference/` and inform
+  feature work — they are not DESI VAC acceptance criteria.
 - TARP/SBC validate the model inside the Abacus domain; DESI closure tests are
   the necessary truth-free observational check.
+
+Operational entrypoints in this repo (see `ACTIVE_WORKFLOWS.md` / `RUNBOOK.md`):
+
+- GAT VAC-style classification: `workflows/graph_inference/graph_catalog.py`
+- Jraph wedge point regression:
+  `workflows/jraph_inference/jraph_infer_desi_wedge_from_gnn_npz.py`
+  (expanded-wedge wrapper: `workflows/catalog/run_infer_expanded_wedge_mpc.sh`)
+- FlowJAX/SBI wedge posteriors: `workflows/sbi_inference/`
+  (README there is the detailed parity/runbook companion)
+- Gudhi/cuGraph Slurm stages: `workflows/catalog/sbatch_desi_bgs_bright_pipeline.sh`
+  (retarget before treating outputs as the expanded Mpc-parity wedge)
+
+Low-z GAT catalogs live on pscratch via `GRAPHWEB_CATALOG_*` in
+`shared/config_paths.py`; do not reintroduce large FITS products under home.
+The bright maglim catalog for Gudhi/Jraph/SBI is a separate zall product
+(`TARGET_RA`/`TARGET_DEC`, no redshift or mass cut). Its builder defaults to
+the public DR2 zall, not `DESI_ZCAT_FILE`. GAT graphs are 10-d Illustris
+network features; wedge Jraph/SBI graphs are 7-d Abacus-style features.
 
 ## Active scientific direction
 
@@ -65,6 +87,9 @@ Key caveats:
 - Preserve TARGETID joins and provenance for every derived prediction.
 - Keep coordinate units explicitly documented; the Gudhi graph builder uses
   comoving Mpc by default for Abacus-training parity.
+- GAT alpha/Delaunay graphs (Illustris `network` + `graph_catalog.py`) are a
+  different construction from the Gudhi/cuGraph Mpc wedge graph. Do not feed
+  GAT cache pickles into Jraph/SBI inference.
 - Keep observational catalog processing separate from simulation-side model
   training.
 - Never overwrite a release/VAC artefact without a reproducible replacement
