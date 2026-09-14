@@ -44,6 +44,8 @@ Details and canonical Perlmutter paths live in
 The validated Jraph path uses comoving Mpc coordinates (`--coord-units mpc`,
 the graph-builder default) for Abacus training parity. Older Mpc/h wedge
 artifacts are deprecated; see `workflows/catalog/to-delete_README.md`.
+Jraph inference **warns** on leftover Mpc/h metadata and defaults to CPU;
+FlowJAX **aborts** on those units and uses GPU unless forced otherwise.
 
 ### C. FlowJAX/SBI Posterior Inference
 

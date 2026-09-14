@@ -104,10 +104,12 @@ after unsetting `PYTHONPATH` (`.cursor/rules/conda-env-srun-python-path.mdc`).
    - Exports seven node features and five edge features with Abacus-style names
    - Subsets an RA/Dec/z wedge (catalog row order must match the parent graph)
    - Outputs predicted λ1, λ2, λ3 eigenvalues, T-Web-like classes, and diagnostic plots
+   - CPU by default (`JAX_PLATFORMS=cpu`); **warns** on Mpc/h metadata rather than aborting
 
 6. **FlowJAX/SBI Wedge Posteriors** (`workflows/sbi_inference/`)
    - Same Mpc-parity DESI wedge GNN arrays as Jraph, plus path1 Abacus edge scaler
    - Per-galaxy posterior samples over ordered eigenvalues; classes from `lambda_th=0.2`
+   - **Aborts** on Mpc/h metadata; GPU unless forced otherwise; default post-hoc λ sort
    - See `workflows/sbi_inference/README.md`
 
 ### Key Dependencies

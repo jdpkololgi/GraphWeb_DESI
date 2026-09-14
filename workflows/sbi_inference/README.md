@@ -122,9 +122,30 @@ Outputs are written to `--output-dir/--run-name/`:
 
 - `desi_wedge_flowjax_preds.npz`: `global_node_id`, sky coordinates,
   `lambda_mean`, `lambda_std`, `classprob`, `hard_class`, `p_exceed`,
-  embeddings, and a posterior-sample subset.
+  embeddings, and a posterior-sample subset (`--save-sample-subset`, default
+  20,000 galaxies; full `[N,128,3]` samples are not written).
 - `summary.json`: provenance, scaler statistics, class fractions, ordering
   checks, and Abacus reference fractions.
+
+Post-hoc λ sort (default on): after converting flow samples to physical
+eigenvalues, the script prints `true_ordering_violation_rate` (fraction of
+samples that are not already `λ1≤λ2≤λ3`), then sorts each sample ascending
+unless you pass `--no-sort`. Physical T-web eigenvalues are ordered; the
+T-web *count* is order-independent, so the sort is a monotonic eval-time
+correction, not a retraining. `summary.json` records `post_hoc_sort_applied`.
+`--chunk-size` (default 512) only controls posterior sampling batches.
+
+`summary.json` `reference_fractions.regression_desi` is a **frozen** Jraph
+comparison (`void=0.246`, `wall=0.462`, `filament=0.266`, `cluster=0.026`),
+not a live recompute. `plot_desi_wedge_flowjax.py --no-regression` drops those
+bars. Do not treat them as the current Jraph product.
+
+Unlike Jraph inference, this script **aborts** if DESI metadata
+`coordinate_units` is `mpc/h`, `mpc_per_h`, or unknown, and it **does not**
+force `JAX_PLATFORMS=cpu` (the checked-in launcher is a 1×A100 `salloc`).
+Baseline (non-SI) runs also assert path1 fiberassign edge-scaler constants;
+passing the Jraph regression-wedge NPZ fails that check even when shapes
+match. GNN hparams come from the FlowJAX model pickle, not CLI.
 
 ### Domain-adaptation and production flags
 
@@ -137,6 +158,14 @@ The inference script exposes three transfer-diagnostic modes:
 - `--scale-invariant-features`: uses per-graph-median normalized node and edge
   scale features. Use this only with a matching scale-invariant training cache
   and model.
+
+SI node transform (must match the SI cache): divide columns
+`[0, 2, 3, 4, 5, 6]` (`Degree`, `Density`, `Neigh Density`, `I_eig1`,
+`I_eig2`, `I_eig3`) by their per-graph medians, then apply the cache
+`PowerTransformer`. **Clustering (col 1) is left alone** — it is already a
+dimensionless 0–1 fraction. SI edges divide `edge_length` (col 0) by the
+per-graph median in `shared/abacus_gnn_parity.py` *before* log+z-score; the
+path1 scaler-constant assert is skipped in SI mode.
 
 Treat node/edge domain adaptation as diagnostics unless the science log records
 the corresponding run as the selected data product. The scale-invariant mode is
@@ -157,6 +186,13 @@ python workflows/sbi_inference/infer_abacus_self_flowjax.py \
 This writes `abacus_self_flowjax_preds.npz`, which supplies Abacus NPE
 posterior means, embeddings, and class probabilities for three-way
 Abacus-truth / Abacus-NPE / DESI-NPE figures.
+
+There is no `--scale-invariant-features` flag: the Abacus graph is already
+preprocessed inside the calibration cache. Pass the **matching** SI (or
+baseline) model *and* cache together. The argparse default `--output-dir` is
+`.../abacus_self_linear` (baseline); SI comparison plots need an explicit SI
+directory as in the example. Samples are always sorted ascending (no
+`--no-sort`). The script evaluates the cache **test** mask only.
 
 ## Figures and truth-free diagnostics
 
@@ -247,11 +283,22 @@ python workflows/sbi_inference/build_desi_wedge_property_join.py \
   --preds "${RUN_DIR}/desi_wedge_flowjax_preds.npz"
 ```
 
-The join recovers `TARGETID` through `global_node_id` as an index into the source
-BGS catalog, averages duplicate hemisphere copies, and writes
-`desi_wedge_env_props.parquet` plus `join_report.json`. The report includes
-FastSpecFit match fraction, duplicate-target count, valid-sSFR fraction, and an
-RA/Dec cross-check.
+The join recovers `TARGETID` through `global_node_id` as a **row index** into
+the source maglim FITS (same order as the Gudhi graph). Default `--preds` is
+the SI production npz; override it if you are not on that run. Default
+`--fastspec-glob` is `fastspec-loa-main-bright-nside1-hp*.fits` under
+`DESI_FASTSPEC_CATALOGS_DIR`. Hemisphere-split graphs duplicate some
+`TARGETID`s (N/S copies with different neighbourhoods); the join averages
+posterior products, sets `is_dup`, and recomputes `hard_class` from the
+averaged class probabilities.
+
+Rest-frame colour in the parquet is FastSpecFit `ABSMAG01_SDSS_G − ABSMAG01_SDSS_R`
+(z=0.1 SDSS). That is **not** the LSS k+e `ABSMAG_RP1` from
+`desi_absmag_kcorr.py`. Do not mix the two magnitude systems in one figure.
+
+Writes `desi_wedge_env_props.parquet` plus `join_report.json`. The report
+includes FastSpecFit match fraction, duplicate-target count, valid-sSFR
+fraction, and an RA/Dec cross-check.
 
 Then make closure figures:
 
@@ -391,12 +438,21 @@ when the environment variable is unset.
 
 - Do not mix the regression wedge and path1 fiberassign wedge for
   `--abacus-gnn-arrays`; array shapes can match while scaler constants do not.
-- Do not run on legacy Mpc/h DESI wedge artifacts; inference intentionally aborts
-  on those metadata.
+  FlowJAX baseline mode asserts path1 constants and aborts; Jraph inference
+  silently refits whatever NPZ you pass.
+- Do not run FlowJAX on legacy Mpc/h DESI wedge artifacts; it aborts. Jraph
+  inference only **warns** and continues — a silent unit mix-up is possible.
 - Do not use `--scale-invariant-features` with a baseline cache/model, or a
-  baseline transform with a scale-invariant cache/model.
+  baseline transform with a scale-invariant cache/model. SI node medians skip
+  Clustering (col 1).
 - `run_infer_desi_wedge_flowjax.sh` launches the baseline linear run; SI
   production needs an edited command with matching SI artifacts.
+- `infer_abacus_self_flowjax.py` default output dir is `abacus_self_linear`;
+  SI three-way plots need an explicit SI directory and the matching SI cache.
+- `--no-sort` keeps raw flow λ order; default DESI inference and Abacus self
+  both sort samples ascending after recording the true violation rate.
+- `summary.json` `regression_desi` fractions are frozen Jraph numbers, not a
+  live Jraph re-run. Use `--no-regression` unless you want those bars.
 - `SFR <= 0` is treated as quenched in closure fractions and excluded from median
   sSFR panels.
 - CIGALE and FastSpecFit property tables must not be mixed in one figure set
@@ -416,3 +472,6 @@ when the environment variable is unset.
 - Do not point `GalaxyCatalog` or `load_catalog.py` products at this path; SBI
   needs the maglim FITS with `TARGET_RA`/`TARGET_DEC` in the same row order as
   the Gudhi graph.
+- Property-join `gr` is FastSpecFit `ABSMAG01_SDSS_*`, not LSS `ABSMAG_RP1`.
+- The 3D notebook `visualize_desi_wedge_cweb_3d.ipynb` reads Jraph
+  `desi_wedge_index_and_preds.npz`, not `desi_wedge_flowjax_preds.npz`.
