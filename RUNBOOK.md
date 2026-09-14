@@ -242,12 +242,35 @@ bash workflows/catalog/run_infer_expanded_wedge_mpc.sh
 That wrapper sources `JRAPH_INPUTS_expanded_wedge.txt`, forces `cosmic_env`
 Python with a clean `PYTHONPATH`, sets `JAX_PLATFORMS=cpu`, and writes under
 `/pscratch/sd/d/dkololgi/graphweb_desi/inference_outputs/${INFER_RUN_NAME}`.
+The Python script itself also defaults `JAX_PLATFORMS=cpu` and clears
+`CUDA_VISIBLE_DEVICES` unless you already set a platform — unlike FlowJAX,
+this path will not use a GPU unless you override that.
 
 The inference script loads `shared/abacus_gnn_parity.py` from **this** repo
 (bidirectional edges, `1/density_contrast` on the reverse, log+z-score of
 length and density-contrast) and `shared/graph_net_models.py` from
 `ILLUSTRIS_ROOT`. Do not put GraphWeb_DESI on `sys.path` ahead of Illustris or
-the wrong `shared` package wins.
+the wrong `shared` package wins. The script loads that parity helper by file
+path (`importlib`) so Illustris `shared/` does not shadow it.
+
+Checkpoint and architecture (from the code, not the model pickle):
+
+- `--abacus-run-dir` must contain `checkpoints/best_checkpoint.json` with a
+  `path` field; that pickle is the weights file.
+- `--latent-size/--num-heads/--num-passes/--dropout` default to `96/8/8/0.15`
+  (manifest `LATENT_SIZE` etc.). They are **not** read from the checkpoint.
+  Mismatch with training is a silent architecture error.
+- `output_dim` is hardcoded to **15**. This companion is the 15-d halo_xcom
+  regression path, not a 3-d increment NPE.
+
+Units and scaler guards differ from FlowJAX:
+
+- Jraph **warns** if DESI `coordinate_units` is `mpc/h`, `mpc_per_h`, or
+  unknown, then continues. FlowJAX **aborts**. Do not rely on Jraph to catch
+  a leftover Mpc/h wedge.
+- Jraph **fits** the edge scaler from whatever `--abacus-gnn-arrays` you pass.
+  FlowJAX baseline mode asserts path1 fiberassign constants. Mixing the
+  regression-wedge NPZ into Jraph is a silent scaler bug.
 
 Validated 15-d caches store **ordered linear increments** after
 `target_scaler.inverse_transform`: `v1=λ1`, `v2=λ2−λ1`, `v3=λ3−λ2`. Reconstruct
@@ -257,6 +280,13 @@ If the calibration cache has `node_feature_scaler` (training
 `scaler.transform(x+1e-6)` before the forward pass; skipping that step
 collapses class fractions (~100% void). The script warns and continues if the
 scaler key is missing.
+
+Outputs under `--output-dir/--run-name/` include `preds_scaled_15d.npy`,
+`preds_raw_15d.npy`, `preds_lambda123.npy`, `class_lambda_thr0.2.npy`,
+`summary.json`, histogram/bar PNGs, and `desi_wedge_index_and_preds.npz`
+(`global_node_id`, `ra/dec/z`, `lambda1/2/3`, `cls`). The visualization
+notebook and `JRAPH_INPUTS_expanded_wedge.txt` `INFER_NPZ` point at that npz,
+not the FlowJAX `desi_wedge_flowjax_preds.npz`.
 
 Do **not** use these as substitutes for the Gudhi NPZ path:
 
@@ -270,8 +300,11 @@ Do **not** use these as substitutes for the Gudhi NPZ path:
   mismatch; do not re-run it against current Mpc products.
 
 Path-1 Jraph 3D comparison notebook:
-`workflows/visualization/visualize_desi_wedge_cweb_3d.ipynb` (edit cell 1 for
-paths; HTML lands under `INFER_DIR`).
+`workflows/visualization/visualize_desi_wedge_cweb_3d.ipynb`. Edit **cell 1**
+only (paths). It loads Jraph `INFER_DIR/desi_wedge_index_and_preds.npz` plus
+the expanded Mpc DESI GNN arrays and Abacus training-wedge truth. Interactive
+HTML lands under `INFER_DIR`; download it off Perlmutter rather than saving
+huge Plotly outputs back into the notebook. This is not the FlowJAX plotter.
 `workflows/visualization/path1_desi_wedge_inference_summary.md` is a NERSC-only
 symlink into pscratch and is dangling off Perlmutter.
 
@@ -354,8 +387,11 @@ python -u workflows/sbi_inference/infer_desi_wedge_flowjax.py \
 For the scale-invariant production run, replace `MODEL` and `CACHE` with the
 matching scale-invariant training artifacts, set
 `--run-name desi_wedge_flowjax_linear_si`, and add
-`--scale-invariant-features`. For transfer diagnostics only, the script also
-exposes `--edge-domain-adapt` and `--node-domain-adapt`.
+`--scale-invariant-features`. SI node medians skip Clustering (col 1). For
+transfer diagnostics only, the script also exposes `--edge-domain-adapt` and
+`--node-domain-adapt`. Posterior samples are sorted ascending unless
+`--no-sort`; `summary.json` `regression_desi` fractions are frozen Jraph
+numbers. Depth: `workflows/sbi_inference/README.md`.
 
 Generate DESI diagnostics after inference:
 
@@ -500,7 +536,13 @@ These are login-node sanity checks, not pipeline stages:
 | GAT-cache Jraph pickle vs Abacus | `build_desi_wedge_jraph_cache.py` is not the Gudhi NPZ path; reverse density-contrast convention differs. |
 | FlowJAX abort on coordinate units | Rebuild DESI wedge with `--coord-units mpc`; do not use legacy Mpc/h products. |
 | SI vs baseline mismatch | Match `--scale-invariant-features` to the training cache/model; the checked-in launcher is baseline-only. |
-| Edge scaler looks wrong | Pass path1 fiberassign Abacus arrays to `--abacus-gnn-arrays`, not the regression wedge. |
+| Jraph ran on an Mpc/h wedge anyway | Jraph only **warns** on `coordinate_units`; FlowJAX aborts. Check `summary.json` `desi_coordinate_units`. |
+| Jraph on GPU still uses CPU | Script/wrapper default `JAX_PLATFORMS=cpu`. Override only if you intend a GPU run. |
+| Jraph checkpoint loads but predictions look random | CLI hparams (`96/8/8/0.15`) must match training; they are not in the pickle. `output_dim=15` is hardcoded. |
+| Edge scaler looks wrong | FlowJAX: pass path1 fiberassign arrays (asserted). Jraph: it will happily fit a regression-wedge NPZ — check the path. |
+| Viz notebook KeyError / missing npz | Point cell 1 at Jraph `desi_wedge_index_and_preds.npz`, not FlowJAX `desi_wedge_flowjax_preds.npz`. |
+| Property `g-r` disagrees with `ABSMAG_RP1` | Join uses FastSpecFit `ABSMAG01_SDSS_*` (z=0.1); kcorr writes LSS `ABSMAG_RP1`. |
+| IBM Plex fallback / DejaVu plots | Fonts are gitignored under `assets/fonts/`. Set `GRAPHWEB_FONT_DIR` or run the PLOT_STYLE_GUIDE §2.3 curl. |
 | `desi_absmag_kcorr.py` `pkg_resources` ImportError | Use the repo script (it shims `pkg_resources`); or pin setuptools `<81` only if you must call DESI_ke outside this wrapper. |
 | `add_ke` never finishes in interactive QOS | Keep the default `--max-rows 400000` z-cut subsample; full-catalogue k+e is a separate long job. |
 | Figures missing after sync | `sync_figures_to_canonical.sh` only mirrors top-level media files. |

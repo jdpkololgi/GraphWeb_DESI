@@ -54,6 +54,9 @@ for launch commands see `RUNBOOK.md`.
   - Expanded-wedge launcher: `workflows/catalog/run_infer_expanded_wedge_mpc.sh`
   - Requires Abacus `node_feature_scaler` + 15-d increment reconstruction; see
     `RUNBOOK.md` / `workflows/catalog/BUILD_JRAPH_CACHES.md`.
+  - Warns (does not abort) on Mpc/h metadata; defaults `JAX_PLATFORMS=cpu`;
+    hparams `96/8/8/0.15` and `output_dim=15` are CLI/hardcoded, not in the
+    checkpoint. Writes `desi_wedge_index_and_preds.npz`.
   - Legacy GAT-Delaunay pickle builder (not production):
     `workflows/jraph_inference/build_desi_wedge_jraph_cache.py`
 - FlowJAX/SBI posterior inference:
@@ -66,6 +69,9 @@ for launch commands see `RUNBOOK.md`.
   - Workflow README: `workflows/sbi_inference/README.md`
   - Requires the same Mpc-parity DESI wedge products, path1 Abacus edge-scaler
     arrays, and `ILLUSTRIS_ROOT` for the Illustris FlowJAX model code.
+  - Aborts on Mpc/h metadata; uses GPU unless you force CPU; baseline mode
+    asserts path1 edge-scaler constants. Default post-hoc λ sort; SI node
+    medians skip Clustering (col 1).
 - Utility:
   - Canonical: `workflows/utilities/galaxy_catalog.py` — GAT low-z helper
     (`RA`/`DEC`, `LOGMSTAR>=9`). `--help` is a stub. Do not point it at the maglim FITS.
@@ -76,7 +82,10 @@ for launch commands see `RUNBOOK.md`.
   - Config paths: `shared/config_paths.py` (shim: `config_paths.py`)
   - Abacus/Jraph coordinate and edge-feature parity: `shared/abacus_gnn_parity.py`
     (`mpc` vs legacy `mpc_per_h`; reverse edges negate direction and take
-    `1/density_contrast`, then log+z-score cols 0 and 4)
+    `1/density_contrast`, then log+z-score cols 0 and 4). `--scale-invariant`
+    divides `edge_length` by the per-graph median *before* the log.
+    Inference scripts load this file by path so Illustris `shared/` does not
+    shadow it.
   - Plot style: `shared/plot_style.py` / `PLOT_STYLE_GUIDE.md` (`GRAPHWEB_FONT_DIR`)
 - NERSC helpers: `scripts/where_am_i.sh`, `scripts/check_quota.sh`,
   `scripts/desi_prods.sh`, `scripts/sync_figures_to_canonical.sh`,
@@ -87,8 +96,10 @@ for launch commands see `RUNBOOK.md`.
 
 - Active Jraph path1 3D CWEB / embedding notebook:
   `workflows/visualization/visualize_desi_wedge_cweb_3d.ipynb`
-  Edit cell 1 for paths; HTML is written under `INFER_DIR`. This is **not**
-  the FlowJAX plotter (`plot_desi_wedge_flowjax.py`).
+  Edit cell 1 for paths. It reads `INFER_DIR/desi_wedge_index_and_preds.npz`
+  (Jraph), not FlowJAX `desi_wedge_flowjax_preds.npz`. HTML is written under
+  `INFER_DIR`. This is **not** the FlowJAX plotter
+  (`plot_desi_wedge_flowjax.py`).
 - `workflows/visualization/path1_desi_wedge_inference_summary.md` is a
   NERSC-only symlink into pscratch (`.../path1_epoch8056_on_desi_expanded_wedge_boxcox_fix/INFERENCE_SUMMARY.md`);
   it is dangling off Perlmutter and should not be treated as in-repo docs.
