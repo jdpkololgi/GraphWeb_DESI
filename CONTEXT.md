@@ -94,7 +94,10 @@ Key caveats:
 
 - Preserve TARGETID joins and provenance for every derived prediction.
 - Keep coordinate units explicitly documented; the Gudhi graph builder uses
-  comoving Mpc by default for Abacus-training parity.
+  comoving Mpc by default for Abacus-training parity. FlowJAX inference
+  aborts on Mpc/h metadata; Jraph inference only warns.
+- Keep FastSpecFit `ABSMAG01_SDSS_*` (property join) distinct from LSS
+  `ABSMAG_RP1` (`desi_absmag_kcorr.py`); they are different magnitude systems.
 - GAT alpha/Delaunay graphs (Illustris `network` + `graph_catalog.py`) are a
   different construction from the Gudhi/cuGraph Mpc wedge graph. Do not feed
   GAT cache pickles into Jraph/SBI inference.
