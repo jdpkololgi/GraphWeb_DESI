@@ -182,9 +182,12 @@ python graph_catalog.py --cache-mode prefer-cache
 
 Primary output:
 - VAC pickle with predicted environment class and class probabilities.
+  Columns: `GAT_ENV` (argmax 0–3) and `GAT_VOID_PROB` / `GAT_WALL_PROB` /
+  `GAT_FILAMENT_PROB` / `GAT_CLUSTER_PROB`.
 
 Cached artifacts (in `GRAPHWEB_CACHE_DIR`):
-- graph object (`*_graph.pt`)
-- torch geometric data (`*_geom.pt`)
-- scaled features (`*_features.pt`)
-- zcat snapshot (`*_zcat.pt`)
+- graph object (`DESI_alpha_graph.pt` / `DESI_delaunay_graph.pt`)
+- torch geometric data (`DESI_alpha_geom.pt` / `DESI_delaunay_geom.pt`)
+- scaled features (`DESI_alpha_features.pt` / `DESI_delaunay_features.pt`)
+- zcat snapshot (`DESI_NETWORKalpha_zcat.pt` vs `DESI_NETWORK_delaunay_zcat.pt`;
+  the Delaunay name has an extra underscore after `NETWORK`)

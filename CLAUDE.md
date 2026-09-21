@@ -96,7 +96,10 @@ after unsetting `PYTHONPATH` (`.cursor/rules/conda-env-srun-python-path.mdc`).
    - Builds alpha-complex or Delaunay graph from galaxy positions
    - Extracts node features, scales with Box-Cox transform (or `--first-moment-matching`)
    - Loads pre-trained GAT model from Illustris repo
-   - Outputs per-galaxy environment predictions and probabilities
+   - Outputs per-galaxy environment predictions and probabilities (`GAT_ENV`,
+     `GAT_VOID_PROB` / `GAT_WALL_PROB` / `GAT_FILAMENT_PROB` / `GAT_CLUSTER_PROB`)
+   - Cache zcat names differ: `DESI_NETWORKalpha_zcat.pt` vs
+     `DESI_NETWORK_delaunay_zcat.pt`
 
 5. **Jraph Wedge Inference** (`workflows/jraph_inference/`)
    - Starts from a bright BGS zall-derived catalog with no redshift or stellar-mass cuts
@@ -110,6 +113,7 @@ after unsetting `PYTHONPATH` (`.cursor/rules/conda-env-srun-python-path.mdc`).
    - Same Mpc-parity DESI wedge GNN arrays as Jraph, plus path1 Abacus edge scaler
    - Per-galaxy posterior samples over ordered eigenvalues; classes from `lambda_th=0.2`
    - **Aborts** on Mpc/h metadata; GPU unless forced otherwise; default post-hoc λ sort
+   - Talk visuals (skewer / class-3D GIF) consume FlowJAX preds; the 3D notebook is Jraph-only
    - See `workflows/sbi_inference/README.md`
 
 ### Key Dependencies
@@ -127,8 +131,9 @@ after unsetting `PYTHONPATH` (`.cursor/rules/conda-env-srun-python-path.mdc`).
 GAT processed graphs are cached in `cache/` by default:
 - `DESI_alpha_graph.pt` / `DESI_delaunay_graph.pt` - NetworkX graph
 - `DESI_alpha_geom.pt` / `DESI_delaunay_geom.pt` - PyTorch Geometric Data object
-- `DESI_alpha_features.pt` - Scaled node features
-- `DESI_NETWORKalpha_zcat.pt` - Galaxy catalog with predictions
+- `DESI_alpha_features.pt` / `DESI_delaunay_features.pt` - Scaled node features
+- `DESI_NETWORKalpha_zcat.pt` / `DESI_NETWORK_delaunay_zcat.pt` - Galaxy catalog
+  with predictions (Delaunay name has an extra underscore after `NETWORK`)
 
 Jraph/Gudhi artifacts are typically written under
 `/pscratch/sd/d/dkololgi/graphweb_desi/outputs/` and documented in

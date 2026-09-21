@@ -216,6 +216,18 @@ Useful plot flags:
 - `--no-regression`: drop the off-message "Regression DESI" bars from
   `class_fractions_comparison.png` (SBI-room three-series layout).
 - `--only-class-fractions`: regenerate only that bar chart and exit.
+- `--abacus-self-npz`: `abacus_self_flowjax_preds.npz` for the 3-way λ overlay
+  (`eig_truth`, `lambda_mean`) and embedding PCA (`embeddings`). This file is
+  **not** the class-fraction "Abacus NPE" series.
+- `--abacus-classprob-npz`: class-fraction "Abacus NPE" bars. The NPZ must
+  have 1-d keys `void`, `wall`, `filament`, `cluster` (probability arrays;
+  the plot takes argmax). `abacus_self_flowjax_preds.npz` stores stacked
+  `classprob` `[N,4]` and `hard_class` instead — passing it here KeyErrors
+  on `void`. Without this flag the Abacus NPE bars are NaN even when
+  `--abacus-self-npz` is set.
+- Sky-box flags (`--ra-min` … `--z-max`) default to the expanded wedge
+  (RA 120–160, Dec 14.5–30.6, z 0.2–0.3) and are used for the survey-edge
+  panel. `--max-3d-points` / `--umap-points` cap optional HTML figures.
 
 Common products include:
 
@@ -251,8 +263,7 @@ self-eval) paths — retarget before comparing against SI production runs.
 | `plot_shape_misclassification.py` | Dense-galaxy cluster rate vs local anisotropy; Oaxaca-style gap split. |
 | `mmd_misspecification_check.py` | Unbiased RBF MMD² on GNN embeddings vs Abacus split-half floor. CLI: `--abacus-npz`, `--desi-npz`. |
 | `plot_lambda_th_sweep.py` | Class fractions vs `λ_th` for Abacus truth / Abacus NPE / DESI NPE (+ Plotly morph). |
-| `build_skewer_animation.py` | LOS pencil-beam animation from real NPE posterior samples (`--theta-deg` default 0.6). |
-| `build_skewer_idealised.py` / `render_skewer_video.py` / `render_class3d_video.py` | Idealised / rendered talk visuals (not inference). |
+| Talk visuals | `build_skewer_animation.py`, `build_skewer_idealised.py`, `render_skewer_video.py`, `render_class3d_video.py`, `plot_eig_dist_buildup.py`, `plot_eig_dist_vertical.py` — see below. |
 
 Related longer investigations (also non-canonical). Use them when reproducing a
 specific SCIENCE_LOG note, not as weekly launch defaults.
@@ -266,6 +277,73 @@ specific SCIENCE_LOG note, not as weekly launch defaults.
 | `mass_anchored_cluster_test.py` / `plot_mass_anchored_recovery.py` | Anchor “cluster” to `HALO_MASS` (column is **1e10 Msun/h**; `log10(M/[Msun/h]) = log10(HALO_MASS)+10`). Master cutsky is row-aligned with the rs catalogs. |
 | `property_ceiling_ablation.py` | Redundancy of FastSpecFit properties vs 80-d GNN embedding (CLI: `--preds-npz`, `--closure-parquet`). DESI has no true env label, so this is the honest headroom proxy. |
 | `probe_halo_mass_join.py` / `join_validate.py` | Abacus CompaSO `(FILE_NUM, BOX_INDEX)` indexing probes. **Not** the DESI FastSpecFit property join. Hard-coded path1 / halo_info paths. |
+
+## Talk visuals (Keynote)
+
+These scripts are presentation renderers, not inference. They consume
+**FlowJAX** products (`desi_wedge_flowjax_preds.npz` keys `ra`/`dec`/`z`,
+`hard_class`, `lambda_mean`, `lambda_std`, `classprob`). They KeyError on
+Jraph `desi_wedge_index_and_preds.npz` (`cls`, no `hard_class`). The inverse
+trap is `workflows/visualization/visualize_desi_wedge_cweb_3d.ipynb`, which
+is Jraph-only.
+
+### Real DESI skewer
+
+`build_skewer_animation.py` draws a radial pencil beam through the richest
+inferred cluster:
+
+- Sightline: galaxy with max `classprob[:, 3]`, then a `classprob`-weighted
+  RA/Dec centroid of neighbours within `--anchor-r` (default 15 Mpc).
+- Beam: angular radius `--theta-deg` (default 0.6).
+- Per-frame λ densities: mixture of per-galaxy `lambda_mean` / `lambda_std`
+  along the beam. The module docstring still mentions `lambda_samples_subset`;
+  the code does not read that key.
+- Default `--out`: `{preds parent}/skewer_posterior_animation_real.html`.
+
+```bash
+python workflows/sbi_inference/build_skewer_animation.py \
+  --preds-npz "${RUN_DIR}/desi_wedge_flowjax_preds.npz" \
+  --theta-deg 0.6 --anchor-r 15
+```
+
+### Idealised skewer (no catalogue)
+
+`build_skewer_idealised.py` synthesises a Gaussian density bump so λ3, λ2, λ1
+cross `λ_th=0.2` at d≈0.33, 0.60, 0.86 (void→wall→filament→cluster). It
+imports the HTML template from `build_skewer_animation.py` and takes **no**
+preds NPZ. Default `--out` writes
+`.../desi_wedge_flowjax_linear_si/skewer_idealised.html` even if that SI run
+directory does not exist yet.
+
+### HTML → mp4 / gif
+
+`render_skewer_video.py` extracts the embedded payload (`var D={...};var F=`)
+and re-renders with matplotlib. Default `--out` is `.mp4` (needs ffmpeg on
+PATH); pass `--out ....gif` for Pillow. Works for both the real and idealised
+HTML files.
+
+```bash
+python workflows/sbi_inference/render_skewer_video.py \
+  "${RUN_DIR}/skewer_posterior_animation_real.html"
+```
+
+### Rotating class-3D GIF
+
+`render_class3d_video.py` rebuilds the Plotly class-3D cloud as a matplotlib
+fly-through GIF (void→wall→filament→cluster reveal, then rotation). Default
+`--preds` is the SI FlowJAX npz. It keeps **all** clusters and subsamples the
+other classes (`--n-points`, default 28,000). Default output:
+`{preds parent}/class_3d_flythrough.gif`.
+
+### Talk λ overlays
+
+- `plot_eig_dist_buildup.py`: two PNGs with **shared bins** for successive
+  slides (`eig_dist_buildup_abacus_only.png`, then
+  `eig_dist_buildup_with_desi.png`).
+- `plot_eig_dist_vertical.py`: tall 3-row PDF/PNG, native figsize 7.0×7.3 in,
+  **no** `bbox_inches=tight` so Keynote point sizes match the saved file.
+  Writes both `eig_dist_vertical_abacus_only` and `eig_dist_vertical_3way`.
+  Defaults to SI Abacus-self / DESI-preds / figure paths.
 
 ## Luminosity support diagnostic (experimental)
 
@@ -475,3 +553,13 @@ when the environment variable is unset.
 - Property-join `gr` is FastSpecFit `ABSMAG01_SDSS_*`, not LSS `ABSMAG_RP1`.
 - The 3D notebook `visualize_desi_wedge_cweb_3d.ipynb` reads Jraph
   `desi_wedge_index_and_preds.npz`, not `desi_wedge_flowjax_preds.npz`.
+- Skewer / class-3D GIF scripts are the inverse: they need FlowJAX
+  `hard_class` / `lambda_mean` / `lambda_std` / `classprob`. Do not point
+  them at the Jraph npz.
+- `--abacus-self-npz` does not fill class-fraction "Abacus NPE" bars.
+  `--abacus-classprob-npz` needs per-class 1-d keys, not stacked `classprob`.
+- `build_skewer_animation.py` mixes `lambda_mean`/`lambda_std`; it does not
+  read `lambda_samples_subset` despite the module docstring.
+- `render_skewer_video.py` default mp4 needs ffmpeg; a missing encoder fails
+  after the HTML already exists. `build_skewer_idealised.py` default `--out`
+  points at the SI run directory even when that run has not been created.

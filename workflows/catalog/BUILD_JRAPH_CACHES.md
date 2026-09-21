@@ -64,7 +64,9 @@ srun -n1 -c32 python workflows/abacus_tweb/build_abacus_sbi_cache.py \
 **Canonical DESI wedge:** use the expanded Mpc-parity manifest in
 `JRAPH_INPUTS_expanded_wedge.txt`. The older narrow bright-wedge manifest
 (`JRAPH_INPUTS_bright_wedge.txt`) points at Mpc/h-era artifacts and should be
-treated as legacy unless rebuilt with `--coord-units mpc`.
+treated as legacy unless rebuilt with `--coord-units mpc`. Failure modes that
+retired that stack (edge lengths ~0.71×, inference without log+scaler, pre-eigfix
+increment mislabel) are tabulated in `to-delete_README.md`.
 
 | Artifact | Path |
 |----------|------|
