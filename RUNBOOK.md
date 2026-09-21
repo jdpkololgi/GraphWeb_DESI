@@ -141,6 +141,14 @@ features are **not** the 7 Abacus-style columns used by Jraph/SBI
 GAT alpha/Delaunay NetworkX cache is a different graph from the Gudhi/cuGraph
 Mpc wedge.
 
+VAC pickle columns written onto the zcat snapshot: `GAT_ENV` (argmax class
+0–3) and `GAT_VOID_PROB` / `GAT_WALL_PROB` / `GAT_FILAMENT_PROB` /
+`GAT_CLUSTER_PROB`. Cache filenames are not symmetric: alpha uses
+`DESI_NETWORKalpha_zcat.pt`; Delaunay uses `DESI_NETWORK_delaunay_zcat.pt`.
+`--vac-output-path` must include a directory component (`write_vac` calls
+`os.makedirs(dirname(...))`). The histogram uses `scienceplots` colours, not
+`shared.plot_style.COSMIC_WEB_COLORS`.
+
 If model checkpoint path differs from config default:
 
 ```bash
@@ -190,12 +198,16 @@ Construction constraints (from the scripts, not the launchers):
   deprecated ×h convention.
 - Full-hemisphere AlphaComplex on ~10⁷ galaxies is expensive. Use
   `--max-points-per-hemi N` only for smoke tests (random subsample, `--seed`).
+  The wedge cutter's `--max-nodes N` is a different cap: it keeps the **first
+  N selected catalog rows**, not a random subsample.
 - cuGraph feature export must run in `rapids-gnn` on a GPU node. The script
   default `--out-prefix` is `desi_delaunay_cugraph`; the validated expanded
   wedge uses `--out-prefix desi_bgs_cugraph` to match
   `JRAPH_INPUTS_expanded_wedge.txt`. `--skip-clustering` / `--skip-inertia`
   zero those columns (not production). `--write-parquet` is huge on the full
-  graph.
+  graph. `--debug-inertia-parity` compares two inertia implementations on a
+  random subgraph and **exits**; `--max-edges-export N` truncates the exported
+  edge table.
 - On Slurm, `conda activate` inside `srun bash -lc` is not enough: unset
   `PYTHONPATH`/`PYTHONHOME`, set `PYTHONNOUSERSITE=1`, and call the env’s
   absolute `python` (see `.cursor/rules/conda-env-srun-python-path.mdc`). A
@@ -405,6 +417,17 @@ python workflows/sbi_inference/plot_desi_wedge_flowjax.py \
   --no-regression
 ```
 
+`--abacus-self-npz` fills the 3-way λ overlay / embedding PCA from
+`abacus_self_flowjax_preds.npz`. It does **not** fill the class-fraction
+"Abacus NPE" bars; that series needs `--abacus-classprob-npz` with 1-d keys
+`void`/`wall`/`filament`/`cluster`. Without it those bars are NaN.
+
+Talk-visual / Keynote renderers (`build_skewer_animation.py`,
+`build_skewer_idealised.py`, `render_skewer_video.py`,
+`render_class3d_video.py`, `plot_eig_dist_vertical.py`) are FlowJAX-only and
+are documented in `workflows/sbi_inference/README.md`. Do not point them at
+Jraph `desi_wedge_index_and_preds.npz`.
+
 Join FastSpecFit properties and make closure figures:
 
 ```bash
@@ -541,6 +564,10 @@ These are login-node sanity checks, not pipeline stages:
 | Jraph checkpoint loads but predictions look random | CLI hparams (`96/8/8/0.15`) must match training; they are not in the pickle. `output_dim=15` is hardcoded. |
 | Edge scaler looks wrong | FlowJAX: pass path1 fiberassign arrays (asserted). Jraph: it will happily fit a regression-wedge NPZ — check the path. |
 | Viz notebook KeyError / missing npz | Point cell 1 at Jraph `desi_wedge_index_and_preds.npz`, not FlowJAX `desi_wedge_flowjax_preds.npz`. |
+| Skewer / class-3D GIF KeyError on `hard_class` | Those scripts need FlowJAX `desi_wedge_flowjax_preds.npz`. The 3D notebook is Jraph-only; this is the inverse trap. |
+| Class-fraction "Abacus NPE" bars are NaN | `--abacus-self-npz` is the 3-way λ overlay. Pass `--abacus-classprob-npz` with 1-d keys `void`/`wall`/`filament`/`cluster`; the self-eval npz's stacked `classprob` is the wrong schema. |
+| `render_skewer_video.py` fails after HTML exists | Default output is mp4 and needs ffmpeg. Use `--out ....gif` for Pillow. |
+| Wedge smoke test looks spatially biased | `--max-nodes` keeps the first N catalog-order rows. Gudhi `--max-points-per-hemi` is the random subsample. |
 | Property `g-r` disagrees with `ABSMAG_RP1` | Join uses FastSpecFit `ABSMAG01_SDSS_*` (z=0.1); kcorr writes LSS `ABSMAG_RP1`. |
 | IBM Plex fallback / DejaVu plots | Fonts are gitignored under `assets/fonts/`. Set `GRAPHWEB_FONT_DIR` or run the PLOT_STYLE_GUIDE §2.3 curl. |
 | `desi_absmag_kcorr.py` `pkg_resources` ImportError | Use the repo script (it shims `pkg_resources`); or pin setuptools `<81` only if you must call DESI_ke outside this wrapper. |
