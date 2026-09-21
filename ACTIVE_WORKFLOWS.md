@@ -100,6 +100,12 @@ for launch commands see `RUNBOOK.md`.
   (Jraph), not FlowJAX `desi_wedge_flowjax_preds.npz`. HTML is written under
   `INFER_DIR`. This is **not** the FlowJAX plotter
   (`plot_desi_wedge_flowjax.py`).
+- FlowJAX talk visuals (Keynote): `build_skewer_animation.py` (real NPE pencil
+  beam), `build_skewer_idealised.py` (synthetic, no catalogue),
+  `render_skewer_video.py` (HTML → mp4/gif), `render_class3d_video.py`
+  (FlowJAX `hard_class` fly-through GIF), `plot_eig_dist_vertical.py` /
+  `plot_eig_dist_buildup.py`. Inverse of the notebook: these need FlowJAX
+  preds, not the Jraph npz. See `workflows/sbi_inference/README.md`.
 - `workflows/visualization/path1_desi_wedge_inference_summary.md` is a
   NERSC-only symlink into pscratch (`.../path1_epoch8056_on_desi_expanded_wedge_boxcox_fix/INFERENCE_SUMMARY.md`);
   it is dangling off Perlmutter and should not be treated as in-repo docs.

@@ -101,6 +101,9 @@ Key caveats:
 - GAT alpha/Delaunay graphs (Illustris `network` + `graph_catalog.py`) are a
   different construction from the Gudhi/cuGraph Mpc wedge graph. Do not feed
   GAT cache pickles into Jraph/SBI inference.
+- Jraph visualization (`visualize_desi_wedge_cweb_3d.ipynb`) reads
+  `desi_wedge_index_and_preds.npz`. FlowJAX talk visuals (skewer / class-3D
+  GIF) read `desi_wedge_flowjax_preds.npz`. Do not swap those products.
 - Keep observational catalog processing separate from simulation-side model
   training.
 - Never overwrite a release/VAC artefact without a reproducible replacement
