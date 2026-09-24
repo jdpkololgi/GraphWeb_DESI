@@ -2,6 +2,11 @@
 
 ## P12-A Loa application (2026-09-24)
 
+Implemented first entrypoint: `workflows/catalog/p12a_vac_preflight.py` for
+bounded frozen-artifact verification, archived Loa metadata inventory and
+conservative phase-use ledger. Commands and V1 crosswalk:
+`docs/p12a_vac_execution.md`. This is not an inference/coordinate-pass marker.
+
 Active plan: `../TNG/Illustris/docs/plan_desi_p12a_vac_20260924.md`.
 Implement the frozen U-PATCH/P12-A manifest, Loa input/response crosswalk and
 golden-mock replay before the bounded real-data trial. No validated new inference
