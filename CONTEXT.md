@@ -22,8 +22,15 @@ products, not the fundamental inference target.
 
 ## Current interface to Illustris
 
-- The current production anchor is the Illustris G3 union-graph NPE model:
-  attentional Jraph GraphNetwork plus FlowJAX posterior.
+- The current application baseline (2026-09-24) is frozen Illustris U-PATCH +
+  P12-A FMPE, with blind mock calibration and real-DESI validation still pending.
+  G3/FlowJAX results and the legacy GAT/Jraph entrypoints are historical products,
+  not the new P13 implementation.
+- Active cross-repository plan:
+  `../TNG/Illustris/docs/plan_desi_p12a_vac_20260924.md`.
+  Reproduce canonical count/response fields, frozen transforms and context/stride
+  conventions; pass the Loa source crosswalk and a golden mock before a DESI trial.
+  Additional mocks first support replication, not automatic retraining.
 - Training parity uses AbacusSummit HOD cutsky mocks with CACTUS T-web labels,
   7 Mpc/h smoothing, and `lambda_th = 0.2`.
 - Preserve the canonical ordered-increment target representation and the
@@ -43,13 +50,14 @@ products, not the fundamental inference target.
 
 ## Active scientific direction
 
-The Illustris-side priority is field-level, physics-grounded inference:
+Separate Illustris-side research explores field-level, physics-grounded inference:
 
 `graph encoder -> density grid -> fixed FFT tidal operator -> eigensolver`
 
-This repository should prepare for and evaluate the resulting production
-encoder, but should not treat field-level point-estimate results as a DESI
-replacement until the associated posterior/calibration gate is passed.
+The immediate application priority is the calibrated per-galaxy P12-A baseline.
+Coherent-field work is not a VAC prerequisite. Whole-survey encoding would not
+by itself make independently sampled per-galaxy posteriors spatially joint.
+Audit final-checkpoint tiling parity and physical context adequacy separately.
 
 Key caveats:
 

@@ -1,5 +1,14 @@
 # Active Workflow Index
 
+## P12-A Loa application (2026-09-24)
+
+Active plan: `../TNG/Illustris/docs/plan_desi_p12a_vac_20260924.md`.
+Implement the frozen U-PATCH/P12-A manifest, Loa input/response crosswalk and
+golden-mock replay before the bounded real-data trial. No validated new inference
+entrypoint is asserted yet. Legacy GAT/Gudhi/Jraph workflows below remain usable
+for their historical scope; they do not implement this new posterior handoff.
+Slurm, reserved phase-access and science-release gates remain in force.
+
 This file is the Phase 0 quick reference for what to run in this repository now.
 For scratch layout, conda envs, and Perlmutter job recipes, see `~/.claude/CLAUDE.md`;
 for launch commands see `RUNBOOK.md`.
