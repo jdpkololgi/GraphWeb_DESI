@@ -1,0 +1,92 @@
+{
+  "results": {
+    "N": {
+      "n": 9430,
+      "effective_c_least_squares": 300000.02731272235,
+      "residual_c299792p458": {
+        "n": 9430,
+        "median": -0.009420669009877702,
+        "p01_p99": [
+          -0.6688795354397508,
+          0.6924504677672362
+        ],
+        "max_abs": 1.26817251801981,
+        "rms": 0.27612067376330257
+      },
+      "residual_c300000": {
+        "n": 9430,
+        "median": -0.00014282799676834657,
+        "p01_p99": [
+          -0.019271313817214947,
+          0.01882512335624482
+        ],
+        "max_abs": 0.02849406878681293,
+        "rms": 0.008739643157693312
+      }
+    },
+    "S": {
+      "n": 8362,
+      "effective_c_least_squares": 299999.96587416733,
+      "residual_c299792p458": {
+        "n": 8362,
+        "median": -0.011847290094312513,
+        "p01_p99": [
+          -0.6702104690302667,
+          0.674721639539112
+        ],
+        "max_abs": 1.4314659522519833,
+        "rms": 0.27705351736002637
+      },
+      "residual_c300000": {
+        "n": 8362,
+        "median": -0.0002277652976090394,
+        "p01_p99": [
+          -0.01943969029548109,
+          0.019090442465634325
+        ],
+        "max_abs": 0.02849406878681293,
+        "rms": 0.008895948867840382
+      }
+    },
+    "v1": {
+      "n": 8473,
+      "effective_c_least_squares": 300000.01494482736,
+      "residual_c299792p458": {
+        "n": 8473,
+        "median": -0.0009242391244077552,
+        "p01_p99": [
+          -0.7556302790698828,
+          0.7844902025654125
+        ],
+        "max_abs": 1.444424102622179,
+        "rms": 0.3164699535035101
+      },
+      "residual_c300000": {
+        "n": 8473,
+        "median": -0.00028737495779296296,
+        "p01_p99": [
+          -0.019194073274491075,
+          0.019060046314567695
+        ],
+        "max_abs": 0.027998004085134198,
+        "rms": 0.008859425062341419
+      }
+    }
+  },
+  "script_sha256": "abb0dda3a2be441da169329729f789a55cae2881401610c0e9f53c748d3e3868",
+  "sources": {
+    "/global/cfs/cdirs/desi/users/jpiat/abacus_mocks/cutsky/z0.200/AbacusSummit_base_c000/ph000/galaxy_cut_sky_N.fits": [
+      7760609280,
+      1780412929867831259
+    ],
+    "/global/cfs/cdirs/desi/users/jpiat/abacus_mocks/cutsky/z0.200/AbacusSummit_base_c000/ph000/galaxy_cut_sky_S.fits": [
+      8176890240,
+      1780413612047498560
+    ],
+    "/global/cfs/cdirs/desi/cosmosim/SecondGenMocks/AbacusSummit/CutSky/BGS/v1/z0.200/cutsky_BGS_z0.200_AbacusSummit_base_c000_ph000.fits": [
+      7175868480,
+      1732747679145538330
+    ]
+  },
+  "contract": "Same first10000 central prefix as velocity control; numerical hypothesis c=300000, no catalogue correction. Comparison tests algebraic consistency, not executed source provenance."
+}

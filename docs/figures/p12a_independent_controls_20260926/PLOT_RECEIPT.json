@@ -1,0 +1,11 @@
+{
+  "script_sha256": "20a66d640c38336c7d0ad397cd1ee101c28448c4d66e8410dfd925c5c4c5c4d4",
+  "inputs": {
+    "docs/evidence/p12a_independent_controls_20260926/dr1/HISTOGRAMS.npz": "e29a62e0cd7bf8e1f0e5c6600c8bd0abf1a2ad9c9904053d85ca1d842324aa25",
+    "docs/evidence/p12a_independent_controls_20260926/boundary/HISTOGRAMS.npz": "f2415f73b6df73bf4a7bf1113b5948da9f014cdd450cb5733a0c46ae4cdbbabd"
+  },
+  "outputs": {
+    "release_boundary_controls.png": "a127151a358cbfb33052f776f945bdff6db3fdaecd9640f9bc71ee96b2e00d65",
+    "tile_strata_controls.png": "662bb6bbb49e0c10a4d9c10e2d62aa4552a94746949e07a9271b10c65cd3fd45"
+  }
+}

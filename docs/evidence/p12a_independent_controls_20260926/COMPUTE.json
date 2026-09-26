@@ -1,0 +1,14 @@
+{
+  "job": "58921665",
+  "node": "nid004148",
+  "state": "COMPLETED",
+  "exit_code": "0:0",
+  "elapsed": "00:15:53",
+  "steps": {
+    "0": "DR1 controls,11:35,COMPLETED0",
+    "1": "boundary controls,03:02,COMPLETED0",
+    "2": "plotting,00:04,COMPLETED0"
+  },
+  "released": true,
+  "unrelated_E2E_job_untouched": "58920768"
+}

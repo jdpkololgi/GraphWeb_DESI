@@ -521,3 +521,53 @@ without the numerical parameters of inspected files. Generic method reproducible
 exact high-tail change and Loa recipe remain unidentified. Smith et al. underlying
 method: https://arxiv.org/html/2312.08792v2 . Existing products can be tested once
 intended selections are known; no need to regenerate merely to attempt that test.
+
+### Independent controls while awaiting producer reply (2026-09-26, running)
+
+CPU58921665/nid004148 authorized under standing compute approval; unrelated E2E
+GPU58920768 left untouched. W1 DR1 control now uses iron full BRIGHTv1.5 and
+Loa full BRIGHTv2.1, their index0 HPmapcut randoms, original common support and
+nested NSIDE256/512 random intersections. A >=16-randoms-per-pixel interior
+sensitivity is not a new science selection or exact mask. Same TARGETIDs separate
+quality gains/losses, accepted-redshift migration and membership changes; missing
+IDs will not automatically be called new observations.
+
+Second independent test removes one/two neighbouring-pixel rings from original
+NSIDE256 common sky and compares original exposedph006 observed mock against Loa,
+including NTILE<=1/2/>=3 strata. Baseline must reproduce prior histogram exactly.
+Five focused tests passed, including handling seven-neighbour HEALPix vertices.
+No new phase, regeneration, fitting, data modifications or VAC replacement.
+Results pending. Code: alignment_dr1_controls.py, alignment_boundary_controls.py.
+
+Completed independent W2 diagnostics: two-ring erosion leaves high-shell
+Loa/old-mock ratios1.823/1.855 (SGC/NGC), with deficits persisting even at
+NTILE>=3 (1.664/1.740). Original baseline histograms reproduced exactly.
+Shared-central ph000 velocity control rejects purely multiplicative rescaling
+as the complete version difference; individual best scalars leave142–170 RMS
+residual. All three new/v1 samples numerically use c~300000 in the radial RSD
+relation; this common tiny convention is not the inter-version cause. Prefix
+sample has paired support only atz.35–.55. No source catalogue corrections.
+See `p12a_independent_controls_20260926.md`; DR1 release census still running.
+
+
+### Independent controls completed (2026-09-26)
+
+DR1 check is now completed at the delivered-catalogue/random-support level:
+6,405,170 sharedIDs; conservative-interior Loa/DR1 ratios1.455->1.410SGC and
+1.299->1.258NGC from low to high shell. No rising high-z excess resembling the
+old-mock deficit. Of689,136 matched-ID science gains,99.6002% were marked
+unassigned inDR1. Among2,685,453 jointly accepted rows, none changesr>0.01mag;
+801 have relative dz>.005. These conditional results do not replace failure
+modelling or disentangle all exposure/reduction changes. Original mask includes
+non-DR1 sky; its larger~2 ratios are not matched-area density comparisons.
+
+Boundary and NTILE controls, velocity scaling and shared c~300000 convention
+results are complete; [report](p12a_independent_controls_20260926.md), two figures,
+compact histograms, source hashes and reproduction commands archived under
+`evidence/p12a_independent_controls_20260926`. Five focused tests and exact
+fine-bin accounting checks pass. CPU58921665/steps COMPLETED0, allocation released.
+W1 release control progressed; W2 boundary explanation weakened. Exact angular
+mask/observation parity and Jade's scientific prescription remain open; no G2
+promotion, population correction, new phase or replacement VAC. The next producer
+question should distinguish HOD/photometric assignment from simple velocity
+rescaling, and identify the intended full-BRIGHT Loa preparation.

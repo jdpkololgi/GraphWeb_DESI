@@ -1,0 +1,140 @@
+{
+  "convention_tests": {
+    "N": {
+      "rows": 9430,
+      "cz_over_1plusz_minus_velocity_dot_sky": {
+        "n": 9430,
+        "median": -0.009420966027488209,
+        "p01_p99": [
+          -0.668856100068076,
+          0.6924664839585206
+        ],
+        "max_abs": 1.2682450093664102,
+        "rms": 0.2761207845179143
+      },
+      "apparent_radial_velocity": {
+        "n": 9430,
+        "median": 15.31242805915273,
+        "p01_p99": [
+          -1001.5357065711629,
+          965.6994248349126
+        ],
+        "max_abs": 1837.055911021695,
+        "rms": 398.60141148650575
+      }
+    },
+    "S": {
+      "rows": 8362,
+      "cz_over_1plusz_minus_velocity_dot_sky": {
+        "n": 8362,
+        "median": -0.011846932784177255,
+        "p01_p99": [
+          -0.6701998062947189,
+          0.6747485687279806
+        ],
+        "max_abs": 1.4314659522519833,
+        "rms": 0.2770536757160756
+      },
+      "apparent_radial_velocity": {
+        "n": 8362,
+        "median": 18.817368052930263,
+        "p01_p99": [
+          -975.1199181189347,
+          968.4554207866379
+        ],
+        "max_abs": 2086.3504264445432,
+        "rms": 400.0606184482648
+      }
+    },
+    "v1": {
+      "rows": 8473,
+      "cz_over_1plusz_minus_velocity_dot_sky": {
+        "n": 8473,
+        "median": -0.0009242391244077552,
+        "p01_p99": [
+          -0.7556070601304873,
+          0.7844774823271206
+        ],
+        "max_abs": 1.444424102622179,
+        "rms": 0.31646973359154595
+      },
+      "apparent_radial_velocity": {
+        "n": 8473,
+        "median": 6.109811659782031,
+        "p01_p99": [
+          -1128.7745189996967,
+          1093.9542318728597
+        ],
+        "max_abs": 2096.953188321265,
+        "rms": 456.9257933495963
+      }
+    }
+  },
+  "paired": {
+    "N": {
+      "0.15_0.25": {
+        "n": 0
+      },
+      "0.25_0.35": {
+        "n": 0
+      },
+      "0.35_0.45": {
+        "n": 3235,
+        "least_squares_scale": 0.701329235693826,
+        "residual_rms": 189.9473403530374,
+        "new_rms": 348.2733421690209,
+        "vector_cosine_median": 0.9163093705133482,
+        "per_object_scalar_residual_rms": 141.66371220354517
+      },
+      "0.45_0.55": {
+        "n": 2735,
+        "least_squares_scale": 0.6560746812462565,
+        "residual_rms": 225.22893796554257,
+        "new_rms": 382.3654915893765,
+        "vector_cosine_median": 0.885079378045841,
+        "per_object_scalar_residual_rms": 167.75640200795027
+      }
+    },
+    "S": {
+      "0.15_0.25": {
+        "n": 0
+      },
+      "0.25_0.35": {
+        "n": 0
+      },
+      "0.35_0.45": {
+        "n": 2838,
+        "least_squares_scale": 0.7030751758216072,
+        "residual_rms": 191.4568060352045,
+        "new_rms": 350.88372673059564,
+        "vector_cosine_median": 0.9141768259519104,
+        "per_object_scalar_residual_rms": 142.57362185457376
+      },
+      "0.45_0.55": {
+        "n": 2719,
+        "least_squares_scale": 0.6438957690652792,
+        "residual_rms": 226.05928321017856,
+        "new_rms": 375.77103564188945,
+        "vector_cosine_median": 0.873228980631553,
+        "per_object_scalar_residual_rms": 169.78399494421356
+      }
+    }
+  },
+  "script_sha256": "7d0318715e8e94b22b349bb67ba1e5370f6157975556379faefcf42fbda7eef5",
+  "sources": {
+    "/global/cfs/cdirs/desi/users/jpiat/abacus_mocks/cutsky/z0.200/AbacusSummit_base_c000/ph000/galaxy_cut_sky_N.fits": [
+      7760609280,
+      1780412929867831259
+    ],
+    "/global/cfs/cdirs/desi/users/jpiat/abacus_mocks/cutsky/z0.200/AbacusSummit_base_c000/ph000/galaxy_cut_sky_S.fits": [
+      8176890240,
+      1780413612047498560
+    ],
+    "/global/cfs/cdirs/desi/cosmosim/SecondGenMocks/AbacusSummit/CutSky/BGS/v1/z0.200/cutsky_BGS_z0.200_AbacusSummit_base_c000_ph000.fits": [
+      7175868480,
+      1732747679145538330
+    ]
+  },
+  "contract": "First10000 raw rows per file; CEN1, .15<=Z_COSMO<.55; exact HALO_ID/RA/DEC match. Prefix-biased diagnostic, no population claim. Test v_new=s(z)*v_old, not fitting a replacement model.",
+  "caveat": "Radial test assumes stored Cartesian velocities use the displayed sky frame and km/s; nonzero residual alone could reflect conventions. Scalar-vector residual tests do not identify underlying HOD/velocity parameters."
+}

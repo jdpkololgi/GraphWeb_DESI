@@ -1,0 +1,487 @@
+{
+  "counts": {
+    "iron_original": [
+      [
+        370593,
+        242089,
+        95657,
+        19867
+      ],
+      [
+        1015247,
+        659413,
+        264958,
+        50517
+      ]
+    ],
+    "iron_original_r19p5": [
+      [
+        370592,
+        242089,
+        95657,
+        19866
+      ],
+      [
+        1000679,
+        643687,
+        255591,
+        48113
+      ]
+    ],
+    "loa_original": [
+      [
+        791799,
+        515603,
+        203039,
+        41243
+      ],
+      [
+        1970732,
+        1278482,
+        501766,
+        94985
+      ]
+    ],
+    "loa_original_r19p5": [
+      [
+        791798,
+        515603,
+        203039,
+        41242
+      ],
+      [
+        1940449,
+        1245428,
+        482271,
+        89935
+      ]
+    ],
+    "iron_random256": [
+      [
+        370579,
+        242081,
+        95657,
+        19867
+      ],
+      [
+        1015224,
+        659397,
+        264955,
+        50515
+      ]
+    ],
+    "iron_random256_r19p5": [
+      [
+        370578,
+        242081,
+        95657,
+        19866
+      ],
+      [
+        1000657,
+        643671,
+        255588,
+        48111
+      ]
+    ],
+    "loa_random256": [
+      [
+        594136,
+        389439,
+        151156,
+        30851
+      ],
+      [
+        1413939,
+        913887,
+        362082,
+        68091
+      ]
+    ],
+    "loa_random256_r19p5": [
+      [
+        594135,
+        389439,
+        151156,
+        30850
+      ],
+      [
+        1391684,
+        889767,
+        347850,
+        64450
+      ]
+    ],
+    "iron_random512": [
+      [
+        370466,
+        241986,
+        95625,
+        19860
+      ],
+      [
+        1015050,
+        659296,
+        264912,
+        50505
+      ]
+    ],
+    "iron_random512_r19p5": [
+      [
+        370465,
+        241986,
+        95625,
+        19859
+      ],
+      [
+        1000487,
+        643575,
+        255547,
+        48104
+      ]
+    ],
+    "loa_random512": [
+      [
+        571471,
+        374312,
+        145178,
+        29627
+      ],
+      [
+        1377694,
+        889881,
+        352572,
+        66362
+      ]
+    ],
+    "loa_random512_r19p5": [
+      [
+        571470,
+        374312,
+        145178,
+        29626
+      ],
+      [
+        1356144,
+        866540,
+        338822,
+        62846
+      ]
+    ],
+    "iron_random512_interior": [
+      [
+        351504,
+        229503,
+        90552,
+        18787
+      ],
+      [
+        983182,
+        638908,
+        256527,
+        48837
+      ]
+    ],
+    "iron_random512_interior_r19p5": [
+      [
+        351503,
+        229503,
+        90552,
+        18786
+      ],
+      [
+        969242,
+        623848,
+        247592,
+        46565
+      ]
+    ],
+    "loa_random512_interior": [
+      [
+        511483,
+        334325,
+        129508,
+        26498
+      ],
+      [
+        1277322,
+        825027,
+        326770,
+        61451
+      ]
+    ],
+    "loa_random512_interior_r19p5": [
+      [
+        511482,
+        334325,
+        129508,
+        26497
+      ],
+      [
+        1257726,
+        803820,
+        314330,
+        58289
+      ]
+    ],
+    "matched_iron": [
+      [
+        369888,
+        241565,
+        95478,
+        19828
+      ],
+      [
+        1014047,
+        658605,
+        264625,
+        50458
+      ]
+    ],
+    "matched_loa": [
+      [
+        491581,
+        320525,
+        124373,
+        25424
+      ],
+      [
+        1237529,
+        798817,
+        316688,
+        59652
+      ]
+    ],
+    "iron_only_ids": [
+      [
+        578,
+        421,
+        147,
+        32
+      ],
+      [
+        1003,
+        691,
+        287,
+        47
+      ]
+    ],
+    "loa_only_ids": [
+      [
+        79890,
+        53787,
+        20805,
+        4203
+      ],
+      [
+        140165,
+        91064,
+        35884,
+        6710
+      ]
+    ],
+    "gained_at_matched_ids": [
+      [
+        126275,
+        82099,
+        30086,
+        5917
+      ],
+      [
+        233548,
+        146772,
+        54690,
+        9749
+      ]
+    ],
+    "lost_at_matched_ids": [
+      [
+        4553,
+        3149,
+        1199,
+        332
+      ],
+      [
+        10042,
+        6567,
+        2637,
+        562
+      ]
+    ],
+    "both_iron_z": [
+      [
+        365335,
+        238416,
+        94279,
+        19496
+      ],
+      [
+        1004005,
+        652038,
+        261988,
+        49896
+      ]
+    ],
+    "both_loa_z": [
+      [
+        365306,
+        238426,
+        94287,
+        19507
+      ],
+      [
+        1003981,
+        652045,
+        261998,
+        49903
+      ]
+    ],
+    "gain_reason_not_assigned": [
+      [
+        125970,
+        81738,
+        29916,
+        5825
+      ],
+      [
+        232867,
+        146105,
+        54377,
+        9583
+      ]
+    ],
+    "gain_reason_ZWARN_nonzero": [
+      [
+        41,
+        58,
+        20,
+        18
+      ],
+      [
+        80,
+        73,
+        37,
+        28
+      ]
+    ],
+    "gain_reason_SPECTYPE_not_GALAXY": [
+      [
+        83,
+        101,
+        55,
+        6
+      ],
+      [
+        234,
+        223,
+        117,
+        30
+      ]
+    ],
+    "gain_reason_DELTACHI2_below25": [
+      [
+        121,
+        139,
+        59,
+        49
+      ],
+      [
+        246,
+        251,
+        121,
+        81
+      ]
+    ],
+    "gain_reason_redshift_outside": [
+      [
+        60,
+        63,
+        36,
+        19
+      ],
+      [
+        121,
+        120,
+        38,
+        27
+      ]
+    ]
+  },
+  "footprints": {
+    "original": {
+      "occupied_pixel_area_deg2": 13720.82496776498,
+      "random_rows": {
+        "iron": 18440824,
+        "loa": 30641368
+      }
+    },
+    "random256": {
+      "occupied_pixel_area_deg2": 9626.75056642491,
+      "random_rows": {
+        "iron": 18440824,
+        "loa": 21802806
+      }
+    },
+    "random512": {
+      "occupied_pixel_area_deg2": 9250.28802465808,
+      "random_rows": {
+        "iron": 18439386,
+        "loa": 21068769
+      }
+    },
+    "random512_interior": {
+      "occupied_pixel_area_deg2": 8305.020442775798,
+      "random_rows": {
+        "iron": 17757085,
+        "loa": 19341255
+      }
+    }
+  },
+  "stats": {
+    "matched_ids": 6405170,
+    "both_science": 2685453,
+    "both_science_abs_dr_gt_001": 0,
+    "both_science_relative_dz_gt_0005": 801,
+    "matched_pixel_changes": 0,
+    "gain_reasons_exclusive": {
+      "not_assigned": 686381,
+      "ZWARN_nonzero": 355,
+      "SPECTYPE_not_GALAXY": 849,
+      "DELTACHI2_below25": 1067,
+      "redshift_outside": 484
+    }
+  },
+  "sources": {
+    "/global/cfs/cdirs/desi/survey/catalogs/Y1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_full_HPmapcut.dat.fits": [
+      5340971520,
+      1714757524372067337
+    ],
+    "/global/cfs/cdirs/desi/survey/catalogs/DA2/LSS/loa-v1/LSScats/v2.1/BGS_BRIGHT_full_HPmapcut.dat.fits": [
+      8026796160,
+      1771271470000000000
+    ],
+    "/global/cfs/cdirs/desi/survey/catalogs/Y1/LSS/iron/LSScats/v1.5/BGS_BRIGHT_0_full_HPmapcut.ran.fits": [
+      7080416640,
+      1714757865792015916
+    ],
+    "/global/cfs/cdirs/desi/survey/catalogs/DA2/LSS/loa-v1/LSScats/v2.1/BGS_BRIGHT_0_full_HPmapcut.ran.fits": [
+      8757480960,
+      1771271705000000000
+    ]
+  },
+  "job": "58921665",
+  "script_sha256": "43a98f4f3f013d23748d7ac86d75a9743c34112ed86445b4063c19117dfc2909",
+  "histogram_sha256": "e29a62e0cd7bf8e1f0e5c6600c8bd0abf1a2ad9c9904053d85ca1d842324aa25",
+  "mask_sha256": "6fdfffc465b0a44bc1629c46d2b087e6c609edc8738db3ab49860ecf45dd38a3",
+  "helpers": {
+    "mock_selection_test.py": "20c1a4dbb6c19b642d8122e9547c137bfa93b7a65bc0f668ac2c3d5272e9625c",
+    "flag_joint_magnitude.py": "ef767b14e92e9a365a8ac6d6952741e8b45ab1e655fedce4fb4bac6f5645eed6",
+    "alignment_parent_screen.py": "6e76b0271d38b71be6b0bbc9f26ed954e3a3b1b27c033c1ed09ce4abf556cf57"
+  },
+  "contract": "Full BGS_BRIGHT iron v1.5 vs Loa v2.1; Z_not4clus, ZWARN0, DCHI>=25, GALAXY, .15<=z<.55. No weights. Random index0, HEALPix NEST512 with256 aggregation; interior >=16 random rows per pixel in each release. Not exact angular masks or area estimates. Gains classified at matched IDs using Loa z; missing IDs are catalogue membership differences, not automatically new observations.",
+  "limitations": [
+    "One random realization; interior threshold is a sensitivity control, not survey selection.",
+    "No claim of independently certified release/blinding state.",
+    "Conditional reobservation diagnostics do not measure redshifts of all failures."
+  ]
+}

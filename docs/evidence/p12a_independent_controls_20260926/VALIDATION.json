@@ -1,0 +1,14 @@
+{
+  "checks": [
+    "dr1: source/helper/input/histogram hashes and all broad-count sums passed",
+    "boundary: source/helper/input/histogram hashes and all broad-count sums passed",
+    "DR1/Loa total IDs and exclusive gain reasons conserve every cap/fine-z count",
+    "VELOCITY.json: source hash passed",
+    "RSD_SPEED.json: source hash passed"
+  ],
+  "focused_tests": 5,
+  "gain_unassigned_fraction": 0.9960022404866383,
+  "no_new_phases": true,
+  "job": "58921665",
+  "node": "nid004148"
+}

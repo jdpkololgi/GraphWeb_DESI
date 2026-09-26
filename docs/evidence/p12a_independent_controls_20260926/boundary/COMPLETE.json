@@ -1,0 +1,162 @@
+{
+  "counts": {
+    "loa_original": [
+      [
+        791799,
+        515603,
+        203039,
+        41243
+      ],
+      [
+        1970732,
+        1278482,
+        501766,
+        94985
+      ]
+    ],
+    "loa_erode1": [
+      [
+        742158,
+        483295,
+        190344,
+        38249
+      ],
+      [
+        1845600,
+        1197401,
+        470573,
+        89208
+      ]
+    ],
+    "loa_erode2": [
+      [
+        682849,
+        444085,
+        175225,
+        34909
+      ],
+      [
+        1697272,
+        1100991,
+        433104,
+        82291
+      ]
+    ],
+    "mock_original": [
+      [
+        810162,
+        501092,
+        167786,
+        22216
+      ],
+      [
+        1999757,
+        1199005,
+        410923,
+        51637
+      ]
+    ],
+    "mock_erode1": [
+      [
+        756822,
+        468613,
+        157085,
+        20816
+      ],
+      [
+        1872935,
+        1122232,
+        384263,
+        48217
+      ]
+    ],
+    "mock_erode2": [
+      [
+        693874,
+        429761,
+        144198,
+        19148
+      ],
+      [
+        1720420,
+        1029791,
+        352299,
+        44350
+      ]
+    ]
+  },
+  "loa_to_mock": {
+    "original": [
+      [
+        0.9773341627970702,
+        1.028958754081087,
+        1.210106921912436,
+        1.856454807346057
+      ],
+      [
+        0.9854857365169868,
+        1.066285795305274,
+        1.2210706142026608,
+        1.8394755698433294
+      ]
+    ],
+    "erode1": [
+      [
+        0.9806242418957165,
+        1.0313307569358938,
+        1.2117261355317186,
+        1.8374807840122982
+      ],
+      [
+        0.9854052596593048,
+        1.0669816936248475,
+        1.2246117893213762,
+        1.8501358442043263
+      ]
+    ],
+    "erode2": [
+      [
+        0.984110948097205,
+        1.033330153271237,
+        1.2151694198255176,
+        1.8231146856068519
+      ],
+      [
+        0.9865451459527325,
+        1.0691402430201857,
+        1.229364829306924,
+        1.8554904171364148
+      ]
+    ]
+  },
+  "mask_pixel_counts": {
+    "original": 1046276,
+    "erode1": 959112,
+    "erode2": 868720
+  },
+  "sources": {
+    "/global/cfs/cdirs/desi/survey/catalogs/DA2/LSS/loa-v1/LSScats/v2.1/BGS_BRIGHT_full_HPmapcut.dat.fits": [
+      8026796160,
+      1771271470000000000
+    ],
+    "/global/cfs/cdirs/desi/survey/catalogs/DA2/mocks/SecondGenMocks/AbacusSummitBGS_v2/altmtl6/loa-v1/mock6/LSScats/BGS_BRIGHT_full_HPmapcut.dat.h5": [
+      256324182,
+      1790104384000000000
+    ]
+  },
+  "job": "58921665",
+  "script_sha256": "b8e26e3fff5c0815110305f6604214fdc0c47cf5edcdf6aa631eb9d205a4e80e",
+  "helper_sha256": {
+    "mock_selection_test.py": "20c1a4dbb6c19b642d8122e9547c137bfa93b7a65bc0f668ac2c3d5272e9625c",
+    "alignment_parent_screen.py": "6e76b0271d38b71be6b0bbc9f26ed954e3a3b1b27c033c1ed09ce4abf556cf57",
+    "flag_joint_magnitude.py": "ef767b14e92e9a365a8ac6d6952741e8b45ab1e655fedce4fb4bac6f5645eed6"
+  },
+  "histogram_sha256": "f2415f73b6df73bf4a7bf1113b5948da9f014cdd450cb5733a0c46ae4cdbbabd",
+  "mask_sha256": "6fdfffc465b0a44bc1629c46d2b087e6c609edc8738db3ab49860ecf45dd38a3",
+  "validation": {
+    "baseline_reproduced": true,
+    "erosion_nested": true
+  },
+  "contract": "Original exposed ph006 observed-stage altMTL Loa mock, ZWARN0, versus full Loa quality25+GALAXY, .15<=z<.55. No weights, no new phases. NTILE <=1,2,>=3 strata. Erode one/two rings of original NSIDE256 occupied support.",
+  "caveat": "Erosion is a sensitivity control, not exact matched masks or an observation model. Tile-count strata do not match density, competition or subpixel selection."
+}
