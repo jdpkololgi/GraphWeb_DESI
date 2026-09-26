@@ -1,0 +1,60 @@
+{
+  "repository": "https://github.com/desihub/LSS",
+  "commit": "d942b990860e016e7558c740966fea3e5ce7e7f3",
+  "sources": [
+    {
+      "path": "scripts/mock_tools/prepare_mocks_Y3_bright.py",
+      "url": "https://raw.githubusercontent.com/desihub/LSS/d942b990860e016e7558c740966fea3e5ce7e7f3/scripts/mock_tools/prepare_mocks_Y3_bright.py",
+      "snapshot": "upstream_prepare_mocks_Y3_bright.py.txt",
+      "sha256": "97087fecfa4e0a29c8bef8995db811dd7c3b663d3e90062d29cdd80400dbad20"
+    },
+    {
+      "path": "scripts/mock_tools/prepare_mocks_Y1_bright.py",
+      "url": "https://raw.githubusercontent.com/desihub/LSS/d942b990860e016e7558c740966fea3e5ce7e7f3/scripts/mock_tools/prepare_mocks_Y1_bright.py",
+      "snapshot": "upstream_prepare_mocks_Y1_bright.py.txt",
+      "sha256": "260961c3d0f2b2dfba5f05a976c9bfdbddaf739f769b4733a93f6f1cfdb6aa20"
+    },
+    {
+      "path": "scripts/mock_tools/prepare_script_bright_Y3.sh",
+      "url": "https://raw.githubusercontent.com/desihub/LSS/d942b990860e016e7558c740966fea3e5ce7e7f3/scripts/mock_tools/prepare_script_bright_Y3.sh",
+      "snapshot": "upstream_prepare_script_bright_Y3.sh.txt",
+      "sha256": "ffd2c7cad7c1139c955335c6605912fe395b4bb1d087b7f2dfff976a250a7f45"
+    },
+    {
+      "path": "scripts/mock_tools/ab2ndgen_bgsbright02loa_interactive.sh",
+      "url": "https://raw.githubusercontent.com/desihub/LSS/d942b990860e016e7558c740966fea3e5ce7e7f3/scripts/mock_tools/ab2ndgen_bgsbright02loa_interactive.sh",
+      "snapshot": "upstream_ab2ndgen_bgsbright02loa_interactive.sh.txt",
+      "sha256": "b4fd4c002e4f41e11e2e59ca7b2b50035997f2f3044f8d956c879af5779e4f98"
+    },
+    {
+      "path": "scripts/mock_tools/run1_AMTLmock_LSS_BGS.sh",
+      "url": "https://raw.githubusercontent.com/desihub/LSS/d942b990860e016e7558c740966fea3e5ce7e7f3/scripts/mock_tools/run1_AMTLmock_LSS_BGS.sh",
+      "snapshot": "upstream_run1_AMTLmock_LSS_BGS.sh.txt",
+      "sha256": "a3539ee0cde51c6404db09eeb6629e77f9fafef16f018bd90570a6047ef804ae"
+    },
+    {
+      "path": "scripts/mock_tools/mkCat_SecondGen_amtl.py",
+      "url": "https://raw.githubusercontent.com/desihub/LSS/d942b990860e016e7558c740966fea3e5ce7e7f3/scripts/mock_tools/mkCat_SecondGen_amtl.py",
+      "snapshot": "upstream_mkCat_SecondGen_amtl.py.txt",
+      "sha256": "40ea7b89a1b13c06122b6275405667a287777bdec2cf331a3a64e6bf03ec658b"
+    },
+    {
+      "path": "scripts/mock_tools/mkCat_SecondGen.py",
+      "url": "https://raw.githubusercontent.com/desihub/LSS/d942b990860e016e7558c740966fea3e5ce7e7f3/scripts/mock_tools/mkCat_SecondGen.py",
+      "snapshot": "upstream_mkCat_SecondGen.py.txt",
+      "sha256": "694ca01e7d3c57c9a11d2a46d394acefef3a5c8de331225a5c0152494a7d70fd"
+    },
+    {
+      "path": "scripts/mock_tools/mkCat_amtl.py",
+      "url": "https://raw.githubusercontent.com/desihub/LSS/d942b990860e016e7558c740966fea3e5ce7e7f3/scripts/mock_tools/mkCat_amtl.py",
+      "snapshot": "upstream_mkCat_amtl.py.txt",
+      "sha256": "c648ca27e2e9b8f3e8e5835ba88a4085e605347b28bea938fc9f8c75781d6a06"
+    },
+    {
+      "path": "py/LSS/common_tools.py",
+      "url": "https://raw.githubusercontent.com/desihub/LSS/d942b990860e016e7558c740966fea3e5ce7e7f3/py/LSS/common_tools.py",
+      "snapshot": "upstream_common_tools.py.txt",
+      "sha256": "100347fdf3439edd3787946da63ff05a566420916d0cce333f2d28d01911464c"
+    }
+  ]
+}

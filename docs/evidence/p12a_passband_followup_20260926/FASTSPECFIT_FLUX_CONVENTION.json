@@ -1,0 +1,32 @@
+{
+  "source_hashes": {
+    "/global/common/software/desi/perlmutter/desiconda/20240425-2.2.0/code/fastspecfit/3.1.5/lib/python3.10/site-packages/fastspecfit/io.py": "f28df7fe11c42e8821e0fe146c39640b28b7233d5f5a7ca4fcb3d4c7f8037efb",
+    "/global/common/software/desi/perlmutter/desiconda/20240425-2.2.0/code/fastspecfit/3.1.5/lib/python3.10/site-packages/fastspecfit/fastspecfit.py": "cd25fc023ec8fbcfbb871fcc32f8968a479c26c5efcc9f4631ec3315b015507e",
+    "/global/common/software/desi/perlmutter/desiconda/20240425-2.2.0/code/fastspecfit/3.1.5/lib/python3.10/site-packages/fastspecfit/qa.py": "0932b3082c628586c2fb03804e1d30546cc3b86d5ccb3f43374dd326820b2a65"
+  },
+  "input_to_fit": [
+    "",
+    "    # Process the total fluxes, correcting for MW dust.",
+    "    maggies = np.zeros(len(phot.bands))",
+    "    ivarmaggies = np.zeros(len(phot.bands))",
+    "    for iband, (band, fluxcol, ivarcol) in enumerate(zip(phot.bands, phot.fluxcols, phot.fluxivarcols)):",
+    "        transmission = meta[f'MW_TRANSMISSION_{band.upper()}']",
+    "        maggies[iband] = meta[fluxcol.upper()] / transmission",
+    "        ivarmaggies[iband] = meta[ivarcol.upper()] * transmission**2",
+    "",
+    "    if not np.all(ivarmaggies >= 0.):",
+    "        errmsg = 'Some ivarmaggies are negative!'"
+  ],
+  "output_metadata": [
+    "    # Copy parsed photometry from the 'data' dictionary to the 'meta' table.",
+    "    if not fitstack:",
+    "        flux = data['photometry']['nanomaggies']",
+    "        fluxivar = data['photometry']['nanomaggies_ivar']",
+    "        for iband, band in enumerate(phot.bands):",
+    "            meta[f'FLUX_{band.upper()}'] = flux[iband]",
+    "            meta[f'FLUX_IVAR_{band.upper()}'] = fluxivar[iband]",
+    ""
+  ],
+  "rule": "FastSpecFit output FLUX is already MW-corrected. Original Loa LSS FLUX is not. Never divide FastSpecFit output FLUX by MW transmission a second time.",
+  "impact": "Initial follow-up diagnostic only; original production VAC unaffected; affected audit rerun."
+}

@@ -1,0 +1,169 @@
+{
+  "schema": "p12a-quality-cut-census-v1",
+  "source_sha256": "cd1df492ff02b3937fc8ba9f8f167341fd62ec368a3fb89111a466ebdea88e8e",
+  "job": "58824338",
+  "catalogues": {
+    "existing_graphweb": {
+      "path": "/pscratch/sd/d/dkololgi/graphweb_desi/catalogs/bgs_maglim_bright_galaxy_zwarn0_dchi2ge25.fits",
+      "bytes": 687487680,
+      "mtime_ns": 1779188361000000000,
+      "scanned_columns_sha256": "5294d24fc0e607eb7e739709d8b6d9c2680777280e6daa2abbe8d1efa01ae80f",
+      "counts": {
+        "all": {
+          "rows": 9166391,
+          "zwarn0": 9166391,
+          "legacy25": 9166391,
+          "lss40": 9130686,
+          "galaxy": 9166391,
+          "delta25_to40": 35705,
+          "delta_equal40": 0,
+          "finite_positive_z": 9160399,
+          "legacy_only": 35705,
+          "lss_only": 0
+        },
+        "active": {
+          "rows": 6466730,
+          "zwarn0": 6466730,
+          "legacy25": 6466730,
+          "lss40": 6449978,
+          "galaxy": 6466730,
+          "delta25_to40": 16752,
+          "delta_equal40": 0,
+          "finite_positive_z": 6466730,
+          "legacy_only": 16752,
+          "lss_only": 0
+        },
+        "shell0": {
+          "rows": 3099385,
+          "zwarn0": 3099385,
+          "legacy25": 3099385,
+          "lss40": 3093107,
+          "galaxy": 3099385,
+          "delta25_to40": 6278,
+          "delta_equal40": 0,
+          "finite_positive_z": 3099385,
+          "legacy_only": 6278,
+          "lss_only": 0
+        },
+        "shell1": {
+          "rows": 2084062,
+          "zwarn0": 2084062,
+          "legacy25": 2084062,
+          "lss40": 2079120,
+          "galaxy": 2084062,
+          "delta25_to40": 4942,
+          "delta_equal40": 0,
+          "finite_positive_z": 2084062,
+          "legacy_only": 4942,
+          "lss_only": 0
+        },
+        "shell2": {
+          "rows": 1036595,
+          "zwarn0": 1036595,
+          "legacy25": 1036595,
+          "lss40": 1033578,
+          "galaxy": 1036595,
+          "delta25_to40": 3017,
+          "delta_equal40": 0,
+          "finite_positive_z": 1036595,
+          "legacy_only": 3017,
+          "lss_only": 0
+        },
+        "shell3": {
+          "rows": 246688,
+          "zwarn0": 246688,
+          "legacy25": 246688,
+          "lss40": 244173,
+          "galaxy": 246688,
+          "delta25_to40": 2515,
+          "delta_equal40": 0,
+          "finite_positive_z": 246688,
+          "legacy_only": 2515,
+          "lss_only": 0
+        }
+      }
+    },
+    "loa_full": {
+      "path": "/global/cfs/cdirs/desi/survey/catalogs/DA2/LSS/loa-v1/LSScats/v2.1/BGS_BRIGHT_full_HPmapcut.dat.fits",
+      "bytes": 8026796160,
+      "mtime_ns": 1771271470000000000,
+      "scanned_columns_sha256": "d706abafa812e994fead9fd636fae9c5d36205e1f2eef4680e788ffeedd823e8",
+      "counts": {
+        "all": {
+          "rows": 10631484,
+          "zwarn0": 8020230,
+          "legacy25": 7851730,
+          "lss40": 7960522,
+          "galaxy": 7913415,
+          "delta25_to40": 30476,
+          "delta_equal40": 0,
+          "finite_positive_z": 10586812,
+          "legacy_only": 29538,
+          "lss_only": 138330
+        },
+        "active": {
+          "rows": 5514226,
+          "zwarn0": 5504897,
+          "legacy25": 5436413,
+          "lss40": 5481423,
+          "galaxy": 5455767,
+          "delta25_to40": 13330,
+          "delta_equal40": 0,
+          "finite_positive_z": 5514226,
+          "legacy_only": 13293,
+          "lss_only": 58303
+        },
+        "shell0": {
+          "rows": 2810469,
+          "zwarn0": 2807957,
+          "legacy25": 2781814,
+          "lss40": 2799258,
+          "galaxy": 2787835,
+          "delta25_to40": 5184,
+          "delta_equal40": 0,
+          "finite_positive_z": 2810469,
+          "legacy_only": 5184,
+          "lss_only": 22628
+        },
+        "shell1": {
+          "rows": 1833856,
+          "zwarn0": 1831545,
+          "legacy25": 1807178,
+          "lss40": 1824708,
+          "galaxy": 1812375,
+          "delta25_to40": 3943,
+          "delta_equal40": 0,
+          "finite_positive_z": 1833856,
+          "legacy_only": 3938,
+          "lss_only": 21468
+        },
+        "shell2": {
+          "rows": 725218,
+          "zwarn0": 723517,
+          "legacy25": 710093,
+          "lss40": 719323,
+          "galaxy": 713638,
+          "delta25_to40": 2328,
+          "delta_equal40": 0,
+          "finite_positive_z": 725218,
+          "legacy_only": 2318,
+          "lss_only": 11548
+        },
+        "shell3": {
+          "rows": 144683,
+          "zwarn0": 141878,
+          "legacy25": 137328,
+          "lss40": 138134,
+          "galaxy": 141919,
+          "delta25_to40": 1875,
+          "delta_equal40": 0,
+          "finite_positive_z": 144683,
+          "legacy_only": 1853,
+          "lss_only": 2659
+        }
+      }
+    }
+  },
+  "selection_adopted": false,
+  "ready_for_desi_canary": false
+}

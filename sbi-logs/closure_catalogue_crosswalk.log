@@ -1,0 +1,25 @@
+real_kibo 10623164 [797652, 519907, 204721, 41659, 1973004, 1280219, 502706, 95200] 5164
+real_loa 10631484 [799947, 521105, 205287, 41741, 1981867, 1286073, 504806, 95587] 5165
+mock_kibo 9140805 [775671, 479734, 160714, 21258, 1928976, 1155840, 396169, 49846] 5164
+Traceback (most recent call last):
+  File "/global/u2/d/dkololgi/GraphWeb_DESI/workflows/p12a_vac/closure_catalogue_crosswalk.py", line 39, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/global/u2/d/dkololgi/GraphWeb_DESI/workflows/p12a_vac/closure_catalogue_crosswalk.py", line 34, in main
+    r,ids,z=scan(path,key.startswith('real'),common);results[key]=r;arr[key]=(ids,z);print(key,r['rows'],r['stages']['success'],len(r['tiles']),flush=True)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/global/u2/d/dkololgi/GraphWeb_DESI/workflows/p12a_vac/closure_catalogue_crosswalk.py", line 13, in scan
+    sl=slice(start,min(start+250000,nr));d={k:tab[k][sl] for k in ['TARGETID','RA','DEC','Z_not4clus','ZWARN','NTILE','TILEID','TILES','GOODHARDLOC','GOODPRI','LOCATION_ASSIGNED'] if k in keys} if is_h5 else tab[sl];n+=len(d['TARGETID']);z=d['Z_not4clus'];shell=np.searchsorted([.15,.25,.35,.45,.55],z,side='right')-1;valid=np.isfinite(z)&(shell>=0)&(shell<4);good=valid&(d['ZWARN']==0)
+                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/global/u2/d/dkololgi/GraphWeb_DESI/workflows/p12a_vac/closure_catalogue_crosswalk.py", line 13, in <dictcomp>
+    sl=slice(start,min(start+250000,nr));d={k:tab[k][sl] for k in ['TARGETID','RA','DEC','Z_not4clus','ZWARN','NTILE','TILEID','TILES','GOODHARDLOC','GOODPRI','LOCATION_ASSIGNED'] if k in keys} if is_h5 else tab[sl];n+=len(d['TARGETID']);z=d['Z_not4clus'];shell=np.searchsorted([.15,.25,.35,.45,.55],z,side='right')-1;valid=np.isfinite(z)&(shell>=0)&(shell<4);good=valid&(d['ZWARN']==0)
+                                              ~~~~~~^^^^
+  File "h5py/_objects.pyx", line 54, in h5py._objects.with_phil.wrapper
+  File "h5py/_objects.pyx", line 55, in h5py._objects.with_phil.wrapper
+  File "/pscratch/sd/d/dkololgi/conda/envs/cosmic_env/lib/python3.11/site-packages/h5py/_hl/dataset.py", line 840, in __getitem__
+    return self._fast_reader.read(args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "h5py/_selector.pyx", line 375, in h5py._selector.Reader.read
+OSError: Can't synchronously read data (can't open directory (/pscratch/sd/d/dkololgi/conda/envs/cosmic_env/lib/hdf5/plugin). Please verify its existence)
+srun: error: nid001029: task 0: Exited with exit code 1
+srun: Terminating StepId=58885256.0

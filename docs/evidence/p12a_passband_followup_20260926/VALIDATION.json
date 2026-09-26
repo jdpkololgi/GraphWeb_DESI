@@ -1,0 +1,24 @@
+{
+  "passed": true,
+  "checks": [
+    "SAME_GALAXY source hash and syntax",
+    "SDSS_IMAGING_PAIRS source hash and syntax",
+    "CATALOGUE_PARITY source hash and syntax",
+    "unique target IDs, finite synthesis, model-colour replay below 0.00002 mag",
+    "unique imaging matches below 1 arcsec",
+    "corrected FastSpecFit flux matches Loa divided once by FastSpecFit MW transmission; colour difference below .001mag"
+  ],
+  "script_sha256": "64fbfa5021af13736cc18f9b95f5a348762528267dfb2059df462e175c8b423e",
+  "files": {
+    "PARITY_ROWS.npz": "e8d95a8fa07578190d62436bec6d5741a64fe7627d7c378ab132ff526b0e14b6",
+    "SAME_GALAXY_SAMPLE.npz": "4c133d3ff701d7257ef18405b241311c88dcf34fae3baeb4d15379335cb30e54",
+    "module_swap_probe.txt": "411c422189a031681ad6a1a36a9bb9eb411c30fce8ad742c8d2b6aba1e7a1174",
+    "FASTSPECFIT_FLUX_CONVENTION.json": "498ce30bc84d0fa57b638d1200557195aad0e8c88c441d88e59f08c1e1eb4816",
+    "SDSS_IMAGING_PAIRS.json": "164ee1a868f8937891ff0d16a2b721062e93558e89db428bab1d018756acdd5b",
+    "SAME_GALAXY.json": "ec640f5745f6ce95d46b18d2ae47f2a180c86bea188769c7e0e31bc534a6ea53",
+    "CATALOGUE_PARITY.json": "308fca335084b5db6be08a8f567db3a620a7515507b5f641b31da8de1eef573f",
+    "fiberassign_version_history.txt": "ebee0dcf66f9b121d3d29f856e6c6193455d00d37858d21a633f08919b78230b",
+    "MODULE_PROVENANCE.json": "3d96e562b88d8e6c14358b98c1a692042e581a89afebcc739adf921794ff3bb7",
+    "SED_ROBUSTNESS.json": "26c0665a26521a0a36f5d3bdd6e179740778238078ed07c43c3673ff37844bfd"
+  }
+}

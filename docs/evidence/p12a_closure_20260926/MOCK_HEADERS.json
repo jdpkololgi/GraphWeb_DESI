@@ -1,0 +1,1680 @@
+{
+  "forFA6_nomask.fits": [
+    [
+      {
+        "name": "SIMPLE",
+        "value": true,
+        "comment": "conforms to FITS standard"
+      },
+      {
+        "name": "BITPIX",
+        "value": 8,
+        "comment": "array data type"
+      },
+      {
+        "name": "NAXIS",
+        "value": 0,
+        "comment": "number of array dimensions"
+      },
+      {
+        "name": "EXTEND",
+        "value": true,
+        "comment": ""
+      }
+    ],
+    [
+      {
+        "name": "XTENSION",
+        "value": "BINTABLE",
+        "comment": "binary table extension"
+      },
+      {
+        "name": "BITPIX",
+        "value": 8,
+        "comment": "array data type"
+      },
+      {
+        "name": "NAXIS",
+        "value": 2,
+        "comment": "number of array dimensions"
+      },
+      {
+        "name": "NAXIS1",
+        "value": 148,
+        "comment": "length of dimension 1"
+      },
+      {
+        "name": "NAXIS2",
+        "value": 18062024,
+        "comment": "length of dimension 2"
+      },
+      {
+        "name": "PCOUNT",
+        "value": 0,
+        "comment": "number of group parameters"
+      },
+      {
+        "name": "GCOUNT",
+        "value": 1,
+        "comment": "number of groups"
+      },
+      {
+        "name": "TFIELDS",
+        "value": 22,
+        "comment": "number of table fields"
+      },
+      {
+        "name": "EXTNAME",
+        "value": "TARGETS",
+        "comment": ""
+      },
+      {
+        "name": "OBSCON",
+        "value": "BRIGHT",
+        "comment": ""
+      }
+    ]
+  ],
+  "altmtl6/fba6/datcomb_brightwdup.fits": [
+    [
+      {
+        "name": "SIMPLE",
+        "value": true,
+        "comment": "file does conform to FITS standard"
+      },
+      {
+        "name": "BITPIX",
+        "value": 16,
+        "comment": "number of bits per data pixel"
+      },
+      {
+        "name": "NAXIS",
+        "value": 0,
+        "comment": "number of data axes"
+      },
+      {
+        "name": "EXTEND",
+        "value": true,
+        "comment": "FITS dataset may contain extensions"
+      },
+      {
+        "name": "COMMENT",
+        "value": "  FITS (Flexible Image Transport System) format is defined in 'Astronomy",
+        "comment": "  FITS (Flexible Image Transport System) format is defined in 'Astronomy"
+      },
+      {
+        "name": "COMMENT",
+        "value": "  and Astrophysics', volume 376, page 359; bibcode: 2001A&A...376..359H",
+        "comment": "  and Astrophysics', volume 376, page 359; bibcode: 2001A&A...376..359H"
+      }
+    ],
+    [
+      {
+        "name": "XTENSION",
+        "value": "BINTABLE",
+        "comment": "binary table extension"
+      },
+      {
+        "name": "BITPIX",
+        "value": 8,
+        "comment": "8-bit bytes"
+      },
+      {
+        "name": "NAXIS",
+        "value": 2,
+        "comment": "2-dimensional binary table"
+      },
+      {
+        "name": "NAXIS1",
+        "value": 76,
+        "comment": "width of table in bytes"
+      },
+      {
+        "name": "NAXIS2",
+        "value": 46038940,
+        "comment": "number of rows in table"
+      },
+      {
+        "name": "PCOUNT",
+        "value": 0,
+        "comment": "size of special data area"
+      },
+      {
+        "name": "GCOUNT",
+        "value": 1,
+        "comment": "one data group (required keyword)"
+      },
+      {
+        "name": "TFIELDS",
+        "value": 12,
+        "comment": "number of fields in each row"
+      },
+      {
+        "name": "EXTNAME",
+        "value": "LSS",
+        "comment": "name of this binary table extension"
+      }
+    ]
+  ],
+  "mock6/pota-BRIGHT.fits": [
+    [
+      {
+        "name": "SIMPLE",
+        "value": true,
+        "comment": "file does conform to FITS standard"
+      },
+      {
+        "name": "BITPIX",
+        "value": 16,
+        "comment": "number of bits per data pixel"
+      },
+      {
+        "name": "NAXIS",
+        "value": 0,
+        "comment": "number of data axes"
+      },
+      {
+        "name": "EXTEND",
+        "value": true,
+        "comment": "FITS dataset may contain extensions"
+      },
+      {
+        "name": "COMMENT",
+        "value": "  FITS (Flexible Image Transport System) format is defined in 'Astronomy",
+        "comment": "  FITS (Flexible Image Transport System) format is defined in 'Astronomy"
+      },
+      {
+        "name": "COMMENT",
+        "value": "  and Astrophysics', volume 376, page 359; bibcode: 2001A&A...376..359H",
+        "comment": "  and Astrophysics', volume 376, page 359; bibcode: 2001A&A...376..359H"
+      }
+    ],
+    [
+      {
+        "name": "XTENSION",
+        "value": "BINTABLE",
+        "comment": "binary table extension"
+      },
+      {
+        "name": "BITPIX",
+        "value": 8,
+        "comment": "8-bit bytes"
+      },
+      {
+        "name": "NAXIS",
+        "value": 2,
+        "comment": "2-dimensional binary table"
+      },
+      {
+        "name": "NAXIS1",
+        "value": 213,
+        "comment": "width of table in bytes"
+      },
+      {
+        "name": "NAXIS2",
+        "value": 46039007,
+        "comment": "number of rows in table"
+      },
+      {
+        "name": "PCOUNT",
+        "value": 0,
+        "comment": "size of special data area"
+      },
+      {
+        "name": "GCOUNT",
+        "value": 1,
+        "comment": "one data group (required keyword)"
+      },
+      {
+        "name": "TFIELDS",
+        "value": 31,
+        "comment": "number of fields in each row"
+      },
+      {
+        "name": "EXTNAME",
+        "value": "LSS",
+        "comment": "name of this binary table extension"
+      }
+    ]
+  ],
+  "altmtl6/Univ000/fa/MAIN/20210514/fba-020090.fits": [
+    [
+      {
+        "name": "SIMPLE",
+        "value": true,
+        "comment": "file does conform to FITS standard"
+      },
+      {
+        "name": "BITPIX",
+        "value": 16,
+        "comment": "number of bits per data pixel"
+      },
+      {
+        "name": "NAXIS",
+        "value": 0,
+        "comment": "number of data axes"
+      },
+      {
+        "name": "EXTEND",
+        "value": true,
+        "comment": "FITS dataset may contain extensions"
+      },
+      {
+        "name": "COMMENT",
+        "value": "  FITS (Flexible Image Transport System) format is defined in 'Astronomy",
+        "comment": "  FITS (Flexible Image Transport System) format is defined in 'Astronomy"
+      },
+      {
+        "name": "COMMENT",
+        "value": "  and Astrophysics', volume 376, page 359; bibcode: 2001A&A...376..359H",
+        "comment": "  and Astrophysics', volume 376, page 359; bibcode: 2001A&A...376..359H"
+      },
+      {
+        "name": "EXTNAME",
+        "value": "PRIMARY",
+        "comment": ""
+      },
+      {
+        "name": "TILEID",
+        "value": 20090,
+        "comment": ""
+      },
+      {
+        "name": "TILERA",
+        "value": 210.086,
+        "comment": ""
+      },
+      {
+        "name": "TILEDEC",
+        "value": -7.111,
+        "comment": ""
+      },
+      {
+        "name": "FIELDROT",
+        "value": -0.063434203499369,
+        "comment": ""
+      },
+      {
+        "name": "FA_PLAN",
+        "value": "2022-07-01T00:00:00.000",
+        "comment": ""
+      },
+      {
+        "name": "FA_HA",
+        "value": -0.28,
+        "comment": ""
+      },
+      {
+        "name": "FA_RUN",
+        "value": "2021-05-14T23:48:14+00:00",
+        "comment": ""
+      },
+      {
+        "name": "FA_M_GFA",
+        "value": 0.4,
+        "comment": ""
+      },
+      {
+        "name": "FA_M_PET",
+        "value": 0.4,
+        "comment": ""
+      },
+      {
+        "name": "FA_M_POS",
+        "value": 0.05,
+        "comment": ""
+      },
+      {
+        "name": "REQRA",
+        "value": 210.086,
+        "comment": ""
+      },
+      {
+        "name": "REQDEC",
+        "value": -7.111,
+        "comment": ""
+      },
+      {
+        "name": "FIELDNUM",
+        "value": 0,
+        "comment": ""
+      },
+      {
+        "name": "FA_VER",
+        "value": "5.7.2.dev3588",
+        "comment": ""
+      },
+      {
+        "name": "FA_SURV",
+        "value": "main",
+        "comment": ""
+      },
+      {
+        "name": "DEPNAM00",
+        "value": "python",
+        "comment": ""
+      },
+      {
+        "name": "DEPVER00",
+        "value": "3.10.14",
+        "comment": ""
+      },
+      {
+        "name": "DEPNAM01",
+        "value": "numpy",
+        "comment": ""
+      },
+      {
+        "name": "DEPVER01",
+        "value": "1.22.4",
+        "comment": ""
+      },
+      {
+        "name": "DEPNAM02",
+        "value": "scipy",
+        "comment": ""
+      },
+      {
+        "name": "DEPVER02",
+        "value": "1.8.1",
+        "comment": ""
+      },
+      {
+        "name": "DEPNAM03",
+        "value": "astropy",
+        "comment": ""
+      },
+      {
+        "name": "DEPVER03",
+        "value": "6.0.1",
+        "comment": ""
+      },
+      {
+        "name": "DEPNAM04",
+        "value": "yaml",
+        "comment": ""
+      },
+      {
+        "name": "DEPVER04",
+        "value": "6.0.1",
+        "comment": ""
+      },
+      {
+        "name": "DEPNAM05",
+        "value": "matplotlib",
+        "comment": ""
+      },
+      {
+        "name": "DEPVER05",
+        "value": "3.8.4",
+        "comment": ""
+      },
+      {
+        "name": "DEPNAM06",
+        "value": "requests",
+        "comment": ""
+      },
+      {
+        "name": "DEPVER06",
+        "value": "2.31.0",
+        "comment": ""
+      },
+      {
+        "name": "DEPNAM07",
+        "value": "fitsio",
+        "comment": ""
+      },
+      {
+        "name": "DEPVER07",
+        "value": "1.2.1",
+        "comment": ""
+      },
+      {
+        "name": "DEPNAM08",
+        "value": "healpy",
+        "comment": ""
+      },
+      {
+        "name": "DEPVER08",
+        "value": "1.16.6",
+        "comment": ""
+      },
+      {
+        "name": "DEPNAM09",
+        "value": "desiutil",
+        "comment": ""
+      },
+      {
+        "name": "DEPVER09",
+        "value": "3.4.4.dev1122",
+        "comment": ""
+      },
+      {
+        "name": "DEPNAM10",
+        "value": "desitarget",
+        "comment": ""
+      },
+      {
+        "name": "DEPVER10",
+        "value": "2.8.0.dev5597",
+        "comment": ""
+      },
+      {
+        "name": "DEPNAM11",
+        "value": "desimodel",
+        "comment": ""
+      },
+      {
+        "name": "DEPVER11",
+        "value": "0.19.2.dev767",
+        "comment": ""
+      },
+      {
+        "name": "DEPNAM12",
+        "value": "desimeter",
+        "comment": ""
+      },
+      {
+        "name": "DEPVER12",
+        "value": "0.7.2.dev1151",
+        "comment": ""
+      },
+      {
+        "name": "DEPNAM13",
+        "value": "fiberassign",
+        "comment": ""
+      },
+      {
+        "name": "DEPVER13",
+        "value": "5.7.2.dev3588",
+        "comment": ""
+      },
+      {
+        "name": "DEPNAM14",
+        "value": "DESI_ROOT",
+        "comment": ""
+      },
+      {
+        "name": "DEPVER14",
+        "value": "/global/cfs/cdirs/desi",
+        "comment": ""
+      },
+      {
+        "name": "DEPNAM15",
+        "value": "DESI_SPECTRO_DATA",
+        "comment": ""
+      },
+      {
+        "name": "DEPVER15",
+        "value": "/global/cfs/cdirs/desi/spectro/data",
+        "comment": ""
+      },
+      {
+        "name": "DEPNAM16",
+        "value": "DESI_SPECTRO_REDUX",
+        "comment": ""
+      },
+      {
+        "name": "DEPVER16",
+        "value": "/global/cfs/cdirs/desi/spectro/redux",
+        "comment": ""
+      },
+      {
+        "name": "DEPNAM17",
+        "value": "SPECPROD",
+        "comment": ""
+      },
+      {
+        "name": "DEPVER17",
+        "value": "acarnero",
+        "comment": ""
+      },
+      {
+        "name": "DEPNAM18",
+        "value": "DESI_SPECTRO_CALIB",
+        "comment": ""
+      },
+      {
+        "name": "DEPVER18",
+        "value": "/global/cfs/cdirs/desi/spectro/desi_spectro_calib/trunk",
+        "comment": ""
+      },
+      {
+        "name": "DEPNAM19",
+        "value": "DESI_BASIS_TEMPLATES",
+        "comment": ""
+      },
+      {
+        "name": "DEPVER19",
+        "value": "/global/cfs/cdirs/desi/spectro/templates/basis_templates/v3.2",
+        "comment": ""
+      },
+      {
+        "name": "DEPNAM20",
+        "value": "DESI_TARGET",
+        "comment": ""
+      },
+      {
+        "name": "DEPVER20",
+        "value": "/global/cfs/cdirs/desi/target",
+        "comment": ""
+      },
+      {
+        "name": "DEPNAM21",
+        "value": "DESIMODEL",
+        "comment": ""
+      },
+      {
+        "name": "DEPVER21",
+        "value": "/global/common/software/desi/perlmutter/desiconda/20240425-2.2.0/code/desimodel/main",
+        "comment": ""
+      },
+      {
+        "name": "DEPNAM22",
+        "value": "SKYBRICKS_DIR",
+        "comment": ""
+      },
+      {
+        "name": "DEPVER22",
+        "value": "$DESI_ROOT/target/skybricks/v3",
+        "comment": ""
+      },
+      {
+        "name": "DEPNAM23",
+        "value": "SKYHEALPIXS_DIR",
+        "comment": ""
+      },
+      {
+        "name": "DEPVER23",
+        "value": null,
+        "comment": ""
+      }
+    ],
+    [
+      {
+        "name": "XTENSION",
+        "value": "BINTABLE",
+        "comment": "binary table extension"
+      },
+      {
+        "name": "BITPIX",
+        "value": 8,
+        "comment": "8-bit bytes"
+      },
+      {
+        "name": "NAXIS",
+        "value": 2,
+        "comment": "2-dimensional binary table"
+      },
+      {
+        "name": "NAXIS1",
+        "value": 82,
+        "comment": "width of table in bytes"
+      },
+      {
+        "name": "NAXIS2",
+        "value": 5020,
+        "comment": "number of rows in table"
+      },
+      {
+        "name": "PCOUNT",
+        "value": 0,
+        "comment": "size of special data area"
+      },
+      {
+        "name": "GCOUNT",
+        "value": 1,
+        "comment": "one data group (required keyword)"
+      },
+      {
+        "name": "TFIELDS",
+        "value": 16,
+        "comment": "number of fields in each row"
+      },
+      {
+        "name": "EXTNAME",
+        "value": "FASSIGN",
+        "comment": "name of this binary table extension"
+      },
+      {
+        "name": "TILEID",
+        "value": 20090,
+        "comment": ""
+      },
+      {
+        "name": "TILERA",
+        "value": 210.086,
+        "comment": ""
+      },
+      {
+        "name": "TILEDEC",
+        "value": -7.111,
+        "comment": ""
+      },
+      {
+        "name": "FIELDROT",
+        "value": -0.063434203499369,
+        "comment": ""
+      },
+      {
+        "name": "FA_PLAN",
+        "value": "2022-07-01T00:00:00.000",
+        "comment": ""
+      },
+      {
+        "name": "FA_HA",
+        "value": -0.28,
+        "comment": ""
+      },
+      {
+        "name": "FA_RUN",
+        "value": "2021-05-14T23:48:14+00:00",
+        "comment": ""
+      },
+      {
+        "name": "FA_M_GFA",
+        "value": 0.4,
+        "comment": ""
+      },
+      {
+        "name": "FA_M_PET",
+        "value": 0.4,
+        "comment": ""
+      },
+      {
+        "name": "FA_M_POS",
+        "value": 0.05,
+        "comment": ""
+      },
+      {
+        "name": "REQRA",
+        "value": 210.086,
+        "comment": ""
+      },
+      {
+        "name": "REQDEC",
+        "value": -7.111,
+        "comment": ""
+      },
+      {
+        "name": "FIELDNUM",
+        "value": 0,
+        "comment": ""
+      },
+      {
+        "name": "FA_VER",
+        "value": "5.7.2.dev3588",
+        "comment": ""
+      },
+      {
+        "name": "FA_SURV",
+        "value": "main",
+        "comment": ""
+      },
+      {
+        "name": "DEPNAM00",
+        "value": "python",
+        "comment": ""
+      },
+      {
+        "name": "DEPVER00",
+        "value": "3.10.14",
+        "comment": ""
+      },
+      {
+        "name": "DEPNAM01",
+        "value": "numpy",
+        "comment": ""
+      },
+      {
+        "name": "DEPVER01",
+        "value": "1.22.4",
+        "comment": ""
+      },
+      {
+        "name": "DEPNAM02",
+        "value": "scipy",
+        "comment": ""
+      },
+      {
+        "name": "DEPVER02",
+        "value": "1.8.1",
+        "comment": ""
+      },
+      {
+        "name": "DEPNAM03",
+        "value": "astropy",
+        "comment": ""
+      },
+      {
+        "name": "DEPVER03",
+        "value": "6.0.1",
+        "comment": ""
+      },
+      {
+        "name": "DEPNAM04",
+        "value": "yaml",
+        "comment": ""
+      },
+      {
+        "name": "DEPVER04",
+        "value": "6.0.1",
+        "comment": ""
+      },
+      {
+        "name": "DEPNAM05",
+        "value": "matplotlib",
+        "comment": ""
+      },
+      {
+        "name": "DEPVER05",
+        "value": "3.8.4",
+        "comment": ""
+      },
+      {
+        "name": "DEPNAM06",
+        "value": "requests",
+        "comment": ""
+      },
+      {
+        "name": "DEPVER06",
+        "value": "2.31.0",
+        "comment": ""
+      },
+      {
+        "name": "DEPNAM07",
+        "value": "fitsio",
+        "comment": ""
+      },
+      {
+        "name": "DEPVER07",
+        "value": "1.2.1",
+        "comment": ""
+      },
+      {
+        "name": "DEPNAM08",
+        "value": "healpy",
+        "comment": ""
+      },
+      {
+        "name": "DEPVER08",
+        "value": "1.16.6",
+        "comment": ""
+      },
+      {
+        "name": "DEPNAM09",
+        "value": "desiutil",
+        "comment": ""
+      },
+      {
+        "name": "DEPVER09",
+        "value": "3.4.4.dev1122",
+        "comment": ""
+      },
+      {
+        "name": "DEPNAM10",
+        "value": "desitarget",
+        "comment": ""
+      },
+      {
+        "name": "DEPVER10",
+        "value": "2.8.0.dev5597",
+        "comment": ""
+      },
+      {
+        "name": "DEPNAM11",
+        "value": "desimodel",
+        "comment": ""
+      },
+      {
+        "name": "DEPVER11",
+        "value": "0.19.2.dev767",
+        "comment": ""
+      },
+      {
+        "name": "DEPNAM12",
+        "value": "desimeter",
+        "comment": ""
+      },
+      {
+        "name": "DEPVER12",
+        "value": "0.7.2.dev1151",
+        "comment": ""
+      },
+      {
+        "name": "DEPNAM13",
+        "value": "fiberassign",
+        "comment": ""
+      },
+      {
+        "name": "DEPVER13",
+        "value": "5.7.2.dev3588",
+        "comment": ""
+      },
+      {
+        "name": "DEPNAM14",
+        "value": "DESI_ROOT",
+        "comment": ""
+      },
+      {
+        "name": "DEPVER14",
+        "value": "/global/cfs/cdirs/desi",
+        "comment": ""
+      },
+      {
+        "name": "DEPNAM15",
+        "value": "DESI_SPECTRO_DATA",
+        "comment": ""
+      },
+      {
+        "name": "DEPVER15",
+        "value": "/global/cfs/cdirs/desi/spectro/data",
+        "comment": ""
+      },
+      {
+        "name": "DEPNAM16",
+        "value": "DESI_SPECTRO_REDUX",
+        "comment": ""
+      },
+      {
+        "name": "DEPVER16",
+        "value": "/global/cfs/cdirs/desi/spectro/redux",
+        "comment": ""
+      },
+      {
+        "name": "DEPNAM17",
+        "value": "SPECPROD",
+        "comment": ""
+      },
+      {
+        "name": "DEPVER17",
+        "value": "acarnero",
+        "comment": ""
+      },
+      {
+        "name": "DEPNAM18",
+        "value": "DESI_SPECTRO_CALIB",
+        "comment": ""
+      },
+      {
+        "name": "DEPVER18",
+        "value": "/global/cfs/cdirs/desi/spectro/desi_spectro_calib/trunk",
+        "comment": ""
+      },
+      {
+        "name": "DEPNAM19",
+        "value": "DESI_BASIS_TEMPLATES",
+        "comment": ""
+      },
+      {
+        "name": "DEPVER19",
+        "value": "/global/cfs/cdirs/desi/spectro/templates/basis_templates/v3.2",
+        "comment": ""
+      },
+      {
+        "name": "DEPNAM20",
+        "value": "DESI_TARGET",
+        "comment": ""
+      },
+      {
+        "name": "DEPVER20",
+        "value": "/global/cfs/cdirs/desi/target",
+        "comment": ""
+      },
+      {
+        "name": "DEPNAM21",
+        "value": "DESIMODEL",
+        "comment": ""
+      },
+      {
+        "name": "DEPVER21",
+        "value": "/global/common/software/desi/perlmutter/desiconda/20240425-2.2.0/code/desimodel/main",
+        "comment": ""
+      },
+      {
+        "name": "DEPNAM22",
+        "value": "SKYBRICKS_DIR",
+        "comment": ""
+      },
+      {
+        "name": "DEPVER22",
+        "value": "$DESI_ROOT/target/skybricks/v3",
+        "comment": ""
+      },
+      {
+        "name": "DEPNAM23",
+        "value": "SKYHEALPIXS_DIR",
+        "comment": ""
+      },
+      {
+        "name": "DEPVER23",
+        "value": null,
+        "comment": ""
+      }
+    ],
+    [
+      {
+        "name": "XTENSION",
+        "value": "BINTABLE",
+        "comment": "binary table extension"
+      },
+      {
+        "name": "BITPIX",
+        "value": 8,
+        "comment": "8-bit bytes"
+      },
+      {
+        "name": "NAXIS",
+        "value": 2,
+        "comment": "2-dimensional binary table"
+      },
+      {
+        "name": "NAXIS1",
+        "value": 65,
+        "comment": "width of table in bytes"
+      },
+      {
+        "name": "NAXIS2",
+        "value": 4200,
+        "comment": "number of rows in table"
+      },
+      {
+        "name": "PCOUNT",
+        "value": 0,
+        "comment": "size of special data area"
+      },
+      {
+        "name": "GCOUNT",
+        "value": 1,
+        "comment": "one data group (required keyword)"
+      },
+      {
+        "name": "TFIELDS",
+        "value": 10,
+        "comment": "number of fields in each row"
+      },
+      {
+        "name": "EXTNAME",
+        "value": "FTARGETS",
+        "comment": "name of this binary table extension"
+      },
+      {
+        "name": "TILEID",
+        "value": 20090,
+        "comment": ""
+      },
+      {
+        "name": "TILERA",
+        "value": 210.086,
+        "comment": ""
+      },
+      {
+        "name": "TILEDEC",
+        "value": -7.111,
+        "comment": ""
+      },
+      {
+        "name": "FIELDROT",
+        "value": -0.063434203499369,
+        "comment": ""
+      },
+      {
+        "name": "FA_PLAN",
+        "value": "2022-07-01T00:00:00.000",
+        "comment": ""
+      },
+      {
+        "name": "FA_HA",
+        "value": -0.28,
+        "comment": ""
+      },
+      {
+        "name": "FA_RUN",
+        "value": "2021-05-14T23:48:14+00:00",
+        "comment": ""
+      },
+      {
+        "name": "FA_M_GFA",
+        "value": 0.4,
+        "comment": ""
+      },
+      {
+        "name": "FA_M_PET",
+        "value": 0.4,
+        "comment": ""
+      },
+      {
+        "name": "FA_M_POS",
+        "value": 0.05,
+        "comment": ""
+      },
+      {
+        "name": "REQRA",
+        "value": 210.086,
+        "comment": ""
+      },
+      {
+        "name": "REQDEC",
+        "value": -7.111,
+        "comment": ""
+      },
+      {
+        "name": "FIELDNUM",
+        "value": 0,
+        "comment": ""
+      },
+      {
+        "name": "FA_VER",
+        "value": "5.7.2.dev3588",
+        "comment": ""
+      },
+      {
+        "name": "FA_SURV",
+        "value": "main",
+        "comment": ""
+      },
+      {
+        "name": "DEPNAM00",
+        "value": "python",
+        "comment": ""
+      },
+      {
+        "name": "DEPVER00",
+        "value": "3.10.14",
+        "comment": ""
+      },
+      {
+        "name": "DEPNAM01",
+        "value": "numpy",
+        "comment": ""
+      },
+      {
+        "name": "DEPVER01",
+        "value": "1.22.4",
+        "comment": ""
+      },
+      {
+        "name": "DEPNAM02",
+        "value": "scipy",
+        "comment": ""
+      },
+      {
+        "name": "DEPVER02",
+        "value": "1.8.1",
+        "comment": ""
+      },
+      {
+        "name": "DEPNAM03",
+        "value": "astropy",
+        "comment": ""
+      },
+      {
+        "name": "DEPVER03",
+        "value": "6.0.1",
+        "comment": ""
+      },
+      {
+        "name": "DEPNAM04",
+        "value": "yaml",
+        "comment": ""
+      },
+      {
+        "name": "DEPVER04",
+        "value": "6.0.1",
+        "comment": ""
+      },
+      {
+        "name": "DEPNAM05",
+        "value": "matplotlib",
+        "comment": ""
+      },
+      {
+        "name": "DEPVER05",
+        "value": "3.8.4",
+        "comment": ""
+      },
+      {
+        "name": "DEPNAM06",
+        "value": "requests",
+        "comment": ""
+      },
+      {
+        "name": "DEPVER06",
+        "value": "2.31.0",
+        "comment": ""
+      },
+      {
+        "name": "DEPNAM07",
+        "value": "fitsio",
+        "comment": ""
+      },
+      {
+        "name": "DEPVER07",
+        "value": "1.2.1",
+        "comment": ""
+      },
+      {
+        "name": "DEPNAM08",
+        "value": "healpy",
+        "comment": ""
+      },
+      {
+        "name": "DEPVER08",
+        "value": "1.16.6",
+        "comment": ""
+      },
+      {
+        "name": "DEPNAM09",
+        "value": "desiutil",
+        "comment": ""
+      },
+      {
+        "name": "DEPVER09",
+        "value": "3.4.4.dev1122",
+        "comment": ""
+      },
+      {
+        "name": "DEPNAM10",
+        "value": "desitarget",
+        "comment": ""
+      },
+      {
+        "name": "DEPVER10",
+        "value": "2.8.0.dev5597",
+        "comment": ""
+      },
+      {
+        "name": "DEPNAM11",
+        "value": "desimodel",
+        "comment": ""
+      },
+      {
+        "name": "DEPVER11",
+        "value": "0.19.2.dev767",
+        "comment": ""
+      },
+      {
+        "name": "DEPNAM12",
+        "value": "desimeter",
+        "comment": ""
+      },
+      {
+        "name": "DEPVER12",
+        "value": "0.7.2.dev1151",
+        "comment": ""
+      },
+      {
+        "name": "DEPNAM13",
+        "value": "fiberassign",
+        "comment": ""
+      },
+      {
+        "name": "DEPVER13",
+        "value": "5.7.2.dev3588",
+        "comment": ""
+      },
+      {
+        "name": "DEPNAM14",
+        "value": "DESI_ROOT",
+        "comment": ""
+      },
+      {
+        "name": "DEPVER14",
+        "value": "/global/cfs/cdirs/desi",
+        "comment": ""
+      },
+      {
+        "name": "DEPNAM15",
+        "value": "DESI_SPECTRO_DATA",
+        "comment": ""
+      },
+      {
+        "name": "DEPVER15",
+        "value": "/global/cfs/cdirs/desi/spectro/data",
+        "comment": ""
+      },
+      {
+        "name": "DEPNAM16",
+        "value": "DESI_SPECTRO_REDUX",
+        "comment": ""
+      },
+      {
+        "name": "DEPVER16",
+        "value": "/global/cfs/cdirs/desi/spectro/redux",
+        "comment": ""
+      },
+      {
+        "name": "DEPNAM17",
+        "value": "SPECPROD",
+        "comment": ""
+      },
+      {
+        "name": "DEPVER17",
+        "value": "acarnero",
+        "comment": ""
+      },
+      {
+        "name": "DEPNAM18",
+        "value": "DESI_SPECTRO_CALIB",
+        "comment": ""
+      },
+      {
+        "name": "DEPVER18",
+        "value": "/global/cfs/cdirs/desi/spectro/desi_spectro_calib/trunk",
+        "comment": ""
+      },
+      {
+        "name": "DEPNAM19",
+        "value": "DESI_BASIS_TEMPLATES",
+        "comment": ""
+      },
+      {
+        "name": "DEPVER19",
+        "value": "/global/cfs/cdirs/desi/spectro/templates/basis_templates/v3.2",
+        "comment": ""
+      },
+      {
+        "name": "DEPNAM20",
+        "value": "DESI_TARGET",
+        "comment": ""
+      },
+      {
+        "name": "DEPVER20",
+        "value": "/global/cfs/cdirs/desi/target",
+        "comment": ""
+      },
+      {
+        "name": "DEPNAM21",
+        "value": "DESIMODEL",
+        "comment": ""
+      },
+      {
+        "name": "DEPVER21",
+        "value": "/global/common/software/desi/perlmutter/desiconda/20240425-2.2.0/code/desimodel/main",
+        "comment": ""
+      },
+      {
+        "name": "DEPNAM22",
+        "value": "SKYBRICKS_DIR",
+        "comment": ""
+      },
+      {
+        "name": "DEPVER22",
+        "value": "$DESI_ROOT/target/skybricks/v3",
+        "comment": ""
+      },
+      {
+        "name": "DEPNAM23",
+        "value": "SKYHEALPIXS_DIR",
+        "comment": ""
+      },
+      {
+        "name": "DEPVER23",
+        "value": null,
+        "comment": ""
+      }
+    ],
+    [
+      {
+        "name": "XTENSION",
+        "value": "BINTABLE",
+        "comment": "binary table extension"
+      },
+      {
+        "name": "BITPIX",
+        "value": 8,
+        "comment": "8-bit bytes"
+      },
+      {
+        "name": "NAXIS",
+        "value": 2,
+        "comment": "2-dimensional binary table"
+      },
+      {
+        "name": "NAXIS1",
+        "value": 16,
+        "comment": "width of table in bytes"
+      },
+      {
+        "name": "NAXIS2",
+        "value": 146580,
+        "comment": "number of rows in table"
+      },
+      {
+        "name": "PCOUNT",
+        "value": 0,
+        "comment": "size of special data area"
+      },
+      {
+        "name": "GCOUNT",
+        "value": 1,
+        "comment": "one data group (required keyword)"
+      },
+      {
+        "name": "TFIELDS",
+        "value": 3,
+        "comment": "number of fields in each row"
+      },
+      {
+        "name": "EXTNAME",
+        "value": "FAVAIL",
+        "comment": "name of this binary table extension"
+      },
+      {
+        "name": "TILEID",
+        "value": 20090,
+        "comment": ""
+      },
+      {
+        "name": "TILERA",
+        "value": 210.086,
+        "comment": ""
+      },
+      {
+        "name": "TILEDEC",
+        "value": -7.111,
+        "comment": ""
+      },
+      {
+        "name": "FIELDROT",
+        "value": -0.063434203499369,
+        "comment": ""
+      },
+      {
+        "name": "FA_PLAN",
+        "value": "2022-07-01T00:00:00.000",
+        "comment": ""
+      },
+      {
+        "name": "FA_HA",
+        "value": -0.28,
+        "comment": ""
+      },
+      {
+        "name": "FA_RUN",
+        "value": "2021-05-14T23:48:14+00:00",
+        "comment": ""
+      },
+      {
+        "name": "FA_M_GFA",
+        "value": 0.4,
+        "comment": ""
+      },
+      {
+        "name": "FA_M_PET",
+        "value": 0.4,
+        "comment": ""
+      },
+      {
+        "name": "FA_M_POS",
+        "value": 0.05,
+        "comment": ""
+      },
+      {
+        "name": "REQRA",
+        "value": 210.086,
+        "comment": ""
+      },
+      {
+        "name": "REQDEC",
+        "value": -7.111,
+        "comment": ""
+      },
+      {
+        "name": "FIELDNUM",
+        "value": 0,
+        "comment": ""
+      },
+      {
+        "name": "FA_VER",
+        "value": "5.7.2.dev3588",
+        "comment": ""
+      },
+      {
+        "name": "FA_SURV",
+        "value": "main",
+        "comment": ""
+      },
+      {
+        "name": "DEPNAM00",
+        "value": "python",
+        "comment": ""
+      },
+      {
+        "name": "DEPVER00",
+        "value": "3.10.14",
+        "comment": ""
+      },
+      {
+        "name": "DEPNAM01",
+        "value": "numpy",
+        "comment": ""
+      },
+      {
+        "name": "DEPVER01",
+        "value": "1.22.4",
+        "comment": ""
+      },
+      {
+        "name": "DEPNAM02",
+        "value": "scipy",
+        "comment": ""
+      },
+      {
+        "name": "DEPVER02",
+        "value": "1.8.1",
+        "comment": ""
+      },
+      {
+        "name": "DEPNAM03",
+        "value": "astropy",
+        "comment": ""
+      },
+      {
+        "name": "DEPVER03",
+        "value": "6.0.1",
+        "comment": ""
+      },
+      {
+        "name": "DEPNAM04",
+        "value": "yaml",
+        "comment": ""
+      },
+      {
+        "name": "DEPVER04",
+        "value": "6.0.1",
+        "comment": ""
+      },
+      {
+        "name": "DEPNAM05",
+        "value": "matplotlib",
+        "comment": ""
+      },
+      {
+        "name": "DEPVER05",
+        "value": "3.8.4",
+        "comment": ""
+      },
+      {
+        "name": "DEPNAM06",
+        "value": "requests",
+        "comment": ""
+      },
+      {
+        "name": "DEPVER06",
+        "value": "2.31.0",
+        "comment": ""
+      },
+      {
+        "name": "DEPNAM07",
+        "value": "fitsio",
+        "comment": ""
+      },
+      {
+        "name": "DEPVER07",
+        "value": "1.2.1",
+        "comment": ""
+      },
+      {
+        "name": "DEPNAM08",
+        "value": "healpy",
+        "comment": ""
+      },
+      {
+        "name": "DEPVER08",
+        "value": "1.16.6",
+        "comment": ""
+      },
+      {
+        "name": "DEPNAM09",
+        "value": "desiutil",
+        "comment": ""
+      },
+      {
+        "name": "DEPVER09",
+        "value": "3.4.4.dev1122",
+        "comment": ""
+      },
+      {
+        "name": "DEPNAM10",
+        "value": "desitarget",
+        "comment": ""
+      },
+      {
+        "name": "DEPVER10",
+        "value": "2.8.0.dev5597",
+        "comment": ""
+      },
+      {
+        "name": "DEPNAM11",
+        "value": "desimodel",
+        "comment": ""
+      },
+      {
+        "name": "DEPVER11",
+        "value": "0.19.2.dev767",
+        "comment": ""
+      },
+      {
+        "name": "DEPNAM12",
+        "value": "desimeter",
+        "comment": ""
+      },
+      {
+        "name": "DEPVER12",
+        "value": "0.7.2.dev1151",
+        "comment": ""
+      },
+      {
+        "name": "DEPNAM13",
+        "value": "fiberassign",
+        "comment": ""
+      },
+      {
+        "name": "DEPVER13",
+        "value": "5.7.2.dev3588",
+        "comment": ""
+      },
+      {
+        "name": "DEPNAM14",
+        "value": "DESI_ROOT",
+        "comment": ""
+      },
+      {
+        "name": "DEPVER14",
+        "value": "/global/cfs/cdirs/desi",
+        "comment": ""
+      },
+      {
+        "name": "DEPNAM15",
+        "value": "DESI_SPECTRO_DATA",
+        "comment": ""
+      },
+      {
+        "name": "DEPVER15",
+        "value": "/global/cfs/cdirs/desi/spectro/data",
+        "comment": ""
+      },
+      {
+        "name": "DEPNAM16",
+        "value": "DESI_SPECTRO_REDUX",
+        "comment": ""
+      },
+      {
+        "name": "DEPVER16",
+        "value": "/global/cfs/cdirs/desi/spectro/redux",
+        "comment": ""
+      },
+      {
+        "name": "DEPNAM17",
+        "value": "SPECPROD",
+        "comment": ""
+      },
+      {
+        "name": "DEPVER17",
+        "value": "acarnero",
+        "comment": ""
+      },
+      {
+        "name": "DEPNAM18",
+        "value": "DESI_SPECTRO_CALIB",
+        "comment": ""
+      },
+      {
+        "name": "DEPVER18",
+        "value": "/global/cfs/cdirs/desi/spectro/desi_spectro_calib/trunk",
+        "comment": ""
+      },
+      {
+        "name": "DEPNAM19",
+        "value": "DESI_BASIS_TEMPLATES",
+        "comment": ""
+      },
+      {
+        "name": "DEPVER19",
+        "value": "/global/cfs/cdirs/desi/spectro/templates/basis_templates/v3.2",
+        "comment": ""
+      },
+      {
+        "name": "DEPNAM20",
+        "value": "DESI_TARGET",
+        "comment": ""
+      },
+      {
+        "name": "DEPVER20",
+        "value": "/global/cfs/cdirs/desi/target",
+        "comment": ""
+      },
+      {
+        "name": "DEPNAM21",
+        "value": "DESIMODEL",
+        "comment": ""
+      },
+      {
+        "name": "DEPVER21",
+        "value": "/global/common/software/desi/perlmutter/desiconda/20240425-2.2.0/code/desimodel/main",
+        "comment": ""
+      },
+      {
+        "name": "DEPNAM22",
+        "value": "SKYBRICKS_DIR",
+        "comment": ""
+      },
+      {
+        "name": "DEPVER22",
+        "value": "$DESI_ROOT/target/skybricks/v3",
+        "comment": ""
+      },
+      {
+        "name": "DEPNAM23",
+        "value": "SKYHEALPIXS_DIR",
+        "comment": ""
+      },
+      {
+        "name": "DEPVER23",
+        "value": null,
+        "comment": ""
+      }
+    ]
+  ]
+}

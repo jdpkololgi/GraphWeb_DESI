@@ -1,0 +1,1853 @@
+{
+  "job": "58894134",
+  "script_sha256": "9bd4089d3b726647eeec5fa9bdfaf2cae1551574578635f2dc89fcc2be1d1ce8",
+  "candidate_files": 219,
+  "loaded_files": [
+    {
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-005934-4-gal.fits.gz",
+      "rows_read": 13870,
+      "targets_near_fields": 24
+    },
+    {
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-008105-4-gal.fits.gz",
+      "rows_read": 14795,
+      "targets_near_fields": 21
+    },
+    {
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-005817-4-gal.fits.gz",
+      "rows_read": 10698,
+      "targets_near_fields": 20
+    },
+    {
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-005817-5-gal.fits.gz",
+      "rows_read": 10839,
+      "targets_near_fields": 20
+    },
+    {
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-008105-3-gal.fits.gz",
+      "rows_read": 12157,
+      "targets_near_fields": 19
+    },
+    {
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-008105-6-gal.fits.gz",
+      "rows_read": 9418,
+      "targets_near_fields": 19
+    },
+    {
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-008105-1-gal.fits.gz",
+      "rows_read": 11697,
+      "targets_near_fields": 18
+    },
+    {
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-008105-2-gal.fits.gz",
+      "rows_read": 9248,
+      "targets_near_fields": 17
+    },
+    {
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-008116-4-gal.fits.gz",
+      "rows_read": 12225,
+      "targets_near_fields": 17
+    },
+    {
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-008116-6-gal.fits.gz",
+      "rows_read": 10872,
+      "targets_near_fields": 17
+    },
+    {
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-008097-2-gal.fits.gz",
+      "rows_read": 7951,
+      "targets_near_fields": 16
+    },
+    {
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-008097-3-gal.fits.gz",
+      "rows_read": 9282,
+      "targets_near_fields": 16
+    },
+    {
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-008105-5-gal.fits.gz",
+      "rows_read": 10730,
+      "targets_near_fields": 16
+    },
+    {
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-005934-5-gal.fits.gz",
+      "rows_read": 9817,
+      "targets_near_fields": 15
+    },
+    {
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-008116-5-gal.fits.gz",
+      "rows_read": 8980,
+      "targets_near_fields": 15
+    },
+    {
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-005934-3-gal.fits.gz",
+      "rows_read": 10902,
+      "targets_near_fields": 14
+    }
+  ],
+  "total_pilot_targets": 512,
+  "raw_matches": 83,
+  "unique_matches": 83,
+  "duplicate_targets": 0,
+  "summary": [
+    {
+      "z": [
+        0.15,
+        0.25
+      ],
+      "n": 21,
+      "stats": {
+        "petro_minus_legacy_r": {
+          "n": 21,
+          "median": 0.1291027069091797,
+          "p16_p84": [
+            0.043526077270507814,
+            0.23580322265625
+          ],
+          "max_abs": 0.34383201599121094
+        },
+        "model_minus_legacy_r": {
+          "n": 21,
+          "median": 0.09920883178710938,
+          "p16_p84": [
+            0.027820205688476565,
+            0.17027931213378905
+          ],
+          "max_abs": 0.2616767883300781
+        },
+        "petro_minus_model_r": {
+          "n": 21,
+          "median": 0.044330596923828125,
+          "p16_p84": [
+            -0.020927047729492186,
+            0.08488693237304688
+          ],
+          "max_abs": 0.15133285522460938
+        },
+        "petro_minus_legacy_gr": {
+          "n": 21,
+          "median": -0.017103195190429688,
+          "p16_p84": [
+            -0.08184661865234374,
+            0.037622833251953126
+          ],
+          "max_abs": 0.24762916564941406
+        }
+      }
+    },
+    {
+      "z": [
+        0.25,
+        0.35
+      ],
+      "n": 20,
+      "stats": {
+        "petro_minus_legacy_r": {
+          "n": 20,
+          "median": 0.2648019790649414,
+          "p16_p84": [
+            0.14520706176757814,
+            0.4170989227294921
+          ],
+          "max_abs": 0.7632961273193359
+        },
+        "model_minus_legacy_r": {
+          "n": 20,
+          "median": 0.20410919189453125,
+          "p16_p84": [
+            0.1285376739501953,
+            0.3357923889160156
+          ],
+          "max_abs": 0.6019210815429688
+        },
+        "petro_minus_model_r": {
+          "n": 20,
+          "median": 0.04725360870361328,
+          "p16_p84": [
+            -0.011381454467773437,
+            0.13744621276855465
+          ],
+          "max_abs": 0.1613750457763672
+        },
+        "petro_minus_legacy_gr": {
+          "n": 20,
+          "median": -0.04340553283691406,
+          "p16_p84": [
+            -0.1761627960205078,
+            0.15500175476074216
+          ],
+          "max_abs": 0.3009815216064453
+        }
+      }
+    },
+    {
+      "z": [
+        0.35,
+        0.45
+      ],
+      "n": 13,
+      "stats": {
+        "petro_minus_legacy_r": {
+          "n": 13,
+          "median": 0.13792037963867188,
+          "p16_p84": [
+            0.024937057495117185,
+            0.2703327941894531
+          ],
+          "max_abs": 0.3760528564453125
+        },
+        "model_minus_legacy_r": {
+          "n": 13,
+          "median": 0.1639232635498047,
+          "p16_p84": [
+            0.013482513427734365,
+            0.2707463073730469
+          ],
+          "max_abs": 0.45139122009277344
+        },
+        "petro_minus_model_r": {
+          "n": 13,
+          "median": 0.012022018432617188,
+          "p16_p84": [
+            -0.012578125,
+            0.05854003906250001
+          ],
+          "max_abs": 0.19121360778808594
+        },
+        "petro_minus_legacy_gr": {
+          "n": 13,
+          "median": -0.05608558654785156,
+          "p16_p84": [
+            -0.17848457336425783,
+            0.1331646728515625
+          ],
+          "max_abs": 0.40841102600097656
+        }
+      }
+    },
+    {
+      "z": [
+        0.45,
+        0.55
+      ],
+      "n": 6,
+      "stats": {
+        "petro_minus_legacy_r": {
+          "n": 6,
+          "median": 0.4350299835205078,
+          "p16_p84": [
+            0.14215164184570314,
+            0.7185287475585939
+          ],
+          "max_abs": 1.401336669921875
+        },
+        "model_minus_legacy_r": {
+          "n": 6,
+          "median": 0.30157470703125,
+          "p16_p84": [
+            0.08992767333984375,
+            0.776625442504883
+          ],
+          "max_abs": 1.2638416290283203
+        },
+        "petro_minus_model_r": {
+          "n": 6,
+          "median": 0.07563209533691406,
+          "p16_p84": [
+            -0.025588989257812497,
+            0.14644317626953127
+          ],
+          "max_abs": 0.1822357177734375
+        },
+        "petro_minus_legacy_gr": {
+          "n": 6,
+          "median": -0.21960735321044922,
+          "p16_p84": [
+            -0.49128570556640627,
+            0.17138748168945314
+          ],
+          "max_abs": 0.510345458984375
+        }
+      }
+    }
+  ],
+  "records": [
+    {
+      "targetid": 39628138086401675,
+      "z": 0.43221726785756764,
+      "sep_arcsec": 0.06285470071491366,
+      "thing_id": 240957852,
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-005934-4-gal.fits.gz",
+      "petro_minus_legacy_r": 0.20861053466796875,
+      "model_minus_legacy_r": 0.18686294555664062,
+      "petro_minus_model_r": 0.021747589111328125,
+      "petro_minus_legacy_gr": 0.010379791259765625,
+      "petro_snr_gr": [
+        5.506369590759277,
+        10.729849815368652
+      ],
+      "flags_gr": [
+        276856832,
+        268468224
+      ]
+    },
+    {
+      "targetid": 39628190477451845,
+      "z": 0.3047070576428545,
+      "sep_arcsec": 0.027104397622747686,
+      "thing_id": 262540810,
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-005934-4-gal.fits.gz",
+      "petro_minus_legacy_r": 0.4343852996826172,
+      "model_minus_legacy_r": 0.4404563903808594,
+      "petro_minus_model_r": -0.0060710906982421875,
+      "petro_minus_legacy_gr": -0.12050056457519531,
+      "petro_snr_gr": [
+        10.459028244018555,
+        24.334239959716797
+      ],
+      "flags_gr": [
+        276992272,
+        268468240
+      ]
+    },
+    {
+      "targetid": 39628293355343032,
+      "z": 0.17153369429672752,
+      "sep_arcsec": 0.09551826662756412,
+      "thing_id": 298404729,
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-005934-4-gal.fits.gz",
+      "petro_minus_legacy_r": 0.09687232971191406,
+      "model_minus_legacy_r": 0.0812225341796875,
+      "petro_minus_model_r": 0.015649795532226562,
+      "petro_minus_legacy_gr": -0.05818748474121094,
+      "petro_snr_gr": [
+        27.569664001464844,
+        38.80795669555664
+      ],
+      "flags_gr": [
+        343965768,
+        335577160
+      ]
+    },
+    {
+      "targetid": 39628304608660389,
+      "z": 0.1704433686804379,
+      "sep_arcsec": 0.049287281801713434,
+      "thing_id": 303999747,
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-005934-4-gal.fits.gz",
+      "petro_minus_legacy_r": 0.21820831298828125,
+      "model_minus_legacy_r": 0.10722541809082031,
+      "petro_minus_model_r": 0.11098289489746094,
+      "petro_minus_legacy_gr": -0.08259201049804688,
+      "petro_snr_gr": [
+        26.6336669921875,
+        44.77573013305664
+      ],
+      "flags_gr": [
+        268599312,
+        268468240
+      ]
+    },
+    {
+      "targetid": 39628349198307398,
+      "z": 0.2624191570619559,
+      "sep_arcsec": 0.06623117607212807,
+      "thing_id": 319764130,
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-005934-4-gal.fits.gz",
+      "petro_minus_legacy_r": 0.3514537811279297,
+      "model_minus_legacy_r": 0.33779144287109375,
+      "petro_minus_model_r": 0.013662338256835938,
+      "petro_minus_legacy_gr": -0.12478065490722656,
+      "petro_snr_gr": [
+        12.239490509033203,
+        20.179710388183594
+      ],
+      "flags_gr": [
+        268599312,
+        276856848
+      ]
+    },
+    {
+      "targetid": 39628403988500086,
+      "z": 0.23346064294821844,
+      "sep_arcsec": 0.044142791750016244,
+      "thing_id": 342625766,
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-005934-4-gal.fits.gz",
+      "petro_minus_legacy_r": 0.1291027069091797,
+      "model_minus_legacy_r": 0.16509246826171875,
+      "petro_minus_model_r": -0.03598976135253906,
+      "petro_minus_legacy_gr": -0.24762916564941406,
+      "petro_snr_gr": [
+        13.042354583740234,
+        23.985973358154297
+      ],
+      "flags_gr": [
+        268468224,
+        268468224
+      ]
+    },
+    {
+      "targetid": 39628446799759504,
+      "z": 0.3007143907101051,
+      "sep_arcsec": 0.10562804500942813,
+      "thing_id": 356941982,
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-008105-4-gal.fits.gz",
+      "petro_minus_legacy_r": 0.14358139038085938,
+      "model_minus_legacy_r": 0.07143211364746094,
+      "petro_minus_model_r": 0.07214927673339844,
+      "petro_minus_legacy_gr": 0.16689109802246094,
+      "petro_snr_gr": [
+        8.744206428527832,
+        15.455395698547363
+      ],
+      "flags_gr": [
+        268599312,
+        268468240
+      ]
+    },
+    {
+      "targetid": 39628467867748702,
+      "z": 0.3801220201643857,
+      "sep_arcsec": 0.04139942817334999,
+      "thing_id": 365912497,
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-008105-4-gal.fits.gz",
+      "petro_minus_legacy_r": -0.2601776123046875,
+      "model_minus_legacy_r": -0.45139122009277344,
+      "petro_minus_model_r": 0.19121360778808594,
+      "petro_minus_legacy_gr": -0.01903533935546875,
+      "petro_snr_gr": [
+        12.988654136657715,
+        16.664596557617188
+      ],
+      "flags_gr": [
+        268599312,
+        268468240
+      ]
+    },
+    {
+      "targetid": 39628473089657559,
+      "z": 0.5370349337373825,
+      "sep_arcsec": 0.09487563401498879,
+      "thing_id": 368230041,
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-008105-4-gal.fits.gz",
+      "petro_minus_legacy_r": 1.401336669921875,
+      "model_minus_legacy_r": 1.2638416290283203,
+      "petro_minus_model_r": 0.1374950408935547,
+      "petro_minus_legacy_gr": 0.2952384948730469,
+      "petro_snr_gr": [
+        5.421505451202393,
+        10.872191429138184
+      ],
+      "flags_gr": [
+        302022676,
+        302022676
+      ]
+    },
+    {
+      "targetid": 39628478336731287,
+      "z": 0.47699169336355945,
+      "sep_arcsec": 0.02041653886701888,
+      "thing_id": 368321124,
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-008105-4-gal.fits.gz",
+      "petro_minus_legacy_r": 0.6531486511230469,
+      "model_minus_legacy_r": 0.5823020935058594,
+      "petro_minus_model_r": 0.0708465576171875,
+      "petro_minus_legacy_gr": -0.21351051330566406,
+      "petro_snr_gr": [
+        3.345510244369507,
+        11.825394630432129
+      ],
+      "flags_gr": [
+        276857088,
+        268468224
+      ]
+    },
+    {
+      "targetid": 39628478294790554,
+      "z": 0.2968968798684267,
+      "sep_arcsec": 0.13089028800332267,
+      "thing_id": 369825214,
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-008105-4-gal.fits.gz",
+      "petro_minus_legacy_r": 0.7632961273193359,
+      "model_minus_legacy_r": 0.6019210815429688,
+      "petro_minus_model_r": 0.1613750457763672,
+      "petro_minus_legacy_gr": 0.15732192993164062,
+      "petro_snr_gr": [
+        6.994460105895996,
+        15.865082740783691
+      ],
+      "flags_gr": [
+        268468240,
+        268599312
+      ]
+    },
+    {
+      "targetid": 39628483537669419,
+      "z": 0.38703699311530515,
+      "sep_arcsec": 0.1072420315650714,
+      "thing_id": 369825194,
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-008105-4-gal.fits.gz",
+      "petro_minus_legacy_r": -0.0697021484375,
+      "model_minus_legacy_r": 0.29512977600097656,
+      "petro_minus_model_r": -0.36483192443847656,
+      "petro_minus_legacy_gr": 0.31049346923828125,
+      "petro_snr_gr": [
+        2.856328248977661,
+        12.59648609161377
+      ],
+      "flags_gr": [
+        276857088,
+        268469504
+      ]
+    },
+    {
+      "targetid": 39628483512502300,
+      "z": 0.19039019578121916,
+      "sep_arcsec": 0.07392647136669354,
+      "thing_id": 370665478,
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-008105-4-gal.fits.gz",
+      "petro_minus_legacy_r": 0.08980178833007812,
+      "model_minus_legacy_r": 0.09920883178710938,
+      "petro_minus_model_r": -0.00940704345703125,
+      "petro_minus_legacy_gr": -0.017103195190429688,
+      "petro_snr_gr": [
+        16.947233200073242,
+        25.66259002685547
+      ],
+      "flags_gr": [
+        268468240,
+        268603408
+      ]
+    },
+    {
+      "targetid": 39628420115597488,
+      "z": 0.23519256283728796,
+      "sep_arcsec": 0.069470140522951,
+      "thing_id": 348828576,
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-008105-4-gal.fits.gz",
+      "petro_minus_legacy_r": 0.21411705017089844,
+      "model_minus_legacy_r": 0.1697864532470703,
+      "petro_minus_model_r": 0.044330596923828125,
+      "petro_minus_legacy_gr": -0.029588699340820312,
+      "petro_snr_gr": [
+        14.427573204040527,
+        26.793821334838867
+      ],
+      "flags_gr": [
+        268468240,
+        268599312
+      ]
+    },
+    {
+      "targetid": 39628138086404458,
+      "z": 0.19473396943676136,
+      "sep_arcsec": 0.05624411094638343,
+      "thing_id": 241049276,
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-005817-4-gal.fits.gz",
+      "petro_minus_legacy_r": 0.0470428466796875,
+      "model_minus_legacy_r": 0.05828094482421875,
+      "petro_minus_model_r": -0.01123809814453125,
+      "petro_minus_legacy_gr": -0.06209373474121094,
+      "petro_snr_gr": [
+        16.035045623779297,
+        17.091833114624023
+      ],
+      "flags_gr": [
+        268468224,
+        268468224
+      ]
+    },
+    {
+      "targetid": 39628298988293056,
+      "z": 0.16115699102453426,
+      "sep_arcsec": 0.06722488349858481,
+      "thing_id": 300662583,
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-005817-4-gal.fits.gz",
+      "petro_minus_legacy_r": 0.49500274658203125,
+      "model_minus_legacy_r": 0.10500335693359375,
+      "petro_minus_model_r": 0.3899993896484375,
+      "petro_minus_legacy_gr": -0.040630340576171875,
+      "petro_snr_gr": [
+        2.410262107849121,
+        4.256279468536377
+      ],
+      "flags_gr": [
+        268468241,
+        268603408
+      ]
+    },
+    {
+      "targetid": 39628354738979666,
+      "z": 0.33490490028032405,
+      "sep_arcsec": 0.036122454158331846,
+      "thing_id": 323280923,
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-005817-4-gal.fits.gz",
+      "petro_minus_legacy_r": 0.4249114990234375,
+      "model_minus_legacy_r": 0.28624534606933594,
+      "petro_minus_model_r": 0.13866615295410156,
+      "petro_minus_legacy_gr": -0.21539306640625,
+      "petro_snr_gr": [
+        10.166560173034668,
+        26.35645866394043
+      ],
+      "flags_gr": [
+        276857088,
+        268468224
+      ]
+    },
+    {
+      "targetid": 39628393129445139,
+      "z": 0.31216458993823304,
+      "sep_arcsec": 0.05265934595124448,
+      "thing_id": 338175005,
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-005817-4-gal.fits.gz",
+      "petro_minus_legacy_r": 0.23713302612304688,
+      "model_minus_legacy_r": 0.1464977264404297,
+      "petro_minus_model_r": 0.09063529968261719,
+      "petro_minus_legacy_gr": 0.06507110595703125,
+      "petro_snr_gr": [
+        12.0093994140625,
+        29.90703773498535
+      ],
+      "flags_gr": [
+        268468240,
+        268468240
+      ]
+    },
+    {
+      "targetid": 39628178884397910,
+      "z": 0.5275524857186041,
+      "sep_arcsec": 0.04363627414917713,
+      "thing_id": 258420948,
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-005817-5-gal.fits.gz",
+      "petro_minus_legacy_r": 0.7461280822753906,
+      "model_minus_legacy_r": 0.5215625762939453,
+      "petro_minus_model_r": 0.2245655059814453,
+      "petro_minus_legacy_gr": -0.17746353149414062,
+      "petro_snr_gr": [
+        2.7806055545806885,
+        7.3733391761779785
+      ],
+      "flags_gr": [
+        276857104,
+        276856848
+      ]
+    },
+    {
+      "targetid": 39628207804124378,
+      "z": 0.1531715236692594,
+      "sep_arcsec": 0.014275621453768426,
+      "thing_id": 268616355,
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-005817-5-gal.fits.gz",
+      "petro_minus_legacy_r": 0.14422988891601562,
+      "model_minus_legacy_r": 0.16686248779296875,
+      "petro_minus_model_r": -0.022632598876953125,
+      "petro_minus_legacy_gr": 0.03858375549316406,
+      "petro_snr_gr": [
+        10.800707817077637,
+        17.295841217041016
+      ],
+      "flags_gr": [
+        268468224,
+        268469504
+      ]
+    },
+    {
+      "targetid": 39628343661822811,
+      "z": 0.27702522510720046,
+      "sep_arcsec": 0.018230697520052547,
+      "thing_id": 319098548,
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-005817-5-gal.fits.gz",
+      "petro_minus_legacy_r": 0.24450111389160156,
+      "model_minus_legacy_r": 0.2560577392578125,
+      "petro_minus_model_r": -0.011556625366210938,
+      "petro_minus_legacy_gr": -0.08092689514160156,
+      "petro_snr_gr": [
+        9.068668365478516,
+        14.925341606140137
+      ],
+      "flags_gr": [
+        268468248,
+        268468248
+      ]
+    },
+    {
+      "targetid": 39628371247760830,
+      "z": 0.2810873605145797,
+      "sep_arcsec": 0.06858820661067054,
+      "thing_id": 329517341,
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-005817-5-gal.fits.gz",
+      "petro_minus_legacy_r": 0.10759353637695312,
+      "model_minus_legacy_r": 0.08070755004882812,
+      "petro_minus_model_r": 0.026885986328125,
+      "petro_minus_legacy_gr": -0.0830078125,
+      "petro_snr_gr": [
+        15.414278984069824,
+        16.795969009399414
+      ],
+      "flags_gr": [
+        268468224,
+        268468224
+      ]
+    },
+    {
+      "targetid": 39628420203678000,
+      "z": 0.2737529349885621,
+      "sep_arcsec": 0.08265786446427964,
+      "thing_id": 348463981,
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-005817-5-gal.fits.gz",
+      "petro_minus_legacy_r": 0.18422317504882812,
+      "model_minus_legacy_r": 0.20177841186523438,
+      "petro_minus_model_r": -0.01755523681640625,
+      "petro_minus_legacy_gr": -0.012378692626953125,
+      "petro_snr_gr": [
+        13.896138191223145,
+        13.7277193069458
+      ],
+      "flags_gr": [
+        268468224,
+        268468224
+      ]
+    },
+    {
+      "targetid": 39628425580773638,
+      "z": 0.16682340597472353,
+      "sep_arcsec": 0.1763038935136066,
+      "thing_id": 348464418,
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-005817-5-gal.fits.gz",
+      "petro_minus_legacy_r": 0.07783126831054688,
+      "model_minus_legacy_r": 0.01293182373046875,
+      "petro_minus_model_r": 0.06489944458007812,
+      "petro_minus_legacy_gr": -0.09999847412109375,
+      "petro_snr_gr": [
+        30.67205047607422,
+        33.61711502075195
+      ],
+      "flags_gr": [
+        268468224,
+        268468224
+      ]
+    },
+    {
+      "targetid": 39628452051028375,
+      "z": 0.5309786673368251,
+      "sep_arcsec": 0.1350400330744778,
+      "thing_id": 359035018,
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-008105-3-gal.fits.gz",
+      "petro_minus_legacy_r": 0.5250606536865234,
+      "model_minus_legacy_r": 0.34282493591308594,
+      "petro_minus_model_r": 0.1822357177734375,
+      "petro_minus_legacy_gr": -0.48652076721191406,
+      "petro_snr_gr": [
+        8.329955101013184,
+        15.887646675109863
+      ],
+      "flags_gr": [
+        276857088,
+        268468224
+      ]
+    },
+    {
+      "targetid": 39628425459141018,
+      "z": 0.38031849161762427,
+      "sep_arcsec": 0.08571326722449914,
+      "thing_id": 349013816,
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-008105-3-gal.fits.gz",
+      "petro_minus_legacy_r": 0.3760528564453125,
+      "model_minus_legacy_r": 0.3715248107910156,
+      "petro_minus_model_r": 0.004528045654296875,
+      "petro_minus_legacy_gr": 0.1471729278564453,
+      "petro_snr_gr": [
+        5.691812515258789,
+        13.62954044342041
+      ],
+      "flags_gr": [
+        268468240,
+        268599312
+      ]
+    },
+    {
+      "targetid": 39628441452022723,
+      "z": 0.2852652109465955,
+      "sep_arcsec": 0.0922336989094042,
+      "thing_id": 355414442,
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-008105-3-gal.fits.gz",
+      "petro_minus_legacy_r": 0.19364166259765625,
+      "model_minus_legacy_r": 0.2008190155029297,
+      "petro_minus_model_r": -0.0071773529052734375,
+      "petro_minus_legacy_gr": -0.17760276794433594,
+      "petro_snr_gr": [
+        10.147112846374512,
+        17.646141052246094
+      ],
+      "flags_gr": [
+        268468224,
+        268468224
+      ]
+    },
+    {
+      "targetid": 39628446766203301,
+      "z": 0.26028543829631146,
+      "sep_arcsec": 0.06739475505187766,
+      "thing_id": 356672115,
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-008105-3-gal.fits.gz",
+      "petro_minus_legacy_r": 0.1951580047607422,
+      "model_minus_legacy_r": 0.1369953155517578,
+      "petro_minus_model_r": 0.058162689208984375,
+      "petro_minus_legacy_gr": -0.074432373046875,
+      "petro_snr_gr": [
+        12.8460693359375,
+        23.259258270263672
+      ],
+      "flags_gr": [
+        268468224,
+        268469504
+      ]
+    },
+    {
+      "targetid": 39628452025863153,
+      "z": 0.3317756795421552,
+      "sep_arcsec": 0.06061809899612007,
+      "thing_id": 360789595,
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-008105-3-gal.fits.gz",
+      "petro_minus_legacy_r": 0.12249755859375,
+      "model_minus_legacy_r": 0.12818527221679688,
+      "petro_minus_model_r": -0.005687713623046875,
+      "petro_minus_legacy_gr": 0.09319686889648438,
+      "petro_snr_gr": [
+        10.304222106933594,
+        22.714445114135742
+      ],
+      "flags_gr": [
+        276856832,
+        268468224
+      ]
+    },
+    {
+      "targetid": 39628467788059269,
+      "z": 0.2815183453806144,
+      "sep_arcsec": 0.11048054440515066,
+      "thing_id": 366201734,
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-008105-3-gal.fits.gz",
+      "petro_minus_legacy_r": -0.011051177978515625,
+      "model_minus_legacy_r": 0.0111236572265625,
+      "petro_minus_model_r": -0.022174835205078125,
+      "petro_minus_legacy_gr": 0.3009815216064453,
+      "petro_snr_gr": [
+        10.993682861328125,
+        18.08671760559082
+      ],
+      "flags_gr": [
+        268468224,
+        268468224
+      ]
+    },
+    {
+      "targetid": 39628473026741476,
+      "z": 0.4765721224453456,
+      "sep_arcsec": 0.14384954336197525,
+      "thing_id": 367263437,
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-008105-3-gal.fits.gz",
+      "petro_minus_legacy_r": 0.4497032165527344,
+      "model_minus_legacy_r": 0.364288330078125,
+      "petro_minus_model_r": 0.08541488647460938,
+      "petro_minus_legacy_gr": 0.20080947875976562,
+      "petro_snr_gr": [
+        2.444032907485962,
+        6.125931739807129
+      ],
+      "flags_gr": [
+        276857104,
+        268468240
+      ]
+    },
+    {
+      "targetid": 39628409332043842,
+      "z": 0.3670530487464619,
+      "sep_arcsec": 0.13218155763238837,
+      "thing_id": 343810067,
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-008105-3-gal.fits.gz",
+      "petro_minus_legacy_r": 0.2849903106689453,
+      "model_minus_legacy_r": 0.26885986328125,
+      "petro_minus_model_r": 0.016130447387695312,
+      "petro_minus_legacy_gr": -0.1779804229736328,
+      "petro_snr_gr": [
+        6.404970645904541,
+        12.233810424804688
+      ],
+      "flags_gr": [
+        268468224,
+        268468224
+      ]
+    },
+    {
+      "targetid": 39628483617358897,
+      "z": 0.24003844148182424,
+      "sep_arcsec": 0.023222990344756476,
+      "thing_id": 372874866,
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-008105-6-gal.fits.gz",
+      "petro_minus_legacy_r": 0.27782440185546875,
+      "model_minus_legacy_r": 0.2524604797363281,
+      "petro_minus_model_r": 0.025363922119140625,
+      "petro_minus_legacy_gr": -0.07886505126953125,
+      "petro_snr_gr": [
+        14.015061378479004,
+        30.240997314453125
+      ],
+      "flags_gr": [
+        268468224,
+        268468224
+      ]
+    },
+    {
+      "targetid": 39628499190809450,
+      "z": 0.3138874861071629,
+      "sep_arcsec": 0.18183199601836533,
+      "thing_id": 375795089,
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-008105-6-gal.fits.gz",
+      "petro_minus_legacy_r": 0.2959728240966797,
+      "model_minus_legacy_r": 0.1561756134033203,
+      "petro_minus_model_r": 0.13979721069335938,
+      "petro_minus_legacy_gr": -0.20078468322753906,
+      "petro_snr_gr": [
+        13.21241283416748,
+        15.819331169128418
+      ],
+      "flags_gr": [
+        268468240,
+        268435472
+      ]
+    },
+    {
+      "targetid": 39628488822489920,
+      "z": 0.40471139883398055,
+      "sep_arcsec": 0.07110858617380872,
+      "thing_id": 373873546,
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-008105-6-gal.fits.gz",
+      "petro_minus_legacy_r": 0.3301658630371094,
+      "model_minus_legacy_r": 0.29887962341308594,
+      "petro_minus_model_r": 0.03128623962402344,
+      "petro_minus_legacy_gr": 0.7626361846923828,
+      "petro_snr_gr": [
+        1.8910889625549316,
+        15.951621055603027
+      ],
+      "flags_gr": [
+        402685952,
+        268468224
+      ]
+    },
+    {
+      "targetid": 39628430714603486,
+      "z": 0.4544595874986184,
+      "sep_arcsec": 0.07861105549329303,
+      "thing_id": 352218939,
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-008105-1-gal.fits.gz",
+      "petro_minus_legacy_r": 0.2961387634277344,
+      "model_minus_legacy_r": 0.3533935546875,
+      "petro_minus_model_r": -0.057254791259765625,
+      "petro_minus_legacy_gr": 0.6918487548828125,
+      "petro_snr_gr": [
+        0.9548794627189636,
+        7.24631929397583
+      ],
+      "flags_gr": [
+        411074560,
+        276856832
+      ]
+    },
+    {
+      "targetid": 39628409264932055,
+      "z": 0.527747190318825,
+      "sep_arcsec": 0.10404967697668617,
+      "thing_id": 344384264,
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-008105-1-gal.fits.gz",
+      "petro_minus_legacy_r": 0.9375343322753906,
+      "model_minus_legacy_r": 1.0548286437988281,
+      "petro_minus_model_r": -0.1172943115234375,
+      "petro_minus_legacy_gr": -0.9979610443115234,
+      "petro_snr_gr": [
+        3.824075698852539,
+        4.896947383880615
+      ],
+      "flags_gr": [
+        411074832,
+        268468240
+      ]
+    },
+    {
+      "targetid": 39628420035904115,
+      "z": 0.449214605708826,
+      "sep_arcsec": 0.1118106072469021,
+      "thing_id": 346771994,
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-008105-1-gal.fits.gz",
+      "petro_minus_legacy_r": 0.2519187927246094,
+      "model_minus_legacy_r": 0.23427200317382812,
+      "petro_minus_model_r": 0.01764678955078125,
+      "petro_minus_legacy_gr": 0.2571582794189453,
+      "petro_snr_gr": [
+        7.232423305511475,
+        23.88675880432129
+      ],
+      "flags_gr": [
+        268468224,
+        268468224
+      ]
+    },
+    {
+      "targetid": 39628425383645302,
+      "z": 0.2213894873432184,
+      "sep_arcsec": 0.03354357299837976,
+      "thing_id": 349198456,
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-008105-1-gal.fits.gz",
+      "petro_minus_legacy_r": 0.31311988830566406,
+      "model_minus_legacy_r": 0.2616767883300781,
+      "petro_minus_model_r": 0.05144309997558594,
+      "petro_minus_legacy_gr": 0.06516647338867188,
+      "petro_snr_gr": [
+        15.547160148620605,
+        29.085552215576172
+      ],
+      "flags_gr": [
+        268468240,
+        268468240
+      ]
+    },
+    {
+      "targetid": 39628430777518796,
+      "z": 0.299789151718489,
+      "sep_arcsec": 0.25782407906935784,
+      "thing_id": 350336493,
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-008105-2-gal.fits.gz",
+      "petro_minus_legacy_r": 3.210845947265625,
+      "model_minus_legacy_r": 2.5130538940429688,
+      "petro_minus_model_r": 0.6977920532226562,
+      "petro_minus_legacy_gr": -0.3842639923095703,
+      "petro_snr_gr": [
+        3.0629191398620605,
+        5.17290735244751
+      ],
+      "flags_gr": [
+        268570640,
+        268566544
+      ]
+    },
+    {
+      "targetid": 39628425421392677,
+      "z": 0.3655482139945024,
+      "sep_arcsec": 0.0407276255313147,
+      "thing_id": 349173629,
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-008105-2-gal.fits.gz",
+      "petro_minus_legacy_r": -0.016199111938476562,
+      "model_minus_legacy_r": 0.07901763916015625,
+      "petro_minus_model_r": -0.09521675109863281,
+      "petro_minus_legacy_gr": 0.08652687072753906,
+      "petro_snr_gr": [
+        3.239896059036255,
+        7.996926307678223
+      ],
+      "flags_gr": [
+        276857088,
+        268468224
+      ]
+    },
+    {
+      "targetid": 39628425417199030,
+      "z": 0.20685877300442782,
+      "sep_arcsec": 0.0790512522513747,
+      "thing_id": 349623896,
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-008105-2-gal.fits.gz",
+      "petro_minus_legacy_r": 0.2012920379638672,
+      "model_minus_legacy_r": 0.08165168762207031,
+      "petro_minus_model_r": 0.11964035034179688,
+      "petro_minus_legacy_gr": 0.032230377197265625,
+      "petro_snr_gr": [
+        17.259239196777344,
+        30.993783950805664
+      ],
+      "flags_gr": [
+        268468240,
+        268599312
+      ]
+    },
+    {
+      "targetid": 39628425408808635,
+      "z": 0.5056853959481011,
+      "sep_arcsec": 0.04361406799267243,
+      "thing_id": 350572161,
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-008105-2-gal.fits.gz",
+      "petro_minus_legacy_r": 0.24684715270996094,
+      "model_minus_legacy_r": 0.3167133331298828,
+      "petro_minus_model_r": -0.06986618041992188,
+      "petro_minus_legacy_gr": 1.0270099639892578,
+      "petro_snr_gr": [
+        0.7432852983474731,
+        9.014296531677246
+      ],
+      "flags_gr": [
+        276857088,
+        268468224
+      ]
+    },
+    {
+      "targetid": 39628425413001295,
+      "z": 0.49104588404605887,
+      "sep_arcsec": 0.07096036462371867,
+      "thing_id": 350099161,
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-008105-2-gal.fits.gz",
+      "petro_minus_legacy_r": 0.4901103973388672,
+      "model_minus_legacy_r": 0.4319915771484375,
+      "petro_minus_model_r": 0.05811882019042969,
+      "petro_minus_legacy_gr": 0.05451774597167969,
+      "petro_snr_gr": [
+        3.2241549491882324,
+        10.245437622070312
+      ],
+      "flags_gr": [
+        276857088,
+        276856832
+      ]
+    },
+    {
+      "targetid": 39628409311071378,
+      "z": 0.4894045289256635,
+      "sep_arcsec": 0.037261323945147244,
+      "thing_id": 343019069,
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-008105-2-gal.fits.gz",
+      "petro_minus_legacy_r": 0.3449993133544922,
+      "model_minus_legacy_r": 0.26032447814941406,
+      "petro_minus_model_r": 0.08467483520507812,
+      "petro_minus_legacy_gr": -0.510345458984375,
+      "petro_snr_gr": [
+        5.1337127685546875,
+        14.224440574645996
+      ],
+      "flags_gr": [
+        276857088,
+        268469504
+      ]
+    },
+    {
+      "targetid": 39628403896225978,
+      "z": 0.3494868839441135,
+      "sep_arcsec": 0.06970453825929428,
+      "thing_id": 342484447,
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-008105-2-gal.fits.gz",
+      "petro_minus_legacy_r": 0.25136756896972656,
+      "model_minus_legacy_r": 0.20643997192382812,
+      "petro_minus_model_r": 0.04492759704589844,
+      "petro_minus_legacy_gr": -0.2139720916748047,
+      "petro_snr_gr": [
+        7.668037414550781,
+        16.096338272094727
+      ],
+      "flags_gr": [
+        268468240,
+        268468240
+      ]
+    },
+    {
+      "targetid": 39628446770400109,
+      "z": 0.29414823074486707,
+      "sep_arcsec": 0.1174123166680185,
+      "thing_id": 357717695,
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-008116-4-gal.fits.gz",
+      "petro_minus_legacy_r": 0.2920265197753906,
+      "model_minus_legacy_r": 0.21166419982910156,
+      "petro_minus_model_r": 0.08036231994628906,
+      "petro_minus_legacy_gr": 0.05733299255371094,
+      "petro_snr_gr": [
+        10.657272338867188,
+        25.68120574951172
+      ],
+      "flags_gr": [
+        872448072,
+        335577160
+      ]
+    },
+    {
+      "targetid": 39628446778789471,
+      "z": 0.18184303049678527,
+      "sep_arcsec": 0.07185222632013555,
+      "thing_id": 357063529,
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-008116-4-gal.fits.gz",
+      "petro_minus_legacy_r": 0.14383697509765625,
+      "model_minus_legacy_r": 0.08817863464355469,
+      "petro_minus_model_r": 0.05565834045410156,
+      "petro_minus_legacy_gr": -0.07600975036621094,
+      "petro_snr_gr": [
+        31.048540115356445,
+        31.21306800842285
+      ],
+      "flags_gr": [
+        268468224,
+        268599296
+      ]
+    },
+    {
+      "targetid": 39628462620675866,
+      "z": 0.36757004286009715,
+      "sep_arcsec": 0.0997913789913395,
+      "thing_id": 362248033,
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-008116-4-gal.fits.gz",
+      "petro_minus_legacy_r": 0.21792984008789062,
+      "model_minus_legacy_r": 0.20590782165527344,
+      "petro_minus_model_r": 0.012022018432617188,
+      "petro_minus_legacy_gr": -0.14399147033691406,
+      "petro_snr_gr": [
+        12.248784065246582,
+        24.617708206176758
+      ],
+      "flags_gr": [
+        268468224,
+        268435456
+      ]
+    },
+    {
+      "targetid": 39628473060296540,
+      "z": 0.3450597703482513,
+      "sep_arcsec": 0.08895925416400416,
+      "thing_id": 367822914,
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-008116-4-gal.fits.gz",
+      "petro_minus_legacy_r": 0.27823638916015625,
+      "model_minus_legacy_r": 0.17006874084472656,
+      "petro_minus_model_r": 0.10816764831542969,
+      "petro_minus_legacy_gr": 0.12371635437011719,
+      "petro_snr_gr": [
+        7.061990261077881,
+        21.79792022705078
+      ],
+      "flags_gr": [
+        268468224,
+        268468224
+      ]
+    },
+    {
+      "targetid": 39628473064490156,
+      "z": 0.35482049411392996,
+      "sep_arcsec": 0.05096436049562458,
+      "thing_id": 367662426,
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-008116-4-gal.fits.gz",
+      "petro_minus_legacy_r": 0.12527084350585938,
+      "model_minus_legacy_r": 0.1639232635498047,
+      "petro_minus_model_r": -0.03865242004394531,
+      "petro_minus_legacy_gr": -0.14362144470214844,
+      "petro_snr_gr": [
+        11.686044692993164,
+        21.38526153564453
+      ],
+      "flags_gr": [
+        268468224,
+        268468224
+      ]
+    },
+    {
+      "targetid": 39628478282203731,
+      "z": 0.33962074505889706,
+      "sep_arcsec": 0.055069971872291824,
+      "thing_id": 368832769,
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-008116-4-gal.fits.gz",
+      "petro_minus_legacy_r": 0.3497943878173828,
+      "model_minus_legacy_r": 0.3618659973144531,
+      "petro_minus_model_r": -0.012071609497070312,
+      "petro_minus_legacy_gr": -0.1416034698486328,
+      "petro_snr_gr": [
+        8.544295310974121,
+        19.17778778076172
+      ],
+      "flags_gr": [
+        276857088,
+        268468224
+      ]
+    },
+    {
+      "targetid": 39628473026743433,
+      "z": 0.5283975122934047,
+      "sep_arcsec": 0.08812444110012242,
+      "thing_id": 368833300,
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-008116-4-gal.fits.gz",
+      "petro_minus_legacy_r": 0.9290714263916016,
+      "model_minus_legacy_r": 0.8931732177734375,
+      "petro_minus_model_r": 0.03589820861816406,
+      "petro_minus_legacy_gr": -0.22722816467285156,
+      "petro_snr_gr": [
+        4.319690704345703,
+        9.357708930969238
+      ],
+      "flags_gr": [
+        276857088,
+        268468224
+      ]
+    },
+    {
+      "targetid": 39628462675202456,
+      "z": 0.1840514283848261,
+      "sep_arcsec": 0.1265476278396188,
+      "thing_id": 364883279,
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-008116-6-gal.fits.gz",
+      "petro_minus_legacy_r": 0.17298316955566406,
+      "model_minus_legacy_r": 0.10474777221679688,
+      "petro_minus_model_r": 0.06823539733886719,
+      "petro_minus_legacy_gr": 0.021116256713867188,
+      "petro_snr_gr": [
+        35.67190170288086,
+        52.664459228515625
+      ],
+      "flags_gr": [
+        268468224,
+        268468224
+      ]
+    },
+    {
+      "targetid": 39628483613168152,
+      "z": 0.4445888839047455,
+      "sep_arcsec": 0.04888429509832965,
+      "thing_id": 371363348,
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-008116-6-gal.fits.gz",
+      "petro_minus_legacy_r": 0.28992271423339844,
+      "model_minus_legacy_r": 0.3101615905761719,
+      "petro_minus_model_r": -0.020238876342773438,
+      "petro_minus_legacy_gr": 0.029865264892578125,
+      "petro_snr_gr": [
+        4.764623641967773,
+        16.414134979248047
+      ],
+      "flags_gr": [
+        276857088,
+        268468224
+      ]
+    },
+    {
+      "targetid": 39628493968904590,
+      "z": 0.3686627337938831,
+      "sep_arcsec": 0.0453874947458421,
+      "thing_id": 374870316,
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-008116-6-gal.fits.gz",
+      "petro_minus_legacy_r": 0.2690582275390625,
+      "model_minus_legacy_r": 0.29244041442871094,
+      "petro_minus_model_r": -0.023382186889648438,
+      "petro_minus_legacy_gr": -0.40841102600097656,
+      "petro_snr_gr": [
+        8.473563194274902,
+        19.735061645507812
+      ],
+      "flags_gr": [
+        276857104,
+        268599312
+      ]
+    },
+    {
+      "targetid": 39628493989872480,
+      "z": 0.3380997047411535,
+      "sep_arcsec": 0.12699591728229004,
+      "thing_id": 374278915,
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-008116-6-gal.fits.gz",
+      "petro_minus_legacy_r": 0.4198341369628906,
+      "model_minus_legacy_r": 0.2779426574707031,
+      "petro_minus_model_r": 0.1418914794921875,
+      "petro_minus_legacy_gr": 0.08344078063964844,
+      "petro_snr_gr": [
+        8.326201438903809,
+        19.70387840270996
+      ],
+      "flags_gr": [
+        276856848,
+        268468240
+      ]
+    },
+    {
+      "targetid": 39628425408810357,
+      "z": 0.33858771262930487,
+      "sep_arcsec": 0.02856925701730139,
+      "thing_id": 348603572,
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-008097-2-gal.fits.gz",
+      "petro_minus_legacy_r": 0.33739471435546875,
+      "model_minus_legacy_r": 0.2878150939941406,
+      "petro_minus_model_r": 0.049579620361328125,
+      "petro_minus_legacy_gr": 0.15630531311035156,
+      "petro_snr_gr": [
+        6.495087623596191,
+        14.21761703491211
+      ],
+      "flags_gr": [
+        276856848,
+        268468240
+      ]
+    },
+    {
+      "targetid": 39628425404613759,
+      "z": 0.4572689844490355,
+      "sep_arcsec": 0.012331133506805779,
+      "thing_id": 349284663,
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-008097-2-gal.fits.gz",
+      "petro_minus_legacy_r": 0.1812000274658203,
+      "model_minus_legacy_r": 0.11461067199707031,
+      "petro_minus_model_r": 0.06658935546875,
+      "petro_minus_legacy_gr": 0.1404247283935547,
+      "petro_snr_gr": [
+        5.738903999328613,
+        16.252777099609375
+      ],
+      "flags_gr": [
+        268468224,
+        268468224
+      ]
+    },
+    {
+      "targetid": 39628382186505618,
+      "z": 0.18218390762151426,
+      "sep_arcsec": 0.24001885093192699,
+      "thing_id": 332984849,
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-008097-2-gal.fits.gz",
+      "petro_minus_legacy_r": 0.04282951354980469,
+      "model_minus_legacy_r": 0.10133171081542969,
+      "petro_minus_model_r": -0.058502197265625,
+      "petro_minus_legacy_gr": 0.022960662841796875,
+      "petro_snr_gr": [
+        8.97555923461914,
+        8.993927001953125
+      ],
+      "flags_gr": [
+        268468224,
+        268468224
+      ]
+    },
+    {
+      "targetid": 39628403896223087,
+      "z": 0.23532218600386068,
+      "sep_arcsec": 0.06240121532328918,
+      "thing_id": 340981047,
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-008097-2-gal.fits.gz",
+      "petro_minus_legacy_r": 0.34383201599121094,
+      "model_minus_legacy_r": 0.19249916076660156,
+      "petro_minus_model_r": 0.15133285522460938,
+      "petro_minus_legacy_gr": -0.013490676879882812,
+      "petro_snr_gr": [
+        10.055421829223633,
+        17.53168296813965
+      ],
+      "flags_gr": [
+        268468224,
+        276987904
+      ]
+    },
+    {
+      "targetid": 39628420077848582,
+      "z": 0.5489580670875113,
+      "sep_arcsec": 0.02867077341645832,
+      "thing_id": 347790115,
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-008097-3-gal.fits.gz",
+      "petro_minus_legacy_r": 1.801107406616211,
+      "model_minus_legacy_r": 1.671356201171875,
+      "petro_minus_model_r": 0.12975120544433594,
+      "petro_minus_legacy_gr": -0.7645206451416016,
+      "petro_snr_gr": [
+        3.089900493621826,
+        3.978240728378296
+      ],
+      "flags_gr": [
+        276857104,
+        268468240
+      ]
+    },
+    {
+      "targetid": 39628430773327090,
+      "z": 0.16416005168997638,
+      "sep_arcsec": 0.013626117916822049,
+      "thing_id": 352204200,
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-008097-3-gal.fits.gz",
+      "petro_minus_legacy_r": -0.09439468383789062,
+      "model_minus_legacy_r": -0.02972412109375,
+      "petro_minus_model_r": -0.06467056274414062,
+      "petro_minus_legacy_gr": 0.1898937225341797,
+      "petro_snr_gr": [
+        11.76766586303711,
+        15.266358375549316
+      ],
+      "flags_gr": [
+        268468224,
+        268468224
+      ]
+    },
+    {
+      "targetid": 39628382207477542,
+      "z": 0.1562293393709169,
+      "sep_arcsec": 0.09813408344168079,
+      "thing_id": 333752170,
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-008097-3-gal.fits.gz",
+      "petro_minus_legacy_r": 0.03772735595703125,
+      "model_minus_legacy_r": 0.04035377502441406,
+      "petro_minus_model_r": -0.0026264190673828125,
+      "petro_minus_legacy_gr": 0.03121185302734375,
+      "petro_snr_gr": [
+        22.84661293029785,
+        27.148590087890625
+      ],
+      "flags_gr": [
+        268599320,
+        268599320
+      ]
+    },
+    {
+      "targetid": 39628382215865170,
+      "z": 0.4076547326380621,
+      "sep_arcsec": 0.22748300380618125,
+      "thing_id": 332669881,
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-008097-3-gal.fits.gz",
+      "petro_minus_legacy_r": 0.026334762573242188,
+      "model_minus_legacy_r": 0.02557373046875,
+      "petro_minus_model_r": 0.0007610321044921875,
+      "petro_minus_legacy_gr": -0.05608558654785156,
+      "petro_snr_gr": [
+        28.664775848388672,
+        34.81870651245117
+      ],
+      "flags_gr": [
+        268468224,
+        268468224
+      ]
+    },
+    {
+      "targetid": 39628462662620605,
+      "z": 0.5319045330023918,
+      "sep_arcsec": 0.1332599603287179,
+      "thing_id": 364270807,
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-008105-5-gal.fits.gz",
+      "petro_minus_legacy_r": 0.3968963623046875,
+      "model_minus_legacy_r": 0.4512062072753906,
+      "petro_minus_model_r": -0.054309844970703125,
+      "petro_minus_legacy_gr": -0.5811862945556641,
+      "petro_snr_gr": [
+        3.553205728530884,
+        7.35368013381958
+      ],
+      "flags_gr": [
+        276857088,
+        276856832
+      ]
+    },
+    {
+      "targetid": 39628483587998159,
+      "z": 0.20749443688802077,
+      "sep_arcsec": 0.10931581450985929,
+      "thing_id": 371130676,
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-008105-5-gal.fits.gz",
+      "petro_minus_legacy_r": 0.03919410705566406,
+      "model_minus_legacy_r": -0.04829978942871094,
+      "petro_minus_model_r": 0.087493896484375,
+      "petro_minus_legacy_gr": 0.07431411743164062,
+      "petro_snr_gr": [
+        15.043292999267578,
+        19.467370986938477
+      ],
+      "flags_gr": [
+        268468224,
+        268468224
+      ]
+    },
+    {
+      "targetid": 39628483575415522,
+      "z": 0.47551783588301066,
+      "sep_arcsec": 0.047840465991202404,
+      "thing_id": 371686671,
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-008105-5-gal.fits.gz",
+      "petro_minus_legacy_r": 0.7949600219726562,
+      "model_minus_legacy_r": 0.7054691314697266,
+      "petro_minus_model_r": 0.08949089050292969,
+      "petro_minus_legacy_gr": -0.4196453094482422,
+      "petro_snr_gr": [
+        2.8082985877990723,
+        10.21437931060791
+      ],
+      "flags_gr": [
+        276992280,
+        268469528
+      ]
+    },
+    {
+      "targetid": 39628488772162262,
+      "z": 0.1553717611943803,
+      "sep_arcsec": 0.09935352134618713,
+      "thing_id": 372697034,
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-008105-5-gal.fits.gz",
+      "petro_minus_legacy_r": 0.09914588928222656,
+      "model_minus_legacy_r": 0.024686813354492188,
+      "petro_minus_model_r": 0.07445907592773438,
+      "petro_minus_legacy_gr": -0.14845848083496094,
+      "petro_snr_gr": [
+        13.966872215270996,
+        11.708549499511719
+      ],
+      "flags_gr": [
+        268468224,
+        268468224
+      ]
+    },
+    {
+      "targetid": 39637284831628523,
+      "z": 0.5482803773888244,
+      "sep_arcsec": 0.4537490337290678,
+      "thing_id": 373665760,
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-008105-5-gal.fits.gz",
+      "petro_minus_legacy_r": 0.7680263519287109,
+      "model_minus_legacy_r": 0.6979827880859375,
+      "petro_minus_model_r": 0.07004356384277344,
+      "petro_minus_legacy_gr": -0.12618637084960938,
+      "petro_snr_gr": [
+        3.376763343811035,
+        11.020063400268555
+      ],
+      "flags_gr": [
+        478183753,
+        335578440
+      ]
+    },
+    {
+      "targetid": 39628488730214816,
+      "z": 0.22726294188094567,
+      "sep_arcsec": 0.04030005105794429,
+      "thing_id": 373951863,
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-008105-5-gal.fits.gz",
+      "petro_minus_legacy_r": 0.2402019500732422,
+      "model_minus_legacy_r": 0.17040252685546875,
+      "petro_minus_model_r": 0.06979942321777344,
+      "petro_minus_legacy_gr": -0.058078765869140625,
+      "petro_snr_gr": [
+        13.121377944946289,
+        19.68433952331543
+      ],
+      "flags_gr": [
+        268468224,
+        268468224
+      ]
+    },
+    {
+      "targetid": 39628207804122386,
+      "z": 0.5296107313495487,
+      "sep_arcsec": 0.07966622120934765,
+      "thing_id": 268546746,
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-005934-5-gal.fits.gz",
+      "petro_minus_legacy_r": 0.4396381378173828,
+      "model_minus_legacy_r": 0.41219520568847656,
+      "petro_minus_model_r": 0.02744293212890625,
+      "petro_minus_legacy_gr": -0.1284313201904297,
+      "petro_snr_gr": [
+        3.076915740966797,
+        11.201196670532227
+      ],
+      "flags_gr": [
+        276856832,
+        268468224
+      ]
+    },
+    {
+      "targetid": 39628213567096072,
+      "z": 0.3978233995670167,
+      "sep_arcsec": 0.055175112174468084,
+      "thing_id": 270820125,
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-005934-5-gal.fits.gz",
+      "petro_minus_legacy_r": 0.12916183471679688,
+      "model_minus_legacy_r": 0.13593673706054688,
+      "petro_minus_model_r": -0.00677490234375,
+      "petro_minus_legacy_gr": -0.05275726318359375,
+      "petro_snr_gr": [
+        8.361237525939941,
+        19.828121185302734
+      ],
+      "flags_gr": [
+        268468240,
+        268599312
+      ]
+    },
+    {
+      "targetid": 39628349194111102,
+      "z": 0.4454374351475775,
+      "sep_arcsec": 0.09014110546445124,
+      "thing_id": 320189247,
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-005934-5-gal.fits.gz",
+      "petro_minus_legacy_r": 0.1803722381591797,
+      "model_minus_legacy_r": 0.1422271728515625,
+      "petro_minus_model_r": 0.03814506530761719,
+      "petro_minus_legacy_gr": 0.35045433044433594,
+      "petro_snr_gr": [
+        1.7373026609420776,
+        9.904501914978027
+      ],
+      "flags_gr": [
+        276857104,
+        268468240
+      ]
+    },
+    {
+      "targetid": 39628483575416072,
+      "z": 0.39309402385109093,
+      "sep_arcsec": 0.11590524208099956,
+      "thing_id": 370142450,
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-008116-5-gal.fits.gz",
+      "petro_minus_legacy_r": 0.12405776977539062,
+      "model_minus_legacy_r": 0.1356964111328125,
+      "petro_minus_model_r": -0.011638641357421875,
+      "petro_minus_legacy_gr": -0.10979461669921875,
+      "petro_snr_gr": [
+        11.686044692993164,
+        25.709810256958008
+      ],
+      "flags_gr": [
+        268468224,
+        268468224
+      ]
+    },
+    {
+      "targetid": 39628478328345156,
+      "z": 0.22112623467165332,
+      "sep_arcsec": 0.3067546172540326,
+      "thing_id": 370288598,
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-008116-5-gal.fits.gz",
+      "petro_minus_legacy_r": 0.04631233215332031,
+      "model_minus_legacy_r": 0.06041717529296875,
+      "petro_minus_model_r": -0.014104843139648438,
+      "petro_minus_legacy_gr": 0.033779144287109375,
+      "petro_snr_gr": [
+        52.68684768676758,
+        48.27791213989258
+      ],
+      "flags_gr": [
+        268603392,
+        268468224
+      ]
+    },
+    {
+      "targetid": 39628483533475176,
+      "z": 0.4390105950460416,
+      "sep_arcsec": 0.06165740802022901,
+      "thing_id": 371572075,
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-008116-5-gal.fits.gz",
+      "petro_minus_legacy_r": 0.44907188415527344,
+      "model_minus_legacy_r": 0.3610496520996094,
+      "petro_minus_model_r": 0.08802223205566406,
+      "petro_minus_legacy_gr": -0.1970367431640625,
+      "petro_snr_gr": [
+        4.5508198738098145,
+        9.135577201843262
+      ],
+      "flags_gr": [
+        276857104,
+        268468240
+      ]
+    },
+    {
+      "targetid": 39628132235348844,
+      "z": 0.3774203449486686,
+      "sep_arcsec": 0.11388951537408051,
+      "thing_id": 240621844,
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-005934-3-gal.fits.gz",
+      "petro_minus_legacy_r": 0.008863449096679688,
+      "model_minus_legacy_r": -0.1255664825439453,
+      "petro_minus_model_r": 0.134429931640625,
+      "petro_minus_legacy_gr": 0.13194656372070312,
+      "petro_snr_gr": [
+        5.313266277313232,
+        12.1630859375
+      ],
+      "flags_gr": [
+        268599296,
+        268468224
+      ]
+    },
+    {
+      "targetid": 39628149784314997,
+      "z": 0.5284737644467609,
+      "sep_arcsec": 0.08206350368494411,
+      "thing_id": 248041733,
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-005934-3-gal.fits.gz",
+      "petro_minus_legacy_r": 0.5478267669677734,
+      "model_minus_legacy_r": 0.6548213958740234,
+      "petro_minus_model_r": -0.10699462890625,
+      "petro_minus_legacy_gr": -0.2245922088623047,
+      "petro_snr_gr": [
+        6.076748847961426,
+        11.120209693908691
+      ],
+      "flags_gr": [
+        276857104,
+        276856848
+      ]
+    },
+    {
+      "targetid": 39628178896979347,
+      "z": 0.5471736397969706,
+      "sep_arcsec": 0.1349215083855244,
+      "thing_id": 257585296,
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-005934-3-gal.fits.gz",
+      "petro_minus_legacy_r": -0.014041900634765625,
+      "model_minus_legacy_r": -0.0088043212890625,
+      "petro_minus_model_r": -0.005237579345703125,
+      "petro_minus_legacy_gr": -0.21462249755859375,
+      "petro_snr_gr": [
+        20.246919631958008,
+        25.831315994262695
+      ],
+      "flags_gr": [
+        268468240,
+        268468240
+      ]
+    },
+    {
+      "targetid": 39628173087870835,
+      "z": 0.498580629988975,
+      "sep_arcsec": 0.11761847330039207,
+      "thing_id": 256467476,
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-005934-3-gal.fits.gz",
+      "petro_minus_legacy_r": 0.42931175231933594,
+      "model_minus_legacy_r": 0.4545116424560547,
+      "petro_minus_model_r": -0.02519989013671875,
+      "petro_minus_legacy_gr": 0.11367416381835938,
+      "petro_snr_gr": [
+        2.418897867202759,
+        10.71936321258545
+      ],
+      "flags_gr": [
+        276857104,
+        268468240
+      ]
+    },
+    {
+      "targetid": 39628196265593084,
+      "z": 0.5455901255601026,
+      "sep_arcsec": 0.1035006063891191,
+      "thing_id": 263330658,
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-005934-3-gal.fits.gz",
+      "petro_minus_legacy_r": 0.3467903137207031,
+      "model_minus_legacy_r": 0.278717041015625,
+      "petro_minus_model_r": 0.06807327270507812,
+      "petro_minus_legacy_gr": -0.43292999267578125,
+      "petro_snr_gr": [
+        3.080676317214966,
+        7.568658351898193
+      ],
+      "flags_gr": [
+        411074840,
+        268468248
+      ]
+    },
+    {
+      "targetid": 39628382220058970,
+      "z": 0.3787014142705567,
+      "sep_arcsec": 0.08763969595398675,
+      "thing_id": 334301324,
+      "path": "/global/cfs/cdirs/cosmo/data/sdss/dr16/eboss/sweeps/dr13_final/301/calibObj-005934-3-gal.fits.gz",
+      "petro_minus_legacy_r": 0.13792037963867188,
+      "model_minus_legacy_r": 0.08597946166992188,
+      "petro_minus_model_r": 0.05194091796875,
+      "petro_minus_legacy_gr": -0.1842823028564453,
+      "petro_snr_gr": [
+        8.506048202514648,
+        24.653833389282227
+      ],
+      "flags_gr": [
+        276857112,
+        276856856
+      ]
+    }
+  ],
+  "method": "At most 16 sweep files with most pilot targets within .3deg of field center. SURVEY_PRIMARY bit256; unique match within1arcsec and no second within1arcsec; positive g/r flux; summaries require Petrosian SNR>=5 both bands. SDSS stored extinction versus already de-reddened FastSpecFit Legacy flux. No full photometric clean-bit selection or aperture correction; pilot footprint incomplete, unmatched fraction not completeness."
+}

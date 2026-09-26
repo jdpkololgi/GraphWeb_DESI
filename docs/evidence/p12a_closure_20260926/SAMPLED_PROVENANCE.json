@@ -1,0 +1,428 @@
+{
+  "real_fa_path": "/global/cfs/cdirs/desi/target/fiberassign/tiles/trunk/023/fiberassign-023286.fits.gz",
+  "real_fa_header": [
+    {
+      "name": "SIMPLE",
+      "value": true,
+      "comment": "file does conform to FITS standard"
+    },
+    {
+      "name": "BITPIX",
+      "value": 16,
+      "comment": "number of bits per data pixel"
+    },
+    {
+      "name": "NAXIS",
+      "value": 0,
+      "comment": "number of data axes"
+    },
+    {
+      "name": "EXTEND",
+      "value": true,
+      "comment": "FITS dataset may contain extensions"
+    },
+    {
+      "name": "COMMENT",
+      "value": "  FITS (Flexible Image Transport System) format is defined in 'Astronomy",
+      "comment": "  FITS (Flexible Image Transport System) format is defined in 'Astronomy"
+    },
+    {
+      "name": "COMMENT",
+      "value": "  and Astrophysics', volume 376, page 359; bibcode: 2001A&A...376..359H",
+      "comment": "  and Astrophysics', volume 376, page 359; bibcode: 2001A&A...376..359H"
+    },
+    {
+      "name": "EXTNAME",
+      "value": "PRIMARY",
+      "comment": ""
+    },
+    {
+      "name": "TILEID",
+      "value": 23286,
+      "comment": ""
+    },
+    {
+      "name": "TILERA",
+      "value": 11.203,
+      "comment": ""
+    },
+    {
+      "name": "TILEDEC",
+      "value": -17.779,
+      "comment": ""
+    },
+    {
+      "name": "FIELDROT",
+      "value": 0.0258087601906853,
+      "comment": ""
+    },
+    {
+      "name": "FA_PLAN",
+      "value": "2022-07-01T00:00:00.000",
+      "comment": ""
+    },
+    {
+      "name": "FA_HA",
+      "value": 13.36,
+      "comment": ""
+    },
+    {
+      "name": "FA_RUN",
+      "value": "2021-12-12T17:00:42+00:00",
+      "comment": ""
+    },
+    {
+      "name": "FA_M_GFA",
+      "value": 0.4,
+      "comment": ""
+    },
+    {
+      "name": "FA_M_PET",
+      "value": 0.4,
+      "comment": ""
+    },
+    {
+      "name": "FA_M_POS",
+      "value": 0.05,
+      "comment": ""
+    },
+    {
+      "name": "REQRA",
+      "value": 11.203,
+      "comment": ""
+    },
+    {
+      "name": "REQDEC",
+      "value": -17.779,
+      "comment": ""
+    },
+    {
+      "name": "FIELDNUM",
+      "value": 0,
+      "comment": ""
+    },
+    {
+      "name": "FA_VER",
+      "value": "5.4.0",
+      "comment": ""
+    },
+    {
+      "name": "FA_SURV",
+      "value": "main",
+      "comment": ""
+    },
+    {
+      "name": "DEPNAM00",
+      "value": "python",
+      "comment": ""
+    },
+    {
+      "name": "DEPVER00",
+      "value": "3.8.3",
+      "comment": ""
+    },
+    {
+      "name": "DEPNAM01",
+      "value": "numpy",
+      "comment": ""
+    },
+    {
+      "name": "DEPVER01",
+      "value": "1.19.1",
+      "comment": ""
+    },
+    {
+      "name": "DEPNAM02",
+      "value": "scipy",
+      "comment": ""
+    },
+    {
+      "name": "DEPVER02",
+      "value": "1.5.2",
+      "comment": ""
+    },
+    {
+      "name": "DEPNAM03",
+      "value": "astropy",
+      "comment": ""
+    },
+    {
+      "name": "DEPVER03",
+      "value": "4.0.1.post1",
+      "comment": ""
+    },
+    {
+      "name": "DEPNAM04",
+      "value": "yaml",
+      "comment": ""
+    },
+    {
+      "name": "DEPVER04",
+      "value": "5.3.1",
+      "comment": ""
+    },
+    {
+      "name": "DEPNAM05",
+      "value": "matplotlib",
+      "comment": ""
+    },
+    {
+      "name": "DEPVER05",
+      "value": "3.2.1",
+      "comment": ""
+    },
+    {
+      "name": "DEPNAM06",
+      "value": "requests",
+      "comment": ""
+    },
+    {
+      "name": "DEPVER06",
+      "value": "2.24.0",
+      "comment": ""
+    },
+    {
+      "name": "DEPNAM07",
+      "value": "fitsio",
+      "comment": ""
+    },
+    {
+      "name": "DEPVER07",
+      "value": "1.1.2",
+      "comment": ""
+    },
+    {
+      "name": "DEPNAM08",
+      "value": "healpy",
+      "comment": ""
+    },
+    {
+      "name": "DEPVER08",
+      "value": "1.14.0",
+      "comment": ""
+    },
+    {
+      "name": "DEPNAM09",
+      "value": "desiutil",
+      "comment": ""
+    },
+    {
+      "name": "DEPVER09",
+      "value": "3.2.2",
+      "comment": ""
+    },
+    {
+      "name": "DEPNAM10",
+      "value": "desitarget",
+      "comment": ""
+    },
+    {
+      "name": "DEPVER10",
+      "value": "2.2.1",
+      "comment": ""
+    },
+    {
+      "name": "DEPNAM11",
+      "value": "desimodel",
+      "comment": ""
+    },
+    {
+      "name": "DEPVER11",
+      "value": "0.16.0",
+      "comment": ""
+    },
+    {
+      "name": "DEPNAM12",
+      "value": "desimeter",
+      "comment": ""
+    },
+    {
+      "name": "DEPVER12",
+      "value": "0.6.7",
+      "comment": ""
+    },
+    {
+      "name": "DEPNAM13",
+      "value": "fiberassign",
+      "comment": ""
+    },
+    {
+      "name": "DEPVER13",
+      "value": "5.4.0",
+      "comment": ""
+    },
+    {
+      "name": "DEPNAM14",
+      "value": "SKYBRICKS_DIR",
+      "comment": ""
+    },
+    {
+      "name": "DEPVER14",
+      "value": "$DESI_ROOT/target/skybricks/v3",
+      "comment": ""
+    },
+    {
+      "name": "DEPNAM15",
+      "value": "SKYHEALPIXS_DIR",
+      "comment": ""
+    },
+    {
+      "name": "DEPVER15",
+      "value": "$DESI_ROOT/target/skyhealpixs/v1",
+      "comment": ""
+    },
+    {
+      "name": "FAFLAVOR",
+      "value": "mainbright",
+      "comment": ""
+    },
+    {
+      "name": "DESIROOT",
+      "value": "/data/datasystems",
+      "comment": ""
+    },
+    {
+      "name": "GFA",
+      "value": "DESIROOT/target/catalogs/dr9/1.1.1/gfas",
+      "comment": ""
+    },
+    {
+      "name": "MTL",
+      "value": "DESIROOT/survey/ops/surveyops/trunk/mtl/main/bright",
+      "comment": ""
+    },
+    {
+      "name": "SCND",
+      "value": "DESIROOT/target/catalogs/dr9/1.1.1/targets/main/secondary/bright/targets-bright-secondary.fits",
+      "comment": ""
+    },
+    {
+      "name": "SCND2",
+      "value": "DESIROOT/target/catalogs/dr9/1.1.1/targets/main2/secondary/bright/main2targets-bright-secondary.fits",
+      "comment": ""
+    },
+    {
+      "name": "SCNDMTL",
+      "value": "DESIROOT/survey/ops/surveyops/trunk/mtl/main/secondary/bright",
+      "comment": ""
+    },
+    {
+      "name": "SKY",
+      "value": "DESIROOT/target/catalogs/dr9/1.1.1/skies",
+      "comment": ""
+    },
+    {
+      "name": "SKYSUPP",
+      "value": "DESIROOT/target/catalogs/gaiadr2/1.1.1/skies-supp",
+      "comment": ""
+    },
+    {
+      "name": "TARG",
+      "value": "DESIROOT/target/catalogs/dr9/1.1.1/targets/main/resolve/bright",
+      "comment": ""
+    },
+    {
+      "name": "TOO",
+      "value": "DESIROOT/survey/ops/surveyops/trunk/mtl/main/ToO/ToO.ecsv",
+      "comment": ""
+    },
+    {
+      "name": "FAARGS",
+      "value": "--doclean n --dr dr9 --dtver 1.1.1 --gaiadr gaiadr2 --goaltime 180.0 --ha 13.36 --hdr_faprgrm bright --hdr_survey main --log_stdout False --lookup_sky_source ls --margin_gfa 0.4 --margin_petal 0.4 --margin_pos 0.05 --mintfrac 0.85 --mtltime 2021-12-14T18:48:57+00:00 --nosteps qa --pmcorr n --pmtime_utc_str 2021-12-16T03:55:29+00:00 --program BRIGHT --rundate 2021-12-12T17:00:42+00:00 --sbprof BGS --sky_per_petal 40 --sky_per_slitblock 1 --standards_per_petal 10 --steps tiles,sky,gfa,targ,scnd,too,fa,zip,move,qa --survey main --svntiledir /data/tiles/SVN_tiles --tiledec -17.779 --tileid 23286 --tilera 11.203 --worldreadable True",
+      "comment": ""
+    },
+    {
+      "name": "OUTDIR",
+      "value": "/data/datasystems/target/fiberassign/holding_pen/",
+      "comment": ""
+    },
+    {
+      "name": "SURVEY",
+      "value": "main",
+      "comment": ""
+    },
+    {
+      "name": "NOWTIME",
+      "value": "2021-12-16T03:55:29+00:00",
+      "comment": ""
+    },
+    {
+      "name": "RUNDATE",
+      "value": "2021-12-12T17:00:42+00:00",
+      "comment": ""
+    },
+    {
+      "name": "PMCORR",
+      "value": "n",
+      "comment": ""
+    },
+    {
+      "name": "PMTIME",
+      "value": "2021-12-16T03:55:29+00:00",
+      "comment": ""
+    },
+    {
+      "name": "FAPRGRM",
+      "value": "bright",
+      "comment": ""
+    },
+    {
+      "name": "MTLTIME",
+      "value": "2021-12-14T18:48:57+00:00",
+      "comment": ""
+    },
+    {
+      "name": "OBSCON",
+      "value": "DARK|GRAY|BRIGHT|BACKUP",
+      "comment": ""
+    },
+    {
+      "name": "GOALTIME",
+      "value": 180.0,
+      "comment": ""
+    },
+    {
+      "name": "GOALTYPE",
+      "value": "BRIGHT",
+      "comment": ""
+    },
+    {
+      "name": "EBVFAC",
+      "value": 1.04095989341021,
+      "comment": ""
+    },
+    {
+      "name": "SBPROF",
+      "value": "BGS",
+      "comment": ""
+    },
+    {
+      "name": "MINTFRAC",
+      "value": 0.85,
+      "comment": ""
+    },
+    {
+      "name": "FASCRIPT",
+      "value": "/software/datasystems/desiconda/20200924/code/fiberassign/5.4.0/bin/fba_launch",
+      "comment": ""
+    },
+    {
+      "name": "SVNDM",
+      "value": "138264",
+      "comment": ""
+    },
+    {
+      "name": "SVNMTL",
+      "value": "995",
+      "comment": ""
+    },
+    {
+      "name": "LKSKYSRC",
+      "value": "ls",
+      "comment": ""
+    }
+  ],
+  "mock_script_path": "/global/cfs/cdirs/desi/survey/catalogs/DA2/mocks/SecondGenMocks/AbacusSummitBGS_v2/altmtl6/Univ000/fa/MAIN/20210514/fa-020090.sh",
+  "mock_script": "#!/bin/bash\n\nsource /global/common/software/desi/desi_environment.sh main\nmodule swap fiberassign/4.0.0\nfba_run --targets /global/cfs/cdirs/desi/survey/catalogs/DA2/mocks/SecondGenMocks/AbacusSummitBGS_v2//altmtl6/Univ000//fa/MAIN/20210514/020090-targ.fits /global/cfs/cdirs/desi/survey/fiberassign/main/020/020090-scnd.fits --sky /global/cfs/cdirs/desi/survey/fiberassign/main/020/020090-sky.fits --footprint /global/cfs/cdirs/desi/survey/fiberassign/main/020/020090-tiles.fits --rundate 2021-05-14T23:48:14+00:00 --fieldrot -0.063434203499369 --dir /global/cfs/cdirs/desi/survey/catalogs/DA2/mocks/SecondGenMocks/AbacusSummitBGS_v2//altmtl6/Univ000//fa/MAIN/20210514/ --sky_per_petal 40 --standards_per_petal 10 --sky_per_slitblock 1 --ha -0.28 --margin-gfa 0.4 --margin-petal 0.4 --margin-pos 0.05",
+  "mock_script_sha256": "97098ef9bb43fc47ee3190bd70f1fb75814c2e43213aef5897da4d0b462832b5"
+}

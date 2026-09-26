@@ -1,0 +1,10 @@
+targetfiles 0 331 matched 12993
+targetfiles 40 331 matched 638578
+targetfiles 80 331 matched 1305603
+targetfiles 120 331 matched 2183590
+targetfiles 160 331 matched 2752698
+targetfiles 200 331 matched 3440546
+targetfiles 240 331 matched 3954950
+targetfiles 280 331 matched 4792996
+targetfiles 320 331 matched 5333960
+{'job': '58885256', 'rows': 5436413, 'matched': 5436413, 'unmatched': 0, 'matched_pass': 5436413, 'matched_fail': 0, 'stored_bright_mismatch': 0, 'replay_stored_mismatch': 0, 'gaia_fail': 0, 'sga_rows': 5166, 'gaia_fail_recovered_sga': 0, 'fail_by_shell': [0, 0, 0, 0, 0, 0, 0, 0], 'flux_changed_rows': [0, 0, 0], 'flux_max_abs_diff': [0.0, 0.0, 0.0], 'script_sha256': 'a76ffac494bff372a8ba9343a98f619a6cba989320a44fa9be882c94b7565e0c', 'historical_cuts_sha256': '373173bc452da9564eb60d3056ccaed1aba6e8582d65dbda05281febf6d60c37', 'historical_geomask_sha256': 'c12e3545eee148f3562ded8376cab2e7cf04b15a203f9b0bcfb58da711c94d5f', 'note': 'Join and replay on selected Loa science galaxies. Does not reconstruct unselected galaxy completeness or prove mock equivalence. Data release header and sampled FA header pin DR9/1.1.1. Remaining unmatched IDs must not be presumed to share this provenance.'}

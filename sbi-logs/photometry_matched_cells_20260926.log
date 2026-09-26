@@ -1,0 +1,81 @@
+loa 1551682
+ph006 1436585
+{
+  "rows": [
+    {
+      "z": [
+        0.15,
+        0.25
+      ],
+      "cells": 307,
+      "loa_retained": 790657,
+      "loa_total": 791798,
+      "mock_retained": 774992,
+      "mock_total": 775235,
+      "loa_median": 0.9897816518012278,
+      "mock_standardized_median": 1.0054304930525348,
+      "median_difference": -0.015648841251307055,
+      "loa_mean": 0.9624121332006166,
+      "mock_standardized_mean": 0.9756940730728353
+    },
+    {
+      "z": [
+        0.25,
+        0.35
+      ],
+      "cells": 214,
+      "loa_retained": 514105,
+      "loa_total": 515603,
+      "mock_retained": 479192,
+      "mock_total": 479478,
+      "loa_median": 1.300904874585897,
+      "mock_standardized_median": 1.3279524030045482,
+      "median_difference": -0.0270475284186511,
+      "loa_mean": 1.2425593020880947,
+      "mock_standardized_mean": 1.2697352303829725
+    },
+    {
+      "z": [
+        0.35,
+        0.44999999999999996
+      ],
+      "cells": 140,
+      "loa_retained": 201088,
+      "loa_total": 203039,
+      "mock_retained": 160399,
+      "mock_total": 160626,
+      "loa_median": 1.603188373641003,
+      "mock_standardized_median": 1.5835102742286171,
+      "median_difference": 0.019678099412385963,
+      "loa_mean": 1.510743555060471,
+      "mock_standardized_mean": 1.4885449284327978
+    },
+    {
+      "z": [
+        0.44999999999999996,
+        0.55
+      ],
+      "cells": 66,
+      "loa_retained": 38304,
+      "loa_total": 41242,
+      "mock_retained": 21002,
+      "mock_total": 21246,
+      "loa_median": 1.7358569299552908,
+      "mock_standardized_median": 1.5786767026217556,
+      "median_difference": 0.1571802273335352,
+      "loa_mean": 1.6167862364243943,
+      "mock_standardized_mean": 1.5022063803893209
+    }
+  ],
+  "sources": {
+    "loa": "/global/cfs/cdirs/desi/survey/catalogs/DA2/LSS/loa-v1/LSScats/v2.1/BGS_BRIGHT_full_HPmapcut.dat.fits",
+    "ph006": "/pscratch/sd/d/dkololgi/abacus/p10_multiphase/ph006/catalogues/observed/ph006_bgs_bright_full_observed_with_tweb.fits"
+  },
+  "excluded_colour_outside_hist": {
+    "loa": 0,
+    "ph006": 0
+  },
+  "job": "58892691",
+  "script_sha256": "c4793594e17eea91fe9cb94f5771c70c7ee909f57c0879d37e692c987bff7697",
+  "method": "SGC only; Loa PHOTSYS=S; common angular support; both 12<=r<19.5 numerically. Cells dz=.01, dr=.1, >=20 galaxies per catalogue; mock cell colour distributions standardized to real cell counts. Passbands and magnitude estimators not assumed equivalent; no production changes."
+}

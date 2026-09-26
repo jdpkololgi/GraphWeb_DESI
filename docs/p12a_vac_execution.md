@@ -15,6 +15,13 @@ No FITS, particle, target array, reserved confirmation payload or large source
 catalogue is opened. Recorded catalogue hashes are explicitly not live verification.
 An artifact match cannot pass the coordinate, response, golden-mock or release gates.
 
+The live run is archived as `docs/p12a_vac_preflight_report_20260924.json`:
+all eight small frozen artifacts verified; `ready_for_desi_canary` remains false.
+Codex's sandbox process launcher was missing its temporary
+`codex-linux-sandbox` executable, so this one read-only run used the reviewed
+unsandboxed command path. This runner problem is separate from Slurm and from
+the scientific gates below.
+
 Run in cosmic_env from GraphWeb_DESI (small metadata/checkpoint hashing only):
 
 ```bash
@@ -54,6 +61,13 @@ is not proof that its semantics match training.
    frozen candidates. Complete full encoder/OOF transform ancestry.
 2. Bind licensed training-phase row samples and native host-label sources for
    the coordinate audit; establish criteria and bounded compute request.
+   The first ph002 audit is implemented in Illustris; see
+   `../TNG/Illustris/docs/p12a_coordinate_sample_run_20260924.md` from this
+   repository root. Nine synthetic tests pass; approved job58823054 completed
+   sampled coordinate/native-label checks successfully on ph002-005. Results:
+   `../TNG/Illustris/docs/p12a_coordinate_sample_results_20260924.md`.
+   The imported ph000, lineage/response and Loa checks remain open. All VAC
+   compute is now authorized; these samples do not yet qualify the Loa adapter.
 3. Implement full data/response adapter only against the resolved coordinate
    and success-selection contract; test IDs, counts, support and interpolation.
 4. Replay a licensed golden mock through the exact adapter/checkpoints, then a
@@ -63,3 +77,61 @@ is not proof that its semantics match training.
 No Slurm submission is included. The coordinate audit cannot be replaced by the
 presence of matching Planck18 strings. Until its outcome is evidenced, no real
 DESI predictions or corrected-model/retraining decision is claimed.
+
+## Live Loa source check completed (2026-09-24)
+
+`workflows/catalog/p12a_loa_source_audit.py` ran in CPU job58823514.
+`docs/p12a_loa_source_audit_20260924.json` records matching full/clustering data
+SHA256 and matching sizes/row counts/ordered columns for all36 random files.
+The random-file content hashes and release success policy remain pending.
+This is a source/schema audit, not permission to launch inference.
+
+The installed LSS BGS success helper uses ZWARN==0 and DELTACHI2>40, whereas
+our historical `build_bgs_maglim_catalog.py` uses >=25 plus GALAXY. Freeze the
+Loa release policy explicitly; do not reuse that legacy selection silently.
+The updated Illustris handoff results also close the ph000 import check and
+verify embedded checkpoint transforms. Population and response replay gates
+remain open; see `../TNG/Illustris/docs/p12a_handoff_followup_results_20260924.md`.
+
+## Actual quality-cut census and replay blocker (2026-09-24)
+
+The full census confirms that the historical catalogue satisfies its own
+ZWARN0/DELTACHI2>=25/GALAXY cuts. The installed LSS >40 helper is different,
+but that alone is not a defect or a retraining trigger. Quantified threshold
+and spectral-type effects: `p12a_quality_cut_results_20260924.md`.
+
+The current scientific blocker is now the Illustris full-fit halo24 encoder's
+failed context-growth/subdivision gates. Matching original precision restores
+exact stored OOF predictions, so source replay is not the blocker. A frozen-
+weight halo48 control passes dense/sparse/edge checks but is not calibrated for
+production yet. Follow the active VAC plan's larger-context summary/posterior
+revalidation path before declaring the DESI adapter ready. Preserve the Loa
+source crosswalk and successful response checks; do not restart E2E work.
+
+
+2026-09-25: conditional coverage and eight-core observer golden replay pass;
+Loa full-data/random content hashes verified. Supersedes pending replay status.
+Next is bounded Loa input construction/QA then diagnostic inference; no further
+retraining indicated. Full release and independent confirmation remain open.
+See Illustris `docs/p12a_golden_conditional_results_20260925.md` and the explicit
+bounded-trial handoff manifest. That was the pre-trial state; the completion update below supersedes it.
+
+
+## 2026-09-25: real Loa canary VAC completed
+
+Supersedes earlier pending coordinate/replay/inference status above. Frozen
+halo48 posterior applied to16 preselected Loa cores;5,615 unique TARGETIDs,
+5,602 supported posteriors with512 joint draws,13 flagged/null. Independent
+serialized-product QA passes. Existing full-data/random catalogues reused;
+new P12 field/response inputs built. See `p12a_loa_canary_20260925.md` and
+`evidence/p12a_loa_canary_20260925/`. V5 full-footprint scale-out remains next,
+after distribution/selection closure and representative shard benchmarking.
+No new permission required for authorized production compute. Science release
+remains gated by replication/robustness; no confirmation phase was accessed.
+
+
+2026-09-25 full-survey continuation: input/cut audit found an unresolved high-z
+count excess, not an accidental extra cut in our processed mocks. See
+`p12a_selection_distribution_audit_20260925.md`. Restartable core checkpoints
+and a128-shard ownership plan implemented; benchmark and exact restart pass.
+Full-footprint output remains provisional, with explicit selection-shift flag.

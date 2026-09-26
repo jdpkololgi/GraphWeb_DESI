@@ -1,0 +1,30 @@
+load_status=0
+before=/global/common/software/desi/perlmutter/desiconda/20240425-2.2.0/code/fiberassign/main/bin/fba_run
+Lmod has detected the following error: The following module(s) are unknown:
+"fiberassign/4.0.0"
+
+Please check the spelling or version number. Also try "module spider ..."
+It is also possible your cache file is out-of-date; it may help to try:
+  $ module --ignore_cache load "fiberassign/4.0.0"
+
+Also make sure that all modulefiles written in TCL start with the string
+#%Module
+
+
+
+swap4_status=1
+after4=/global/common/software/desi/perlmutter/desiconda/20240425-2.2.0/code/fiberassign/main/bin/fba_run
+Lmod has detected the following error: The following module(s) are unknown:
+"fiberassign/5.0.0"
+
+Please check the spelling or version number. Also try "module spider ..."
+It is also possible your cache file is out-of-date; it may help to try:
+  $ module --ignore_cache load "fiberassign/5.0.0"
+
+Also make sure that all modulefiles written in TCL start with the string
+#%Module
+
+
+
+swap5_status=1
+after5=/global/common/software/desi/perlmutter/desiconda/20240425-2.2.0/code/fiberassign/main/bin/fba_run

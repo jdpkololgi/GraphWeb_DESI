@@ -1,0 +1,86 @@
+[
+  {
+    "z": [
+      0.15,
+      0.25
+    ],
+    "all": {
+      "n": 128,
+      "median_sdss_minus_decam_r": 0.092924238139378,
+      "median_sdss_minus_decam_gr": 0.03711845239145273
+    },
+    "colour_residual_lt003": {
+      "n": 33,
+      "median_sdss_minus_decam_r": 0.09253772346356559,
+      "median_sdss_minus_decam_gr": 0.038559515408742584
+    },
+    "rchi2phot_lt10": {
+      "n": 6,
+      "median_sdss_minus_decam_r": 0.09394003263643569,
+      "median_sdss_minus_decam_gr": 0.04810520411331787
+    }
+  },
+  {
+    "z": [
+      0.25,
+      0.35
+    ],
+    "all": {
+      "n": 128,
+      "median_sdss_minus_decam_r": 0.10638020789971225,
+      "median_sdss_minus_decam_gr": 0.05476583376960864
+    },
+    "colour_residual_lt003": {
+      "n": 40,
+      "median_sdss_minus_decam_r": 0.10895775546556186,
+      "median_sdss_minus_decam_gr": 0.05814195905230535
+    },
+    "rchi2phot_lt10": {
+      "n": 6,
+      "median_sdss_minus_decam_r": 0.11257361012271727,
+      "median_sdss_minus_decam_gr": 0.07226239839768556
+    }
+  },
+  {
+    "z": [
+      0.35,
+      0.45
+    ],
+    "all": {
+      "n": 128,
+      "median_sdss_minus_decam_r": 0.13195868237255715,
+      "median_sdss_minus_decam_gr": -0.017901490729018033
+    },
+    "colour_residual_lt003": {
+      "n": 34,
+      "median_sdss_minus_decam_r": 0.12222803345194677,
+      "median_sdss_minus_decam_gr": 0.007096836694050257
+    },
+    "rchi2phot_lt10": {
+      "n": 6,
+      "median_sdss_minus_decam_r": 0.12614556512548014,
+      "median_sdss_minus_decam_gr": -0.0056635549681065545
+    }
+  },
+  {
+    "z": [
+      0.45,
+      0.55
+    ],
+    "all": {
+      "n": 128,
+      "median_sdss_minus_decam_r": 0.24613831164569788,
+      "median_sdss_minus_decam_gr": -0.08869402174970653
+    },
+    "colour_residual_lt003": {
+      "n": 22,
+      "median_sdss_minus_decam_r": 0.24853690997874334,
+      "median_sdss_minus_decam_gr": -0.08924418897967845
+    },
+    "rchi2phot_lt10": {
+      "n": 9,
+      "median_sdss_minus_decam_r": 0.24122232043083391,
+      "median_sdss_minus_decam_gr": -0.07009399773919478
+    }
+  }
+]

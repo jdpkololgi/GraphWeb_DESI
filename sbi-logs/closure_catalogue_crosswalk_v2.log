@@ -1,0 +1,5 @@
+real_kibo 10623164 [797652, 519907, 204721, 41659, 1973004, 1280219, 502706, 95200] 5164
+real_loa 10631484 [799947, 521105, 205287, 41741, 1981867, 1286073, 504806, 95587] 5165
+mock_kibo 9140805 [775671, 479734, 160714, 21258, 1928976, 1155840, 396169, 49846] 5164
+mock_loa 9259936 [811166, 501698, 167976, 22243, 2000569, 1199448, 411078, 51668] 5171
+{'real': {'shared_successful_ids': 5391797, 'only_kibo': 23271, 'only_loa': 44616, 'redshift_changed_gt_0p001': 62, 'tile_symmetric_difference': 1}, 'mock': {'shared_successful_ids': 4967614, 'only_kibo': 594, 'only_loa': 198232, 'redshift_changed_gt_0p001': 0, 'tile_symmetric_difference': 7}}

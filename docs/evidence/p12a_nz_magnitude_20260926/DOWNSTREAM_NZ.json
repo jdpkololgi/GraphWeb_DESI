@@ -1,0 +1,18 @@
+{
+  "sources": [
+    {
+      "path": "/global/common/software/desi/perlmutter/desiconda/current/code/LSS/main/scripts/mock_tools/calibrate_nz_prep.py",
+      "snapshot": "calibrate_nz_prep.py.txt",
+      "sha256": "cf59fc0759751b707aab6ec8afaf12b0030f3c9c0822c70a9bf189e4b7db9141"
+    },
+    {
+      "path": "/global/common/software/desi/perlmutter/desiconda/current/code/LSS/main/scripts/mock_tools/prepare_holi_bgs.py",
+      "snapshot": "prepare_holi_bgs.py.txt",
+      "sha256": "bd8e266c1217f15b409c72fb657c924a66e535cb5aa51c8da35d012d26194f52"
+    }
+  ],
+  "rule": "ran < n_target(z)/n_parent(z)",
+  "scope": "Explicit nzfile-supported BGS workflow found in Holi preparation, not established as part of existing Abacus BGS generation.",
+  "user_clarification": "User recalls the capability vaguely and requests investigation, not a particular entrypoint.",
+  "no_execution": true
+}

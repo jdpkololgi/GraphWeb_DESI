@@ -1,0 +1,31 @@
+{
+  "source": "/global/cfs/cdirs/desi/survey/catalogs/DA2/LSS/loa-v1/LSScats/v2.1/BGS_BRIGHT_full_HPmapcut.dat.fits",
+  "matched": 512,
+  "script_sha256": "a2aca51918893ff5bd5556cc6bc279735eba65194b2b44c16026611616326781",
+  "columns": {
+    "FLUX_G": {
+      "equal": 0,
+      "max_abs_difference": 25.584976196289062
+    },
+    "FLUX_R": {
+      "equal": 0,
+      "max_abs_difference": 49.837615966796875
+    },
+    "MW_TRANSMISSION_G": {
+      "equal": 0,
+      "max_abs_difference": 0.00020128488540649414
+    },
+    "MW_TRANSMISSION_R": {
+      "equal": 0,
+      "max_abs_difference": 0.0001214742660522461
+    }
+  },
+  "correct_fsf_minus_loa_dered_gr": {
+    "median": 8.314847946166992e-05,
+    "max_abs": 0.0001970529556274414
+  },
+  "correct_flux_relative_residual": {
+    "G": 0.0,
+    "R": 0.0
+  }
+}

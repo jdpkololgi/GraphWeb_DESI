@@ -1,0 +1,621 @@
+selected 512 eligible [17102, 15528, 14678, 14785, 13780, 10062, 8833, 7702, 5902, 3790, 3391, 2225, 1381, 864, 414, 297]
+{
+  "catalogue": "/global/cfs/cdirs/desi/vac/dr2/fastspecfit/loa/v1.0/catalogs/fastspec-loa-main-bright-nside1-hp00.fits",
+  "template": "/global/cfs/cdirs/desi/public/external/templates/fastspecfit/2.0.0/ftemplates-chabrier-2.0.0.fits",
+  "header": "\nSIMPLE  =                    T / conforms to FITS standard\nBITPIX  =                    8 / array data type\nNAXIS   =                    0 / number of array dimensions\nEXTEND  =                    T / \nEXTNAME = 'PRIMARY'            / \nSPECPROD= 'loa'                / spectroscopic production name\nCOADDTYP= 'healpix'            / spectral coadd type\nINPUTZ  =                    F / input redshifts provided\nINPUTS  =                    F / input seeds provided\nCONSAGE =                    F / constrain SPS ages\nUSEQNET =                    T / use QuasarNet redshifts\nNMONTE  =                   10 / number of Monte Carlo realizations\nSEED    =                    1 / random seed for Monte Carlo reproducibility\nNOSCORR =                    F / no smooth continuum correction\nNOPHOTO =                    F / no fitting to photometry\nBRDLFIT =                    T / carry out broad-line fitting\nUFLOOR  =                 0.01 / fractional uncertainty floor\nSNRBBALM=                  2.5 / minimum broad Balmer S/N\nNSIDE   =                    1 / HEALPix nside number\nNEST    =                    T / HEALPix nested (not ring) ordering\nDEPNAM00= 'python'             / \nDEPVER00= '3.10.14'            / \nDEPNAM01= 'numpy'              / \nDEPVER01= '1.22.4'             / \nDEPNAM02= 'scipy'              / \nDEPVER02= '1.8.1'              / \nDEPNAM03= 'astropy'            / \nDEPVER03= '6.0.1'              / \nDEPNAM04= 'yaml'               / \nDEPVER04= '6.0.1'              / \nDEPNAM05= 'matplotlib'         / \nDEPVER05= '3.8.4'              / \nDEPNAM06= 'fitsio'             / \nDEPVER06= '1.2.1'              / \nDEPNAM07= 'mpi4py'             / \nDEPVER07= '3.1.6'              / \nDEPNAM08= 'desiutil'           / \nDEPVER08= '3.4.3'              / \nDEPNAM09= 'desispec'           / \nDEPVER09= '0.68.1'             / \nDEPNAM10= 'desitarget'         / \nDEPVER10= '2.8.0'              / \nDEPNAM11= 'speclite'           / \nDEPVER11= '0.20'               / \nDEPNAM12= 'fastspecfit'        / \nDEPVER12= '3.1.5'              / \nDEPNAM13= 'DESI_SPECTRO_REDUX' / \nDEPVER13= '/global/cfs/cdirs/desi/spectro/redux' / \nDEPNAM14= 'DUST_DIR'           / \nDEPVER14= '/global/cfs/cdirs/cosmo/data/dust/v0_1' / \nDEPNAM15= 'FTEMPLATES_DIR'     / \nDEPVER15= '/global/cfs/cdirs/desi/public/external/templates/fastspecfit' / \nDEPNAM16= 'FPHOTO_DIR'         / \nDEPVER16= '/global/cfs/cdirs/desi/external/legacysurvey/dr9' / \nCHECKSUM= 'FJejFJegFJegFJeg'   / HDU checksum updated 2025-03-27T18:25:34\nDATASUM = '0'                  / data unit checksum updated 2025-03-27T18:25:34",
+  "job": "58894134",
+  "eligible_per_dz025": [
+    17102,
+    15528,
+    14678,
+    14785,
+    13780,
+    10062,
+    8833,
+    7702,
+    5902,
+    3790,
+    3391,
+    2225,
+    1381,
+    864,
+    414,
+    297
+  ],
+  "selected": 512,
+  "valid": 512,
+  "shells": [
+    {
+      "z": [
+        0.15,
+        0.25
+      ],
+      "stats": {
+        "sdss_minus_decam_r": {
+          "n": 128,
+          "median": 0.092924238139378,
+          "p16_p84": [
+            0.06533462569181356,
+            0.11557950749471971
+          ],
+          "max_abs": 0.14331983718407137
+        },
+        "sdss_minus_decam_gr": {
+          "n": 128,
+          "median": 0.03711845239145273,
+          "p16_p84": [
+            0.025056284457581058,
+            0.05368768072359532
+          ],
+          "max_abs": 0.06946162537812883
+        },
+        "replay_decam_gr_error": {
+          "n": 128,
+          "median": -2.4220305405719955e-07,
+          "p16_p84": [
+            -8.769707204692168e-07,
+            1.7144455249251673e-07
+          ],
+          "max_abs": 1.673468194240968e-06
+        },
+        "replay_rest_sdss_gr_error": {
+          "n": 128,
+          "median": -1.574928415237764e-06,
+          "p16_p84": [
+            -2.230323871508233e-06,
+            -6.536940889034788e-07
+          ],
+          "max_abs": 3.0795707015585094e-06
+        },
+        "observed_minus_model_decam_gr": {
+          "n": 128,
+          "median": -0.03260257840156555,
+          "p16_p84": [
+            -0.10111969947814942,
+            0.04312335729598997
+          ],
+          "max_abs": 0.3460446000099182
+        },
+        "sed_minus_gama_Kr": {
+          "n": 128,
+          "median": 0.001363134436720037,
+          "p16_p84": [
+            -0.006151768829453731,
+            0.01316885663337801
+          ],
+          "max_abs": 0.05171593581114006
+        },
+        "sed_minus_gama_KgKr": {
+          "n": 128,
+          "median": 0.00687874947754645,
+          "p16_p84": [
+            -0.03179518048951277,
+            0.029876174002572673
+          ],
+          "max_abs": 0.13354661501485615
+        },
+        "rest_sdss_gr": {
+          "n": 128,
+          "median": 0.8078006885552922,
+          "p16_p84": [
+            0.5684108006554939,
+            0.9879658815793808
+          ],
+          "max_abs": 1.1177828662127975
+        },
+        "rchi2_phot": {
+          "n": 128,
+          "median": 66.78250503540039,
+          "p16_p84": [
+            20.948057098388674,
+            208.47478942871066
+          ],
+          "max_abs": 2596.271728515625
+        }
+      }
+    },
+    {
+      "z": [
+        0.25,
+        0.35
+      ],
+      "stats": {
+        "sdss_minus_decam_r": {
+          "n": 128,
+          "median": 0.10638020789971225,
+          "p16_p84": [
+            0.07464052445999743,
+            0.12206331540589031
+          ],
+          "max_abs": 0.13805468528869458
+        },
+        "sdss_minus_decam_gr": {
+          "n": 128,
+          "median": 0.05476583376960864,
+          "p16_p84": [
+            0.03071117301473155,
+            0.0868573995682198
+          ],
+          "max_abs": 0.10847764972638663
+        },
+        "replay_decam_gr_error": {
+          "n": 128,
+          "median": -3.0006523732417634e-07,
+          "p16_p84": [
+            -9.995729903522488e-07,
+            1.5089429748371682e-07
+          ],
+          "max_abs": 1.5726620188338813e-06
+        },
+        "replay_rest_sdss_gr_error": {
+          "n": 128,
+          "median": -1.4290234930935952e-06,
+          "p16_p84": [
+            -2.2365692342063426e-06,
+            -7.451688645332411e-07
+          ],
+          "max_abs": 3.240335845422493e-06
+        },
+        "observed_minus_model_decam_gr": {
+          "n": 128,
+          "median": -0.01963508129119873,
+          "p16_p84": [
+            -0.08336870670318604,
+            0.0545634365081787
+          ],
+          "max_abs": 0.7784125804901123
+        },
+        "sed_minus_gama_Kr": {
+          "n": 128,
+          "median": 0.00430945617147635,
+          "p16_p84": [
+            -0.00538915208159801,
+            0.01863978215201592
+          ],
+          "max_abs": 0.04637402980411898
+        },
+        "sed_minus_gama_KgKr": {
+          "n": 128,
+          "median": 0.0013400060955923165,
+          "p16_p84": [
+            -0.06381403338839507,
+            0.054704067068713426
+          ],
+          "max_abs": 0.2541697075747436
+        },
+        "rest_sdss_gr": {
+          "n": 128,
+          "median": 0.880252726121759,
+          "p16_p84": [
+            0.6486578828634975,
+            0.995519165006619
+          ],
+          "max_abs": 1.0671517072153334
+        },
+        "rchi2_phot": {
+          "n": 128,
+          "median": 44.52535057067871,
+          "p16_p84": [
+            17.80499771118164,
+            161.50223876953117
+          ],
+          "max_abs": 2159.2138671875
+        }
+      }
+    },
+    {
+      "z": [
+        0.35,
+        0.45
+      ],
+      "stats": {
+        "sdss_minus_decam_r": {
+          "n": 128,
+          "median": 0.13195868237255715,
+          "p16_p84": [
+            0.098296199598066,
+            0.18103236687842897
+          ],
+          "max_abs": 0.24290721042265018
+        },
+        "sdss_minus_decam_gr": {
+          "n": 128,
+          "median": -0.017901490729018033,
+          "p16_p84": [
+            -0.04865239115444183,
+            0.03237543158035272
+          ],
+          "max_abs": 0.09138397697363221
+        },
+        "replay_decam_gr_error": {
+          "n": 128,
+          "median": -5.763904165068112e-07,
+          "p16_p84": [
+            -1.6191674621524043e-06,
+            2.993608331891534e-08
+          ],
+          "max_abs": 1.823237321652016e-05
+        },
+        "replay_rest_sdss_gr_error": {
+          "n": 128,
+          "median": -1.3566365868467045e-06,
+          "p16_p84": [
+            -2.2282575334386935e-06,
+            -5.046132135611004e-07
+          ],
+          "max_abs": 3.0008155955663085e-06
+        },
+        "observed_minus_model_decam_gr": {
+          "n": 128,
+          "median": 0.013730943202972412,
+          "p16_p84": [
+            -0.07357266426086426,
+            0.07742970943450926
+          ],
+          "max_abs": 0.4265754222869873
+        },
+        "sed_minus_gama_Kr": {
+          "n": 128,
+          "median": 0.005044288226970506,
+          "p16_p84": [
+            -0.004553147008877487,
+            0.015963147280186656
+          ],
+          "max_abs": 0.051481028466121015
+        },
+        "sed_minus_gama_KgKr": {
+          "n": 128,
+          "median": 0.005676090042798676,
+          "p16_p84": [
+            -0.10683881133425874,
+            0.050345091751075745
+          ],
+          "max_abs": 0.32950653072078184
+        },
+        "rest_sdss_gr": {
+          "n": 128,
+          "median": 0.8771369215162541,
+          "p16_p84": [
+            0.6424345551130056,
+            0.9739981844413069
+          ],
+          "max_abs": 1.0436237101509436
+        },
+        "rchi2_phot": {
+          "n": 128,
+          "median": 44.81508827209473,
+          "p16_p84": [
+            17.44682800292969,
+            181.91709167480465
+          ],
+          "max_abs": 1322.678955078125
+        }
+      }
+    },
+    {
+      "z": [
+        0.45,
+        0.55
+      ],
+      "stats": {
+        "sdss_minus_decam_r": {
+          "n": 128,
+          "median": 0.24613831164569788,
+          "p16_p84": [
+            0.1756819472352108,
+            0.2729715469005414
+          ],
+          "max_abs": 0.3024614987593752
+        },
+        "sdss_minus_decam_gr": {
+          "n": 128,
+          "median": -0.08869402174970653,
+          "p16_p84": [
+            -0.10753528878284783,
+            -0.06492308454177674
+          ],
+          "max_abs": 0.12369598651139313
+        },
+        "replay_decam_gr_error": {
+          "n": 128,
+          "median": -1.1474224992369386e-07,
+          "p16_p84": [
+            -9.66083183920219e-06,
+            7.606510882531835e-06
+          ],
+          "max_abs": 1.6549001837340427e-05
+        },
+        "replay_rest_sdss_gr_error": {
+          "n": 128,
+          "median": -1.4930074327956788e-06,
+          "p16_p84": [
+            -2.256184006625972e-06,
+            -5.286313499652808e-07
+          ],
+          "max_abs": 3.159372562233642e-06
+        },
+        "observed_minus_model_decam_gr": {
+          "n": 128,
+          "median": 0.060961008071899414,
+          "p16_p84": [
+            -0.03665540695190429,
+            0.12428223609924312
+          ],
+          "max_abs": 0.38141417503356934
+        },
+        "sed_minus_gama_Kr": {
+          "n": 128,
+          "median": 0.019484420800926494,
+          "p16_p84": [
+            0.006149646459427883,
+            0.03723755924956235
+          ],
+          "max_abs": 0.07517519177154752
+        },
+        "sed_minus_gama_KgKr": {
+          "n": 128,
+          "median": 0.040628078154829605,
+          "p16_p84": [
+            -0.05102209881095967,
+            0.07789224987472748
+          ],
+          "max_abs": 0.39858334645682614
+        },
+        "rest_sdss_gr": {
+          "n": 128,
+          "median": 0.9066975897930964,
+          "p16_p84": [
+            0.707685021397564,
+            0.9664428056025218
+          ],
+          "max_abs": 1.0156472957191984
+        },
+        "rchi2_phot": {
+          "n": 128,
+          "median": 49.02150344848633,
+          "p16_p84": [
+            15.534108543395996,
+            209.04767883300775
+          ],
+          "max_abs": 1557.3414306640625
+        }
+      }
+    }
+  ],
+  "script_sha256": "759d22afb76d87c30a7e8dd5218db41b16fb0401f19988f4d63e132b411e7535",
+  "implementation_hashes": {
+    "/global/common/software/desi/perlmutter/desiconda/20240425-2.2.0/code/fastspecfit/3.1.5/lib/python3.10/site-packages/fastspecfit/templates.py": "15139a3c621f327dd1db03cdabe22d7c1fef3c5b323ac8616f4203cf930637df",
+    "/global/common/software/desi/perlmutter/desiconda/20240425-2.2.0/code/speclite/v0.20/lib/python3.10/site-packages/speclite/filters.py": "0ac9ce4c370a551e4be14eef5015ca8a58623d08fb29f615e6311999cf96432b"
+  },
+  "caveats": "One healpix hp00, southern common-sky VAC targets, 32 random rows per dz=.025 bin before fit validity. Not survey representative. Stellar+nebular templates, fitted dust and dispersion; infrared dust emission and IGM omitted in optical. Replay colours validated against catalogue. No aperture/flux-estimator conversion; no observed SDSS Petrosian measurement. K comparison is fitted-SED dependent, not independent truth.",
+  "replay_pass": true
+}
+5934 4 6
+8105 4 14
+5817 4 18
+5817 5 24
+8105 3 32
+8105 6 35
+8105 1 39
+8105 2 46
+8116 4 53
+8116 6 57
+8097 2 61
+8097 3 65
+8105 5 71
+5934 5 74
+8116 5 77
+5934 3 83
+[
+  {
+    "z": [
+      0.15,
+      0.25
+    ],
+    "n": 21,
+    "stats": {
+      "petro_minus_legacy_r": {
+        "n": 21,
+        "median": 0.1291027069091797,
+        "p16_p84": [
+          0.043526077270507814,
+          0.23580322265625
+        ],
+        "max_abs": 0.34383201599121094
+      },
+      "model_minus_legacy_r": {
+        "n": 21,
+        "median": 0.09920883178710938,
+        "p16_p84": [
+          0.027820205688476565,
+          0.17027931213378905
+        ],
+        "max_abs": 0.2616767883300781
+      },
+      "petro_minus_model_r": {
+        "n": 21,
+        "median": 0.044330596923828125,
+        "p16_p84": [
+          -0.020927047729492186,
+          0.08488693237304688
+        ],
+        "max_abs": 0.15133285522460938
+      },
+      "petro_minus_legacy_gr": {
+        "n": 21,
+        "median": -0.017103195190429688,
+        "p16_p84": [
+          -0.08184661865234374,
+          0.037622833251953126
+        ],
+        "max_abs": 0.24762916564941406
+      }
+    }
+  },
+  {
+    "z": [
+      0.25,
+      0.35
+    ],
+    "n": 20,
+    "stats": {
+      "petro_minus_legacy_r": {
+        "n": 20,
+        "median": 0.2648019790649414,
+        "p16_p84": [
+          0.14520706176757814,
+          0.4170989227294921
+        ],
+        "max_abs": 0.7632961273193359
+      },
+      "model_minus_legacy_r": {
+        "n": 20,
+        "median": 0.20410919189453125,
+        "p16_p84": [
+          0.1285376739501953,
+          0.3357923889160156
+        ],
+        "max_abs": 0.6019210815429688
+      },
+      "petro_minus_model_r": {
+        "n": 20,
+        "median": 0.04725360870361328,
+        "p16_p84": [
+          -0.011381454467773437,
+          0.13744621276855465
+        ],
+        "max_abs": 0.1613750457763672
+      },
+      "petro_minus_legacy_gr": {
+        "n": 20,
+        "median": -0.04340553283691406,
+        "p16_p84": [
+          -0.1761627960205078,
+          0.15500175476074216
+        ],
+        "max_abs": 0.3009815216064453
+      }
+    }
+  },
+  {
+    "z": [
+      0.35,
+      0.45
+    ],
+    "n": 13,
+    "stats": {
+      "petro_minus_legacy_r": {
+        "n": 13,
+        "median": 0.13792037963867188,
+        "p16_p84": [
+          0.024937057495117185,
+          0.2703327941894531
+        ],
+        "max_abs": 0.3760528564453125
+      },
+      "model_minus_legacy_r": {
+        "n": 13,
+        "median": 0.1639232635498047,
+        "p16_p84": [
+          0.013482513427734365,
+          0.2707463073730469
+        ],
+        "max_abs": 0.45139122009277344
+      },
+      "petro_minus_model_r": {
+        "n": 13,
+        "median": 0.012022018432617188,
+        "p16_p84": [
+          -0.012578125,
+          0.05854003906250001
+        ],
+        "max_abs": 0.19121360778808594
+      },
+      "petro_minus_legacy_gr": {
+        "n": 13,
+        "median": -0.05608558654785156,
+        "p16_p84": [
+          -0.17848457336425783,
+          0.1331646728515625
+        ],
+        "max_abs": 0.40841102600097656
+      }
+    }
+  },
+  {
+    "z": [
+      0.45,
+      0.55
+    ],
+    "n": 6,
+    "stats": {
+      "petro_minus_legacy_r": {
+        "n": 6,
+        "median": 0.4350299835205078,
+        "p16_p84": [
+          0.14215164184570314,
+          0.7185287475585939
+        ],
+        "max_abs": 1.401336669921875
+      },
+      "model_minus_legacy_r": {
+        "n": 6,
+        "median": 0.30157470703125,
+        "p16_p84": [
+          0.08992767333984375,
+          0.776625442504883
+        ],
+        "max_abs": 1.2638416290283203
+      },
+      "petro_minus_model_r": {
+        "n": 6,
+        "median": 0.07563209533691406,
+        "p16_p84": [
+          -0.025588989257812497,
+          0.14644317626953127
+        ],
+        "max_abs": 0.1822357177734375
+      },
+      "petro_minus_legacy_gr": {
+        "n": 6,
+        "median": -0.21960735321044922,
+        "p16_p84": [
+          -0.49128570556640627,
+          0.17138748168945314
+        ],
+        "max_abs": 0.510345458984375
+      }
+    }
+  }
+]
+{
+  "source": "/global/cfs/cdirs/desi/survey/catalogs/DA2/LSS/loa-v1/LSScats/v2.1/BGS_BRIGHT_full_HPmapcut.dat.fits",
+  "matched": 512,
+  "script_sha256": "a2aca51918893ff5bd5556cc6bc279735eba65194b2b44c16026611616326781",
+  "columns": {
+    "FLUX_G": {
+      "equal": 0,
+      "max_abs_difference": 25.584976196289062
+    },
+    "FLUX_R": {
+      "equal": 0,
+      "max_abs_difference": 49.837615966796875
+    },
+    "MW_TRANSMISSION_G": {
+      "equal": 0,
+      "max_abs_difference": 0.00020128488540649414
+    },
+    "MW_TRANSMISSION_R": {
+      "equal": 0,
+      "max_abs_difference": 0.0001214742660522461
+    }
+  },
+  "correct_fsf_minus_loa_dered_gr": {
+    "median": 8.314847946166992e-05,
+    "max_abs": 0.0001970529556274414
+  },
+  "correct_flux_relative_residual": {
+    "G": 0.0,
+    "R": 0.0
+  }
+}

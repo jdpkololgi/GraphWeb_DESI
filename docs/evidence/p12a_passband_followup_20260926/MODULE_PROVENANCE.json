@@ -1,0 +1,17 @@
+{
+  "module_directory": "/global/common/software/desi/perlmutter/desiconda/20240425-2.2.0/modulefiles/fiberassign",
+  "available_modules": [
+    "5.7.2",
+    "5.8.0",
+    "5.9.0",
+    "main"
+  ],
+  "source_sha256": {
+    "/global/common/software/desi/perlmutter/desiconda/20240425-2.2.0/modulefiles/fiberassign/main": "3258aefd6a4d1615b8b13cb27a92a89ad69be514f01c483e285276e79d5c9c77",
+    "/global/common/software/desi/desi_environment.sh": "03a899ec86270620c9300dee6868225b22d79c55056a89d11cfc20f1e603afa0",
+    "/global/common/software/desi/perlmutter/desiconda/20240425-2.2.0/code/fastspecfit/3.1.5/lib/python3.10/site-packages/fastspecfit/data/legacysurvey-dr9.yaml": "0c1e3378e0eb19ca30cfcfac40caf31e5af2320d6564b5bec320860e3833e7fb",
+    "workflows/p12a_vac/probe_archived_module_swap.sh": "97f5d1dbcb17d433f88f026ab02058dfcdf955c5d203e717c8eb856eed68b7f3"
+  },
+  "historical_attribution": false,
+  "note": "Current retained directory and controlled shell reproduction, not historical stderr. No fiber assignment executed."
+}

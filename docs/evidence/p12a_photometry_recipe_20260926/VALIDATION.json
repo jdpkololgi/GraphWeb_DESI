@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "checks": [
+    "FINGERPRINT source hash and syntax",
+    "MATCHED_CELLS source hash and syntax",
+    "ARCHIVE_FINGERPRINT source hash and syntax",
+    "colour identity maximum residual below 2e-7 mag",
+    "all coarse count/retention totals reconstructed from saved histograms"
+  ],
+  "allocation": "58892691",
+  "node": "nid001016",
+  "files": {
+    "MATCHED_CELLS.json": "558321a42813256feb206468e39bc4992ff536830157017f83b21e0c7a6d9de7",
+    "FINGERPRINT.json": "4f7230471a9aa2698047a3d260843c19765b209a8ab3c919d6fafb17c08365c4",
+    "ARCHIVE_FINGERPRINT.json": "11a6738ef49a4b3a13d692eca781bb6bdb44bdac28360ef28ba654cd09c8cd96",
+    "MATCHED_CELLS.npz": "d0ac2d6ec0b27c7cf901032f32051e99e8114f52cae33b2eae6936db36def1e7",
+    "ASSIGNMENT_RECEIPTS.json": "284a6fef76ae4d69cfcdc44e0118ce28bce3e3acfdf82280466a87b790987fa6",
+    "RAW_SAMPLE.npz": "52c96f467157caf9c3bda437352ec74a2a9398c675f182f3cc25a8ad0470a77e"
+  }
+}

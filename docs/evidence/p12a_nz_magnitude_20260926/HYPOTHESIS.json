@@ -1,0 +1,86 @@
+{
+  "rows": [
+    {
+      "z": [
+        0.15,
+        0.25
+      ],
+      "n": 128,
+      "median_sdss_minus_decam_r": 0.092924238139378,
+      "median_existing_term": -0.07970994827905614,
+      "median_conditional_residual": 0.010117534581118512,
+      "residual_p16_p84": [
+        -0.018209408684155815,
+        0.04649230447952127
+      ]
+    },
+    {
+      "z": [
+        0.25,
+        0.35
+      ],
+      "n": 128,
+      "median_sdss_minus_decam_r": 0.10638020789971225,
+      "median_existing_term": -0.1599656636597087,
+      "median_conditional_residual": -0.05681447090143789,
+      "residual_p16_p84": [
+        -0.0871334108066006,
+        -0.02772676629929898
+      ]
+    },
+    {
+      "z": [
+        0.35,
+        0.45
+      ],
+      "n": 128,
+      "median_sdss_minus_decam_r": 0.13195868237255715,
+      "median_existing_term": -0.24011444571134458,
+      "median_conditional_residual": -0.09570178379895752,
+      "residual_p16_p84": [
+        -0.13782013486372888,
+        -0.07259486497278948
+      ]
+    },
+    {
+      "z": [
+        0.45,
+        0.55
+      ],
+      "n": 128,
+      "median_sdss_minus_decam_r": 0.24613831164569788,
+      "median_existing_term": -0.3198345819922175,
+      "median_conditional_residual": -0.07592796150732187,
+      "residual_p16_p84": [
+        -0.1400692775187732,
+        -0.04874492153064197
+      ]
+    }
+  ],
+  "assumption": "ONLY IF -0.8(z-.1) is an apparent-magnitude adjustment to an otherwise SDSS-like magnitude at fixed physical M, it can offset some/all of the same-SED SDSS-DECam r difference. If R_MAG_ABS is evolution-corrected instead, this arithmetic is not a photometric adjustment. Neither hypothesis is established.",
+  "sources": [
+    {
+      "path": "/global/u2/d/dkololgi/prepare_mocks_Y3_bright.py",
+      "snapshot": "00_prepare_mocks_Y3_bright.py.txt",
+      "sha256": "97087fecfa4e0a29c8bef8995db811dd7c3b663d3e90062d29cdd80400dbad20"
+    },
+    {
+      "path": "/global/common/software/desi/perlmutter/desiconda/current/code/LSS/main/scripts/mock_tools/prepare_mocks_Y3_bright.py",
+      "snapshot": "01_prepare_mocks_Y3_bright.py.txt",
+      "sha256": "97087fecfa4e0a29c8bef8995db811dd7c3b663d3e90062d29cdd80400dbad20"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/GraphWeb_DESI/docs/evidence/p12a_photometry_recipe_20260926/source/cut_sky_evolution.py",
+      "snapshot": "02_cut_sky_evolution.py.txt",
+      "sha256": "782049a65ade3236361aeefeeece187a773aaa3ec78d1905080ea84fa7c4fc20"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/GraphWeb_DESI/docs/evidence/p12a_photometry_recipe_20260926/source/luminosity_function.py",
+      "snapshot": "03_luminosity_function.py.txt",
+      "sha256": "672be9cc795d4637e6f4f13af4363c344bd437573dce8b56a3793b8746dc97f4"
+    }
+  ],
+  "script_sha256": "ef378ef83a7d4806872854f92ac11fe26d3c21aa9b7fcd394a2d4e647ed996ce",
+  "sample_sha256": "4c133d3ff701d7257ef18405b241311c88dcf34fae3baeb4d15379335cb30e54",
+  "no_repairs": true
+}
