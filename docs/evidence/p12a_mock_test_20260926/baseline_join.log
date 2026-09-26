@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/global/u2/d/dkololgi/GraphWeb_DESI/workflows/p12a_vac/join_mock_test_baseline.py", line 29, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/global/u2/d/dkololgi/GraphWeb_DESI/workflows/p12a_vac/join_mock_test_baseline.py", line 17, in main
+    if np.any(sa[1:]==sa[:-1]):raise ValueError('duplicate old sky directions require a richer join')
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: duplicate old sky directions require a richer join

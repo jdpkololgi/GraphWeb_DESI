@@ -1,0 +1,18 @@
+{
+  "sampled_bright_rows": 10000,
+  "columns_exact": {
+    "TARGETID": true,
+    "RA": true,
+    "DEC": true,
+    "RSDZ": true,
+    "TRUEZ": true,
+    "R_MAG_APP": true,
+    "R_MAG_ABS": true,
+    "G_R_OBS": true,
+    "BGS_TARGET": true
+  },
+  "total_rows": 18062788,
+  "last_targetid": 18062788,
+  "test_only": true,
+  "script_sha256": "6d5da1cdf5d2903dc2fd3c5b22757ede433d1b7453a0d1dc764a6928cf617cdb"
+}

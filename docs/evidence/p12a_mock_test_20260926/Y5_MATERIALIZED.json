@@ -1,0 +1,11 @@
+{
+  "path": "/pscratch/sd/d/dkololgi/graphweb_desi/outputs/p12a_mock_test_ph006_20260926_v1/y5_baseline/forFA6_nomask.fits",
+  "rows": 18062788,
+  "bright": 10540172,
+  "sha256": "f9ce3b99f8feaaca1a7cd3a8ee277824111dc1f8c601960a02b94db5fdc03f33",
+  "source_sha256": "b35c2ea684321dec4da458d388fe8a50303473198b0b9a10fa50b0db221c2d23",
+  "script_sha256": "fe7cc5efe9425d81f04f6f8bc43277137784d81b25fab231e90cd9753dd83594",
+  "job": "58895657",
+  "selection": "IN_Y5 != 0 applied to pinned seeded upstream preparation; sequential TARGETIDs reassigned after cuts",
+  "limitations": "BRIGHT replay exact; FAINT uses new seed and is not claimed identical to historical stochastic selection. No new fibre assignment or science qualification."
+}

@@ -1,0 +1,41 @@
+{
+  "phase": "ph006",
+  "job": "58895657",
+  "root": "/pscratch/sd/d/dkololgi/graphweb_desi/outputs/p12a_mock_test_ph006_20260926_v1",
+  "allocation": {
+    "nodes": 1,
+    "cpus": 64,
+    "constraint": "cpu",
+    "qos": "interactive",
+    "account": "desi",
+    "requested_minutes": 60
+  },
+  "source_hashes": {
+    "configs/p12a_mock_test/ph006_20260926.json": "3d33fff7a9bcbfcf05a42be3eae7268cfbbddfb37ecd3ac02a2dc08e3e059e48",
+    "workflows/p12a_vac/mock_selection_test.py": "20c1a4dbb6c19b642d8122e9547c137bfa93b7a65bc0f668ac2c3d5272e9625c",
+    "workflows/p12a_vac/run_mock_test_phase.sh": "fd3cad4d5baf60e26042942b732086eff1fd3f38c9a1a5a75b5c0c184459c5f9",
+    "workflows/p12a_vac/verify_mock_test_baseline.py": "0c7e210fe05d4fa3c25d36f07d8bbad5793fc45810bb69af99366131216afa9d",
+    "workflows/p12a_vac/join_mock_test_baseline.py": "5bbf1dbd08ff33e99028fbb5eceda97b56a3bb2e3c9f21bca1fdc47d4156649d",
+    "workflows/p12a_vac/replay_mock_y5_footprint.py": "83c69aa7fd0d7590dd97f424215a930642b50e73873ebd7539f5651e11cc3bf0",
+    "workflows/p12a_vac/materialize_mock_y5_variant.py": "fe7cc5efe9425d81f04f6f8bc43277137784d81b25fab231e90cd9753dd83594",
+    "workflows/p12a_vac/plot_mock_selection_test.py": "b22e24af48c75feda91b1df17d20f21ce84a612903cec5df656decdbabddfce1",
+    "workflows/p12a_vac/validate_mock_y5_product.py": "6d5da1cdf5d2903dc2fd3c5b22757ede433d1b7453a0d1dc764a6928cf617cdb"
+  },
+  "baseline_upstream_commit": "d942b990860e016e7558c740966fea3e5ce7e7f3",
+  "implementation_commits": [
+    "41dfd08",
+    "e49bcd8"
+  ],
+  "candidate_accepted": false,
+  "production_changed": false,
+  "held_out_phases_read": false,
+  "initial_failures": [
+    "DESIMODEL data path absent; fixed by explicit installed path",
+    "2D positional join ambiguous; replaced by unique RA/DEC/RSDZ join",
+    "Readback last-row probe used unsupported fitsio negative indexing; explicit positive index passes"
+  ],
+  "tests": "16 GraphWeb P12 tests; 226 Illustris P12 plus 9 coordinate tests",
+  "baseline_bright_reproduced": true,
+  "materialized_validation_passed": true,
+  "allocation_released": true
+}

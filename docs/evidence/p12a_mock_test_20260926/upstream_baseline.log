@@ -1,0 +1,59 @@
+WARNING:io.py:787:_check_datadir: Missing /pscratch/sd/d/dkololgi/conda/envs/cosmic_env/lib/python3.11/site-packages/desimodel/data; please run "install_desimodel_data" from the command line or "desimodel.install.install()" from a python prompt; see https://github.com/desihub/desimodel for details.
+256 True
+BGS
+Saving to path /pscratch/sd/d/dkololgi/graphweb_desi/outputs/p12a_mock_test_ph006_20260926_v1/upstream_baseline
+multiprocessing.pool.RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "/pscratch/sd/d/dkololgi/conda/envs/cosmic_env/lib/python3.11/multiprocessing/pool.py", line 125, in worker
+    result = (True, func(*args, **kwds))
+                    ^^^^^^^^^^^^^^^^^^^
+  File "/pscratch/sd/d/dkololgi/conda/envs/cosmic_env/lib/python3.11/multiprocessing/pool.py", line 48, in mapstar
+    return list(map(*args))
+           ^^^^^^^^^^^^^^^^
+  File "docs/evidence/p12a_nz_magnitude_20260926/upstream_prepare_mocks_Y3_bright.py.txt", line 390, in process
+    selY3 = is_point_in_desi(tiletab, targets['RA'], targets['DEC'])
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/pscratch/sd/d/dkololgi/conda/envs/cosmic_env/lib/python3.11/site-packages/desimodel/footprint.py", line 515, in is_point_in_desi
+    radius = get_tile_radius_deg()
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/pscratch/sd/d/dkololgi/conda/envs/cosmic_env/lib/python3.11/site-packages/desimodel/focalplane/geometry.py", line 39, in get_tile_radius_deg
+    rmax = get_tile_radius_mm()
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/pscratch/sd/d/dkololgi/conda/envs/cosmic_env/lib/python3.11/site-packages/desimodel/focalplane/geometry.py", line 28, in get_tile_radius_mm
+    fp = load_fiberpos()
+         ^^^^^^^^^^^^^^^
+  File "/pscratch/sd/d/dkololgi/conda/envs/cosmic_env/lib/python3.11/site-packages/desimodel/io.py", line 186, in load_fiberpos
+    _fiberpos = Table.read(fiberposfile)
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/pscratch/sd/d/dkololgi/conda/envs/cosmic_env/lib/python3.11/site-packages/astropy/table/connect.py", line 62, in __call__
+    out = self.registry.read(cls, *args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/pscratch/sd/d/dkololgi/conda/envs/cosmic_env/lib/python3.11/site-packages/astropy/io/registry/core.py", line 200, in read
+    fileobj = ctx.__enter__()
+              ^^^^^^^^^^^^^^^
+  File "/pscratch/sd/d/dkololgi/conda/envs/cosmic_env/lib/python3.11/contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "/pscratch/sd/d/dkololgi/conda/envs/cosmic_env/lib/python3.11/site-packages/astropy/utils/data.py", line 364, in get_readable_fileobj
+    fileobj = io.FileIO(name_or_obj, "r")
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/pscratch/sd/d/dkololgi/conda/envs/cosmic_env/lib/python3.11/site-packages/desimodel/data/focalplane/fiberpos.fits'
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "<frozen runpy>", line 291, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "docs/evidence/p12a_nz_magnitude_20260926/upstream_prepare_mocks_Y3_bright.py.txt", line 429, in <module>
+    results = pool.map(process, range(args.realmin,args.realmax))
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/pscratch/sd/d/dkololgi/conda/envs/cosmic_env/lib/python3.11/multiprocessing/pool.py", line 367, in map
+    return self._map_async(func, iterable, mapstar, chunksize).get()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/pscratch/sd/d/dkololgi/conda/envs/cosmic_env/lib/python3.11/multiprocessing/pool.py", line 774, in get
+    raise self._value
+FileNotFoundError: [Errno 2] No such file or directory: '/pscratch/sd/d/dkololgi/conda/envs/cosmic_env/lib/python3.11/site-packages/desimodel/data/focalplane/fiberpos.fits'

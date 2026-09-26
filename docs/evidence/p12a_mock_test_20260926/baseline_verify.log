@@ -1,0 +1,33 @@
+{
+  "old": {
+    "path": "/global/cfs/cdirs/desi/survey/catalogs/DA2/mocks/SecondGenMocks/AbacusSummitBGS_v2/forFA6_nomask.fits",
+    "bytes": 2673190080,
+    "mtime_ns": 1728042348533736553
+  },
+  "new": {
+    "path": "/pscratch/sd/d/dkololgi/graphweb_desi/outputs/p12a_mock_test_ph006_20260926_v1/upstream_baseline/SecondGenMocks/AbacusSummitBGS_v2/forFA6_nomask.fits",
+    "bytes": 2726156160,
+    "mtime_ns": 1790424009000000000
+  },
+  "old_total": 18062024,
+  "new_total": 18419903,
+  "old_bright": 10540172,
+  "new_bright": 10747480,
+  "exact_ordered_columns": {
+    "TARGETID": false,
+    "RA": false,
+    "DEC": false,
+    "RSDZ": false,
+    "TRUEZ": false,
+    "R_MAG_APP": false,
+    "R_MAG_ABS": false,
+    "G_R_OBS": false,
+    "BGS_TARGET": false
+  },
+  "all_bright_columns_exact": false,
+  "seed": 62026,
+  "script_sha256": "0c7e210fe05d4fa3c25d36f07d8bbad5793fc45810bb69af99366131216afa9d",
+  "generated_sha256": "b35c2ea684321dec4da458d388fe8a50303473198b0b9a10fa50b0db221c2d23",
+  "job": "58895657",
+  "note": "Checks BRIGHT population/IDs exactly; random FAINT downsampling, HIP and subpriority need not reproduce absent historical RNG state. No new fibre assignment run."
+}

@@ -1,0 +1,61 @@
+{
+  "job": "58895657",
+  "python": "/pscratch/sd/d/dkololgi/conda/envs/cosmic_env/bin/python",
+  "desimodel": "/global/common/software/desi/perlmutter/desiconda/current/code/desimodel/main",
+  "modules": {
+    "numpy": {
+      "path": "/pscratch/sd/d/dkololgi/conda/envs/cosmic_env/lib/python3.11/site-packages/numpy/__init__.py",
+      "version": "2.3.5",
+      "sha256": "93924ac4b793328947dfd9eb9355e54eccdfd26a92c8dd52188aed2e52c7eb38"
+    },
+    "fitsio": {
+      "path": "/pscratch/sd/d/dkololgi/conda/envs/cosmic_env/lib/python3.11/site-packages/fitsio/__init__.py",
+      "version": "1.3.0",
+      "sha256": "539e4292619277087c61d02e66634d057945aa0f9d9adf3071c6e5124054a847"
+    },
+    "astropy": {
+      "path": "/pscratch/sd/d/dkololgi/conda/envs/cosmic_env/lib/python3.11/site-packages/astropy/__init__.py",
+      "version": "7.2.0",
+      "sha256": "b80d10d4ef75273712d15636b83401931df02ef7cea163fa04da7f469ee8ac9f"
+    },
+    "desimodel": {
+      "path": "/pscratch/sd/d/dkololgi/conda/envs/cosmic_env/lib/python3.11/site-packages/desimodel/__init__.py",
+      "version": "0.20.1.dev850",
+      "sha256": "6c3f31d5bf56371062423aaf36a7ac89bb9cadb494bce887deef7d05cdf19fa0"
+    },
+    "desimodel.footprint": {
+      "path": "/pscratch/sd/d/dkololgi/conda/envs/cosmic_env/lib/python3.11/site-packages/desimodel/footprint.py",
+      "version": null,
+      "sha256": "b705c969aeb8a2c42c3eb48423aaf32bb98fef16447fa939374f9b231f8a900c"
+    },
+    "desitarget": {
+      "path": "/pscratch/sd/d/dkololgi/conda/envs/cosmic_env/lib/python3.11/site-packages/desitarget/__init__.py",
+      "version": "4.7.2.dev5932",
+      "sha256": "a697f4e6205d90f1c9841a93cc4212e5819ea5356ad80f81dafdf8b3d3c4330e"
+    },
+    "LSS": {
+      "path": "/pscratch/sd/d/dkololgi/LSS/py/LSS/__init__.py",
+      "version": null,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "LSS.globals": {
+      "path": "/pscratch/sd/d/dkololgi/LSS/py/LSS/globals.py",
+      "version": null,
+      "sha256": "4a608b92ba4601d15893176b5031b2bc1f8e24c85007c2d91b75a34d60372ec6"
+    }
+  },
+  "inputs": [
+    {
+      "path": "/global/u2/d/dkololgi/GraphWeb_DESI/docs/evidence/p12a_nz_magnitude_20260926/upstream_prepare_mocks_Y3_bright.py.txt",
+      "sha256": "97087fecfa4e0a29c8bef8995db811dd7c3b663d3e90062d29cdd80400dbad20"
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/survey/catalogs/DA2/LSS/tiles-BRIGHT.fits",
+      "sha256": "348c6ae5045ee1ccbc05caebcf55585cb4137d92c27a6ec2ec4c9d1247683663"
+    },
+    {
+      "path": "/global/common/software/desi/perlmutter/desiconda/20260227-2.3.1/code/desimodel/main/data/focalplane/fiberpos.fits",
+      "sha256": "dfc68b5a91936dcfe8f9d478217329af03a497116794c8306062207845a5d80f"
+    }
+  ]
+}
