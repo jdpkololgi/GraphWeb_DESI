@@ -16,7 +16,12 @@
     "pinned upstream holi_bgs_bmask_DA3DA2_lss_pipeline_run1.sh",
     "pinned upstream mv_dr3dr2bgs_datcombandforfa_scratch.sh",
     "pinned upstream initialize_amtl_mocks_da3.py",
-    "all plot source and output hashes"
+    "all plot source and output hashes",
+    "source, histogram and broad-count reconciliation release",
+    "source, histogram and broad-count reconciliation uchuu_dr2",
+    "source, histogram and broad-count reconciliation uchuu_loa_parity",
+    "Uchuu DR2 plot hashes and visual review",
+    "all three Uchuu products zero in .50-.55 bins"
   ],
   "lightweight_tests": {
     "mock_selection": 3,
@@ -24,7 +29,13 @@
     "passed": true
   },
   "parent_completed_resume": "v1 receipt verified; already complete, no rescan",
-  "visual_review": "all four PNG figures inspected; parent ratio ylim corrected to include whole curve",
+  "visual_review": "All five PNG figures inspected; DR2 fine-bin plot exposed false broad-shell agreement. Abacus full ratio range visible.",
   "graphify": "cosmic_env update and global refresh succeeded on login node; compute-node flock failed Errno524, resolved by login-node retry",
-  "scope": "software/integrity validation, not scientific acceptance"
+  "scope": "software/integrity validation, not scientific acceptance",
+  "operational_failures": [
+    "Holi forFA no read permission confirmed",
+    "Compute-node graphify flock524 recovered on login",
+    "Ad hoc BGS_TYPE string min/max corrected with dtype-aware probe",
+    "First allocation shell idle logout after completed jobs; new allocation used for further discoveries"
+  ]
 }

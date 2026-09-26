@@ -11,7 +11,8 @@
     "paper_parent": "/global/cfs/cdirs/desi/mocks/Uchuu/JFE_files/DESI-BGS permission denied",
     "snapshot": "BGS220422 has snapshot parts; no verified full DR2 BGS lightcone located",
     "new_processed": "cai/LSS/DA2/mocks/Uchuu-SHAM/altmtl0/loa-v1/mock0/LSScats has no BGS full dat product",
-    "dr2_followup": "Located Y3-v2.0/0000 under cai/Uchuu-SHAM; complete BRIGHT and ANY plus altmtl/BGS_BRIGHT clustering readable metadata. Corrects earlier not-located status; statistical screen pending."
+    "dr2_followup": "Y3-v2.0 complete BRIGHT/ANY and altmtl BGS screened: all zero at .50-.55 on comparison sky; broad agreement rejected. Current-Loa TARGETID quality crosswalk completed.",
+    "truth": "BGS z0.19 box schema inspected; only x/y/z,vx/vy/vz,Mr block. PID sample is -1/0, not proven host ID. Particle/halo directories045 exist; no payload/truth join."
   },
   "internal": {
     "root": "/global/cfs/cdirs/desi/mocks/cai/LSS/DA2/mocks",

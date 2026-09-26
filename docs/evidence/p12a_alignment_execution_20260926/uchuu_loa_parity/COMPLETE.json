@@ -1,0 +1,137 @@
+{
+  "counts": {
+    "current_loa": [
+      [
+        791764,
+        515584,
+        203036,
+        41236
+      ],
+      [
+        1970646,
+        1278440,
+        501747,
+        94982
+      ]
+    ],
+    "paired_fail_zwarn": [
+      [
+        12383,
+        8022,
+        3032,
+        619
+      ],
+      [
+        28755,
+        18560,
+        7288,
+        1351
+      ]
+    ],
+    "paired_fail_dchi25": [
+      [
+        9,
+        3,
+        3,
+        3
+      ],
+      [
+        10,
+        5,
+        9,
+        2
+      ]
+    ],
+    "paired_not_galaxy": [
+      [
+        18861,
+        14274,
+        6471,
+        1389
+      ],
+      [
+        44742,
+        33622,
+        15311,
+        3223
+      ]
+    ],
+    "paired_current_z_outside": [
+      [
+        12389,
+        8027,
+        3033,
+        623
+      ],
+      [
+        28764,
+        18563,
+        7293,
+        1352
+      ]
+    ],
+    "paired_any_current_science_fail": [
+      [
+        18875,
+        14282,
+        6474,
+        1395
+      ],
+      [
+        44761,
+        33633,
+        15323,
+        3226
+      ]
+    ],
+    "paired_missing_current": [
+      [
+        2643,
+        1817,
+        711,
+        155
+      ],
+      [
+        4479,
+        2933,
+        1140,
+        236
+      ]
+    ]
+  },
+  "stats": {
+    "paired_matched_ids": 7978643
+  },
+  "mock_to_current_loa": [
+    [
+      1.0752749556686083,
+      1.1098288542701091,
+      1.1059171772493548,
+      0.967770879813755
+    ],
+    [
+      1.0179580706022289,
+      1.078760051312537,
+      1.0644268924378222,
+      0.9858183655850582
+    ]
+  ],
+  "sources": {
+    "/global/cfs/cdirs/desi/survey/catalogs/DA2/LSS/loa-v1/LSScats/v2.1/BGS_BRIGHT_full_HPmapcut.dat.fits": [
+      8026796160,
+      1771271470000000000
+    ],
+    "/global/cfs/cdirs/desi/mocks/cai/Uchuu-SHAM/Y3-v2.0/0000/BGS-BRIGHT_data/v0.1/BGS_BRIGHT_clustering.dat.fits": [
+      1256109120,
+      1760616061268236047
+    ]
+  },
+  "script_sha256": "2b6c546f65bea52b3cd55b2efd4d3e0f86595cf5a31cc0c65440939b85e3d9ad",
+  "histogram_sha256": "f34b49e550d465980f009f3cd99c26c0ee28561a9ca72eb0e7d01f524295149b",
+  "job": "58907166",
+  "notes": [
+    "Paired failures are nonexclusive; bins use paired Z to account for that sample. Current baseline counts use current Z.",
+    "Current full data quality is ZWARN0, DELTACHI2>=25, SPECTYPE=GALAXY, .15<=Z_not4clus<.55.",
+    "Mock processed clustering selection not rederived from parent; this improves the data-side comparison without proving full observation parity."
+  ]
+}

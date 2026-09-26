@@ -390,7 +390,7 @@ Holi n(z) calibration into the existing Abacus model.
 
 Located readable internal Y3-v2.0/0000 Uchuu BGS BRIGHT/ANY complete parents,
 processed BGS clustering and paired real Loa data under cai/Uchuu-SHAM.
-This supersedes the earlier not-located status; paired count screen running
+This supersedes the earlier not-located status; paired count screen completed
 on CPU58907166/nid004152. Do not confuse the real BGS-BRIGHT_data directory
 with mocks. Parent GALAXYID/PID availability is encouraging but not validated
 halo/epoch/truth parity. Public SV3 failure does not decide this new candidate.
@@ -403,3 +403,29 @@ Matterhorn crosswalk completed: later data has more selected galaxies on old
 common sky in every broad shell; same-ID r changes>0.01mag absent among jointly
 qualifying rows. Detailed spectral/mask/blinding interpretation remains open.
 No switch of primary Loa target. See report for exact counts and caveats.
+
+### Final checkpoint of this execution
+
+- **Internal Uchuu Y3-v2.0 fails full-range support as delivered.** BRIGHT, ANY
+  and processed products all have zero comparison-sky rows atz.50–.55. The
+  apparent~unity.45–.55 aggregate masks a~26–29% excess at.45–.50 against its
+  paired data. Do not accept the broad sum or tune M_lim on an empty tail.
+  Current Loa full-quality crosswalk completed; fine-bin plot and support
+  tables supersede the preliminary optimistic interpretation.
+- Uchuu snapshot/particle/halo assets located. PID sample{-1,0} is not a
+  verified host ID; float GALAXYID and box-index/epoch mapping require closure.
+  No particle payloads/labels generated. Public SV3 and internalY3 results are
+  separate; neither is currently a full-range replacement.
+- Keep Abacusv1 as the leading **physical-parent provenance** investigation;
+  keep Holi as the leading **count/observation benchmark**, with explicit
+  n(z)-calibration and placeholder-photometry caveats.
+- Completed here: version/ensemble/internal count screens, v1 mapping test,
+  matterhorn ID/quality comparison, paired/current Loa selection crosswalk,
+  fivefigures and compact provenance/validation. W1 remains partial (e.g.
+  exact random-mask parity/DR1 control); G2 remains open.
+- Before W3–W5: obtain actual v1 generator/LF/HOD/K/E configuration; resolve
+  the existing-.8 magnitude term; obtain readable Holi parent and executed
+  recipe; identify an extended Uchuu parent if pursuing full.15–.55 Uchuu.
+  Producer-recipe provenance and these access gaps are concrete constraints,
+  not additional compute-approval requirements. Existing compute authorization
+  persists. No arbitrary count repair, retraining or replacement VAC launched.

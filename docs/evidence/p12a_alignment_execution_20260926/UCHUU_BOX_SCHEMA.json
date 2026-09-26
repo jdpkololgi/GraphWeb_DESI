@@ -1,0 +1,40 @@
+{
+  "path": "/global/cfs/cdirs/desi/mocks/cai/Uchuu-SHAM/Y3-v2.0/0000/Boxes/BGS/Uchuu-BGS_box_0p19.h5",
+  "stat": [
+    3470846514,
+    1747211888906475004
+  ],
+  "keys": [
+    "data"
+  ],
+  "attributes": {
+    "CLASS": "b'GROUP'",
+    "PYTABLES_FORMAT_VERSION": "b'2.1'",
+    "TITLE": "Empty(dtype=dtype('S1'))",
+    "VERSION": "b'1.0'"
+  },
+  "schema": {
+    "data": {
+      "children": [
+        "_i_table",
+        "table"
+      ]
+    }
+  },
+  "table": {
+    "shape": [
+      54069989
+    ],
+    "dtype": "[('index', '<i8'), ('values_block_0', '<f8', (7,))]",
+    "attrs": {
+      "CLASS": "b'TABLE'",
+      "NROWS": "54069989",
+      "TITLE": "Empty(dtype=dtype('S1'))",
+      "VERSION": "b'2.7'",
+      "index_kind": "b'integer'",
+      "values_block_0_dtype": "b'float64'",
+      "values_block_0_kind": "b'(lp0\\nVx\\np1\\naVy\\np2\\naVz\\np3\\naVvx\\np4\\naVvy\\np5\\naVvz\\np6\\naVMr\\np7\\na.'",
+      "values_block_0_meta": "b'N.'"
+    }
+  }
+}

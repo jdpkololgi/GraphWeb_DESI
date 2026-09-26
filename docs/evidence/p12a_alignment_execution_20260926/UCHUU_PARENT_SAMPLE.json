@@ -1,0 +1,80 @@
+{
+  "bright": {
+    "sample_rows": 4000,
+    "row_selection": "20 equally spaced contiguous blocks of200",
+    "source": "/global/cfs/cdirs/desi/mocks/cai/Uchuu-SHAM/Y3-v2.0/0000/complete/Uchuu-SHAM_BGS_Y3-v2.0_0000_clustering.dat.fits",
+    "columns": {
+      "NXold": {
+        "dtype": ">f8",
+        "unique": 4000,
+        "min": 7.768533811460866e-05,
+        "max": 0.007984541282097366
+      },
+      "NX": {
+        "dtype": ">f8",
+        "unique": 4000,
+        "min": 7.768533811460866e-05,
+        "max": 0.007984541282097366
+      },
+      "PID": {
+        "dtype": ">i8",
+        "unique": 2,
+        "min": -1.0,
+        "max": 0.0,
+        "values": [
+          -1,
+          0
+        ]
+      },
+      "GALAXYID": {
+        "dtype": ">f8",
+        "unique": 4000,
+        "min": 20993883112307.0,
+        "max": 273263082601008.0
+      },
+      "ABSMAG_R": {
+        "dtype": ">f8",
+        "unique": 3864,
+        "min": -23.94263337856801,
+        "max": -16.331880655774572
+      }
+    }
+  },
+  "any": {
+    "sample_rows": 4000,
+    "row_selection": "20 equally spaced contiguous blocks of200",
+    "source": "/global/cfs/cdirs/desi/mocks/cai/Uchuu-SHAM/Y3-v2.0/0000/complete/Uchuu-SHAM_BGS_ANY_Y3-v2.0_0000_clustering.dat.fits",
+    "columns": {
+      "BGS_TYPE": {
+        "dtype": "<U6",
+        "unique": 2,
+        "values": [
+          "BRIGHT",
+          "FAINT"
+        ]
+      },
+      "PID": {
+        "dtype": ">f8",
+        "unique": 2,
+        "min": -1.0,
+        "max": 0.0,
+        "values": [
+          -1.0,
+          0.0
+        ]
+      },
+      "GALAXYID": {
+        "dtype": ">f8",
+        "unique": 4000,
+        "min": 34737778851740.0,
+        "max": 273263082601008.0
+      },
+      "ABSMAG_R": {
+        "dtype": ">f8",
+        "unique": 3841,
+        "min": -23.4817088666918,
+        "max": -15.306817335672871
+      }
+    }
+  }
+}

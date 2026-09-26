@@ -1,8 +1,10 @@
 # Mock-to-Loa alignment: executed screens — 2026-09-26
 
-The first execution stage identifies **Abacus v1 and the internal Holi BGS v2
-products as useful leads**, with different limitations. Neither is a qualified
-replacement. The original provisional VAC is unchanged.
+The executed screens retain **Abacus v1 and internal Holi BGS v2 as useful
+leads**, with different limitations. Public Uchuu SV3 has a high-z deficit;
+newly located internal Uchuu Y3-v2.0 and GLAM products stop atz=.50 on the
+comparison sky. None is a qualified full-range replacement. The provisional
+VAC is unchanged.
 
 CPU allocation58905757, nid004183. Reproducible scripts are under
 `workflows/p12a_vac/alignment_*`; compact inputs/results are in
@@ -77,8 +79,9 @@ This is a real numerical screen, not a formal goodness-of-fit p-value or a
 statement that every Uchuu generation fails. The public SV3 product does not
 supply an immediate high-z replacement. The paper's underlying
 `JFE_files/DESI-BGS` path returns Permission denied. Snapshot parts in BGS220422
-are not an identified full DR2 lightcone. No BGS full products were found in the
-specific new `cai/LSS/DA2/mocks/Uchuu-SHAM/.../LSScats` directory inspected.
+were not the required lightcone. Subsequent search found internal Y3-v2.0 BGS
+parents and processed products elsewhere; see the dedicated test below. The
+initial not-located statement was not evidence of absence.
 
 ![Uchuu SV3 screen](figures/p12a_alignment_execution_20260926/uchuu_sv3.png)
 
@@ -128,8 +131,10 @@ parent/photometry replay on these specific paths. No permissions were changed.
 - Keep Holi as an **observation/count benchmark candidate**. Recover its readable
   parent and executed n(z) recipe, then assess clustering and galaxy–matter
   truth before considering it a training source.
-- Retain the public Uchuu screen as evidence; seek a verified DR2 BGS parent
-  rather than treating SV3 as the full-Loa replacement.
+- Retain public and internal Uchuu results separately. The newly located
+  Y3-v2.0 BRIGHT, ANY and processed products all lackz>.50 on the comparison
+  sky. Recover a deeper native lightcone and its recipe before claiming full
+  Loa support. A magnitude cut cannot add missing parent galaxies.
 - GLAM's tested delivered product cannot cover z>.50. Do not silently truncate
   the requested VAC range.
 - W2/G2 is still open. W3 physical P/Q fitting, W4 ANY calibration and W5 new
@@ -173,7 +178,7 @@ complete BGS BRIGHT12,407,294rows, ANY19,613,582rows, and processed
 `altmtl/BGS_BRIGHT/BGS_BRIGHT_clustering.dat.h5`8,230,916rows. Parents contain
 GALAXYID/PID, ABSMAG_R and rest colour. A paired archived real-Loa clustering
 product exists in BGS-BRIGHT_data/v0.1. This corrects the earlier *not located*
-status; its count screen is running separately from public SV3. The directory
+status; its count screen completed separately from public SV3 (below). The directory
 BGS-BRIGHT_data contains real data, not an additional mock variant.
 
 The v1 cut-sky file is owned by jpiat.
@@ -181,3 +186,65 @@ The v1 cut-sky file is owned by jpiat.
 directories with N/S products. Only ph000 was inspected; these producer files
 are not yet proven identical to canonical v1, and listing a phase does not
 open its payload or authorize new confirmation exposure.
+
+## Internal Uchuu Y3-v2.0: apparent broad agreement hides missing support
+
+Read both complete parents, the processed BGS clustering catalogue and its
+paired archived real-Loa clustering catalogue. Recomputed raw and stored-WEIGHT
+counts on an intersected occupied mask (paired data/mock miss9/75 pixels of
+the initial mask). No WEIGHT_FKP and no newly fitted correction. A second
+TARGETID crosswalk then recomputed our actual current Loa full-quality sample
+on exactly that mask.
+
+| Redshift | Raw processed Uchuu/current Loa SGC | NGC |
+|---|---:|---:|
+| 0.15–0.25 | 1.075 | 1.018 |
+| 0.25–0.35 | 1.110 | 1.079 |
+| 0.35–0.45 | 1.106 | 1.064 |
+| 0.45–0.55 | 0.968 | 0.986 |
+
+**The last row is not a successful tail match.** All three tested Uchuu products
+(complete BRIGHT, complete ANY, processed BRIGHT) have zero selected rows in
+every .50–.55 bin on this sky. The processed catalogue has39,907/93,635 rows
+in.45–.50, compared with paired real Loa31,574/72,445; an excess below.50
+cancels missing objects above.50 in the coarse sum. This is a concrete rejected
+aggregate-count shortcut, now recorded in UCHUU_SUPPORT.json. The source
+cutoff predates or is shared with the processed catalogue; assignment alone
+cannot restore the missing range from these delivered parents.
+
+Stored-weight high-shell ratios to paired data are0.919/0.934, versus raw
+0.946/0.964. Neither removes the support cutoff. The paired archived real
+clustering selection also differs from our full-quality sample: many paired
+IDs fail current GALAXY/ZWARN or current-z-range requirements. Failure categories
+overlap; their totals cannot be added. This changes the broad ratios by a few
+percent and must not be confused with our original~1.8factor discrepancy.
+The data-side comparison is now explicit, while mock-side cut/assignment
+provenance remains unverified.
+
+![Internal Uchuu Loa comparison](figures/p12a_alignment_execution_20260926/uchuu_dr2_loa.png)
+
+A4000-row systematic parent sample finds BGS_TYPE=BRIGHT/FAINT in ANY. PID
+only takes-1/0 in this sample; **it must not be assumed to be a host-halo ID**.
+GALAXYID is stored asfloat64 and is not yet joined to native halo IDs. The
+z0.19 BGS box has54,069,989 rows with x/y/z, velocities andMr in a PyTables
+block, but no explicit halo-ID column in that block. Particle and halo
+directories are present (snapdir045, halodir045 withz0p19 names; particle file
+names indicate samp0p005). Only directory/schema metadata was inspected, not
+particle payloads or a validated matter-truth join. These assets make deeper
+truth work plausible but do not establish the P12 cosmology/epoch estimand.
+
+## Validation and operational closeout
+
+Relevant3 mock-selection and1 flag-intersection unit tests pass. Census
+invariants/source fingerprints and compact histogram hashes validate; parent
+completed-run resume was checked without rescanning. FivePNG figures visually
+reviewed; the Abacus ratio axis was corrected to show the whole high-z curve.
+These are integrity checks, not scientific qualification. Compact histograms
+and figures are explicitly committed despite repository binary-ignore rules.
+
+Graphify update/global refresh succeeded in cosmic_env. A compute-node update
+failed with flock errno524; the same conda tool succeeded on the login node.
+An exploratory parent-schema min/max probe initially failed on string BGS_TYPE;
+the corrected dtype-aware probe completed. The first allocation's idle shell
+auto-loggedout after30min after completed scans; second allocation58907166
+served the newly found internal Uchuu tests. No unrelated allocation altered.
