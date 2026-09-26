@@ -1,0 +1,214 @@
+{
+  "sources": {
+    "paired_loa": {
+      "path": "/global/cfs/cdirs/desi/mocks/cai/Uchuu-SHAM/Y3-v2.0/0000/BGS-BRIGHT_data/v0.1/BGS_BRIGHT_clustering.dat.fits",
+      "stat": [
+        1256109120,
+        1760616061268236047
+      ],
+      "pixels_missing_from_initial_common": 9,
+      "rows": 8000636
+    },
+    "uchuu_altmtl": {
+      "path": "/global/cfs/cdirs/desi/mocks/cai/Uchuu-SHAM/Y3-v2.0/0000/altmtl/BGS_BRIGHT/BGS_BRIGHT_clustering.dat.h5",
+      "stat": [
+        251585667,
+        1766424115970546840
+      ],
+      "pixels_missing_from_initial_common": 75,
+      "rows": 8230916
+    },
+    "uchuu_complete": {
+      "path": "/global/cfs/cdirs/desi/mocks/cai/Uchuu-SHAM/Y3-v2.0/0000/complete/Uchuu-SHAM_BGS_Y3-v2.0_0000_clustering.dat.fits",
+      "stat": [
+        992592000,
+        1747924305686358169
+      ],
+      "rows": 12407294
+    },
+    "uchuu_any": {
+      "path": "/global/cfs/cdirs/desi/mocks/cai/Uchuu-SHAM/Y3-v2.0/0000/complete/Uchuu-SHAM_BGS_ANY_Y3-v2.0_0000_clustering.dat.fits",
+      "stat": [
+        1216048320,
+        1747206894169110032
+      ],
+      "rows": 19613582
+    }
+  },
+  "counts": {
+    "paired_loa": [
+      [
+        811383,
+        530154,
+        209377,
+        42203
+      ],
+      [
+        2016172,
+        1312289,
+        516637,
+        97145
+      ]
+    ],
+    "paired_loa_weighted": [
+      [
+        1103731.8667397508,
+        705362.1908610668,
+        270977.2698879525,
+        53947.27648415383
+      ],
+      [
+        2648466.3385844217,
+        1689338.1306327502,
+        646361.7525408183,
+        120160.53746854872
+      ]
+    ],
+    "uchuu_altmtl": [
+      [
+        851364,
+        572210,
+        224541,
+        39907
+      ],
+      [
+        2006035,
+        1379130,
+        534073,
+        93635
+      ]
+    ],
+    "uchuu_altmtl_weighted": [
+      [
+        1120453.0,
+        744693.0,
+        285297.0,
+        49574.0
+      ],
+      [
+        2544304.0,
+        1728362.0,
+        653836.0,
+        112180.0
+      ]
+    ],
+    "uchuu_complete": [
+      [
+        1301819,
+        868144,
+        333388,
+        58087
+      ],
+      [
+        2871261,
+        1955637,
+        739357,
+        126840
+      ]
+    ],
+    "uchuu_complete_weighted": [
+      [
+        1301819.0,
+        868144.0,
+        333388.0,
+        58087.0
+      ],
+      [
+        2871261.0,
+        1955637.0,
+        739357.0,
+        126840.0
+      ]
+    ],
+    "uchuu_any": [
+      [
+        1886204,
+        1607455,
+        790284,
+        164049
+      ],
+      [
+        4181160,
+        3648480,
+        1813764,
+        372410
+      ]
+    ],
+    "uchuu_any_weighted": [
+      [
+        1886204.0,
+        1607455.0,
+        790284.0,
+        164049.0
+      ],
+      [
+        4181160.0,
+        3648480.0,
+        1813764.0,
+        372410.0
+      ]
+    ]
+  },
+  "processed_to_paired_loa": [
+    [
+      1.0492751265431985,
+      1.0793278934045578,
+      1.0724243828118656,
+      0.9455962846243158
+    ],
+    [
+      0.9949721551534294,
+      1.0509346645441666,
+      1.033749034621988,
+      0.9638684440784394
+    ]
+  ],
+  "processed_to_paired_loa_weighted": [
+    [
+      1.0151496334971652,
+      1.05575973542177,
+      1.052844764868908,
+      0.9189342489710595
+    ],
+    [
+      0.9606706956902101,
+      1.0231000938531076,
+      1.0115635670424508,
+      0.9335843727343716
+    ]
+  ],
+  "weight_summaries": {
+    "paired_loa": {
+      "min": 1.0,
+      "max": 139.31726825237274,
+      "interpretation": "stored WEIGHT, never WEIGHT_FKP; missing WEIGHT uses unit count"
+    },
+    "uchuu_altmtl": {
+      "min": 1.0,
+      "max": 17.0,
+      "interpretation": "stored WEIGHT, never WEIGHT_FKP; missing WEIGHT uses unit count"
+    },
+    "uchuu_complete": {
+      "min": 1.0,
+      "max": 1.0,
+      "interpretation": "stored WEIGHT, never WEIGHT_FKP; missing WEIGHT uses unit count"
+    },
+    "uchuu_any": {
+      "min": 1.0,
+      "max": 1.0,
+      "interpretation": "stored WEIGHT, never WEIGHT_FKP; missing WEIGHT uses unit count"
+    }
+  },
+  "job": "58907166",
+  "script_sha256": "5c9834b9058afc394d01b0822c4ca5bb15c3f600e47c6290c8fda25025126f17",
+  "common_sha256": "21eab2e18e70d0232111d84d38c75b8e9a8e3399fbf4ff88dfdab8f618b00882",
+  "histogram_sha256": "6d1808fc0c1f1745bb42c58efc23574ceef90c26b206f0c6c82dc3a434010a5b",
+  "notes": [
+    "Newly located internal Y3-v2.0 BGS mock0000, development-only; no independent confirmation claim.",
+    "Paired archived Loa v0.1 clustering selection is not the current full v2.1 DELTACHI2>=25/GALAXY sample.",
+    "Weights are stored product definitions; no new n(z) reweighting. Exact assignment and spectral-success lineage remains open.",
+    "Intrinsic BRIGHT/ANY counts are separate selection stages, not observed-count predictions.",
+    "ABSMAG_R conventions across complete, altmtl and real data unpinned; histograms saved but not treated as physical LF parity.",
+    "GALAXYID/PID exist in parents but epoch/particle/host joins and P12 estimand equivalence are unverified."
+  ]
+}

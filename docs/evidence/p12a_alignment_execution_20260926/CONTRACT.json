@@ -1,0 +1,77 @@
+{
+  "run": "20260926 W0/W1 development screens",
+  "job": "58905757",
+  "node": "nid004183",
+  "phases_opened": [
+    "ph000"
+  ],
+  "allowed_development": [
+    "ph000",
+    "ph002",
+    "ph003",
+    "ph004",
+    "ph005",
+    "ph006"
+  ],
+  "p12_contract": {
+    "training": [
+      "ph000",
+      "ph002",
+      "ph003",
+      "ph004",
+      "ph005"
+    ],
+    "validation_and_selection": [
+      "ph006"
+    ],
+    "sealed_blind_test": [
+      "ph001"
+    ],
+    "fresh_initialization_required": true,
+    "phase_balanced_sampling": true,
+    "phase_is_model_input": false,
+    "ph000_scores_are_independent_generalisation_evidence": false
+  },
+  "e2e_roles": {
+    "ph000": "train",
+    "ph002": "train",
+    "ph003": "train",
+    "ph007": "train",
+    "ph008": "train",
+    "ph009": "train",
+    "ph010": "train",
+    "ph011": "train",
+    "ph012": "development",
+    "ph013": "development",
+    "ph014": "confirmation",
+    "ph015": "confirmation",
+    "ph016": "confirmation",
+    "ph017": "confirmation",
+    "ph018": "confirmation",
+    "ph019": "confirmation",
+    "ph020": "train",
+    "ph021": "train",
+    "ph022": "train",
+    "ph023": "train",
+    "ph024": "train"
+  },
+  "new_blind_eligibility": false,
+  "common_mask": "/pscratch/sd/d/dkololgi/graphweb_desi/outputs/p12a_mock_test_ph006_20260926_v1/common.npy",
+  "comparison": "intrinsic v0.1/v1 ph000 numeric r 12<=r<19.5, no IN_Y flags, z .15-.55",
+  "unknowns": [
+    "physical photometry equivalence",
+    "v1 executed generator",
+    "exact angular mask rather than occupied-pixel support",
+    "halo join equivalence"
+  ],
+  "interpretation": "screen only; parent ratio not observed Loa parity; no release acceptance from one phase",
+  "screen_tolerances": {
+    "broad_fraction": 0.05,
+    "fine_fraction": 0.1,
+    "qualification": "descriptive screen; uncertainty and all joint observables required before acceptance"
+  },
+  "registry_sha256": {
+    "/global/u2/d/dkololgi/TNG/Illustris/configs/p10_phase_registry_v1.json": "968cd8ed010de9b75ec4115d3a0d2be51a27306c601d04aa11bac4bdf20bb303",
+    "/global/u2/d/dkololgi/TNG/Illustris/configs/e2e_coupled_data_v1.json": "af5917cfb89a7a0be00b4f91c2aa3a8f7d73b8de2fc339e53d58d48f185d2f2b"
+  }
+}

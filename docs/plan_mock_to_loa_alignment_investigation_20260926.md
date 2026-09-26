@@ -332,3 +332,74 @@ uncertainty prevents release. Options include a new generator/deeper parent,
 a separately qualified restricted-domain VAC, or continued provisional status.
 Do not switch to DR1/DA3, lower z_max, or choose a simulation suite merely because
 it gives a more convenient count curve.
+
+## Execution journal — 2026-09-26
+
+- W0 development comparison/exposure contract saved in
+  [CONTRACT.json](evidence/p12a_alignment_execution_20260926/CONTRACT.json).
+  Only exposed ph000 opened; no new confirmation phase. Exact angular-mask and
+  physical photometry equivalence remain open, so this is a controlled numerical
+  parent screen rather than a passed production G0.
+- CPU allocation58905757, nid004183: chunked v0.1/v1 ph000 census completed.
+  Same common NSIDE256 sky, no IN_Y flag, 12<=r<19.5, RSD z.15–.55.
+- W1 Uchuu: located the archived edav1/sv3 n(z) tables used by the authors'
+  Figure2 notebook and public102x2 lightcones. Replaying counts per square degree
+  using published Nbin and95.7deg2 per mock hemisphere; no FKP counts.
+  Archived clustering rows not located, so exact inherited weighting replay
+  remains open. Fuji3.1 tables provide a version sensitivity control.
+- Dead end: JFE_files/DESI-BGS (the notebook's raw BGS reference) returns
+  Permission denied. BGS220422 contains snapshot HDF5 parts, not an identified
+  full DR2 lightcone. No claim that Uchuu or internal releases are unavailable.
+
+### Completed screens and revised priorities
+
+Full [execution report and plots](p12a_alignment_execution_results_20260926.md).
+
+| Work item | Current result | Disposition |
+|---|---|---|
+| W0 | Exposed-phase/numerical comparison contract and input fingerprints saved | Exact random/tile parity and physical photometry equivalence remain open. |
+| W1 Abacusv1 | High-shell intrinsic v1/v0.1=2.729SGC/2.653NGC; observer mapping and selected CEN fractions also change | Promising parent; prioritize v1 recipe/lineage before bespoke P/Q tuning. |
+| W1 UchuuSV3 |102x2 files measured; high-shell mock/archivedSV3=0.423S/0.463N | Not an automatic full-Loa fix. Exact archived data weighting replay and DR2 parent subsequently located; see update below. |
+| W1 internal GLAM | Located glam_bgs_v2 Loa full sample; zero rows abovez.50 in tested mock10 | Cannot cover full VAC range as delivered; preserve cutoff finding. |
+| W1 internal Holi | Located holi_bgs_v2; high-shell mock/Loa=0.944SGC/1.049NGC,5SGC fine bins outside10% | Keep as count/observation benchmark; neither statistical nor physical qualification. |
+| W1 internal DA3 | Same-TARGETID crosswalk completed: matched-ID quality gains705,048, losses7,232 | Separate catalogue membership, quality and delivered-column changes. |
+| W2 mapping | Old colour recipe fitsv0.1 to precision but failsv1 at0.073mag RMS; no executedv1 receipt found | Do not reuse old K/E or interpret a residual slope as LFQ. |
+| W3–W5 | Not launched across unresolved G2 | Recover producer recipe/parent first; user authorization remains active. |
+| W6–W7 | Not qualified | Provisional VAC remains unchanged. |
+
+New internal source route: current LSS DA3DA2 scripts lead to
+`/global/cfs/cdirs/desi/mocks/cai/LSS/DA2/mocks`. Their survey=DA3 but
+surveycat=DA2/specdata=loa-v1 means the delivered footprint is not automatically
+DA3/matterhorn. The missing survey/catalogs/DA3/mocks root was not a sufficient
+search. The specific Uchuu-SHAM and AbacusHF_DR2v2 mock0 LSScats inspected there
+have no BGS full dat files; other tracers are present.
+
+Dead end/access issue: Holi forFA0 exists but has no read permission; GLAM
+forFA10 was absent in this root. Current public Holi prep calibrates to Loa n(z)
+and assigns placeholder absolute magnitudes. This source observation is not an
+execution receipt for holi_bgs_v2. Close counts cannot independently validate
+the calibrated density or establish a physical luminosity/galaxy–matter model.
+
+Next concrete closure inputs: v1 executed generator/config/table versions and
+flag semantics; readable Holi parent/production recipe; full DR2 Uchuu BGS
+lightcone provenance. Continue remaining independent release/mask controls.
+Do not silently use empirical magnitudes as physical M_r or import current
+Holi n(z) calibration into the existing Abacus model.
+
+### Continued internal search: Uchuu Y3-v2.0 and producer files
+
+Located readable internal Y3-v2.0/0000 Uchuu BGS BRIGHT/ANY complete parents,
+processed BGS clustering and paired real Loa data under cai/Uchuu-SHAM.
+This supersedes the earlier not-located status; paired count screen running
+on CPU58907166/nid004152. Do not confuse the real BGS-BRIGHT_data directory
+with mocks. Parent GALAXYID/PID availability is encouraging but not validated
+halo/epoch/truth parity. Public SV3 failure does not decide this new candidate.
+
+Also located producer N/S cut-skies under users/jpiat/abacus_mocks, with25
+phase directories listed. Only ph000 inspected; identity to canonicalv1 and
+executed recipe unproven. No new Abacus phase payload opened.
+
+Matterhorn crosswalk completed: later data has more selected galaxies on old
+common sky in every broad shell; same-ID r changes>0.01mag absent among jointly
+qualifying rows. Detailed spectral/mask/blinding interpretation remains open.
+No switch of primary Loa target. See report for exact counts and caveats.

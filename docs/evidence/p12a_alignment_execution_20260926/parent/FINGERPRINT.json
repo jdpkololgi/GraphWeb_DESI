@@ -1,0 +1,131 @@
+{
+  "results": {
+    "v0.1": {
+      "source": "/global/cfs/cdirs/desi/cosmosim/SecondGenMocks/AbacusSummit/CutSky/BGS/v0.1/z0.200/cutsky_BGS_z0.200_AbacusSummit_base_c000_ph000.fits",
+      "sample_rows": 199681,
+      "selected_rows": 65004,
+      "values": {
+        "Z": {
+          "fit_slope_intercept": [
+            -0.800182546642307,
+            -1.995510681554457e-05
+          ],
+          "r_after_fit": {
+            "n": 65004,
+            "median": -6.7821060573125536e-09,
+            "p01_p99": [
+              -2.8484316497272287e-06,
+              2.8513604982910447e-06
+            ],
+            "max_abs": 3.511985810722429e-06,
+            "rms": 1.4667365509291717e-06
+          },
+          "colour_residual": {
+            "n": 65004,
+            "median": -2.1809850800358355e-09,
+            "p01_p99": [
+              -1.0696032116785936e-07,
+              9.521469535520024e-08
+            ],
+            "max_abs": 1.695151501390768e-07,
+            "rms": 4.260518456987453e-08
+          }
+        },
+        "Z_COSMO": {
+          "fit_slope_intercept": [
+            -0.8159306202855092,
+            0.003606260125573189
+          ],
+          "r_after_fit": {
+            "n": 65004,
+            "median": 1.949682372545669e-05,
+            "p01_p99": [
+              -0.04340996842397289,
+              0.04346847912303548
+            ],
+            "max_abs": 0.1770019747542862,
+            "rms": 0.016740552463285284
+          },
+          "colour_residual": {
+            "n": 65004,
+            "median": 0.0001771537445463163,
+            "p01_p99": [
+              -0.009597830226183377,
+              0.010239809162829058
+            ],
+            "max_abs": 0.03554545464909584,
+            "rms": 0.0037358284277916234
+          }
+        }
+      }
+    },
+    "v1": {
+      "source": "/global/cfs/cdirs/desi/cosmosim/SecondGenMocks/AbacusSummit/CutSky/BGS/v1/z0.200/cutsky_BGS_z0.200_AbacusSummit_base_c000_ph000.fits",
+      "sample_rows": 233590,
+      "selected_rows": 75560,
+      "values": {
+        "Z": {
+          "fit_slope_intercept": [
+            -0.9378285340488549,
+            -0.14494289350174192
+          ],
+          "r_after_fit": {
+            "n": 75560,
+            "median": -0.005978771726960153,
+            "p01_p99": [
+              -0.07344464758744243,
+              0.09889669090367248
+            ],
+            "max_abs": 0.24845039855549994,
+            "rms": 0.040810936997692365
+          },
+          "colour_residual": {
+            "n": 75560,
+            "median": -0.0530651298565286,
+            "p01_p99": [
+              -0.15157803834519018,
+              0.14633926740144398
+            ],
+            "max_abs": 0.3760685815782168,
+            "rms": 0.07305723464227379
+          }
+        },
+        "Z_COSMO": {
+          "fit_slope_intercept": [
+            -0.9519514749203665,
+            -0.1415004322281935
+          ],
+          "r_after_fit": {
+            "n": 75560,
+            "median": -0.0039604019312572125,
+            "p01_p99": [
+              -0.08965906121607156,
+              0.10434775181202244
+            ],
+            "max_abs": 0.24242277715838156,
+            "rms": 0.044330627030760635
+          },
+          "colour_residual": {
+            "n": 75560,
+            "median": -0.05184554838594273,
+            "p01_p99": [
+              -0.15193148774244197,
+              0.1462620219646126
+            ],
+            "max_abs": 0.37050489537763187,
+            "rms": 0.07299999515064297
+          }
+        }
+      }
+    }
+  },
+  "job": "58905757",
+  "script_sha256": "c9161dd51f174ef658c4a505a0e36fd398267a227be896bf0b454e48a3540499",
+  "evaluator_sha256": "14f31056fd6b6b2e52a700878fbf4c960ff166b34905c7173b5759fa8b22ad6f",
+  "table_sha256": {
+    "k_corr_rband_z01.dat": "f456f6e0e0465fe0b662366268b31c30bfe8b958fe3632cec64f78d907803126",
+    "k_correction.py": "0a2dde5692bf7229549df814fa89deb54a99b400030199f9c2091cda37554574",
+    "k_corr_gband_z01.dat": "dcade4a37c8e4998eb0d71542ad97958b7c20b91f3bafd7295aa4e8e6d7f2694"
+  },
+  "caveat": "Native-like distance approximation; numerical identity is not proof of executed LF parameters or production commit."
+}

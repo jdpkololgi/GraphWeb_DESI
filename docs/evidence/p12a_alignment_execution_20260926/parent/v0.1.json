@@ -1,0 +1,85 @@
+{
+  "source": "/global/cfs/cdirs/desi/cosmosim/SecondGenMocks/AbacusSummit/CutSky/BGS/v0.1/z0.200/cutsky_BGS_z0.200_AbacusSummit_base_c000_ph000.fits",
+  "source_stat": [
+    6645378240,
+    1706807554000000000
+  ],
+  "total_rows": 63897781,
+  "columns": [
+    "R_MAG_APP",
+    "R_MAG_ABS",
+    "G_R_REST",
+    "G_R_OBS",
+    "DEC",
+    "HALO_MASS",
+    "CEN",
+    "RES",
+    "RA",
+    "Z_COSMO",
+    "Z",
+    "FILE_NUM",
+    "HALO_INDEX",
+    "BOX_INDEX",
+    "IN_Y1",
+    "NGC_Y1",
+    "SGC_Y1",
+    "N_Y1",
+    "S_Y1",
+    "IN_Y5",
+    "NGC_Y5",
+    "SGC_Y5",
+    "N_Y5",
+    "S_Y5"
+  ],
+  "selected": 6943982,
+  "invalid_coordinates_z_r": 0,
+  "counts": [
+    [
+      1170636,
+      698697,
+      230531,
+      29139
+    ],
+    [
+      2641307,
+      1574978,
+      532987,
+      65707
+    ]
+  ],
+  "central_counts": [
+    [
+      1009085,
+      623972,
+      214941,
+      28477
+    ],
+    [
+      2280765,
+      1407592,
+      496683,
+      64161
+    ]
+  ],
+  "job": "58905757",
+  "script_sha256": "6e76b0271d38b71be6b0bbc9f26ed954e3a3b1b27c033c1ed09ce4abf556cf57",
+  "histogram_sha256": "8e56864c5b4e002c8b48c14544e298bbf4815cb9f0f34d3b3bba0bc06c157a26",
+  "common_mask_sha256": "6fdfffc465b0a44bc1629c46d2b087e6c609edc8738db3ab49860ecf45dd38a3",
+  "contract": {
+    "phase": "ph000",
+    "caps": [
+      "SGC",
+      "NGC"
+    ],
+    "z": "0.15<=Z<0.55 RSD",
+    "magnitude": "12<=R_MAG_APP<19.5",
+    "IN_Y_flags": "none in either version",
+    "population": "intrinsic raw parent, not observed Loa",
+    "photometry_equivalent_to_Legacy": false,
+    "replicate_independence": false
+  },
+  "validation": {
+    "source_unchanged": true,
+    "magnitude_histogram_conserves_counts": true
+  }
+}

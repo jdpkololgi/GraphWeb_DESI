@@ -1,0 +1,18 @@
+{
+  "glam_bgsv2_DA3DA2_lss_pipeline_interactive.sh": {
+    "url": "https://raw.githubusercontent.com/desihub/LSS/d942b990860e016e7558c740966fea3e5ce7e7f3/scripts/mock_tools/glam_bgsv2_DA3DA2_lss_pipeline_interactive.sh",
+    "sha256": "401fdca99f6c3de7f87a2a524bb50d0dc53fc2da53669810def8ba22262c8136"
+  },
+  "holi_bgs_bmask_DA3DA2_lss_pipeline_run1.sh": {
+    "url": "https://raw.githubusercontent.com/desihub/LSS/d942b990860e016e7558c740966fea3e5ce7e7f3/scripts/mock_tools/holi_bgs_bmask_DA3DA2_lss_pipeline_run1.sh",
+    "sha256": "daab5604c71da886815a7ad9bb82892d6e1ec64c360c5aa6d99badca3028378e"
+  },
+  "mv_dr3dr2bgs_datcombandforfa_scratch.sh": {
+    "url": "https://raw.githubusercontent.com/desihub/LSS/d942b990860e016e7558c740966fea3e5ce7e7f3/scripts/mock_tools/mv_dr3dr2bgs_datcombandforfa_scratch.sh",
+    "sha256": "227a46ee2b908cdee64c412ff4340ce6db17efcee1a3ff1f5041ce0b73ce2b2f"
+  },
+  "initialize_amtl_mocks_da3.py": {
+    "url": "https://raw.githubusercontent.com/desihub/LSS/d942b990860e016e7558c740966fea3e5ce7e7f3/scripts/mock_tools/initialize_amtl_mocks_da3.py",
+    "sha256": "b4bf8ec198ae6f691ed0a2f184f34ca510962097b45a2c8a9331d57d0365f423"
+  }
+}

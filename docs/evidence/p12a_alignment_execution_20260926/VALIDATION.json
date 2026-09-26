@@ -1,0 +1,30 @@
+{
+  "checks": [
+    "syntax alignment_parent_screen.py",
+    "syntax alignment_uchuu_screen.py",
+    "syntax alignment_version_fingerprint.py",
+    "syntax alignment_internal_screen.py",
+    "syntax alignment_release_crosswalk.py",
+    "syntax plot_alignment_screens.py",
+    "source and histogram parent/v0.1.json",
+    "source and histogram parent/v1.json",
+    "source and histogram uchuu/COMPLETE.json",
+    "source and histogram internal/COMPLETE.json",
+    "pinned upstream finalize_mock.py",
+    "pinned upstream make_mocks_script.py",
+    "pinned upstream glam_bgsv2_DA3DA2_lss_pipeline_interactive.sh",
+    "pinned upstream holi_bgs_bmask_DA3DA2_lss_pipeline_run1.sh",
+    "pinned upstream mv_dr3dr2bgs_datcombandforfa_scratch.sh",
+    "pinned upstream initialize_amtl_mocks_da3.py",
+    "all plot source and output hashes"
+  ],
+  "lightweight_tests": {
+    "mock_selection": 3,
+    "flag_intersections": 1,
+    "passed": true
+  },
+  "parent_completed_resume": "v1 receipt verified; already complete, no rescan",
+  "visual_review": "all four PNG figures inspected; parent ratio ylim corrected to include whole curve",
+  "graphify": "cosmic_env update and global refresh succeeded on login node; compute-node flock failed Errno524, resolved by login-node retry",
+  "scope": "software/integrity validation, not scientific acceptance"
+}

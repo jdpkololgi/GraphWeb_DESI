@@ -1,0 +1,26 @@
+{
+  "v1": {
+    "cutsky": "Only ph000 found; FITS header contains schema but no generator revision or parameters",
+    "cubic": "v1 z0.200 ph000_N/S headers inspected, 220424052/220411276 rows, both HALO_ID and positions; no production revision",
+    "upstream": "amjsmith/shared_code main still a40a5d3be570a6ce9d5a0698268b04864d4d3af2; finalize_mock.py copies magnitudes, no -0.8 term found; same code fails v1 colour identity",
+    "directory_docs": "latest.md points to archive_20241104.md, inventory only, no v1 recipe found",
+    "owner_route": "Cutsky file owned by jpiat. users/jpiat/abacus_mocks/cutsky/z0.200/AbacusSummit_base_c000 lists25 phase directories with N/S products; only ph000 directory inspected. These are not yet proven identical to canonical v1."
+  },
+  "uchuu": {
+    "public": "102 x 2 BGS SV3 FITS readable; census completed",
+    "paper_parent": "/global/cfs/cdirs/desi/mocks/Uchuu/JFE_files/DESI-BGS permission denied",
+    "snapshot": "BGS220422 has snapshot parts; no verified full DR2 BGS lightcone located",
+    "new_processed": "cai/LSS/DA2/mocks/Uchuu-SHAM/altmtl0/loa-v1/mock0/LSScats has no BGS full dat product",
+    "dr2_followup": "Located Y3-v2.0/0000 under cai/Uchuu-SHAM; complete BRIGHT and ANY plus altmtl/BGS_BRIGHT clustering readable metadata. Corrects earlier not-located status; statistical screen pending."
+  },
+  "internal": {
+    "root": "/global/cfs/cdirs/desi/mocks/cai/LSS/DA2/mocks",
+    "glam": "glam_bgs_v2 mock10 full BRIGHT readable; forFA10.fits absent at inspected root",
+    "holi": "holi_bgs_v2 mock0 full BRIGHT readable; forFA0.fits exists but no read permission, confirmed by file utility after FITSIO104",
+    "production_scope": "current GLAM/Holi scripts set survey=DA3, surveycat=DA2, specdata=loa-v1; not proof of matching matterhorn footprint",
+    "Holi_caveat": "inspected prepare_holi_bgs.py uses Loa input n(z), random selection and placeholder R_MAG_ABS=-22/-21/-19; exact holi_bgs_v2 executed recipe unpinned",
+    "DA3_masks": "matterhorn-v2/krolewski-pipeline README identifies BGS mod_success_rate and bad-fibre processing; remains metadata, not replay",
+    "DA3_mock_root": "cai/LSS/DA3/mocks absent at inspected location"
+  },
+  "operations": "Read-only CFS, no permission changes or messages to collaborators. Initial allocation shell auto-logged out after30min idle, after all scans completed; new CPU allocation58907166 on nid004152 for Uchuu follow-up."
+}

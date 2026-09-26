@@ -1,0 +1,116 @@
+{
+  "counts": {
+    "loa_common_sky": [
+      [
+        791799,
+        515603,
+        203039,
+        41243
+      ],
+      [
+        1970732,
+        1278482,
+        501766,
+        94985
+      ]
+    ],
+    "da3_common_sky": [
+      [
+        967214,
+        627505,
+        245158,
+        49220
+      ],
+      [
+        2283167,
+        1474298,
+        574021,
+        107743
+      ]
+    ],
+    "matched_loa_common_sky": [
+      [
+        791704,
+        515530,
+        203011,
+        41234
+      ],
+      [
+        1970489,
+        1278296,
+        501704,
+        94975
+      ]
+    ],
+    "matched_da3_common_sky": [
+      [
+        917139,
+        594565,
+        232308,
+        46651
+      ],
+      [
+        2213859,
+        1429349,
+        556575,
+        104313
+      ]
+    ],
+    "da3_unmatched_common_sky": [
+      [
+        50075,
+        32940,
+        12850,
+        2569
+      ],
+      [
+        69308,
+        44949,
+        17446,
+        3430
+      ]
+    ]
+  },
+  "stats": {
+    "matched_ids": 10629391,
+    "matched_both_science": 5389711,
+    "loa_science_lost_at_matched_ids": 7232,
+    "da3_science_gained_at_matched_ids": 705048,
+    "matched_both_science_dr_gt_001": 0,
+    "matched_both_science_relative_dz_gt_0005": 8221
+  },
+  "metadata": {
+    "da3_header_non_schema": {
+      "XTENSION": "BINTABLE",
+      "BITPIX": 8,
+      "NAXIS": 2,
+      "NAXIS1": 636,
+      "NAXIS2": 11686801,
+      "PCOUNT": 0,
+      "GCOUNT": 1,
+      "TFIELDS": 115,
+      "EXTNAME": "LSS"
+    }
+  },
+  "sources": {
+    "/global/cfs/cdirs/desi/survey/catalogs/DA2/LSS/loa-v1/LSScats/v2.1/BGS_BRIGHT_full_HPmapcut.dat.fits": [
+      8026796160,
+      1771271470000000000
+    ],
+    "/global/cfs/cdirs/desi/survey/catalogs/DA3/LSS/matterhorn-v2/LSScats/v0/BGS_BRIGHT_full_HPmapcut.dat.fits": [
+      7432830720,
+      1782312414504445640
+    ]
+  },
+  "job": "58905757",
+  "common_mask_sha256": "6fdfffc465b0a44bc1629c46d2b087e6c609edc8738db3ab49860ecf45dd38a3",
+  "script_sha256": "0c030de39dfb770d70c65935279316986de49c9f87bf9375e69838550a0a59a1",
+  "histogram_sha256": "98ba18072381b0da4be75064a109e7fc33fff4dd4508a60e22f429b166b5f3d0",
+  "notes": [
+    "Same full-catalogue Z_not4clus quality definition applied. No FKP weighting or clustering positions used.",
+    "Blinding/version completeness not independently certified; differences are delivered-column diagnostics, not cosmological evolution.",
+    "Matched-ID quality transitions are conditional on membership in both delivered full catalogues and original common occupied sky.",
+    "Unmatched IDs can reflect masks/catalogue construction as well as new observations; do not label all as newly observed galaxies.",
+    "No environmental model execution or change of primary Loa target."
+  ]
+}

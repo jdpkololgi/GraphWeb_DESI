@@ -1,0 +1,60 @@
+{
+  "script_sha256": "5cd0977493d3c57fb9a4e420dee3f89cdd3c8b761a49968c941f74af0d40a786",
+  "inputs": {
+    "/pscratch/sd/d/dkololgi/graphweb_desi/outputs/alignment_parent_20260926/v0.1.npz": "8e56864c5b4e002c8b48c14544e298bbf4815cb9f0f34d3b3bba0bc06c157a26",
+    "/pscratch/sd/d/dkololgi/graphweb_desi/outputs/alignment_parent_20260926/v1.npz": "b41c6e519366b11c309839a467e966ef0c13364f067056969da2fba8f81d7ca5",
+    "/pscratch/sd/d/dkololgi/graphweb_desi/outputs/alignment_uchuu_20260926/HISTOGRAMS.npz": "96d480a3a9b6bb8eece71e8694c03c8920c4faafb84037656a5d2af6f6c3cdd3",
+    "/global/u2/d/dkololgi/GraphWeb_DESI/docs/evidence/p12a_joint_flags_20260926/HISTOGRAMS.npz": "1043f41901ee5fb8506d04fea6f836ed52731f735f17236a7bcdd504091d17d6",
+    "/pscratch/sd/d/dkololgi/graphweb_desi/outputs/alignment_internal_20260926/HISTOGRAMS.npz": "c91916ef5d59275d0e5f461e2d71b5e209ead96fdce9841ff5a8d0c96914b526"
+  },
+  "outputs": {
+    "abacus_versions.png": "01c05b396932e89d3f46139e2b9e5c5d73f7d7fb7516f0c829ec87aa769a1912",
+    "internal_loa.png": "64d8c95223cce59f337c6891b58d0103e08e0ebf77c7d9a4ff88275b1726d3b0",
+    "uchuu_sv3.png": "9f7218ad4e1d57cab9f2fbce779cb06a9c282475781e3dad61505eaed2cafa2b",
+    "magnitude_redshift.png": "616fa3a4f41d46b6aff8c7564050718aa774c79cded0745510ec72a7f756c199"
+  },
+  "parent_broad_ratio": [
+    [
+      1.0997961791709805,
+      1.1694053359324572,
+      1.4194576868186926,
+      2.7286111397096673
+    ],
+    [
+      1.0770614699465075,
+      1.1281795682225402,
+      1.3558923575997164,
+      2.652944130762324
+    ]
+  ],
+  "parent_central_fraction": {
+    "v0.1": [
+      [
+        0.8619972391076304,
+        0.8930509219303933,
+        0.9323735202640859,
+        0.9772813068396308
+      ],
+      [
+        0.863498639120708,
+        0.8937216900807503,
+        0.9318857683208033,
+        0.97647130442723
+      ]
+    ],
+    "v1": [
+      [
+        0.678917652651226,
+        0.7662619636256823,
+        0.8570297864798047,
+        0.9340200480448754
+      ],
+      [
+        0.6823291210432888,
+        0.7690828417352428,
+        0.85860963395616,
+        0.9348657904851506
+      ]
+    ]
+  }
+}

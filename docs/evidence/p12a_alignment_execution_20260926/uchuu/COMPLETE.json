@@ -1,0 +1,2543 @@
+{
+  "job": "58905757",
+  "script_sha256": "18ba39d2db5afa54ad527526da7bfbd024e31ec1b44da902fa9848b34f5fe72b",
+  "histogram_sha256": "96d480a3a9b6bb8eece71e8694c03c8920c4faafb84037656a5d2af6f6c3cdd3",
+  "mock_sources": [
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_0_uchuu.dat.fits",
+      "stat": [
+        6546240,
+        1689350821014847113
+      ],
+      "rows": 74244
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_0_uchuu.dat.fits",
+      "stat": [
+        6240960,
+        1689350822404354245
+      ],
+      "rows": 70783
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_1_uchuu.dat.fits",
+      "stat": [
+        6192000,
+        1689350822767395087
+      ],
+      "rows": 70217
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_1_uchuu.dat.fits",
+      "stat": [
+        6664320,
+        1689350822977848717
+      ],
+      "rows": 75582
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_2_uchuu.dat.fits",
+      "stat": [
+        6235200,
+        1689350816993525005
+      ],
+      "rows": 70706
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_2_uchuu.dat.fits",
+      "stat": [
+        6670080,
+        1689350817994993366
+      ],
+      "rows": 75646
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_3_uchuu.dat.fits",
+      "stat": [
+        6491520,
+        1689350822922224135
+      ],
+      "rows": 73615
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_3_uchuu.dat.fits",
+      "stat": [
+        6396480,
+        1689350819657783617
+      ],
+      "rows": 72544
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_4_uchuu.dat.fits",
+      "stat": [
+        6635520,
+        1689350821335369492
+      ],
+      "rows": 75255
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_4_uchuu.dat.fits",
+      "stat": [
+        6079680,
+        1689350817193520822
+      ],
+      "rows": 68927
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_5_uchuu.dat.fits",
+      "stat": [
+        6526080,
+        1689350818636046559
+      ],
+      "rows": 74000
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_5_uchuu.dat.fits",
+      "stat": [
+        6687360,
+        1689350819157037308
+      ],
+      "rows": 75843
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_6_uchuu.dat.fits",
+      "stat": [
+        6707520,
+        1689350816151884258
+      ],
+      "rows": 76090
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_6_uchuu.dat.fits",
+      "stat": [
+        6719040,
+        1689350821852332929
+      ],
+      "rows": 76204
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_7_uchuu.dat.fits",
+      "stat": [
+        6632640,
+        1689350818272807868
+      ],
+      "rows": 75209
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_7_uchuu.dat.fits",
+      "stat": [
+        6753600,
+        1689350818335133245
+      ],
+      "rows": 76590
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_8_uchuu.dat.fits",
+      "stat": [
+        6891840,
+        1689350819506742092
+      ],
+      "rows": 78162
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_8_uchuu.dat.fits",
+      "stat": [
+        6782400,
+        1689350821050305199
+      ],
+      "rows": 76915
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_9_uchuu.dat.fits",
+      "stat": [
+        6632640,
+        1689350818314039117
+      ],
+      "rows": 75214
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_9_uchuu.dat.fits",
+      "stat": [
+        6606720,
+        1689350818882809756
+      ],
+      "rows": 74920
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_10_uchuu.dat.fits",
+      "stat": [
+        6759360,
+        1689350823013114504
+      ],
+      "rows": 76655
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_10_uchuu.dat.fits",
+      "stat": [
+        7260480,
+        1689350817411165674
+      ],
+      "rows": 82372
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_11_uchuu.dat.fits",
+      "stat": [
+        6194880,
+        1689350820675763977
+      ],
+      "rows": 70252
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_11_uchuu.dat.fits",
+      "stat": [
+        6321600,
+        1689350816691452706
+      ],
+      "rows": 71677
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_12_uchuu.dat.fits",
+      "stat": [
+        6301440,
+        1689350818557629768
+      ],
+      "rows": 71447
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_12_uchuu.dat.fits",
+      "stat": [
+        7035840,
+        1689350817344450749
+      ],
+      "rows": 79794
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_13_uchuu.dat.fits",
+      "stat": [
+        6606720,
+        1689350822555012714
+      ],
+      "rows": 74919
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_13_uchuu.dat.fits",
+      "stat": [
+        6649920,
+        1689350821758634776
+      ],
+      "rows": 75427
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_14_uchuu.dat.fits",
+      "stat": [
+        6531840,
+        1689350821056847648
+      ],
+      "rows": 74083
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_14_uchuu.dat.fits",
+      "stat": [
+        6425280,
+        1689350818599493097
+      ],
+      "rows": 72871
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_15_uchuu.dat.fits",
+      "stat": [
+        6762240,
+        1689350820977721271
+      ],
+      "rows": 76695
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_15_uchuu.dat.fits",
+      "stat": [
+        6436800,
+        1689350815949165465
+      ],
+      "rows": 72996
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_16_uchuu.dat.fits",
+      "stat": [
+        6301440,
+        1689350818551086567
+      ],
+      "rows": 71447
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_16_uchuu.dat.fits",
+      "stat": [
+        6174720,
+        1689350816699197621
+      ],
+      "rows": 70010
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_17_uchuu.dat.fits",
+      "stat": [
+        6621120,
+        1689350821208092773
+      ],
+      "rows": 75082
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_17_uchuu.dat.fits",
+      "stat": [
+        6433920,
+        1689350817246482231
+      ],
+      "rows": 72964
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_18_uchuu.dat.fits",
+      "stat": [
+        6312960,
+        1689350818233990498
+      ],
+      "rows": 71605
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_18_uchuu.dat.fits",
+      "stat": [
+        6707520,
+        1689350822835851775
+      ],
+      "rows": 76062
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_19_uchuu.dat.fits",
+      "stat": [
+        6534720,
+        1689350823026389798
+      ],
+      "rows": 74111
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_19_uchuu.dat.fits",
+      "stat": [
+        7030080,
+        1689350819201972535
+      ],
+      "rows": 79735
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_20_uchuu.dat.fits",
+      "stat": [
+        6491520,
+        1689350816967211578
+      ],
+      "rows": 73607
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_20_uchuu.dat.fits",
+      "stat": [
+        6923520,
+        1689350819085779157
+      ],
+      "rows": 78536
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_21_uchuu.dat.fits",
+      "stat": [
+        6681600,
+        1689350818466080639
+      ],
+      "rows": 75765
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_21_uchuu.dat.fits",
+      "stat": [
+        6376320,
+        1689350820340387686
+      ],
+      "rows": 72300
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_22_uchuu.dat.fits",
+      "stat": [
+        6678720,
+        1689350819784871682
+      ],
+      "rows": 75759
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_22_uchuu.dat.fits",
+      "stat": [
+        7274880,
+        1689350816070191148
+      ],
+      "rows": 82526
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_23_uchuu.dat.fits",
+      "stat": [
+        6606720,
+        1689350817489886033
+      ],
+      "rows": 74932
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_23_uchuu.dat.fits",
+      "stat": [
+        6606720,
+        1689350820768629265
+      ],
+      "rows": 74935
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_24_uchuu.dat.fits",
+      "stat": [
+        6577920,
+        1689350819578022284
+      ],
+      "rows": 74614
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_24_uchuu.dat.fits",
+      "stat": [
+        6258240,
+        1689350819251897802
+      ],
+      "rows": 70981
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_25_uchuu.dat.fits",
+      "stat": [
+        6652800,
+        1689350820457269309
+      ],
+      "rows": 75454
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_25_uchuu.dat.fits",
+      "stat": [
+        6814080,
+        1689350820157040333
+      ],
+      "rows": 77280
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_26_uchuu.dat.fits",
+      "stat": [
+        6912000,
+        1689350817657770705
+      ],
+      "rows": 78402
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_26_uchuu.dat.fits",
+      "stat": [
+        6880320,
+        1689350819584763815
+      ],
+      "rows": 78030
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_27_uchuu.dat.fits",
+      "stat": [
+        6422400,
+        1689350817207516343
+      ],
+      "rows": 72838
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_27_uchuu.dat.fits",
+      "stat": [
+        6500160,
+        1689350822523918398
+      ],
+      "rows": 73714
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_28_uchuu.dat.fits",
+      "stat": [
+        6528960,
+        1689350819413674688
+      ],
+      "rows": 74042
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_28_uchuu.dat.fits",
+      "stat": [
+        6445440,
+        1689350822175350889
+      ],
+      "rows": 73091
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_29_uchuu.dat.fits",
+      "stat": [
+        6278400,
+        1689350816109946570
+      ],
+      "rows": 71210
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_29_uchuu.dat.fits",
+      "stat": [
+        6946560,
+        1689350822929207529
+      ],
+      "rows": 78778
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_30_uchuu.dat.fits",
+      "stat": [
+        7027200,
+        1689350818458861976
+      ],
+      "rows": 79706
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_30_uchuu.dat.fits",
+      "stat": [
+        6379200,
+        1689350819621733866
+      ],
+      "rows": 72342
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_31_uchuu.dat.fits",
+      "stat": [
+        6134400,
+        1689350821116243594
+      ],
+      "rows": 69561
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_31_uchuu.dat.fits",
+      "stat": [
+        6402240,
+        1689350822104019411
+      ],
+      "rows": 72610
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_32_uchuu.dat.fits",
+      "stat": [
+        6284160,
+        1689350820425583638
+      ],
+      "rows": 71279
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_32_uchuu.dat.fits",
+      "stat": [
+        6315840,
+        1689350816439195989
+      ],
+      "rows": 71628
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_33_uchuu.dat.fits",
+      "stat": [
+        6693120,
+        1689350818031535206
+      ],
+      "rows": 75896
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_33_uchuu.dat.fits",
+      "stat": [
+        6137280,
+        1689350821859397674
+      ],
+      "rows": 69593
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_34_uchuu.dat.fits",
+      "stat": [
+        6517440,
+        1689350818472738504
+      ],
+      "rows": 73899
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_34_uchuu.dat.fits",
+      "stat": [
+        6560640,
+        1689350817095005292
+      ],
+      "rows": 74411
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_35_uchuu.dat.fits",
+      "stat": [
+        6396480,
+        1689350821548915127
+      ],
+      "rows": 72532
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_35_uchuu.dat.fits",
+      "stat": [
+        6842880,
+        1689350818890053365
+      ],
+      "rows": 77627
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_36_uchuu.dat.fits",
+      "stat": [
+        6848640,
+        1689350818068040738
+      ],
+      "rows": 77684
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_36_uchuu.dat.fits",
+      "stat": [
+        6871680,
+        1689350817448890113
+      ],
+      "rows": 77937
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_37_uchuu.dat.fits",
+      "stat": [
+        6258240,
+        1689350821977054315
+      ],
+      "rows": 70960
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_37_uchuu.dat.fits",
+      "stat": [
+        6791040,
+        1689350821817714842
+      ],
+      "rows": 77024
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_38_uchuu.dat.fits",
+      "stat": [
+        6491520,
+        1689350816637746828
+      ],
+      "rows": 73623
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_38_uchuu.dat.fits",
+      "stat": [
+        6554880,
+        1689350821109414178
+      ],
+      "rows": 74348
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_39_uchuu.dat.fits",
+      "stat": [
+        6312960,
+        1689350818668791588
+      ],
+      "rows": 71600
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_39_uchuu.dat.fits",
+      "stat": [
+        6635520,
+        1689350817042030831
+      ],
+      "rows": 75246
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_40_uchuu.dat.fits",
+      "stat": [
+        6416640,
+        1689350816576932423
+      ],
+      "rows": 72769
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_40_uchuu.dat.fits",
+      "stat": [
+        6932160,
+        1689350820236514790
+      ],
+      "rows": 78622
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_41_uchuu.dat.fits",
+      "stat": [
+        6554880,
+        1689350816677807590
+      ],
+      "rows": 74335
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_41_uchuu.dat.fits",
+      "stat": [
+        6217920,
+        1689350819988619248
+      ],
+      "rows": 70516
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_42_uchuu.dat.fits",
+      "stat": [
+        6721920,
+        1689350817852584464
+      ],
+      "rows": 76246
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_42_uchuu.dat.fits",
+      "stat": [
+        6338880,
+        1689350822597388921
+      ],
+      "rows": 71881
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_43_uchuu.dat.fits",
+      "stat": [
+        6531840,
+        1689350821721752991
+      ],
+      "rows": 74069
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_43_uchuu.dat.fits",
+      "stat": [
+        6445440,
+        1689350816425885939
+      ],
+      "rows": 73100
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_44_uchuu.dat.fits",
+      "stat": [
+        6886080,
+        1689350816987311119
+      ],
+      "rows": 78111
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_44_uchuu.dat.fits",
+      "stat": [
+        6765120,
+        1689350820374280679
+      ],
+      "rows": 76724
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_45_uchuu.dat.fits",
+      "stat": [
+        6811200,
+        1689350817774444410
+      ],
+      "rows": 77254
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_45_uchuu.dat.fits",
+      "stat": [
+        6292800,
+        1689350817549161643
+      ],
+      "rows": 71356
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_46_uchuu.dat.fits",
+      "stat": [
+        6310080,
+        1689350822590293168
+      ],
+      "rows": 71563
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_46_uchuu.dat.fits",
+      "stat": [
+        6451200,
+        1689350822182190704
+      ],
+      "rows": 73165
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_47_uchuu.dat.fits",
+      "stat": [
+        6632640,
+        1689350817213681177
+      ],
+      "rows": 75215
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_47_uchuu.dat.fits",
+      "stat": [
+        6747840,
+        1689350816852728545
+      ],
+      "rows": 76549
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_48_uchuu.dat.fits",
+      "stat": [
+        6359040,
+        1689350819357144775
+      ],
+      "rows": 72122
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_48_uchuu.dat.fits",
+      "stat": [
+        6837120,
+        1689350817285782532
+      ],
+      "rows": 77562
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_49_uchuu.dat.fits",
+      "stat": [
+        6770880,
+        1689350819697481852
+      ],
+      "rows": 76803
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_49_uchuu.dat.fits",
+      "stat": [
+        6618240,
+        1689350820932984425
+      ],
+      "rows": 75074
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_50_uchuu.dat.fits",
+      "stat": [
+        6361920,
+        1689350816644469443
+      ],
+      "rows": 72141
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_50_uchuu.dat.fits",
+      "stat": [
+        6831360,
+        1689350819862511663
+      ],
+      "rows": 77467
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_51_uchuu.dat.fits",
+      "stat": [
+        6336000,
+        1689350821542342230
+      ],
+      "rows": 71869
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_51_uchuu.dat.fits",
+      "stat": [
+        6785280,
+        1689350820149853720
+      ],
+      "rows": 76954
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_52_uchuu.dat.fits",
+      "stat": [
+        6425280,
+        1689350822052020201
+      ],
+      "rows": 72864
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_52_uchuu.dat.fits",
+      "stat": [
+        7058880,
+        1689350821485867300
+      ],
+      "rows": 80070
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_53_uchuu.dat.fits",
+      "stat": [
+        6226560,
+        1689350818416732610
+      ],
+      "rows": 70599
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_53_uchuu.dat.fits",
+      "stat": [
+        6255360,
+        1689350816220791058
+      ],
+      "rows": 70940
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_54_uchuu.dat.fits",
+      "stat": [
+        6690240,
+        1689350821153114730
+      ],
+      "rows": 75888
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_54_uchuu.dat.fits",
+      "stat": [
+        6986880,
+        1689350822321642773
+      ],
+      "rows": 79260
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_55_uchuu.dat.fits",
+      "stat": [
+        6667200,
+        1689350817048647088
+      ],
+      "rows": 75613
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_55_uchuu.dat.fits",
+      "stat": [
+        6765120,
+        1689350816297125770
+      ],
+      "rows": 76719
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_56_uchuu.dat.fits",
+      "stat": [
+        6284160,
+        1689350819407406901
+      ],
+      "rows": 71262
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_56_uchuu.dat.fits",
+      "stat": [
+        7076160,
+        1689350817815537331
+      ],
+      "rows": 80253
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_57_uchuu.dat.fits",
+      "stat": [
+        6863040,
+        1689350821063614778
+      ],
+      "rows": 77851
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_57_uchuu.dat.fits",
+      "stat": [
+        6456960,
+        1689350819737706351
+      ],
+      "rows": 73218
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_58_uchuu.dat.fits",
+      "stat": [
+        6330240,
+        1689350822014393765
+      ],
+      "rows": 71772
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_58_uchuu.dat.fits",
+      "stat": [
+        6431040,
+        1689350817141716136
+      ],
+      "rows": 72946
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_59_uchuu.dat.fits",
+      "stat": [
+        6609600,
+        1689350822678503842
+      ],
+      "rows": 74965
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_59_uchuu.dat.fits",
+      "stat": [
+        6929280,
+        1689350818757571495
+      ],
+      "rows": 78583
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_60_uchuu.dat.fits",
+      "stat": [
+        6324480,
+        1689350816103884999
+      ],
+      "rows": 71721
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_60_uchuu.dat.fits",
+      "stat": [
+        6399360,
+        1689350817187169049
+      ],
+      "rows": 72565
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_61_uchuu.dat.fits",
+      "stat": [
+        7032960,
+        1689350821556243725
+      ],
+      "rows": 79763
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_61_uchuu.dat.fits",
+      "stat": [
+        6269760,
+        1689350819318404058
+      ],
+      "rows": 71100
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_62_uchuu.dat.fits",
+      "stat": [
+        6583680,
+        1689350820022520757
+      ],
+      "rows": 74661
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_62_uchuu.dat.fits",
+      "stat": [
+        6264000,
+        1689350815914640431
+      ],
+      "rows": 71039
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_63_uchuu.dat.fits",
+      "stat": [
+        6900480,
+        1689350822886117227
+      ],
+      "rows": 78264
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_63_uchuu.dat.fits",
+      "stat": [
+        6485760,
+        1689350819540573530
+      ],
+      "rows": 73555
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_64_uchuu.dat.fits",
+      "stat": [
+        7047360,
+        1689350815839669737
+      ],
+      "rows": 79952
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_64_uchuu.dat.fits",
+      "stat": [
+        6891840,
+        1689350822438232230
+      ],
+      "rows": 78158
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_65_uchuu.dat.fits",
+      "stat": [
+        6592320,
+        1689350820896206965
+      ],
+      "rows": 74768
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_65_uchuu.dat.fits",
+      "stat": [
+        7024320,
+        1689350817781682429
+      ],
+      "rows": 79681
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_66_uchuu.dat.fits",
+      "stat": [
+        6641280,
+        1689350817496744993
+      ],
+      "rows": 75333
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_66_uchuu.dat.fits",
+      "stat": [
+        6675840,
+        1689350818321086990
+      ],
+      "rows": 75712
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_67_uchuu.dat.fits",
+      "stat": [
+        6641280,
+        1689350816341095894
+      ],
+      "rows": 75331
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_67_uchuu.dat.fits",
+      "stat": [
+        6733440,
+        1689350822718183583
+      ],
+      "rows": 76358
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_68_uchuu.dat.fits",
+      "stat": [
+        5976000,
+        1689350820860356998
+      ],
+      "rows": 67777
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_68_uchuu.dat.fits",
+      "stat": [
+        6382080,
+        1689350819868862594
+      ],
+      "rows": 72372
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_69_uchuu.dat.fits",
+      "stat": [
+        6664320,
+        1689350817200372169
+      ],
+      "rows": 75593
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_69_uchuu.dat.fits",
+      "stat": [
+        6526080,
+        1689350815878890560
+      ],
+      "rows": 74007
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_70_uchuu.dat.fits",
+      "stat": [
+        6508800,
+        1689350818837818354
+      ],
+      "rows": 73813
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_70_uchuu.dat.fits",
+      "stat": [
+        6796800,
+        1689350820060324965
+      ],
+      "rows": 77100
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_71_uchuu.dat.fits",
+      "stat": [
+        6785280,
+        1689350817651172281
+      ],
+      "rows": 76968
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_71_uchuu.dat.fits",
+      "stat": [
+        6759360,
+        1689350816258039778
+      ],
+      "rows": 76671
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_72_uchuu.dat.fits",
+      "stat": [
+        6779520,
+        1689350816980243949
+      ],
+      "rows": 76882
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_72_uchuu.dat.fits",
+      "stat": [
+        6497280,
+        1689350818903293183
+      ],
+      "rows": 73687
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_73_uchuu.dat.fits",
+      "stat": [
+        6367680,
+        1689350822357550999
+      ],
+      "rows": 72210
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_73_uchuu.dat.fits",
+      "stat": [
+        6405120,
+        1689350815991882418
+      ],
+      "rows": 72647
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_74_uchuu.dat.fits",
+      "stat": [
+        6690240,
+        1689350819952793034
+      ],
+      "rows": 75881
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_74_uchuu.dat.fits",
+      "stat": [
+        6860160,
+        1689350818159361170
+      ],
+      "rows": 77793
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_75_uchuu.dat.fits",
+      "stat": [
+        6439680,
+        1689350817374013574
+      ],
+      "rows": 73044
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_75_uchuu.dat.fits",
+      "stat": [
+        6589440,
+        1689350821811583510
+      ],
+      "rows": 74733
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_76_uchuu.dat.fits",
+      "stat": [
+        7030080,
+        1689350816923543448
+      ],
+      "rows": 79739
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_76_uchuu.dat.fits",
+      "stat": [
+        6514560,
+        1689350817180267930
+      ],
+      "rows": 73890
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_77_uchuu.dat.fits",
+      "stat": [
+        6292800,
+        1689350820114796623
+      ],
+      "rows": 71346
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_77_uchuu.dat.fits",
+      "stat": [
+        6266880,
+        1689350821478418939
+      ],
+      "rows": 71072
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_78_uchuu.dat.fits",
+      "stat": [
+        6194880,
+        1689350820970600603
+      ],
+      "rows": 70263
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_78_uchuu.dat.fits",
+      "stat": [
+        6500160,
+        1689350816772862337
+      ],
+      "rows": 73711
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_79_uchuu.dat.fits",
+      "stat": [
+        6687360,
+        1689350816930106376
+      ],
+      "rows": 75852
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_79_uchuu.dat.fits",
+      "stat": [
+        6733440,
+        1689350822097253113
+      ],
+      "rows": 76369
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_80_uchuu.dat.fits",
+      "stat": [
+        6235200,
+        1689350818945646298
+      ],
+      "rows": 70708
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_80_uchuu.dat.fits",
+      "stat": [
+        6672960,
+        1689350819208666468
+      ],
+      "rows": 75681
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_81_uchuu.dat.fits",
+      "stat": [
+        6543360,
+        1689350817587947234
+      ],
+      "rows": 74199
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_81_uchuu.dat.fits",
+      "stat": [
+        6693120,
+        1689350822798431033
+      ],
+      "rows": 75919
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_82_uchuu.dat.fits",
+      "stat": [
+        7283520,
+        1689350818328153469
+      ],
+      "rows": 82622
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_82_uchuu.dat.fits",
+      "stat": [
+        6451200,
+        1689350816884341550
+      ],
+      "rows": 73177
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_83_uchuu.dat.fits",
+      "stat": [
+        6773760,
+        1689350816432442004
+      ],
+      "rows": 76814
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_83_uchuu.dat.fits",
+      "stat": [
+        6425280,
+        1689350818797778721
+      ],
+      "rows": 72871
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_84_uchuu.dat.fits",
+      "stat": [
+        6874560,
+        1689350818197210112
+      ],
+      "rows": 77960
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_84_uchuu.dat.fits",
+      "stat": [
+        6698880,
+        1689350816973553604
+      ],
+      "rows": 75992
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_85_uchuu.dat.fits",
+      "stat": [
+        6595200,
+        1689350821297248462
+      ],
+      "rows": 74798
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_85_uchuu.dat.fits",
+      "stat": [
+        6626880,
+        1689350818938434478
+      ],
+      "rows": 75171
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_86_uchuu.dat.fits",
+      "stat": [
+        6543360,
+        1689350820708405182
+      ],
+      "rows": 74219
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_86_uchuu.dat.fits",
+      "stat": [
+        6554880,
+        1689350819500126646
+      ],
+      "rows": 74341
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_87_uchuu.dat.fits",
+      "stat": [
+        6229440,
+        1689350821436250851
+      ],
+      "rows": 70642
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_87_uchuu.dat.fits",
+      "stat": [
+        7107840,
+        1689350819393969904
+      ],
+      "rows": 80613
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_88_uchuu.dat.fits",
+      "stat": [
+        6733440,
+        1689350817055424466
+      ],
+      "rows": 76360
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_88_uchuu.dat.fits",
+      "stat": [
+        6534720,
+        1689350820273724347
+      ],
+      "rows": 74122
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_89_uchuu.dat.fits",
+      "stat": [
+        6520320,
+        1689350821939186147
+      ],
+      "rows": 73943
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_89_uchuu.dat.fits",
+      "stat": [
+        6416640,
+        1689350818896674051
+      ],
+      "rows": 72776
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_90_uchuu.dat.fits",
+      "stat": [
+        6886080,
+        1689350818101282475
+      ],
+      "rows": 78097
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_90_uchuu.dat.fits",
+      "stat": [
+        6863040,
+        1689350819400944110
+      ],
+      "rows": 77836
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_91_uchuu.dat.fits",
+      "stat": [
+        6638400,
+        1689350816188286608
+      ],
+      "rows": 75296
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_91_uchuu.dat.fits",
+      "stat": [
+        6494400,
+        1689350817482044617
+      ],
+      "rows": 73640
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_92_uchuu.dat.fits",
+      "stat": [
+        6814080,
+        1689350820492683994
+      ],
+      "rows": 77280
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_92_uchuu.dat.fits",
+      "stat": [
+        6526080,
+        1689350822314093933
+      ],
+      "rows": 74019
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_93_uchuu.dat.fits",
+      "stat": [
+        6670080,
+        1689350817692639380
+      ],
+      "rows": 75643
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_93_uchuu.dat.fits",
+      "stat": [
+        6929280,
+        1689350821687820715
+      ],
+      "rows": 78581
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_94_uchuu.dat.fits",
+      "stat": [
+        6943680,
+        1689350822141100719
+      ],
+      "rows": 78754
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_94_uchuu.dat.fits",
+      "stat": [
+        6949440,
+        1689350822936175012
+      ],
+      "rows": 78835
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_95_uchuu.dat.fits",
+      "stat": [
+        6667200,
+        1689350818564237549
+      ],
+      "rows": 75628
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_95_uchuu.dat.fits",
+      "stat": [
+        6825600,
+        1689350821303953715
+      ],
+      "rows": 77425
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_96_uchuu.dat.fits",
+      "stat": [
+        6589440,
+        1689350822059361713
+      ],
+      "rows": 74735
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_96_uchuu.dat.fits",
+      "stat": [
+        6569280,
+        1689350816684295097
+      ],
+      "rows": 74519
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_97_uchuu.dat.fits",
+      "stat": [
+        6387840,
+        1689350818764098966
+      ],
+      "rows": 72428
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_97_uchuu.dat.fits",
+      "stat": [
+        6546240,
+        1689350816542416296
+      ],
+      "rows": 74237
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_98_uchuu.dat.fits",
+      "stat": [
+        6477120,
+        1689350819820809675
+      ],
+      "rows": 73458
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_98_uchuu.dat.fits",
+      "stat": [
+        6534720,
+        1689350822397808640
+      ],
+      "rows": 74104
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_99_uchuu.dat.fits",
+      "stat": [
+        6137280,
+        1689350817135172063
+      ],
+      "rows": 69608
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_99_uchuu.dat.fits",
+      "stat": [
+        6681600,
+        1689350819464912706
+      ],
+      "rows": 75774
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_100_uchuu.dat.fits",
+      "stat": [
+        6514560,
+        1689350819118447453
+      ],
+      "rows": 73898
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_100_uchuu.dat.fits",
+      "stat": [
+        6776640,
+        1689350819163839032
+      ],
+      "rows": 76847
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_S_101_uchuu.dat.fits",
+      "stat": [
+        6215040,
+        1689350823019885741
+      ],
+      "rows": 70470
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/public/edr/vac/edr/uchuu/v1.0/BGS-BRIGHT_Uchuu/BGS_BRIGHT_N_101_uchuu.dat.fits",
+      "stat": [
+        6431040,
+        1689350816705547431
+      ],
+      "rows": 72939
+    }
+  ],
+  "data_sources": [
+    {
+      "path": "/global/cfs/cdirs/desi/survey/catalogs/edav1/sv3/LSScats/BGS_BRIGHT_S_nz.txt",
+      "sha256": "62ac3a99e09091d4b94a64368cf01e1789d96e64e5a365f8f6705fd94660c232",
+      "area_deg2": 87.204,
+      "statistic": "published Nbin per deg2; inherited LSS completeness treatment"
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/survey/catalogs/SV3/LSS/fuji/LSScats/3.1/BGS_BRIGHT_S_nz.txt",
+      "sha256": "3a9b5332d7774b70b945d3f12d726ac5afdc6e4965f0bb4468a500495858bed5",
+      "area_deg2": 87.2272,
+      "statistic": "published Nbin per deg2; inherited LSS completeness treatment"
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/survey/catalogs/edav1/sv3/LSScats/BGS_BRIGHT_N_nz.txt",
+      "sha256": "87cf86a47bc8062c326a28bfb3d03444fc53847e1d4d120f639ec271afadd4ba",
+      "area_deg2": 86.2884,
+      "statistic": "published Nbin per deg2; inherited LSS completeness treatment"
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/survey/catalogs/SV3/LSS/fuji/LSScats/3.1/BGS_BRIGHT_N_nz.txt",
+      "sha256": "11f007944191ee1686baece571c10e06103d4c3e39abc85a85c4f3ffc5e37eec",
+      "area_deg2": 86.3064,
+      "statistic": "published Nbin per deg2; inherited LSS completeness treatment"
+    }
+  ],
+  "magnitude_ranges": [
+    [
+      10.33246898651123,
+      19.499996185302734
+    ],
+    [
+      11.574090957641602,
+      19.4999942779541
+    ],
+    [
+      11.28001880645752,
+      19.499982833862305
+    ],
+    [
+      8.384940147399902,
+      19.499998092651367
+    ],
+    [
+      11.236871719360352,
+      19.4999942779541
+    ],
+    [
+      11.85064697265625,
+      19.499950408935547
+    ],
+    [
+      9.414928436279297,
+      19.499971389770508
+    ],
+    [
+      10.991615295410156,
+      19.49999237060547
+    ],
+    [
+      11.616462707519531,
+      19.499998092651367
+    ],
+    [
+      10.165349960327148,
+      19.499975204467773
+    ],
+    [
+      11.416572570800781,
+      19.499988555908203
+    ],
+    [
+      11.328819274902344,
+      19.4999942779541
+    ],
+    [
+      10.666372299194336,
+      19.49999237060547
+    ],
+    [
+      11.604185104370117,
+      19.499967575073242
+    ],
+    [
+      11.93123722076416,
+      19.499998092651367
+    ],
+    [
+      12.197285652160645,
+      19.499998092651367
+    ],
+    [
+      11.141305923461914,
+      19.499998092651367
+    ],
+    [
+      11.166841506958008,
+      19.49998664855957
+    ],
+    [
+      10.793251037597656,
+      19.499990463256836
+    ],
+    [
+      10.835992813110352,
+      19.499980926513672
+    ],
+    [
+      10.93072509765625,
+      19.499990463256836
+    ],
+    [
+      12.307886123657227,
+      19.499988555908203
+    ],
+    [
+      8.62904167175293,
+      19.49999237060547
+    ],
+    [
+      11.893385887145996,
+      19.49998664855957
+    ],
+    [
+      10.64573860168457,
+      19.4999942779541
+    ],
+    [
+      11.797992706298828,
+      19.499961853027344
+    ],
+    [
+      8.938451766967773,
+      19.499998092651367
+    ],
+    [
+      11.757246971130371,
+      19.499984741210938
+    ],
+    [
+      10.337681770324707,
+      19.49997329711914
+    ],
+    [
+      12.413827896118164,
+      19.499988555908203
+    ],
+    [
+      11.250018119812012,
+      19.499996185302734
+    ],
+    [
+      11.606220245361328,
+      19.49997901916504
+    ],
+    [
+      10.464033126831055,
+      19.49999237060547
+    ],
+    [
+      11.01404857635498,
+      19.49999237060547
+    ],
+    [
+      11.207423210144043,
+      19.49999237060547
+    ],
+    [
+      11.984142303466797,
+      19.499998092651367
+    ],
+    [
+      10.294754028320312,
+      19.49997901916504
+    ],
+    [
+      11.987471580505371,
+      19.4999942779541
+    ],
+    [
+      11.306843757629395,
+      19.499998092651367
+    ],
+    [
+      11.444692611694336,
+      19.499988555908203
+    ],
+    [
+      12.183860778808594,
+      19.499984741210938
+    ],
+    [
+      8.775227546691895,
+      19.499990463256836
+    ],
+    [
+      12.017382621765137,
+      19.499988555908203
+    ],
+    [
+      11.7779541015625,
+      19.49998664855957
+    ],
+    [
+      11.758716583251953,
+      19.499996185302734
+    ],
+    [
+      10.840786933898926,
+      19.499982833862305
+    ],
+    [
+      11.839692115783691,
+      19.499998092651367
+    ],
+    [
+      10.435406684875488,
+      19.499977111816406
+    ],
+    [
+      10.117437362670898,
+      19.499984741210938
+    ],
+    [
+      8.327383041381836,
+      19.499998092651367
+    ],
+    [
+      10.485153198242188,
+      19.499998092651367
+    ],
+    [
+      11.154582977294922,
+      19.499969482421875
+    ],
+    [
+      12.341872215270996,
+      19.499998092651367
+    ],
+    [
+      11.503427505493164,
+      19.499982833862305
+    ],
+    [
+      10.786568641662598,
+      19.499980926513672
+    ],
+    [
+      11.381731986999512,
+      19.49999237060547
+    ],
+    [
+      11.716139793395996,
+      19.49999237060547
+    ],
+    [
+      11.466985702514648,
+      19.499996185302734
+    ],
+    [
+      11.267386436462402,
+      19.49999237060547
+    ],
+    [
+      12.09506893157959,
+      19.4999942779541
+    ],
+    [
+      10.334798812866211,
+      19.49999237060547
+    ],
+    [
+      12.413546562194824,
+      19.499990463256836
+    ],
+    [
+      7.396382808685303,
+      19.4999942779541
+    ],
+    [
+      10.092202186584473,
+      19.499996185302734
+    ],
+    [
+      11.6406831741333,
+      19.49998664855957
+    ],
+    [
+      10.504597663879395,
+      19.49996566772461
+    ],
+    [
+      12.197469711303711,
+      19.499996185302734
+    ],
+    [
+      11.38560676574707,
+      19.4999942779541
+    ],
+    [
+      12.086159706115723,
+      19.49999237060547
+    ],
+    [
+      10.635679244995117,
+      19.499998092651367
+    ],
+    [
+      12.41797924041748,
+      19.49999237060547
+    ],
+    [
+      10.924015998840332,
+      19.499998092651367
+    ],
+    [
+      10.166751861572266,
+      19.499988555908203
+    ],
+    [
+      10.991328239440918,
+      19.49999237060547
+    ],
+    [
+      10.542108535766602,
+      19.499996185302734
+    ],
+    [
+      12.230167388916016,
+      19.49999237060547
+    ],
+    [
+      8.596724510192871,
+      19.49998664855957
+    ],
+    [
+      9.788812637329102,
+      19.499954223632812
+    ],
+    [
+      11.149015426635742,
+      19.49998664855957
+    ],
+    [
+      9.644210815429688,
+      19.499990463256836
+    ],
+    [
+      11.876446723937988,
+      19.499998092651367
+    ],
+    [
+      11.979284286499023,
+      19.499998092651367
+    ],
+    [
+      11.49960708618164,
+      19.499990463256836
+    ],
+    [
+      12.044084548950195,
+      19.499998092651367
+    ],
+    [
+      11.245646476745605,
+      19.499984741210938
+    ],
+    [
+      11.863699913024902,
+      19.49999237060547
+    ],
+    [
+      11.611431121826172,
+      19.499982833862305
+    ],
+    [
+      11.32633113861084,
+      19.49998664855957
+    ],
+    [
+      11.5127592086792,
+      19.499988555908203
+    ],
+    [
+      8.797749519348145,
+      19.499982833862305
+    ],
+    [
+      12.542977333068848,
+      19.49997901916504
+    ],
+    [
+      9.133056640625,
+      19.499998092651367
+    ],
+    [
+      7.808111667633057,
+      19.499990463256836
+    ],
+    [
+      10.713942527770996,
+      19.499984741210938
+    ],
+    [
+      10.78212833404541,
+      19.499984741210938
+    ],
+    [
+      11.457565307617188,
+      19.499990463256836
+    ],
+    [
+      12.598647117614746,
+      19.4999942779541
+    ],
+    [
+      9.06147289276123,
+      19.4999942779541
+    ],
+    [
+      9.312191009521484,
+      19.499998092651367
+    ],
+    [
+      11.691400527954102,
+      19.499980926513672
+    ],
+    [
+      11.422788619995117,
+      19.499990463256836
+    ],
+    [
+      11.733381271362305,
+      19.499990463256836
+    ],
+    [
+      8.447684288024902,
+      19.499975204467773
+    ],
+    [
+      10.536046981811523,
+      19.499971389770508
+    ],
+    [
+      12.059788703918457,
+      19.499996185302734
+    ],
+    [
+      9.32709789276123,
+      19.499980926513672
+    ],
+    [
+      10.313684463500977,
+      19.499984741210938
+    ],
+    [
+      9.505600929260254,
+      19.499990463256836
+    ],
+    [
+      10.942304611206055,
+      19.499996185302734
+    ],
+    [
+      11.369498252868652,
+      19.49999237060547
+    ],
+    [
+      9.215112686157227,
+      19.499996185302734
+    ],
+    [
+      11.343302726745605,
+      19.499996185302734
+    ],
+    [
+      11.249865531921387,
+      19.499984741210938
+    ],
+    [
+      12.072067260742188,
+      19.49998664855957
+    ],
+    [
+      11.438155174255371,
+      19.499969482421875
+    ],
+    [
+      11.529828071594238,
+      19.499996185302734
+    ],
+    [
+      9.194574356079102,
+      19.499998092651367
+    ],
+    [
+      11.035249710083008,
+      19.499990463256836
+    ],
+    [
+      8.963428497314453,
+      19.4999942779541
+    ],
+    [
+      12.013660430908203,
+      19.499980926513672
+    ],
+    [
+      11.820382118225098,
+      19.49995994567871
+    ],
+    [
+      9.19331169128418,
+      19.499996185302734
+    ],
+    [
+      11.896162986755371,
+      19.499996185302734
+    ],
+    [
+      10.225870132446289,
+      19.499998092651367
+    ],
+    [
+      10.066390037536621,
+      19.499982833862305
+    ],
+    [
+      11.110001564025879,
+      19.499996185302734
+    ],
+    [
+      8.963522911071777,
+      19.49998664855957
+    ],
+    [
+      10.170520782470703,
+      19.49999237060547
+    ],
+    [
+      12.189290046691895,
+      19.499988555908203
+    ],
+    [
+      11.805595397949219,
+      19.499996185302734
+    ],
+    [
+      10.980256080627441,
+      19.499969482421875
+    ],
+    [
+      11.32790470123291,
+      19.499990463256836
+    ],
+    [
+      11.607730865478516,
+      19.49998664855957
+    ],
+    [
+      11.25789737701416,
+      19.499988555908203
+    ],
+    [
+      10.682720184326172,
+      19.499980926513672
+    ],
+    [
+      11.640149116516113,
+      19.499990463256836
+    ],
+    [
+      11.20029354095459,
+      19.499982833862305
+    ],
+    [
+      11.858397483825684,
+      19.499990463256836
+    ],
+    [
+      11.73279857635498,
+      19.499998092651367
+    ],
+    [
+      10.023554801940918,
+      19.4999942779541
+    ],
+    [
+      11.95467472076416,
+      19.49998664855957
+    ],
+    [
+      11.877145767211914,
+      19.49998664855957
+    ],
+    [
+      10.479083061218262,
+      19.49998664855957
+    ],
+    [
+      12.04666805267334,
+      19.499990463256836
+    ],
+    [
+      11.048033714294434,
+      19.49998664855957
+    ],
+    [
+      10.395246505737305,
+      19.499975204467773
+    ],
+    [
+      10.4826078414917,
+      19.49996566772461
+    ],
+    [
+      11.75925350189209,
+      19.49996566772461
+    ],
+    [
+      9.175261497497559,
+      19.499996185302734
+    ],
+    [
+      12.147536277770996,
+      19.4999942779541
+    ],
+    [
+      10.53599739074707,
+      19.499982833862305
+    ],
+    [
+      11.916531562805176,
+      19.49998664855957
+    ],
+    [
+      11.788884162902832,
+      19.499998092651367
+    ],
+    [
+      9.836199760437012,
+      19.499998092651367
+    ],
+    [
+      10.977481842041016,
+      19.499975204467773
+    ],
+    [
+      12.16325855255127,
+      19.499996185302734
+    ],
+    [
+      11.036430358886719,
+      19.4999942779541
+    ],
+    [
+      11.640839576721191,
+      19.499990463256836
+    ],
+    [
+      11.40129566192627,
+      19.499990463256836
+    ],
+    [
+      9.998140335083008,
+      19.499996185302734
+    ],
+    [
+      11.55498218536377,
+      19.499998092651367
+    ],
+    [
+      10.45793342590332,
+      19.499984741210938
+    ],
+    [
+      9.833942413330078,
+      19.499988555908203
+    ],
+    [
+      10.284246444702148,
+      19.4999942779541
+    ],
+    [
+      11.504447937011719,
+      19.499969482421875
+    ],
+    [
+      9.620902061462402,
+      19.499990463256836
+    ],
+    [
+      10.680503845214844,
+      19.499998092651367
+    ],
+    [
+      7.543460369110107,
+      19.4999942779541
+    ],
+    [
+      11.238385200500488,
+      19.4999942779541
+    ],
+    [
+      10.890071868896484,
+      19.49999237060547
+    ],
+    [
+      11.447959899902344,
+      19.49997329711914
+    ],
+    [
+      11.942778587341309,
+      19.499990463256836
+    ],
+    [
+      10.791423797607422,
+      19.499967575073242
+    ],
+    [
+      8.197951316833496,
+      19.49996566772461
+    ],
+    [
+      11.113096237182617,
+      19.49997901916504
+    ],
+    [
+      11.819138526916504,
+      19.499998092651367
+    ],
+    [
+      7.0841965675354,
+      19.499998092651367
+    ],
+    [
+      11.628242492675781,
+      19.4999942779541
+    ],
+    [
+      12.290773391723633,
+      19.499998092651367
+    ],
+    [
+      10.384808540344238,
+      19.499975204467773
+    ],
+    [
+      10.326141357421875,
+      19.499998092651367
+    ],
+    [
+      11.566282272338867,
+      19.49999237060547
+    ],
+    [
+      10.054900169372559,
+      19.499982833862305
+    ],
+    [
+      10.454245567321777,
+      19.49999237060547
+    ],
+    [
+      10.596635818481445,
+      19.49999237060547
+    ],
+    [
+      10.658244132995605,
+      19.499982833862305
+    ],
+    [
+      11.923318862915039,
+      19.4999942779541
+    ],
+    [
+      10.408003807067871,
+      19.4999942779541
+    ],
+    [
+      10.916582107543945,
+      19.49997329711914
+    ],
+    [
+      11.77668571472168,
+      19.499948501586914
+    ],
+    [
+      12.08846664428711,
+      19.499988555908203
+    ],
+    [
+      12.135372161865234,
+      19.499927520751953
+    ],
+    [
+      9.380602836608887,
+      19.499984741210938
+    ],
+    [
+      11.382997512817383,
+      19.499996185302734
+    ],
+    [
+      11.56374740600586,
+      19.49997329711914
+    ],
+    [
+      9.155552864074707,
+      19.499980926513672
+    ],
+    [
+      12.127154350280762,
+      19.499980926513672
+    ],
+    [
+      9.433334350585938,
+      19.499998092651367
+    ],
+    [
+      11.633641242980957,
+      19.499969482421875
+    ],
+    [
+      10.949263572692871,
+      19.49997901916504
+    ],
+    [
+      11.784350395202637,
+      19.49999237060547
+    ],
+    [
+      10.527921676635742,
+      19.499990463256836
+    ],
+    [
+      9.136038780212402,
+      19.499982833862305
+    ],
+    [
+      11.604231834411621,
+      19.499984741210938
+    ]
+  ],
+  "caps": [
+    "S",
+    "N"
+  ],
+  "shell_edges": [
+    0.15,
+    0.25,
+    0.35,
+    0.45,
+    0.55
+  ],
+  "mock_to_sv3_mean": [
+    [
+      0.972982994584849,
+      0.8899697119082166,
+      0.8342254400197108,
+      0.42347418116023094
+    ],
+    [
+      1.0513693542225382,
+      0.9347755015122801,
+      0.9418933373736621,
+      0.4631293854551371
+    ]
+  ],
+  "mock_to_sv3_realization_std": [
+    [
+      0.06520271595043459,
+      0.05548656663829326,
+      0.05085268972528984,
+      0.042556780132941646
+    ],
+    [
+      0.06857758848626432,
+      0.05718432697818683,
+      0.06395705411597925,
+      0.04195136677580118
+    ]
+  ],
+  "fuji31_to_archived": [
+    [
+      1.0009837944538813,
+      1.001135163387948,
+      0.9998700849958151,
+      0.9976722660822434
+    ],
+    [
+      1.0012895981580092,
+      1.0012776831863472,
+      1.001798067278869,
+      0.9946751667840233
+    ]
+  ],
+  "notes": [
+    "Published SV3 selection and area-normalized comparison, not a Loa observed-count comparison.",
+    "Raw archived clustering files were not located; inherited Nbin weighting is not independently replayed.",
+    "Mock spread is realization standard deviation, not standard error and not independent full-survey covariance.",
+    "No FKP weighting, n(z) fitting or catalogue mutation. Geometry and volume are shared between some realizations.",
+    "Source for the 95.7 deg2 per hemisphere convention: official Uchuu VAC documentation."
+  ]
+}

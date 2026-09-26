@@ -1,0 +1,10 @@
+{
+  "finalize_mock.py": {
+    "url": "https://raw.githubusercontent.com/amjsmith/shared_code/a40a5d3be570a6ce9d5a0698268b04864d4d3af2/abacus_mocks/finalize_mock.py",
+    "sha256": "7066542a3aac579cb67bb1aa686814a3070bf8dc1060daefa54894258498964a"
+  },
+  "make_mocks_script.py": {
+    "url": "https://raw.githubusercontent.com/amjsmith/shared_code/a40a5d3be570a6ce9d5a0698268b04864d4d3af2/abacus_mocks/make_mocks_script.py",
+    "sha256": "30e2fd9cf7e7697f81443c444bf6e8fe52b6d9bd85289f18946f00bbd506d8b2"
+  }
+}

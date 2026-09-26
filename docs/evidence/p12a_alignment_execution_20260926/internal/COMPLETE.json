@@ -1,0 +1,197 @@
+{
+  "sources": {
+    "glam_bgs_v2": {
+      "path": "/global/cfs/cdirs/desi/mocks/cai/LSS/DA2/mocks/glam_bgs_v2/altmtl10/loa-v1/mock10/LSScats/BGS_BRIGHT_full_HPmapcut.dat.h5",
+      "stat": [
+        279557339,
+        1783820460000000000
+      ],
+      "rows": 10213730,
+      "columns": [
+        "BGS_TARGET",
+        "COLLISION",
+        "COMP_TILE",
+        "DEC",
+        "DESI_TARGET",
+        "FIBER",
+        "FRACZ_TILELOCID",
+        "FRAC_TLOBS_TILES",
+        "GOODHARDLOC",
+        "GOODPRI",
+        "LOCATION",
+        "LOCATION_ASSIGNED",
+        "MASKBITS",
+        "NOBS_G",
+        "NOBS_R",
+        "NOBS_Z",
+        "NTILE",
+        "PHOTSYS",
+        "PRIORITY",
+        "PRIORITY_ASSIGNED",
+        "PRIORITY_INIT",
+        "RA",
+        "SUBPRIORITY",
+        "TARGETID",
+        "TILEID",
+        "TILELOCID",
+        "TILELOCID_ASSIGNED",
+        "TILES",
+        "ZWARN",
+        "ZWARN_MTL",
+        "Z_not4clus"
+      ],
+      "original_common_pixels_missing": 49
+    },
+    "holi_bgs_v2": {
+      "path": "/global/cfs/cdirs/desi/mocks/cai/LSS/DA2/mocks/holi_bgs_v2/altmtl0/loa-v1/mock0/LSScats/BGS_BRIGHT_full_HPmapcut.dat.h5",
+      "stat": [
+        291330031,
+        1788357599000000000
+      ],
+      "rows": 10476633,
+      "columns": [
+        "BGS_TARGET",
+        "COLLISION",
+        "COMP_TILE",
+        "DEC",
+        "DESI_TARGET",
+        "FIBER",
+        "FRACZ_TILELOCID",
+        "FRAC_TLOBS_TILES",
+        "GOODHARDLOC",
+        "GOODPRI",
+        "LOCATION",
+        "LOCATION_ASSIGNED",
+        "MASKBITS",
+        "NOBS_G",
+        "NOBS_R",
+        "NOBS_Z",
+        "NTILE",
+        "PHOTSYS",
+        "PRIORITY",
+        "PRIORITY_ASSIGNED",
+        "PRIORITY_INIT",
+        "RA",
+        "SUBPRIORITY",
+        "TARGETID",
+        "TILEID",
+        "TILELOCID",
+        "TILELOCID_ASSIGNED",
+        "TILES",
+        "ZWARN",
+        "ZWARN_MTL",
+        "Z_not4clus"
+      ],
+      "original_common_pixels_missing": 48
+    },
+    "loa": {
+      "path": "/global/cfs/cdirs/desi/survey/catalogs/DA2/LSS/loa-v1/LSScats/v2.1/BGS_BRIGHT_full_HPmapcut.dat.fits",
+      "rows": 10631484,
+      "stat": [
+        8026796160,
+        1771271470000000000
+      ]
+    }
+  },
+  "counts": {
+    "glam_bgs_v2": [
+      [
+        858756,
+        539262,
+        213402,
+        30396
+      ],
+      [
+        2066967,
+        1346503,
+        525845,
+        75468
+      ]
+    ],
+    "holi_bgs_v2": [
+      [
+        818757,
+        545659,
+        216414,
+        38919
+      ],
+      [
+        2044951,
+        1320065,
+        510712,
+        99627
+      ]
+    ],
+    "loa": [
+      [
+        791772,
+        515581,
+        203026,
+        41240
+      ],
+      [
+        1970689,
+        1278466,
+        501757,
+        94983
+      ]
+    ]
+  },
+  "mock_to_loa": {
+    "glam_bgs_v2": [
+      [
+        1.0846001121534987,
+        1.0459307072991442,
+        1.0511067547998778,
+        0.7370514064015519
+      ],
+      [
+        1.0488549943699894,
+        1.0532176843185506,
+        1.0480073023395786,
+        0.794542181232431
+      ]
+    ],
+    "holi_bgs_v2": [
+      [
+        1.034081781118807,
+        1.0583380690909867,
+        1.0659422931053166,
+        0.9437196896217265
+      ],
+      [
+        1.037683267121296,
+        1.0325382137655597,
+        1.0178472846417688,
+        1.048892959792805
+      ]
+    ]
+  },
+  "flag_failures": {
+    "glam_bgs_v2": {
+      "GOODHARDLOC": 0,
+      "GOODPRI": 0,
+      "LOCATION_ASSIGNED": 0,
+      "not_bright_bit": 0
+    },
+    "holi_bgs_v2": {
+      "GOODHARDLOC": 0,
+      "GOODPRI": 0,
+      "LOCATION_ASSIGNED": 0,
+      "not_bright_bit": 0
+    }
+  },
+  "common_pixels": 261481,
+  "area_deg2": 13716.20885271632,
+  "common_sha256": "9194a4a176f62d66225f4ca6ab84aa6b976383ab64c19b549715c5b7eedf1480",
+  "script_sha256": "f82766311d927f0ae65e833ab3876ab884e32bc539efba2a8b982fe5100577ef",
+  "job": "58905757",
+  "histogram_sha256": "c91916ef5d59275d0e5f461e2d71b5e209ead96fdce9841ff5a8d0c96914b526",
+  "notes": [
+    "One GLAM mock10 and Holi mock0 opened as development only; no independent-confirmation claim.",
+    "Observed proxy uses ZWARN0; mock DELTACHI2/SPECTYPE and photometry absent, not invented.",
+    "Intersection of occupied NSIDE256 pixels is not exact angular-mask parity.",
+    "DA3 production scripts use surveycat=DA2 and Loa; this is not a demonstrated DA3 matterhorn mock match.",
+    "No production commands executed, changes to mocks or environmental inference."
+  ]
+}
