@@ -507,3 +507,17 @@ entire code repository is not a prerequisite merely to test existing products.
 Our parent-count screen establishes extra bright-tail support, not statistical
 Loa agreement. Selecting a few flags is a hypothesis, not a demonstrated solution.
 Slack message drafted for the user; no external message sent.
+
+### Visual slide review (2026-09-26)
+
+Downloaded public PDF and inspected actual pages22,23,27,33; checksum and
+page findings in `evidence/p12a_alignment_execution_20260926/PIAT_SLIDE_REVIEW.json`.
+Page23 clustering panel compares BGS Y1 / best-fitting HOD / mockv1 for M<-21;
+its N(z) histogram does not compare Loa. Page27 magnitude thresholds implement
+bright/faint fractions (10/90 through90/10) for the dipole analysis, not an
+identified correction to total parent n(z). Reproducing that split preserves
+the total parent population. Page33 discusses velocity evolution/lightcones
+without the numerical parameters of inspected files. Generic method reproducible;
+exact high-tail change and Loa recipe remain unidentified. Smith et al. underlying
+method: https://arxiv.org/html/2312.08792v2 . Existing products can be tested once
+intended selections are known; no need to regenerate merely to attempt that test.

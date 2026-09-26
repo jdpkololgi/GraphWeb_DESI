@@ -1,0 +1,18 @@
+{
+  "url": "https://indico.ijclab.in2p3.fr/event/11110/contributions/37832/attachments/25782/37994/PIAT_Relativistic_effects_DESI_COLOURS.pdf",
+  "pdf_sha256": "f316d8e6aa8452cb398770960bcd12861d915c3c98cf4e40e33b6fdf33b9fd52",
+  "visually_inspected_pdf_pages": [
+    22,
+    23,
+    27,
+    33
+  ],
+  "findings": {
+    "22": "Snapshot repetition geometry and redshift evolution applied to magnitudes.",
+    "23": "Clustering panel labels BGS Y1, best-fitting HOD, mock v1, M<-21; N(z) histogram has no Loa comparison.",
+    "27": "Redshift-dependent apparent-magnitude cuts split populations by bright/faint fractions from10/90 to90/10; not a demonstrated Loa parent-density calibration.",
+    "33": "Linear velocity evolution/interpolated lightcones proposed; evolving HOD needed. No numerical production recipe."
+  },
+  "limitations": "Talk June2025 does not identify exact June2026 jpiat files or their LF/K/E/HOD/velocity parameters.",
+  "rendering": "Web screenshots failed; downloaded public PDF and rendered locally using pypdfium2 installed only under /tmp/piat_pdf_reader. No project environment modified."
+}
