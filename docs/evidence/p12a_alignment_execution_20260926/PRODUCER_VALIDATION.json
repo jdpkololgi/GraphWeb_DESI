@@ -1,0 +1,86 @@
+{
+  "censuses": [
+    {
+      "file": "galaxy_cut_sky_N.json",
+      "pass": true,
+      "counts": [
+        [
+          1227514,
+          750017,
+          294615,
+          72558
+        ],
+        [
+          2768855,
+          1694035,
+          680812,
+          165865
+        ]
+      ]
+    },
+    {
+      "file": "galaxy_cut_sky_N_Y3.json",
+      "pass": true,
+      "counts": [
+        [
+          1218050,
+          744071,
+          292265,
+          71974
+        ],
+        [
+          2756251,
+          1686343,
+          677880,
+          165147
+        ]
+      ]
+    },
+    {
+      "file": "galaxy_cut_sky_S.json",
+      "pass": true,
+      "counts": [
+        [
+          1288700,
+          817587,
+          326570,
+          79596
+        ],
+        [
+          2905829,
+          1843899,
+          756834,
+          181884
+        ]
+      ]
+    },
+    {
+      "file": "galaxy_cut_sky_S_Y3.json",
+      "pass": true,
+      "counts": [
+        [
+          1278766,
+          810978,
+          324014,
+          78940
+        ],
+        [
+          2892628,
+          1835656,
+          753518,
+          181110
+        ]
+      ]
+    }
+  ],
+  "probe_source_hashes": "pass",
+  "helper_hashes": "pass",
+  "tests": "3 mock-selection + 1 flag-intersection tests passed",
+  "job": "58908840",
+  "node": "nid004153",
+  "limitations": [
+    "No exact random-mask closure",
+    "No producer execution recipe",
+    "No statistical acceptance from single exposed phase"
+  ]
+}

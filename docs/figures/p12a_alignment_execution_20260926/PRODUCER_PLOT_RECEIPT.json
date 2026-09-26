@@ -1,0 +1,88 @@
+{
+  "script_sha256": "383f0f8aad21e37d3206993977c5c93841b118ca1c9f21a62428cf3acbe184e3",
+  "inputs": {
+    "/global/u2/d/dkololgi/GraphWeb_DESI/docs/evidence/p12a_joint_flags_20260926/HISTOGRAMS.npz": "1043f41901ee5fb8506d04fea6f836ed52731f735f17236a7bcdd504091d17d6",
+    "/global/u2/d/dkololgi/GraphWeb_DESI/docs/evidence/p12a_alignment_execution_20260926/parent/v0.1.npz": "8e56864c5b4e002c8b48c14544e298bbf4815cb9f0f34d3b3bba0bc06c157a26",
+    "/global/u2/d/dkololgi/GraphWeb_DESI/docs/evidence/p12a_alignment_execution_20260926/parent/v1.npz": "b41c6e519366b11c309839a467e966ef0c13364f067056969da2fba8f81d7ca5",
+    "docs/evidence/p12a_alignment_execution_20260926/producer/galaxy_cut_sky_N.npz": "4c7997aef7362fe0b1dad62059f9944012bb412334ef685578908fbb1892aa0c",
+    "docs/evidence/p12a_alignment_execution_20260926/producer/galaxy_cut_sky_S.npz": "bd115157a70d353cd9f22a47bc97bf558fdf45ce040448fa2919429b7cd0c2a0",
+    "docs/evidence/p12a_alignment_execution_20260926/producer/galaxy_cut_sky_N_Y3.npz": "1421a8e61deca12876d6b3bfa386d1a34a78951782cd5d8eed0fa48467a4cc54",
+    "docs/evidence/p12a_alignment_execution_20260926/producer/galaxy_cut_sky_S_Y3.npz": "b66cc037d707457ed17226678a3b7df4b14234c246f1e8d40fb7094f09480e89"
+  },
+  "broad_counts": {
+    "N": [
+      [
+        1227514,
+        750017,
+        294615,
+        72558
+      ],
+      [
+        2768855,
+        1694035,
+        680812,
+        165865
+      ]
+    ],
+    "S": [
+      [
+        1288700,
+        817587,
+        326570,
+        79596
+      ],
+      [
+        2905829,
+        1843899,
+        756834,
+        181884
+      ]
+    ],
+    "N_Y3": [
+      [
+        1218050,
+        744071,
+        292265,
+        71974
+      ],
+      [
+        2756251,
+        1686343,
+        677880,
+        165147
+      ]
+    ],
+    "S_Y3": [
+      [
+        1278766,
+        810978,
+        324014,
+        78940
+      ],
+      [
+        2892628,
+        1835656,
+        753518,
+        181110
+      ]
+    ]
+  },
+  "loa_broad_counts": [
+    [
+      791798,
+      515603,
+      203039,
+      41242
+    ],
+    [
+      1940449,
+      1245428,
+      482271,
+      89935
+    ]
+  ],
+  "outputs": {
+    "producer_branches.png": "405972fc5a32ada58225d5a93af1fe60c703f1fe278cb7a8877207a84c0d2a1d",
+    "producer_branches.pdf": "f9b9e1641c5e6e54f690000e6cf967d6e00f561343bc0e0efcd9afbadbe05e12"
+  }
+}

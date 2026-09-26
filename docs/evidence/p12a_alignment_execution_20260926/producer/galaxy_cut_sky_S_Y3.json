@@ -1,0 +1,36 @@
+{
+  "path": "/global/cfs/cdirs/desi/users/jpiat/abacus_mocks/cutsky/z0.200/AbacusSummit_base_c000/ph000/forFA/galaxy_cut_sky_S_Y3.fits",
+  "source_stat": [
+    5801834880,
+    1780416197520300440
+  ],
+  "total_rows": 26371919,
+  "invalid": 0,
+  "counts": [
+    [
+      1278766,
+      810978,
+      324014,
+      78940
+    ],
+    [
+      2892628,
+      1835656,
+      753518,
+      181110
+    ]
+  ],
+  "flags_all_rows": {
+    "0": 26371919
+  },
+  "script_sha256": "a62239987d6f60dcbdc82090f69cb6d10a38eb975d5b8dcf4b858280659249aa",
+  "histogram_sha256": "b66cc037d707457ed17226678a3b7df4b14234c246f1e8d40fb7094f09480e89",
+  "mask_sha256": "6fdfffc465b0a44bc1629c46d2b087e6c609edc8738db3ab49860ecf45dd38a3",
+  "helper_sha256": {
+    "mock_selection_test.py": "20c1a4dbb6c19b642d8122e9547c137bfa93b7a65bc0f668ac2c3d5272e9625c",
+    "alignment_parent_screen.py": "6e76b0271d38b71be6b0bbc9f26ed954e3a3b1b27c033c1ed09ce4abf556cf57",
+    "alignment_producer_probe.py": "4684c1fe437378b7668f3dfd50f9e9b97bdca2185d938bba9bac1b8787d7f6ab"
+  },
+  "job": "58908840",
+  "contract": "Separate N/S products, not additive; common occupied NSIDE256 sky, galactic SGC/NGC, 12<=r<19.5, .15<=RSD z<.55. Numerical magnitude cut only; no claim of Legacy parity or observed quality."
+}

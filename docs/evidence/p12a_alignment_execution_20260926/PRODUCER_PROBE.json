@@ -1,0 +1,351 @@
+{
+  "scope": "Only exposed ph000; 2048 evenly spaced rows per file. Not a population census.",
+  "files": [
+    {
+      "path": "/global/cfs/cdirs/desi/users/jpiat/abacus_mocks/cutsky/z0.200/AbacusSummit_base_c000/ph000/galaxy_cut_sky_N.fits",
+      "bytes": 7760609280,
+      "mtime_ns": 1780412929867831259,
+      "rows": 71857412,
+      "columns": [
+        "R_MAG_APP",
+        "R_MAG_ABS",
+        "G_R_REST",
+        "G_R_OBS",
+        "DEC",
+        "HALO_MASS",
+        "CEN",
+        "RES",
+        "RA",
+        "Z_COSMO",
+        "Z",
+        "FILE_NUM",
+        "HALO_ID",
+        "BOX_INDEX",
+        "x_box",
+        "y_box",
+        "z_box",
+        "x_rep",
+        "y_rep",
+        "z_rep",
+        "vx",
+        "vy",
+        "vz",
+        "v_rel"
+      ],
+      "primary_header": "\nSIMPLE  =                    T / conforms to FITS standard\nBITPIX  =                    8 / array data type\nNAXIS   =                    0 / number of array dimensions\nEXTEND  =                    T / ",
+      "table_header": "\nXTENSION= 'BINTABLE'           / binary table extension\nBITPIX  =                    8 / array data type\nNAXIS   =                    2 / number of array dimensions\nNAXIS1  =                  108 / length of dimension 1\nNAXIS2  =             71857412 / length of dimension 2\nPCOUNT  =                    0 / number of group parameters\nGCOUNT  =                    1 / number of groups\nTFIELDS =                   24 / number of table fields\nTTYPE1  = 'R_MAG_APP'          / \nTFORM1  = 'E'                  / \nTTYPE2  = 'R_MAG_ABS'          / \nTFORM2  = 'E'                  / \nTTYPE3  = 'G_R_REST'           / \nTFORM3  = 'E'                  / \nTTYPE4  = 'G_R_OBS'            / \nTFORM4  = 'E'                  / \nTTYPE5  = 'DEC'                / \nTFORM5  = 'E'                  / \nTTYPE6  = 'HALO_MASS'          / \nTFORM6  = 'E'                  / \nTTYPE7  = 'CEN'                / \nTFORM7  = 'J'                  / \nTTYPE8  = 'RES'                / \nTFORM8  = 'J'                  / \nTTYPE9  = 'RA'                 / \nTFORM9  = 'E'                  / \nTTYPE10 = 'Z_COSMO'            / \nTFORM10 = 'E'                  / \nTTYPE11 = 'Z'                  / \nTFORM11 = 'E'                  / \nTTYPE12 = 'FILE_NUM'           / \nTFORM12 = 'J'                  / \nTTYPE13 = 'HALO_ID'            / \nTFORM13 = 'K'                  / \nTTYPE14 = 'BOX_INDEX'          / \nTFORM14 = 'J'                  / \nTTYPE15 = 'x_box'              / \nTFORM15 = 'E'                  / \nTTYPE16 = 'y_box'              / \nTFORM16 = 'E'                  / \nTTYPE17 = 'z_box'              / \nTFORM17 = 'E'                  / \nTTYPE18 = 'x_rep'              / \nTFORM18 = 'E'                  / \nTTYPE19 = 'y_rep'              / \nTFORM19 = 'E'                  / \nTTYPE20 = 'z_rep'              / \nTFORM20 = 'E'                  / \nTTYPE21 = 'vx'                 / \nTFORM21 = 'E'                  / \nTTYPE22 = 'vy'                 / \nTFORM22 = 'E'                  / \nTTYPE23 = 'vz'                 / \nTFORM23 = 'E'                  / \nTTYPE24 = 'v_rel'              / \nTFORM24 = '3E'                 / \nTDIM24  = '(3)'                / ",
+      "sample_sha256": "fa9e8a697e3a80d74035fbe709c62f9f7a9f25a59671b1fd580f3a20ac115abe",
+      "selected_sample_rows": 654,
+      "sample_ra_range": [
+        0.4169963300228119,
+        359.7286376953125
+      ],
+      "sample_dec_range": [
+        -89.24178314208984,
+        89.3279800415039
+      ],
+      "old_colour_mapping_residual": {
+        "n": 654,
+        "median": -0.00012694796837700584,
+        "p01_p99": [
+          -0.13619683795767798,
+          0.15236805579748927
+        ],
+        "max_abs": 0.3048584180904126,
+        "rms": 0.05367519831237858
+      }
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/users/jpiat/abacus_mocks/cutsky/z0.200/AbacusSummit_base_c000/ph000/galaxy_cut_sky_S.fits",
+      "bytes": 8176890240,
+      "mtime_ns": 1780413612047498560,
+      "rows": 75711865,
+      "columns": [
+        "R_MAG_APP",
+        "R_MAG_ABS",
+        "G_R_REST",
+        "G_R_OBS",
+        "DEC",
+        "HALO_MASS",
+        "CEN",
+        "RES",
+        "RA",
+        "Z_COSMO",
+        "Z",
+        "FILE_NUM",
+        "HALO_ID",
+        "BOX_INDEX",
+        "x_box",
+        "y_box",
+        "z_box",
+        "x_rep",
+        "y_rep",
+        "z_rep",
+        "vx",
+        "vy",
+        "vz",
+        "vel_disp"
+      ],
+      "primary_header": "\nSIMPLE  =                    T / conforms to FITS standard\nBITPIX  =                    8 / array data type\nNAXIS   =                    0 / number of array dimensions\nEXTEND  =                    T / ",
+      "table_header": "\nXTENSION= 'BINTABLE'           / binary table extension\nBITPIX  =                    8 / array data type\nNAXIS   =                    2 / number of array dimensions\nNAXIS1  =                  108 / length of dimension 1\nNAXIS2  =             75711865 / length of dimension 2\nPCOUNT  =                    0 / number of group parameters\nGCOUNT  =                    1 / number of groups\nTFIELDS =                   24 / number of table fields\nTTYPE1  = 'R_MAG_APP'          / \nTFORM1  = 'E'                  / \nTTYPE2  = 'R_MAG_ABS'          / \nTFORM2  = 'E'                  / \nTTYPE3  = 'G_R_REST'           / \nTFORM3  = 'E'                  / \nTTYPE4  = 'G_R_OBS'            / \nTFORM4  = 'E'                  / \nTTYPE5  = 'DEC'                / \nTFORM5  = 'E'                  / \nTTYPE6  = 'HALO_MASS'          / \nTFORM6  = 'E'                  / \nTTYPE7  = 'CEN'                / \nTFORM7  = 'J'                  / \nTTYPE8  = 'RES'                / \nTFORM8  = 'J'                  / \nTTYPE9  = 'RA'                 / \nTFORM9  = 'E'                  / \nTTYPE10 = 'Z_COSMO'            / \nTFORM10 = 'E'                  / \nTTYPE11 = 'Z'                  / \nTFORM11 = 'E'                  / \nTTYPE12 = 'FILE_NUM'           / \nTFORM12 = 'J'                  / \nTTYPE13 = 'HALO_ID'            / \nTFORM13 = 'K'                  / \nTTYPE14 = 'BOX_INDEX'          / \nTFORM14 = 'J'                  / \nTTYPE15 = 'x_box'              / \nTFORM15 = 'E'                  / \nTTYPE16 = 'y_box'              / \nTFORM16 = 'E'                  / \nTTYPE17 = 'z_box'              / \nTFORM17 = 'E'                  / \nTTYPE18 = 'x_rep'              / \nTFORM18 = 'E'                  / \nTTYPE19 = 'y_rep'              / \nTFORM19 = 'E'                  / \nTTYPE20 = 'z_rep'              / \nTFORM20 = 'E'                  / \nTTYPE21 = 'vx'                 / \nTFORM21 = 'E'                  / \nTTYPE22 = 'vy'                 / \nTFORM22 = 'E'                  / \nTTYPE23 = 'vz'                 / \nTFORM23 = 'E'                  / \nTTYPE24 = 'vel_disp'           / \nTFORM24 = '3E'                 / \nTDIM24  = '(3)'                / ",
+      "sample_sha256": "7e50b3fed0e59d0ebbf14808e0b384c79c9f48fc8606cd793cb29528f0893b48",
+      "selected_sample_rows": 668,
+      "sample_ra_range": [
+        0.12224932760000229,
+        359.6229553222656
+      ],
+      "sample_dec_range": [
+        -88.28502655029297,
+        87.93511962890625
+      ],
+      "old_colour_mapping_residual": {
+        "n": 668,
+        "median": -0.05748153740702757,
+        "p01_p99": [
+          -0.15704241932929125,
+          0.14236163741530244
+        ],
+        "max_abs": 0.25015521210681446,
+        "rms": 0.08096076535511719
+      }
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/users/jpiat/abacus_mocks/cutsky/z0.200/AbacusSummit_base_c000/ph000/forFA/galaxy_cut_sky_N_Y3.fits",
+      "bytes": 5505160320,
+      "mtime_ns": 1780417572704172490,
+      "rows": 25023399,
+      "columns": [
+        "R_MAG_APP",
+        "R_MAG_ABS",
+        "G_R_REST",
+        "G_R_OBS",
+        "DEC",
+        "HALO_MASS",
+        "CEN",
+        "RES",
+        "RA",
+        "TRUEZ",
+        "RSDZ",
+        "FILE_NUM",
+        "HALO_ID",
+        "BOX_INDEX",
+        "x_box",
+        "y_box",
+        "z_box",
+        "x_rep",
+        "y_rep",
+        "z_rep",
+        "vx",
+        "vy",
+        "vz",
+        "v_rel",
+        "WEIGHT",
+        "DESI_TARGET",
+        "PRIORITY_INIT",
+        "PRIORITY",
+        "NUMOBS_MORE",
+        "NUMOBS_INIT",
+        "MWS_TARGET",
+        "SUBPRIORITY",
+        "BRICKNAME",
+        "OBSCONDITIONS",
+        "SCND_TARGET",
+        "ZWARN",
+        "BGS_TARGET",
+        "TARGETID"
+      ],
+      "primary_header": "\nSIMPLE  =                    T / file does conform to FITS standard\nBITPIX  =                   16 / number of bits per data pixel\nNAXIS   =                    0 / number of data axes\nEXTEND  =                    T / FITS dataset may contain extensions\nCOMMENT   FITS (Flexible Image Transport System) format is defined in 'Astronomy\nCOMMENT   and Astrophysics', volume 376, page 359; bibcode: 2001A&A...376..359H",
+      "table_header": "\nXTENSION= 'BINTABLE'           / binary table extension\nBITPIX  =                    8 / 8-bit bytes\nNAXIS   =                    2 / 2-dimensional binary table\nNAXIS1  =                  220 / width of table in bytes\nNAXIS2  =             25023399 / number of rows in table\nPCOUNT  =                    0 / size of special data area\nGCOUNT  =                    1 / one data group (required keyword)\nTFIELDS =                   38 / number of fields in each row\nTTYPE1  = 'R_MAG_APP'          / label for field   1\nTFORM1  = 'E'                  / data format of field: 4-byte REAL\nTTYPE2  = 'R_MAG_ABS'          / label for field   2\nTFORM2  = 'E'                  / data format of field: 4-byte REAL\nTTYPE3  = 'G_R_REST'           / label for field   3\nTFORM3  = 'E'                  / data format of field: 4-byte REAL\nTTYPE4  = 'G_R_OBS'            / label for field   4\nTFORM4  = 'E'                  / data format of field: 4-byte REAL\nTTYPE5  = 'DEC'                / label for field   5\nTFORM5  = 'E'                  / data format of field: 4-byte REAL\nTTYPE6  = 'HALO_MASS'          / label for field   6\nTFORM6  = 'E'                  / data format of field: 4-byte REAL\nTTYPE7  = 'CEN'                / label for field   7\nTFORM7  = 'J'                  / data format of field: 4-byte INTEGER\nTTYPE8  = 'RES'                / label for field   8\nTFORM8  = 'J'                  / data format of field: 4-byte INTEGER\nTTYPE9  = 'RA'                 / label for field   9\nTFORM9  = 'E'                  / data format of field: 4-byte REAL\nTTYPE10 = 'TRUEZ'              / label for field  10\nTFORM10 = 'E'                  / data format of field: 4-byte REAL\nTTYPE11 = 'RSDZ'               / label for field  11\nTFORM11 = 'E'                  / data format of field: 4-byte REAL\nTTYPE12 = 'FILE_NUM'           / label for field  12\nTFORM12 = 'J'                  / data format of field: 4-byte INTEGER\nTTYPE13 = 'HALO_ID'            / label for field  13\nTFORM13 = 'K'                  / data format of field: 8-byte INTEGER\nTTYPE14 = 'BOX_INDEX'          / label for field  14\nTFORM14 = 'J'                  / data format of field: 4-byte INTEGER\nTTYPE15 = 'x_box'              / label for field  15\nTFORM15 = 'E'                  / data format of field: 4-byte REAL\nTTYPE16 = 'y_box'              / label for field  16\nTFORM16 = 'E'                  / data format of field: 4-byte REAL\nTTYPE17 = 'z_box'              / label for field  17\nTFORM17 = 'E'                  / data format of field: 4-byte REAL\nTTYPE18 = 'x_rep'              / label for field  18\nTFORM18 = 'E'                  / data format of field: 4-byte REAL\nTTYPE19 = 'y_rep'              / label for field  19\nTFORM19 = 'E'                  / data format of field: 4-byte REAL\nTTYPE20 = 'z_rep'              / label for field  20\nTFORM20 = 'E'                  / data format of field: 4-byte REAL\nTTYPE21 = 'vx'                 / label for field  21\nTFORM21 = 'E'                  / data format of field: 4-byte REAL\nTTYPE22 = 'vy'                 / label for field  22\nTFORM22 = 'E'                  / data format of field: 4-byte REAL\nTTYPE23 = 'vz'                 / label for field  23\nTFORM23 = 'E'                  / data format of field: 4-byte REAL\nTTYPE24 = 'v_rel'              / label for field  24\nTFORM24 = '3E'                 / data format of field: 4-byte REAL\nTTYPE25 = 'WEIGHT'             / label for field  25\nTFORM25 = 'D'                  / data format of field: 8-byte DOUBLE\nTTYPE26 = 'DESI_TARGET'        / label for field  26\nTFORM26 = 'K'                  / data format of field: 8-byte INTEGER\nTTYPE27 = 'PRIORITY_INIT'      / label for field  27\nTFORM27 = 'K'                  / data format of field: 8-byte INTEGER\nTTYPE28 = 'PRIORITY'           / label for field  28\nTFORM28 = 'K'                  / data format of field: 8-byte INTEGER\nTTYPE29 = 'NUMOBS_MORE'        / label for field  29\nTFORM29 = 'K'                  / data format of field: 8-byte INTEGER\nTTYPE30 = 'NUMOBS_INIT'        / label for field  30\nTFORM30 = 'K'                  / data format of field: 8-byte INTEGER\nTTYPE31 = 'MWS_TARGET'         / label for field  31\nTFORM31 = 'K'                  / data format of field: 8-byte INTEGER\nTTYPE32 = 'SUBPRIORITY'        / label for field  32\nTFORM32 = 'D'                  / data format of field: 8-byte DOUBLE\nTTYPE33 = 'BRICKNAME'          / label for field  33\nTFORM33 = '8A'                 / data format of field: ASCII Character\nTTYPE34 = 'OBSCONDITIONS'      / label for field  34\nTFORM34 = 'K'                  / data format of field: 8-byte INTEGER\nTTYPE35 = 'SCND_TARGET'        / label for field  35\nTFORM35 = 'K'                  / data format of field: 8-byte INTEGER\nTTYPE36 = 'ZWARN'              / label for field  36\nTFORM36 = 'K'                  / data format of field: 8-byte INTEGER\nTTYPE37 = 'BGS_TARGET'         / label for field  37\nTFORM37 = 'K'                  / data format of field: 8-byte INTEGER\nTTYPE38 = 'TARGETID'           / label for field  38\nTFORM38 = 'K'                  / data format of field: 8-byte INTEGER\nEXTNAME = 'TARGETS'            / name of this binary table extension\nOBSCON  = 'BRIGHT'             / ",
+      "sample_sha256": "aa473916e344d1447dc617ffb2b09af1e2b5b4a28afaad38cc74519eb47eb441",
+      "selected_sample_rows": 663,
+      "sample_ra_range": [
+        0.006897017825394869,
+        359.85968017578125
+      ],
+      "sample_dec_range": [
+        -19.20014762878418,
+        78.97441864013672
+      ],
+      "old_colour_mapping_residual": {
+        "n": 663,
+        "median": -0.0034968847990209107,
+        "p01_p99": [
+          -0.1332651079728209,
+          0.13599110240135365
+        ],
+        "max_abs": 0.23638970684540728,
+        "rms": 0.04783732686985061
+      },
+      "BGS_TARGET_sample_counts": {
+        "0": 2048
+      },
+      "ZWARN_sample_counts": {
+        "0": 2048
+      },
+      "PRIORITY_sample_counts": {
+        "2000": 2048
+      }
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/users/jpiat/abacus_mocks/cutsky/z0.200/AbacusSummit_base_c000/ph000/forFA/galaxy_cut_sky_S_Y3.fits",
+      "bytes": 5801834880,
+      "mtime_ns": 1780416197520300440,
+      "rows": 26371919,
+      "columns": [
+        "R_MAG_APP",
+        "R_MAG_ABS",
+        "G_R_REST",
+        "G_R_OBS",
+        "DEC",
+        "HALO_MASS",
+        "CEN",
+        "RES",
+        "RA",
+        "TRUEZ",
+        "RSDZ",
+        "FILE_NUM",
+        "HALO_ID",
+        "BOX_INDEX",
+        "x_box",
+        "y_box",
+        "z_box",
+        "x_rep",
+        "y_rep",
+        "z_rep",
+        "vx",
+        "vy",
+        "vz",
+        "vel_disp",
+        "WEIGHT",
+        "DESI_TARGET",
+        "PRIORITY_INIT",
+        "PRIORITY",
+        "NUMOBS_MORE",
+        "NUMOBS_INIT",
+        "MWS_TARGET",
+        "SUBPRIORITY",
+        "BRICKNAME",
+        "OBSCONDITIONS",
+        "SCND_TARGET",
+        "ZWARN",
+        "BGS_TARGET",
+        "TARGETID"
+      ],
+      "primary_header": "\nSIMPLE  =                    T / file does conform to FITS standard\nBITPIX  =                   16 / number of bits per data pixel\nNAXIS   =                    0 / number of data axes\nEXTEND  =                    T / FITS dataset may contain extensions\nCOMMENT   FITS (Flexible Image Transport System) format is defined in 'Astronomy\nCOMMENT   and Astrophysics', volume 376, page 359; bibcode: 2001A&A...376..359H",
+      "table_header": "\nXTENSION= 'BINTABLE'           / binary table extension\nBITPIX  =                    8 / 8-bit bytes\nNAXIS   =                    2 / 2-dimensional binary table\nNAXIS1  =                  220 / width of table in bytes\nNAXIS2  =             26371919 / number of rows in table\nPCOUNT  =                    0 / size of special data area\nGCOUNT  =                    1 / one data group (required keyword)\nTFIELDS =                   38 / number of fields in each row\nTTYPE1  = 'R_MAG_APP'          / label for field   1\nTFORM1  = 'E'                  / data format of field: 4-byte REAL\nTTYPE2  = 'R_MAG_ABS'          / label for field   2\nTFORM2  = 'E'                  / data format of field: 4-byte REAL\nTTYPE3  = 'G_R_REST'           / label for field   3\nTFORM3  = 'E'                  / data format of field: 4-byte REAL\nTTYPE4  = 'G_R_OBS'            / label for field   4\nTFORM4  = 'E'                  / data format of field: 4-byte REAL\nTTYPE5  = 'DEC'                / label for field   5\nTFORM5  = 'E'                  / data format of field: 4-byte REAL\nTTYPE6  = 'HALO_MASS'          / label for field   6\nTFORM6  = 'E'                  / data format of field: 4-byte REAL\nTTYPE7  = 'CEN'                / label for field   7\nTFORM7  = 'J'                  / data format of field: 4-byte INTEGER\nTTYPE8  = 'RES'                / label for field   8\nTFORM8  = 'J'                  / data format of field: 4-byte INTEGER\nTTYPE9  = 'RA'                 / label for field   9\nTFORM9  = 'E'                  / data format of field: 4-byte REAL\nTTYPE10 = 'TRUEZ'              / label for field  10\nTFORM10 = 'E'                  / data format of field: 4-byte REAL\nTTYPE11 = 'RSDZ'               / label for field  11\nTFORM11 = 'E'                  / data format of field: 4-byte REAL\nTTYPE12 = 'FILE_NUM'           / label for field  12\nTFORM12 = 'J'                  / data format of field: 4-byte INTEGER\nTTYPE13 = 'HALO_ID'            / label for field  13\nTFORM13 = 'K'                  / data format of field: 8-byte INTEGER\nTTYPE14 = 'BOX_INDEX'          / label for field  14\nTFORM14 = 'J'                  / data format of field: 4-byte INTEGER\nTTYPE15 = 'x_box'              / label for field  15\nTFORM15 = 'E'                  / data format of field: 4-byte REAL\nTTYPE16 = 'y_box'              / label for field  16\nTFORM16 = 'E'                  / data format of field: 4-byte REAL\nTTYPE17 = 'z_box'              / label for field  17\nTFORM17 = 'E'                  / data format of field: 4-byte REAL\nTTYPE18 = 'x_rep'              / label for field  18\nTFORM18 = 'E'                  / data format of field: 4-byte REAL\nTTYPE19 = 'y_rep'              / label for field  19\nTFORM19 = 'E'                  / data format of field: 4-byte REAL\nTTYPE20 = 'z_rep'              / label for field  20\nTFORM20 = 'E'                  / data format of field: 4-byte REAL\nTTYPE21 = 'vx'                 / label for field  21\nTFORM21 = 'E'                  / data format of field: 4-byte REAL\nTTYPE22 = 'vy'                 / label for field  22\nTFORM22 = 'E'                  / data format of field: 4-byte REAL\nTTYPE23 = 'vz'                 / label for field  23\nTFORM23 = 'E'                  / data format of field: 4-byte REAL\nTTYPE24 = 'vel_disp'           / label for field  24\nTFORM24 = '3E'                 / data format of field: 4-byte REAL\nTTYPE25 = 'WEIGHT'             / label for field  25\nTFORM25 = 'D'                  / data format of field: 8-byte DOUBLE\nTTYPE26 = 'DESI_TARGET'        / label for field  26\nTFORM26 = 'K'                  / data format of field: 8-byte INTEGER\nTTYPE27 = 'PRIORITY_INIT'      / label for field  27\nTFORM27 = 'K'                  / data format of field: 8-byte INTEGER\nTTYPE28 = 'PRIORITY'           / label for field  28\nTFORM28 = 'K'                  / data format of field: 8-byte INTEGER\nTTYPE29 = 'NUMOBS_MORE'        / label for field  29\nTFORM29 = 'K'                  / data format of field: 8-byte INTEGER\nTTYPE30 = 'NUMOBS_INIT'        / label for field  30\nTFORM30 = 'K'                  / data format of field: 8-byte INTEGER\nTTYPE31 = 'MWS_TARGET'         / label for field  31\nTFORM31 = 'K'                  / data format of field: 8-byte INTEGER\nTTYPE32 = 'SUBPRIORITY'        / label for field  32\nTFORM32 = 'D'                  / data format of field: 8-byte DOUBLE\nTTYPE33 = 'BRICKNAME'          / label for field  33\nTFORM33 = '8A'                 / data format of field: ASCII Character\nTTYPE34 = 'OBSCONDITIONS'      / label for field  34\nTFORM34 = 'K'                  / data format of field: 8-byte INTEGER\nTTYPE35 = 'SCND_TARGET'        / label for field  35\nTFORM35 = 'K'                  / data format of field: 8-byte INTEGER\nTTYPE36 = 'ZWARN'              / label for field  36\nTFORM36 = 'K'                  / data format of field: 8-byte INTEGER\nTTYPE37 = 'BGS_TARGET'         / label for field  37\nTFORM37 = 'K'                  / data format of field: 8-byte INTEGER\nTTYPE38 = 'TARGETID'           / label for field  38\nTFORM38 = 'K'                  / data format of field: 8-byte INTEGER\nEXTNAME = 'TARGETS'            / name of this binary table extension\nOBSCON  = 'BRIGHT'             / ",
+      "sample_sha256": "b4e773eb326aeb5b3c61d69d35639121fc9c5270cb00f9fa0214ee883345a9f7",
+      "selected_sample_rows": 650,
+      "sample_ra_range": [
+        0.08854956924915314,
+        359.9373474121094
+      ],
+      "sample_dec_range": [
+        -19.19145965576172,
+        78.7490463256836
+      ],
+      "old_colour_mapping_residual": {
+        "n": 650,
+        "median": -0.05630662440706724,
+        "p01_p99": [
+          -0.15378468302892104,
+          0.13057948865992636
+        ],
+        "max_abs": 0.24325068897755298,
+        "rms": 0.07669816091623863
+      },
+      "BGS_TARGET_sample_counts": {
+        "0": 2048
+      },
+      "ZWARN_sample_counts": {
+        "0": 2048
+      },
+      "PRIORITY_sample_counts": {
+        "2000": 2048
+      }
+    }
+  ],
+  "holi": [
+    {
+      "path": "/global/cfs/cdirs/desi/mocks/cai/holi/webjax_v4.82/seed0000/holi_BGS_v4.82_GCcomb_clustering.dat.h5",
+      "bytes": 82415809,
+      "mtime_ns": 1779433070377027462,
+      "fields": {
+        "DEC": {
+          "shape": [
+            6074657
+          ],
+          "dtype": "float32"
+        },
+        "NX": {
+          "shape": [
+            6074657
+          ],
+          "dtype": "float32"
+        },
+        "RA": {
+          "shape": [
+            6074657
+          ],
+          "dtype": "float32"
+        },
+        "Z": {
+          "shape": [
+            6074657
+          ],
+          "dtype": "float32"
+        },
+        "Z_COSMO": {
+          "shape": [
+            6074657
+          ],
+          "dtype": "float32"
+        }
+      },
+      "root_attributes": {}
+    },
+    {
+      "path": "/global/cfs/cdirs/desi/mocks/cai/holi/webjax_v4.82/seed0000/holi_BGS-NONKP_v4.82_GCcomb_clustering.dat.h5",
+      "bytes": 562160637,
+      "mtime_ns": 1776677669740639497,
+      "fields": {
+        "DEC": {
+          "shape": [
+            43172697
+          ],
+          "dtype": "float32"
+        },
+        "NX": {
+          "shape": [
+            43172697
+          ],
+          "dtype": "float32"
+        },
+        "RA": {
+          "shape": [
+            43172697
+          ],
+          "dtype": "float32"
+        },
+        "Z": {
+          "shape": [
+            43172697
+          ],
+          "dtype": "float32"
+        },
+        "Z_COSMO": {
+          "shape": [
+            43172697
+          ],
+          "dtype": "float32"
+        }
+      },
+      "root_attributes": {}
+    }
+  ],
+  "script_sha256": "4684c1fe437378b7668f3dfd50f9e9b97bdca2185d938bba9bac1b8787d7f6ab",
+  "table_sha256": {
+    "k_corr_rband_z01.dat": "f456f6e0e0465fe0b662366268b31c30bfe8b958fe3632cec64f78d907803126",
+    "k_correction.py": "0a2dde5692bf7229549df814fa89deb54a99b400030199f9c2091cda37554574",
+    "k_corr_gband_z01.dat": "dcade4a37c8e4998eb0d71542ad97958b7c20b91f3bafd7295aa4e8e6d7f2694"
+  }
+}

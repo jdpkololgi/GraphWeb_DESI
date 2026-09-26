@@ -1,0 +1,25 @@
+{
+  "sources": {
+    "prepare_holi_bgs.py.txt": "bd8e266c1217f15b409c72fb657c924a66e535cb5aa51c8da35d012d26194f52",
+    "calibrate_nz_prep.py.txt": "cf59fc0759751b707aab6ec8afaf12b0030f3c9c0822c70a9bf189e4b7db9141"
+  },
+  "status": "Source-level explanation; not a receipt of executed holi_bgs_v2/mock0 production.",
+  "input_match": "DA2 path maps to readable webjax_v4.82 BGS and BGS-NONKP filenames.",
+  "execution_mismatch": [
+    "Inspected preparation defaults release=DA3, not DA2.",
+    "Its seed loop range(3,100) excludes the inspected seed0000.",
+    "Inspected pipeline wrapper names holi_bgs_bmask, not delivered holi_bgs_v2."
+  ],
+  "stages": [
+    "NONKP parent is thinned to Loa v2 ANY n(z).",
+    "ANY survivors are thinned to Loa v2 BRIGHT n(z).",
+    "Remaining population is split randomly into FAINT and WISE, with 20 percent FAINT priority promotion.",
+    "An additional 100000 DA2 or 104000 DA3 rows at .5<z<.61 are sampled from the remaining ANY population and appended to the separate BGS parent.",
+    "This augmented BGS parent is thinned to Loa BRIGHT-21.35 NGC n(z).",
+    "A separately thinned complement of the BRIGHT sample is combined with the cosmology subsample.",
+    "Absolute magnitudes are assigned category constants -22,-21,-19, and target bits/priorities are populated."
+  ],
+  "implication": "Closer n(z) is an explicit construction target in this source. It does not identify a physical luminosity model, prove delivered execution, or validate the galaxy-matter relation.",
+  "dead_end": "No jpiat or galaxy_cut_sky_N/S references found in installed LSS/main/scripts/mock_tools Python or shell files.",
+  "no_execution": true
+}

@@ -429,3 +429,55 @@ No switch of primary Loa target. See report for exact counts and caveats.
   Producer-recipe provenance and these access gaps are concrete constraints,
   not additional compute-approval requirements. Existing compute authorization
   persists. No arbitrary count repair, retraining or replacement VAC launched.
+
+### Producer continuation (2026-09-26, active)
+
+No new user decision or compute approval needed. Investigating readable producer
+ph000 before requesting missing recipe information. Probe receipt:
+`evidence/p12a_alignment_execution_20260926/PRODUCER_PROBE.json`.
+Producer N/S raw files have 71,857,412/75,711,865 rows and Y3 forFA files
+25,023,399/26,371,919. These are not byte-identical canonical v1 products.
+N/S meaning and intended combination remain unverified; never concatenate them
+or equate filenames to galactic caps. All 2,048 systematically sampled forFA rows
+per branch have BGS_TARGET=0. Headers describe schemas, not executed LF/K/E/HOD
+parameters. Old-table colour residual RMS is 0.054/0.081 mag on selected raw
+samples, so the old mapping does not reproduce these products either.
+
+Readable Holi webjax_v4.82 seed0000 BGS and BGS-NONKP parents contain
+6,074,657/43,172,697 rows but only RA, DEC, Z, Z_COSMO, NX. This closes the broad
+claim that no readable Holi parent exists; it does not close physical photometry,
+halo linkage or lineage to delivered holi_bgs_v2. Do not infer NONKP semantics.
+
+CPU58908840/nid004153 launched a separate common-sky census of all four producer
+files with the previous numerical magnitude/redshift contract. Full flag and
+count results pending. Scratch: `graphweb_desi/outputs/alignment_producer_20260926`.
+Only exposed ph000; no repair, new phase, model fitting or VAC replacement.
+
+Further closure: 6,175 exact shared central HALO_ID/RA/DEC/Z locations in the
+first10k N/S rows have different assigned photometry (apparent-r RMS0.343mag).
+N/S are not disjoint sky regions. Holi source explicitly names the readable
+DA2 parents, but defaults to DA3 and loops seeds3–99; the wrapper names bmask,
+not deliveredv2. This is a source-level n(z)-calibration mechanism, not an
+executed mock0 recipe. See [producer follow-up](p12a_producer_followup_20260926.md).
+
+New W2 diagnostic: producer/canonicalv1 prefix central crosswalk has identical
+HALO_ID/RA/DEC/Z_COSMO for thousands of objects, but different velocity components,
+RSD-Z (RMS~0.0013), and photometry. Require the executed **velocity prescription**
+alongside LF/HOD/K/E and N/S semantics; a changed selection flag is not the entire
+version difference. Exact-RSD-key zero matches was a too-strict initial join,
+not evidence of unrelated halo populations.
+
+Completed CPU58908840 four-file census: both full Y3 BGS_TARGET columns are zero
+(25,023,399 N /26,371,919 S rows); numerical common-sky brightness counts retain
+~99–100% of their respective raw counts. Producer raw high-shell counts are
+2.49–2.77x originalv0.1; these are intrinsic support results, not observed Loa
+acceptance. Four census conservation/source/mask/hash checks plus four relevant
+unit tests passed; separate-branch figure rendered and inspected. Allocation
+released after completion. Pending entries above now resolved by the linked report.
+
+**Required producer input for controlled regeneration:** executed source/config,
+LF/HOD/K/E tables and conventions, velocity assignment, seeds, N/S construction
+and actual BGS_TARGET/priority preparation. This is a scientific provenance
+requirement, not more compute authorization. Known metadata/source searches did
+not locate it. Independent exact-mask/DR1 controls remain open; W3–W7 cannot be
+claimed complete. Existing provisional VAC and all source catalogues unchanged.

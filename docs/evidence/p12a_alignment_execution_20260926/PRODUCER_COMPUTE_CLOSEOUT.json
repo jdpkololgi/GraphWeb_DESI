@@ -1,0 +1,9 @@
+{
+  "job": "58908840",
+  "node": "nid004153",
+  "state": "COMPLETED",
+  "exit_code": "0:0",
+  "elapsed": "00:12:25",
+  "census_step_elapsed": "00:10:17",
+  "released": true
+}

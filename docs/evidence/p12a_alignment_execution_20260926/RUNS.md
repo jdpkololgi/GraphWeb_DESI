@@ -46,3 +46,26 @@ on login in cosmic_env; ad-hoc string BGS_TYPE min/max probe corrected.
 Host Python3.6 lacks capture_output; ledger writer used compatible subprocess
 arguments. Scientific completion uses COMPLETE.json plus reconciled histograms,
 not scheduler status alone. VALIDATION.json records checks and limitations.
+
+
+## Producer follow-up: CPU58908840, nid004153
+
+One CPU interactive allocation (1h limit,64 CPUs allocated; census srun used8),
+retained PTY with foreground srun to avoid idle-shell expiry. Unrelated GPU
+allocation left untouched. Scientific Python cosmic_env, cleared Python/loader
+environment; PYTHONNOUSERSITE=1. CFS inputs read-only.
+
+- `python workflows/p12a_vac/alignment_producer_probe.py` (bounded2048 rows/file).
+- `python workflows/p12a_vac/alignment_producer_central_pairs.py` (first10k N/S).
+- `python workflows/p12a_vac/alignment_producer_v1_pairs.py` (first10k canonicalv1/N/S;
+  exact RSD-key dead end, angular-key diagnostic additionally checks Z_COSMO/velocities).
+- `srun -N1 -n1 -c8 --cpu-bind=cores /pscratch/sd/d/dkololgi/conda/envs/cosmic_env/bin/python -u workflows/p12a_vac/alignment_producer_census.py --root /pscratch/sd/d/dkololgi/graphweb_desi/outputs/alignment_producer_20260926`
+- `plot_producer_alignment.py --root docs/evidence/p12a_alignment_execution_20260926/producer`
+  final compact-data rerender uses equal y-scales per row. PNG visually inspected.
+- Four relevant unit tests passed; source/helper/mask/histogram hashes verified.
+
+Allocation checker initially used system python3 (3.6), failing before execution
+on future annotations; rerunning with cosmic_env Python succeeded. Graphify update
+and global refresh used cosmic_env on login. No scientific job failed. Four census
+receipts plus histogram evidence archived under producer/. Explicit shell exit
+released allocation after census and first plot. No jobs left running by this task.
