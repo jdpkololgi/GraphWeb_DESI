@@ -1,0 +1,9 @@
+{
+  "all_23_catalogues_present": true,
+  "arrays_finite_nonnegative": true,
+  "sources_unchanged_since_census": true,
+  "plots_visually_inspected": true,
+  "undefined_ratios_serialized_as_null": true,
+  "phase_access": "Previously exposed ph002-006 only",
+  "five_phase_comparison_complete": true
+}
