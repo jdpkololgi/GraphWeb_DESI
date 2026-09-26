@@ -1,0 +1,21 @@
+{
+  "schema": "p12a-mock-selection-test-v1",
+  "phase": "ph006",
+  "role": "exposed development phase; no independent validation claim",
+  "seed": 62026,
+  "upstream_commit": "d942b990860e016e7558c740966fea3e5ce7e7f3",
+  "baseline_r_limit": 19.5,
+  "delta_m_grid": [-0.10, -0.05, 0.0, 0.05, 0.10],
+  "extra_q_grid": [-0.2, 0.0, 0.2, 0.4, 0.6, 0.8],
+  "equation": "m_trial = R_MAG_APP + delta_m - extra_q * (Z - 0.1)",
+  "parameter_meaning": "Sensitivity of an additional apparent-magnitude mapping; not a claimed LF Q or correction of the unresolved stored absolute-magnitude convention",
+  "fit_cap": "SGC",
+  "check_cap": "NGC; same phase and previously exposed DESI, not independent confirmation",
+  "quality_primary": "ZWARN == 0 and DELTACHI2 >= 25 and SPECTYPE == GALAXY",
+  "quality_control": "ZWARN == 0 and DELTACHI2 > 40",
+  "mask": "Existing fixed NSIDE256 intersection used by earlier count diagnostics",
+  "limits": [0.15, 0.55],
+  "no_release": true,
+  "no_training": true,
+  "no_arbitrary_radial_reweighting": true
+}
