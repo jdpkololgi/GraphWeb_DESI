@@ -1,5 +1,7 @@
 # Population-model tests: ANY selection, P/Q, versions and Uchuu
 
+**Superseded for execution ordering by [Mock-to-LOA Alignment Investigation](plan_mock_to_loa_alignment_investigation_20260926.md).** Retained as the earlier design record.
+
 User follow-up 2026-09-26. This protocol expands the active VAC closure work.
 Header inventory completed; the experiments below are not yet executed. Production
 VAC and model weights remain unchanged. Use exposed phases for development;
