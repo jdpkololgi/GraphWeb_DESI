@@ -132,3 +132,31 @@ Independent read-back checks10,000 spaced BRIGHT rows against the archived file
 exactly across IDs, positions, redshifts and magnitudes, plus row count/last ID.
 An initial last-row read used unsupported negative fitsio indexing; rerun with
 explicit positive row index passed. No catalogue change was needed.
+
+## Footprint flags and Loa clarification
+
+Rechecked the actual ph006 FITS header: IN_Y1 and IN_Y5 exist; IN_Y3 does not.
+Regional flags are NGC_Y1, SGC_Y1, N_Y1, S_Y1 and corresponding Y5 columns.
+These describe stored sky footprints/regions, not redshift-quality or release
+membership. The nominal Y5 footprint is not a catalogue of five years of spectra.
+Loa is a spectroscopic reduction; our DA2/DR2 Loa sample uses three-year data.
+
+Pinned LSS Y3 BGS preparation reads DA2/LSS/tiles-BRIGHT.fits and computes the
+local variable selY3 = is_point_in_desi(tiletab, RA, DEC). This is the relevant
+three-year geometric selection, followed by actual assignment, masks and quality
+cuts; no stored IN_Y* flag alone specifies the full Loa selection. The Y1
+preparation instead reads Y1/LSS/tiles-BRIGHT.fits and applies IN_Y1. The generic
+mask_secondgen(nz=1, foot='Y1') line in Y3 preparation applies its STATUS mask to
+dark tracers, not this BGS branch.
+
+Y5 restoration above is historical reproduction, not a decision that Y5 is the
+right Loa footprint. The current DA2 tile-only variant has already been tested:
+its added high-z common-sky counts are only77/141. Moreover the previous raw
+census uses no IN_Y flag and still has only30,124/65,661 bright high-z galaxies
+versus41,243/94,985 successful Loa galaxies on the fixed common sky. Under the
+current mock magnitude definition, further Boolean footprint cuts cannot supply
+those missing galaxies. The exact Loa footprint must remain fixed on both sides.
+
+Release context: https://www.desi.lbl.gov/2025/03/19/desi-dr2-results-march-19-guide/
+Loa context: https://fastspecfit.readthedocs.io/en/3.4.3/loa.html
+No new numerical run or catalogue modification was needed for this clarification.
