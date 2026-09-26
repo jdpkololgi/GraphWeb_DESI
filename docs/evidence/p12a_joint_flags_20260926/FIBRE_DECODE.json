@@ -1,0 +1,17 @@
+{
+  "source": "/global/common/software/desi/perlmutter/desiconda/current/code/desispec/main/py/desispec/maskbits.py",
+  "sha256": "40279932ae4ce9b2383a1335bf890526bb19aa43103ac183ccf600236f0e2f1c",
+  "decoded": {
+    "0": {
+      "count": 5397570,
+      "names": []
+    },
+    "8": {
+      "count": 79,
+      "names": [
+        "RESTRICTED"
+      ]
+    }
+  },
+  "caveat": "Current installed mask definitions; exact historical Loa accepted-status revision not established."
+}
