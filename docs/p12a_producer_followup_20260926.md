@@ -113,3 +113,29 @@ All census histogram sums, shared-mask hashes, source/helper hashes and probe
 hashes passed. Four relevant existing unit tests passed. Plot visually inspected;
 matched row-wise axis scales used. No statistical qualification or physical
 recipe identification is implied. See `PRODUCER_VALIDATION.json` and plot receipt.
+
+### Public producer context and focused clarification (2026-09-26)
+
+User identifies directory owner as Jade Piat. "Producer mocks" was our local
+shorthand for files in her users/jpiat/abacus_mocks tree, not an official release
+name. Her public COLOURS talk (10 June2025), PDF pages18–22 and33–34, describes
+AbacusSummit, a magnitude-dependent HOD, a z=0.2 snapshot with magnitude evolution,
+and velocity-evolution work. This supports a specific question about velocity
+prescriptions; it does not identify the inspected June2026 files or explain their
+Loa agreement. Source:
+https://indico.ijclab.in2p3.fr/event/11110/contributions/37832/attachments/25782/37994/PIAT_Relativistic_effects_DESI_COLOURS.pdf
+
+Do not conflate bright/faint tracer splits in the dipole study with DESI targeting
+classes BGS_BRIGHT/BGS_FAINT. No public exact-file generation/Loa selection recipe
+located in this targeted search. Web PDF text available; screenshot fetch failed.
+No claims inferred from unread figure contents.
+
+Clarification priority: recommended existing full-BRIGHT Loa product; exact
+N/S/passband and magnitude/footprint/target/quality selections; any input n(z),
+LF/evolution/K-correction changes; observation processing and validation domain;
+velocity convention and halo mapping. A short documented procedure, parameter
+values and catalogue/version pointers can unlock selection replay: obtaining an
+entire code repository is not a prerequisite merely to test existing products.
+Our parent-count screen establishes extra bright-tail support, not statistical
+Loa agreement. Selecting a few flags is a hypothesis, not a demonstrated solution.
+Slack message drafted for the user; no external message sent.
