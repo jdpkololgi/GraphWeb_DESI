@@ -1,18 +1,19 @@
 # Active Workflow Index
 
-## P12-A Loa application (2026-09-24)
+## P12-A Loa provisional delivery (2026-09-28)
 
-Implemented first entrypoint: `workflows/catalog/p12a_vac_preflight.py` for
-bounded frozen-artifact verification, archived Loa metadata inventory and
-conservative phase-use ledger. Commands and V1 crosswalk:
-`docs/p12a_vac_execution.md`. This is not an inference/coordinate-pass marker.
+The existing full-survey halo48 VAC is technically complete and provisional.
+Current work preserves its trained model, original mocks, selection and posterior
+values. Mock-repair investigation is stopped by user direction.
 
-Active plan: `../TNG/Illustris/docs/plan_desi_p12a_vac_20260924.md`.
-Implement the frozen U-PATCH/P12-A manifest, Loa input/response crosswalk and
-golden-mock replay before the bounded real-data trial. No validated new inference
-entrypoint is asserted yet. Legacy GAT/Gudhi/Jraph workflows below remain usable
-for their historical scope; they do not implement this new posterior handoff.
-Slurm, reserved phase-access and science-release gates remain in force.
+- Release notes and limitations: `docs/p12a_provisional_release_20260928.md`.
+- Read-only atlas/integrity entrypoint: `workflows/p12a_vac/visual_atlas.py`.
+- Parent roadmap: `../TNG/Illustris/docs/plan_desi_p12a_vac_20260924.md`.
+- Original production evidence: `docs/evidence/p12a_loa_full_20260925/`.
+
+Real-DESI coverage is unverified. Known high-redshift population mismatch remains;
+no physical-evolution claim or automatic low-redshift certification is warranted.
+Historical workflow listings below do not replace the frozen P12-A VAC.
 
 This file is the Phase 0 quick reference for what to run in this repository now.
 For scratch layout, conda envs, and Perlmutter job recipes, see `~/.claude/CLAUDE.md`;

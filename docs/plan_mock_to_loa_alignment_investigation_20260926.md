@@ -1,6 +1,16 @@
 # Mock-to-LOA Alignment Investigation
 
-**Status:** active investigation plan, 2026-09-26. GraphWeb_DESI owns observation
+**Status:** stopped by user direction on 2026-09-28.
+
+Retained below as historical evidence, not an active execution queue. Do not
+launch further mock-repair, population-switch or retraining work for the current
+provisional VAC. Running preparation job 59013807 was cancelled. Preserve the
+existing model, selection and posterior values; current delivery scope is
+[provisional packaging and the visual atlas](p12a_provisional_release_20260928.md).
+Real-DESI coverage remains unverified; all stated population-mismatch limitations
+remain in force.
+
+Original plan adopted 2026-09-26. GraphWeb_DESI owns observation
 and catalogue work; Illustris owns simulation truth, training and the science
 log. This document is the canonical population-alignment subplan of the
 [P12-A VAC roadmap](../../TNG/Illustris/docs/plan_desi_p12a_vac_20260924.md).

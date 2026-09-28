@@ -1,0 +1,179 @@
+{
+  "catalogue": "/pscratch/sd/d/dkololgi/graphweb_desi/outputs/p12a_loa_full_20260925_v1/DESI_LOA_P12A_HALO48_FULL_SURVEY_VAC.fits",
+  "catalogue_sha256": "cf472cb4e8fb327620629f347115ad26c55a3f985320b293e6753e07f50ebfbc",
+  "rows": 5436413,
+  "supported": 5404568,
+  "unsupported": 31845,
+  "checks": {
+    "historical_catalogue_hash_matches": true,
+    "row_count_matches": true,
+    "supported_count_matches": true,
+    "unique_targetids": true,
+    "coordinates_finite_in_range": true,
+    "support_flag_consistent": true,
+    "all_rows_provisional": true,
+    "probabilities_finite_bounded_normalized": true,
+    "unsupported_probabilities_null": true,
+    "quantiles_finite_ordered": true,
+    "quantiles_monotonic": true,
+    "quality_counts_match": true,
+    "catalogue_unchanged_after_plotting": true
+  },
+  "quality_bits": {
+    "1": "unsupported/null",
+    "2": "sparse z>=.45",
+    "4": "boundary<R/h",
+    "8": "boundary<2R/h",
+    "16": "outside training feature envelope",
+    "32": "provisional; science release not qualified",
+    "64": "unresolved selection mismatch in z>=.35 shells; no correction or uncertainty marginalization"
+  },
+  "quality_bit_counts": {
+    "1": 31845,
+    "2": 137328,
+    "4": 1019446,
+    "8": 1904747,
+    "16": 125,
+    "32": 5436413,
+    "64": 847421
+  },
+  "columns": [
+    {
+      "name": "TARGETID",
+      "dtype": ">i8"
+    },
+    {
+      "name": "RA",
+      "dtype": ">f8"
+    },
+    {
+      "name": "DEC",
+      "dtype": ">f8"
+    },
+    {
+      "name": "Z",
+      "dtype": ">f8"
+    },
+    {
+      "name": "CAP",
+      "dtype": "int8"
+    },
+    {
+      "name": "CORE_ID",
+      "dtype": ">i4"
+    },
+    {
+      "name": "QUALITY",
+      "dtype": ">u2"
+    },
+    {
+      "name": "SUPPORTED",
+      "dtype": "bool"
+    },
+    {
+      "name": "BASE_EIGENVALUES",
+      "dtype": "('>f4', (3,))"
+    },
+    {
+      "name": "EIGENVALUE_MEAN",
+      "dtype": "('>f4', (3,))"
+    },
+    {
+      "name": "EIGENVALUE_Q05",
+      "dtype": "('>f4', (3,))"
+    },
+    {
+      "name": "EIGENVALUE_Q16",
+      "dtype": "('>f4', (3,))"
+    },
+    {
+      "name": "EIGENVALUE_Q50",
+      "dtype": "('>f4', (3,))"
+    },
+    {
+      "name": "EIGENVALUE_Q84",
+      "dtype": "('>f4', (3,))"
+    },
+    {
+      "name": "EIGENVALUE_Q95",
+      "dtype": "('>f4', (3,))"
+    },
+    {
+      "name": "P_WEB",
+      "dtype": "('>f4', (4,))"
+    },
+    {
+      "name": "BOUNDARY_MPC",
+      "dtype": ">f4"
+    },
+    {
+      "name": "NTILDE_MPC3",
+      "dtype": ">f4"
+    }
+  ],
+  "geometry": {
+    "RA_degrees": [
+      130,
+      230
+    ],
+    "absolute_equatorial_height_Mpc_lt": 10,
+    "zoom_x_Mpc": [
+      -180,
+      180
+    ],
+    "zoom_y_Mpc": [
+      650,
+      950
+    ],
+    "cosmology": "Planck18",
+    "distance_unit": "Mpc",
+    "redshift_space": true,
+    "posterior_dependent_selection": false,
+    "thinning": false
+  },
+  "views": {
+    "slab": {
+      "rows": 48798,
+      "supported": 48762,
+      "unsupported": 36,
+      "z_min": 0.1500015161421775,
+      "z_max": 0.5494507833597123,
+      "argmax_class_counts": [
+        10630,
+        20433,
+        15419,
+        2280
+      ],
+      "fraction_max_probability_below_0p5": 0.02715229071818219,
+      "normalized_entropy_median": 0.4138783775866534
+    },
+    "closeup": {
+      "rows": 6044,
+      "supported": 6044,
+      "unsupported": 0,
+      "z_min": 0.15227339208406504,
+      "z_max": 0.23094112311729642,
+      "argmax_class_counts": [
+        1791,
+        2291,
+        1622,
+        340
+      ],
+      "fraction_max_probability_below_0p5": 0.014890800794176042,
+      "normalized_entropy_median": 0.3875895180345603
+    }
+  },
+  "figures": [
+    "01_cosmic_web_slice.png",
+    "02_cosmic_web_closeup.png",
+    "03_four_environment_probabilities.png"
+  ],
+  "script_sha256": "8f20ed3705e4a92c0d0b34fe96aab29bc98aa2661ecfed138f5f9a6c5bbecb27",
+  "slurm_job_id": "59020572",
+  "limitations": [
+    "Provisional environmental inferences \u00b7 real-DESI coverage unverified",
+    "Training-mock mismatch grows above z\u22480.35, severe at 0.45<z<0.55. Trends are not evidence of physical evolution.",
+    "Lower-redshift results are not automatically certified. Morphology is not an independent calibration test."
+  ],
+  "science_release_ready": false
+}
