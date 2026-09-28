@@ -1,0 +1,15 @@
+{
+  "M_minus_5logh": [
+    -20.0,
+    -21.0,
+    -22.0,
+    -23.0
+  ],
+  "wsys_over_nowsys_cumulative_density": [
+    1.0337135511414672,
+    1.042527683036685,
+    0.9913791190016454,
+    1.1403984079337492
+  ],
+  "caveat": "same tabulated E-corrected magnitude; does not identify executed HOD choice"
+}

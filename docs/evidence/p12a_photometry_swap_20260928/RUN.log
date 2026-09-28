@@ -1,0 +1,104 @@
+{
+  "job": "59008849",
+  "stride": 100,
+  "warning": "conditional mapping swap on delivered flux-limited parents; conventions and parent truncation preclude causal HOD attribution",
+  "versions": {
+    "v0.1": {
+      "path": "/global/cfs/cdirs/desi/cosmosim/SecondGenMocks/AbacusSummit/CutSky/BGS/v0.1/z0.200/cutsky_BGS_z0.200_AbacusSummit_base_c000_ph000.fits",
+      "n_total": 63897781,
+      "n_sample_common": 166708,
+      "counts_sample": {
+        "stored": [
+          [
+            11699,
+            7020,
+            2381,
+            264
+          ],
+          [
+            26542,
+            15825,
+            5253,
+            613
+          ]
+        ],
+        "swapped": [
+          [
+            13416,
+            8828,
+            3592,
+            750
+          ],
+          [
+            29958,
+            19323,
+            7722,
+            1544
+          ]
+        ]
+      },
+      "delta_new_minus_old_median_by_z": [
+        -0.141238048716978,
+        -0.1325573342550435,
+        -0.16190193599518643,
+        -0.2335276491885208
+      ]
+    },
+    "v1": {
+      "path": "/global/cfs/cdirs/desi/cosmosim/SecondGenMocks/AbacusSummit/CutSky/BGS/v1/z0.200/cutsky_BGS_z0.200_AbacusSummit_base_c000_ph000.fits",
+      "n_total": 74748522,
+      "n_sample_common": 194814,
+      "counts_sample": {
+        "stored": [
+          [
+            12734,
+            8212,
+            3229,
+            822
+          ],
+          [
+            28429,
+            17560,
+            7332,
+            1734
+          ]
+        ],
+        "swapped": [
+          [
+            11011,
+            6341,
+            2107,
+            314
+          ],
+          [
+            25109,
+            14003,
+            4819,
+            704
+          ]
+        ]
+      },
+      "delta_new_minus_old_median_by_z": [
+        -0.1462476000298272,
+        -0.1412484890572859,
+        -0.15371924070893175,
+        -0.1674602343853061
+      ]
+    }
+  },
+  "loa_observed_counts": [
+    [
+      791798,
+      515603,
+      203039,
+      41242
+    ],
+    [
+      1940449,
+      1245428,
+      482271,
+      89935
+    ]
+  ],
+  "source_sha256": "e6fc4b872832263e842540620f0e6fdd5b41d3f1264ade30e4194eadd0159668"
+}

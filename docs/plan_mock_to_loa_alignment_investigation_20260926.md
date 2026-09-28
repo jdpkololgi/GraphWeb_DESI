@@ -592,3 +592,17 @@ apparent magnitude RMS5.95e-5mag with approximate native distance and Q=.67.
 See canonical-v1 report and replay RESULTS.json. W2 photometric source now
 numerically identified for this sample; full production/HOD lineage remains
 open. Next isolate HOD/LF vs photometry contributions with fixed-parent controls.
+
+### Population versus mapping and observation screen (2026-09-28)
+
+Fixed-row ph000 K/E swap: old-parent high-z sample counts increase2.84/2.52
+SGC/NGC; reverse swap removes62%/59% fromv1. Photometric mapping can explain
+a change of the observed order, but this is conditional sensitivity, not a
+causal partition (M/colour conventions and truncated parents). Full v1 intrinsic
+high counts~1.93Loa. Applying historical ph006 selection/assignment response
+still leaves43–52%excess across baseline magnitude/quality variants. No pass:
+actual v1 historical targeting, assignment/veto and spectroscopic-success
+forward model remains necessary; missing nuisance/quality observables may not
+be treated as passed cuts. Report p12a_v1_population_diagnosis_20260928.md and
+reproducible scripts/evidence. No generation/fit/VAC replacement authorized by
+these numerical results; existing user compute/work authorization remains active.

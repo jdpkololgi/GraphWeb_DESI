@@ -1,0 +1,20 @@
+{
+  "count_shape_nonnegative": true,
+  "qualification_false": true,
+  "hashes": {
+    "docs/evidence/p12a_photometry_swap_20260928/hod_readme.md": "9c84367b617639561ca6d24337889136844eae68c4d48b1abd0d5e08bbf7f017",
+    "docs/evidence/p12a_photometry_swap_20260928/hod_bgs_abacus.py": "99881e72ac2dc6257f40d37a92d92e23575c4ee27033fa1ca95b6764d444b7e2",
+    "docs/evidence/p12a_photometry_swap_20260928/hod_wsys.txt": "df8bbbb6be82defbe5cefbe6cbea572ad55b9933bf5f87e519a0987a1338cbfa",
+    "docs/evidence/p12a_photometry_swap_20260928/LICENSE": "20ddfdcaed3590cddb237f3c9144eb04159442cd37c4a26f752a688c3a0fdac7",
+    "docs/evidence/p12a_photometry_swap_20260928/luminosity_function.py": "3d49028ced2820c92257cb1b308ec4e261ba5ecfeb5724181709437f6ac276cd",
+    "docs/evidence/p12a_photometry_swap_20260928/LF_TABLE_COMPARISON.json": "3b0f09ba0c8c43710526b7db4c2200bbe383b66013f542f22143ab0d13d27b54",
+    "docs/evidence/p12a_photometry_swap_20260928/RESULTS.json": "e249f571ae90f5e0c04c0e39dbcb40fff71d439cdd853256e5134df0caab1d6a",
+    "docs/evidence/p12a_photometry_swap_20260928/OBSERVATION_SCREEN.json": "c9ffcf7ffe8c654d64952ce17ac19745564f5598668fba004bec1b79995276f8",
+    "docs/evidence/p12a_photometry_swap_20260928/OBSERVATION_RUN.log": "c9ffcf7ffe8c654d64952ce17ac19745564f5598668fba004bec1b79995276f8",
+    "docs/evidence/p12a_photometry_swap_20260928/SACCT.txt": "159be8a5f8fc524fd08d3aa61f2d8a1303db7ed3b407a2dce14c90e25a33a204",
+    "docs/evidence/p12a_photometry_swap_20260928/lf_wsys.dat": "3d4e1e1157192b06af9ef3119d26ae1d93ab1288ee3625fd3365196c68fc1e6f",
+    "docs/evidence/p12a_photometry_swap_20260928/RUN.log": "e249f571ae90f5e0c04c0e39dbcb40fff71d439cdd853256e5134df0caab1d6a",
+    "docs/evidence/p12a_photometry_swap_20260928/hod_nowsys.txt": "cf168a99ea948ab7128f9b06f6fefd4da2c30d6086e620a5e54b1e5f4a5c61ef",
+    "docs/evidence/p12a_photometry_swap_20260928/lf_nowsys.dat": "1073b5dee6069be7b024c3542a48193b46ebff20f82a21e801e78c42dafcb205"
+  }
+}
