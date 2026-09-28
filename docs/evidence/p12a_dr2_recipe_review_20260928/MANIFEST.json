@@ -1,0 +1,44 @@
+{
+  "LSS_revision": "d942b990860e016e7558c740966fea3e5ce7e7f3",
+  "retrieved": "2026-09-28",
+  "slide_deck": "https://docs.google.com/presentation/d/1xLu19oZcjZELENla4LMvagxZKjQS_uQ7T2GV5qqtxUw/edit",
+  "slides_pdf_sha256": "a4a211b779751179253ecddc8fc89b1267ed3a88b2c1f2b252df167015f813af",
+  "slides_total": 309,
+  "selected_pages_visually_checked": [
+    29,
+    30,
+    36
+  ],
+  "checks": {
+    "generic_preparation_top_level_exit": true,
+    "holi_placeholder_M_minus21": true,
+    "holi_placeholder_M_minus19": true
+  },
+  "source_sha256": {
+    "brickmask_README.md": "b40669f74f42e6592209c2eacb37406e70575d4739f22e19637b9a8d9aabbdaf",
+    "readwrite_pixel_bitmask_da2.py": "c82acef34efe4a4235a3a28ee45bd7c194549a22da0467410c63d86d25515f5f",
+    "getpotaDA2_mock.py": "56889623a455e6d754347750b02a26b4fb5f5285b8d91eb4fd8c9d47c982add1",
+    "xidark_amtl.sl": "041cfd5114fcfd4ec5e0932ce942b0a94eb1c932dd181b1871555821e9046ceb",
+    "lss_QSO_EZmock.sl": "e12dc65ba8e3d16b5491de3615034c026b17a6fc3c841d1524b3167754fe4ff0",
+    "lss_ELG_EZmock.sl": "a2dcd35e97832193477d9313170d3fd8540c2c5b95cfd7826ebaa0cd6514556b",
+    "lss_LRG_EZmock.sl": "de30ec17078cfc0dfd51e58c4578059745ce004f9701d47118c606d75979bf09",
+    "ezamtl_lrgmask.sl": "bab68f88bc0773aadfef0a0f6ada9f531a6a6e9a9d413a026e9f66b5b8fea890",
+    "ezamtl_getpota.sl": "133b79644d96cbe866af31f7bbaedc575489c84f7822130059c62fe78a859352",
+    "run_fba_regular.sl": "567f8b379ee0355edd4c7674e30885ece9a8d82ce76ca852b9f04fee42adf6c6",
+    "initialize_da2_altmtl_EZmock_dark.sl": "a1b37026333339f2107ba8f5085e001529f4cb16ea473c441e6acf5bab8b4ead",
+    "concatenate_EZmock_targets.py": "2a9873dac84031807afc3e453ff4fb955709272c2d0071ae206548909f4d6c9a",
+    "prepare_altmtl_EZmock.sl": "c393b3b72432845cd1b1b523c6ca0d6cd2c323eb220c1201c9a23d472718ff1e",
+    "mkCat_SecondGen_amtl.py": "40ea7b89a1b13c06122b6275405667a287777bdec2cf331a3a64e6bf03ec658b",
+    "ab2ndgen_bgsbright02loa_interactive.sh": "b4fd4c002e4f41e11e2e59ca7b2b50035997f2f3044f8d956c879af5779e4f98",
+    "glam_bgsv2_DA3DA2_lss_pipeline_interactive.sh": "401fdca99f6c3de7f87a2a524bb50d0dc53fc2da53669810def8ba22262c8136",
+    "prepare_holi_bgs.py": "bd8e266c1217f15b409c72fb657c924a66e535cb5aa51c8da35d012d26194f52",
+    "calibrate_nz_prep.py": "cf59fc0759751b707aab6ec8afaf12b0030f3c9c0822c70a9bf189e4b7db9141",
+    "abBGSamtl_cat_sbatch.sh": "54084c762168629568633b2e7e1f254e7c3035055528d195b24e1652ab7260bb",
+    "run_fba_shared.sl": "c4ae157d395d4511a747b3ef5899f443a5897d0ed60e9282352398f58ae3b1f7",
+    "mock_altmtl_pipeline_dark_new.txt": "2a76a0f7adda5f9f037857333e84de82766b29a142350a6cd1bca80c2d089be7",
+    "test_target_density.py": "8bb6e4a2e2f536f4e3dc7bf6e8c3861ab7594f1a6e8c5adeefdb68d8b86ca9c2",
+    "prepare_mocks_Y3.py": "94746ecbf3da4c21e92705c6edfccdde58ae1b0967ca9c63cfbc14cc99949792",
+    "mockAMTL_DA2_LSSpipe.txt": "8ec6ca2f7bdeea09476ebbb6d7ff4b5b61499442a1c376a3359a703d550bb1bc"
+  },
+  "wiki_attachment_sha256": "fbfefee12057cefa796dfe9fa0d63844aaf9f3e44fabdba39a4f5e446d0404bc"
+}

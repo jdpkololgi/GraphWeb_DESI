@@ -641,3 +641,18 @@ Prepared-stage durable handoff submitted as batch59013807; source revision
 54588a8, checked live-source hashes, upstream LSS d942b990. Two-row imaging
 kernel smoke passed; batch runs preparation+validation only. Require output
 PREPARATION_READY.json before ledger/assignment continuation. No automatic retry.
+
+### User-provided CAI/wiki/GitHub leads reviewed (2026-09-28)
+
+See p12a_dr2_recipe_review_20260928.md and pinned source/hash evidence. CAI
+slide36 explicitly documents BGS completeness-vs-z mismatch, suspected missing
+full/low-z-cluster competitor population (HOLI/GLAM -21.35 sample to~.4, not our
+full sample to.55). Slides128-130 document Abacus ANY-02 vs BRIGHT complete/altMTL
+sample mismatch. Promote full-target competitor and identical-sample audit before
+interpreting selected n(z) as pure LF error. Preserve raw-parent photometry tests.
+Loa data-v1.1 FRAC_TLOBS_TILES/v2.1 PIP fixes are not Abacus raw-v1 repairs.
+BGS WEIGHT_ZFAIL weakness is documented; audit official Nbin/area and assignment-
+only sensitivity. Generic prepare_mocks_Y3 currently exits early/incomplete BGS;
+retain BRIGHT-specific adapter. HOLI explicitly n(z)-matches but uses some dummy
+absolute magnitudes; not a direct replacement training product. DA3/DA2 wrappers
+can still target Loa. No recipe changes to queued59013807 or VAC qualification.
