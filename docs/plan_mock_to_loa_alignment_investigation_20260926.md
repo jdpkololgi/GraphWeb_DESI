@@ -606,3 +606,13 @@ forward model remains necessary; missing nuisance/quality observables may not
 be treated as passed cuts. Report p12a_v1_population_diagnosis_20260928.md and
 reproducible scripts/evidence. No generation/fit/VAC replacement authorized by
 these numerical results; existing user compute/work authorization remains active.
+
+### Executing completeness comparison and one-phase forward test (2026-09-28)
+
+User explicitly approved both and compute. Completed Loa full scan: no invalid
+completeness factors; uniformr19.5 rawv1 / assignment+zfail-correctedLoa high
+shell1.508/1.561SGC/NGC. This remains a pixel-support diagnostic, not exact
+imaging-complete truth. Actual ph000 preparation/forward test in isolated
+Scratch v1_forward_ph000_20260928; CPU59009604, LSS d942b990 verified at runtime.
+Source/default changes and progress in p12a_loa_completeness_forward_20260928.md.
+Full assignment/veto/success stage not yet completed. Do not mark G2 closed.
