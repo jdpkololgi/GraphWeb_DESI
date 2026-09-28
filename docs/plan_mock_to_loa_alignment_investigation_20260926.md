@@ -571,3 +571,14 @@ mask/observation parity and Jade's scientific prescription remain open; no G2
 promotion, population correction, new phase or replacement VAC. The next producer
 question should distinguish HOD/photometric assignment from simple velocity
 rescaling, and identify the intended full-BRIGHT Loa preparation.
+
+### Canonical v1 public generator lead (2026-09-28)
+
+Found JadePiat/hodpy **abacus** branch and bundled BGS HOD/LF/DESI N/S
+photometry tables. Canonical v1 is itself jpiat-owned; independent reproduction
+means source-based investigation, not an independent producer. Branch head is
+newer than the file; pre-file ancestor identified. Prioritize historical table
+comparison and ph000 photometry fingerprints before controlled regeneration.
+See `p12a_canonical_v1_provenance_20260928.md` for pinned branches, the distinct
+E-correction/LF prescriptions and velocity-branch caveats. No numerical replay
+or production lineage closure claimed; no need to wait for personal correspondence.

@@ -1,0 +1,560 @@
+{
+  "url": "https://api.github.com/repos/JadePiat/hodpy/compare/abacus...my_abacus",
+  "html_url": "https://github.com/JadePiat/hodpy/compare/abacus...my_abacus",
+  "permalink_url": "https://github.com/JadePiat/hodpy/compare/JadePiat:14222dc...JadePiat:0b55537",
+  "diff_url": "https://github.com/JadePiat/hodpy/compare/abacus...my_abacus.diff",
+  "patch_url": "https://github.com/JadePiat/hodpy/compare/abacus...my_abacus.patch",
+  "base_commit": {
+    "sha": "14222dcf794b3bff68987bf8e271203db20f8730",
+    "node_id": "C_kwDONMaQidoAKDE0MjIyZGNmNzk0YjNiZmY2ODk4N2JmOGUyNzEyMDNkYjIwZjg3MzA",
+    "commit": {
+      "author": {
+        "name": "amjsmith",
+        "email": "amjsmith89@gmail.com",
+        "date": "2025-02-04T13:37:21Z"
+      },
+      "committer": {
+        "name": "GitHub",
+        "email": "noreply@github.com",
+        "date": "2025-02-04T13:37:21Z"
+      },
+      "message": "Update file",
+      "tree": {
+        "sha": "ff881cac986b0f0437d8ab2ed7f563c79c1dc61c",
+        "url": "https://api.github.com/repos/JadePiat/hodpy/git/trees/ff881cac986b0f0437d8ab2ed7f563c79c1dc61c"
+      },
+      "url": "https://api.github.com/repos/JadePiat/hodpy/git/commits/14222dcf794b3bff68987bf8e271203db20f8730",
+      "comment_count": 0,
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJnohgRCRC1aQ7uu5UhlAAAQ3EQAIgKAkFodLfi52xV4YKvPgec\n/gWzpXsTn+RRnDXPvnrhGlfa/YWkkuWyR2ue79juOsaMGwLeWMCR7FmqcjBR2hUO\noDunODqk3i5V/5U0LoJ7H2ZE4r0PXzuppmiOzPNR5NnRdxaHnBnaIgbMiOVg/q5M\nupX0L6IgS7BH9cUhtYYOy2XjE4/uOlq5dPyy98klP79hNjgKFg9Bn4Yc/1j9cfgm\nVR9ymPD2LeXZxVZ9Pmt4JjS9CCDiSJCi5hr455ldaL5Kz4Mhz+QSruxMuUuhuMt2\n8MClzBvFiia9ns+HimFAhhUuDVwJInb57vbM8kbwyyY/SzrDvZRep9PObil0sKnA\nC2tIp5XmQ9SrGYMkM1+5pi9Y02jKSKK1KwVkXtXTKuX7sPCrVTr09cdU8cvUIN+I\nKrv6hZnh8qlDtor+vNMm4OMcqWX/82sRThOY74ySW5tDhd73ZFZqmK3QCT1tBrOf\nLOpo6tELQwlMFr1zb9PGJLwJ4/ziKotDZVft77jPsAMdFICZ0Dtnx1sc2ey6iXFF\nly50j6pp96G+brh1BScKMs0yyV1phaxFGoM1njt2m9oFMd6XitYgQl0cAry/NQaw\ndBxLe7DPVBYNa3u/0SaLZH5VRK+pZvKp8S8U/v8M8Bq/v6BdrPEWElonFjWJBoP6\nF0JAqPVk4xJYMMWToLU3\n=BfuS\n-----END PGP SIGNATURE-----\n",
+        "payload": "tree ff881cac986b0f0437d8ab2ed7f563c79c1dc61c\nparent cb3f12c053a2279df7bf63cbf58cd314e448bf6a\nauthor amjsmith <amjsmith89@gmail.com> 1738676241 +0000\ncommitter GitHub <noreply@github.com> 1738676241 +0000\n\nUpdate file",
+        "verified_at": "2025-02-04T13:42:23Z"
+      }
+    },
+    "url": "https://api.github.com/repos/JadePiat/hodpy/commits/14222dcf794b3bff68987bf8e271203db20f8730",
+    "html_url": "https://github.com/JadePiat/hodpy/commit/14222dcf794b3bff68987bf8e271203db20f8730",
+    "comments_url": "https://api.github.com/repos/JadePiat/hodpy/commits/14222dcf794b3bff68987bf8e271203db20f8730/comments",
+    "author": {
+      "login": "amjsmith",
+      "id": 21196726,
+      "node_id": "MDQ6VXNlcjIxMTk2NzI2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/21196726?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/amjsmith",
+      "html_url": "https://github.com/amjsmith",
+      "followers_url": "https://api.github.com/users/amjsmith/followers",
+      "following_url": "https://api.github.com/users/amjsmith/following{/other_user}",
+      "gists_url": "https://api.github.com/users/amjsmith/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/amjsmith/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/amjsmith/subscriptions",
+      "organizations_url": "https://api.github.com/users/amjsmith/orgs",
+      "repos_url": "https://api.github.com/users/amjsmith/repos",
+      "events_url": "https://api.github.com/users/amjsmith/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/amjsmith/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "web-flow",
+      "id": 19864447,
+      "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+      "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/web-flow",
+      "html_url": "https://github.com/web-flow",
+      "followers_url": "https://api.github.com/users/web-flow/followers",
+      "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+      "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+      "organizations_url": "https://api.github.com/users/web-flow/orgs",
+      "repos_url": "https://api.github.com/users/web-flow/repos",
+      "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/web-flow/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "cb3f12c053a2279df7bf63cbf58cd314e448bf6a",
+        "url": "https://api.github.com/repos/JadePiat/hodpy/commits/cb3f12c053a2279df7bf63cbf58cd314e448bf6a",
+        "html_url": "https://github.com/JadePiat/hodpy/commit/cb3f12c053a2279df7bf63cbf58cd314e448bf6a"
+      }
+    ]
+  },
+  "merge_base_commit": {
+    "sha": "14222dcf794b3bff68987bf8e271203db20f8730",
+    "node_id": "C_kwDONMaQidoAKDE0MjIyZGNmNzk0YjNiZmY2ODk4N2JmOGUyNzEyMDNkYjIwZjg3MzA",
+    "commit": {
+      "author": {
+        "name": "amjsmith",
+        "email": "amjsmith89@gmail.com",
+        "date": "2025-02-04T13:37:21Z"
+      },
+      "committer": {
+        "name": "GitHub",
+        "email": "noreply@github.com",
+        "date": "2025-02-04T13:37:21Z"
+      },
+      "message": "Update file",
+      "tree": {
+        "sha": "ff881cac986b0f0437d8ab2ed7f563c79c1dc61c",
+        "url": "https://api.github.com/repos/JadePiat/hodpy/git/trees/ff881cac986b0f0437d8ab2ed7f563c79c1dc61c"
+      },
+      "url": "https://api.github.com/repos/JadePiat/hodpy/git/commits/14222dcf794b3bff68987bf8e271203db20f8730",
+      "comment_count": 0,
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJnohgRCRC1aQ7uu5UhlAAAQ3EQAIgKAkFodLfi52xV4YKvPgec\n/gWzpXsTn+RRnDXPvnrhGlfa/YWkkuWyR2ue79juOsaMGwLeWMCR7FmqcjBR2hUO\noDunODqk3i5V/5U0LoJ7H2ZE4r0PXzuppmiOzPNR5NnRdxaHnBnaIgbMiOVg/q5M\nupX0L6IgS7BH9cUhtYYOy2XjE4/uOlq5dPyy98klP79hNjgKFg9Bn4Yc/1j9cfgm\nVR9ymPD2LeXZxVZ9Pmt4JjS9CCDiSJCi5hr455ldaL5Kz4Mhz+QSruxMuUuhuMt2\n8MClzBvFiia9ns+HimFAhhUuDVwJInb57vbM8kbwyyY/SzrDvZRep9PObil0sKnA\nC2tIp5XmQ9SrGYMkM1+5pi9Y02jKSKK1KwVkXtXTKuX7sPCrVTr09cdU8cvUIN+I\nKrv6hZnh8qlDtor+vNMm4OMcqWX/82sRThOY74ySW5tDhd73ZFZqmK3QCT1tBrOf\nLOpo6tELQwlMFr1zb9PGJLwJ4/ziKotDZVft77jPsAMdFICZ0Dtnx1sc2ey6iXFF\nly50j6pp96G+brh1BScKMs0yyV1phaxFGoM1njt2m9oFMd6XitYgQl0cAry/NQaw\ndBxLe7DPVBYNa3u/0SaLZH5VRK+pZvKp8S8U/v8M8Bq/v6BdrPEWElonFjWJBoP6\nF0JAqPVk4xJYMMWToLU3\n=BfuS\n-----END PGP SIGNATURE-----\n",
+        "payload": "tree ff881cac986b0f0437d8ab2ed7f563c79c1dc61c\nparent cb3f12c053a2279df7bf63cbf58cd314e448bf6a\nauthor amjsmith <amjsmith89@gmail.com> 1738676241 +0000\ncommitter GitHub <noreply@github.com> 1738676241 +0000\n\nUpdate file",
+        "verified_at": "2025-02-04T13:42:23Z"
+      }
+    },
+    "url": "https://api.github.com/repos/JadePiat/hodpy/commits/14222dcf794b3bff68987bf8e271203db20f8730",
+    "html_url": "https://github.com/JadePiat/hodpy/commit/14222dcf794b3bff68987bf8e271203db20f8730",
+    "comments_url": "https://api.github.com/repos/JadePiat/hodpy/commits/14222dcf794b3bff68987bf8e271203db20f8730/comments",
+    "author": {
+      "login": "amjsmith",
+      "id": 21196726,
+      "node_id": "MDQ6VXNlcjIxMTk2NzI2",
+      "avatar_url": "https://avatars.githubusercontent.com/u/21196726?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/amjsmith",
+      "html_url": "https://github.com/amjsmith",
+      "followers_url": "https://api.github.com/users/amjsmith/followers",
+      "following_url": "https://api.github.com/users/amjsmith/following{/other_user}",
+      "gists_url": "https://api.github.com/users/amjsmith/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/amjsmith/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/amjsmith/subscriptions",
+      "organizations_url": "https://api.github.com/users/amjsmith/orgs",
+      "repos_url": "https://api.github.com/users/amjsmith/repos",
+      "events_url": "https://api.github.com/users/amjsmith/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/amjsmith/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "web-flow",
+      "id": 19864447,
+      "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+      "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/web-flow",
+      "html_url": "https://github.com/web-flow",
+      "followers_url": "https://api.github.com/users/web-flow/followers",
+      "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+      "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+      "organizations_url": "https://api.github.com/users/web-flow/orgs",
+      "repos_url": "https://api.github.com/users/web-flow/repos",
+      "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/web-flow/received_events",
+      "type": "User",
+      "user_view_type": "public",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "cb3f12c053a2279df7bf63cbf58cd314e448bf6a",
+        "url": "https://api.github.com/repos/JadePiat/hodpy/commits/cb3f12c053a2279df7bf63cbf58cd314e448bf6a",
+        "html_url": "https://github.com/JadePiat/hodpy/commit/cb3f12c053a2279df7bf63cbf58cd314e448bf6a"
+      }
+    ]
+  },
+  "status": "ahead",
+  "ahead_by": 4,
+  "behind_by": 0,
+  "total_commits": 4,
+  "commits": [
+    {
+      "sha": "a18c3aef8239bb4134061a985cd8b33f9b760f14",
+      "node_id": "C_kwDONMaQidoAKGExOGMzYWVmODIzOWJiNDEzNDA2MWE5ODVjZDhiMzNmOWI3NjBmMTQ",
+      "commit": {
+        "author": {
+          "name": "Jade Piat",
+          "email": "jade.piat99@gmail.com",
+          "date": "2024-11-08T15:15:58Z"
+        },
+        "committer": {
+          "name": "Jade Piat",
+          "email": "jade.piat99@gmail.com",
+          "date": "2024-11-08T15:15:58Z"
+        },
+        "message": "removed photometry dependency",
+        "tree": {
+          "sha": "b7ca3ed5e92a0e2ddc6368bb6d425cb4aa8ea40a",
+          "url": "https://api.github.com/repos/JadePiat/hodpy/git/trees/b7ca3ed5e92a0e2ddc6368bb6d425cb4aa8ea40a"
+        },
+        "url": "https://api.github.com/repos/JadePiat/hodpy/git/commits/a18c3aef8239bb4134061a985cd8b33f9b760f14",
+        "comment_count": 0,
+        "verification": {
+          "verified": false,
+          "reason": "unsigned",
+          "signature": null,
+          "payload": null,
+          "verified_at": null
+        }
+      },
+      "url": "https://api.github.com/repos/JadePiat/hodpy/commits/a18c3aef8239bb4134061a985cd8b33f9b760f14",
+      "html_url": "https://github.com/JadePiat/hodpy/commit/a18c3aef8239bb4134061a985cd8b33f9b760f14",
+      "comments_url": "https://api.github.com/repos/JadePiat/hodpy/commits/a18c3aef8239bb4134061a985cd8b33f9b760f14/comments",
+      "author": {
+        "login": "JadePiat",
+        "id": 145982467,
+        "node_id": "U_kgDOCLOEAw",
+        "avatar_url": "https://avatars.githubusercontent.com/u/145982467?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/JadePiat",
+        "html_url": "https://github.com/JadePiat",
+        "followers_url": "https://api.github.com/users/JadePiat/followers",
+        "following_url": "https://api.github.com/users/JadePiat/following{/other_user}",
+        "gists_url": "https://api.github.com/users/JadePiat/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/JadePiat/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/JadePiat/subscriptions",
+        "organizations_url": "https://api.github.com/users/JadePiat/orgs",
+        "repos_url": "https://api.github.com/users/JadePiat/repos",
+        "events_url": "https://api.github.com/users/JadePiat/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/JadePiat/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "committer": {
+        "login": "JadePiat",
+        "id": 145982467,
+        "node_id": "U_kgDOCLOEAw",
+        "avatar_url": "https://avatars.githubusercontent.com/u/145982467?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/JadePiat",
+        "html_url": "https://github.com/JadePiat",
+        "followers_url": "https://api.github.com/users/JadePiat/followers",
+        "following_url": "https://api.github.com/users/JadePiat/following{/other_user}",
+        "gists_url": "https://api.github.com/users/JadePiat/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/JadePiat/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/JadePiat/subscriptions",
+        "organizations_url": "https://api.github.com/users/JadePiat/orgs",
+        "repos_url": "https://api.github.com/users/JadePiat/repos",
+        "events_url": "https://api.github.com/users/JadePiat/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/JadePiat/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "parents": [
+        {
+          "sha": "10763e0dfdfa1aa20f38ec6d2709637a4ef6da8a",
+          "url": "https://api.github.com/repos/JadePiat/hodpy/commits/10763e0dfdfa1aa20f38ec6d2709637a4ef6da8a",
+          "html_url": "https://github.com/JadePiat/hodpy/commit/10763e0dfdfa1aa20f38ec6d2709637a4ef6da8a"
+        }
+      ]
+    },
+    {
+      "sha": "85d8db0401af816d0525f946893bc2a4b37a109d",
+      "node_id": "C_kwDONMaQidoAKDg1ZDhkYjA0MDFhZjgxNmQwNTI1Zjk0Njg5M2JjMmE0YjM3YTEwOWQ",
+      "commit": {
+        "author": {
+          "name": "Jade Piat",
+          "email": "jade.piat99@gmail.com",
+          "date": "2025-06-27T15:43:15Z"
+        },
+        "committer": {
+          "name": "Jade Piat",
+          "email": "jade.piat99@gmail.com",
+          "date": "2025-06-27T15:43:15Z"
+        },
+        "message": "update",
+        "tree": {
+          "sha": "8f28314d048626d88fdfe32fd65db8516bea807d",
+          "url": "https://api.github.com/repos/JadePiat/hodpy/git/trees/8f28314d048626d88fdfe32fd65db8516bea807d"
+        },
+        "url": "https://api.github.com/repos/JadePiat/hodpy/git/commits/85d8db0401af816d0525f946893bc2a4b37a109d",
+        "comment_count": 0,
+        "verification": {
+          "verified": false,
+          "reason": "unsigned",
+          "signature": null,
+          "payload": null,
+          "verified_at": null
+        }
+      },
+      "url": "https://api.github.com/repos/JadePiat/hodpy/commits/85d8db0401af816d0525f946893bc2a4b37a109d",
+      "html_url": "https://github.com/JadePiat/hodpy/commit/85d8db0401af816d0525f946893bc2a4b37a109d",
+      "comments_url": "https://api.github.com/repos/JadePiat/hodpy/commits/85d8db0401af816d0525f946893bc2a4b37a109d/comments",
+      "author": {
+        "login": "JadePiat",
+        "id": 145982467,
+        "node_id": "U_kgDOCLOEAw",
+        "avatar_url": "https://avatars.githubusercontent.com/u/145982467?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/JadePiat",
+        "html_url": "https://github.com/JadePiat",
+        "followers_url": "https://api.github.com/users/JadePiat/followers",
+        "following_url": "https://api.github.com/users/JadePiat/following{/other_user}",
+        "gists_url": "https://api.github.com/users/JadePiat/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/JadePiat/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/JadePiat/subscriptions",
+        "organizations_url": "https://api.github.com/users/JadePiat/orgs",
+        "repos_url": "https://api.github.com/users/JadePiat/repos",
+        "events_url": "https://api.github.com/users/JadePiat/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/JadePiat/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "committer": {
+        "login": "JadePiat",
+        "id": 145982467,
+        "node_id": "U_kgDOCLOEAw",
+        "avatar_url": "https://avatars.githubusercontent.com/u/145982467?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/JadePiat",
+        "html_url": "https://github.com/JadePiat",
+        "followers_url": "https://api.github.com/users/JadePiat/followers",
+        "following_url": "https://api.github.com/users/JadePiat/following{/other_user}",
+        "gists_url": "https://api.github.com/users/JadePiat/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/JadePiat/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/JadePiat/subscriptions",
+        "organizations_url": "https://api.github.com/users/JadePiat/orgs",
+        "repos_url": "https://api.github.com/users/JadePiat/repos",
+        "events_url": "https://api.github.com/users/JadePiat/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/JadePiat/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "parents": [
+        {
+          "sha": "a18c3aef8239bb4134061a985cd8b33f9b760f14",
+          "url": "https://api.github.com/repos/JadePiat/hodpy/commits/a18c3aef8239bb4134061a985cd8b33f9b760f14",
+          "html_url": "https://github.com/JadePiat/hodpy/commit/a18c3aef8239bb4134061a985cd8b33f9b760f14"
+        }
+      ]
+    },
+    {
+      "sha": "b34c538016d2b152c53ec35ed0396a5883cad362",
+      "node_id": "C_kwDONMaQidoAKGIzNGM1MzgwMTZkMmIxNTJjNTNlYzM1ZWQwMzk2YTU4ODNjYWQzNjI",
+      "commit": {
+        "author": {
+          "name": "Jade Piat",
+          "email": "jade.piat99@gmail.com",
+          "date": "2025-06-27T16:01:24Z"
+        },
+        "committer": {
+          "name": "Jade Piat",
+          "email": "jade.piat99@gmail.com",
+          "date": "2025-06-27T16:01:24Z"
+        },
+        "message": "update",
+        "tree": {
+          "sha": "ac63f06d10619061d769874f426e401cc8be5397",
+          "url": "https://api.github.com/repos/JadePiat/hodpy/git/trees/ac63f06d10619061d769874f426e401cc8be5397"
+        },
+        "url": "https://api.github.com/repos/JadePiat/hodpy/git/commits/b34c538016d2b152c53ec35ed0396a5883cad362",
+        "comment_count": 0,
+        "verification": {
+          "verified": false,
+          "reason": "unsigned",
+          "signature": null,
+          "payload": null,
+          "verified_at": null
+        }
+      },
+      "url": "https://api.github.com/repos/JadePiat/hodpy/commits/b34c538016d2b152c53ec35ed0396a5883cad362",
+      "html_url": "https://github.com/JadePiat/hodpy/commit/b34c538016d2b152c53ec35ed0396a5883cad362",
+      "comments_url": "https://api.github.com/repos/JadePiat/hodpy/commits/b34c538016d2b152c53ec35ed0396a5883cad362/comments",
+      "author": {
+        "login": "JadePiat",
+        "id": 145982467,
+        "node_id": "U_kgDOCLOEAw",
+        "avatar_url": "https://avatars.githubusercontent.com/u/145982467?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/JadePiat",
+        "html_url": "https://github.com/JadePiat",
+        "followers_url": "https://api.github.com/users/JadePiat/followers",
+        "following_url": "https://api.github.com/users/JadePiat/following{/other_user}",
+        "gists_url": "https://api.github.com/users/JadePiat/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/JadePiat/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/JadePiat/subscriptions",
+        "organizations_url": "https://api.github.com/users/JadePiat/orgs",
+        "repos_url": "https://api.github.com/users/JadePiat/repos",
+        "events_url": "https://api.github.com/users/JadePiat/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/JadePiat/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "committer": {
+        "login": "JadePiat",
+        "id": 145982467,
+        "node_id": "U_kgDOCLOEAw",
+        "avatar_url": "https://avatars.githubusercontent.com/u/145982467?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/JadePiat",
+        "html_url": "https://github.com/JadePiat",
+        "followers_url": "https://api.github.com/users/JadePiat/followers",
+        "following_url": "https://api.github.com/users/JadePiat/following{/other_user}",
+        "gists_url": "https://api.github.com/users/JadePiat/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/JadePiat/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/JadePiat/subscriptions",
+        "organizations_url": "https://api.github.com/users/JadePiat/orgs",
+        "repos_url": "https://api.github.com/users/JadePiat/repos",
+        "events_url": "https://api.github.com/users/JadePiat/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/JadePiat/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "parents": [
+        {
+          "sha": "85d8db0401af816d0525f946893bc2a4b37a109d",
+          "url": "https://api.github.com/repos/JadePiat/hodpy/commits/85d8db0401af816d0525f946893bc2a4b37a109d",
+          "html_url": "https://github.com/JadePiat/hodpy/commit/85d8db0401af816d0525f946893bc2a4b37a109d"
+        },
+        {
+          "sha": "14222dcf794b3bff68987bf8e271203db20f8730",
+          "url": "https://api.github.com/repos/JadePiat/hodpy/commits/14222dcf794b3bff68987bf8e271203db20f8730",
+          "html_url": "https://github.com/JadePiat/hodpy/commit/14222dcf794b3bff68987bf8e271203db20f8730"
+        }
+      ]
+    },
+    {
+      "sha": "0b555378a2a854cdf57310f950259608ff0f6f88",
+      "node_id": "C_kwDONMaQidoAKDBiNTU1Mzc4YTJhODU0Y2RmNTczMTBmOTUwMjU5NjA4ZmYwZjZmODg",
+      "commit": {
+        "author": {
+          "name": "Jade Piat",
+          "email": "jade.piat99@gmail.com",
+          "date": "2025-07-17T16:13:40Z"
+        },
+        "committer": {
+          "name": "Jade Piat",
+          "email": "jade.piat99@gmail.com",
+          "date": "2025-07-17T16:13:40Z"
+        },
+        "message": "fix central galaxy velocities",
+        "tree": {
+          "sha": "bd7c8bf8bf9025cd3fdceef997047af8d2781180",
+          "url": "https://api.github.com/repos/JadePiat/hodpy/git/trees/bd7c8bf8bf9025cd3fdceef997047af8d2781180"
+        },
+        "url": "https://api.github.com/repos/JadePiat/hodpy/git/commits/0b555378a2a854cdf57310f950259608ff0f6f88",
+        "comment_count": 0,
+        "verification": {
+          "verified": false,
+          "reason": "unsigned",
+          "signature": null,
+          "payload": null,
+          "verified_at": null
+        }
+      },
+      "url": "https://api.github.com/repos/JadePiat/hodpy/commits/0b555378a2a854cdf57310f950259608ff0f6f88",
+      "html_url": "https://github.com/JadePiat/hodpy/commit/0b555378a2a854cdf57310f950259608ff0f6f88",
+      "comments_url": "https://api.github.com/repos/JadePiat/hodpy/commits/0b555378a2a854cdf57310f950259608ff0f6f88/comments",
+      "author": {
+        "login": "JadePiat",
+        "id": 145982467,
+        "node_id": "U_kgDOCLOEAw",
+        "avatar_url": "https://avatars.githubusercontent.com/u/145982467?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/JadePiat",
+        "html_url": "https://github.com/JadePiat",
+        "followers_url": "https://api.github.com/users/JadePiat/followers",
+        "following_url": "https://api.github.com/users/JadePiat/following{/other_user}",
+        "gists_url": "https://api.github.com/users/JadePiat/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/JadePiat/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/JadePiat/subscriptions",
+        "organizations_url": "https://api.github.com/users/JadePiat/orgs",
+        "repos_url": "https://api.github.com/users/JadePiat/repos",
+        "events_url": "https://api.github.com/users/JadePiat/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/JadePiat/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "committer": {
+        "login": "JadePiat",
+        "id": 145982467,
+        "node_id": "U_kgDOCLOEAw",
+        "avatar_url": "https://avatars.githubusercontent.com/u/145982467?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/JadePiat",
+        "html_url": "https://github.com/JadePiat",
+        "followers_url": "https://api.github.com/users/JadePiat/followers",
+        "following_url": "https://api.github.com/users/JadePiat/following{/other_user}",
+        "gists_url": "https://api.github.com/users/JadePiat/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/JadePiat/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/JadePiat/subscriptions",
+        "organizations_url": "https://api.github.com/users/JadePiat/orgs",
+        "repos_url": "https://api.github.com/users/JadePiat/repos",
+        "events_url": "https://api.github.com/users/JadePiat/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/JadePiat/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "parents": [
+        {
+          "sha": "b34c538016d2b152c53ec35ed0396a5883cad362",
+          "url": "https://api.github.com/repos/JadePiat/hodpy/commits/b34c538016d2b152c53ec35ed0396a5883cad362",
+          "html_url": "https://github.com/JadePiat/hodpy/commit/b34c538016d2b152c53ec35ed0396a5883cad362"
+        }
+      ]
+    }
+  ],
+  "files": [
+    {
+      "sha": "1718a990478b9d2b5a7c648fff720d720433cd7f",
+      "filename": "hodpy/galaxy_catalogue_snapshot.py",
+      "status": "modified",
+      "additions": 3,
+      "deletions": 1,
+      "changes": 4,
+      "blob_url": "https://github.com/JadePiat/hodpy/blob/0b555378a2a854cdf57310f950259608ff0f6f88/hodpy%2Fgalaxy_catalogue_snapshot.py",
+      "raw_url": "https://github.com/JadePiat/hodpy/raw/0b555378a2a854cdf57310f950259608ff0f6f88/hodpy%2Fgalaxy_catalogue_snapshot.py",
+      "contents_url": "https://api.github.com/repos/JadePiat/hodpy/contents/hodpy%2Fgalaxy_catalogue_snapshot.py?ref=0b555378a2a854cdf57310f950259608ff0f6f88",
+      "patch": "@@ -48,6 +48,8 @@ def _get_positions(self, distance):\n     def _get_velocities(self):\n         # gets random velocity vector of each galaxy\n \n+        is_sat = self.get(\"is_sat\")\n+\n         # velocity of halo\n         vel_halo = self.get_halo(\"vel\")\n \n@@ -58,7 +60,7 @@ def _get_velocities(self):\n         # random velocity along each axis\n         vel_rel = np.zeros(vel_halo.shape)\n         for i in range(3):\n-            vel_rel[:,i] = vel_disp*np.random.normal(loc=0.0, scale=1.0, \n+            vel_rel[is_sat,i] = vel_disp*np.random.normal(loc=0.0, scale=1.0, \n                                                      size=self.size)\n \n         return vel_halo + vel_rel"
+    },
+    {
+      "sha": "c6a6b9688da2110d20aba3b0f0d4c2d8ece83d6b",
+      "filename": "hodpy/k_correction.py",
+      "status": "modified",
+      "additions": 5,
+      "deletions": 2,
+      "changes": 7,
+      "blob_url": "https://github.com/JadePiat/hodpy/blob/0b555378a2a854cdf57310f950259608ff0f6f88/hodpy%2Fk_correction.py",
+      "raw_url": "https://github.com/JadePiat/hodpy/raw/0b555378a2a854cdf57310f950259608ff0f6f88/hodpy%2Fk_correction.py",
+      "contents_url": "https://api.github.com/repos/JadePiat/hodpy/contents/hodpy%2Fk_correction.py?ref=0b555378a2a854cdf57310f950259608ff0f6f88",
+      "patch": "@@ -192,7 +192,7 @@ def k_nonnative_zref(self, refz, redshift, restframe_colour):\n         return  self.k(redshift, restframe_colour) - self.k(refzs, restframe_colour) - 2.5 * np.log10(1. + refz)\n \n     \n-    def apparent_magnitude(self, absolute_magnitude, redshift, colour, use_ecorr=True, Q=lookup.Q, zq=lookup.zq):\n+    def apparent_magnitude(self, absolute_magnitude, redshift_cosmo, redshift, colour, use_ecorr=True, use_conv=True, Q=lookup.Q, zq=lookup.zq,c=3e5):\n         \"\"\"\n         Convert absolute magnitude to apparent magnitude\n \n@@ -210,7 +210,10 @@ def apparent_magnitude(self, absolute_magnitude, redshift, colour, use_ecorr=Tru\n             raise RuntimeError(\"Cosmology has not been set. Use the set_cosmology method\")\n         \n         # Luminosity distance\n-        D_L = (1.+redshift) * self.cosmo.comoving_distance(redshift)\n+        if use_conv:\n+            D_L = (1.+redshift)**2/(1.+redshift_cosmo) * self.cosmo.comoving_distance(redshift_cosmo)\n+        else:\n+            D_L = (1.+redshift) * self.cosmo.comoving_distance(redshift)\n \n         if use_ecorr:\n             E = Q * (redshift - zq)"
+    },
+    {
+      "sha": "8ce0efb964b2fbc9da33827a3817e5733ceeebaf",
+      "filename": "make_mocks/cut_sky_tools.py",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1,
+      "changes": 2,
+      "blob_url": "https://github.com/JadePiat/hodpy/blob/0b555378a2a854cdf57310f950259608ff0f6f88/make_mocks%2Fcut_sky_tools.py",
+      "raw_url": "https://github.com/JadePiat/hodpy/raw/0b555378a2a854cdf57310f950259608ff0f6f88/make_mocks%2Fcut_sky_tools.py",
+      "contents_url": "https://api.github.com/repos/JadePiat/hodpy/contents/make_mocks%2Fcut_sky_tools.py?ref=0b555378a2a854cdf57310f950259608ff0f6f88",
+      "patch": "@@ -752,4 +752,4 @@ def join_files(galaxy_cutsky, galaxy_cutsky_low, output_file, zmax_low=0.15, zma\n     table_new['vz']    = np.array(table['vz'],    dtype=np.float32)\n     \n     # write the new table\n-    table_new.write(output_file, format=\"fits\")\n+    table_new.write(output_file, format=\"fits\")\n\\ No newline at end of file"
+    },
+    {
+      "sha": "5525b75bb0ec8f11e2dc000ecff18f03942bbdf2",
+      "filename": "make_mocks/make_catalogue_snapshot_abacus.py",
+      "status": "modified",
+      "additions": 5,
+      "deletions": 2,
+      "changes": 7,
+      "blob_url": "https://github.com/JadePiat/hodpy/blob/0b555378a2a854cdf57310f950259608ff0f6f88/make_mocks%2Fmake_catalogue_snapshot_abacus.py",
+      "raw_url": "https://github.com/JadePiat/hodpy/raw/0b555378a2a854cdf57310f950259608ff0f6f88/make_mocks%2Fmake_catalogue_snapshot_abacus.py",
+      "contents_url": "https://api.github.com/repos/JadePiat/hodpy/contents/make_mocks%2Fmake_catalogue_snapshot_abacus.py?ref=0b555378a2a854cdf57310f950259608ff0f6f88",
+      "patch": "@@ -3,6 +3,9 @@\n import numpy as np\n from astropy.table import Table, vstack\n \n+import sys\n+sys.path.append('/global/homes/j/jpiat/hodpy/')\n+\n from hodpy.halo_catalogue import AbacusSnapshot\n from hodpy.galaxy_catalogue_snapshot import BGSGalaxyCatalogueSnapshotAbacus\n from hodpy.hod_bgs_abacus import HOD_BGS\n@@ -127,8 +130,8 @@ def join_files(path, photsys):\n \n     # location of the snapshots on NERSC\n     abacus_path = '/global/cfs/cdirs/desi/cosmosim/Abacus/AbacusSummit_base_c%03d_ph%03d/halos/z%.3f/'%(cosmo,phase,snapshot_redshift)\n-    \n-    output_path = '/pscratch/sd/a/amjsmith/AbacusSummit/secondgen_new/z%.3f/AbacusSummit_base_c%03d_ph%03d/'%(snapshot_redshift,cosmo,phase)\n+\n+    output_path = '/pscratch/sd/j/jpiat/Abacus_mocks/z%.3f/AbacusSummit_base_c%03d_ph%03d/cubic_box/wsys/%s/'%(snapshot_redshift,cosmo,phase,photsys)\n     \n     # each snapshot is split into 34 files\n     for file_number in range(34):"
+    }
+  ]
+}

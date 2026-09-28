@@ -1,0 +1,735 @@
+{
+  "sha": "14222dcf794b3bff68987bf8e271203db20f8730",
+  "url": "https://api.github.com/repos/JadePiat/hodpy/git/trees/14222dcf794b3bff68987bf8e271203db20f8730",
+  "tree": [
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7bbc71c09205c78d790739d246bbe4f9f1881c17",
+      "size": 1157,
+      "url": "https://api.github.com/repos/JadePiat/hodpy/git/blobs/7bbc71c09205c78d790739d246bbe4f9f1881c17"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fe969d296c6702125b69d4765ce91e337b26dd98",
+      "size": 1508,
+      "url": "https://api.github.com/repos/JadePiat/hodpy/git/blobs/fe969d296c6702125b69d4765ce91e337b26dd98"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "944ef667a6a0fa2ba0633e30188952a2d91fe329",
+      "size": 722,
+      "url": "https://api.github.com/repos/JadePiat/hodpy/git/blobs/944ef667a6a0fa2ba0633e30188952a2d91fe329"
+    },
+    {
+      "path": "hodpy",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "29e85b28b852e83a87be592f2a68992ba6514f45",
+      "url": "https://api.github.com/repos/JadePiat/hodpy/git/trees/29e85b28b852e83a87be592f2a68992ba6514f45"
+    },
+    {
+      "path": "hodpy/__init__.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "814415360ff4af3df9e7e9f249188d3ae4b03281",
+      "size": 28,
+      "url": "https://api.github.com/repos/JadePiat/hodpy/git/blobs/814415360ff4af3df9e7e9f249188d3ae4b03281"
+    },
+    {
+      "path": "hodpy/catalogue.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "64cab925dbb7c940aef2228ce2f511da5fc45d7e",
+      "size": 6786,
+      "url": "https://api.github.com/repos/JadePiat/hodpy/git/blobs/64cab925dbb7c940aef2228ce2f511da5fc45d7e"
+    },
+    {
+      "path": "hodpy/colour.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9be063b1e1f68a92bcbb251c8df5afa6d4240180",
+      "size": 18247,
+      "url": "https://api.github.com/repos/JadePiat/hodpy/git/blobs/9be063b1e1f68a92bcbb251c8df5afa6d4240180"
+    },
+    {
+      "path": "hodpy/cosmology.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "09a0214aea58232a79b39d01aed0bc931eb96434",
+      "size": 8327,
+      "url": "https://api.github.com/repos/JadePiat/hodpy/git/blobs/09a0214aea58232a79b39d01aed0bc931eb96434"
+    },
+    {
+      "path": "hodpy/galaxy_catalogue.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a2af718afa2546f5ee016cd3ace3e2d7a58ba04a",
+      "size": 13001,
+      "url": "https://api.github.com/repos/JadePiat/hodpy/git/blobs/a2af718afa2546f5ee016cd3ace3e2d7a58ba04a"
+    },
+    {
+      "path": "hodpy/galaxy_catalogue_snapshot.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "95b844c2fd0f785461f2afef9f63c4a39ab33c9f",
+      "size": 8145,
+      "url": "https://api.github.com/repos/JadePiat/hodpy/git/blobs/95b844c2fd0f785461f2afef9f63c4a39ab33c9f"
+    },
+    {
+      "path": "hodpy/halo_catalogue.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c4dfcb117a26a3514f41d2cc27eaee9ee9bd871d",
+      "size": 15430,
+      "url": "https://api.github.com/repos/JadePiat/hodpy/git/blobs/c4dfcb117a26a3514f41d2cc27eaee9ee9bd871d"
+    },
+    {
+      "path": "hodpy/hod.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "710898d14c8880e0fbd15a56e18f91c76d7dc3e5",
+      "size": 691,
+      "url": "https://api.github.com/repos/JadePiat/hodpy/git/blobs/710898d14c8880e0fbd15a56e18f91c76d7dc3e5"
+    },
+    {
+      "path": "hodpy/hod_bgs.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "145a03adc6a4543aa70b7a03f061e7fa1f1c782f",
+      "size": 31212,
+      "url": "https://api.github.com/repos/JadePiat/hodpy/git/blobs/145a03adc6a4543aa70b7a03f061e7fa1f1c782f"
+    },
+    {
+      "path": "hodpy/hod_bgs_abacus.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "12d03a530d56649e08675c121f79b4a5103ddec3",
+      "size": 31617,
+      "url": "https://api.github.com/repos/JadePiat/hodpy/git/blobs/12d03a530d56649e08675c121f79b4a5103ddec3"
+    },
+    {
+      "path": "hodpy/k_correction.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "826e529353578dd37d8848269d269536ded4ea74",
+      "size": 24141,
+      "url": "https://api.github.com/repos/JadePiat/hodpy/git/blobs/826e529353578dd37d8848269d269536ded4ea74"
+    },
+    {
+      "path": "hodpy/lookup.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "37a881843785f1e937172be20b2e5dbe9ea549e1",
+      "size": 4562,
+      "url": "https://api.github.com/repos/JadePiat/hodpy/git/blobs/37a881843785f1e937172be20b2e5dbe9ea549e1"
+    },
+    {
+      "path": "hodpy/luminosity_function.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0bb8c0857bb857dfe13cad2c415ebe2c09580d87",
+      "size": 13517,
+      "url": "https://api.github.com/repos/JadePiat/hodpy/git/blobs/0bb8c0857bb857dfe13cad2c415ebe2c09580d87"
+    },
+    {
+      "path": "hodpy/mass_function.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5aaac31e0c9cba8436607d9c1a14a87c10d4fb9a",
+      "size": 10248,
+      "url": "https://api.github.com/repos/JadePiat/hodpy/git/blobs/5aaac31e0c9cba8436607d9c1a14a87c10d4fb9a"
+    },
+    {
+      "path": "hodpy/power_spectrum.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7e0acd5bff703b67440b087fcbb3020202be1175",
+      "size": 7557,
+      "url": "https://api.github.com/repos/JadePiat/hodpy/git/blobs/7e0acd5bff703b67440b087fcbb3020202be1175"
+    },
+    {
+      "path": "hodpy/spline.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "de95a152b03c719c783a9988ac4050f9d488dcfa",
+      "size": 4070,
+      "url": "https://api.github.com/repos/JadePiat/hodpy/git/blobs/de95a152b03c719c783a9988ac4050f9d488dcfa"
+    },
+    {
+      "path": "input",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fd143a8ceed8a2577c35ca902af7372d46fe9ba0",
+      "url": "https://api.github.com/repos/JadePiat/hodpy/git/trees/fd143a8ceed8a2577c35ca902af7372d46fe9ba0"
+    },
+    {
+      "path": "input/halo_catalogue_small.hdf5",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "07698e0c3b323bc464c27f8e36fb1fb05bd53f91",
+      "size": 23352300,
+      "url": "https://api.github.com/repos/JadePiat/hodpy/git/blobs/07698e0c3b323bc464c27f8e36fb1fb05bd53f91"
+    },
+    {
+      "path": "input/snapshot_58_small.hdf5",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "02eade4e82f48a0c8fd46526cd5f5ee58ddb1250",
+      "size": 19128718,
+      "url": "https://api.github.com/repos/JadePiat/hodpy/git/blobs/02eade4e82f48a0c8fd46526cd5f5ee58ddb1250"
+    },
+    {
+      "path": "lookup",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "4a670d42a8aa23dba11be15a35d7557ef0bad5e2",
+      "url": "https://api.github.com/repos/JadePiat/hodpy/git/trees/4a670d42a8aa23dba11be15a35d7557ef0bad5e2"
+    },
+    {
+      "path": "lookup/abacus",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "92f3fb866cb180f0a2ac419ef1fb6b25ee3c2018",
+      "url": "https://api.github.com/repos/JadePiat/hodpy/git/trees/92f3fb866cb180f0a2ac419ef1fb6b25ee3c2018"
+    },
+    {
+      "path": "lookup/abacus/abacus_mass_functions_c000_ph000.hdf5",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cda3fc98f6db434a26bdf44132a69951dad4c947",
+      "size": 229152,
+      "url": "https://api.github.com/repos/JadePiat/hodpy/git/blobs/cda3fc98f6db434a26bdf44132a69951dad4c947"
+    },
+    {
+      "path": "lookup/abacus/central_fraction_c000_ph000_nowsys.npy",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "febee46f6397b6662626c0c59e060a7ebf88b165",
+      "size": 2000,
+      "url": "https://api.github.com/repos/JadePiat/hodpy/git/blobs/febee46f6397b6662626c0c59e060a7ebf88b165"
+    },
+    {
+      "path": "lookup/abacus/central_fraction_c000_ph000_wsys.npy",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "5a493cf0e27313eb135d43c5cd4edc994ead5be2",
+      "size": 2000,
+      "url": "https://api.github.com/repos/JadePiat/hodpy/git/blobs/5a493cf0e27313eb135d43c5cd4edc994ead5be2"
+    },
+    {
+      "path": "lookup/abacus/hod_fits_c000_ph000_nowsys.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fcf0ae51c982532af9607a4342755df02410e259",
+      "size": 432,
+      "url": "https://api.github.com/repos/JadePiat/hodpy/git/blobs/fcf0ae51c982532af9607a4342755df02410e259"
+    },
+    {
+      "path": "lookup/abacus/hod_fits_c000_ph000_wsys.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a5a9518571deb0d4fabd0360c2a8709fd85f31b9",
+      "size": 433,
+      "url": "https://api.github.com/repos/JadePiat/hodpy/git/blobs/a5a9518571deb0d4fabd0360c2a8709fd85f31b9"
+    },
+    {
+      "path": "lookup/abacus/mcmc_chains",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "77a9685e0740d25da0cbd896c1ffaf2e0614a585",
+      "url": "https://api.github.com/repos/JadePiat/hodpy/git/trees/77a9685e0740d25da0cbd896c1ffaf2e0614a585"
+    },
+    {
+      "path": "lookup/abacus/mcmc_chains/chain_ph000_c000_nowsys.npy",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "13f8241010b9298dd0bd985d5d2da20bfea6e75f",
+      "size": 73440128,
+      "url": "https://api.github.com/repos/JadePiat/hodpy/git/blobs/13f8241010b9298dd0bd985d5d2da20bfea6e75f"
+    },
+    {
+      "path": "lookup/abacus/mcmc_chains/chain_ph000_c000_wsys.npy",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6dcad6791d2225ca095ed82d647b4b7b0589f7ed",
+      "size": 73440128,
+      "url": "https://api.github.com/repos/JadePiat/hodpy/git/blobs/6dcad6791d2225ca095ed82d647b4b7b0589f7ed"
+    },
+    {
+      "path": "lookup/abacus/mcmc_chains/log_likelihood_ph000_c000_nowsys.npy",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3a3b82c9d3fdc4347f703d05f4aae5f6f18fdd79",
+      "size": 4320128,
+      "url": "https://api.github.com/repos/JadePiat/hodpy/git/blobs/3a3b82c9d3fdc4347f703d05f4aae5f6f18fdd79"
+    },
+    {
+      "path": "lookup/abacus/mcmc_chains/log_likelihood_ph000_c000_wsys.npy",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "477da7de64214b68079727a5058d4080eec65a9f",
+      "size": 4320128,
+      "url": "https://api.github.com/repos/JadePiat/hodpy/git/blobs/477da7de64214b68079727a5058d4080eec65a9f"
+    },
+    {
+      "path": "lookup/abacus/old",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b428074dfcdf32d434585af48e8190401a2bc467",
+      "url": "https://api.github.com/repos/JadePiat/hodpy/git/trees/b428074dfcdf32d434585af48e8190401a2bc467"
+    },
+    {
+      "path": "lookup/abacus/old/central_fraction_c000_ph000.npy",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c53fc896c5d89f6cea4b6724e1555926f7bd37ab",
+      "size": 2000,
+      "url": "https://api.github.com/repos/JadePiat/hodpy/git/blobs/c53fc896c5d89f6cea4b6724e1555926f7bd37ab"
+    },
+    {
+      "path": "lookup/abacus/old/central_magnitudes_c000_ph000_S.npy",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "dbb25a8e735947e38fd5bcd31a498e2158920460",
+      "size": 42120128,
+      "url": "https://api.github.com/repos/JadePiat/hodpy/git/blobs/dbb25a8e735947e38fd5bcd31a498e2158920460"
+    },
+    {
+      "path": "lookup/abacus/old/hod_fits_c000_ph000.txt",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3d785ebe964b6bd6c9fe96a1174f78799e12cf4d",
+      "size": 433,
+      "url": "https://api.github.com/repos/JadePiat/hodpy/git/blobs/3d785ebe964b6bd6c9fe96a1174f78799e12cf4d"
+    },
+    {
+      "path": "lookup/abacus/old/satellite_magnitudes_c000_ph000_S.npy",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9a77acb39d65e318ec84173536f47d09e07942f9",
+      "size": 28920128,
+      "url": "https://api.github.com/repos/JadePiat/hodpy/git/blobs/9a77acb39d65e318ec84173536f47d09e07942f9"
+    },
+    {
+      "path": "lookup/abacus/old/slide_factors_c000_ph000.dat",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "706d1f5c0387c987382a001f50b9e8ba3d879ad9",
+      "size": 59925,
+      "url": "https://api.github.com/repos/JadePiat/hodpy/git/blobs/706d1f5c0387c987382a001f50b9e8ba3d879ad9"
+    },
+    {
+      "path": "lookup/abacus/particles",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "40c305649d0fa64ce0cc1067a7e78f114a6ecefd",
+      "url": "https://api.github.com/repos/JadePiat/hodpy/git/trees/40c305649d0fa64ce0cc1067a7e78f114a6ecefd"
+    },
+    {
+      "path": "lookup/abacus/particles/N_c000_ph000.dat",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3ff7c1c1db040e48c41c39701c58858538e328d6",
+      "size": 850,
+      "url": "https://api.github.com/repos/JadePiat/hodpy/git/blobs/3ff7c1c1db040e48c41c39701c58858538e328d6"
+    },
+    {
+      "path": "lookup/abacus/particles/Nshells_c000_ph000.dat",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "50182f7adc59dd53eba3ce739bbdd6022b5b1df7",
+      "size": 34000,
+      "url": "https://api.github.com/repos/JadePiat/hodpy/git/blobs/50182f7adc59dd53eba3ce739bbdd6022b5b1df7"
+    },
+    {
+      "path": "lookup/abacus/slide_factors_c000_ph000_nowsys.dat",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9d32e776009370388462264beb0aa2d5bf90faca",
+      "size": 59925,
+      "url": "https://api.github.com/repos/JadePiat/hodpy/git/blobs/9d32e776009370388462264beb0aa2d5bf90faca"
+    },
+    {
+      "path": "lookup/abacus/slide_factors_c000_ph000_wsys.dat",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c9d6197c389591d43e7ab5aadc74b0258a94b027",
+      "size": 59925,
+      "url": "https://api.github.com/repos/JadePiat/hodpy/git/blobs/c9d6197c389591d43e7ab5aadc74b0258a94b027"
+    },
+    {
+      "path": "lookup/bgs",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "8541cbcf77c9579ad1a346beb8079b346734a1d5",
+      "url": "https://api.github.com/repos/JadePiat/hodpy/git/trees/8541cbcf77c9579ad1a346beb8079b346734a1d5"
+    },
+    {
+      "path": "lookup/bgs/bgs_N_cumulative_lf.dat",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a77e757d1860b4d1211b45a2665fa4ad4a45faca",
+      "size": 930767,
+      "url": "https://api.github.com/repos/JadePiat/hodpy/git/blobs/a77e757d1860b4d1211b45a2665fa4ad4a45faca"
+    },
+    {
+      "path": "lookup/bgs/bgs_S_cumulative_lf.dat",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ab26b16fe1b6333b7c346ded267dcb4f3d9aa2f9",
+      "size": 930800,
+      "url": "https://api.github.com/repos/JadePiat/hodpy/git/blobs/ab26b16fe1b6333b7c346ded267dcb4f3d9aa2f9"
+    },
+    {
+      "path": "lookup/bgs/bgs_samples_cumulative_lf_c000_ph000_nowsys.dat",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6fd118cfcc5a9e754a3cf35a65e6383e9c2bbb7d",
+      "size": 936000,
+      "url": "https://api.github.com/repos/JadePiat/hodpy/git/blobs/6fd118cfcc5a9e754a3cf35a65e6383e9c2bbb7d"
+    },
+    {
+      "path": "lookup/bgs/bgs_samples_cumulative_lf_c000_ph000_wsys.dat",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "086b989542ab43a05f8a31cd44ffa82a37623e85",
+      "size": 936000,
+      "url": "https://api.github.com/repos/JadePiat/hodpy/git/blobs/086b989542ab43a05f8a31cd44ffa82a37623e85"
+    },
+    {
+      "path": "lookup/bgs/gmr_colour_fits_N.hdf5",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ec96fb98f14e844e9d5315c15a41e37d813566ad",
+      "size": 392611,
+      "url": "https://api.github.com/repos/JadePiat/hodpy/git/blobs/ec96fb98f14e844e9d5315c15a41e37d813566ad"
+    },
+    {
+      "path": "lookup/bgs/gmr_colour_fits_S.hdf5",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "935eb764edad4bfc236c7459fd4c36371d968593",
+      "size": 389308,
+      "url": "https://api.github.com/repos/JadePiat/hodpy/git/blobs/935eb764edad4bfc236c7459fd4c36371d968593"
+    },
+    {
+      "path": "lookup/bgs/gmr_lookup_N_obs.hdf5",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c758d9f5ab02182a1d4c2b0cb7363664649bb9ea",
+      "size": 109910,
+      "url": "https://api.github.com/repos/JadePiat/hodpy/git/blobs/c758d9f5ab02182a1d4c2b0cb7363664649bb9ea"
+    },
+    {
+      "path": "lookup/bgs/gmr_lookup_N_rest.hdf5",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "364a66293f0521e08174f6a5c4d148c14f7aa2d5",
+      "size": 128971,
+      "url": "https://api.github.com/repos/JadePiat/hodpy/git/blobs/364a66293f0521e08174f6a5c4d148c14f7aa2d5"
+    },
+    {
+      "path": "lookup/bgs/gmr_lookup_S_obs.hdf5",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c7457e1405462a2d8fcb6af5ac3b261eb6ceb8f2",
+      "size": 122016,
+      "url": "https://api.github.com/repos/JadePiat/hodpy/git/blobs/c7457e1405462a2d8fcb6af5ac3b261eb6ceb8f2"
+    },
+    {
+      "path": "lookup/bgs/gmr_lookup_S_rest.hdf5",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1423a65e131f75db3dddb829377970f204476961",
+      "size": 144044,
+      "url": "https://api.github.com/repos/JadePiat/hodpy/git/blobs/1423a65e131f75db3dddb829377970f204476961"
+    },
+    {
+      "path": "lookup/bgs/jmext_kcorr_N_rband_z01.dat",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6875007f385158f9a5b666458b10daff099b7bfa",
+      "size": 1801,
+      "url": "https://api.github.com/repos/JadePiat/hodpy/git/blobs/6875007f385158f9a5b666458b10daff099b7bfa"
+    },
+    {
+      "path": "lookup/bgs/jmext_kcorr_S_rband_z01.dat",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "cf5adae1ecd74439181e388ab52d54f7d33e5feb",
+      "size": 1785,
+      "url": "https://api.github.com/repos/JadePiat/hodpy/git/blobs/cf5adae1ecd74439181e388ab52d54f7d33e5feb"
+    },
+    {
+      "path": "lookup/bgs/old",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cbc720627922f9be034a8f00965dc7290057417b",
+      "url": "https://api.github.com/repos/JadePiat/hodpy/git/trees/cbc720627922f9be034a8f00965dc7290057417b"
+    },
+    {
+      "path": "lookup/bgs/old/bgs_samples_cumulative_lf_c000_ph000.dat",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "f5a9b68093c4248e491a17d4e56d3ee828ad8ac6",
+      "size": 930511,
+      "url": "https://api.github.com/repos/JadePiat/hodpy/git/blobs/f5a9b68093c4248e491a17d4e56d3ee828ad8ac6"
+    },
+    {
+      "path": "lookup/bgs/old/bgs_target_cumulative_lf.dat",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2e4b1f3c9ef17ae45ce2dc2b3efd6ef3aae581d8",
+      "size": 930800,
+      "url": "https://api.github.com/repos/JadePiat/hodpy/git/blobs/2e4b1f3c9ef17ae45ce2dc2b3efd6ef3aae581d8"
+    },
+    {
+      "path": "lookup/gama",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "977a32500acc4ec27b0b8711b41011885d1eb370",
+      "url": "https://api.github.com/repos/JadePiat/hodpy/git/trees/977a32500acc4ec27b0b8711b41011885d1eb370"
+    },
+    {
+      "path": "lookup/gama/k_corr_rband_z01.dat",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "2b98bf4e8d1dc7619551ff837fdfd70e4ecb4ad1",
+      "size": 559,
+      "url": "https://api.github.com/repos/JadePiat/hodpy/git/blobs/2b98bf4e8d1dc7619551ff837fdfd70e4ecb4ad1"
+    },
+    {
+      "path": "lookup/gama/lf_params.dat",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "fb7b1c1acd79a0162b68cdf6adb6704ee004f035",
+      "size": 145,
+      "url": "https://api.github.com/repos/JadePiat/hodpy/git/blobs/fb7b1c1acd79a0162b68cdf6adb6704ee004f035"
+    },
+    {
+      "path": "lookup/mxxl",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "48e3a3b7278b34f54962811d4e6be31885a1d11c",
+      "url": "https://api.github.com/repos/JadePiat/hodpy/git/trees/48e3a3b7278b34f54962811d4e6be31885a1d11c"
+    },
+    {
+      "path": "lookup/mxxl/hod_params.dat",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b0afca000ce56ccb52f7d7e7a3fe158efb8da9c6",
+      "size": 593,
+      "url": "https://api.github.com/repos/JadePiat/hodpy/git/blobs/b0afca000ce56ccb52f7d7e7a3fe158efb8da9c6"
+    },
+    {
+      "path": "lookup/mxxl/mf_fits.dat",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "a53e32011504b8d91430a18ec289fe8a6b942be5",
+      "size": 1154,
+      "url": "https://api.github.com/repos/JadePiat/hodpy/git/blobs/a53e32011504b8d91430a18ec289fe8a6b942be5"
+    },
+    {
+      "path": "lookup/mxxl/mxxl_snapshots.dat",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "7dfb9c932787cfecefecfa9187d5424d70aba5db",
+      "size": 2530,
+      "url": "https://api.github.com/repos/JadePiat/hodpy/git/blobs/7dfb9c932787cfecefecfa9187d5424d70aba5db"
+    },
+    {
+      "path": "lookup/mxxl/slide_factors.dat",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0f429a427f020f436183ae6e91c1d6485b10950c",
+      "size": 59925,
+      "url": "https://api.github.com/repos/JadePiat/hodpy/git/blobs/0f429a427f020f436183ae6e91c1d6485b10950c"
+    },
+    {
+      "path": "lookup/mxxl/target_lf.dat",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6a158e55561d84a3a41e2605925c14375b3cef7e",
+      "size": 780052,
+      "url": "https://api.github.com/repos/JadePiat/hodpy/git/blobs/6a158e55561d84a3a41e2605925c14375b3cef7e"
+    },
+    {
+      "path": "lookup/sdss",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "eb906be9e2e5bbc7137ff6b3e4b54730e5f97ba6",
+      "url": "https://api.github.com/repos/JadePiat/hodpy/git/trees/eb906be9e2e5bbc7137ff6b3e4b54730e5f97ba6"
+    },
+    {
+      "path": "lookup/sdss/sdss_cumulative_lf.dat",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "113aaf6f4faca97a57202baf84a4a60eca0d99f9",
+      "size": 936000,
+      "url": "https://api.github.com/repos/JadePiat/hodpy/git/blobs/113aaf6f4faca97a57202baf84a4a60eca0d99f9"
+    },
+    {
+      "path": "lookup/uchuu",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "7632f99ce867fdbe6406c6e61406648d87dc87ac",
+      "url": "https://api.github.com/repos/JadePiat/hodpy/git/trees/7632f99ce867fdbe6406c6e61406648d87dc87ac"
+    },
+    {
+      "path": "lookup/uchuu/central_fraction_uchuu.npy",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "97a9cd914455312833e6750e9230ea04bff89dc7",
+      "size": 2000,
+      "url": "https://api.github.com/repos/JadePiat/hodpy/git/blobs/97a9cd914455312833e6750e9230ea04bff89dc7"
+    },
+    {
+      "path": "lookup/uchuu/central_fraction_uchuu_vpeak100.npy",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "15f48b8eb46daf2c248fdbc3932f38b1f2f12333",
+      "size": 2000,
+      "url": "https://api.github.com/repos/JadePiat/hodpy/git/blobs/15f48b8eb46daf2c248fdbc3932f38b1f2f12333"
+    },
+    {
+      "path": "make_mocks",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "91844f4414dc65c18107a127e1ea9ed58e72c9a2",
+      "url": "https://api.github.com/repos/JadePiat/hodpy/git/trees/91844f4414dc65c18107a127e1ea9ed58e72c9a2"
+    },
+    {
+      "path": "make_mocks/cut_sky_tools.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1f97a58c5e10dbf57b2cf1c93e60a5132bad8369",
+      "size": 31815,
+      "url": "https://api.github.com/repos/JadePiat/hodpy/git/blobs/1f97a58c5e10dbf57b2cf1c93e60a5132bad8369"
+    },
+    {
+      "path": "make_mocks/make_catalogue_cutsky_abacus.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d918a452cb367ca024f529c66bad23d0adf652e0",
+      "size": 6864,
+      "url": "https://api.github.com/repos/JadePiat/hodpy/git/blobs/d918a452cb367ca024f529c66bad23d0adf652e0"
+    },
+    {
+      "path": "make_mocks/make_catalogue_lightcone_mxxl.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0482c9a0cb4681d93980c0b8690022519084b8b2",
+      "size": 1534,
+      "url": "https://api.github.com/repos/JadePiat/hodpy/git/blobs/0482c9a0cb4681d93980c0b8690022519084b8b2"
+    },
+    {
+      "path": "make_mocks/make_catalogue_snapshot_abacus.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1ba6e5004e4a7c7cdd566b8feeeaad43dac3b1ff",
+      "size": 5125,
+      "url": "https://api.github.com/repos/JadePiat/hodpy/git/blobs/1ba6e5004e4a7c7cdd566b8feeeaad43dac3b1ff"
+    },
+    {
+      "path": "make_mocks/make_catalogue_snapshot_mxxl.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "255e9385f48b32cd6541e3b7b0e65bb277f6f255",
+      "size": 1379,
+      "url": "https://api.github.com/repos/JadePiat/hodpy/git/blobs/255e9385f48b32cd6541e3b7b0e65bb277f6f255"
+    },
+    {
+      "path": "test_scripts",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fa5ad03bc5e4ff2c1f535a395ac4fc0484fa8104",
+      "url": "https://api.github.com/repos/JadePiat/hodpy/git/trees/fa5ad03bc5e4ff2c1f535a395ac4fc0484fa8104"
+    },
+    {
+      "path": "test_scripts/abacus_mass_function.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "9779e61c41804e33fcf5f4b56388c9edfbcc665f",
+      "size": 841,
+      "url": "https://api.github.com/repos/JadePiat/hodpy/git/blobs/9779e61c41804e33fcf5f4b56388c9edfbcc665f"
+    },
+    {
+      "path": "test_scripts/bgs_colours.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "0442ff8b37d2a0b89f9e27bc8c71969e758f6af9",
+      "size": 4159,
+      "url": "https://api.github.com/repos/JadePiat/hodpy/git/blobs/0442ff8b37d2a0b89f9e27bc8c71969e758f6af9"
+    },
+    {
+      "path": "test_scripts/bgs_hod.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "339de84d12b190de57a86d3f0b9349bc65c6b544",
+      "size": 1758,
+      "url": "https://api.github.com/repos/JadePiat/hodpy/git/blobs/339de84d12b190de57a86d3f0b9349bc65c6b544"
+    },
+    {
+      "path": "test_scripts/bgs_kcorrection.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "774e1e4f84efe3ee5b2c4975a9da8befb821afd5",
+      "size": 1880,
+      "url": "https://api.github.com/repos/JadePiat/hodpy/git/blobs/774e1e4f84efe3ee5b2c4975a9da8befb821afd5"
+    },
+    {
+      "path": "test_scripts/bgs_luminosity_function.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d53376f69273d23634d8c32b913fd751a412da40",
+      "size": 2413,
+      "url": "https://api.github.com/repos/JadePiat/hodpy/git/blobs/d53376f69273d23634d8c32b913fd751a412da40"
+    },
+    {
+      "path": "tools",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "beed3b3db6859bd880d8b494a180a97642accff7",
+      "url": "https://api.github.com/repos/JadePiat/hodpy/git/trees/beed3b3db6859bd880d8b494a180a97642accff7"
+    },
+    {
+      "path": "tools/add_magnitudes_colours.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "341559b417bd51b8c357c04c281fe4b550916060",
+      "size": 2853,
+      "url": "https://api.github.com/repos/JadePiat/hodpy/git/blobs/341559b417bd51b8c357c04c281fe4b550916060"
+    },
+    {
+      "path": "tools/get_mass_function.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "d7ccc8c34dded953e03b7bb9b655f30903fd34ef",
+      "size": 4476,
+      "url": "https://api.github.com/repos/JadePiat/hodpy/git/blobs/d7ccc8c34dded953e03b7bb9b655f30903fd34ef"
+    },
+    {
+      "path": "tools/uchuu_central_fraction.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ca64abb75e4e7b9b054bbda94c15796d3a2befe0",
+      "size": 2568,
+      "url": "https://api.github.com/repos/JadePiat/hodpy/git/blobs/ca64abb75e4e7b9b054bbda94c15796d3a2befe0"
+    },
+    {
+      "path": "tools/update_lookup_files_for_new_hod.py",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "eac516e77d5449549aee4175bd9d4e00da7ab0ec",
+      "size": 4074,
+      "url": "https://api.github.com/repos/JadePiat/hodpy/git/blobs/eac516e77d5449549aee4175bd9d4e00da7ab0ec"
+    }
+  ],
+  "truncated": false
+}
