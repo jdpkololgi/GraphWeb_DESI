@@ -1,19 +1,39 @@
 # Active Workflow Index
 
-## P12-A Loa provisional delivery (2026-09-28)
+## P12-A Loa provisional delivery (updated 2026-10-05)
 
 The existing full-survey halo48 VAC is technically complete and provisional.
 Current work preserves its trained model, original mocks, selection and posterior
-values. Mock-repair investigation is stopped by user direction.
+values. Mock-repair investigation is stopped by user direction. Developer
+interface, FITS columns, quality bits, and pitfalls:
+`docs/p12a_vac_operations.md`.
 
 - Release notes and limitations: `docs/p12a_provisional_release_20260928.md`.
-- Read-only atlas/integrity entrypoint: `workflows/p12a_vac/visual_atlas.py`.
+- Read-only spatial atlas: `workflows/p12a_vac/visual_atlas.py`.
 - Parent roadmap: `../TNG/Illustris/docs/plan_desi_p12a_vac_20260924.md`.
+- Chronological handoff log: `docs/p12a_vac_execution.md`.
 - Original production evidence: `docs/evidence/p12a_loa_full_20260925/`.
+- Preflight (no catalogue open): `workflows/catalog/p12a_vac_preflight.py`.
+  Exit 2 means handoff gates are still open.
+- Canary (16 geometry-selected cores): `workflows/p12a_vac/loa_trial.py`
+  stages `prepare`, `finalize`, `infer`.
+- Full-survey provisional VAC: `workflows/p12a_vac/production.py` stages
+  `plan`, `benchmark`, `worker`, `merge`. Slurm wrapper
+  `workflows/p12a_vac/run_production.sh` runs the frozen copy under the run
+  root, not the live git tree.
+- Both products set `science_release_ready: false`. Every row has quality
+  bit 32. The merged catalogue also sets bit 64 for `Z >= 0.35` (unresolved
+  mock–Loa count excess; not a correction).
+- Property and field follow-ups are read-only. They do not replace the VAC:
+  CIGALE join (`docs/p12a_loa_cigale_20260929.md`), matched CFM comparison
+  and the offline 3D viewer (`workflows/p12a_vac/field_property_environment.py`,
+  `workflows/p12a_vac/loa_field_viewer.py`).
 
 Real-DESI coverage is unverified. Known high-redshift population mismatch remains;
 no physical-evolution claim or automatic low-redshift certification is warranted.
-Historical workflow listings below do not replace the frozen P12-A VAC.
+The alignment plan is retained evidence, not an active execution queue.
+Legacy GAT/Gudhi/Jraph/FlowJAX workflows below remain usable for their
+historical scope. They do not build P12 count/response fields.
 
 This file is the Phase 0 quick reference for what to run in this repository now.
 For scratch layout, conda envs, and Perlmutter job recipes, see `~/.claude/CLAUDE.md`;
