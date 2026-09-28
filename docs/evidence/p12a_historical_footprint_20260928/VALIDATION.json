@@ -1,0 +1,7 @@
+{
+  "nested_area_and_count_checks": true,
+  "finite_densities": true,
+  "sample_flag_disagreements": 0,
+  "tile_radius_deg": 1.6280324520485583,
+  "desimodel_footprint_sha256": "b705c969aeb8a2c42c3eb48423aaf32bb98fef16447fa939374f9b231f8a900c"
+}
