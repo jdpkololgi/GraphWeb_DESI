@@ -124,3 +124,9 @@ before long-term distribution; this step has not copied them to shared storage.
 Further work in this stream is provisional delivery/documentation, not mock
 repair. Renewed training or scientific qualification would require a separate
 explicit decision and validation programme.
+
+## Galaxy-property follow-up
+
+[Current VAC versus saved CIGALE wedge properties](p12a_cigale_environment_20260928.md)
+provides raw and mass/redshift-controlled star-formation comparisons. This
+property cross-check does not change the VAC or its provisional status.
