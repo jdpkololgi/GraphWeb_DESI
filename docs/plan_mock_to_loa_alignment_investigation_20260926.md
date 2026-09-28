@@ -582,3 +582,13 @@ comparison and ph000 photometry fingerprints before controlled regeneration.
 See `p12a_canonical_v1_provenance_20260928.md` for pinned branches, the distinct
 E-correction/LF prescriptions and velocity-branch caveats. No numerical replay
 or production lineage closure claimed; no need to wait for personal correspondence.
+
+### Alex upstream and ph000 photometric replay (2026-09-28)
+
+Alex/Jade abacus heads identical14222dcf; November2024 ancestor differs only in
+an unrelated Uchuu table. Deterministic58,825-row canonicalv1 ph000 replay:
+DESI N/S colour mapping RMS9.61e-8mag; inferred split matches DEC32.375,
+apparent magnitude RMS5.95e-5mag with approximate native distance and Q=.67.
+See canonical-v1 report and replay RESULTS.json. W2 photometric source now
+numerically identified for this sample; full production/HOD lineage remains
+open. Next isolate HOD/LF vs photometry contributions with fixed-parent controls.

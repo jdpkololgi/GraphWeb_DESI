@@ -66,3 +66,46 @@ No new numerical catalogue test, generation, correction or retraining occurred
 in this source-provenance pass. The exact executed recipe remains unresolved.
 GitHub API branch/tree/diff responses are retained under
 `evidence/p12a_canonical_v1_provenance_20260928/`.
+
+## Alex upstream comparison and numerical replay (2026-09-28)
+
+Alex's https://github.com/amjsmith/hodpy/tree/abacus resolves to EXACTLY the
+same commit as Jade's abacus branch: 14222dcf794b3bff68987bf8e271203db20f8730.
+The newer BGS prescription is upstream Alex code, not a Jade-specific change.
+GitHub comparison of pre-file ancestor a2473ad to that head changes only
+`lookup/uchuu/central_fraction_uchuu.npy`; the BGS code/tables are unchanged.
+Branch and comparison responses are preserved in
+`evidence/p12a_canonical_v1_replay_20260928/`.
+
+Ran `workflows/p12a_vac/replay_v1_photometry.py` on CPU59007827/nid004176.
+Every1000th row of the 74,748,522-row ph000 file, then .15<=Z<.55, gives58,825
+rows spanning the file (not a sky-prefix sample). No new phases exposed.
+Bundled BSD-licensed upstream K-correction source and N/S tables are hashed in
+RESULTS.json. Colour tests are independent of cosmology; magnitude distances
+use approximate flat LCDM c000 in Mpc/h, not an exact CLASS replay.
+
+Single-region mappings fail globally: colour RMS .04122N/.02467S mag.
+Selecting the lower colour residual per row gives13,283N/45,542S, with
+colour RMS9.61e-8mag, max3.04e-6mag. Those labels separate at DEC32.375:
+N minimum32.37818, S maximum32.37301. This motivated an explicit fixed-declination
+replay check, recorded separately in RESULTS.json rather than treating per-row
+fitted choices as an independently specified selection.
+
+With these labels, apparent magnitude RMS5.95e-5mag, max1.03e-4mag for the
+upstream observed-redshift luminosity distance and Q=.67 prescription.
+The24,195 sampled r<19.5 rows have colour RMS5.14e-8mag and magnitude
+RMS5.10e-5mag. Small magnitude residuals are consistent with the approximate
+distance calculation, but that explanation is not yet a verified exact replay.
+
+Conclusion: strong numerical identification of canonical-v1 DESI N/S
+photometric mapping in Alex's abacus branch. This does NOT establish the executed
+HOD fit, random seed, complete generation history, Loa selection parity, or
+which change accounts quantitatively for the high-z population gain.
+Next: isolate HOD/LF versus photometric effects with fixed-parent comparisons;
+verify exact distance and original N/S assembly before regenerating a suite.
+
+Final fixed DEC>32.375 check has ZERO label disagreements and identical residuals.
+The alternative mixed z_cosmo/z_obs luminosity distance yields .01022mag RMS
+(max .09278), substantially worse than upstream z_obs. All three bounded
+steps completed0 (20s/19s/19s); allocation released. Finite-value and shell-count
+assertions passed. No fitting, regeneration or VAC changes.
