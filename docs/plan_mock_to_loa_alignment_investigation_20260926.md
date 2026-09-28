@@ -656,3 +656,15 @@ only sensitivity. Generic prepare_mocks_Y3 currently exits early/incomplete BGS;
 retain BRIGHT-specific adapter. HOLI explicitly n(z)-matches but uses some dummy
 absolute magnitudes; not a direct replacement training product. DA3/DA2 wrappers
 can still target Loa. No recipe changes to queued59013807 or VAC qualification.
+
+### Independent LF diagnostic executed (2026-09-28)
+
+See p12a_published_lf_20260928.md. Four published r-band LF tables compared
+with both generator branches after cumulative-to-differential conversion.
+wsys/reference ratios ~.88–.96 around -22<M<-20, but .097–.217 for -24<M<-23.
+Nominal units/reference redshift aligned; photometry/K/E equivalence remains open.
+This input-table result does not explain realised v1 excess by itself. Global
+Q=.67→.78 gives -.044mag at z=.5 but a 1.51 cumulative response at hypothetical
+Mlimit=-23: steepness amplifies small mapping changes. No survey-count prediction
+or repair inferred. Next: realised parent LF versus input table in complete
+cells; fixed-row Q/K separation and independent Loa luminosity calibration.
