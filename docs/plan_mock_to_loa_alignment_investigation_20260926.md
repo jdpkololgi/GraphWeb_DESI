@@ -684,3 +684,18 @@ exactly reproduce prior histograms. Keep existing frozen model for provisional
 release, canonicalv1 as preferred replacement candidate, not yet validated.
 Do not modify Loa merely to match mocks. Realised LF closure, independent Loa
 luminosities and selected-stage/clustering/truth validation remain open.
+
+### Historical IN_Y5 geometry tested (2026-09-28)
+
+Ashley/Arnaud thread supplied by user motivated exact historical BRIGHT tile
+replay. See p12a_historical_footprint_20260928.md. CPU59018519 ph000 stride20:
+all347202 sampled selected old-parent IN_Y5 flags agree with reconstructed
+membership. Historical intersection removes common area0.330%SGC/0.192%NGC;
+NSIDE512/1024 area quadrature agrees within0.006%. Counts normalized by identical
+geometric shell volumes retain old high-z ratios .541/.582; interior .532/.582.
+v1 surplus persists1.534/1.545, interior1.492/1.537. Geometry bug is real but
+not sufficient for our existing common-sky deficit. No primary Loa correction.
+Fine-bin densities/counts and provenance pinned; official random-derived
+subpixel effective-volume and full forFA parity are not claimed closed.
+Continue upstream LF/photometry diagnosis without assigning this residual to
+LF alone. Provisional VAC release decision unchanged.
