@@ -636,3 +636,8 @@ next tests: selected-stage repeat, independent luminosity conventions, then
 clustering/galaxy-matter validation. No production correction or retraining.
 Original forward step59010842.0 was cancelled despite live allocation; replay
 remains incomplete. Never equate allocation RUNNING with active stage work.
+
+Prepared-stage durable handoff submitted as batch59013807; source revision
+54588a8, checked live-source hashes, upstream LSS d942b990. Two-row imaging
+kernel smoke passed; batch runs preparation+validation only. Require output
+PREPARATION_READY.json before ledger/assignment continuation. No automatic retry.

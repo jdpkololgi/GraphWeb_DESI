@@ -1,0 +1,256 @@
+v0.1 0
+v0.1 2000000
+v0.1 4000000
+v0.1 6000000
+v0.1 8000000
+v0.1 10000000
+v0.1 12000000
+v0.1 14000000
+v0.1 16000000
+v0.1 18000000
+v0.1 20000000
+v0.1 22000000
+v0.1 24000000
+v0.1 26000000
+v0.1 28000000
+v0.1 30000000
+v0.1 32000000
+v0.1 34000000
+v0.1 36000000
+v0.1 38000000
+v0.1 40000000
+v0.1 42000000
+v0.1 44000000
+v0.1 46000000
+v0.1 48000000
+v0.1 50000000
+v0.1 52000000
+v0.1 54000000
+v0.1 56000000
+v0.1 58000000
+v0.1 60000000
+v0.1 62000000
+v1 0
+v1 2000000
+v1 4000000
+v1 6000000
+v1 8000000
+v1 10000000
+v1 12000000
+v1 14000000
+v1 16000000
+v1 18000000
+v1 20000000
+v1 22000000
+v1 24000000
+v1 26000000
+v1 28000000
+v1 30000000
+v1 32000000
+v1 34000000
+v1 36000000
+v1 38000000
+v1 40000000
+v1 42000000
+v1 44000000
+v1 46000000
+v1 48000000
+v1 50000000
+v1 52000000
+v1 54000000
+v1 56000000
+v1 58000000
+v1 60000000
+v1 62000000
+v1 64000000
+v1 66000000
+v1 68000000
+v1 70000000
+v1 72000000
+v1 74000000
+/global/u2/d/dkololgi/GraphWeb_DESI/workflows/p12a_vac/joint_colour_luminosity.py:32: RuntimeWarning: divide by zero encountered in divide
+  ps=np.char.strip(d['PHOTSYS'].astype('U'));w=d['WEIGHT_ZFAIL']/(d['FRACZ_TILELOCID']*d['FRAC_TLOBS_TILES'])
+loa 0
+loa 2000000
+loa 4000000
+loa 6000000
+loa 8000000
+loa 10000000
+[
+  {
+    "mock": "v0.1",
+    "photsys": "S",
+    "zlo": 0.15,
+    "zhi": 0.25,
+    "count_ratio": 1.0453415979419327,
+    "matched_cells": 274,
+    "loa_weight_fraction_retained": 0.992967367970024,
+    "mean_colour_mock_minus_loa": 0.013709943935613957,
+    "colour_total_variation": 0.06599264791006615
+  },
+  {
+    "mock": "v0.1",
+    "photsys": "S",
+    "zlo": 0.25,
+    "zhi": 0.35,
+    "count_ratio": 0.9795343765157887,
+    "matched_cells": 185,
+    "loa_weight_fraction_retained": 0.989567826820625,
+    "mean_colour_mock_minus_loa": 0.027831074753795967,
+    "colour_total_variation": 0.0954325739990589
+  },
+  {
+    "mock": "v0.1",
+    "photsys": "S",
+    "zlo": 0.35,
+    "zhi": 0.44999999999999996,
+    "count_ratio": 0.8457983711748064,
+    "matched_cells": 111,
+    "loa_weight_fraction_retained": 0.9701698152920545,
+    "mean_colour_mock_minus_loa": -0.022382618460721808,
+    "colour_total_variation": 0.07874671498481436
+  },
+  {
+    "mock": "v0.1",
+    "photsys": "S",
+    "zlo": 0.44999999999999996,
+    "zhi": 0.55,
+    "count_ratio": 0.5328506837162696,
+    "matched_cells": 40,
+    "loa_weight_fraction_retained": 0.8001366334673294,
+    "mean_colour_mock_minus_loa": -0.10693218977279437,
+    "colour_total_variation": 0.26115824242083907
+  },
+  {
+    "mock": "v0.1",
+    "photsys": "N",
+    "zlo": 0.15,
+    "zhi": 0.25,
+    "count_ratio": 1.0605923603412286,
+    "matched_cells": 244,
+    "loa_weight_fraction_retained": 0.9873002500400108,
+    "mean_colour_mock_minus_loa": -0.029960587921558375,
+    "colour_total_variation": 0.04574154213801765
+  },
+  {
+    "mock": "v0.1",
+    "photsys": "N",
+    "zlo": 0.25,
+    "zhi": 0.35,
+    "count_ratio": 1.007648319148987,
+    "matched_cells": 161,
+    "loa_weight_fraction_retained": 0.9817454198913971,
+    "mean_colour_mock_minus_loa": -0.013813174443540514,
+    "colour_total_variation": 0.07724316090669867
+  },
+  {
+    "mock": "v0.1",
+    "photsys": "N",
+    "zlo": 0.35,
+    "zhi": 0.44999999999999996,
+    "count_ratio": 0.9793284186538126,
+    "matched_cells": 89,
+    "loa_weight_fraction_retained": 0.9454200257408802,
+    "mean_colour_mock_minus_loa": -0.046643446185560086,
+    "colour_total_variation": 0.12343091179654722
+  },
+  {
+    "mock": "v0.1",
+    "photsys": "N",
+    "zlo": 0.44999999999999996,
+    "zhi": 0.55,
+    "count_ratio": 0.674386688475932,
+    "matched_cells": 20,
+    "loa_weight_fraction_retained": 0.609683175410941,
+    "mean_colour_mock_minus_loa": -0.08106037129385751,
+    "colour_total_variation": 0.24604776165366565
+  },
+  {
+    "mock": "v1",
+    "photsys": "S",
+    "zlo": 0.15,
+    "zhi": 0.25,
+    "count_ratio": 1.1432118474404918,
+    "matched_cells": 286,
+    "loa_weight_fraction_retained": 0.9959671596754684,
+    "mean_colour_mock_minus_loa": -0.0062493303614651755,
+    "colour_total_variation": 0.023017200348625894
+  },
+  {
+    "mock": "v1",
+    "photsys": "S",
+    "zlo": 0.25,
+    "zhi": 0.35,
+    "count_ratio": 1.145912528712907,
+    "matched_cells": 193,
+    "loa_weight_fraction_retained": 0.9923657025266994,
+    "mean_colour_mock_minus_loa": -0.0031631985471912644,
+    "colour_total_variation": 0.05240703263762349
+  },
+  {
+    "mock": "v1",
+    "photsys": "S",
+    "zlo": 0.35,
+    "zhi": 0.44999999999999996,
+    "count_ratio": 1.1953554421174677,
+    "matched_cells": 123,
+    "loa_weight_fraction_retained": 0.9803150812235306,
+    "mean_colour_mock_minus_loa": -0.01835042968434826,
+    "colour_total_variation": 0.08029127745775547
+  },
+  {
+    "mock": "v1",
+    "photsys": "S",
+    "zlo": 0.44999999999999996,
+    "zhi": 0.55,
+    "count_ratio": 1.4677333941048512,
+    "matched_cells": 60,
+    "loa_weight_fraction_retained": 0.9103109004332429,
+    "mean_colour_mock_minus_loa": -0.06776210552987702,
+    "colour_total_variation": 0.19978074110083135
+  },
+  {
+    "mock": "v1",
+    "photsys": "N",
+    "zlo": 0.15,
+    "zhi": 0.25,
+    "count_ratio": 1.1149557267280328,
+    "matched_cells": 246,
+    "loa_weight_fraction_retained": 0.9882036645186497,
+    "mean_colour_mock_minus_loa": -0.0005193259447211921,
+    "colour_total_variation": 0.03269074875290608
+  },
+  {
+    "mock": "v1",
+    "photsys": "N",
+    "zlo": 0.25,
+    "zhi": 0.35,
+    "count_ratio": 1.0771551838634916,
+    "matched_cells": 166,
+    "loa_weight_fraction_retained": 0.9854075459501596,
+    "mean_colour_mock_minus_loa": 0.01076818833129406,
+    "colour_total_variation": 0.07602468164446402
+  },
+  {
+    "mock": "v1",
+    "photsys": "N",
+    "zlo": 0.35,
+    "zhi": 0.44999999999999996,
+    "count_ratio": 1.2713671815252545,
+    "matched_cells": 95,
+    "loa_weight_fraction_retained": 0.9572426151044756,
+    "mean_colour_mock_minus_loa": -0.0025766616906245203,
+    "colour_total_variation": 0.10890607366956435
+  },
+  {
+    "mock": "v1",
+    "photsys": "N",
+    "zlo": 0.44999999999999996,
+    "zhi": 0.55,
+    "count_ratio": 1.764589407408321,
+    "matched_cells": 33,
+    "loa_weight_fraction_retained": 0.7751370733264152,
+    "mean_colour_mock_minus_loa": -0.09520735374748959,
+    "colour_total_variation": 0.2672507266980173
+  }
+]
