@@ -536,6 +536,37 @@ python galaxy_catalog.py --help
 python investigate_edges.py --help
 ```
 
+### P12-A Loa FMPE VAC
+
+Provisional halo48 posterior on Loa BGS. Not a replacement for the GAT pickle
+or the Jraph/FlowJAX wedge npz. Column legend, quality bits, and the script
+map: `docs/p12a_vac_operations.md`.
+
+Canary (file path required; `prepare` will not overwrite `INPUTS_READY.json`):
+
+```bash
+PY=/pscratch/sd/d/dkololgi/conda/envs/cosmic_env/bin/python
+ROOT=/pscratch/sd/d/dkololgi/graphweb_desi/outputs/p12a_loa_canary_20260925_v1
+$PY workflows/p12a_vac/loa_trial.py prepare  --root "$ROOT"
+$PY workflows/p12a_vac/loa_trial.py finalize --root "$ROOT"
+$PY workflows/p12a_vac/loa_trial.py infer    --root "$ROOT"
+```
+
+Full survey (`plan` will not overwrite `PLAN.json`; workers verify the frozen
+copy under `$ROOT/source`, not the git checkout):
+
+```bash
+ROOT=/pscratch/sd/d/dkololgi/graphweb_desi/outputs/p12a_loa_full_20260925_v1
+$PY workflows/p12a_vac/production.py plan   --root "$ROOT"
+$PY workflows/p12a_vac/production.py worker --root "$ROOT" --part "$SLURM_ARRAY_TASK_ID"
+$PY workflows/p12a_vac/production.py merge  --root "$ROOT"
+```
+
+`workflows/p12a_vac/run_production.sh` is the Perlmutter array/merge wrapper.
+It sets `ILLUSTRIS_ROOT` to the frozen candidate snapshot. Completion without
+`science_release_ready: true` is still not a science release. Alignment
+scripts under `workflows/p12a_vac/alignment_*.py` are read-only diagnostics.
+
 ### NERSC helper scripts
 
 These are login-node sanity checks, not pipeline stages:
@@ -583,6 +614,13 @@ These are login-node sanity checks, not pipeline stages:
 | Wedge GNN arrays do not match `JRAPH_INPUTS_expanded_wedge.txt` | cuGraph default prefix is `desi_delaunay_cugraph`; validated products use `--out-prefix desi_bgs_cugraph`. |
 | Maglim rebuild read a different zall | `build_bgs_maglim_catalog.py` defaults to the public DR2 zall; `load_catalog.py` uses `DESI_ZCAT_FILE` (collaboration redux). |
 | `load_catalog.py` dies on a missing FastSpecFit file | Input list is hard-coded (`FASTSPEC_CATALOGS`), not a glob of `--fastspec-path`. |
+| P12-A preflight exits 2 after hashes match | Expected while handoff/release gates are open. See `docs/p12a_vac_operations.md`. |
+| P12-A worker rejects the git tree you just edited | `run_production.sh` executes `$ROOT/source/...` and checks `SOURCE_MANIFEST.json`. |
+| `from production_inference import *` fails | Run `python workflows/p12a_vac/production.py`. `python -m` does not put that directory on `sys.path`. |
+| Full-survey FITS used as a release catalogue | Header `PROVIS`/`SELSHIFT`; quality bit 32 on every row; bit 64 for `Z>=0.35`. `science_release_ready` is false. |
+| P12-A class names disagree with GAT | Receipt `class_order` is void/sheet/filament/knot. GAT columns say wall/cluster for indices 1 and 3. |
+| Shard JSON schema says `canary-vac-v1` | Production parts reuse that schema string. The full-survey marker is `FULL_VAC_COMPLETE.json`. |
+| Loa source audit refuses on a login node | `p12a_loa_source_audit.py` requires `SLURM_JOB_ID` and a `nid` hostname. |
 
 ## Notes
 

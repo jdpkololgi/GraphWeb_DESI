@@ -74,6 +74,22 @@ domain-adaptation flags, cluster-deficit diagnostic index, and common pitfalls.
 Launch recipes also live in `RUNBOOK.md` (including the Perlmutter Slurm chain
 for Gudhi/cuGraph/wedge stages and the expanded-wedge Jraph wrapper).
 
+### D. P12-A FMPE Loa VAC (current application baseline)
+
+Use this stack for the frozen halo48 posterior on Loa BGS, not for the GAT
+pickle or the wedge npz products above. Interface and quality-bit legend:
+`docs/p12a_vac_operations.md`.
+
+1. Observer selection and Planck18 lattice: `workflows/catalog/p12a_observation_patch.py`
+   (`ZWARN==0`, `DELTACHI2>=25`, `SPECTYPE=GALAXY`; output `0.15<=z<0.55`).
+2. Canary: `workflows/p12a_vac/loa_trial.py` (`prepare`, `finalize`, `infer`).
+3. Full survey: `workflows/p12a_vac/production.py` (`plan`, `benchmark`, `worker`, `merge`).
+
+The merged FITS is `DESI_LOA_P12A_HALO48_FULL_SURVEY_VAC.fits` with
+`PROVIS=True`. `science_release_ready` stays false while the mock–Loa
+selection shift is unresolved. Alignment diagnostics under
+`workflows/p12a_vac/alignment_*.py` do not rewrite that catalogue.
+
 ## Quick start
 
 Run from repo root:

@@ -1,17 +1,30 @@
 # Active Workflow Index
 
-## P12-A Loa application (2026-09-24)
+## P12-A Loa application (updated 2026-09-28)
 
-Implemented first entrypoint: `workflows/catalog/p12a_vac_preflight.py` for
-bounded frozen-artifact verification, archived Loa metadata inventory and
-conservative phase-use ledger. Commands and V1 crosswalk:
-`docs/p12a_vac_execution.md`. This is not an inference/coordinate-pass marker.
+Current DESI application of the frozen Illustris U-PATCH + P12-A FMPE posterior.
+Developer interface, FITS columns, quality bits, and pitfalls:
+`docs/p12a_vac_operations.md`. Chronological handoff log:
+`docs/p12a_vac_execution.md`. Science plan:
+`../TNG/Illustris/docs/plan_desi_p12a_vac_20260924.md`.
 
-Active plan: `../TNG/Illustris/docs/plan_desi_p12a_vac_20260924.md`.
-Implement the frozen U-PATCH/P12-A manifest, Loa input/response crosswalk and
-golden-mock replay before the bounded real-data trial. No validated new inference
-entrypoint is asserted yet. Legacy GAT/Gudhi/Jraph workflows below remain usable
-for their historical scope; they do not implement this new posterior handoff.
+- Preflight (no catalogue open): `workflows/catalog/p12a_vac_preflight.py`.
+  Exit 2 means handoff gates are still open.
+- Canary (16 geometry-selected cores): `workflows/p12a_vac/loa_trial.py`
+  stages `prepare`, `finalize`, `infer`.
+- Full-survey provisional VAC: `workflows/p12a_vac/production.py` stages
+  `plan`, `benchmark`, `worker`, `merge`. Slurm wrapper
+  `workflows/p12a_vac/run_production.sh` runs the frozen copy under the run
+  root, not the live git tree.
+- Both products set `science_release_ready: false`. Every row has quality
+  bit 32. The merged catalogue also sets bit 64 for `Z >= 0.35` (unresolved
+  mock–Loa count excess; not a correction).
+- Active science follow-up is the mock-to-Loa alignment investigation
+  (`docs/plan_mock_to_loa_alignment_investigation_20260926.md`), not a new
+  inference entrypoint. Alignment scripts are read-only.
+
+Legacy GAT/Gudhi/Jraph/FlowJAX workflows below remain usable for their
+historical scope. They do not build P12 count/response fields.
 Slurm, reserved phase-access and science-release gates remain in force.
 
 This file is the Phase 0 quick reference for what to run in this repository now.
