@@ -58,3 +58,6 @@ graphify-out/
 
 # Machine-local fonts (one-time IBM Plex install per PLOT_STYLE_GUIDE.md §2.3)
 assets/fonts/
+
+# Generated SBI TensorBoard training logs
+/sbi-logs/FMPE/
