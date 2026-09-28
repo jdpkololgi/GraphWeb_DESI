@@ -1,0 +1,5 @@
+{
+  "script_sha256": "2971697c059a261e019cc7e6124bd728e7d9fa0a553700cb89566cc62170fb2b",
+  "job_id": "59022935",
+  "scope": "No new model inference, retraining or phase access; saved ph006 and observational VAC only"
+}
