@@ -18,9 +18,11 @@ Guidance for Claude Code / automation agents working in this repository.
 This repository processes DESI (Dark Energy Spectroscopic Instrument) BGS
 (Bright Galaxy Survey) galaxy catalogs and applies graph neural network models
 trained on simulations to infer cosmic-web environments for observed galaxies.
-It currently contains two analysis paths: a PyTorch GAT classifier for
-VAC-style environment labels and a Gudhi/cuGraph/Jraph wedge workflow for
-Abacus-parity eigenvalue regression.
+It currently contains four analysis paths: a PyTorch GAT classifier for
+historical VAC-style environment labels, a Gudhi/cuGraph/Jraph wedge workflow
+for Abacus-parity eigenvalue regression, a FlowJAX/SBI wedge posterior path,
+and the current P12-A FMPE Loa VAC (`docs/p12a_vac_operations.md`). The P12-A
+full-survey FITS is provisional (`science_release_ready` false).
 
 ## Running the Pipeline
 
