@@ -72,3 +72,13 @@ Operational follow-up: stopped step59009604.5 before the upstream masking
 Pool(default128workers) would hit the same forkserver recursion. Current
 adapter pins fork and8workers in both masking calls; rerun log prepare_fork.log.
 Initial/second attempt logs retained; no scientific setting changed by this fix.
+
+Further source lead: https://astro.dur.ac.uk/~cole/BGS/LFs.html supplies Moore
+et al.(2026) North/South g,r,z,w1 luminosity functions (Vmax and SWML), including
+red/blue subsamples. These are an independent published population-model check,
+not evidence that the November2024 canonical file used the published tables.
+No replacement LF or calibration to Loa was applied.
+
+Comparison figure: docs/figures/p12a_loa_completeness_20260928/counts.png/pdf,
+created by plot_loa_completeness.py using canonical plot style and inspected.
+Uniform observed histogram replay against previous evidence passes exactly.

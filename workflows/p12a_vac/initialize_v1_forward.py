@@ -29,6 +29,8 @@ aux_datapath = {'DARK': '/global/cfs/cdirs/desi/survey/catalogs/DA2/mocks/Second
 
 arg1 = sys.argv[1].replace('global','dvs_ro') #Input mock
 arg2 = sys.argv[2] #Output path
+if os.path.exists(os.path.join(arg2, 'Univ000')):
+    raise RuntimeError('Refusing to reset an existing alternate ledger')
 obscon = sys.argv[3] #DARK or BRIGHT
 
 
@@ -90,6 +92,13 @@ if recreate_tileTrack:
 else:
     
     os.system('cp %s %s' %(aux_datapath[obscon.upper()], altmtl_path))
+
+tracker_path = os.path.join(altmtl_path, 'mainsurvey-' + obscon.upper() + 'obscon-TileTracker.ecsv')
+tracker = Table.read(tracker_path)
+tracker.meta['amtldir'] = altmtl_path
+if any(tracker['DONEFLAG']):
+    raise RuntimeError('Source tracker already contains completed actions')
+tracker.write(tracker_path, overwrite=True)
 
 ztilefile = '/global/cfs/cdirs/desi/survey/ops/surveyops/trunk/ops/tiles-specstatus.ecsv'
 
