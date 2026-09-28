@@ -699,3 +699,16 @@ Fine-bin densities/counts and provenance pinned; official random-derived
 subpixel effective-volume and full forFA parity are not claimed closed.
 Continue upstream LF/photometry diagnosis without assigning this residual to
 LF alone. Provisional VAC release decision unchanged.
+
+### Realised LF comparison (2026-09-28)
+
+CPU59019148 exposed ph000 stride20 completed; see p12a_realised_lf_20260928.md.
+v1 delivered M<-22 density matches recovered wsys table within3% in all shells
+(nowsys similarly close; no branch identification). High-shell v1 has11% fewer
+stored M<-22 galaxies than old parent but apparent-cut retention74.6% versus
+34.6%, producing1.92x selected objects in this subset. Mapping/colour/luminosity
+conventions are a stronger discriminator than scalar intrinsic abundance.
+M<-21 high-shell parent truncation and tiny M<-23 samples preclude naive complete
+LF claims. Correct prior "input LF" wording: table is HOD-predicted, only loaded
+as a target if optional evolution enabled; historical execution remains unpinned.
+Next independent common luminosity convention and fixed-parent K/colour split.
