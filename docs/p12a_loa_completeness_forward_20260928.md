@@ -82,3 +82,36 @@ No replacement LF or calibration to Loa was applied.
 Comparison figure: docs/figures/p12a_loa_completeness_20260928/counts.png/pdf,
 created by plot_loa_completeness.py using canonical plot style and inspected.
 Uniform observed histogram replay against previous evidence passes exactly.
+
+Replay safeguards: local initializer refuses to reset an existing Univ000 and
+updates only its copied tracker path. The replay wrapper verifies installed LSS
+HEAD, requires PREPARATION_READY.json, preserves per-tile shell logs and uses
+bash -e plus checked subprocess status. A synthetic failing/successful shell
+check passed. Preparation validation additionally records common-sky BRIGHT
+counts after imaging masks, before assignment, vetoes or spectroscopic success.
+A dependent interactive step waits for preparation to exit, validates forFA0,
+then initializes ledgers and runs one action (--smoke); log initialize_smoke.log.
+This is bounded smoke execution, not the completed full assignment history.
+
+Source-level follow-up: pinned DA2ALTMTLRealizationsBRIGHT_mock.sh leaves
+targfile empty and takes NUMOBS from evolving ledgers. Local replay follows
+that setting (passing static forFA rows would omit NUMOBS). makeAlternateZCat
+maps real target IDs to alternate fibre occupants while carrying the real
+observation's redshift/status. That supports assignment-history replay but is
+not synthetic mock DELTACHI2/SPECTYPE or galaxy-conditioned redshift success.
+Final mock redshifts must be joined from forFA RSDZ, not these ledger redshifts.
+
+Additional relevant paper read: Moore et al., arXiv:2511.01803v2 (2026),
+https://arxiv.org/html/2511.01803. DR2 luminosity functions report bright-end
+shape and North/South photometry differences plus residual redshift evolution
+beyond a simple global prescription. This supports testing luminosity/colour
+and redshift jointly; it does not establish the cause of our discrepancy.
+
+Allocation59009604 ended at30min06s when its idle shell auto-logged out; sacct
+reports allocation COMPLETED but preparation step.7 CANCELLED(signal15).
+No prepared target file or assignment result was produced. This illustrates
+why allocation status alone is not a completion check. Restart59010842 uses
+smoke_v1_forward.sh as a foreground salloc/srun command (2h,64CPU,32maskworkers).
+Mask worker data are now RA/DEC only, preserving row order and map values while
+avoiding transfer of unrelated photometry columns. Ledger initialization and
+one-action replay depend on successful preparation and validation.

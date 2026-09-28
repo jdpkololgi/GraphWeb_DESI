@@ -616,3 +616,11 @@ imaging-complete truth. Actual ph000 preparation/forward test in isolated
 Scratch v1_forward_ph000_20260928; CPU59009604, LSS d942b990 verified at runtime.
 Source/default changes and progress in p12a_loa_completeness_forward_20260928.md.
 Full assignment/veto/success stage not yet completed. Do not mark G2 closed.
+
+Execution update: allocation59009604 ended through interactive-shell idle
+logout at30min (not time limit); imaging preparation and chained smoke were
+terminated, so no forward catalogue was produced by it. Restart59010842 runs
+prepare/validate/initialize/one-action replay as the allocation foreground
+command, avoiding idle-shell loss. Imaging workers use a coordinate-only copy
+and32processes on64allocatedCPUs; same masks and scientific cuts. All output
+logs remain in isolated Scratch. G2 remains open until full forward validation.

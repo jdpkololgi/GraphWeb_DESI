@@ -396,8 +396,8 @@ def process(real):
 
     if args.apply_mask == 'y':
         print('getting nobs and mask bits')
-        mask = bitmask.get_nobsandmask(targets,nproc=8)
-        maskv = mask.get_nobsandmask(nproc=8)
+        mask = bitmask.get_nobsandmask(targets[['RA','DEC']].copy(),nproc=32)
+        maskv = mask.get_nobsandmask(nproc=32)
         maskcols = ['NOBS_G','NOBS_R','NOBS_Z','MASKBITS']
         for col in maskcols:
             targets[col] = maskv[col]
