@@ -1,0 +1,54 @@
+{
+  "v0.1": {
+    "reader_parity_100_rows": true,
+    "finite_nonnegative_histograms": true,
+    "sample_selected": [
+      240166,
+      107036
+    ],
+    "colour_outside": [
+      0,
+      0
+    ],
+    "M_outside": [
+      0,
+      0
+    ]
+  },
+  "v1": {
+    "reader_parity_100_rows": true,
+    "finite_nonnegative_histograms": true,
+    "sample_selected": [
+      282468,
+      118307
+    ],
+    "colour_outside": [
+      0,
+      0
+    ],
+    "M_outside": [
+      0,
+      0
+    ]
+  },
+  "loa": {
+    "reader_parity_100_rows": true,
+    "finite_nonnegative_histograms": true,
+    "sample_selected": [
+      185415,
+      79767
+    ],
+    "colour_outside": [
+      0,
+      0
+    ],
+    "M_outside": [
+      0,
+      0
+    ]
+  },
+  "loa_stride_expanded_over_full_colour_unrestricted": 1.0004789216410324,
+  "fine_histogram_conservation": true,
+  "shared_comparison_cells_identical": true,
+  "histogram_sha256": "4c8dd135c080545f2ef0d5b2117296e4cfca75ed99b2285cff1eea4531177edd"
+}

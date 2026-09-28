@@ -624,3 +624,15 @@ prepare/validate/initialize/one-action replay as the allocation foreground
 command, avoiding idle-shell loss. Imaging workers use a coordinate-only copy
 and32processes on64allocatedCPUs; same masks and scientific cuts. All output
 logs remain in isolated Scratch. G2 remains open until full forward validation.
+
+### Joint colour/luminosity diagnostic (2026-09-28)
+
+Completed stride20 old/v1/Loa comparison with common cuts and Loa completeness
+weights. Shared dz=.01/dr=.1 cells: high-z v1-minus-Loa mean g-r=-.074(S),
+-.119(N)mag, retained Loa80%/61%. Thus surplus alone does not establish population
+alignment. Common-K/E luminosity shape check is conditional, not independent LF
+validation. Report p12a_joint_colour_luminosity_20260928.md pins results and
+next tests: selected-stage repeat, independent luminosity conventions, then
+clustering/galaxy-matter validation. No production correction or retraining.
+Original forward step59010842.0 was cancelled despite live allocation; replay
+remains incomplete. Never equate allocation RUNNING with active stage work.
