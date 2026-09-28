@@ -668,3 +668,19 @@ Q=.67→.78 gives -.044mag at z=.5 but a 1.51 cumulative response at hypothetica
 Mlimit=-23: steepness amplifies small mapping changes. No survey-count prediction
 or repair inferred. Next: realised parent LF versus input table in complete
 cells; fixed-row Q/K separation and independent Loa luminosity calibration.
+
+### Decision and actual-parent evolution test (2026-09-28)
+
+User explicitly elects provisional VAC release with high-redshift warnings;
+mock mismatch does not impose a release hold, but scientific coverage claims
+remain bounded. See p12a_mock_choice_20260928.md for release documentation and
+candidate disposition. Ashley Ross's user-supplied reply confirms a known input
+SecondGen high-z issue, not a proved DR3 fix or precise physical diagnosis.
+
+CPU59018299 fixed-parent ph000 stride20 test completed: global Q=.67→.78 raises
+v1 high-shell counts18.6–18.9%; colour-Q intervention raises them2.22–2.37x.
+Both worsen the existing surplus; neither is a standalone repair. Baselines
+exactly reproduce prior histograms. Keep existing frozen model for provisional
+release, canonicalv1 as preferred replacement candidate, not yet validated.
+Do not modify Loa merely to match mocks. Realised LF closure, independent Loa
+luminosities and selected-stage/clustering/truth validation remain open.

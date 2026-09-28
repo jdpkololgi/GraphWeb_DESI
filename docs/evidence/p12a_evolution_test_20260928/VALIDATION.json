@@ -1,0 +1,5 @@
+{
+  "v0.1_baseline_equals_prior": true,
+  "v1_baseline_equals_prior": true,
+  "higher_Q_increases_counts": true
+}

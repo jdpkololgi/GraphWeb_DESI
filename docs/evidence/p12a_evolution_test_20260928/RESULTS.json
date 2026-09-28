@@ -1,0 +1,195 @@
+{
+  "counts": {
+    "v0.1": {
+      "baseline": [
+        [
+          132144,
+          78532,
+          26207,
+          3283
+        ],
+        [
+          58606,
+          35054,
+          11965,
+          1411
+        ]
+      ]
+    },
+    "v1": {
+      "baseline": [
+        [
+          144516,
+          91871,
+          37038,
+          9043
+        ],
+        [
+          61610,
+          37472,
+          15533,
+          3692
+        ]
+      ],
+      "global_Q078": [
+        [
+          145902,
+          94855,
+          39901,
+          10750
+        ],
+        [
+          62253,
+          38835,
+          16818,
+          4377
+        ]
+      ],
+      "colour_Q": [
+        [
+          149268,
+          98388,
+          45453,
+          20061
+        ],
+        [
+          63515,
+          39830,
+          19856,
+          8743
+        ]
+      ],
+      "Q0": [
+        [
+          136123,
+          75120,
+          22930,
+          2937
+        ],
+        [
+          57794,
+          30367,
+          9260,
+          1126
+        ]
+      ]
+    }
+  },
+  "v1_over_baseline": {
+    "baseline": [
+      [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ]
+    ],
+    "global_Q078": [
+      [
+        1.0095906335630658,
+        1.032480325674043,
+        1.0772989902262542,
+        1.1887647904456486
+      ],
+      [
+        1.010436617432235,
+        1.036373825789923,
+        1.0827270971480074,
+        1.1855362946912242
+      ]
+    ],
+    "colour_Q": [
+      [
+        1.0328821722162251,
+        1.070936421721762,
+        1.2271990928235865,
+        2.2184009731283867
+      ],
+      [
+        1.0309203051452687,
+        1.0629269854824936,
+        1.2783106933625186,
+        2.368093174431203
+      ]
+    ],
+    "Q0": [
+      [
+        0.9419233856458801,
+        0.817668252223226,
+        0.6190939035585075,
+        0.3247815990268716
+      ],
+      [
+        0.9380620029216037,
+        0.8103917591801879,
+        0.596150131977081,
+        0.3049837486457205
+      ]
+    ]
+  },
+  "sources": {
+    "v0.1": {
+      "path": "/global/cfs/cdirs/desi/cosmosim/SecondGenMocks/AbacusSummit/CutSky/BGS/v0.1/z0.200/cutsky_BGS_z0.200_AbacusSummit_base_c000_ph000.fits",
+      "stat": [
+        6645378240,
+        1706807554000000000
+      ],
+      "available_fainter_rows_19p5_19p92": [
+        [
+          56784,
+          65098,
+          39448,
+          11083
+        ],
+        [
+          25393,
+          29605,
+          18150,
+          5010
+        ]
+      ]
+    },
+    "v1": {
+      "path": "/global/cfs/cdirs/desi/cosmosim/SecondGenMocks/AbacusSummit/CutSky/BGS/v1/z0.200/cutsky_BGS_z0.200_AbacusSummit_base_c000_ph000.fits",
+      "stat": [
+        7175868480,
+        1732747679145538330
+      ],
+      "available_fainter_rows_19p5_19p92": [
+        [
+          55652,
+          68995,
+          51926,
+          28832
+        ],
+        [
+          24811,
+          29744,
+          23903,
+          12040
+        ]
+      ]
+    }
+  },
+  "z_edges": [
+    0.15,
+    0.25,
+    0.35,
+    0.45000000000000007,
+    0.55
+  ],
+  "hemispheres": [
+    "photometric S",
+    "photometric N"
+  ],
+  "stride": 20,
+  "job": "59018299",
+  "sha256": "3fdbefebc061886276ef8f71e625346e4a9b024af6e4250cd71e1e588548d606",
+  "limitations": "Fixed existing parent, colour and K; no LF/HOD refit. Colour split uses stored G_R_REST and assumes published reference convention. No guarantee missing faint parent rows can be recovered. No observation pipeline; no correction applied. Deterministic stride20, no significance estimate."
+}
