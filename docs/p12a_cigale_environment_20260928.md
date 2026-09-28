@@ -1,5 +1,9 @@
 # Current Loa environments and saved CIGALE wedge properties
 
+Follow-up: [cosmic-web literature assessment](p12a_property_literature_assessment_20260928.md)
+compares these effects with other finders and distinguishes physical weakness
+from possible inference attenuation. Visual similarity alone is not a model-quality verdict.
+
 The current P12-A VAC shows a moderate, monotonic association with CIGALE galaxy
 properties in the old sky wedge. The association is weaker after controlling
 redshift and stellar mass, but does not disappear. This is an observational
