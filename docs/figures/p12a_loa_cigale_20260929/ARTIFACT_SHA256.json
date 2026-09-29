@@ -1,0 +1,23 @@
+{
+  "matching_completeness.png": "7db60a83c32ace86d9e4dc27ee9d42b82d8ab7118106e80db6965a462aa51ae0",
+  "SOURCE_HEADER.txt": "359a819e812c16757047e9c3b8b398c84e694272984173d486aaaac20d7b4935",
+  "JOIN.json": "06808130125c584be6efc08859013ffd6f8380326377691342167ec1cc6d9527",
+  "RESULTS.json": "5ab7b2da0df8f6e56d742b3992a56b6a1dd56a7d1eae6007f63b7c0a35f4eaa4",
+  "ORIGINAL_VAC_HEADER.txt": "e8e0ea4561e57aad7b9b1aca0afcd6c7c4f8eefae186d9ce673bfa4a0c480c45",
+  "FULL_SURVEY_CIGALE_environment.pdf": "e3c6834e115e6270a26da32f6f485a8a5e4287e33b86b7512d424058529e3450",
+  "distribution_cg15_full_range.png": "7b967b19dd7b83438fa9684bc46edacfe0491801f19f6fdf48a93add95df4f22",
+  "redshift_contrast_sensitivity.png": "29fc731f4468803c5a3fdb58d64a136ef17dafa1bd1ffaac536e435296754df3",
+  "distribution_cg15_lowz_full_sky.png": "d78828189e1d747b436f535dd215a11a6c20c5f7ff2434eeebf3dfe16ee37dee",
+  "controlled_lowz_full_sky.png": "6fddf196ec9419a06713201eadf1275e1c80e1fcf684308ea40a18ba44427afb",
+  "fixed_mass_lowz_full_sky.png": "7d715fa5189cee4c721af12f6d4420e3bee436211d68471a37a02aaba80c0750",
+  "controlled_full_range.png": "5cde26569b968ec471abc2b650209144702488e5a50c10c971c7124089f4b9ee",
+  "distribution_cg5_lowz_full_sky.png": "664a9a9eeab3c8d87ee6a9f9c1744fe9ef0ba3acd0cb7fe843011128b10e688e",
+  "PRODUCT.json": "8051a8389220b93bdc27ff25324041597195a9931df3d7053cbae6b7752d5400",
+  "original_wedge/LOA_CIGALE_environment.pdf": "02b8008bcb7a31caf13b8757f66585eebaed19716694934e0462cb0f1b3a3f7b",
+  "original_wedge/RESULTS.json": "9576eefe96f4384f8e8625f1b43688ac45b2e1d88ae98125ebd478b21254f069",
+  "original_wedge/ARTIFACT_SHA256.json": "0ced624afa7d86af7a8edd0b9639b28a4acd225d61f518b2f4512e09f72fa962",
+  "original_wedge/04_membership_sensitivity.png": "40a32ae5e42d816e2eef67382c06ae40c8c66622c5e2b5f0c2e03c42d2fcaa5f",
+  "original_wedge/03_mass_ssfr_distributions.png": "0f75460407e38d4ad78025f4c58e6d9c10d6daf226b4708ac5f0b38b68931c71",
+  "original_wedge/01_cigale_environment_trends.png": "17afc18bf0f3c3049190e1aa7cce6a9744da5985609b137aa374c0564f629074",
+  "original_wedge/02_fixed_mass_relations.png": "b080d1db3ab8fb85847ff04f415bc2aa9e0cd6cd04a7529908e1c50e9e9ed7be"
+}
