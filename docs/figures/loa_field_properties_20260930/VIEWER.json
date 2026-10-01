@@ -1,0 +1,31 @@
+{
+  "plan_sha256": "0a9740c3a579fd992827f565599c33d30899b5666f4b418c0e4269646470faa2",
+  "views": {
+    "NGC detail": {
+      "receipt_sha256": "af7ce58c58ac352816ea8b85ef4aa495d8d16388f559f4294956dae2bc2618c9",
+      "display_cells": 18432,
+      "supported_display_cells": 18225,
+      "galaxies": 30000,
+      "total_galaxies": 310030,
+      "draws": 16,
+      "legacy_density_replay": true
+    },
+    "SGC detail": {
+      "receipt_sha256": "f7938c8f02848ce887e6633dbe5d99d6661b7d60be9b9068a29ceb90fb12620d",
+      "display_cells": 18432,
+      "supported_display_cells": 12198,
+      "galaxies": 30000,
+      "total_galaxies": 170611,
+      "draws": 16,
+      "legacy_density_replay": false
+    }
+  },
+  "global_joint_posterior": false,
+  "script_sha256": "f6f342dc6de744bb00025ac9e52d5f5ad0f47419c2b3af84452f6bd911baca78",
+  "template_sha256": "5a23c0bb44b68d2d8e27968a217107149ddb805232ad9859f1a3f8d81079b65e",
+  "surface_library_version": "0.25.2",
+  "display_only": true,
+  "remote_dependencies": false,
+  "html_sha256": "eef72f8e5fffe8de8c4363a6051f7a7347627576868cb564ac2ef1ecb80f1ddb",
+  "bytes": 34255787
+}
