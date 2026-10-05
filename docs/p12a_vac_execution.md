@@ -1,9 +1,10 @@
 # P12-A VAC implementation handoff (2026-09-24)
 
-Status pointer (2026-09-28): canary and full-survey technical products exist
-and remain provisional. Use `p12a_vac_operations.md` for CLIs, FITS columns,
-and quality bits. This file is the chronological log and is not rewritten
-when later notes supersede a pending step.
+Status pointer (2026-10-05): canary and full-survey technical products exist
+and remain provisional. Mock repair is stopped. Use `p12a_vac_operations.md`
+for CLIs, FITS columns, quality bits, and the later CIGALE/CFM/viewer index.
+This file is the chronological log and is not rewritten when later notes
+supersede a pending step.
 
 Active science plan: `../../TNG/Illustris/docs/plan_desi_p12a_vac_20260924.md`.
 Alignment subplan: `plan_mock_to_loa_alignment_investigation_20260926.md`.

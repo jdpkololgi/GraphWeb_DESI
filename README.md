@@ -86,9 +86,11 @@ pickle or the wedge npz products above. Interface and quality-bit legend:
 3. Full survey: `workflows/p12a_vac/production.py` (`plan`, `benchmark`, `worker`, `merge`).
 
 The merged FITS is `DESI_LOA_P12A_HALO48_FULL_SURVEY_VAC.fits` with
-`PROVIS=True`. `science_release_ready` stays false while the mock–Loa
-selection shift is unresolved. Alignment diagnostics under
-`workflows/p12a_vac/alignment_*.py` do not rewrite that catalogue.
+`PROVIS=True`. `science_release_ready` stays false. The mock–Loa count excess
+is flagged, not corrected, and the alignment investigation is stopped.
+Read-only follow-ups (spatial atlas, CIGALE joins, matched CFM properties,
+offline 3D viewer) are indexed in the operations page. They do not rewrite
+that catalogue.
 
 ## Quick start
 
