@@ -22,7 +22,8 @@ It currently contains four analysis paths: a PyTorch GAT classifier for
 historical VAC-style environment labels, a Gudhi/cuGraph/Jraph wedge workflow
 for Abacus-parity eigenvalue regression, a FlowJAX/SBI wedge posterior path,
 and the current P12-A FMPE Loa VAC (`docs/p12a_vac_operations.md`). The P12-A
-full-survey FITS is provisional (`science_release_ready` false).
+full-survey FITS is provisional (`science_release_ready` false). CIGALE and
+CFM follow-ups on that page are read-only; mock repair is stopped.
 
 ## Running the Pipeline
 

@@ -25,14 +25,16 @@ products, not the fundamental inference target.
 - The current application baseline is frozen Illustris U-PATCH + P12-A FMPE.
   A 16-core Loa canary and a full-survey provisional VAC exist
   (`docs/p12a_vac_operations.md`). Both set `science_release_ready` false.
-  The open scientific gate is mock–Loa population alignment, not a missing
-  inference entrypoint. G3/FlowJAX results and the legacy GAT/Jraph entrypoints
-  are historical products, not this VAC.
-- Active cross-repository plan:
+  The unresolved limitation is the mock–Loa population mismatch. Alignment
+  work is stopped; property and field figures do not replace the FITS.
+  G3/FlowJAX results and the legacy GAT/Jraph entrypoints are historical
+  products, not this VAC.
+- Cross-repository plan:
   `../TNG/Illustris/docs/plan_desi_p12a_vac_20260924.md`.
-  Population subplan: `docs/plan_mock_to_loa_alignment_investigation_20260926.md`.
-  Additional mocks support replication and selection tests, not automatic
-  retraining or a replacement catalogue.
+  The population subplan
+  `docs/plan_mock_to_loa_alignment_investigation_20260926.md` is stopped and
+  kept as evidence. Additional mocks support replication and selection tests,
+  not automatic retraining or a replacement catalogue.
 - Training parity uses AbacusSummit HOD cutsky mocks with CACTUS T-web labels,
   7 Mpc/h smoothing, and `lambda_th = 0.2`.
 - Preserve the canonical ordered-increment target representation and the

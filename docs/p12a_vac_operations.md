@@ -3,6 +3,8 @@
 Current application path for frozen Illustris U-PATCH + P12-A FMPE posteriors on
 DESI BGS Loa. This page is the interface and pitfall index. Dated science
 write-ups stay in the notes linked below; they are evidence, not launchers.
+Mock repair is stopped. Later property and field figures do not replace the
+frozen FITS.
 
 Science plan (Illustris): `../../TNG/Illustris/docs/plan_desi_p12a_vac_20260924.md`.
 Population-alignment subplan: `plan_mock_to_loa_alignment_investigation_20260926.md`.
@@ -148,12 +150,21 @@ write evidence JSON; they do not update the VAC.
 | Canary / full survey | `loa_trial.py`, `production.py` |
 | Read-only closure | `workflows/p12a_vac/closure_*.py`, `closure_summary.py` |
 | Exposed-ph006 selection experiment | `mock_selection_test.py` (`prepare`/`sweep`), `run_mock_test_phase.sh` |
-| Alignment screens | `workflows/p12a_vac/alignment_*.py` and matching `plot_alignment_*.py` |
+| Alignment screens (stopped) | `workflows/p12a_vac/alignment_*.py` and matching `plot_alignment_*.py` |
+| Spatial atlas of the frozen FITS | `workflows/p12a_vac/visual_atlas.py` |
+| Wedge CIGALE cache vs current VAC | `workflows/p12a_vac/property_environment.py` |
+| Full-survey CIGALE join | `loa_cigale_full.py`, `loa_cigale_product.py`, `loa_cigale_plots.py` |
+| Matched P12-A vs CFM properties | `workflows/p12a_vac/field_property_environment.py` |
+| Offline Loa density viewer | `loa_field_viewer.py`, `check_loa_viewer.py` |
 
 `p12a_golden_replay.py` imports Illustris from the hard-coded home path
 `/global/u2/d/dkololgi/TNG/Illustris`, not `ILLUSTRIS_ROOT`.
 
-## Alignment investigation (do not rerun as a VAC)
+## Alignment investigation (stopped; do not rerun as a VAC)
+
+Stopped by user direction on 2026-09-28. The plan is retained evidence, not an
+execution queue. Do not launch further mock repair, population switches, or
+retraining for this provisional VAC.
 
 Canonical plan and latest checkpoint:
 `plan_mock_to_loa_alignment_investigation_20260926.md`.
@@ -172,6 +183,123 @@ Constraints encoded in those scripts:
   independent luminosity-model agreement.
 - Public dipole bright/faint splits are not DESI `BGS_BRIGHT` / `BGS_FAINT`.
 
+## Notes after the frozen VAC
+
+These notes do not change selection, weights, or posteriors. Read the dated
+page for the measurement; this list is only the index.
+
+| Note | Role |
+|---|---|
+| `p12a_provisional_release_20260928.md` | Release limits, FITS integrity, Planck18 **Mpc** spatial atlas (`visual_atlas.py`) |
+| `p12a_mock_choice_20260928.md` | Provisional release kept; Abacus v1 is not a validated replacement |
+| `p12a_historical_footprint_20260928.md` | Historical BRIGHT footprint does not explain the high-z deficit |
+| `p12a_realised_lf_20260928.md` | Parent luminosity vs recovered LF |
+| `p12a_cigale_environment_20260928.md` | Wedge CIGALE cache vs current `P_WEB` |
+| `p12a_property_literature_assessment_20260928.md` | How to read those modest contrasts |
+| `p12a_contrast_checks_20260928.md` | Frozen-model contrast recovery on saved ph006 and the wedge |
+| `p12a_historical_model_comparison_20260928.md` | Pointer to the Illustris knot-model replay |
+| `p12a_loa_cigale_20260929.md` | Full-survey CIGALE join and controlled contrasts |
+| `p12a_transition_audit_20260929.md` | Pointer to the Illustris boundary-uncertainty audit |
+
+Three CIGALE paths are different inputs:
+
+- `property_environment.py` reads the pinned full-survey FITS
+  (SHA256 `cf472cb4…f50ebfbc`) and the wedge parquet
+  `desi_wedge_cigale_hz/desi_wedge_env_props.parquet`. `--test` is a synthetic
+  check. A real run refuses another VAC hash and an existing `--out`.
+- `loa_cigale_full.py` joins
+  `/global/cfs/cdirs/desicollab/users/zouhu/vac/dr2/dr2_galaxy_sedfitting_v1.0.fits`
+  by TARGETID, then drops pairs with separation ≥1 arcsec or
+  `|dz|/(1+z)≥0.001`, and leaves repeated consistent rows unmatched
+  (`CIGALE_AMBIGUOUS`). `loa_cigale_product.py` writes the enriched FITS.
+  `loa_cigale_plots.py` plots that product. The original VAC file is hashed
+  before and after.
+- `field_property_environment.py` is the matched CFM comparison below. It does
+  not read either of those plot caches.
+
+## Matched CFM properties and the offline 3D viewer
+
+`field_property_environment.py` compares frozen P12-A `P_WEB` with CFM field
+marginals on identical galaxies. `loa_field_viewer.py` builds a self-contained
+HTML view of the same atlas. Neither writes the VAC. Atlas tiles are
+independent local conditionals. A shared sample index across tiles is not one
+survey-wide posterior draw. Sky-block intervals are selected-sample
+diagnostics. They omit SED covariance and model-transfer error.
+
+Both catalogue entrypoints raise `RuntimeError` unless `SLURM_JOB_ID` is set.
+`--out` is created with `exist_ok=False`. Provenance is enforced up front:
+`ATLAS_COMPLETE.json` must have `passed`, `vac_properties.npz` must match
+`PLAN.json` `properties_sha256`, and the field-marginal file must match the
+atlas receipt. `TARGETID` values must be unique.
+
+The comparison sample keeps a row only when it is supported, uniquely
+CIGALE-matched, `CIGALE_SPECTYPE=GALAXY`, `field_eligible`, and both CG15 and
+CG5 have finite positive mass and SFR, with CG15 log mass in `[8, 13)`.
+Environment order is void, sheet, filament, knot. The low-redshift scope is
+`0.20 ≤ z < 0.30`. Controlled means use common cells (redshift bins of 0.025
+from 0.15, and 0.1 dex mass bins when mass is controlled) and one reference
+mix. A cell is kept only when every model and class has effective
+`N ≥ 20`. The 16–84% interval is 64 resamples of nside-8 sky blocks
+(`seed 20260930`). `--details` is separate: raw mean log sSFR inside each cap's
+owned core, 16 local draws, `0.20 ≤ z < 0.30`, pooled support `≥ 0.5`, and a
+class interval only when every draw has at least 20 members. If the receipt's
+minimum `core_support` is below 0.25, that cap is dropped. The λth panel
+compares CFM `p_web` with `p_web_threshold0` on the same cells. It is not a
+second P12-A model.
+
+The viewer embeds Plotly and the arrays in `Loa_3D.html`. It does not fetch
+remote scripts. Coordinates are the atlas equatorial Cartesian grid in
+**Mpc/h**. That is not the Planck18 **Mpc** slab in `visual_atlas.py`. Display
+cuts never change the analysis sample:
+
+- Overview: 100,000 galaxies per cap, chosen by a stable TARGETID hash.
+- Detail: 2× pooled cells of 13.532 Mpc/h, marching cubes at 1, 2, and 4 times
+  the mean where pooled support is at least 0.5, and 30,000 galaxies.
+- Atlas (omit `--details-only`): the same pooling, then a 1-in-4 sublattice of
+  supported owned-core voxels. No smoothing across tile seams.
+
+Density isosurfaces are a display threshold. They are not the λth = 0.2
+T-web class used in the property plots. `--surface-library` is prepended to
+`sys.path` for scikit-image. `check_loa_viewer.py` also requires
+`SLURM_JOB_ID`. It fails the job on a page error, any `http(s)` request, or
+horizontal overflow at 430×932.
+
+Perlmutter launcher (CPU, 32 cores, 30 minutes). The first argument is an
+immutable source snapshot that contains `SOURCE_SHA256.json`. The script checks
+those hashes, then requires atlas `rows=5436413`, `tiles=2472`, and `draws=8`.
+Editing the git checkout does not change that snapshot.
+
+```bash
+ATLAS=/pscratch/sd/d/dkololgi/abacus/e2e_field_v3/loa_field_atlas_20260930_v1
+sbatch workflows/p12a_vac/submit_field_properties_20260930.sbatch /path/to/immutable/snapshot
+```
+
+That sbatch writes `$ATLAS/property_comparison_v1` and `$ATLAS/viewer_full_v1`
+(atlas views included). It does not pass `--details`. Local draw variation is
+a second command:
+
+```bash
+python workflows/p12a_vac/field_property_environment.py \
+  --root "$ATLAS" --out "$ATLAS/local_draws" --details
+```
+
+`--test` on `field_property_environment.py` checks the paired estimator only.
+`test_field_property_environment.py` and `test_loa_field_viewer.py` need a
+compute allocation. The viewer smoke uses three real smoke tiles, writes a
+disposable HTML, and records `SMOKE_SCOPE.json` so that fixture is not a
+science atlas.
+
+Committed evidence in `docs/figures/loa_field_properties_20260930/` is the
+**details-only** viewer plus the local-draw figure. `VIEWER.json` has NGC and
+SGC detail and `global_joint_posterior: false`. It has no atlas views. The
+browser check passed with no remote requests and no mobile overflow. NGC shows
+30,000 of 310,030 galaxies (18,225/18,432 supported display cells); SGC shows
+30,000 of 170,611 (12,198/18,432). `legacy_density_replay` is true for NGC and
+false for SGC. The HTML (34,255,787 bytes in that receipt) is not in git.
+`LOCAL_RESULTS.json` records raw, not mass/redshift-controlled, log sSFR for
+12,074 NGC and 9,432 SGC owned-core galaxies. The matched eight-figure
+`RESULTS.json` from `main()` is not in this checkout.
+
 ## Pitfalls
 
 | Symptom | Cause |
@@ -187,3 +315,11 @@ Constraints encoded in those scripts:
 | Login-node catalogue hash | `p12a_loa_source_audit.py` requires `SLURM_JOB_ID` and a `nid` host. |
 | Mixing this VAC with wedge npz | Different selection, features, and model. |
 | Part `VAC_COMPLETE.json` schema says canary | `production_inference.py` reuses schema `desi-loa-p12a-halo48-canary-vac-v1` for shards. Read `scope` and the merged `FULL_VAC_COMPLETE.json` (`schema` `p12a-loa-full-survey-v1`). Part files are `VAC_SHARD.fits` and `shards/core_{id:06d}.*`. The canary writer uses `core_{id:02d}_draws.npz` and `DESI_LOA_P12A_HALO48_CANARY_VAC.fits`. |
+| `field_property_environment.py` or `loa_field_viewer.py` raises `RuntimeError` | Those entrypoints require `SLURM_JOB_ID`. `--test` on the property script does not. |
+| `FileExistsError` on a property or viewer `--out` | The directory must not already exist. |
+| Atlas sample index read as one cosmic draw | Tiles are independent. `VIEWER.json` sets `global_joint_posterior` false. |
+| Viewer box overlaid on the release atlas | Viewer axes are Mpc/h. `visual_atlas.py` uses Planck18 Mpc. |
+| Density surface read as a T-web class | Isosurfaces are a display cut. Classes in the property script use λth = 0.2. |
+| CFM λth = 0 panel treated as P12-A | That panel compares two CFM definitions on the same cells. |
+| sbatch ignored a git edit | It runs the snapshot passed as `$1` after checking `SOURCE_SHA256.json`. |
+| Committed `VIEWER.json` described as the full atlas | The file in git has detail views only. The sbatch's `viewer_full_v1` is the atlas HTML, and it is not committed. |

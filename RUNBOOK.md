@@ -565,7 +565,26 @@ $PY workflows/p12a_vac/production.py merge  --root "$ROOT"
 `workflows/p12a_vac/run_production.sh` is the Perlmutter array/merge wrapper.
 It sets `ILLUSTRIS_ROOT` to the frozen candidate snapshot. Completion without
 `science_release_ready: true` is still not a science release. Alignment
-scripts under `workflows/p12a_vac/alignment_*.py` are read-only diagnostics.
+scripts under `workflows/p12a_vac/alignment_*.py` are stopped, read-only
+diagnostics.
+
+Read-only property and field follow-ups (do not point these at a new VAC):
+
+```bash
+ATLAS=/pscratch/sd/d/dkololgi/abacus/e2e_field_v3/loa_field_atlas_20260930_v1
+# CPU allocation required. --out must not exist.
+$PY workflows/p12a_vac/field_property_environment.py --root "$ATLAS" --out "$ATLAS/property_comparison_v1"
+$PY workflows/p12a_vac/field_property_environment.py --root "$ATLAS" --out "$ATLAS/local_draws" --details
+$PY workflows/p12a_vac/loa_field_viewer.py --root "$ATLAS" --out "$ATLAS/viewer_full_v1" \
+  --surface-library "$ATLAS/viewer_dependencies"
+$PY workflows/p12a_vac/check_loa_viewer.py --html "$ATLAS/viewer_full_v1/Loa_3D.html" \
+  --out "$ATLAS/viewer_full_v1/qa" --playwright-path "$ATLAS/playwright_runtime"
+```
+
+`workflows/p12a_vac/submit_field_properties_20260930.sbatch SNAPSHOT` runs the
+comparison, the full viewer, and the browser check from a hashed source
+snapshot. It does not run `--details`. Constraints and the details-only
+committed viewer receipt are in `docs/p12a_vac_operations.md`.
 
 ### NERSC helper scripts
 
@@ -621,6 +640,9 @@ These are login-node sanity checks, not pipeline stages:
 | P12-A class names disagree with GAT | Receipt `class_order` is void/sheet/filament/knot. GAT columns say wall/cluster for indices 1 and 3. |
 | Shard JSON schema says `canary-vac-v1` | Production parts reuse that schema string. The full-survey marker is `FULL_VAC_COMPLETE.json`. |
 | Loa source audit refuses on a login node | `p12a_loa_source_audit.py` requires `SLURM_JOB_ID` and a `nid` hostname. |
+| CFM property script or Loa viewer refuses immediately | `field_property_environment.py` and `loa_field_viewer.py` require `SLURM_JOB_ID`. `--out` must be a new directory. |
+| 3D viewer looks nothing like the release atlas | Viewer coordinates are Mpc/h on the field grid. `visual_atlas.py` is a Planck18 Mpc slab. Density surfaces are not T-web classes. |
+| Field sbatch did not pick up a git edit | Pass an immutable snapshot as `$1`. The script checks `SOURCE_SHA256.json` in that tree. |
 
 ## Notes
 
