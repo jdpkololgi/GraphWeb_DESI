@@ -1,6 +1,6 @@
 # Active Workflow Index
 
-## P12-A Loa provisional delivery (updated 2026-10-05)
+## P12-A Loa provisional delivery (updated 2026-10-12)
 
 The existing full-survey halo48 VAC is technically complete and provisional.
 Current work preserves its trained model, original mocks, selection and posterior
@@ -28,6 +28,10 @@ interface, FITS columns, quality bits, and pitfalls:
   CIGALE join (`docs/p12a_loa_cigale_20260929.md`), matched CFM comparison
   and the offline 3D viewer (`workflows/p12a_vac/field_property_environment.py`,
   `workflows/p12a_vac/loa_field_viewer.py`).
+- Stopped mock-repair helpers stay in `workflows/p12a_vac/`. Do not run
+  `prepare_v1_forward.py` without the flags in `prepare_v1_forward.sbatch`
+  or `smoke_v1_forward.sh`: the script default writes the DA2 mocks CFS tree.
+  Contract: `docs/p12a_vac_operations.md`.
 
 Real-DESI coverage is unverified. Known high-redshift population mismatch remains;
 no physical-evolution claim or automatic low-redshift certification is warranted.

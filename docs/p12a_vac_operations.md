@@ -151,6 +151,7 @@ write evidence JSON; they do not update the VAC.
 | Read-only closure | `workflows/p12a_vac/closure_*.py`, `closure_summary.py` |
 | Exposed-ph006 selection experiment | `mock_selection_test.py` (`prepare`/`sweep`), `run_mock_test_phase.sh` |
 | Alignment screens (stopped) | `workflows/p12a_vac/alignment_*.py` and matching `plot_alignment_*.py` |
+| Stopped v1-forward / selection helpers | See [below](#stopped-forward-and-selection-helpers). Do not invoke `prepare_v1_forward.py` with its defaults. |
 | Spatial atlas of the frozen FITS | `workflows/p12a_vac/visual_atlas.py` |
 | Wedge CIGALE cache vs current VAC | `workflows/p12a_vac/property_environment.py` |
 | Full-survey CIGALE join | `loa_cigale_full.py`, `loa_cigale_product.py`, `loa_cigale_plots.py` |
@@ -182,6 +183,106 @@ Constraints encoded in those scripts:
 - Holi close n(z) can be a construction target (thinning to Loa n(z)), not
   independent luminosity-model agreement.
 - Public dipole bright/faint splits are not DESI `BGS_BRIGHT` / `BGS_FAINT`.
+
+## Stopped forward and selection helpers
+
+These files are the 2026-09-25–28 mock-repair diagnostics. Preparation job
+59013807 was cancelled with that queue. None of them rewrite the frozen halo48
+FITS. The measurements stay in the dated notes; this section is how the
+scripts behave if they are opened.
+
+Read, do not relaunch: `p12a_loa_completeness_forward_20260928.md`,
+`p12a_v1_population_diagnosis_20260928.md`,
+`p12a_joint_colour_luminosity_20260928.md`,
+`p12a_canonical_v1_provenance_20260928.md`,
+`p12a_published_lf_20260928.md`, `p12a_dr2_recipe_review_20260928.md`,
+`p12a_selection_diagnostics_20260925.md`,
+`p12a_selection_test_protocol_20260925.md`.
+
+### `prepare_v1_forward.py` defaults to the DA2 mock tree
+
+This is a vendored LSS bright-mock adapter. The `NERSC_HOST` check and
+`ArgumentParser` sit at module level, so importing the file parses `sys.argv`.
+Off Perlmutter or Cori it calls `sys.exit`. `NERSC_HOST` must be `cori` or
+`perlmutter`.
+
+Defaults that matter:
+
+- `--isProduction` defaults to `y`. That branch forces `base_output` to
+  `/global/cfs/cdirs/desi/survey/catalogs/DA2/mocks` and sets overwrite false.
+- `--base_output` itself defaults to that same CFS directory.
+- `--downsampling` defaults to `n`, `--apply_mask` to `n`, and `--prog` to
+  `bright`. The realization loop is `range(realmin, realmax)`, so the
+  defaults `0` and `1` build only realization 0. Both launchers pass those
+  same bounds.
+- `--overwrite` uses `type=bool`. Any non-empty string, including `False`,
+  becomes `True`. The production branch overwrites that flag back to false
+  after parsing. A non-production run does not. The table is written with
+  `targets.write(..., overwrite=args.overwrite)`.
+
+`process()` seeds NumPy with `20260928 + real`. Bright globals use
+`specver='loa-v1'`.
+
+The only in-repo launchers override the CFS default. Both
+`prepare_v1_forward.sbatch` and `smoke_v1_forward.sh` pass
+`--mockver ab_secondgen_cosmosim`, `--isProduction n`, `--apply_mask y`,
+`--downsampling n`, `--rbandcut 19.5`, and `--base_output` equal to
+`/pscratch/sd/d/dkololgi/graphweb_desi/outputs/v1_forward_ph000_20260928`.
+The sbatch also runs `sha256sum -c` on
+`docs/evidence/p12a_joint_colour_luminosity_20260928/FORWARD_SOURCE.sha256`
+(those four hashes still match this tree) and asserts installed LSS `HEAD`
+is `d942b990860e016e7558c740966fea3e5ce7e7f3`. It stops after preparation
+plus `check_v1_preparation.py`. `smoke_v1_forward.sh` is the foreground
+`salloc` command and continues through one altMTL action.
+
+### Chain after a scratch forFA file
+
+Smoke-script root: `$OUT/SecondGenMocks/AbacusSummitBGS_v2`, with
+`$OUT` the ph000 scratch directory above.
+
+1. `check_v1_preparation.py <forFA0.fits>` has no `__main__` guard. It
+   writes `PREPARATION_READY.json` beside the FITS with
+   `qualification: false` and `placeholder_zwarn: true`. It requires
+   sequential `TARGETID` from 1, finite `SUBPRIORITY` in `[0, 1)`,
+   `BGS_TARGET` exactly 2 (bright), 1 (faint), or 9 (faint HIP), bright
+   `R_MAG_APP` below 19.54 where `DEC > 32.375` and below 19.5 otherwise,
+   other rows in `[cut, 20.175]`, and `ZWARN == 0`. That ZWARN check is the
+   upstream ledger placeholder, not a spectral-quality model.
+2. `initialize_v1_forward.py <forFA> <outdir> BRIGHT` is positional and also
+   runs at import. It refuses if `<outdir>/Univ000` already exists.
+   `recreate_tileTrack` is false: it copies the DA2 BRIGHT tile tracker and
+   refuses if any `DONEFLAG` is already set.
+3. `run_v1_altmtl.py --root <that BGS_v2 directory> [--smoke]` asserts the
+   root starts with the ph000 scratch prefix, requires
+   `PREPARATION_READY.json` and the same LSS commit, and runs tile shells
+   under `bash -e`. `--smoke` advances one tracker action and writes
+   `SMOKE.json`. Without `--smoke` it writes `ALTMTL_COMPLETE.json` only
+   when no actions remain.
+
+### Other stopped writers
+
+| Script | Writes | Constraint |
+|---|---|---|
+| `selection_audit.py` | `SELECTION_AUDIT_V2.json` under `p12a_loa_canary_20260925_v1` | No CLI. Counts cuts on the canary Loa file, DA2 mock6 BRIGHT, and the ph006 observed FITS. Ablations are not new science cuts. |
+| `mock_assignment_audit.py` | `MOCK_ASSIGNMENT_AUDIT.json` in that canary root | **Runs on import.** Bins mock rows by parent redshift through `TARGETID`, including unassigned sentinels. |
+| `selection_diagnostics.py` | `docs/figures/p12a_selection_20260925/` | Positional `counts` or `phase`. |
+| `selection_sensitivity.py` | `.../outputs/p12a_selection_sensitivity_20260925_v1` (`exist_ok=False`) | GPU replay of eight exposed ph006 cores, four density arms, 512 draws. Imports `workflows.abacus_tweb` and `workflows.sbi`, which this repository does not contain. Not a DESI correction. |
+| `input_distribution.py` | `<canary-root>/INPUT_DISTRIBUTIONS.json` | Positional canary root. The canary is geometry-selected. |
+| `upstream_population_diagnostic.py` | `UPSTREAM.json` beside the selection figures | ph006 raw cutsky on the same common pixels. Magnitude loops are sensitivity tests. |
+| `summarize_passband_followup.py` | `SED_ROBUSTNESS.json` and `VALIDATION.json` in `docs/evidence/p12a_passband_followup_20260926/` | Rewrites committed evidence and checks script hashes. |
+| `verify_response_sampling.py --output` | The requested JSON | 512-row parity of Loa `response_at` against ph006 voxels. Raises if distance or support differs. Imports `workflows.sbi.p12_prepare_base_response_dataset`, absent here. |
+| `verify_mock_test_baseline.py --root` | `BASELINE_REPLAY.json` | BRIGHT columns versus official `forFA6_nomask.fits`. FAINT RNG is not claimed. Seed recorded as 62026. |
+| `join_mock_test_baseline.py --root` | `BASELINE_JOIN.json` | Exact RA/DEC/RSDZ join. Requires `SLURM_JOB_ID`. |
+| `replay_mock_y5_footprint.py --root` | `Y5_REPLAY.json` | Y5 cut plus post-cut TARGETID reindex. Requires `SLURM_JOB_ID`. |
+| `materialize_mock_y5_variant.py --root` | `y5_baseline/forFA6_nomask.fits` | Needs a passing `Y5_REPLAY.json`. `FileExistsError` if the FITS exists. Header `TESTONLY`. |
+| `validate_mock_y5_product.py --root` | `MATERIALIZED_VALIDATION.json` | Read-back of 10,000 bright rows against the official forFA file. |
+
+`plot_selection_sensitivity.py` and `plot_upstream_population.py` only draw
+the JSON above into `docs/figures/p12a_selection_20260925/`.
+`plot_mock_selection_test.py --root` and `plot_reference_mock_check.py --root`
+write `selection_screen.png`, `FINE_BIN_REVIEW.json`,
+`reference_comparison.png`, and `SUMMARY.json` beside the run directory they
+are given.
 
 ## Notes after the frozen VAC
 
@@ -323,3 +424,9 @@ false for SGC. The HTML (34,255,787 bytes in that receipt) is not in git.
 | CFM λth = 0 panel treated as P12-A | That panel compares two CFM definitions on the same cells. |
 | sbatch ignored a git edit | It runs the snapshot passed as `$1` after checking `SOURCE_SHA256.json`. |
 | Committed `VIEWER.json` described as the full atlas | The file in git has detail views only. The sbatch's `viewer_full_v1` is the atlas HTML, and it is not committed. |
+| Bare `python workflows/p12a_vac/prepare_v1_forward.py` | Defaults are `--isProduction y` and the DA2 mocks CFS directory. The sbatch and `smoke_v1_forward.sh` pass `--isProduction n` and the ph000 scratch root. |
+| `--overwrite False` on that preparer | `type=bool` turns any non-empty string into `True`. Production mode forces overwrite false afterwards; a scratch run does not. |
+| Import of `prepare_v1_forward.py`, `initialize_v1_forward.py`, `check_v1_preparation.py`, or `mock_assignment_audit.py` | All four execute at import. The first two read `sys.argv`. The assignment audit writes canary JSON. |
+| `run_v1_altmtl.py` raises on LSS `HEAD` or `--root` | It requires LSS `d942b990860e016e7558c740966fea3e5ce7e7f3`, `PREPARATION_READY.json`, and a root under `v1_forward_ph000_20260928`. |
+| `selection_sensitivity.py` or `verify_response_sampling.py` cannot import | `workflows.abacus_tweb` and `workflows.sbi` are not modules in this repository. |
+| `summarize_passband_followup.py` dirties git | It rewrites `VALIDATION.json` under `docs/evidence/p12a_passband_followup_20260926/`. |
