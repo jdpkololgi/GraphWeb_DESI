@@ -1,0 +1,13 @@
+{
+  "job": "59873074",
+  "host": "nid200063",
+  "approved_minutes": 30,
+  "account": "desi",
+  "qos": "interactive",
+  "cpus": 64,
+  "analysis_exit": 0,
+  "independent_validation_exit": 0,
+  "render_v2_exit": 0,
+  "cleanup": "salloc shell exited; subsequent squeue job query empty with no stderr",
+  "analysis_source_commit": "7518c14"
+}

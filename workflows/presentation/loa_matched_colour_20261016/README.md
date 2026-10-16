@@ -1,4 +1,4 @@
-# Matched observed-colour distributions (prepared; compute approval pending)
+# Matched observed-colour distributions (completed)
 
 Retain original observed-colour/CIGALE-mass samples and frozen P_WEB. Match the
 joint mass/redshift distribution across hard and soft inferred classes on
@@ -19,8 +19,7 @@ fixed environment predictions; they exclude inference/SED systematic errors.
 All finite colours enter normalization including explicit outlier bins.
 
 Three window workers, eight BLAS threads each. Intended budget: one CPU node,
-64 CPUs, desi / interactive, 30 minutes, Scratch, then release. No allocation
-launched. Inputs are the frozen observed_original FITS products from
+64 CPUs, desi / interactive, 30 minutes, Scratch, then release. Approved allocation 59873074 completed on nid200063; analysis and verification passed. Inputs are the frozen observed_original FITS products from
 `loa_rest_colour_20261016_v1`; new Scratch destination
 `loa_matched_colour_20261016_v1` is created exclusively.
 Syntax and two synthetic contracts pass: known mass-mixture differences are

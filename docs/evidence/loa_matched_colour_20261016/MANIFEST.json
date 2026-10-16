@@ -1,0 +1,19 @@
+{
+  "job": "59873074",
+  "host": "nid200063",
+  "script_sha256": "0137a46a5a434e43a433e42b957cd6a23f7506309fc5bd6a50a28b6f200bdd93",
+  "files": {
+    "z020030.json": "2227749767d9e6dbc7bbe558234dec04e11d85483a4125dab7972c69a81b6945",
+    "z020022.json": "644dc401ddcb135056ab0a316adcba8a902888585c87a5031daee076b6601f09",
+    "histograms.csv": "2bc1c1de13025b9a5079eded9e001dd8cd03244a9238ad1f165a2be62cc0dc33",
+    "z015020.json": "9c69aab3d873aa88415ede7d080f9945c4090c0e5f1411c22a74a35ac635a68a",
+    "figures/matched_colour_primary_hard.pdf": "531727beec69e425c7083df7c017dc9df3ad6bc309f081edd1b3484060d459a0",
+    "figures/matched_colour_fine_hard.png": "389fce67580eb4e598f64b23e9d174558a832359b01293616dddf4e7a08ec53d",
+    "figures/matched_colour_primary_soft.pdf": "658e9cbe5a6f3b165f89ab220f4940212b6fe6150f68f1bda99caede572eaf6c",
+    "figures/matched_colour_fine_soft.png": "0e273866c7a0303665e0948a738770c7b9dc4ba90f6529eddfef8e4410d7020a",
+    "figures/matched_colour_primary_soft.png": "71e1d7c2358debb85bb3bd9da0f2a8650a7de37dce5682d2e8ad29ab64bd460b",
+    "figures/matched_colour_fine_hard.pdf": "9499f1571f15c32d1061d361abb8d8affa37daa9a2e94626c078126f6ddc24b7",
+    "figures/matched_colour_fine_soft.pdf": "6fc2a81fd3790d26f6c3af17a216e375818d97ee00625bb450efd4d41a0d93f9",
+    "figures/matched_colour_primary_hard.png": "fc0be65a37579dc9d71de8f97595dbdbd9200018c63d4f731f1ae076c32cc79a"
+  }
+}

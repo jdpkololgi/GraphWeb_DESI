@@ -114,11 +114,11 @@ def analyse(window):
     write(OUT/f'{key}.json',result)
     return key
 
-def render():
+def render(figdir_name="figures", csv_name="histograms.csv"):
     import csv
     import matplotlib.pyplot as plt
     from matplotlib.lines import Line2D
-    figdir=OUT/'figures';figdir.mkdir(exist_ok=True)
+    figdir=OUT/figdir_name;figdir.mkdir(exist_ok=True)
     records=[json.loads((OUT/f'{w[0]}.json').read_text()) for w in WINDOWS]
     widths=np.diff(EDGES);centres=(EDGES[:-1]+EDGES[1:])/2
     plt.rcParams.update({'font.size':10,'axes.spines.top':False,'axes.spines.right':False,'pdf.fonttype':42})
@@ -147,6 +147,11 @@ def render():
                 for ax in axs[:,k]:
                     ax.set_xlim(.3,1.9);ax.grid(axis='y',alpha=.18)
                 axs[0,k].set_ylim(bottom=0);axs[1,k].set_ylim(bottom=0)
+            for row, field in [(0, 'raw_common'), (1, 'matched')]:
+                maximum=max(np.max(np.array(r['grids'][grid]['methods'][method][field])[:,1:-1]/widths) for r in records)
+                axs[row,0].set_ylim(0, maximum*1.26)
+            residual_max=max(np.max(np.abs(np.array(r['grids'][grid]['methods'][method]['residual_ci95'])[:,:,1:-1]/widths)) for r in records)
+            axs[2,0].set_ylim(-residual_max*1.08,residual_max*1.08)
             axs[0,0].set_ylabel('Before weighting\nCommon-support density [mag⁻¹]')
             axs[1,0].set_ylabel('Mass/redshift matched\nDensity [mag⁻¹]')
             axs[2,0].set_ylabel('Matched − pooled matched\nDensity difference [mag⁻¹]')
@@ -161,7 +166,7 @@ def render():
                 'All finite colours enter normalization; display zoom 0.3–1.9 mag. Observed colours/CIGALE masses; no causal or calibration claim.',fontsize=10)
             for ext in ['png','pdf']:fig.savefig(figdir/f'matched_colour_{grid}_{method}.{ext}',dpi=170)
             plt.close(fig)
-    with (OUT/'histograms.csv').open('w',newline='') as f:
+    with (OUT/csv_name).open('w',newline='') as f:
         w=csv.DictWriter(f,fieldnames=list(rows[0]),lineterminator='\n');w.writeheader();w.writerows(rows)
 
 def main():

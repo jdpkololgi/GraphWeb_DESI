@@ -1,0 +1,15 @@
+{
+  "code_sha256": "b22d265fa6104574b152ac18a7d730f515695261a7a49726cccaa97f29273814",
+  "original_manifest_sha256": "974b6d2ea52cefa7ca3931bd0a81330e5ca56484b0cca7666c43ba7d8ac033e8",
+  "change": "Shared density limits cover all panels; annotation headroom; symmetric residual limits",
+  "files": {
+    "figures_v2/matched_colour_fine_hard.pdf": "3020a24c35ec4ad6ffbef76e05de449e9370e109b752adae954cfeeef4f6ad6d",
+    "figures_v2/matched_colour_fine_hard.png": "701f6a5d0acbb40da86032481eef1b30c2524344892d6e411be69e1858334b42",
+    "figures_v2/matched_colour_fine_soft.pdf": "72ae527cc16efe76b5351bd5bcc01660a557a10bacd5fb83280a88db77997e54",
+    "figures_v2/matched_colour_fine_soft.png": "06541c44d5db0d2c84166b88a6341fa268cb6756668eb366561359521d5f64b4",
+    "figures_v2/matched_colour_primary_hard.pdf": "aa7cdd8284f1c1c435a251a76fd55c18d720e04231e2fa42bec3191733211c6a",
+    "figures_v2/matched_colour_primary_hard.png": "f5d4fe56946e20a1ac82c6affb92a8cc48b8ac5d6beebacaf61e1b3b89790e08",
+    "figures_v2/matched_colour_primary_soft.pdf": "f6d2b11dc3292e404fd6fc8db094afc9854bba2d2a21dc2cdfd60966823a6ff0",
+    "figures_v2/matched_colour_primary_soft.png": "72d33332ae71125fe243166061d921384f7f716d7048072bb651f0ac51d8d9ed"
+  }
+}
