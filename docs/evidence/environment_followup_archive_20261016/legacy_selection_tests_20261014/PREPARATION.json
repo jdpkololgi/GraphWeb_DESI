@@ -1,0 +1,607 @@
+{
+  "source": {
+    "bytes": 8026796160,
+    "columns": [
+      "TARGETID",
+      "MWS_TARGET",
+      "SUBPRIORITY",
+      "PRIORITY_INIT",
+      "TARGET_STATE",
+      "TIMESTAMP",
+      "PRIORITY",
+      "LOCATION",
+      "TILEID",
+      "TILELOCID",
+      "LASTNIGHT",
+      "Z_not4clus",
+      "ZERR",
+      "ZWARN",
+      "CHI2",
+      "COEFF",
+      "NPIXELS",
+      "SPECTYPE",
+      "SUBTYPE",
+      "NCOEFF",
+      "DELTACHI2",
+      "FIBER",
+      "COADD_FIBERSTATUS",
+      "FIBERASSIGN_X",
+      "FIBERASSIGN_Y",
+      "COADD_NUMEXP",
+      "COADD_EXPTIME",
+      "COADD_NUMNIGHT",
+      "MEAN_DELTA_X",
+      "RMS_DELTA_X",
+      "MEAN_DELTA_Y",
+      "RMS_DELTA_Y",
+      "MEAN_PSF_TO_FIBER_SPECFLUX",
+      "TSNR2_BGS_B",
+      "TSNR2_ELG_B",
+      "TSNR2_LRG_B",
+      "TSNR2_LYA_B",
+      "TSNR2_QSO_B",
+      "TSNR2_BGS_R",
+      "TSNR2_ELG_R",
+      "TSNR2_LRG_R",
+      "TSNR2_LYA_R",
+      "TSNR2_QSO_R",
+      "TSNR2_BGS_Z",
+      "TSNR2_ELG_Z",
+      "TSNR2_LRG_Z",
+      "TSNR2_LYA_Z",
+      "TSNR2_QSO_Z",
+      "TSNR2_BGS",
+      "TSNR2_ELG",
+      "TSNR2_LRG",
+      "TSNR2_LYA",
+      "TSNR2_QSO",
+      "ZWARN_MTL",
+      "Z_QN",
+      "Z_QN_CONF",
+      "IS_QSO_QN",
+      "PRIORITY_ASSIGNED",
+      "GOODPRI",
+      "GOODHARDLOC",
+      "LOCATION_ASSIGNED",
+      "TILELOCID_ASSIGNED",
+      "NTILE",
+      "TILES",
+      "BRICKID",
+      "BRICKNAME",
+      "MORPHTYPE",
+      "RA",
+      "DEC",
+      "DCHISQ",
+      "EBV",
+      "FLUX_G",
+      "FLUX_R",
+      "FLUX_Z",
+      "FLUX_IVAR_G",
+      "FLUX_IVAR_R",
+      "FLUX_IVAR_Z",
+      "MW_TRANSMISSION_G",
+      "MW_TRANSMISSION_R",
+      "MW_TRANSMISSION_Z",
+      "NOBS_G",
+      "NOBS_R",
+      "NOBS_Z",
+      "PSFDEPTH_G",
+      "PSFDEPTH_R",
+      "PSFDEPTH_Z",
+      "GALDEPTH_G",
+      "GALDEPTH_R",
+      "GALDEPTH_Z",
+      "FLUX_W1",
+      "FLUX_W2",
+      "FLUX_IVAR_W1",
+      "FLUX_IVAR_W2",
+      "MW_TRANSMISSION_W1",
+      "MW_TRANSMISSION_W2",
+      "FIBERFLUX_G",
+      "FIBERFLUX_R",
+      "FIBERFLUX_Z",
+      "FIBERTOTFLUX_G",
+      "FIBERTOTFLUX_R",
+      "FIBERTOTFLUX_Z",
+      "WISEMASK_W1",
+      "WISEMASK_W2",
+      "MASKBITS",
+      "SHAPE_R",
+      "PHOTSYS",
+      "DESI_TARGET",
+      "BGS_TARGET",
+      "COMP_TILE",
+      "FRACZ_TILELOCID",
+      "FRAC_TLOBS_TILES",
+      "WEIGHT_ZFAIL",
+      "mod_success_rate",
+      "WEIGHT_NTILE",
+      "WEIGHT_FKP_NTILE",
+      "BITWEIGHTS",
+      "PROB_OBS"
+    ],
+    "dtype": [
+      {
+        "dtype": ">i8",
+        "name": "TARGETID"
+      },
+      {
+        "dtype": ">i8",
+        "name": "MWS_TARGET"
+      },
+      {
+        "dtype": ">f8",
+        "name": "SUBPRIORITY"
+      },
+      {
+        "dtype": ">i8",
+        "name": "PRIORITY_INIT"
+      },
+      {
+        "dtype": "|S30",
+        "name": "TARGET_STATE"
+      },
+      {
+        "dtype": "|S25",
+        "name": "TIMESTAMP"
+      },
+      {
+        "dtype": ">i8",
+        "name": "PRIORITY"
+      },
+      {
+        "dtype": ">i8",
+        "name": "LOCATION"
+      },
+      {
+        "dtype": ">i8",
+        "name": "TILEID"
+      },
+      {
+        "dtype": ">i8",
+        "name": "TILELOCID"
+      },
+      {
+        "dtype": ">i4",
+        "name": "LASTNIGHT"
+      },
+      {
+        "dtype": ">f8",
+        "name": "Z_not4clus"
+      },
+      {
+        "dtype": ">f8",
+        "name": "ZERR"
+      },
+      {
+        "dtype": ">i8",
+        "name": "ZWARN"
+      },
+      {
+        "dtype": ">f8",
+        "name": "CHI2"
+      },
+      {
+        "dtype": "('>f8', (10,))",
+        "name": "COEFF"
+      },
+      {
+        "dtype": ">i8",
+        "name": "NPIXELS"
+      },
+      {
+        "dtype": "|S6",
+        "name": "SPECTYPE"
+      },
+      {
+        "dtype": "|S20",
+        "name": "SUBTYPE"
+      },
+      {
+        "dtype": ">i8",
+        "name": "NCOEFF"
+      },
+      {
+        "dtype": ">f8",
+        "name": "DELTACHI2"
+      },
+      {
+        "dtype": ">i4",
+        "name": "FIBER"
+      },
+      {
+        "dtype": ">i4",
+        "name": "COADD_FIBERSTATUS"
+      },
+      {
+        "dtype": ">f4",
+        "name": "FIBERASSIGN_X"
+      },
+      {
+        "dtype": ">f4",
+        "name": "FIBERASSIGN_Y"
+      },
+      {
+        "dtype": ">i2",
+        "name": "COADD_NUMEXP"
+      },
+      {
+        "dtype": ">f4",
+        "name": "COADD_EXPTIME"
+      },
+      {
+        "dtype": ">i2",
+        "name": "COADD_NUMNIGHT"
+      },
+      {
+        "dtype": ">f4",
+        "name": "MEAN_DELTA_X"
+      },
+      {
+        "dtype": ">f4",
+        "name": "RMS_DELTA_X"
+      },
+      {
+        "dtype": ">f4",
+        "name": "MEAN_DELTA_Y"
+      },
+      {
+        "dtype": ">f4",
+        "name": "RMS_DELTA_Y"
+      },
+      {
+        "dtype": ">f4",
+        "name": "MEAN_PSF_TO_FIBER_SPECFLUX"
+      },
+      {
+        "dtype": ">f4",
+        "name": "TSNR2_BGS_B"
+      },
+      {
+        "dtype": ">f4",
+        "name": "TSNR2_ELG_B"
+      },
+      {
+        "dtype": ">f4",
+        "name": "TSNR2_LRG_B"
+      },
+      {
+        "dtype": ">f4",
+        "name": "TSNR2_LYA_B"
+      },
+      {
+        "dtype": ">f4",
+        "name": "TSNR2_QSO_B"
+      },
+      {
+        "dtype": ">f4",
+        "name": "TSNR2_BGS_R"
+      },
+      {
+        "dtype": ">f4",
+        "name": "TSNR2_ELG_R"
+      },
+      {
+        "dtype": ">f4",
+        "name": "TSNR2_LRG_R"
+      },
+      {
+        "dtype": ">f4",
+        "name": "TSNR2_LYA_R"
+      },
+      {
+        "dtype": ">f4",
+        "name": "TSNR2_QSO_R"
+      },
+      {
+        "dtype": ">f4",
+        "name": "TSNR2_BGS_Z"
+      },
+      {
+        "dtype": ">f4",
+        "name": "TSNR2_ELG_Z"
+      },
+      {
+        "dtype": ">f4",
+        "name": "TSNR2_LRG_Z"
+      },
+      {
+        "dtype": ">f4",
+        "name": "TSNR2_LYA_Z"
+      },
+      {
+        "dtype": ">f4",
+        "name": "TSNR2_QSO_Z"
+      },
+      {
+        "dtype": ">f4",
+        "name": "TSNR2_BGS"
+      },
+      {
+        "dtype": ">f4",
+        "name": "TSNR2_ELG"
+      },
+      {
+        "dtype": ">f4",
+        "name": "TSNR2_LRG"
+      },
+      {
+        "dtype": ">f4",
+        "name": "TSNR2_LYA"
+      },
+      {
+        "dtype": ">f4",
+        "name": "TSNR2_QSO"
+      },
+      {
+        "dtype": ">i8",
+        "name": "ZWARN_MTL"
+      },
+      {
+        "dtype": ">f8",
+        "name": "Z_QN"
+      },
+      {
+        "dtype": ">f8",
+        "name": "Z_QN_CONF"
+      },
+      {
+        "dtype": ">i2",
+        "name": "IS_QSO_QN"
+      },
+      {
+        "dtype": ">i4",
+        "name": "PRIORITY_ASSIGNED"
+      },
+      {
+        "dtype": "bool",
+        "name": "GOODPRI"
+      },
+      {
+        "dtype": "bool",
+        "name": "GOODHARDLOC"
+      },
+      {
+        "dtype": "bool",
+        "name": "LOCATION_ASSIGNED"
+      },
+      {
+        "dtype": "bool",
+        "name": "TILELOCID_ASSIGNED"
+      },
+      {
+        "dtype": ">i8",
+        "name": "NTILE"
+      },
+      {
+        "dtype": "|S29",
+        "name": "TILES"
+      },
+      {
+        "dtype": ">i4",
+        "name": "BRICKID"
+      },
+      {
+        "dtype": "|S8",
+        "name": "BRICKNAME"
+      },
+      {
+        "dtype": "|S4",
+        "name": "MORPHTYPE"
+      },
+      {
+        "dtype": ">f8",
+        "name": "RA"
+      },
+      {
+        "dtype": ">f8",
+        "name": "DEC"
+      },
+      {
+        "dtype": "('>f4', (5,))",
+        "name": "DCHISQ"
+      },
+      {
+        "dtype": ">f4",
+        "name": "EBV"
+      },
+      {
+        "dtype": ">f4",
+        "name": "FLUX_G"
+      },
+      {
+        "dtype": ">f4",
+        "name": "FLUX_R"
+      },
+      {
+        "dtype": ">f4",
+        "name": "FLUX_Z"
+      },
+      {
+        "dtype": ">f4",
+        "name": "FLUX_IVAR_G"
+      },
+      {
+        "dtype": ">f4",
+        "name": "FLUX_IVAR_R"
+      },
+      {
+        "dtype": ">f4",
+        "name": "FLUX_IVAR_Z"
+      },
+      {
+        "dtype": ">f4",
+        "name": "MW_TRANSMISSION_G"
+      },
+      {
+        "dtype": ">f4",
+        "name": "MW_TRANSMISSION_R"
+      },
+      {
+        "dtype": ">f4",
+        "name": "MW_TRANSMISSION_Z"
+      },
+      {
+        "dtype": ">i2",
+        "name": "NOBS_G"
+      },
+      {
+        "dtype": ">i2",
+        "name": "NOBS_R"
+      },
+      {
+        "dtype": ">i2",
+        "name": "NOBS_Z"
+      },
+      {
+        "dtype": ">f4",
+        "name": "PSFDEPTH_G"
+      },
+      {
+        "dtype": ">f4",
+        "name": "PSFDEPTH_R"
+      },
+      {
+        "dtype": ">f4",
+        "name": "PSFDEPTH_Z"
+      },
+      {
+        "dtype": ">f4",
+        "name": "GALDEPTH_G"
+      },
+      {
+        "dtype": ">f4",
+        "name": "GALDEPTH_R"
+      },
+      {
+        "dtype": ">f4",
+        "name": "GALDEPTH_Z"
+      },
+      {
+        "dtype": ">f4",
+        "name": "FLUX_W1"
+      },
+      {
+        "dtype": ">f4",
+        "name": "FLUX_W2"
+      },
+      {
+        "dtype": ">f4",
+        "name": "FLUX_IVAR_W1"
+      },
+      {
+        "dtype": ">f4",
+        "name": "FLUX_IVAR_W2"
+      },
+      {
+        "dtype": ">f4",
+        "name": "MW_TRANSMISSION_W1"
+      },
+      {
+        "dtype": ">f4",
+        "name": "MW_TRANSMISSION_W2"
+      },
+      {
+        "dtype": ">f4",
+        "name": "FIBERFLUX_G"
+      },
+      {
+        "dtype": ">f4",
+        "name": "FIBERFLUX_R"
+      },
+      {
+        "dtype": ">f4",
+        "name": "FIBERFLUX_Z"
+      },
+      {
+        "dtype": ">f4",
+        "name": "FIBERTOTFLUX_G"
+      },
+      {
+        "dtype": ">f4",
+        "name": "FIBERTOTFLUX_R"
+      },
+      {
+        "dtype": ">f4",
+        "name": "FIBERTOTFLUX_Z"
+      },
+      {
+        "dtype": "uint8",
+        "name": "WISEMASK_W1"
+      },
+      {
+        "dtype": "uint8",
+        "name": "WISEMASK_W2"
+      },
+      {
+        "dtype": ">i2",
+        "name": "MASKBITS"
+      },
+      {
+        "dtype": ">f4",
+        "name": "SHAPE_R"
+      },
+      {
+        "dtype": "|S1",
+        "name": "PHOTSYS"
+      },
+      {
+        "dtype": ">i8",
+        "name": "DESI_TARGET"
+      },
+      {
+        "dtype": ">i8",
+        "name": "BGS_TARGET"
+      },
+      {
+        "dtype": ">f8",
+        "name": "COMP_TILE"
+      },
+      {
+        "dtype": ">f8",
+        "name": "FRACZ_TILELOCID"
+      },
+      {
+        "dtype": ">f8",
+        "name": "FRAC_TLOBS_TILES"
+      },
+      {
+        "dtype": ">f8",
+        "name": "WEIGHT_ZFAIL"
+      },
+      {
+        "dtype": ">f8",
+        "name": "mod_success_rate"
+      },
+      {
+        "dtype": ">f8",
+        "name": "WEIGHT_NTILE"
+      },
+      {
+        "dtype": ">f8",
+        "name": "WEIGHT_FKP_NTILE"
+      },
+      {
+        "dtype": "('>i8', (2,))",
+        "name": "BITWEIGHTS"
+      },
+      {
+        "dtype": ">f8",
+        "name": "PROB_OBS"
+      }
+    ],
+    "path": "/global/cfs/cdirs/desi/survey/catalogs/DA2/LSS/loa-v1/LSScats/v2.1/BGS_BRIGHT_full_HPmapcut.dat.fits",
+    "rows": 10631484,
+    "sha256": "13aaab4a5b6539282dc40705cc86a3cc781af8a5911a8599267ff09f68a82a22"
+  },
+  "full_source_hash_recomputed": false,
+  "cache_sha256": "3429000232bac3c299ab127ab408797205c6535c3ae67903e28efb5deccb22dd",
+  "targeting_sha256": "99b090c88e74723d046e831c707caed6954bfaa29eebb7157395f09396d929c2",
+  "rows": 103788,
+  "exact_id_sky_redshift_match": true,
+  "r_definition": "22.5-2.5log10(FLUX_R/MW_TRANSMISSION_R)",
+  "limits": "Installed desitarget.cuts.isBGS_colors: BRIGHT South19.5, North19.54. Main BRIGHT comparison only.",
+  "photsys_counts": {
+    "S": 103788
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "definition": "ABSMAG01_SDSS_G - ABSMAG01_SDSS_R; FastSpecFit log mass as saved",
+  "unique_only_rows": 198340,
+  "controlled_rows": 193679,
+  "cells": 98,
+  "raw_means": [
+    0.6814653745751256,
+    0.7060635394379979,
+    0.7455410380813339,
+    0.8068852883678609
+  ],
+  "controlled_means": [
+    0.6950109961873291,
+    0.7058521002714999,
+    0.7378412249479543,
+    0.7989323439992082
+  ],
+  "raw_cluster_minus_void": 0.12541991379273532,
+  "controlled_cluster_minus_void": 0.10392134781187912,
+  "control": ".1 dex saved mass and .01 z, >=20 per hard class, pooled fixed common cell mixture",
+  "uncertainty": "Not estimated in this bounded diagnostic"
+}

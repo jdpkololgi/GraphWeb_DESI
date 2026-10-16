@@ -1,0 +1,75 @@
+{
+  "sampled_targetids": [
+    39633450768008841,
+    39628182235649214,
+    39628346807553070,
+    39628228251354642,
+    39627897517904360,
+    39628228763064968,
+    39628341459813692,
+    39627716051340284
+  ],
+  "four_hop_nodes": 4325,
+  "four_hop_edges": 52348,
+  "five_hop_max_difference": 1.1920928955078125e-07,
+  "checkpoints": [
+    {
+      "path": "/pscratch/sd/d/dkololgi/tng_illustris/cache/from_repo_root/trained_gat_model_ddp_2026-01-15.pth",
+      "sha256": "e25c0244bbc6d8ba076d0ceeb1e521581bd91abba98728bed4926ee3fda77f82",
+      "max_abs_probability_error": 1.1920928955078125e-07,
+      "mean_abs_probability_error": 6.783328565518332e-09,
+      "labels_matching": 8
+    },
+    {
+      "path": "/pscratch/sd/d/dkololgi/tng_illustris/cache/from_repo_root/trained_gat_model_ddp_old.pth",
+      "sha256": "0e43f05e373bd3976a1fe08fc9db10acaf1bbe69168516d6dbb7d0b2acfc598e",
+      "max_abs_probability_error": 0.9453743696212769,
+      "mean_abs_probability_error": 0.22401612997055054,
+      "labels_matching": 4
+    },
+    {
+      "path": "/pscratch/sd/d/dkololgi/tng_illustris/cache/from_repo_root/trained_gat_model_ddp_2026-01-14.pth",
+      "sha256": "558a06017d3abf9d7c5c2a29c6bb36be8a414ae678711b4a38e602662d8f1070",
+      "max_abs_probability_error": 0.9878760576248169,
+      "mean_abs_probability_error": 0.12901465594768524,
+      "labels_matching": 6
+    },
+    {
+      "path": "/pscratch/sd/d/dkololgi/tng_illustris/cache/from_repo_root/trained_gat_model_old.pth",
+      "sha256": "aa1295b4faa8713f3f2ae1053c9a9eb3a66f250844b8f47c46939208bfda98f7",
+      "max_abs_probability_error": 0.9884458780288696,
+      "mean_abs_probability_error": 0.20306509733200073,
+      "labels_matching": 5
+    },
+    {
+      "path": "/pscratch/sd/d/dkololgi/tng_illustris/cache/from_repo_root/trained_gat_model_ddp.pth",
+      "sha256": "cdd6b9a013d0450d7d281a90df0b677ad4ebd0d14ec60ce56203a04df423009c",
+      "max_abs_probability_error": 0.9884568452835083,
+      "mean_abs_probability_error": 0.2908109426498413,
+      "labels_matching": 2
+    },
+    {
+      "path": "/pscratch/sd/d/dkololgi/tng_illustris/cache/from_repo_root/trained_gat_model_ddp_2025-11-25.pth",
+      "sha256": "36f0051b03c05695568ce1e669e0737fc67a7a98a7d147de5f48cda3d5345e08",
+      "max_abs_probability_error": 0.9884591102600098,
+      "mean_abs_probability_error": 0.23251168429851532,
+      "labels_matching": 3
+    },
+    {
+      "path": "/pscratch/sd/d/dkololgi/tng_illustris/cache/from_repo_root/trained_gat_simulation.pth",
+      "sha256": "b4b3d25dc5249b979f0dc9990f55b1eeaa034e0bfde57d0bc4868398ae3bd07e",
+      "max_abs_probability_error": 0.9900466203689575,
+      "mean_abs_probability_error": 0.25049957633018494,
+      "labels_matching": 4
+    },
+    {
+      "path": "/pscratch/sd/d/dkololgi/tng_illustris/cache/from_repo_root/trained_gat_model_ddp_old2.pth",
+      "sha256": "2ac9151f81edd2216a8acebd422a552e61fa05c591fe61a9958ae2091a7de639",
+      "max_abs_probability_error": 0.9906442165374756,
+      "mean_abs_probability_error": 0.3443955183029175,
+      "labels_matching": 2
+    }
+  ],
+  "source_sha256": "57cd85ff42d1b819ab500976746f9049883a79c0dfb8484e0f945d1acfb6cd2f",
+  "identity": "Cached catalogue IDs and redshifts exactly match saved VAC. Model inference only for eight diagnostic galaxies; no model comparison or retraining."
+}

@@ -1,0 +1,22 @@
+{
+  "job": "59855238",
+  "host": "nid200002",
+  "source_manifest_sha256": "a23d2fb301c03a20b41a6e45b13e1733e53ce14d190bd9fc40d570e071b08baa",
+  "colour_audit_manifest_sha256": "79614cc50afc38423836b24555efd95da824159b85fa357c26f6f627d8930be1",
+  "code": {
+    "/global/u2/d/dkololgi/GraphWeb_DESI/workflows/presentation/loa_mass_complete_20261016/colour_followup.py": "157c14ab70eb128b1c1c2c1e42ff3a26a828be0f1a0e30fcedd90b8699712388",
+    "/global/u2/d/dkololgi/GraphWeb_DESI/workflows/presentation/loa_mass_complete_20261016/run.py": "d0fffaa14c2cdab17dfd02e05908d9ef1652a2d72a9b516ecc710e9ec85449f4",
+    "/global/u2/d/dkololgi/GraphWeb_DESI/workflows/presentation/loa_mass_complete_20261016/colour_split.py": "01555f33e4987d977d7aa5c9869bb33f70ed8c2cddbbb152d7fd429b20afbccb"
+  },
+  "outputs": {
+    "relationships.json": "6a89fe179fe311852a7ed20b3d3eccccfc2415d1761feb5f593430e38ed21c20",
+    "properties_z020030.pdf": "e70404efd32ed46b2dc91672c395caf4d075364bf0ab405773fb1b02bb225bed",
+    "windows.json": "3241a588b723ae6b5761bdde81b3955539434db60f243145dba66543247062bb",
+    "properties_z020030.png": "ca845fbcdca2cf608cf9331597133539740ff34a287a585d51743237e27a0da8",
+    "properties_z020022.png": "af1335ec2a1e205f3e35fda2f07cc09d9d3c5ffbc4fcc13f301c3637024c74d1",
+    "properties_z020022.pdf": "165d0daa54923f5fe3321b54f2099fad8cf7b77f3440232fddd925160daf74a5",
+    "LOA_COLOUR_MASS_COMPLETE_z020022.fits": "57ee007645f08fce7c4455dce1d3a70cf8f1db27b87a0bf05d9676449ac46144"
+  },
+  "validation": "Every raw and standardized mean independently reconstructed; all source columns roundtripped at 257 rows",
+  "interpretation": "No common-colour/hard-soft support passed. Narrow sample is exploratory; soft-only within-colour control has different supports. Bootstrap conditional on fixed selection and predictions."
+}

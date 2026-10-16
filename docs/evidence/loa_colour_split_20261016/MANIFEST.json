@@ -1,0 +1,14 @@
+{
+  "analysis_manifest_sha256": "72b0f54511814228a992bae5248e489e91bd0d82ea6fff20497d7b34cc0dafb3",
+  "script_sha256": "8ef0cd613fe617c46a85316d5d20a1415ab4da62b1adfc4b82c888b05e08981e",
+  "job": "59855238",
+  "outputs": {
+    "properties_z020030.pdf": "b6edec058740b28efac6be819963eb2a56fd8aaaa5fc0e174370675ef878b810",
+    "properties_z020030.png": "2338116cfb4bc83ff459c9b3f660da00d8b53eca95593c264bc048432365f376",
+    "curves_and_contrasts.csv": "56f8fdcddfce691ce2485b5825caf42cfb3896abb88766afe1a5b8d8b3beeb72",
+    "properties_z020022.png": "88cebbf340a7a5c7221dae9803ed946d3930d850cac84c0b2eb4400f2347bf5d",
+    "properties_z020022.pdf": "71b9efc365aacadbfa1e4f028f2d31e1dec597bc7c8df8b395dde9fce7660d1a",
+    "contrasts_z020022.pdf": "2d7c5bcdffd8b165dc3207b3e128eb0472cfe35e68da5935009c17fcbf3e6ea7",
+    "contrasts_z020022.png": "05d0ff2df001c47862bcc287c2597d4a03af4975f97b9421ef19dba3ab79e25e"
+  }
+}

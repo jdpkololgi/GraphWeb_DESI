@@ -1,0 +1,127 @@
+{
+  "scope": "Full ID census; sampled saved prediction/coordinate/property chain. No model replay.",
+  "frozen_sources_verified": [
+    "workflows/p12a_vac/production_inference.py",
+    "workflows/p12a_vac/loa_trial.py",
+    "workflows/p12a_vac/production.py",
+    "workflows/catalog/p12a_observation_patch.py"
+  ],
+  "frozen_science_sources_verified": [
+    "workflows/abacus_tweb/p8_train_unet_patch.py",
+    "workflows/sbi/p12_train_base_response_fmpe.py"
+  ],
+  "legacy": {
+    "rows": 199314,
+    "north_rows": 139545,
+    "south_rows": 59769,
+    "north_south_order_exact": {
+      "TARGETID": true,
+      "RA": true,
+      "DEC": true,
+      "Z": true,
+      "LOGMSTAR": true
+    },
+    "original_order_id_matches": 0
+  },
+  "full_vac_identity_census": {
+    "rows": 5436413,
+    "unique_exact_input_ids": true
+  },
+  "saved_core_chain": {
+    "cores": [
+      {
+        "cap": 0,
+        "centre_shell": 0,
+        "core_id": 579,
+        "rows": 176,
+        "actual_shells": [
+          0,
+          1
+        ],
+        "supported": 172
+      },
+      {
+        "cap": 0,
+        "centre_shell": 1,
+        "core_id": 1313,
+        "rows": 60,
+        "actual_shells": [
+          1
+        ],
+        "supported": 60
+      },
+      {
+        "cap": 0,
+        "centre_shell": 2,
+        "core_id": 1558,
+        "rows": 232,
+        "actual_shells": [
+          2
+        ],
+        "supported": 232
+      },
+      {
+        "cap": 0,
+        "centre_shell": 3,
+        "core_id": 2311,
+        "rows": 43,
+        "actual_shells": [
+          2,
+          3
+        ],
+        "supported": 43
+      },
+      {
+        "cap": 1,
+        "centre_shell": 0,
+        "core_id": 14768,
+        "rows": 229,
+        "actual_shells": [
+          0
+        ],
+        "supported": 225
+      },
+      {
+        "cap": 1,
+        "centre_shell": 1,
+        "core_id": 15526,
+        "rows": 154,
+        "actual_shells": [
+          1,
+          2
+        ],
+        "supported": 151
+      },
+      {
+        "cap": 1,
+        "centre_shell": 2,
+        "core_id": 6630,
+        "rows": 67,
+        "actual_shells": [
+          2
+        ],
+        "supported": 67
+      },
+      {
+        "cap": 1,
+        "centre_shell": 3,
+        "core_id": 5487,
+        "rows": 48,
+        "actual_shells": [
+          3
+        ],
+        "supported": 48
+      }
+    ],
+    "rows": 1009,
+    "all_checks_exact": true
+  },
+  "plot_to_sed_chain": {
+    "sampled_rows": 256,
+    "cigale_rows": 255,
+    "all_checks_exact": true,
+    "max_separation_arcsec": 0.0,
+    "max_normalized_dz": 0.000253032217967014
+  },
+  "script_sha256": "c76af3390e2def382516d0130427d4e061089ef402a8cd4a867fb8ed983b0b3a"
+}

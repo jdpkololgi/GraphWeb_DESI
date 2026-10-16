@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "checks": 489,
+  "checkpoint_numpy_replay_max_error": 1.1708759917183897e-06,
+  "raw_direct_mean_max_error": 1.5987211554602254e-14,
+  "controlled_direct_mean_max_error": 1.0658141036401503e-14,
+  "source_spot_checks": 24,
+  "inference_count_checks": 12,
+  "prediction_sha256": "88e8c7f348f27fb872f2d1ea98bbdf622733d741995caf4bd8aca023ef8a9d5d",
+  "script_sha256": "c41be4ee552725123c306090c5e8e04f30b15c04ed8ffd9b9f1fdfc5d70880b1",
+  "estimator_sha256": "12dfbff567ddf7f42d34f373de1320e55fc582dec24781399256ea8a33eade8c",
+  "tie_helper_sha256": "fcf55f32c80baef6b603b106eb559dc9e4c9e855618faf3ccd6e937998ec4738"
+}

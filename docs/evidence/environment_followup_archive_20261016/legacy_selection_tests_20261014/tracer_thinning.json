@@ -1,0 +1,316 @@
+{
+  "rows": 283969,
+  "box_hmpc": 205.0,
+  "full_density_h3_mpc3": 0.03296168076493376,
+  "queries": 10000,
+  "query_index_sha256": "da445e723a6a1d17b3c107295f814385fc495f072473ca25094063fa5b67de8c",
+  "current_ntilde_h3_mpc3_quantiles": [
+    0.0026456814259290693,
+    0.0043580057099461555,
+    0.006812071707099676
+  ],
+  "records": [
+    {
+      "seed": 20261014,
+      "fraction": 1.0,
+      "tracers": 283969,
+      "n_h3_mpc3": 0.03296168076493376,
+      "radius_hmpc": 2.0,
+      "median_count": 7.0,
+      "zero_fraction": 0.0759,
+      "spearman_with_fixed_R2_trace": 0.8908666174017461
+    },
+    {
+      "seed": 20261014,
+      "fraction": 1.0,
+      "tracers": 283969,
+      "n_h3_mpc3": 0.03296168076493376,
+      "radius_hmpc": 7.0,
+      "median_count": 91.0,
+      "zero_fraction": 0.0,
+      "spearman_with_fixed_R2_trace": 0.8657291207801435
+    },
+    {
+      "seed": 20261014,
+      "fraction": 0.3,
+      "tracers": 85512,
+      "n_h3_mpc3": 0.009925799103321194,
+      "radius_hmpc": 2.0,
+      "median_count": 2.0,
+      "zero_fraction": 0.2403,
+      "spearman_with_fixed_R2_trace": 0.8301100389324135
+    },
+    {
+      "seed": 20261014,
+      "fraction": 0.3,
+      "tracers": 85512,
+      "n_h3_mpc3": 0.009925799103321194,
+      "radius_hmpc": 7.0,
+      "median_count": 27.0,
+      "zero_fraction": 0.0019,
+      "spearman_with_fixed_R2_trace": 0.8482182837736865
+    },
+    {
+      "seed": 20261014,
+      "fraction": 0.1,
+      "tracers": 28666,
+      "n_h3_mpc3": 0.0033274038391781897,
+      "radius_hmpc": 2.0,
+      "median_count": 1.0,
+      "zero_fraction": 0.4583,
+      "spearman_with_fixed_R2_trace": 0.7333708679552922
+    },
+    {
+      "seed": 20261014,
+      "fraction": 0.1,
+      "tracers": 28666,
+      "n_h3_mpc3": 0.0033274038391781897,
+      "radius_hmpc": 7.0,
+      "median_count": 9.0,
+      "zero_fraction": 0.0204,
+      "spearman_with_fixed_R2_trace": 0.8060134993469182
+    },
+    {
+      "seed": 20261014,
+      "fraction": 0.03,
+      "tracers": 8616,
+      "n_h3_mpc3": 0.0010001015655605693,
+      "radius_hmpc": 2.0,
+      "median_count": 0.0,
+      "zero_fraction": 0.6946,
+      "spearman_with_fixed_R2_trace": 0.597419734124555
+    },
+    {
+      "seed": 20261014,
+      "fraction": 0.03,
+      "tracers": 8616,
+      "n_h3_mpc3": 0.0010001015655605693,
+      "radius_hmpc": 7.0,
+      "median_count": 3.0,
+      "zero_fraction": 0.1449,
+      "spearman_with_fixed_R2_trace": 0.7091531493435075
+    },
+    {
+      "seed": 20261014,
+      "fraction": 0.01,
+      "tracers": 2855,
+      "n_h3_mpc3": 0.0003313939147719853,
+      "radius_hmpc": 2.0,
+      "median_count": 0.0,
+      "zero_fraction": 0.8452,
+      "spearman_with_fixed_R2_trace": 0.4473074563851159
+    },
+    {
+      "seed": 20261014,
+      "fraction": 0.01,
+      "tracers": 2855,
+      "n_h3_mpc3": 0.0003313939147719853,
+      "radius_hmpc": 7.0,
+      "median_count": 1.0,
+      "zero_fraction": 0.4033,
+      "spearman_with_fixed_R2_trace": 0.5468276135908348
+    },
+    {
+      "seed": 20261015,
+      "fraction": 1.0,
+      "tracers": 283969,
+      "n_h3_mpc3": 0.03296168076493376,
+      "radius_hmpc": 2.0,
+      "median_count": 7.0,
+      "zero_fraction": 0.0759,
+      "spearman_with_fixed_R2_trace": 0.8908666174017461
+    },
+    {
+      "seed": 20261015,
+      "fraction": 1.0,
+      "tracers": 283969,
+      "n_h3_mpc3": 0.03296168076493376,
+      "radius_hmpc": 7.0,
+      "median_count": 91.0,
+      "zero_fraction": 0.0,
+      "spearman_with_fixed_R2_trace": 0.8657291207801435
+    },
+    {
+      "seed": 20261015,
+      "fraction": 0.3,
+      "tracers": 85264,
+      "n_h3_mpc3": 0.009897012521582682,
+      "radius_hmpc": 2.0,
+      "median_count": 2.0,
+      "zero_fraction": 0.2399,
+      "spearman_with_fixed_R2_trace": 0.8242808121434169
+    },
+    {
+      "seed": 20261015,
+      "fraction": 0.3,
+      "tracers": 85264,
+      "n_h3_mpc3": 0.009897012521582682,
+      "radius_hmpc": 7.0,
+      "median_count": 27.0,
+      "zero_fraction": 0.0012,
+      "spearman_with_fixed_R2_trace": 0.8479466056720396
+    },
+    {
+      "seed": 20261015,
+      "fraction": 0.1,
+      "tracers": 28246,
+      "n_h3_mpc3": 0.003278652370104903,
+      "radius_hmpc": 2.0,
+      "median_count": 1.0,
+      "zero_fraction": 0.4615,
+      "spearman_with_fixed_R2_trace": 0.7232167695690831
+    },
+    {
+      "seed": 20261015,
+      "fraction": 0.1,
+      "tracers": 28246,
+      "n_h3_mpc3": 0.003278652370104903,
+      "radius_hmpc": 7.0,
+      "median_count": 9.0,
+      "zero_fraction": 0.0196,
+      "spearman_with_fixed_R2_trace": 0.804822014596041
+    },
+    {
+      "seed": 20261015,
+      "fraction": 0.03,
+      "tracers": 8462,
+      "n_h3_mpc3": 0.0009822260269003642,
+      "radius_hmpc": 2.0,
+      "median_count": 0.0,
+      "zero_fraction": 0.6915,
+      "spearman_with_fixed_R2_trace": 0.5967060780329528
+    },
+    {
+      "seed": 20261015,
+      "fraction": 0.03,
+      "tracers": 8462,
+      "n_h3_mpc3": 0.0009822260269003642,
+      "radius_hmpc": 7.0,
+      "median_count": 3.0,
+      "zero_fraction": 0.1497,
+      "spearman_with_fixed_R2_trace": 0.6991558317604326
+    },
+    {
+      "seed": 20261015,
+      "fraction": 0.01,
+      "tracers": 2846,
+      "n_h3_mpc3": 0.0003303492404347006,
+      "radius_hmpc": 2.0,
+      "median_count": 0.0,
+      "zero_fraction": 0.8481,
+      "spearman_with_fixed_R2_trace": 0.43137644668381464
+    },
+    {
+      "seed": 20261015,
+      "fraction": 0.01,
+      "tracers": 2846,
+      "n_h3_mpc3": 0.0003303492404347006,
+      "radius_hmpc": 7.0,
+      "median_count": 1.0,
+      "zero_fraction": 0.408,
+      "spearman_with_fixed_R2_trace": 0.547534572643401
+    },
+    {
+      "seed": 20261016,
+      "fraction": 1.0,
+      "tracers": 283969,
+      "n_h3_mpc3": 0.03296168076493376,
+      "radius_hmpc": 2.0,
+      "median_count": 7.0,
+      "zero_fraction": 0.0759,
+      "spearman_with_fixed_R2_trace": 0.8908666174017461
+    },
+    {
+      "seed": 20261016,
+      "fraction": 1.0,
+      "tracers": 283969,
+      "n_h3_mpc3": 0.03296168076493376,
+      "radius_hmpc": 7.0,
+      "median_count": 91.0,
+      "zero_fraction": 0.0,
+      "spearman_with_fixed_R2_trace": 0.8657291207801435
+    },
+    {
+      "seed": 20261016,
+      "fraction": 0.3,
+      "tracers": 85378,
+      "n_h3_mpc3": 0.009910245063188288,
+      "radius_hmpc": 2.0,
+      "median_count": 2.0,
+      "zero_fraction": 0.2468,
+      "spearman_with_fixed_R2_trace": 0.8263350729190089
+    },
+    {
+      "seed": 20261016,
+      "fraction": 0.3,
+      "tracers": 85378,
+      "n_h3_mpc3": 0.009910245063188288,
+      "radius_hmpc": 7.0,
+      "median_count": 27.0,
+      "zero_fraction": 0.0014,
+      "spearman_with_fixed_R2_trace": 0.8496048671076663
+    },
+    {
+      "seed": 20261016,
+      "fraction": 0.1,
+      "tracers": 28444,
+      "n_h3_mpc3": 0.0033016352055251666,
+      "radius_hmpc": 2.0,
+      "median_count": 1.0,
+      "zero_fraction": 0.4625,
+      "spearman_with_fixed_R2_trace": 0.7303921878809931
+    },
+    {
+      "seed": 20261016,
+      "fraction": 0.1,
+      "tracers": 28444,
+      "n_h3_mpc3": 0.0033016352055251666,
+      "radius_hmpc": 7.0,
+      "median_count": 9.0,
+      "zero_fraction": 0.0204,
+      "spearman_with_fixed_R2_trace": 0.8085901102858888
+    },
+    {
+      "seed": 20261016,
+      "fraction": 0.03,
+      "tracers": 8491,
+      "n_h3_mpc3": 0.0009855921997649483,
+      "radius_hmpc": 2.0,
+      "median_count": 0.0,
+      "zero_fraction": 0.6919,
+      "spearman_with_fixed_R2_trace": 0.5877866100952772
+    },
+    {
+      "seed": 20261016,
+      "fraction": 0.03,
+      "tracers": 8491,
+      "n_h3_mpc3": 0.0009855921997649483,
+      "radius_hmpc": 7.0,
+      "median_count": 3.0,
+      "zero_fraction": 0.146,
+      "spearman_with_fixed_R2_trace": 0.7056593702362759
+    },
+    {
+      "seed": 20261016,
+      "fraction": 0.01,
+      "tracers": 2851,
+      "n_h3_mpc3": 0.0003309296150665254,
+      "radius_hmpc": 2.0,
+      "median_count": 0.0,
+      "zero_fraction": 0.8444,
+      "spearman_with_fixed_R2_trace": 0.4468473338159558
+    },
+    {
+      "seed": 20261016,
+      "fraction": 0.01,
+      "tracers": 2851,
+      "n_h3_mpc3": 0.0003309296150665254,
+      "radius_hmpc": 7.0,
+      "median_count": 1.0,
+      "zero_fraction": 0.4071,
+      "spearman_with_fixed_R2_trace": 0.5496271405781197
+    }
+  ],
+  "method": "Three seeds, nested independent Bernoulli thinning of identical periodic TNG tracers. Same 10000 query galaxies and native saved R~2 tidal trace at every level. Query self excluded whether present or absent in thinned sample. No trained predictor or property outcomes; this isolates count information under random thinning only. No claim of exact DESI selection or galaxy bias parity. R7 here is a count aperture, not a new R7 truth field.",
+  "script_sha256": "aa797069687f56e5e5951a95cfc870c88ad55eb78cd1ab0b2079765c02d170e8"
+}

@@ -1,0 +1,165 @@
+{
+  "created_utc": "2026-10-14",
+  "canonical_report": "/global/homes/d/dkololgi/GraphWeb_DESI/docs/legacy_gat_sequential_tests_20261014.md",
+  "source_repositories": [
+    "/global/homes/d/dkololgi/GraphWeb_DESI",
+    "/global/homes/d/dkololgi/TNG/Illustris"
+  ],
+  "related_evidence": [
+    "/global/homes/d/dkololgi/fmsu_tokyo_20261010/legacy_gat_comparison_20261014",
+    "/global/homes/d/dkololgi/fmsu_tokyo_20261010/p12a_cg5_check_20261014",
+    "/global/homes/d/dkololgi/fmsu_tokyo_20261010/raw_environment_checks_20261014"
+  ],
+  "files": [
+    {
+      "path": "PREPARATION.json",
+      "bytes": 11424,
+      "sha256": "62b78609dde3c23d2c40ad8e755ab2fc7a54e62aa8410af611702c8fbc73032f"
+    },
+    {
+      "path": "REPORT.md",
+      "bytes": 33483,
+      "sha256": "4d1f88e4b5f5ebe7425394a60d2fe13157593786e7244f40ecb2dbfdb1d0a585"
+    },
+    {
+      "path": "RESULTS.json",
+      "bytes": 173937,
+      "sha256": "30478cd982faf28547b7e050b29c1aea30941f993a5af10bed9d64bdcb1be94f"
+    },
+    {
+      "path": "VALIDATION.json",
+      "bytes": 1796,
+      "sha256": "0169bcf5b95ee3ed5b87a416097b5e5650a9c4b2abc2c252be7127e3b9e77391"
+    },
+    {
+      "path": "checkpoint_replay.json",
+      "bytes": 3347,
+      "sha256": "3ae1132d6cddbcc0776234f5d9d085029476ea4dbb4605a1dbde7e9045eecf41"
+    },
+    {
+      "path": "label_scale.json",
+      "bytes": 2427,
+      "sha256": "c25eab9c22812597525ae6c07ecc7adda03af7b9b296ee7509411e29e421a779"
+    },
+    {
+      "path": "lowz_filtered_index_probe.json",
+      "bytes": 1139,
+      "sha256": "6547a3177417204270ca8fd802351474e71141c5aec927d600aaddf526d28760"
+    },
+    {
+      "path": "lowz_product_probe.json",
+      "bytes": 4832,
+      "sha256": "04852358556c3e4e6e1213ccd1090686a93b0c3321535f3c8fd44a4d9eb0d823"
+    },
+    {
+      "path": "old_density_scale.json",
+      "bytes": 1559,
+      "sha256": "9697d64e5f1cf53424a6351894ffe4d298d21c6b784126fedeed9d404e3de8b9"
+    },
+    {
+      "path": "p12a_alignment_execution_results_20260926.md",
+      "bytes": 14030,
+      "sha256": "89714ace9914c9f40a1f6bcd7314ea6ce5e7257a76e01727fe189734d7849432"
+    },
+    {
+      "path": "p12a_mock_choice_20260928.md",
+      "bytes": 6066,
+      "sha256": "64db843b94367df5153ee1695b5287e99a49389bbc89ae39ad8ea4c33c3541ee"
+    },
+    {
+      "path": "p12a_targeting.npz",
+      "bytes": 658068,
+      "sha256": "99b090c88e74723d046e831c707caed6954bfaa29eebb7157395f09396d929c2"
+    },
+    {
+      "path": "public_source/PROVENANCE.json",
+      "bytes": 1485,
+      "sha256": "713f82cc4eb952e15eecc56ab1e7a19c0ece8dd6871c75c76e072d6295f5daf2"
+    },
+    {
+      "path": "public_source/new_cut_sky_tools.py.txt",
+      "bytes": 31816,
+      "sha256": "f62bb19b94cdc4129656506afde520b3708829a2be589c54decf9223fceab3ae"
+    },
+    {
+      "path": "public_source/old_galaxy_catalogue.py.txt",
+      "bytes": 11749,
+      "sha256": "befcaa1ce0b26fc26985f3a31e2e143c6b50ec84ef356cb3de3916bfbd919b74"
+    },
+    {
+      "path": "public_source/old_halo_catalogue.py.txt",
+      "bytes": 12062,
+      "sha256": "0204e5c65631386c5c9796f0aa3369ca9e963077e5b0ba70a036d63b078479e3"
+    },
+    {
+      "path": "public_source/old_make_catalogue_snapshot.py.txt",
+      "bytes": 57782,
+      "sha256": "5b91938cdb7ff07458c9b8fba1c99d0c453989981e9b6a45e3d0757cc494bf68"
+    },
+    {
+      "path": "public_source/old_make_mocks_script.py.txt",
+      "bytes": 11401,
+      "sha256": "fc74149187ba957983f709bbaa6eb949d948296a68bb2ad37b00db47bf2a25ac"
+    },
+    {
+      "path": "source/GraphWeb_DESI/legacy_checkpoint_replay_20261014.py",
+      "bytes": 3967,
+      "sha256": "2b8cec93e6c64c6e55955aa4a750e7a13b89e569e8eef6367502c7cb29a1826d"
+    },
+    {
+      "path": "source/GraphWeb_DESI/legacy_density_scale_20261014.py",
+      "bytes": 4022,
+      "sha256": "6821b2322d9159fd9d57049eb74bc95c26e13b59b52dd4d6aee4c13d8c766746"
+    },
+    {
+      "path": "source/GraphWeb_DESI/legacy_gat_comparison_20261014.py",
+      "bytes": 23930,
+      "sha256": "ebaa209cda8a5ca45bd06592dc0ac96fa32e6aa53ac6702f9a758de8f27b59a1"
+    },
+    {
+      "path": "source/GraphWeb_DESI/legacy_label_scale_20261014.py",
+      "bytes": 3927,
+      "sha256": "f33b3b87a64eb1434216c3d0fade5e6b7944bd8ceb9052927d8fd20f0f520354"
+    },
+    {
+      "path": "source/GraphWeb_DESI/legacy_selection_tests_20261014.py",
+      "bytes": 11338,
+      "sha256": "7e750c4a0a30092ccdcb21d817b7ad76a0e239b2a59aaa3c2bc92a6a3c15dae7"
+    },
+    {
+      "path": "source/GraphWeb_DESI/ordering_audit_20261014.py",
+      "bytes": 8900,
+      "sha256": "c76af3390e2def382516d0130427d4e061089ef402a8cd4a867fb8ed983b0b3a"
+    },
+    {
+      "path": "source/GraphWeb_DESI/p12a_cg5_check_20261014.py",
+      "bytes": 7119,
+      "sha256": "ed63b8998b6d05a1a42054b4ff77901061fcb19d7e27e150232ee2bb7d874944"
+    },
+    {
+      "path": "source/Illustris/lowz_filtered_index_probe_20261014.py",
+      "bytes": 2464,
+      "sha256": "764c965e9997b84f8adc73f3bcdde52dcd84cd34523f3ad597531b63b67ac995"
+    },
+    {
+      "path": "source/Illustris/lowz_product_probe_20261014.py",
+      "bytes": 3202,
+      "sha256": "052e4316ad068811e504de01f7b0cb543c54301ed4cc5f49661f19ad3e3b13f8"
+    },
+    {
+      "path": "source/Illustris/tracer_thinning_probe_20261014.py",
+      "bytes": 3873,
+      "sha256": "aa797069687f56e5e5951a95cfc870c88ad55eb78cd1ab0b2079765c02d170e8"
+    },
+    {
+      "path": "tracer_thinning.json",
+      "bytes": 8875,
+      "sha256": "a61615975f0ba743966ff15ec5577f9b46d8ac55e60ba323984ff4aca7bdeec4"
+    },
+    {
+      "path": "training_label_parity.json",
+      "bytes": 678,
+      "sha256": "89d8154fdbabe15187c89721155ec819a507b205d8ea0e1730941db6b7dd2ef6"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "source": "/global/cfs/cdirs/desicollab/users/zouhu/vac/dr2/dr2_galaxy_sedfitting_v1.0.fits",
+  "source_bytes": 20507860800,
+  "source_hash_from_existing_receipt": "a263052cce215de14dbdd1af1e6e61e5d1e88434941894785a96f18cd63e8fa4",
+  "source_hash_freshly_computed": false,
+  "legacy_sha256": "220a55f95d6bd3ecfb6fdf4da6deb96974feaae94c2e7469e382f92523cb384e",
+  "id_matched_source_rows": 203053,
+  "coordinate_redshift_rejected_rows": 14,
+  "ambiguous_ids_excluded": 4634,
+  "accepted_unique_ids": 193706,
+  "output_sha256": "fa70f9fd8f5f5a0e1f4d9762c2a92bc22e07b586c0e17ce5eeef3714462085d7",
+  "legacy_repeated_targetid_rows_excluded": 974,
+  "rule": "Exact integer TARGETID, separation <1 arcsec, abs(dz)/(1+z)<.001, only one consistent observation."
+}

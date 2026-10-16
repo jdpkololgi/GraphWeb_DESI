@@ -1,0 +1,137 @@
+{
+  "status": "complete",
+  "job_id": "59853892",
+  "node": "nid200058",
+  "sources": {
+    "/pscratch/sd/d/dkololgi/graphweb_desi/outputs/p12a_loa_cigale_20260929_v1/DESI_LOA_P12A_CIGALE_FULL_VAC.fits": {
+      "bytes": 2109343680,
+      "mtime_ns": 1790683855000000000
+    },
+    "/global/cfs/cdirs/desi/survey/catalogs/DA2/LSS/loa-v1/LSScats/v2.1/BGS_BRIGHT_full_HPmapcut.dat.fits": {
+      "bytes": 8026796160,
+      "mtime_ns": 1771271470000000000
+    },
+    "/global/cfs/cdirs/desicollab/users/zouhu/vac/dr2/dr2_galaxy_sedfitting_v1.0.fits": {
+      "bytes": 20507860800,
+      "mtime_ns": 1751609826717957220
+    }
+  },
+  "source_hash_scope": "Final reproducible source files; prepare and its helpers were unchanged after the successful prepare launch. Whole-file hashes are not claimed as an immutable runtime snapshot.",
+  "code_sha256": {
+    "README.md": "35028f19b014412a7f6692937e0bac2c5462406e56191af4c054ad899ef444e0",
+    "export.py": "029b3e8e3c386b6fe8ebe6199a417e0d582d42d30b657e9bcc2280f609eda045",
+    "run.py": "d0fffaa14c2cdab17dfd02e05908d9ef1652a2d72a9b516ecc710e9ec85449f4",
+    "test_run.py": "787c614cf63cb1c9a72f053a6f46a3d872bc14691a00bd14a56750798363db7a",
+    "validate.py": "9bf88a4cd8c0f104cc9567e2579ba2d034a42f589d79686362deebc4a75f2912",
+    "validate_relationships.py": "eccdc89933a911a3e4530b67575e78638c16f3c7571a9c254bfd9c409230da17"
+  },
+  "validation": {
+    "validation.json": 124,
+    "relationship_validation.json": 12,
+    "relationship_validation_full.json": 12
+  },
+  "unit_tests": 6,
+  "outputs": {
+    "LOA_P12A_MASS_COMPLETE_fixed020030.fits": {
+      "bytes": 259776000,
+      "sha256": "0903cce7304a497506058f22ad8ae0a8d2b9cb4ca6f58d7d89d088210722d64d"
+    },
+    "LOA_P12A_MASS_COMPLETE_zdependent.fits": {
+      "bytes": 978425280,
+      "sha256": "93a2cfd3a0b831611dab115b9d5cd08d412c8dbe5ebf234e4dddd6542d876a68"
+    },
+    "analysis_input.npy": {
+      "bytes": 1196489770,
+      "sha256": "6533c1694691002bcbbefcc7a72478b264bfe6739c6294266e6b99bfea5dcfa8"
+    },
+    "bright_parent.npz": {
+      "bytes": 322300664,
+      "sha256": "766ab9c56543bdba09029424029a6d4bcf1f52d15091abf800ccfe8d286e686c"
+    },
+    "contrasts.csv": {
+      "bytes": 25091,
+      "sha256": "83e35631c1c3de756c2b4e949e1e1322e29bd5a9ae1edfe69d72434dd2fc2744"
+    },
+    "curves.csv": {
+      "bytes": 108705,
+      "sha256": "c600668618b456510e5d7010e5570e9e5afd542509cc9bc778c57d4f7763e5c1"
+    },
+    "mass_limits.csv": {
+      "bytes": 10527,
+      "sha256": "97b89324c21d2a5cd936708d373a84f1ab36b912b788b33c3362ecf52d47a6bb"
+    },
+    "mass_limits.json": {
+      "bytes": 25907,
+      "sha256": "cbbe7dda07c57cdc8bdfa8f7de433d26c5342943393647cc425ff7f64946c2b2"
+    },
+    "parent_audit.json": {
+      "bytes": 637,
+      "sha256": "132c28397b9e52b09823e7b29096dcce36939b466f5f01a2769330c5baf1401f"
+    },
+    "parent_histograms.npz": {
+      "bytes": 146980,
+      "sha256": "b3023ee8c43393adad4230687dddb548baae1a01e9317a1e6fe8afa018a85d08"
+    },
+    "parent_mass_redshift.pdf": {
+      "bytes": 133549,
+      "sha256": "36ba32ba3076de7cd7654f6c3983525cef10a8c9bf02c5e59d7ae9038f7bbc87"
+    },
+    "parent_mass_redshift.png": {
+      "bytes": 313344,
+      "sha256": "8af71d09c88697d3e741c84c4d668b90f5385836ff0a1686d28b08d2198008ab"
+    },
+    "property_environment.pdf": {
+      "bytes": 37991,
+      "sha256": "e619bde7aefae42b24273bd4e4db6e41f45f574a0d94069345a38eda905f2285"
+    },
+    "property_environment.png": {
+      "bytes": 315733,
+      "sha256": "a84622fb213026289333187c2e209a931e31cbc6a557c2d5af7954a194c6facd"
+    },
+    "property_environment_full.pdf": {
+      "bytes": 34046,
+      "sha256": "95d39baf279b5c4b9f04e15284c282bec98b410265c8d4655cefb6ad5fcc1d1a"
+    },
+    "property_environment_full.png": {
+      "bytes": 349197,
+      "sha256": "a604529ee7a28d9082dd271a30d1e4ef6390ed76438be9f96f97423509caab0e"
+    },
+    "quenched_primary.pdf": {
+      "bytes": 25320,
+      "sha256": "6b53234362d97dceac3e0e4863a7b386f2e343ba593bd4673b6c9f5eae3c207d"
+    },
+    "quenched_primary.png": {
+      "bytes": 137013,
+      "sha256": "316ee1599ff5be37df8fc16402e35739040d597cb569b2c78d69f41eefe90dde"
+    },
+    "relationship_validation.json": {
+      "bytes": 179,
+      "sha256": "675ff13282cd4b24889845ce934f336cc7d8f887ef0c56c534d609799c8233ac"
+    },
+    "relationship_validation_full.json": {
+      "bytes": 179,
+      "sha256": "675ff13282cd4b24889845ce934f336cc7d8f887ef0c56c534d609799c8233ac"
+    },
+    "relationships.json": {
+      "bytes": 830804,
+      "sha256": "e9edcee588cffd3683d90ff14b43bb1690684db9fc16531d88950d0b8424cc34"
+    },
+    "relationships_full.json": {
+      "bytes": 394281,
+      "sha256": "67dbcb4b6159aec1ca9b0bda8e110c427fffa8e94b6608e1f98aafd352b5daef"
+    },
+    "sed_parent.npy": {
+      "bytes": 1919664560,
+      "sha256": "c253ff436bcb2dd00ee3fee409bb38f114bc64aa72f6e4ca0f7de58642b3ee8e"
+    },
+    "selection_summary.json": {
+      "bytes": 218,
+      "sha256": "16105477762e5228c71a586a2a0e9a5f869ee0a7e695e6804c8d1f52b4653a89"
+    },
+    "validation.json": {
+      "bytes": 4629,
+      "sha256": "15a34ece19bf8dcaaea64bf9e7e08c284b1969c9a8b6e41a2692d396aea853c5"
+    }
+  },
+  "claims": "Empirical flux-completeness selection and conditional property/environment associations; no absolute completeness, causal or model-calibration claim."
+}

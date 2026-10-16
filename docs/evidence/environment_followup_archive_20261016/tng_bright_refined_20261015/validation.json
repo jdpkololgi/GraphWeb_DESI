@@ -1,0 +1,18 @@
+{
+  "independent_speclite_5A_integrations": 288,
+  "maximum_mag_difference": 6.037232083144772e-07,
+  "fresh_source_rows": 325,
+  "previous_high_mass_curve_parity": 3,
+  "cell_mean_checks": 1260,
+  "minimum_valid_spatial_bootstraps": 199,
+  "filter_and_selection_source_hashes": {
+    "/global/common/software/desi/perlmutter/desiconda/current/code/speclite/v1.0.0/lib/python3.13/site-packages/speclite/data/filters/sdss2010-g.ecsv": "3341c95c692868c80732f3f1d8e4e1262fa5ac604cb75c779ec3bb7a54f464c3",
+    "/global/common/software/desi/perlmutter/desiconda/current/code/speclite/v1.0.0/lib/python3.13/site-packages/speclite/data/filters/sdss2010-r.ecsv": "5aa2b0862d392e273135d6001a41a28673fdd46633b10cbf2bf8113b32e56f36",
+    "/global/common/software/desi/perlmutter/desiconda/current/code/speclite/v1.0.0/lib/python3.13/site-packages/speclite/data/filters/sdss2010-i.ecsv": "dd01eb39d649e7ef0bfa7f551c601f8c79f65096a23e692d4f6571ae149cea44",
+    "/global/common/software/desi/perlmutter/desiconda/current/code/speclite/v1.0.0/lib/python3.13/site-packages/speclite/data/filters/sdss2010-z.ecsv": "8a981808a7687c1e797753de79f075d1fc6894c637b8a26dffecd47b47a2f188",
+    "/global/common/software/desi/perlmutter/desiconda/current/code/speclite/v1.0.0/lib/python3.13/site-packages/speclite/data/filters/decam2014-g.ecsv": "de326ad1be640d8ce0dde16986279d6eefe22ebe62b1abefc20f7f01ceb65128",
+    "/global/common/software/desi/perlmutter/desiconda/current/code/speclite/v1.0.0/lib/python3.13/site-packages/speclite/data/filters/decam2014-r.ecsv": "19d13d3660aa60bafb0ba794a262bf19a5c46e143bb439edf3c1ba82c1383cd6",
+    "/global/common/software/desi/perlmutter/desiconda/current/code/speclite/v1.0.0/lib/python3.13/site-packages/speclite/data/filters/decam2014-z.ecsv": "0db2b279dffe3e9c31397bda7a33f59e7b20c18b5986cf94534aa31bd8d09a7b",
+    "/pscratch/sd/d/dkololgi/conda/envs/cosmic_env/lib/python3.11/site-packages/desitarget/cuts.py": "fa9a3343c13e64a10fbcf1a3bffe72eda17a3a0f242bc64e8af2af40ea8d39fa"
+  }
+}

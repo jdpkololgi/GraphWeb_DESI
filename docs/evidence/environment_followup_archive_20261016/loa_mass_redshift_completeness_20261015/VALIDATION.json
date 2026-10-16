@@ -1,0 +1,20 @@
+{
+  "checks": [
+    "full_footprint_histogram_count",
+    "full_footprint_quantile_order_support",
+    "property_wedge_histogram_count",
+    "property_wedge_quantile_order_support"
+  ],
+  "four_pngs_integrity_checked": true,
+  "four_pdfs_header_eof_checked": true,
+  "full_footprint_usable_bins": 40,
+  "wedge_max_limit_difference_from_prior_diagnostic_dex": 8.828556701701018e-06,
+  "source_join_checks": {
+    "unique_current_ids": true,
+    "all_photometry_matches_once": true,
+    "exact_id_ra_dec_z_parity": true,
+    "chunk_coordinate_checks": 162
+  },
+  "mass_selection_before_estimation": false,
+  "images_visually_inspected": true
+}

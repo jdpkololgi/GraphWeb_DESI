@@ -1,0 +1,13 @@
+{
+  "html_complete": true,
+  "embedded_figures": 49,
+  "embedded_pdf_files": 35,
+  "source_reports": 15,
+  "asset_count": 115,
+  "all_images_verified": true,
+  "all_pdfs_header_eof_checked": true,
+  "all_assets_sha256_recorded": true,
+  "external_image_dependencies": 0,
+  "rendered_browser_validation": false,
+  "limitation": "No browser rendering tool available; image inspection, markup structure and asset validation performed."
+}

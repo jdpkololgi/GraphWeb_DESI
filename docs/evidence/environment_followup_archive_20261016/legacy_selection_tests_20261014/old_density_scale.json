@@ -1,0 +1,61 @@
+{
+  "training_parity": {
+    "processed_gcn_data_alpha_mc1e+09.pt": {
+      "rows": 283969,
+      "field_label_mismatches": 2,
+      "target_mismatches": 0,
+      "features": [
+        "Degree",
+        "Mean E.L.",
+        "Min E.L.",
+        "Max E.L.",
+        "Clustering",
+        "Density",
+        "Neigh Density",
+        "I_eig1",
+        "I_eig2",
+        "I_eig3"
+      ]
+    },
+    "processed_gcn_data_alpha_scaler_saved_mc1e+09.pt": {
+      "rows": 283969,
+      "field_label_mismatches": 2,
+      "target_mismatches": 0,
+      "features": [
+        "Degree",
+        "Mean E.L.",
+        "Min E.L.",
+        "Max E.L.",
+        "Clustering",
+        "Density",
+        "Neigh Density",
+        "I_eig1",
+        "I_eig2",
+        "I_eig3"
+      ]
+    }
+  },
+  "query_rows": 2941,
+  "tracers": 198340,
+  "median_counts": [
+    1.0,
+    3.0,
+    15.0,
+    50.0
+  ],
+  "zero_fraction": {
+    "1": 0.4161849710982659,
+    "2": 0.12342740564433866,
+    "4": 0.011900714042842571,
+    "7": 0.00034002040122407346
+  },
+  "methods": {
+    "0.1": {
+      "insufficient_support": "No shared support"
+    },
+    "0.2": {
+      "insufficient_support": "No shared support"
+    }
+  },
+  "limits": "Same old galaxies across estimators; deduplicated saved mass-cut catalogue as tracers. Rectangular wedge and radial 7 Mpc/h buffer, no survey angular-completeness correction. Density quartiles use tie-equivalent fractional memberships, matching the current P12-A count analysis. They are different groups from web classes. No causal or model-accuracy claim."
+}

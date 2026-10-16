@@ -1,0 +1,16 @@
+{
+  "independent_scalar_and_prior_curve_checks": 10,
+  "max_error": 2.220446049250313e-16,
+  "retention": {
+    "full": {
+      "weighted_quenched_retention": 0.39962022874248304,
+      "weighted_starforming_retention": 0.8167444380095663
+    },
+    "high": {
+      "weighted_quenched_retention": 0.5019235540174175,
+      "weighted_starforming_retention": 0.9264426270582844
+    }
+  },
+  "in_run_direct_mean_checks": 348,
+  "full_support_coverage": 0.9700715969226664
+}

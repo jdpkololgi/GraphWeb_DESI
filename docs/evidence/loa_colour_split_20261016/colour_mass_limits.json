@@ -1,0 +1,432 @@
+[
+  {
+    "zlo": 0.2,
+    "zhi": 0.21,
+    "populations": {
+      "all": {
+        "rows": 278536,
+        "usable": true,
+        "faint_rows": 55708,
+        "p90": 10.507528751797249,
+        "p95": 10.599405568746725
+      },
+      "quiescent": {
+        "rows": 119355,
+        "usable": true,
+        "faint_rows": 23871,
+        "p90": 10.535585231487694,
+        "p95": 10.594748629948802
+      },
+      "starforming": {
+        "rows": 159181,
+        "usable": true,
+        "faint_rows": 31837,
+        "p90": 10.478819937157256,
+        "p95": 10.601508976977705
+      }
+    },
+    "usable": true,
+    "logmass_limit": 10.646164180696868,
+    "colour_populations": {
+      "red": {
+        "rows": 219895,
+        "usable": true,
+        "p95": 10.646164180696868,
+        "faint_rows": 43980
+      },
+      "blue": {
+        "rows": 58558,
+        "usable": true,
+        "p95": 10.085702863197236,
+        "faint_rows": 11712
+      }
+    }
+  },
+  {
+    "zlo": 0.21,
+    "zhi": 0.22,
+    "populations": {
+      "all": {
+        "rows": 267636,
+        "usable": true,
+        "faint_rows": 53528,
+        "p90": 10.55569385189417,
+        "p95": 10.64297198249087
+      },
+      "quiescent": {
+        "rows": 117562,
+        "usable": true,
+        "faint_rows": 23513,
+        "p90": 10.584365371361109,
+        "p95": 10.643534083517242
+      },
+      "starforming": {
+        "rows": 150074,
+        "usable": true,
+        "faint_rows": 30015,
+        "p90": 10.521110203143818,
+        "p95": 10.641492964862351
+      }
+    },
+    "usable": true,
+    "logmass_limit": 10.68111527029893,
+    "colour_populations": {
+      "red": {
+        "rows": 218586,
+        "usable": true,
+        "p95": 10.68111527029893,
+        "faint_rows": 43718
+      },
+      "blue": {
+        "rows": 48943,
+        "usable": true,
+        "p95": 10.118368615115891,
+        "faint_rows": 9789
+      }
+    }
+  },
+  {
+    "zlo": 0.22,
+    "zhi": 0.23,
+    "populations": {
+      "all": {
+        "rows": 270113,
+        "usable": true,
+        "faint_rows": 54025,
+        "p90": 10.610079744424072,
+        "p95": 10.690885577982415
+      },
+      "quiescent": {
+        "rows": 123201,
+        "usable": true,
+        "faint_rows": 24641,
+        "p90": 10.639662546954611,
+        "p95": 10.694966347222234
+      },
+      "starforming": {
+        "rows": 146912,
+        "usable": true,
+        "faint_rows": 29383,
+        "p90": 10.572547466743762,
+        "p95": 10.689333131023933
+      }
+    },
+    "usable": true,
+    "logmass_limit": 10.720253307401862,
+    "colour_populations": {
+      "red": {
+        "rows": 228442,
+        "usable": true,
+        "p95": 10.720253307401862,
+        "faint_rows": 45689
+      },
+      "blue": {
+        "rows": 41446,
+        "usable": true,
+        "p95": 10.139912748273268,
+        "faint_rows": 8290
+      }
+    }
+  },
+  {
+    "zlo": 0.23,
+    "zhi": 0.24,
+    "populations": {
+      "all": {
+        "rows": 256038,
+        "usable": true,
+        "faint_rows": 51208,
+        "p90": 10.646399627813643,
+        "p95": 10.719595160302902
+      },
+      "quiescent": {
+        "rows": 119059,
+        "usable": true,
+        "faint_rows": 23812,
+        "p90": 10.671447714641172,
+        "p95": 10.72630241249842
+      },
+      "starforming": {
+        "rows": 136979,
+        "usable": true,
+        "faint_rows": 27396,
+        "p90": 10.606076523459542,
+        "p95": 10.716723799103244
+      }
+    },
+    "usable": true,
+    "logmass_limit": 10.743716045999099,
+    "colour_populations": {
+      "red": {
+        "rows": 222063,
+        "usable": true,
+        "p95": 10.743716045999099,
+        "faint_rows": 44413
+      },
+      "blue": {
+        "rows": 33486,
+        "usable": true,
+        "p95": 10.163052549048961,
+        "faint_rows": 6698
+      }
+    }
+  },
+  {
+    "zlo": 0.24,
+    "zhi": 0.25,
+    "populations": {
+      "all": {
+        "rows": 239626,
+        "usable": true,
+        "faint_rows": 47926,
+        "p90": 10.674620535858867,
+        "p95": 10.743189051515916
+      },
+      "quiescent": {
+        "rows": 114684,
+        "usable": true,
+        "faint_rows": 22938,
+        "p90": 10.699240918452942,
+        "p95": 10.7478199460224
+      },
+      "starforming": {
+        "rows": 124942,
+        "usable": true,
+        "faint_rows": 24989,
+        "p90": 10.630478886419505,
+        "p95": 10.7374054521451
+      }
+    },
+    "usable": true,
+    "logmass_limit": 10.760205855642115,
+    "colour_populations": {
+      "red": {
+        "rows": 211513,
+        "usable": true,
+        "p95": 10.760205855642115,
+        "faint_rows": 42303
+      },
+      "blue": {
+        "rows": 26701,
+        "usable": true,
+        "p95": 10.17746219449406,
+        "faint_rows": 5341
+      }
+    }
+  },
+  {
+    "zlo": 0.25,
+    "zhi": 0.26,
+    "populations": {
+      "all": {
+        "rows": 233566,
+        "usable": true,
+        "faint_rows": 46714,
+        "p90": 10.721269960042857,
+        "p95": 10.78558833732153
+      },
+      "quiescent": {
+        "rows": 114324,
+        "usable": true,
+        "faint_rows": 22865,
+        "p90": 10.74470561079637,
+        "p95": 10.792913910659372
+      },
+      "starforming": {
+        "rows": 119242,
+        "usable": true,
+        "faint_rows": 23849,
+        "p90": 10.67536731671069,
+        "p95": 10.775541783289512
+      }
+    },
+    "usable": true,
+    "logmass_limit": 10.793602463958955,
+    "colour_populations": {
+      "red": {
+        "rows": 207834,
+        "usable": true,
+        "p95": 10.793602463958955,
+        "faint_rows": 41567
+      },
+      "blue": {
+        "rows": 21630,
+        "usable": true,
+        "p95": 10.19815383334935,
+        "faint_rows": 4326
+      }
+    }
+  },
+  {
+    "zlo": 0.26,
+    "zhi": 0.27,
+    "populations": {
+      "all": {
+        "rows": 222291,
+        "usable": true,
+        "faint_rows": 44459,
+        "p90": 10.761589513905726,
+        "p95": 10.821736038028657
+      },
+      "quiescent": {
+        "rows": 111555,
+        "usable": true,
+        "faint_rows": 22312,
+        "p90": 10.78650100170176,
+        "p95": 10.83402205451381
+      },
+      "starforming": {
+        "rows": 110736,
+        "usable": true,
+        "faint_rows": 22148,
+        "p90": 10.707125909120599,
+        "p95": 10.805612704198245
+      }
+    },
+    "usable": true,
+    "logmass_limit": 10.83402205451381,
+    "colour_populations": {
+      "red": {
+        "rows": 194008,
+        "usable": true,
+        "p95": 10.819747939756136,
+        "faint_rows": 38802
+      },
+      "blue": {
+        "rows": 17171,
+        "usable": true,
+        "p95": 10.228596379611986,
+        "faint_rows": 3435
+      }
+    }
+  },
+  {
+    "zlo": 0.27,
+    "zhi": 0.28,
+    "populations": {
+      "all": {
+        "rows": 205933,
+        "usable": true,
+        "faint_rows": 41187,
+        "p90": 10.805033752884562,
+        "p95": 10.863453833606288
+      },
+      "quiescent": {
+        "rows": 105353,
+        "usable": true,
+        "faint_rows": 21071,
+        "p90": 10.830088064145848,
+        "p95": 10.87408140765744
+      },
+      "starforming": {
+        "rows": 100580,
+        "usable": true,
+        "faint_rows": 20116,
+        "p90": 10.752330567849985,
+        "p95": 10.847869888085897
+      }
+    },
+    "usable": true,
+    "logmass_limit": 10.87408140765744,
+    "colour_populations": {
+      "red": {
+        "rows": 173718,
+        "usable": true,
+        "p95": 10.855577733958743,
+        "faint_rows": 34745
+      },
+      "blue": {
+        "rows": 13548,
+        "usable": true,
+        "p95": 10.259447326558506,
+        "faint_rows": 2710
+      }
+    }
+  },
+  {
+    "zlo": 0.28,
+    "zhi": 0.29,
+    "populations": {
+      "all": {
+        "rows": 189360,
+        "usable": true,
+        "faint_rows": 37872,
+        "p90": 10.846661839451363,
+        "p95": 10.900364588642606
+      },
+      "quiescent": {
+        "rows": 97671,
+        "usable": true,
+        "faint_rows": 19535,
+        "p90": 10.872336325945057,
+        "p95": 10.91460087173454
+      },
+      "starforming": {
+        "rows": 91689,
+        "usable": true,
+        "faint_rows": 18338,
+        "p90": 10.7900343766534,
+        "p95": 10.878964105586332
+      }
+    },
+    "usable": true,
+    "logmass_limit": 10.91460087173454,
+    "colour_populations": {
+      "red": {
+        "rows": 151414,
+        "usable": true,
+        "p95": 10.884077239757314,
+        "faint_rows": 30283
+      },
+      "blue": {
+        "rows": 10430,
+        "usable": true,
+        "p95": 10.283862127223706,
+        "faint_rows": 2086
+      }
+    }
+  },
+  {
+    "zlo": 0.29,
+    "zhi": 0.3,
+    "populations": {
+      "all": {
+        "rows": 174622,
+        "usable": true,
+        "faint_rows": 34925,
+        "p90": 10.887572769745848,
+        "p95": 10.937337382753292
+      },
+      "quiescent": {
+        "rows": 91475,
+        "usable": true,
+        "faint_rows": 18295,
+        "p90": 10.911485765210896,
+        "p95": 10.950935186562775
+      },
+      "starforming": {
+        "rows": 83147,
+        "usable": true,
+        "faint_rows": 16631,
+        "p90": 10.83214964264084,
+        "p95": 10.918208455659983
+      }
+    },
+    "usable": true,
+    "logmass_limit": 10.950935186562775,
+    "colour_populations": {
+      "red": {
+        "rows": 128909,
+        "usable": true,
+        "p95": 10.917740947622022,
+        "faint_rows": 25782
+      },
+      "blue": {
+        "rows": 7699,
+        "usable": true,
+        "p95": 10.312428312280181,
+        "faint_rows": 1540
+      }
+    }
+  }
+]

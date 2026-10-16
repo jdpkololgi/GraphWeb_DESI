@@ -1,0 +1,19 @@
+{
+  "job": "59855238",
+  "host": "nid200002",
+  "source_manifest_sha256": "a23d2fb301c03a20b41a6e45b13e1733e53ce14d190bd9fc40d570e071b08baa",
+  "code": {
+    "/global/u2/d/dkololgi/GraphWeb_DESI/workflows/presentation/loa_mass_complete_20261016/colour_split.py": "01555f33e4987d977d7aa5c9869bb33f70ed8c2cddbbb152d7fd429b20afbccb",
+    "/global/u2/d/dkololgi/GraphWeb_DESI/workflows/presentation/loa_mass_complete_20261016/run.py": "d0fffaa14c2cdab17dfd02e05908d9ef1652a2d72a9b516ecc710e9ec85449f4"
+  },
+  "outputs": {
+    "relationships.json": "50e488aa998aa1007e936e70d95e966174c97637e4f1cd587e8d971ead252720",
+    "properties_z020030.pdf": "0613bdb604851b2e10c55b9c625aff6e64ae6581f636014414cf478412b9c20d",
+    "LOA_COLOUR_MASS_COMPLETE_z020030.fits": "6b783d2b17e09d3334decf6609e17c93d5db30c332981ddcb340a17975162f29",
+    "properties_z020030.png": "8efbd2a6992feb5db401876b04add2104b55642d77131dccdd43ce8b47b6c758",
+    "window_counts.json": "06d79592a08352f8b08b0528a1d8bcb4d5e88559ea34a4ce99bbeae0bcdc5039",
+    "colour_mass_limits.json": "eb8a71bba68f378fbeff154d9da1c969035cdb92e18ecf95a51be4023319cc6d"
+  },
+  "validation": "Independent percentile reconstruction, every reported common-stratum curve, and FITS sample roundtrip passed",
+  "limitations": "Empirical flux completeness; observed dereddened colour, no K correction. Conditional sky-bootstrap excludes SED, selection and environment-transfer systematics. No causal inference."
+}

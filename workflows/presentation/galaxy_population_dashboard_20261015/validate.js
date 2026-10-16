@@ -1,0 +1,17 @@
+const fs=require('fs'),vm=require('vm'),zlib=require('zlib'),assert=require('assert');
+const dir='/global/u2/d/dkololgi/fmsu_tokyo_20261010/galaxy_population_dashboard_20261015';
+require('./engine.js');const E=globalThis.GalaxyEngine,D=JSON.parse(fs.readFileSync(dir+'/data.json','utf8'));
+const b=zlib.gunzipSync(Buffer.from(D.data,'base64')),rows=E.decode(b.buffer.slice(b.byteOffset,b.byteOffset+b.byteLength));assert.equal(rows.length,D.records);
+const reference=JSON.parse(fs.readFileSync(dir+'/reference_records.json','utf8'));for(let i=0;i<reference.length;i++){const r=rows[i],v=reference[i];assert.deepEqual([r.s,r.z,r.m,r.r,r.mode,r.scale,r.e],v.slice(0,7));r.y.forEach((x,j)=>assert(Math.abs(x-v[j+9]/1000)<1e-10));}
+const all=E.model(rows,{...E.DEFAULT,massHi:6,rHi:9},D);assert(Math.abs(all.counts[0]-191944)<.01);assert(Math.abs(all.counts[1]-4988309)<.01);assert(Math.abs(all.counts[2]-66691)<.01);
+let tests=23;
+const gap=E.model(rows,{...E.DEFAULT,active:[0,1],zLo:5,zHi:6},D);assert(gap.counts[0]===0&&gap.counts[1]===0);assert(gap.series.every(s=>s.reason.includes('neither Loa VAC')));tests++;
+const rank=E.model(rows,{...E.DEFAULT,method:'rank'},D);assert(rank.series[0].reason.includes('not tidal eigenvalues'));tests++;
+const empty=E.model(rows,{...E.DEFAULT,active:[]},D);assert.equal(empty.series.length,0);tests++;
+const zero=E.model(rows,{...E.DEFAULT,mix:'custom',weights:[0,0,0,0,0,0]},D);assert(zero.series.every(s=>s.reason.includes('zero weight')));tests++;
+let previous=0;for(let rHi=1;rHi<=9;rHi++){const m=E.model(rows,{...E.DEFAULT,rHi},D);assert(m.counts[2]>=previous);previous=m.counts[2];tests++;}
+for(const method of ['hard','soft','rank'])for(const mix of ['native','ref0','ref1','ref2','flat','custom'])for(const balanceZ of [false,true]){const m=E.model(rows,{...E.DEFAULT,method,mix,balanceZ},D);for(const s of m.series)for(const p of s.points){if(p.value)assert(p.value.every(Number.isFinite));else assert(p.reason);assert(Number.isFinite(p.neff));}tests++;}
+// Common mixture of two mass bins is the convex combination of the separate bins.
+const cfg={...E.DEFAULT,active:[1],method:'soft',massLo:2,massHi:4,mix:'custom',weights:[0,0,40,60,0,0],minN:5};const mix=E.model(rows,cfg,D).series[0];const a=E.model(rows,{...cfg,weights:[0,0,100,0,0,0]},D).series[0],c=E.model(rows,{...cfg,weights:[0,0,0,100,0,0]},D).series[0];for(let e=0;e<4;e++)for(let j=0;j<8;j++){assert(Math.abs(mix.points[e].value[j]-.4*a.points[e].value[j]-.6*c.points[e].value[j])<1e-9);tests++;}
+const html=fs.readFileSync(dir+'/dashboard.html','utf8');for(const match of html.matchAll(/<script(?:\s[^>]*)?>([\s\S]*?)<\/script>/g)){if(match[1].startsWith('{'))continue;new vm.Script(match[1]);tests++;}assert(Buffer.byteLength(html)<262144);assert(!html.includes('__DATA__')&&!html.includes('__ENGINE__'));assert(!/<script[^>]+src=/.test(html));assert(html.includes('Unavailable because'));
+const output={passed:tests,records:rows.length,html_bytes:Buffer.byteLength(html),full_eligible_source_counts:all.counts,default_curves:E.model(rows,E.DEFAULT,D).series,browser_render_verified:false,browser_blocker:'Playwright driver is present, but no Chromium/headless-shell executable is installed; no browser tools available.'};fs.writeFileSync(dir+'/frontend_validation.json',JSON.stringify(output,null,2));console.log(JSON.stringify({tests,counts:all.counts,records:rows.length,html_bytes:Buffer.byteLength(html)},null,2));

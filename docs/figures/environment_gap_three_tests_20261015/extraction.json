@@ -1,0 +1,10 @@
+{
+  "source": "/pscratch/sd/d/dkololgi/graphweb_desi/outputs/p12a_loa_cigale_20260929_v1/DESI_LOA_P12A_CIGALE_FULL_VAC.fits",
+  "source_rows": 5436413,
+  "extracted_rows": 236774,
+  "source_size": 2109343680,
+  "source_mtime_ns": 1790683855000000000,
+  "selection": "SUPPORTED; RA[120,160), DEC[14.5,30.6), z[.15,.50)",
+  "extracted_sha256": "3dc71372a93581d03c1a689643c9493b5f5e78653c2b8fba1097d32fa14c7317",
+  "full_source_hash_recomputed": false
+}

@@ -1,0 +1,36 @@
+{
+  "processed_gcn_data_alpha_mc1e+09.pt": {
+    "rows": 283969,
+    "field_label_mismatches": 2,
+    "target_mismatches": 0,
+    "features": [
+      "Degree",
+      "Mean E.L.",
+      "Min E.L.",
+      "Max E.L.",
+      "Clustering",
+      "Density",
+      "Neigh Density",
+      "I_eig1",
+      "I_eig2",
+      "I_eig3"
+    ]
+  },
+  "processed_gcn_data_alpha_scaler_saved_mc1e+09.pt": {
+    "rows": 283969,
+    "field_label_mismatches": 2,
+    "target_mismatches": 0,
+    "features": [
+      "Degree",
+      "Mean E.L.",
+      "Min E.L.",
+      "Max E.L.",
+      "Clustering",
+      "Density",
+      "Neigh Density",
+      "I_eig1",
+      "I_eig2",
+      "I_eig3"
+    ]
+  }
+}

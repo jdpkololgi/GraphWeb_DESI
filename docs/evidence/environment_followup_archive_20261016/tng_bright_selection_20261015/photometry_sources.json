@@ -1,0 +1,3602 @@
+[
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.0.hdf5",
+    "bytes": 8063588,
+    "mtime_ns": 1753984027000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.1.hdf5",
+    "bytes": 26576,
+    "mtime_ns": 1753984027000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.2.hdf5",
+    "bytes": 4258160,
+    "mtime_ns": 1753984031000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.3.hdf5",
+    "bytes": 3351068,
+    "mtime_ns": 1753984037000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.4.hdf5",
+    "bytes": 3564902,
+    "mtime_ns": 1753984042000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.5.hdf5",
+    "bytes": 3669776,
+    "mtime_ns": 1753984049000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.6.hdf5",
+    "bytes": 3003758,
+    "mtime_ns": 1753984055000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.7.hdf5",
+    "bytes": 3562859,
+    "mtime_ns": 1753984055000000000,
+    "rows": 325
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.8.hdf5",
+    "bytes": 3253004,
+    "mtime_ns": 1753984055000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.9.hdf5",
+    "bytes": 2921357,
+    "mtime_ns": 1753984055000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.10.hdf5",
+    "bytes": 4536689,
+    "mtime_ns": 1753984027000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.11.hdf5",
+    "bytes": 2515481,
+    "mtime_ns": 1753984028000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.12.hdf5",
+    "bytes": 4508087,
+    "mtime_ns": 1753984027000000000,
+    "rows": 195
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.13.hdf5",
+    "bytes": 1382297,
+    "mtime_ns": 1753984028000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.14.hdf5",
+    "bytes": 3931280,
+    "mtime_ns": 1753984028000000000,
+    "rows": 193
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.15.hdf5",
+    "bytes": 4007552,
+    "mtime_ns": 1753984028000000000,
+    "rows": 207
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.16.hdf5",
+    "bytes": 3682715,
+    "mtime_ns": 1753984028000000000,
+    "rows": 217
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.17.hdf5",
+    "bytes": 3565583,
+    "mtime_ns": 1753984029000000000,
+    "rows": 177
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.18.hdf5",
+    "bytes": 3693611,
+    "mtime_ns": 1753984030000000000,
+    "rows": 175
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.19.hdf5",
+    "bytes": 3598271,
+    "mtime_ns": 1753984030000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.20.hdf5",
+    "bytes": 2933615,
+    "mtime_ns": 1753984031000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.21.hdf5",
+    "bytes": 5084213,
+    "mtime_ns": 1753984031000000000,
+    "rows": 129
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.22.hdf5",
+    "bytes": 2834189,
+    "mtime_ns": 1753984032000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.23.hdf5",
+    "bytes": 4201637,
+    "mtime_ns": 1753984033000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.24.hdf5",
+    "bytes": 2986052,
+    "mtime_ns": 1753984033000000000,
+    "rows": 26
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.25.hdf5",
+    "bytes": 4312640,
+    "mtime_ns": 1753984034000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.26.hdf5",
+    "bytes": 2665982,
+    "mtime_ns": 1753984034000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.27.hdf5",
+    "bytes": 3980312,
+    "mtime_ns": 1753984035000000000,
+    "rows": 249
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.28.hdf5",
+    "bytes": 4031387,
+    "mtime_ns": 1753984036000000000,
+    "rows": 1
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.29.hdf5",
+    "bytes": 3674543,
+    "mtime_ns": 1753984036000000000,
+    "rows": 118
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.30.hdf5",
+    "bytes": 3646622,
+    "mtime_ns": 1753984037000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.31.hdf5",
+    "bytes": 3676586,
+    "mtime_ns": 1753984037000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.32.hdf5",
+    "bytes": 4030025,
+    "mtime_ns": 1753984038000000000,
+    "rows": 263
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.33.hdf5",
+    "bytes": 3652751,
+    "mtime_ns": 1753984039000000000,
+    "rows": 29
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.34.hdf5",
+    "bytes": 3308846,
+    "mtime_ns": 1753984039000000000,
+    "rows": 110
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.35.hdf5",
+    "bytes": 2909099,
+    "mtime_ns": 1753984040000000000,
+    "rows": 94
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.36.hdf5",
+    "bytes": 4419557,
+    "mtime_ns": 1753984040000000000,
+    "rows": 323
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.37.hdf5",
+    "bytes": 3005801,
+    "mtime_ns": 1753984041000000000,
+    "rows": 83
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.38.hdf5",
+    "bytes": 4031387,
+    "mtime_ns": 1753984042000000000,
+    "rows": 199
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.39.hdf5",
+    "bytes": 2825336,
+    "mtime_ns": 1753984042000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.40.hdf5",
+    "bytes": 4207085,
+    "mtime_ns": 1753984043000000000,
+    "rows": 103
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.41.hdf5",
+    "bytes": 3532895,
+    "mtime_ns": 1753984043000000000,
+    "rows": 186
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.42.hdf5",
+    "bytes": 3592823,
+    "mtime_ns": 1753984044000000000,
+    "rows": 91
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.43.hdf5",
+    "bytes": 4671527,
+    "mtime_ns": 1753984045000000000,
+    "rows": 150
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.44.hdf5",
+    "bytes": 3780098,
+    "mtime_ns": 1753984045000000000,
+    "rows": 174
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.45.hdf5",
+    "bytes": 3843431,
+    "mtime_ns": 1753984046000000000,
+    "rows": 164
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.46.hdf5",
+    "bytes": 3472286,
+    "mtime_ns": 1753984046000000000,
+    "rows": 144
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.47.hdf5",
+    "bytes": 3949667,
+    "mtime_ns": 1753984047000000000,
+    "rows": 207
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.48.hdf5",
+    "bytes": 3065048,
+    "mtime_ns": 1753984048000000000,
+    "rows": 69
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.49.hdf5",
+    "bytes": 3769202,
+    "mtime_ns": 1753984049000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.50.hdf5",
+    "bytes": 3502250,
+    "mtime_ns": 1753984049000000000,
+    "rows": 86
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.51.hdf5",
+    "bytes": 3891101,
+    "mtime_ns": 1753984050000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.52.hdf5",
+    "bytes": 4326941,
+    "mtime_ns": 1753984050000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.53.hdf5",
+    "bytes": 3332681,
+    "mtime_ns": 1753984051000000000,
+    "rows": 68
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.54.hdf5",
+    "bytes": 3686120,
+    "mtime_ns": 1753984052000000000,
+    "rows": 116
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.55.hdf5",
+    "bytes": 3415082,
+    "mtime_ns": 1753984052000000000,
+    "rows": 181
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.56.hdf5",
+    "bytes": 4034792,
+    "mtime_ns": 1753984053000000000,
+    "rows": 70
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.57.hdf5",
+    "bytes": 3048704,
+    "mtime_ns": 1753984053000000000,
+    "rows": 69
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.58.hdf5",
+    "bytes": 4158734,
+    "mtime_ns": 1753984054000000000,
+    "rows": 81
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.59.hdf5",
+    "bytes": 4093358,
+    "mtime_ns": 1753984054000000000,
+    "rows": 175
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.60.hdf5",
+    "bytes": 3274796,
+    "mtime_ns": 1753984055000000000,
+    "rows": 81
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.61.hdf5",
+    "bytes": 3347663,
+    "mtime_ns": 1753984055000000000,
+    "rows": 39
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.62.hdf5",
+    "bytes": 3722213,
+    "mtime_ns": 1753984055000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.63.hdf5",
+    "bytes": 4207085,
+    "mtime_ns": 1753984055000000000,
+    "rows": 183
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.64.hdf5",
+    "bytes": 4113788,
+    "mtime_ns": 1753984055000000000,
+    "rows": 159
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.65.hdf5",
+    "bytes": 3351749,
+    "mtime_ns": 1753984055000000000,
+    "rows": 54
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.66.hdf5",
+    "bytes": 3823001,
+    "mtime_ns": 1753984055000000000,
+    "rows": 96
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.67.hdf5",
+    "bytes": 3686801,
+    "mtime_ns": 1753984055000000000,
+    "rows": 175
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.68.hdf5",
+    "bytes": 3248918,
+    "mtime_ns": 1753984055000000000,
+    "rows": 101
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.69.hdf5",
+    "bytes": 3912893,
+    "mtime_ns": 1753984055000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.70.hdf5",
+    "bytes": 3549239,
+    "mtime_ns": 1753984055000000000,
+    "rows": 88
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.71.hdf5",
+    "bytes": 3972821,
+    "mtime_ns": 1753984055000000000,
+    "rows": 160
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.72.hdf5",
+    "bytes": 4111064,
+    "mtime_ns": 1753984055000000000,
+    "rows": 192
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.73.hdf5",
+    "bytes": 4192784,
+    "mtime_ns": 1753984055000000000,
+    "rows": 53
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.74.hdf5",
+    "bytes": 3709955,
+    "mtime_ns": 1753984055000000000,
+    "rows": 171
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.75.hdf5",
+    "bytes": 3733790,
+    "mtime_ns": 1753984055000000000,
+    "rows": 38
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.76.hdf5",
+    "bytes": 3598952,
+    "mtime_ns": 1753984055000000000,
+    "rows": 82
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.77.hdf5",
+    "bytes": 3449813,
+    "mtime_ns": 1753984055000000000,
+    "rows": 50
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.78.hdf5",
+    "bytes": 3733109,
+    "mtime_ns": 1753984055000000000,
+    "rows": 52
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.79.hdf5",
+    "bytes": 3417806,
+    "mtime_ns": 1753984055000000000,
+    "rows": 111
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.80.hdf5",
+    "bytes": 3505655,
+    "mtime_ns": 1753984055000000000,
+    "rows": 16
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.81.hdf5",
+    "bytes": 3377627,
+    "mtime_ns": 1753984055000000000,
+    "rows": 110
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.82.hdf5",
+    "bytes": 3402143,
+    "mtime_ns": 1753984055000000000,
+    "rows": 88
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.83.hdf5",
+    "bytes": 3793042,
+    "mtime_ns": 1753984055000000000,
+    "rows": 87
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.84.hdf5",
+    "bytes": 3948991,
+    "mtime_ns": 1753984055000000000,
+    "rows": 31
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.85.hdf5",
+    "bytes": 4041607,
+    "mtime_ns": 1753984055000000000,
+    "rows": 77
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.86.hdf5",
+    "bytes": 4094725,
+    "mtime_ns": 1753984055000000000,
+    "rows": 63
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.87.hdf5",
+    "bytes": 3972145,
+    "mtime_ns": 1753984055000000000,
+    "rows": 121
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.88.hdf5",
+    "bytes": 3884296,
+    "mtime_ns": 1753984055000000000,
+    "rows": 113
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.89.hdf5",
+    "bytes": 3556054,
+    "mtime_ns": 1753984055000000000,
+    "rows": 170
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.90.hdf5",
+    "bytes": 3393976,
+    "mtime_ns": 1753984055000000000,
+    "rows": 37
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.91.hdf5",
+    "bytes": 3464119,
+    "mtime_ns": 1753984055000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.92.hdf5",
+    "bytes": 3433474,
+    "mtime_ns": 1753984055000000000,
+    "rows": 70
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.93.hdf5",
+    "bytes": 3307489,
+    "mtime_ns": 1753984055000000000,
+    "rows": 46
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.94.hdf5",
+    "bytes": 3497488,
+    "mtime_ns": 1753984055000000000,
+    "rows": 54
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.95.hdf5",
+    "bytes": 3242794,
+    "mtime_ns": 1753984055000000000,
+    "rows": 64
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.96.hdf5",
+    "bytes": 3154264,
+    "mtime_ns": 1753984055000000000,
+    "rows": 81
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.97.hdf5",
+    "bytes": 3574441,
+    "mtime_ns": 1753984055000000000,
+    "rows": 116
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.98.hdf5",
+    "bytes": 3556735,
+    "mtime_ns": 1753984056000000000,
+    "rows": 97
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.99.hdf5",
+    "bytes": 4634077,
+    "mtime_ns": 1753984055000000000,
+    "rows": 79
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.100.hdf5",
+    "bytes": 3984403,
+    "mtime_ns": 1753984027000000000,
+    "rows": 57
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.101.hdf5",
+    "bytes": 3921751,
+    "mtime_ns": 1753984027000000000,
+    "rows": 147
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.102.hdf5",
+    "bytes": 4245907,
+    "mtime_ns": 1753984027000000000,
+    "rows": 74
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.103.hdf5",
+    "bytes": 3799171,
+    "mtime_ns": 1753984027000000000,
+    "rows": 45
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.104.hdf5",
+    "bytes": 3951034,
+    "mtime_ns": 1753984027000000000,
+    "rows": 50
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.105.hdf5",
+    "bytes": 3895873,
+    "mtime_ns": 1753984027000000000,
+    "rows": 126
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.106.hdf5",
+    "bytes": 3641860,
+    "mtime_ns": 1753984027000000000,
+    "rows": 80
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.107.hdf5",
+    "bytes": 3815515,
+    "mtime_ns": 1753984027000000000,
+    "rows": 57
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.108.hdf5",
+    "bytes": 3881572,
+    "mtime_ns": 1753984028000000000,
+    "rows": 44
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.109.hdf5",
+    "bytes": 3465481,
+    "mtime_ns": 1753984028000000000,
+    "rows": 58
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.110.hdf5",
+    "bytes": 3437560,
+    "mtime_ns": 1753984028000000000,
+    "rows": 64
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.111.hdf5",
+    "bytes": 3613939,
+    "mtime_ns": 1753984028000000000,
+    "rows": 111
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.112.hdf5",
+    "bytes": 3565588,
+    "mtime_ns": 1753984028000000000,
+    "rows": 56
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.113.hdf5",
+    "bytes": 3098422,
+    "mtime_ns": 1753984028000000000,
+    "rows": 84
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.114.hdf5",
+    "bytes": 3572398,
+    "mtime_ns": 1753984028000000000,
+    "rows": 88
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.115.hdf5",
+    "bytes": 3024874,
+    "mtime_ns": 1753984028000000000,
+    "rows": 73
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.116.hdf5",
+    "bytes": 3263224,
+    "mtime_ns": 1753984028000000000,
+    "rows": 43
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.117.hdf5",
+    "bytes": 3171289,
+    "mtime_ns": 1753984028000000000,
+    "rows": 55
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.118.hdf5",
+    "bytes": 2930215,
+    "mtime_ns": 1753984028000000000,
+    "rows": 67
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.119.hdf5",
+    "bytes": 2872330,
+    "mtime_ns": 1753984028000000000,
+    "rows": 99
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.120.hdf5",
+    "bytes": 3635050,
+    "mtime_ns": 1753984028000000000,
+    "rows": 91
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.121.hdf5",
+    "bytes": 3039175,
+    "mtime_ns": 1753984028000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.122.hdf5",
+    "bytes": 3758992,
+    "mtime_ns": 1753984028000000000,
+    "rows": 100
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.123.hdf5",
+    "bytes": 4450212,
+    "mtime_ns": 1753984028000000000,
+    "rows": 156
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.124.hdf5",
+    "bytes": 4428420,
+    "mtime_ns": 1753984028000000000,
+    "rows": 65
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.125.hdf5",
+    "bytes": 4281324,
+    "mtime_ns": 1753984028000000000,
+    "rows": 114
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.126.hdf5",
+    "bytes": 4245231,
+    "mtime_ns": 1753984028000000000,
+    "rows": 68
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.127.hdf5",
+    "bytes": 4000752,
+    "mtime_ns": 1753984028000000000,
+    "rows": 113
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.128.hdf5",
+    "bytes": 4244550,
+    "mtime_ns": 1753984028000000000,
+    "rows": 42
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.129.hdf5",
+    "bytes": 3945591,
+    "mtime_ns": 1753984028000000000,
+    "rows": 149
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.130.hdf5",
+    "bytes": 4036164,
+    "mtime_ns": 1753984028000000000,
+    "rows": 94
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.131.hdf5",
+    "bytes": 3635736,
+    "mtime_ns": 1753984028000000000,
+    "rows": 80
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.132.hdf5",
+    "bytes": 3542439,
+    "mtime_ns": 1753984028000000000,
+    "rows": 90
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.133.hdf5",
+    "bytes": 4068171,
+    "mtime_ns": 1753984028000000000,
+    "rows": 65
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.134.hdf5",
+    "bytes": 3856380,
+    "mtime_ns": 1753984028000000000,
+    "rows": 118
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.135.hdf5",
+    "bytes": 3748782,
+    "mtime_ns": 1753984028000000000,
+    "rows": 50
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.136.hdf5",
+    "bytes": 3805986,
+    "mtime_ns": 1753984028000000000,
+    "rows": 55
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.137.hdf5",
+    "bytes": 3637779,
+    "mtime_ns": 1753984028000000000,
+    "rows": 84
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.138.hdf5",
+    "bytes": 3537672,
+    "mtime_ns": 1753984028000000000,
+    "rows": 99
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.139.hdf5",
+    "bytes": 3438927,
+    "mtime_ns": 1753984028000000000,
+    "rows": 84
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.140.hdf5",
+    "bytes": 3087531,
+    "mtime_ns": 1753984028000000000,
+    "rows": 79
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.141.hdf5",
+    "bytes": 3451185,
+    "mtime_ns": 1753984028000000000,
+    "rows": 95
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.142.hdf5",
+    "bytes": 3449142,
+    "mtime_ns": 1753984028000000000,
+    "rows": 80
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.143.hdf5",
+    "bytes": 3250290,
+    "mtime_ns": 1753984028000000000,
+    "rows": 65
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.144.hdf5",
+    "bytes": 3342225,
+    "mtime_ns": 1753984028000000000,
+    "rows": 54
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.145.hdf5",
+    "bytes": 2999682,
+    "mtime_ns": 1753984028000000000,
+    "rows": 69
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.146.hdf5",
+    "bytes": 3187638,
+    "mtime_ns": 1753984028000000000,
+    "rows": 28
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.147.hdf5",
+    "bytes": 3135882,
+    "mtime_ns": 1753984028000000000,
+    "rows": 66
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.148.hdf5",
+    "bytes": 2949969,
+    "mtime_ns": 1753984028000000000,
+    "rows": 72
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.149.hdf5",
+    "bytes": 3073230,
+    "mtime_ns": 1753984028000000000,
+    "rows": 72
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.150.hdf5",
+    "bytes": 2970399,
+    "mtime_ns": 1753984028000000000,
+    "rows": 22
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.151.hdf5",
+    "bytes": 3020793,
+    "mtime_ns": 1753984028000000000,
+    "rows": 42
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.152.hdf5",
+    "bytes": 2888679,
+    "mtime_ns": 1753984028000000000,
+    "rows": 33
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.153.hdf5",
+    "bytes": 2855991,
+    "mtime_ns": 1753984028000000000,
+    "rows": 60
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.154.hdf5",
+    "bytes": 3104556,
+    "mtime_ns": 1753984028000000000,
+    "rows": 94
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.155.hdf5",
+    "bytes": 2783124,
+    "mtime_ns": 1753984028000000000,
+    "rows": 45
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.156.hdf5",
+    "bytes": 2761332,
+    "mtime_ns": 1753984028000000000,
+    "rows": 51
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.157.hdf5",
+    "bytes": 2697999,
+    "mtime_ns": 1753984028000000000,
+    "rows": 40
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.158.hdf5",
+    "bytes": 2761332,
+    "mtime_ns": 1753984028000000000,
+    "rows": 71
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.159.hdf5",
+    "bytes": 2813088,
+    "mtime_ns": 1753984028000000000,
+    "rows": 71
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.160.hdf5",
+    "bytes": 2607426,
+    "mtime_ns": 1753984028000000000,
+    "rows": 77
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.161.hdf5",
+    "bytes": 2644200,
+    "mtime_ns": 1753984028000000000,
+    "rows": 44
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.162.hdf5",
+    "bytes": 2737497,
+    "mtime_ns": 1753984028000000000,
+    "rows": 58
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.163.hdf5",
+    "bytes": 8108057,
+    "mtime_ns": 1753984028000000000,
+    "rows": 98
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.164.hdf5",
+    "bytes": 34936989,
+    "mtime_ns": 1753984028000000000,
+    "rows": 548
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.165.hdf5",
+    "bytes": 34771506,
+    "mtime_ns": 1753984028000000000,
+    "rows": 564
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.166.hdf5",
+    "bytes": 34717026,
+    "mtime_ns": 1753984029000000000,
+    "rows": 717
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.167.hdf5",
+    "bytes": 34593084,
+    "mtime_ns": 1753984029000000000,
+    "rows": 577
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.168.hdf5",
+    "bytes": 34460970,
+    "mtime_ns": 1753984029000000000,
+    "rows": 580
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.169.hdf5",
+    "bytes": 34284591,
+    "mtime_ns": 1753984029000000000,
+    "rows": 571
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.170.hdf5",
+    "bytes": 34386060,
+    "mtime_ns": 1753984029000000000,
+    "rows": 674
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.171.hdf5",
+    "bytes": 34167459,
+    "mtime_ns": 1753984029000000000,
+    "rows": 620
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.172.hdf5",
+    "bytes": 33922299,
+    "mtime_ns": 1753984029000000000,
+    "rows": 594
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.173.hdf5",
+    "bytes": 34352691,
+    "mtime_ns": 1753984029000000000,
+    "rows": 583
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.174.hdf5",
+    "bytes": 34066671,
+    "mtime_ns": 1753984029000000000,
+    "rows": 714
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.175.hdf5",
+    "bytes": 33447642,
+    "mtime_ns": 1753984029000000000,
+    "rows": 676
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.176.hdf5",
+    "bytes": 33608358,
+    "mtime_ns": 1753984029000000000,
+    "rows": 629
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.177.hdf5",
+    "bytes": 33749325,
+    "mtime_ns": 1753984029000000000,
+    "rows": 647
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.178.hdf5",
+    "bytes": 33590652,
+    "mtime_ns": 1753984029000000000,
+    "rows": 706
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.179.hdf5",
+    "bytes": 33613125,
+    "mtime_ns": 1753984029000000000,
+    "rows": 757
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.180.hdf5",
+    "bytes": 33934557,
+    "mtime_ns": 1753984030000000000,
+    "rows": 689
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.181.hdf5",
+    "bytes": 33633555,
+    "mtime_ns": 1753984030000000000,
+    "rows": 756
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.182.hdf5",
+    "bytes": 33582480,
+    "mtime_ns": 1753984030000000000,
+    "rows": 829
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.183.hdf5",
+    "bytes": 33445599,
+    "mtime_ns": 1753984030000000000,
+    "rows": 822
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.184.hdf5",
+    "bytes": 33609720,
+    "mtime_ns": 1753984030000000000,
+    "rows": 865
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.185.hdf5",
+    "bytes": 33320976,
+    "mtime_ns": 1753984030000000000,
+    "rows": 797
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.186.hdf5",
+    "bytes": 33354345,
+    "mtime_ns": 1753984030000000000,
+    "rows": 903
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.187.hdf5",
+    "bytes": 33372051,
+    "mtime_ns": 1753984030000000000,
+    "rows": 955
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.188.hdf5",
+    "bytes": 33103737,
+    "mtime_ns": 1753984030000000000,
+    "rows": 973
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.189.hdf5",
+    "bytes": 33115995,
+    "mtime_ns": 1753984030000000000,
+    "rows": 992
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.190.hdf5",
+    "bytes": 33256281,
+    "mtime_ns": 1753984030000000000,
+    "rows": 1052
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.191.hdf5",
+    "bytes": 33050619,
+    "mtime_ns": 1753984030000000000,
+    "rows": 1117
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.192.hdf5",
+    "bytes": 32947788,
+    "mtime_ns": 1753984030000000000,
+    "rows": 1154
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.193.hdf5",
+    "bytes": 32921910,
+    "mtime_ns": 1753984030000000000,
+    "rows": 1249
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.194.hdf5",
+    "bytes": 33179328,
+    "mtime_ns": 1753984030000000000,
+    "rows": 1364
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.195.hdf5",
+    "bytes": 33106461,
+    "mtime_ns": 1753984030000000000,
+    "rows": 1339
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.196.hdf5",
+    "bytes": 33162303,
+    "mtime_ns": 1753984030000000000,
+    "rows": 1487
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.197.hdf5",
+    "bytes": 32925996,
+    "mtime_ns": 1753984031000000000,
+    "rows": 1510
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.198.hdf5",
+    "bytes": 32960727,
+    "mtime_ns": 1753984031000000000,
+    "rows": 1662
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.199.hdf5",
+    "bytes": 32918505,
+    "mtime_ns": 1753984031000000000,
+    "rows": 1708
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.200.hdf5",
+    "bytes": 32772771,
+    "mtime_ns": 1753984031000000000,
+    "rows": 1841
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.201.hdf5",
+    "bytes": 32759832,
+    "mtime_ns": 1753984031000000000,
+    "rows": 1993
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.202.hdf5",
+    "bytes": 32791158,
+    "mtime_ns": 1753984031000000000,
+    "rows": 2056
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.203.hdf5",
+    "bytes": 32952555,
+    "mtime_ns": 1753984031000000000,
+    "rows": 2107
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.204.hdf5",
+    "bytes": 32762556,
+    "mtime_ns": 1753984031000000000,
+    "rows": 2076
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.205.hdf5",
+    "bytes": 32889222,
+    "mtime_ns": 1753984031000000000,
+    "rows": 2137
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.206.hdf5",
+    "bytes": 32615460,
+    "mtime_ns": 1753984031000000000,
+    "rows": 1954
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.207.hdf5",
+    "bytes": 32537145,
+    "mtime_ns": 1753984031000000000,
+    "rows": 1719
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.208.hdf5",
+    "bytes": 32560980,
+    "mtime_ns": 1753984031000000000,
+    "rows": 1489
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.209.hdf5",
+    "bytes": 32659044,
+    "mtime_ns": 1753984031000000000,
+    "rows": 1067
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.210.hdf5",
+    "bytes": 32372343,
+    "mtime_ns": 1753984031000000000,
+    "rows": 759
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.211.hdf5",
+    "bytes": 32521482,
+    "mtime_ns": 1753984031000000000,
+    "rows": 520
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.212.hdf5",
+    "bytes": 32437038,
+    "mtime_ns": 1753984031000000000,
+    "rows": 332
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.213.hdf5",
+    "bytes": 32313096,
+    "mtime_ns": 1753984032000000000,
+    "rows": 227
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.214.hdf5",
+    "bytes": 32487432,
+    "mtime_ns": 1753984032000000000,
+    "rows": 150
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.215.hdf5",
+    "bytes": 32413884,
+    "mtime_ns": 1753984032000000000,
+    "rows": 104
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.216.hdf5",
+    "bytes": 32318544,
+    "mtime_ns": 1753984032000000000,
+    "rows": 52
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.217.hdf5",
+    "bytes": 32263383,
+    "mtime_ns": 1753984032000000000,
+    "rows": 66
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.218.hdf5",
+    "bytes": 32262702,
+    "mtime_ns": 1753984032000000000,
+    "rows": 47
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.219.hdf5",
+    "bytes": 32262021,
+    "mtime_ns": 1753984032000000000,
+    "rows": 44
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.220.hdf5",
+    "bytes": 32153742,
+    "mtime_ns": 1753984032000000000,
+    "rows": 44
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.221.hdf5",
+    "bytes": 32247039,
+    "mtime_ns": 1753984032000000000,
+    "rows": 20
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.222.hdf5",
+    "bytes": 32303562,
+    "mtime_ns": 1753984032000000000,
+    "rows": 20
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.223.hdf5",
+    "bytes": 32060445,
+    "mtime_ns": 1753984032000000000,
+    "rows": 20
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.224.hdf5",
+    "bytes": 32029119,
+    "mtime_ns": 1753984032000000000,
+    "rows": 12
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.225.hdf5",
+    "bytes": 31880661,
+    "mtime_ns": 1753984032000000000,
+    "rows": 18
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.226.hdf5",
+    "bytes": 32190516,
+    "mtime_ns": 1753984032000000000,
+    "rows": 12
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.227.hdf5",
+    "bytes": 31750590,
+    "mtime_ns": 1753984032000000000,
+    "rows": 12
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.228.hdf5",
+    "bytes": 31961019,
+    "mtime_ns": 1753984032000000000,
+    "rows": 8
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.229.hdf5",
+    "bytes": 31775787,
+    "mtime_ns": 1753984033000000000,
+    "rows": 11
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.230.hdf5",
+    "bytes": 31710411,
+    "mtime_ns": 1753984033000000000,
+    "rows": 4
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.231.hdf5",
+    "bytes": 31614390,
+    "mtime_ns": 1753984033000000000,
+    "rows": 5
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.232.hdf5",
+    "bytes": 31678404,
+    "mtime_ns": 1753984033000000000,
+    "rows": 4
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.233.hdf5",
+    "bytes": 31551886,
+    "mtime_ns": 1753984033000000000,
+    "rows": 4
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.234.hdf5",
+    "bytes": 31752046,
+    "mtime_ns": 1753984033000000000,
+    "rows": 5
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.235.hdf5",
+    "bytes": 31848067,
+    "mtime_ns": 1753984033000000000,
+    "rows": 2
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.236.hdf5",
+    "bytes": 31752046,
+    "mtime_ns": 1753984033000000000,
+    "rows": 3
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.237.hdf5",
+    "bytes": 31629466,
+    "mtime_ns": 1753984033000000000,
+    "rows": 4
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.238.hdf5",
+    "bytes": 31674412,
+    "mtime_ns": 1753984033000000000,
+    "rows": 4
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.239.hdf5",
+    "bytes": 31607674,
+    "mtime_ns": 1753984033000000000,
+    "rows": 2
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.240.hdf5",
+    "bytes": 31641724,
+    "mtime_ns": 1753984033000000000,
+    "rows": 5
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.241.hdf5",
+    "bytes": 31738426,
+    "mtime_ns": 1753984033000000000,
+    "rows": 2
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.242.hdf5",
+    "bytes": 31735021,
+    "mtime_ns": 1753984033000000000,
+    "rows": 2
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.243.hdf5",
+    "bytes": 31771795,
+    "mtime_ns": 1753984033000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.244.hdf5",
+    "bytes": 31519825,
+    "mtime_ns": 1753984033000000000,
+    "rows": 3
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.245.hdf5",
+    "bytes": 31541617,
+    "mtime_ns": 1753984034000000000,
+    "rows": 1
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.246.hdf5",
+    "bytes": 31657387,
+    "mtime_ns": 1753984034000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.247.hdf5",
+    "bytes": 31390435,
+    "mtime_ns": 1753984034000000000,
+    "rows": 2
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.248.hdf5",
+    "bytes": 31469431,
+    "mtime_ns": 1753984034000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.249.hdf5",
+    "bytes": 31543660,
+    "mtime_ns": 1753984034000000000,
+    "rows": 2
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.250.hdf5",
+    "bytes": 31713229,
+    "mtime_ns": 1753984034000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.251.hdf5",
+    "bytes": 31466026,
+    "mtime_ns": 1753984034000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.252.hdf5",
+    "bytes": 31273303,
+    "mtime_ns": 1753984034000000000,
+    "rows": 1
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.253.hdf5",
+    "bytes": 31176601,
+    "mtime_ns": 1753984034000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.254.hdf5",
+    "bytes": 31331188,
+    "mtime_ns": 1753984034000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.255.hdf5",
+    "bytes": 31459897,
+    "mtime_ns": 1753984034000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.256.hdf5",
+    "bytes": 31485094,
+    "mtime_ns": 1753984034000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.257.hdf5",
+    "bytes": 31345489,
+    "mtime_ns": 1753984034000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.258.hdf5",
+    "bytes": 31515058,
+    "mtime_ns": 1753984034000000000,
+    "rows": 2
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.259.hdf5",
+    "bytes": 31492585,
+    "mtime_ns": 1753984034000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.260.hdf5",
+    "bytes": 31393159,
+    "mtime_ns": 1753984034000000000,
+    "rows": 1
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.261.hdf5",
+    "bytes": 31246063,
+    "mtime_ns": 1753984034000000000,
+    "rows": 1
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.262.hdf5",
+    "bytes": 31235167,
+    "mtime_ns": 1753984035000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.263.hdf5",
+    "bytes": 31325059,
+    "mtime_ns": 1753984035000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.264.hdf5",
+    "bytes": 31283518,
+    "mtime_ns": 1753984035000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.265.hdf5",
+    "bytes": 31131655,
+    "mtime_ns": 1753984035000000000,
+    "rows": 1
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.266.hdf5",
+    "bytes": 31197712,
+    "mtime_ns": 1753984035000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.267.hdf5",
+    "bytes": 31357066,
+    "mtime_ns": 1753984035000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.268.hdf5",
+    "bytes": 31166386,
+    "mtime_ns": 1753984035000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.269.hdf5",
+    "bytes": 31222909,
+    "mtime_ns": 1753984035000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.270.hdf5",
+    "bytes": 31194307,
+    "mtime_ns": 1753984035000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.271.hdf5",
+    "bytes": 31031548,
+    "mtime_ns": 1753984035000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.272.hdf5",
+    "bytes": 31160257,
+    "mtime_ns": 1753984035000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.273.hdf5",
+    "bytes": 31167748,
+    "mtime_ns": 1753984035000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.274.hdf5",
+    "bytes": 31140508,
+    "mtime_ns": 1753984035000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.275.hdf5",
+    "bytes": 31281475,
+    "mtime_ns": 1753984035000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.276.hdf5",
+    "bytes": 31189540,
+    "mtime_ns": 1753984035000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.277.hdf5",
+    "bytes": 31269217,
+    "mtime_ns": 1753984035000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.278.hdf5",
+    "bytes": 31093519,
+    "mtime_ns": 1753984035000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.279.hdf5",
+    "bytes": 31133698,
+    "mtime_ns": 1753984036000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.280.hdf5",
+    "bytes": 31256278,
+    "mtime_ns": 1753984036000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.281.hdf5",
+    "bytes": 31135741,
+    "mtime_ns": 1753984036000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.282.hdf5",
+    "bytes": 31320292,
+    "mtime_ns": 1753984036000000000,
+    "rows": 1
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.283.hdf5",
+    "bytes": 31080580,
+    "mtime_ns": 1753984036000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.284.hdf5",
+    "bytes": 31280794,
+    "mtime_ns": 1753984036000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.285.hdf5",
+    "bytes": 31173196,
+    "mtime_ns": 1753984036000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.286.hdf5",
+    "bytes": 31082623,
+    "mtime_ns": 1753984036000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.287.hdf5",
+    "bytes": 31111906,
+    "mtime_ns": 1753984036000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.288.hdf5",
+    "bytes": 31187497,
+    "mtime_ns": 1753984036000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.289.hdf5",
+    "bytes": 31066960,
+    "mtime_ns": 1753984036000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.290.hdf5",
+    "bytes": 31086028,
+    "mtime_ns": 1753984036000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.291.hdf5",
+    "bytes": 31110544,
+    "mtime_ns": 1753984036000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.292.hdf5",
+    "bytes": 31040401,
+    "mtime_ns": 1753984036000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.293.hdf5",
+    "bytes": 31081261,
+    "mtime_ns": 1753984036000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.294.hdf5",
+    "bytes": 31285561,
+    "mtime_ns": 1753984036000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.295.hdf5",
+    "bytes": 31158214,
+    "mtime_ns": 1753984037000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.296.hdf5",
+    "bytes": 31146637,
+    "mtime_ns": 1753984037000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.297.hdf5",
+    "bytes": 31273984,
+    "mtime_ns": 1753984037000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.298.hdf5",
+    "bytes": 31092838,
+    "mtime_ns": 1753984037000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.299.hdf5",
+    "bytes": 31275346,
+    "mtime_ns": 1753984037000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.300.hdf5",
+    "bytes": 31296457,
+    "mtime_ns": 1753984037000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.301.hdf5",
+    "bytes": 31048573,
+    "mtime_ns": 1753984037000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.302.hdf5",
+    "bytes": 31013161,
+    "mtime_ns": 1753984037000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.303.hdf5",
+    "bytes": 31007032,
+    "mtime_ns": 1753984037000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.304.hdf5",
+    "bytes": 31015885,
+    "mtime_ns": 1753984037000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.305.hdf5",
+    "bytes": 31192945,
+    "mtime_ns": 1753984037000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.306.hdf5",
+    "bytes": 31160938,
+    "mtime_ns": 1753984037000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.307.hdf5",
+    "bytes": 31001584,
+    "mtime_ns": 1753984037000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.308.hdf5",
+    "bytes": 31082623,
+    "mtime_ns": 1753984037000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.309.hdf5",
+    "bytes": 31013842,
+    "mtime_ns": 1753984037000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.310.hdf5",
+    "bytes": 30796603,
+    "mtime_ns": 1753984037000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.311.hdf5",
+    "bytes": 30957319,
+    "mtime_ns": 1753984038000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.312.hdf5",
+    "bytes": 30841549,
+    "mtime_ns": 1753984038000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.313.hdf5",
+    "bytes": 30838825,
+    "mtime_ns": 1753984038000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.314.hdf5",
+    "bytes": 30821800,
+    "mtime_ns": 1753984038000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.315.hdf5",
+    "bytes": 30806137,
+    "mtime_ns": 1753984038000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.316.hdf5",
+    "bytes": 30972982,
+    "mtime_ns": 1753984038000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.317.hdf5",
+    "bytes": 30728503,
+    "mtime_ns": 1753984038000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.318.hdf5",
+    "bytes": 30896710,
+    "mtime_ns": 1753984038000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.319.hdf5",
+    "bytes": 30680152,
+    "mtime_ns": 1753984038000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.320.hdf5",
+    "bytes": 30796603,
+    "mtime_ns": 1753984038000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.321.hdf5",
+    "bytes": 30642697,
+    "mtime_ns": 1753984038000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.322.hdf5",
+    "bytes": 30762553,
+    "mtime_ns": 1753984038000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.323.hdf5",
+    "bytes": 30738037,
+    "mtime_ns": 1753984038000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.324.hdf5",
+    "bytes": 30936208,
+    "mtime_ns": 1753984038000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.325.hdf5",
+    "bytes": 30885133,
+    "mtime_ns": 1753984038000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.326.hdf5",
+    "bytes": 30801370,
+    "mtime_ns": 1753984038000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.327.hdf5",
+    "bytes": 30921226,
+    "mtime_ns": 1753984038000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.328.hdf5",
+    "bytes": 30834058,
+    "mtime_ns": 1753984038000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.329.hdf5",
+    "bytes": 30740080,
+    "mtime_ns": 1753984039000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.330.hdf5",
+    "bytes": 30868789,
+    "mtime_ns": 1753984039000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.331.hdf5",
+    "bytes": 31016566,
+    "mtime_ns": 1753984039000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.332.hdf5",
+    "bytes": 30836782,
+    "mtime_ns": 1753984039000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.333.hdf5",
+    "bytes": 30791836,
+    "mtime_ns": 1753984039000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.334.hdf5",
+    "bytes": 30804775,
+    "mtime_ns": 1753984039000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.335.hdf5",
+    "bytes": 30973663,
+    "mtime_ns": 1753984039000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.336.hdf5",
+    "bytes": 30913054,
+    "mtime_ns": 1753984039000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.337.hdf5",
+    "bytes": 30881728,
+    "mtime_ns": 1753984039000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.338.hdf5",
+    "bytes": 30936208,
+    "mtime_ns": 1753984039000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.339.hdf5",
+    "bytes": 30951190,
+    "mtime_ns": 1753984039000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.340.hdf5",
+    "bytes": 30968215,
+    "mtime_ns": 1753984039000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.341.hdf5",
+    "bytes": 30781621,
+    "mtime_ns": 1753984039000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.342.hdf5",
+    "bytes": 30628396,
+    "mtime_ns": 1753984039000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.343.hdf5",
+    "bytes": 30645421,
+    "mtime_ns": 1753984039000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.344.hdf5",
+    "bytes": 30823843,
+    "mtime_ns": 1753984039000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.345.hdf5",
+    "bytes": 30700582,
+    "mtime_ns": 1753984040000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.346.hdf5",
+    "bytes": 30761872,
+    "mtime_ns": 1753984040000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.347.hdf5",
+    "bytes": 30526927,
+    "mtime_ns": 1753984040000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.348.hdf5",
+    "bytes": 30883090,
+    "mtime_ns": 1753984040000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.349.hdf5",
+    "bytes": 30821119,
+    "mtime_ns": 1753984040000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.350.hdf5",
+    "bytes": 30660403,
+    "mtime_ns": 1753984040000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.351.hdf5",
+    "bytes": 30756424,
+    "mtime_ns": 1753984040000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.352.hdf5",
+    "bytes": 30652231,
+    "mtime_ns": 1753984040000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.353.hdf5",
+    "bytes": 30861979,
+    "mtime_ns": 1753984040000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.354.hdf5",
+    "bytes": 30551443,
+    "mtime_ns": 1753984040000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.355.hdf5",
+    "bytes": 30644059,
+    "mtime_ns": 1753984040000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.356.hdf5",
+    "bytes": 30778897,
+    "mtime_ns": 1753984040000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.357.hdf5",
+    "bytes": 30595708,
+    "mtime_ns": 1753984040000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.358.hdf5",
+    "bytes": 30800689,
+    "mtime_ns": 1753984040000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.359.hdf5",
+    "bytes": 30738037,
+    "mtime_ns": 1753984040000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.360.hdf5",
+    "bytes": 30612733,
+    "mtime_ns": 1753984040000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.361.hdf5",
+    "bytes": 30738037,
+    "mtime_ns": 1753984040000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.362.hdf5",
+    "bytes": 30689686,
+    "mtime_ns": 1753984041000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.363.hdf5",
+    "bytes": 30645421,
+    "mtime_ns": 1753984041000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.364.hdf5",
+    "bytes": 30597070,
+    "mtime_ns": 1753984041000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.365.hdf5",
+    "bytes": 30650869,
+    "mtime_ns": 1753984041000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.366.hdf5",
+    "bytes": 30495601,
+    "mtime_ns": 1753984041000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.367.hdf5",
+    "bytes": 30567106,
+    "mtime_ns": 1753984041000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.368.hdf5",
+    "bytes": 30438397,
+    "mtime_ns": 1753984041000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.369.hdf5",
+    "bytes": 30528289,
+    "mtime_ns": 1753984041000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.370.hdf5",
+    "bytes": 30322627,
+    "mtime_ns": 1753984041000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.371.hdf5",
+    "bytes": 30322627,
+    "mtime_ns": 1753984041000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.372.hdf5",
+    "bytes": 30524884,
+    "mtime_ns": 1753984041000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.373.hdf5",
+    "bytes": 30441802,
+    "mtime_ns": 1753984041000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.374.hdf5",
+    "bytes": 30606604,
+    "mtime_ns": 1753984041000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.375.hdf5",
+    "bytes": 30279724,
+    "mtime_ns": 1753984041000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.376.hdf5",
+    "bytes": 30319903,
+    "mtime_ns": 1753984041000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.377.hdf5",
+    "bytes": 30560296,
+    "mtime_ns": 1753984041000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.378.hdf5",
+    "bytes": 30563701,
+    "mtime_ns": 1753984041000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.379.hdf5",
+    "bytes": 30442483,
+    "mtime_ns": 1753984041000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.380.hdf5",
+    "bytes": 30275638,
+    "mtime_ns": 1753984042000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.381.hdf5",
+    "bytes": 30298111,
+    "mtime_ns": 1753984042000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.382.hdf5",
+    "bytes": 30449293,
+    "mtime_ns": 1753984042000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.383.hdf5",
+    "bytes": 30418648,
+    "mtime_ns": 1753984042000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.384.hdf5",
+    "bytes": 30284491,
+    "mtime_ns": 1753984042000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.385.hdf5",
+    "bytes": 30356677,
+    "mtime_ns": 1753984042000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.386.hdf5",
+    "bytes": 30565063,
+    "mtime_ns": 1753984042000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.387.hdf5",
+    "bytes": 30343057,
+    "mtime_ns": 1753984042000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.388.hdf5",
+    "bytes": 30395494,
+    "mtime_ns": 1753984042000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.389.hdf5",
+    "bytes": 30335566,
+    "mtime_ns": 1753984042000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.390.hdf5",
+    "bytes": 30272233,
+    "mtime_ns": 1753984042000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.391.hdf5",
+    "bytes": 30270190,
+    "mtime_ns": 1753984042000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.392.hdf5",
+    "bytes": 30212986,
+    "mtime_ns": 1753984042000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.393.hdf5",
+    "bytes": 30215710,
+    "mtime_ns": 1753984042000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.394.hdf5",
+    "bytes": 30159868,
+    "mtime_ns": 1753984042000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.395.hdf5",
+    "bytes": 30283129,
+    "mtime_ns": 1753984042000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.396.hdf5",
+    "bytes": 30147610,
+    "mtime_ns": 1753984042000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.397.hdf5",
+    "bytes": 30284491,
+    "mtime_ns": 1753984043000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.398.hdf5",
+    "bytes": 30193918,
+    "mtime_ns": 1753984043000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.399.hdf5",
+    "bytes": 30184384,
+    "mtime_ns": 1753984043000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.400.hdf5",
+    "bytes": 30165316,
+    "mtime_ns": 1753984043000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.401.hdf5",
+    "bytes": 30108793,
+    "mtime_ns": 1753984043000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.402.hdf5",
+    "bytes": 30123094,
+    "mtime_ns": 1753984043000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.403.hdf5",
+    "bytes": 30095854,
+    "mtime_ns": 1753984043000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.404.hdf5",
+    "bytes": 30091087,
+    "mtime_ns": 1753984043000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.405.hdf5",
+    "bytes": 30123775,
+    "mtime_ns": 1753984043000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.406.hdf5",
+    "bytes": 30219796,
+    "mtime_ns": 1753984043000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.407.hdf5",
+    "bytes": 30228649,
+    "mtime_ns": 1753984043000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.408.hdf5",
+    "bytes": 30307645,
+    "mtime_ns": 1753984043000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.409.hdf5",
+    "bytes": 30309007,
+    "mtime_ns": 1753984043000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.410.hdf5",
+    "bytes": 30172807,
+    "mtime_ns": 1753984043000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.411.hdf5",
+    "bytes": 30341014,
+    "mtime_ns": 1753984043000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.412.hdf5",
+    "bytes": 30136033,
+    "mtime_ns": 1753984044000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.413.hdf5",
+    "bytes": 30234097,
+    "mtime_ns": 1753984044000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.414.hdf5",
+    "bytes": 30264061,
+    "mtime_ns": 1753984043000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.415.hdf5",
+    "bytes": 30227968,
+    "mtime_ns": 1753984044000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.416.hdf5",
+    "bytes": 30393451,
+    "mtime_ns": 1753984044000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.417.hdf5",
+    "bytes": 30248398,
+    "mtime_ns": 1753984044000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.418.hdf5",
+    "bytes": 30202771,
+    "mtime_ns": 1753984044000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.419.hdf5",
+    "bytes": 30240226,
+    "mtime_ns": 1753984044000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.420.hdf5",
+    "bytes": 30291301,
+    "mtime_ns": 1753984044000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.421.hdf5",
+    "bytes": 30350548,
+    "mtime_ns": 1753984044000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.422.hdf5",
+    "bytes": 30225244,
+    "mtime_ns": 1753984044000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.423.hdf5",
+    "bytes": 30371659,
+    "mtime_ns": 1753984044000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.424.hdf5",
+    "bytes": 30332161,
+    "mtime_ns": 1753984044000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.425.hdf5",
+    "bytes": 30300154,
+    "mtime_ns": 1753984044000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.426.hdf5",
+    "bytes": 30308326,
+    "mtime_ns": 1753984045000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.427.hdf5",
+    "bytes": 30298792,
+    "mtime_ns": 1753984045000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.428.hdf5",
+    "bytes": 30362806,
+    "mtime_ns": 1753984044000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.429.hdf5",
+    "bytes": 30279724,
+    "mtime_ns": 1753984044000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.430.hdf5",
+    "bytes": 30247036,
+    "mtime_ns": 1753984045000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.431.hdf5",
+    "bytes": 30243631,
+    "mtime_ns": 1753984045000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.432.hdf5",
+    "bytes": 30193918,
+    "mtime_ns": 1753984045000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.433.hdf5",
+    "bytes": 30315817,
+    "mtime_ns": 1753984045000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.434.hdf5",
+    "bytes": 30082234,
+    "mtime_ns": 1753984045000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.435.hdf5",
+    "bytes": 30154420,
+    "mtime_ns": 1753984045000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.436.hdf5",
+    "bytes": 30187789,
+    "mtime_ns": 1753984045000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.437.hdf5",
+    "bytes": 30195961,
+    "mtime_ns": 1753984045000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.438.hdf5",
+    "bytes": 30266785,
+    "mtime_ns": 1753984045000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.439.hdf5",
+    "bytes": 29990299,
+    "mtime_ns": 1753984045000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.440.hdf5",
+    "bytes": 30203452,
+    "mtime_ns": 1753984045000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.441.hdf5",
+    "bytes": 30232054,
+    "mtime_ns": 1753984045000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.442.hdf5",
+    "bytes": 30172126,
+    "mtime_ns": 1753984045000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.443.hdf5",
+    "bytes": 30054313,
+    "mtime_ns": 1753984046000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.444.hdf5",
+    "bytes": 30208219,
+    "mtime_ns": 1753984046000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.445.hdf5",
+    "bytes": 30221158,
+    "mtime_ns": 1753984046000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.446.hdf5",
+    "bytes": 29894278,
+    "mtime_ns": 1753984046000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.447.hdf5",
+    "bytes": 30098578,
+    "mtime_ns": 1753984046000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.448.hdf5",
+    "bytes": 30168721,
+    "mtime_ns": 1753984046000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.449.hdf5",
+    "bytes": 29959654,
+    "mtime_ns": 1753984046000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.450.hdf5",
+    "bytes": 29911984,
+    "mtime_ns": 1753984046000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.451.hdf5",
+    "bytes": 29965102,
+    "mtime_ns": 1753984046000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.452.hdf5",
+    "bytes": 30027754,
+    "mtime_ns": 1753984046000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.453.hdf5",
+    "bytes": 30082234,
+    "mtime_ns": 1753984046000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.454.hdf5",
+    "bytes": 29913346,
+    "mtime_ns": 1753984046000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.455.hdf5",
+    "bytes": 30074062,
+    "mtime_ns": 1753984046000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.456.hdf5",
+    "bytes": 29805067,
+    "mtime_ns": 1753984046000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.457.hdf5",
+    "bytes": 30100621,
+    "mtime_ns": 1753984046000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.458.hdf5",
+    "bytes": 29917432,
+    "mtime_ns": 1753984046000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.459.hdf5",
+    "bytes": 30115603,
+    "mtime_ns": 1753984046000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.460.hdf5",
+    "bytes": 29941948,
+    "mtime_ns": 1753984046000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.461.hdf5",
+    "bytes": 30211624,
+    "mtime_ns": 1753984046000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.462.hdf5",
+    "bytes": 30041374,
+    "mtime_ns": 1753984047000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.463.hdf5",
+    "bytes": 30172807,
+    "mtime_ns": 1753984047000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.464.hdf5",
+    "bytes": 30236821,
+    "mtime_ns": 1753984047000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.465.hdf5",
+    "bytes": 30025030,
+    "mtime_ns": 1753984047000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.466.hdf5",
+    "bytes": 30182341,
+    "mtime_ns": 1753984047000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.467.hdf5",
+    "bytes": 30116284,
+    "mtime_ns": 1753984047000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.468.hdf5",
+    "bytes": 30350548,
+    "mtime_ns": 1753984047000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.469.hdf5",
+    "bytes": 30285853,
+    "mtime_ns": 1753984047000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.470.hdf5",
+    "bytes": 30279043,
+    "mtime_ns": 1753984047000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.471.hdf5",
+    "bytes": 30191875,
+    "mtime_ns": 1753984047000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.472.hdf5",
+    "bytes": 30233416,
+    "mtime_ns": 1753984048000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.473.hdf5",
+    "bytes": 30245674,
+    "mtime_ns": 1753984048000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.474.hdf5",
+    "bytes": 30138076,
+    "mtime_ns": 1753984048000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.475.hdf5",
+    "bytes": 30146929,
+    "mtime_ns": 1753984048000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.476.hdf5",
+    "bytes": 30159187,
+    "mtime_ns": 1753984048000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.477.hdf5",
+    "bytes": 30273595,
+    "mtime_ns": 1753984048000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.478.hdf5",
+    "bytes": 30125818,
+    "mtime_ns": 1753984048000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.479.hdf5",
+    "bytes": 30105388,
+    "mtime_ns": 1753984048000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.480.hdf5",
+    "bytes": 29826178,
+    "mtime_ns": 1753984048000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.481.hdf5",
+    "bytes": 29982127,
+    "mtime_ns": 1753984048000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.482.hdf5",
+    "bytes": 30095854,
+    "mtime_ns": 1753984048000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.483.hdf5",
+    "bytes": 29811196,
+    "mtime_ns": 1753984048000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.484.hdf5",
+    "bytes": 30165997,
+    "mtime_ns": 1753984048000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.485.hdf5",
+    "bytes": 29933095,
+    "mtime_ns": 1753984048000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.486.hdf5",
+    "bytes": 30207538,
+    "mtime_ns": 1753984049000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.487.hdf5",
+    "bytes": 30185746,
+    "mtime_ns": 1753984049000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.488.hdf5",
+    "bytes": 30162592,
+    "mtime_ns": 1753984048000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.489.hdf5",
+    "bytes": 30246355,
+    "mtime_ns": 1753984049000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.490.hdf5",
+    "bytes": 30133990,
+    "mtime_ns": 1753984049000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.491.hdf5",
+    "bytes": 30282448,
+    "mtime_ns": 1753984049000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.492.hdf5",
+    "bytes": 30123094,
+    "mtime_ns": 1753984049000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.493.hdf5",
+    "bytes": 30206857,
+    "mtime_ns": 1753984049000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.494.hdf5",
+    "bytes": 30091768,
+    "mtime_ns": 1753984049000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.495.hdf5",
+    "bytes": 30262018,
+    "mtime_ns": 1753984049000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.496.hdf5",
+    "bytes": 30083596,
+    "mtime_ns": 1753984049000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.497.hdf5",
+    "bytes": 30165997,
+    "mtime_ns": 1753984049000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.498.hdf5",
+    "bytes": 30146929,
+    "mtime_ns": 1753984049000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.499.hdf5",
+    "bytes": 30153058,
+    "mtime_ns": 1753984049000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.500.hdf5",
+    "bytes": 30188470,
+    "mtime_ns": 1753984049000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.501.hdf5",
+    "bytes": 30198004,
+    "mtime_ns": 1753984049000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.502.hdf5",
+    "bytes": 30048865,
+    "mtime_ns": 1753984049000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.503.hdf5",
+    "bytes": 30115603,
+    "mtime_ns": 1753984049000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.504.hdf5",
+    "bytes": 30193918,
+    "mtime_ns": 1753984049000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.505.hdf5",
+    "bytes": 30081553,
+    "mtime_ns": 1753984050000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.506.hdf5",
+    "bytes": 30028435,
+    "mtime_ns": 1753984050000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.507.hdf5",
+    "bytes": 30039331,
+    "mtime_ns": 1753984050000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.508.hdf5",
+    "bytes": 30157825,
+    "mtime_ns": 1753984050000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.509.hdf5",
+    "bytes": 30010729,
+    "mtime_ns": 1753984050000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.510.hdf5",
+    "bytes": 30113560,
+    "mtime_ns": 1753984050000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.511.hdf5",
+    "bytes": 30293344,
+    "mtime_ns": 1753984050000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.512.hdf5",
+    "bytes": 30186427,
+    "mtime_ns": 1753984050000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.513.hdf5",
+    "bytes": 30065890,
+    "mtime_ns": 1753984050000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.514.hdf5",
+    "bytes": 30022987,
+    "mtime_ns": 1753984050000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.515.hdf5",
+    "bytes": 30210943,
+    "mtime_ns": 1753984050000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.516.hdf5",
+    "bytes": 30105388,
+    "mtime_ns": 1753984050000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.517.hdf5",
+    "bytes": 30108793,
+    "mtime_ns": 1753984050000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.518.hdf5",
+    "bytes": 30208900,
+    "mtime_ns": 1753984050000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.519.hdf5",
+    "bytes": 30141481,
+    "mtime_ns": 1753984050000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.520.hdf5",
+    "bytes": 30224563,
+    "mtime_ns": 1753984050000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.521.hdf5",
+    "bytes": 30094492,
+    "mtime_ns": 1753984050000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.522.hdf5",
+    "bytes": 30071338,
+    "mtime_ns": 1753984051000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.523.hdf5",
+    "bytes": 30165997,
+    "mtime_ns": 1753984051000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.524.hdf5",
+    "bytes": 29978041,
+    "mtime_ns": 1753984051000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.525.hdf5",
+    "bytes": 30175531,
+    "mtime_ns": 1753984051000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.526.hdf5",
+    "bytes": 30154420,
+    "mtime_ns": 1753984051000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.527.hdf5",
+    "bytes": 30257251,
+    "mtime_ns": 1753984051000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.528.hdf5",
+    "bytes": 30303559,
+    "mtime_ns": 1753984051000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.529.hdf5",
+    "bytes": 30145567,
+    "mtime_ns": 1753984051000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.530.hdf5",
+    "bytes": 30252484,
+    "mtime_ns": 1753984051000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.531.hdf5",
+    "bytes": 30089044,
+    "mtime_ns": 1753984051000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.532.hdf5",
+    "bytes": 30168040,
+    "mtime_ns": 1753984051000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.533.hdf5",
+    "bytes": 29996428,
+    "mtime_ns": 1753984051000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.534.hdf5",
+    "bytes": 30020944,
+    "mtime_ns": 1753984051000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.535.hdf5",
+    "bytes": 30072700,
+    "mtime_ns": 1753984051000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.536.hdf5",
+    "bytes": 30066571,
+    "mtime_ns": 1753984051000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.537.hdf5",
+    "bytes": 30067933,
+    "mtime_ns": 1753984051000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.538.hdf5",
+    "bytes": 30080191,
+    "mtime_ns": 1753984051000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.539.hdf5",
+    "bytes": 30212305,
+    "mtime_ns": 1753984052000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.540.hdf5",
+    "bytes": 30149653,
+    "mtime_ns": 1753984052000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.541.hdf5",
+    "bytes": 30153058,
+    "mtime_ns": 1753984052000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.542.hdf5",
+    "bytes": 30138076,
+    "mtime_ns": 1753984052000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.543.hdf5",
+    "bytes": 30223882,
+    "mtime_ns": 1753984052000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.544.hdf5",
+    "bytes": 30159868,
+    "mtime_ns": 1753984052000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.545.hdf5",
+    "bytes": 30369616,
+    "mtime_ns": 1753984052000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.546.hdf5",
+    "bytes": 30343057,
+    "mtime_ns": 1753984052000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.547.hdf5",
+    "bytes": 30472447,
+    "mtime_ns": 1753984052000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.548.hdf5",
+    "bytes": 30420010,
+    "mtime_ns": 1753984052000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.549.hdf5",
+    "bytes": 30318541,
+    "mtime_ns": 1753984052000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.550.hdf5",
+    "bytes": 30302197,
+    "mtime_ns": 1753984052000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.551.hdf5",
+    "bytes": 30195280,
+    "mtime_ns": 1753984052000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.552.hdf5",
+    "bytes": 30180298,
+    "mtime_ns": 1753984052000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.553.hdf5",
+    "bytes": 30249079,
+    "mtime_ns": 1753984052000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.554.hdf5",
+    "bytes": 30327394,
+    "mtime_ns": 1753984053000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.555.hdf5",
+    "bytes": 30238183,
+    "mtime_ns": 1753984053000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.556.hdf5",
+    "bytes": 30281086,
+    "mtime_ns": 1753984053000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.557.hdf5",
+    "bytes": 30334204,
+    "mtime_ns": 1753984053000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.558.hdf5",
+    "bytes": 30283810,
+    "mtime_ns": 1753984053000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.559.hdf5",
+    "bytes": 30246355,
+    "mtime_ns": 1753984053000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.560.hdf5",
+    "bytes": 30321946,
+    "mtime_ns": 1753984053000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.561.hdf5",
+    "bytes": 30418648,
+    "mtime_ns": 1753984053000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.562.hdf5",
+    "bytes": 30165997,
+    "mtime_ns": 1753984053000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.563.hdf5",
+    "bytes": 30065209,
+    "mtime_ns": 1753984053000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.564.hdf5",
+    "bytes": 30117646,
+    "mtime_ns": 1753984053000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.565.hdf5",
+    "bytes": 30122413,
+    "mtime_ns": 1753984053000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.566.hdf5",
+    "bytes": 30187108,
+    "mtime_ns": 1753984053000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.567.hdf5",
+    "bytes": 30179617,
+    "mtime_ns": 1753984053000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.568.hdf5",
+    "bytes": 30316498,
+    "mtime_ns": 1753984053000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.569.hdf5",
+    "bytes": 30224563,
+    "mtime_ns": 1753984053000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.570.hdf5",
+    "bytes": 30099940,
+    "mtime_ns": 1753984053000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.571.hdf5",
+    "bytes": 30046822,
+    "mtime_ns": 1753984053000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.572.hdf5",
+    "bytes": 30034564,
+    "mtime_ns": 1753984054000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.573.hdf5",
+    "bytes": 30044779,
+    "mtime_ns": 1753984054000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.574.hdf5",
+    "bytes": 30121732,
+    "mtime_ns": 1753984054000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.575.hdf5",
+    "bytes": 30099940,
+    "mtime_ns": 1753984054000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.576.hdf5",
+    "bytes": 30187789,
+    "mtime_ns": 1753984054000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.577.hdf5",
+    "bytes": 29973955,
+    "mtime_ns": 1753984054000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.578.hdf5",
+    "bytes": 29796895,
+    "mtime_ns": 1753984054000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.579.hdf5",
+    "bytes": 30045460,
+    "mtime_ns": 1753984054000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.580.hdf5",
+    "bytes": 29887468,
+    "mtime_ns": 1753984054000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.581.hdf5",
+    "bytes": 29837755,
+    "mtime_ns": 1753984054000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.582.hdf5",
+    "bytes": 29894959,
+    "mtime_ns": 1753984054000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.583.hdf5",
+    "bytes": 29921518,
+    "mtime_ns": 1753984054000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.584.hdf5",
+    "bytes": 29871805,
+    "mtime_ns": 1753984054000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.585.hdf5",
+    "bytes": 29936500,
+    "mtime_ns": 1753984054000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.586.hdf5",
+    "bytes": 29894959,
+    "mtime_ns": 1753984054000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.587.hdf5",
+    "bytes": 29844565,
+    "mtime_ns": 1753984054000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.588.hdf5",
+    "bytes": 29737648,
+    "mtime_ns": 1753984054000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.589.hdf5",
+    "bytes": 29907217,
+    "mtime_ns": 1753984054000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.590.hdf5",
+    "bytes": 29809153,
+    "mtime_ns": 1753984055000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.591.hdf5",
+    "bytes": 29882701,
+    "mtime_ns": 1753984055000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.592.hdf5",
+    "bytes": 29737648,
+    "mtime_ns": 1753984055000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.593.hdf5",
+    "bytes": 29864314,
+    "mtime_ns": 1753984055000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.594.hdf5",
+    "bytes": 29736286,
+    "mtime_ns": 1753984055000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.595.hdf5",
+    "bytes": 29789404,
+    "mtime_ns": 1753984055000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.596.hdf5",
+    "bytes": 29945353,
+    "mtime_ns": 1753984055000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.597.hdf5",
+    "bytes": 29973955,
+    "mtime_ns": 1753984055000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.598.hdf5",
+    "bytes": 29886106,
+    "mtime_ns": 1753984055000000000,
+    "rows": 0
+  },
+  {
+    "path": "/pscratch/sd/d/dkololgi/TNG300-1/groups_099/fof_subhalo_tab_099.599.hdf5",
+    "bytes": 29813920,
+    "mtime_ns": 1753984055000000000,
+    "rows": 0
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "sed_unique_valid_mass_rows": 14469940,
+  "duplicate_rows_excluded": 1527262,
+  "low_z_rows": 3728192,
+  "low_z_below_1e9": 1090694,
+  "low_z_1e7_to_1e8": 299151,
+  "parent_definition": "Unique IDs among positive-mass GALAXY SED rows at 0<z<.55 and DELTACHI2>40, all targeting programmes; not identical to the historical 5,130,670-object example. SED catalogue lacks ZWARN; Bright parent additionally requires ZWARN=0.",
+  "bright_duplicate_rows_excluded": 0,
+  "bright_id_matches": 7325594,
+  "bright_sky_z_rejected": 604,
+  "bright_valid_mass_rows": 7324982,
+  "bright_low_z_below_1e9": 266849,
+  "bright_low_z_1e7_to_1e8": 30845
+}

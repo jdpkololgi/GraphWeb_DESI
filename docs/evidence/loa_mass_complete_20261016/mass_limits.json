@@ -1,0 +1,1162 @@
+[
+  {
+    "zlo": 0.15,
+    "zhi": 0.16,
+    "populations": {
+      "all": {
+        "rows": 270383,
+        "usable": true,
+        "faint_rows": 54077,
+        "p90": 10.174257263256301,
+        "p95": 10.274944649854241
+      },
+      "quiescent": {
+        "rows": 96568,
+        "usable": true,
+        "faint_rows": 19314,
+        "p90": 10.222139492088765,
+        "p95": 10.283654920814612
+      },
+      "starforming": {
+        "rows": 173815,
+        "usable": true,
+        "faint_rows": 34763,
+        "p90": 10.135213773420668,
+        "p95": 10.267859580778568
+      }
+    },
+    "usable": true,
+    "logmass_limit": 10.283654920814612
+  },
+  {
+    "zlo": 0.16,
+    "zhi": 0.17,
+    "populations": {
+      "all": {
+        "rows": 272949,
+        "usable": true,
+        "faint_rows": 54590,
+        "p90": 10.250152120766158,
+        "p95": 10.353835944795666
+      },
+      "quiescent": {
+        "rows": 101430,
+        "usable": true,
+        "faint_rows": 20286,
+        "p90": 10.289405087802448,
+        "p95": 10.357765172064493
+      },
+      "starforming": {
+        "rows": 171519,
+        "usable": true,
+        "faint_rows": 34304,
+        "p90": 10.21710121881319,
+        "p95": 10.350219337309994
+      }
+    },
+    "usable": true,
+    "logmass_limit": 10.357765172064493
+  },
+  {
+    "zlo": 0.17,
+    "zhi": 0.18,
+    "populations": {
+      "all": {
+        "rows": 278012,
+        "usable": true,
+        "faint_rows": 55603,
+        "p90": 10.321835215948727,
+        "p95": 10.422794170310363
+      },
+      "quiescent": {
+        "rows": 106733,
+        "usable": true,
+        "faint_rows": 21347,
+        "p90": 10.354174252789642,
+        "p95": 10.416783162725572
+      },
+      "starforming": {
+        "rows": 171279,
+        "usable": true,
+        "faint_rows": 34256,
+        "p90": 10.291453033355339,
+        "p95": 10.422950221517409
+      }
+    },
+    "usable": true,
+    "logmass_limit": 10.422950221517409
+  },
+  {
+    "zlo": 0.18,
+    "zhi": 0.19,
+    "populations": {
+      "all": {
+        "rows": 289357,
+        "usable": true,
+        "faint_rows": 57872,
+        "p90": 10.385176944074425,
+        "p95": 10.48499526900472
+      },
+      "quiescent": {
+        "rows": 116422,
+        "usable": true,
+        "faint_rows": 23285,
+        "p90": 10.416382766491797,
+        "p95": 10.476310700027677
+      },
+      "starforming": {
+        "rows": 172935,
+        "usable": true,
+        "faint_rows": 34587,
+        "p90": 10.356116231468087,
+        "p95": 10.486450727805892
+      }
+    },
+    "usable": true,
+    "logmass_limit": 10.486450727805892
+  },
+  {
+    "zlo": 0.19,
+    "zhi": 0.2,
+    "populations": {
+      "all": {
+        "rows": 285776,
+        "usable": true,
+        "faint_rows": 57157,
+        "p90": 10.449815422856028,
+        "p95": 10.539615038502472
+      },
+      "quiescent": {
+        "rows": 119023,
+        "usable": true,
+        "faint_rows": 23805,
+        "p90": 10.480029576567839,
+        "p95": 10.53698874558501
+      },
+      "starforming": {
+        "rows": 166753,
+        "usable": true,
+        "faint_rows": 33351,
+        "p90": 10.421536605896586,
+        "p95": 10.540970964489416
+      }
+    },
+    "usable": true,
+    "logmass_limit": 10.540970964489416
+  },
+  {
+    "zlo": 0.2,
+    "zhi": 0.21,
+    "populations": {
+      "all": {
+        "rows": 278536,
+        "usable": true,
+        "faint_rows": 55708,
+        "p90": 10.507528751797249,
+        "p95": 10.599405568746725
+      },
+      "quiescent": {
+        "rows": 119355,
+        "usable": true,
+        "faint_rows": 23871,
+        "p90": 10.535585231487694,
+        "p95": 10.594748629948802
+      },
+      "starforming": {
+        "rows": 159181,
+        "usable": true,
+        "faint_rows": 31837,
+        "p90": 10.478819937157256,
+        "p95": 10.601508976977705
+      }
+    },
+    "usable": true,
+    "logmass_limit": 10.601508976977705
+  },
+  {
+    "zlo": 0.21,
+    "zhi": 0.22,
+    "populations": {
+      "all": {
+        "rows": 267636,
+        "usable": true,
+        "faint_rows": 53528,
+        "p90": 10.55569385189417,
+        "p95": 10.64297198249087
+      },
+      "quiescent": {
+        "rows": 117562,
+        "usable": true,
+        "faint_rows": 23513,
+        "p90": 10.584365371361109,
+        "p95": 10.643534083517242
+      },
+      "starforming": {
+        "rows": 150074,
+        "usable": true,
+        "faint_rows": 30015,
+        "p90": 10.521110203143818,
+        "p95": 10.641492964862351
+      }
+    },
+    "usable": true,
+    "logmass_limit": 10.643534083517242
+  },
+  {
+    "zlo": 0.22,
+    "zhi": 0.23,
+    "populations": {
+      "all": {
+        "rows": 270113,
+        "usable": true,
+        "faint_rows": 54025,
+        "p90": 10.610079744424072,
+        "p95": 10.690885577982415
+      },
+      "quiescent": {
+        "rows": 123201,
+        "usable": true,
+        "faint_rows": 24641,
+        "p90": 10.639662546954611,
+        "p95": 10.694966347222234
+      },
+      "starforming": {
+        "rows": 146912,
+        "usable": true,
+        "faint_rows": 29383,
+        "p90": 10.572547466743762,
+        "p95": 10.689333131023933
+      }
+    },
+    "usable": true,
+    "logmass_limit": 10.694966347222234
+  },
+  {
+    "zlo": 0.23,
+    "zhi": 0.24,
+    "populations": {
+      "all": {
+        "rows": 256038,
+        "usable": true,
+        "faint_rows": 51208,
+        "p90": 10.646399627813643,
+        "p95": 10.719595160302902
+      },
+      "quiescent": {
+        "rows": 119059,
+        "usable": true,
+        "faint_rows": 23812,
+        "p90": 10.671447714641172,
+        "p95": 10.72630241249842
+      },
+      "starforming": {
+        "rows": 136979,
+        "usable": true,
+        "faint_rows": 27396,
+        "p90": 10.606076523459542,
+        "p95": 10.716723799103244
+      }
+    },
+    "usable": true,
+    "logmass_limit": 10.72630241249842
+  },
+  {
+    "zlo": 0.24,
+    "zhi": 0.25,
+    "populations": {
+      "all": {
+        "rows": 239626,
+        "usable": true,
+        "faint_rows": 47926,
+        "p90": 10.674620535858867,
+        "p95": 10.743189051515916
+      },
+      "quiescent": {
+        "rows": 114684,
+        "usable": true,
+        "faint_rows": 22938,
+        "p90": 10.699240918452942,
+        "p95": 10.7478199460224
+      },
+      "starforming": {
+        "rows": 124942,
+        "usable": true,
+        "faint_rows": 24989,
+        "p90": 10.630478886419505,
+        "p95": 10.7374054521451
+      }
+    },
+    "usable": true,
+    "logmass_limit": 10.7478199460224
+  },
+  {
+    "zlo": 0.25,
+    "zhi": 0.26,
+    "populations": {
+      "all": {
+        "rows": 233566,
+        "usable": true,
+        "faint_rows": 46714,
+        "p90": 10.721269960042857,
+        "p95": 10.78558833732153
+      },
+      "quiescent": {
+        "rows": 114324,
+        "usable": true,
+        "faint_rows": 22865,
+        "p90": 10.74470561079637,
+        "p95": 10.792913910659372
+      },
+      "starforming": {
+        "rows": 119242,
+        "usable": true,
+        "faint_rows": 23849,
+        "p90": 10.67536731671069,
+        "p95": 10.775541783289512
+      }
+    },
+    "usable": true,
+    "logmass_limit": 10.792913910659372
+  },
+  {
+    "zlo": 0.26,
+    "zhi": 0.27,
+    "populations": {
+      "all": {
+        "rows": 222291,
+        "usable": true,
+        "faint_rows": 44459,
+        "p90": 10.761589513905726,
+        "p95": 10.821736038028657
+      },
+      "quiescent": {
+        "rows": 111555,
+        "usable": true,
+        "faint_rows": 22312,
+        "p90": 10.78650100170176,
+        "p95": 10.83402205451381
+      },
+      "starforming": {
+        "rows": 110736,
+        "usable": true,
+        "faint_rows": 22148,
+        "p90": 10.707125909120599,
+        "p95": 10.805612704198245
+      }
+    },
+    "usable": true,
+    "logmass_limit": 10.83402205451381
+  },
+  {
+    "zlo": 0.27,
+    "zhi": 0.28,
+    "populations": {
+      "all": {
+        "rows": 205933,
+        "usable": true,
+        "faint_rows": 41187,
+        "p90": 10.805033752884562,
+        "p95": 10.863453833606288
+      },
+      "quiescent": {
+        "rows": 105353,
+        "usable": true,
+        "faint_rows": 21071,
+        "p90": 10.830088064145848,
+        "p95": 10.87408140765744
+      },
+      "starforming": {
+        "rows": 100580,
+        "usable": true,
+        "faint_rows": 20116,
+        "p90": 10.752330567849985,
+        "p95": 10.847869888085897
+      }
+    },
+    "usable": true,
+    "logmass_limit": 10.87408140765744
+  },
+  {
+    "zlo": 0.28,
+    "zhi": 0.29,
+    "populations": {
+      "all": {
+        "rows": 189360,
+        "usable": true,
+        "faint_rows": 37872,
+        "p90": 10.846661839451363,
+        "p95": 10.900364588642606
+      },
+      "quiescent": {
+        "rows": 97671,
+        "usable": true,
+        "faint_rows": 19535,
+        "p90": 10.872336325945057,
+        "p95": 10.91460087173454
+      },
+      "starforming": {
+        "rows": 91689,
+        "usable": true,
+        "faint_rows": 18338,
+        "p90": 10.7900343766534,
+        "p95": 10.878964105586332
+      }
+    },
+    "usable": true,
+    "logmass_limit": 10.91460087173454
+  },
+  {
+    "zlo": 0.29,
+    "zhi": 0.3,
+    "populations": {
+      "all": {
+        "rows": 174622,
+        "usable": true,
+        "faint_rows": 34925,
+        "p90": 10.887572769745848,
+        "p95": 10.937337382753292
+      },
+      "quiescent": {
+        "rows": 91475,
+        "usable": true,
+        "faint_rows": 18295,
+        "p90": 10.911485765210896,
+        "p95": 10.950935186562775
+      },
+      "starforming": {
+        "rows": 83147,
+        "usable": true,
+        "faint_rows": 16631,
+        "p90": 10.83214964264084,
+        "p95": 10.918208455659983
+      }
+    },
+    "usable": true,
+    "logmass_limit": 10.950935186562775
+  },
+  {
+    "zlo": 0.3,
+    "zhi": 0.31,
+    "populations": {
+      "all": {
+        "rows": 163162,
+        "usable": true,
+        "faint_rows": 32633,
+        "p90": 10.925441408699154,
+        "p95": 10.97362073647205
+      },
+      "quiescent": {
+        "rows": 86206,
+        "usable": true,
+        "faint_rows": 17242,
+        "p90": 10.94826704441445,
+        "p95": 10.98732694051318
+      },
+      "starforming": {
+        "rows": 76956,
+        "usable": true,
+        "faint_rows": 15392,
+        "p90": 10.870290094817642,
+        "p95": 10.950783230113172
+      }
+    },
+    "usable": true,
+    "logmass_limit": 10.98732694051318
+  },
+  {
+    "zlo": 0.31,
+    "zhi": 0.32,
+    "populations": {
+      "all": {
+        "rows": 151458,
+        "usable": true,
+        "faint_rows": 30292,
+        "p90": 10.963920041843135,
+        "p95": 11.009953798428382
+      },
+      "quiescent": {
+        "rows": 80643,
+        "usable": true,
+        "faint_rows": 16129,
+        "p90": 10.987771346702486,
+        "p95": 11.02481314687736
+      },
+      "starforming": {
+        "rows": 70815,
+        "usable": true,
+        "faint_rows": 14164,
+        "p90": 10.909230761234292,
+        "p95": 10.98414143604381
+      }
+    },
+    "usable": true,
+    "logmass_limit": 11.02481314687736
+  },
+  {
+    "zlo": 0.32,
+    "zhi": 0.33,
+    "populations": {
+      "all": {
+        "rows": 134435,
+        "usable": true,
+        "faint_rows": 26887,
+        "p90": 10.99751016199378,
+        "p95": 11.040819223018943
+      },
+      "quiescent": {
+        "rows": 71554,
+        "usable": true,
+        "faint_rows": 14311,
+        "p90": 11.022055852978784,
+        "p95": 11.055268425093205
+      },
+      "starforming": {
+        "rows": 62881,
+        "usable": true,
+        "faint_rows": 12577,
+        "p90": 10.934982261779012,
+        "p95": 11.011742903831022
+      }
+    },
+    "usable": true,
+    "logmass_limit": 11.055268425093205
+  },
+  {
+    "zlo": 0.33,
+    "zhi": 0.34,
+    "populations": {
+      "all": {
+        "rows": 124516,
+        "usable": true,
+        "faint_rows": 24904,
+        "p90": 11.032379139863268,
+        "p95": 11.071554180982316
+      },
+      "quiescent": {
+        "rows": 66521,
+        "usable": true,
+        "faint_rows": 13306,
+        "p90": 11.057064796913323,
+        "p95": 11.08980311346146
+      },
+      "starforming": {
+        "rows": 57995,
+        "usable": true,
+        "faint_rows": 11599,
+        "p90": 10.966564178667472,
+        "p95": 11.030030692918091
+      }
+    },
+    "usable": true,
+    "logmass_limit": 11.08980311346146
+  },
+  {
+    "zlo": 0.34,
+    "zhi": 0.35,
+    "populations": {
+      "all": {
+        "rows": 109100,
+        "usable": true,
+        "faint_rows": 21820,
+        "p90": 11.067426112384043,
+        "p95": 11.101846365656709
+      },
+      "quiescent": {
+        "rows": 57354,
+        "usable": true,
+        "faint_rows": 11471,
+        "p90": 11.089995493733168,
+        "p95": 11.115602855678228
+      },
+      "starforming": {
+        "rows": 51746,
+        "usable": true,
+        "faint_rows": 10350,
+        "p90": 11.00532182842751,
+        "p95": 11.064294309193896
+      }
+    },
+    "usable": true,
+    "logmass_limit": 11.115602855678228
+  },
+  {
+    "zlo": 0.35,
+    "zhi": 0.36,
+    "populations": {
+      "all": {
+        "rows": 93852,
+        "usable": true,
+        "faint_rows": 18771,
+        "p90": 11.098181974398,
+        "p95": 11.129840153114156
+      },
+      "quiescent": {
+        "rows": 48456,
+        "usable": true,
+        "faint_rows": 9692,
+        "p90": 11.119795875867027,
+        "p95": 11.14569102274447
+      },
+      "starforming": {
+        "rows": 45396,
+        "usable": true,
+        "faint_rows": 9080,
+        "p90": 11.035990031742676,
+        "p95": 11.091478600234177
+      }
+    },
+    "usable": true,
+    "logmass_limit": 11.14569102274447
+  },
+  {
+    "zlo": 0.36,
+    "zhi": 0.37,
+    "populations": {
+      "all": {
+        "rows": 83933,
+        "usable": true,
+        "faint_rows": 16787,
+        "p90": 11.126005790057782,
+        "p95": 11.156368050951988
+      },
+      "quiescent": {
+        "rows": 42929,
+        "usable": true,
+        "faint_rows": 8586,
+        "p90": 11.148168440180452,
+        "p95": 11.170957110035117
+      },
+      "starforming": {
+        "rows": 41004,
+        "usable": true,
+        "faint_rows": 8201,
+        "p90": 11.053496128689886,
+        "p95": 11.107375761695609
+      }
+    },
+    "usable": true,
+    "logmass_limit": 11.170957110035117
+  },
+  {
+    "zlo": 0.37,
+    "zhi": 0.38,
+    "populations": {
+      "all": {
+        "rows": 73248,
+        "usable": true,
+        "faint_rows": 14650,
+        "p90": 11.153099033260798,
+        "p95": 11.181373988172817
+      },
+      "quiescent": {
+        "rows": 37265,
+        "usable": true,
+        "faint_rows": 7453,
+        "p90": 11.17286967607564,
+        "p95": 11.195343458302641
+      },
+      "starforming": {
+        "rows": 35983,
+        "usable": true,
+        "faint_rows": 7197,
+        "p90": 11.080113000464966,
+        "p95": 11.134062572976593
+      }
+    },
+    "usable": true,
+    "logmass_limit": 11.195343458302641
+  },
+  {
+    "zlo": 0.38,
+    "zhi": 0.39,
+    "populations": {
+      "all": {
+        "rows": 61614,
+        "usable": true,
+        "faint_rows": 12323,
+        "p90": 11.180658036107515,
+        "p95": 11.207730165053091
+      },
+      "quiescent": {
+        "rows": 30915,
+        "usable": true,
+        "faint_rows": 6183,
+        "p90": 11.199134830840789,
+        "p95": 11.220457245051799
+      },
+      "starforming": {
+        "rows": 30699,
+        "usable": true,
+        "faint_rows": 6140,
+        "p90": 11.106198942281074,
+        "p95": 11.15437190156147
+      }
+    },
+    "usable": true,
+    "logmass_limit": 11.220457245051799
+  },
+  {
+    "zlo": 0.39,
+    "zhi": 0.4,
+    "populations": {
+      "all": {
+        "rows": 53039,
+        "usable": true,
+        "faint_rows": 10609,
+        "p90": 11.20494140391149,
+        "p95": 11.23120588693637
+      },
+      "quiescent": {
+        "rows": 26304,
+        "usable": true,
+        "faint_rows": 5261,
+        "p90": 11.223558717918714,
+        "p95": 11.243354513500822
+      },
+      "starforming": {
+        "rows": 26735,
+        "usable": true,
+        "faint_rows": 5347,
+        "p90": 11.13224691263139,
+        "p95": 11.180456484114623
+      }
+    },
+    "usable": true,
+    "logmass_limit": 11.243354513500822
+  },
+  {
+    "zlo": 0.4,
+    "zhi": 0.41,
+    "populations": {
+      "all": {
+        "rows": 44374,
+        "usable": true,
+        "faint_rows": 8875,
+        "p90": 11.231607136812153,
+        "p95": 11.258036393763735
+      },
+      "quiescent": {
+        "rows": 21863,
+        "usable": true,
+        "faint_rows": 4373,
+        "p90": 11.248488799583974,
+        "p95": 11.274169433992565
+      },
+      "starforming": {
+        "rows": 22511,
+        "usable": true,
+        "faint_rows": 4503,
+        "p90": 11.158152504954998,
+        "p95": 11.20765957990309
+      }
+    },
+    "usable": true,
+    "logmass_limit": 11.274169433992565
+  },
+  {
+    "zlo": 0.41,
+    "zhi": 0.42,
+    "populations": {
+      "all": {
+        "rows": 37629,
+        "usable": true,
+        "faint_rows": 7526,
+        "p90": 11.252165353100551,
+        "p95": 11.28256213696946
+      },
+      "quiescent": {
+        "rows": 18129,
+        "usable": true,
+        "faint_rows": 3626,
+        "p90": 11.273906696214981,
+        "p95": 11.306505760878304
+      },
+      "starforming": {
+        "rows": 19500,
+        "usable": true,
+        "faint_rows": 3900,
+        "p90": 11.18202690598099,
+        "p95": 11.228225871564852
+      }
+    },
+    "usable": true,
+    "logmass_limit": 11.306505760878304
+  },
+  {
+    "zlo": 0.42,
+    "zhi": 0.43,
+    "populations": {
+      "all": {
+        "rows": 30692,
+        "usable": true,
+        "faint_rows": 6140,
+        "p90": 11.277358876064072,
+        "p95": 11.318123387277211
+      },
+      "quiescent": {
+        "rows": 14369,
+        "usable": true,
+        "faint_rows": 2874,
+        "p90": 11.303991373482496,
+        "p95": 11.336999224473878
+      },
+      "starforming": {
+        "rows": 16323,
+        "usable": true,
+        "faint_rows": 3265,
+        "p90": 11.20437072354482,
+        "p95": 11.24940505745374
+      }
+    },
+    "usable": true,
+    "logmass_limit": 11.336999224473878
+  },
+  {
+    "zlo": 0.43,
+    "zhi": 0.44,
+    "populations": {
+      "all": {
+        "rows": 24420,
+        "usable": true,
+        "faint_rows": 4884,
+        "p90": 11.308468205873277,
+        "p95": 11.35304909958485
+      },
+      "quiescent": {
+        "rows": 11098,
+        "usable": true,
+        "faint_rows": 2220,
+        "p90": 11.340556922529258,
+        "p95": 11.378982573516389
+      },
+      "starforming": {
+        "rows": 13322,
+        "usable": true,
+        "faint_rows": 2665,
+        "p90": 11.228275371253591,
+        "p95": 11.291828013917623
+      }
+    },
+    "usable": true,
+    "logmass_limit": 11.378982573516389
+  },
+  {
+    "zlo": 0.44,
+    "zhi": 0.45,
+    "populations": {
+      "all": {
+        "rows": 19606,
+        "usable": true,
+        "faint_rows": 3922,
+        "p90": 11.342888062379885,
+        "p95": 11.381365818734238
+      },
+      "quiescent": {
+        "rows": 8501,
+        "usable": true,
+        "faint_rows": 1701,
+        "p90": 11.380625036377342,
+        "p95": 11.408876837888153
+      },
+      "starforming": {
+        "rows": 11105,
+        "usable": true,
+        "faint_rows": 2221,
+        "p90": 11.249577571019007,
+        "p95": 11.30289482708798
+      }
+    },
+    "usable": true,
+    "logmass_limit": 11.408876837888153
+  },
+  {
+    "zlo": 0.45,
+    "zhi": 0.46,
+    "populations": {
+      "all": {
+        "rows": 16047,
+        "usable": true,
+        "faint_rows": 3210,
+        "p90": 11.361544414932865,
+        "p95": 11.396780283014117
+      },
+      "quiescent": {
+        "rows": 7089,
+        "usable": true,
+        "faint_rows": 1418,
+        "p90": 11.393432447484184,
+        "p95": 11.422281313193904
+      },
+      "starforming": {
+        "rows": 8958,
+        "usable": true,
+        "faint_rows": 1792,
+        "p90": 11.261988153860225,
+        "p95": 11.32372961413542
+      }
+    },
+    "usable": true,
+    "logmass_limit": 11.422281313193904
+  },
+  {
+    "zlo": 0.46,
+    "zhi": 0.47,
+    "populations": {
+      "all": {
+        "rows": 12173,
+        "usable": true,
+        "faint_rows": 2435,
+        "p90": 11.389117378781688,
+        "p95": 11.423365589922998
+      },
+      "quiescent": {
+        "rows": 5286,
+        "usable": true,
+        "faint_rows": 1058,
+        "p90": 11.417776000238426,
+        "p95": 11.44452939120869
+      },
+      "starforming": {
+        "rows": 6887,
+        "usable": true,
+        "faint_rows": 1378,
+        "p90": 11.253375787957221,
+        "p95": 11.32144755459473
+      }
+    },
+    "usable": true,
+    "logmass_limit": 11.44452939120869
+  },
+  {
+    "zlo": 0.47,
+    "zhi": 0.48,
+    "populations": {
+      "all": {
+        "rows": 9846,
+        "usable": true,
+        "faint_rows": 1970,
+        "p90": 11.418822004506483,
+        "p95": 11.446610820365676
+      },
+      "quiescent": {
+        "rows": 4424,
+        "usable": true,
+        "faint_rows": 885,
+        "p90": 11.450429401981639,
+        "p95": 11.473736186378517
+      },
+      "starforming": {
+        "rows": 5422,
+        "usable": true,
+        "faint_rows": 1085,
+        "p90": 11.282555020036853,
+        "p95": 11.35658600579274
+      }
+    },
+    "usable": true,
+    "logmass_limit": 11.473736186378517
+  },
+  {
+    "zlo": 0.48,
+    "zhi": 0.49,
+    "populations": {
+      "all": {
+        "rows": 8202,
+        "usable": true,
+        "faint_rows": 1641,
+        "p90": 11.452453600847564,
+        "p95": 11.479931488674909
+      },
+      "quiescent": {
+        "rows": 3743,
+        "usable": true,
+        "faint_rows": 749,
+        "p90": 11.48102416813145,
+        "p95": 11.50303485434881
+      },
+      "starforming": {
+        "rows": 4459,
+        "usable": true,
+        "faint_rows": 892,
+        "p90": 11.314067576914972,
+        "p95": 11.417026439079773
+      }
+    },
+    "usable": true,
+    "logmass_limit": 11.50303485434881
+  },
+  {
+    "zlo": 0.49,
+    "zhi": 0.5,
+    "populations": {
+      "all": {
+        "rows": 6192,
+        "usable": true,
+        "faint_rows": 1239,
+        "p90": 11.47798718988326,
+        "p95": 11.505445316650261
+      },
+      "quiescent": {
+        "rows": 2869,
+        "usable": true,
+        "faint_rows": 574,
+        "p90": 11.510495605521962,
+        "p95": 11.529114711273541
+      },
+      "starforming": {
+        "rows": 3323,
+        "usable": true,
+        "faint_rows": 665,
+        "p90": 11.31742139635754,
+        "p95": 11.414948067878202
+      }
+    },
+    "usable": true,
+    "logmass_limit": 11.529114711273541
+  },
+  {
+    "zlo": 0.5,
+    "zhi": 0.51,
+    "populations": {
+      "all": {
+        "rows": 4766,
+        "usable": true,
+        "faint_rows": 954,
+        "p90": 11.51278370562795,
+        "p95": 11.538725710703902
+      },
+      "quiescent": {
+        "rows": 2369,
+        "usable": true,
+        "faint_rows": 474,
+        "p90": 11.539951506012045,
+        "p95": 11.558851939481647
+      },
+      "starforming": {
+        "rows": 2397,
+        "usable": true,
+        "faint_rows": 480,
+        "p90": 11.340269976169983,
+        "p95": 11.406527852040576
+      }
+    },
+    "usable": true,
+    "logmass_limit": 11.558851939481647
+  },
+  {
+    "zlo": 0.51,
+    "zhi": 0.52,
+    "populations": {
+      "all": {
+        "rows": 3814,
+        "usable": true,
+        "faint_rows": 763,
+        "p90": 11.551854385215274,
+        "p95": 11.577166116314878
+      },
+      "quiescent": {
+        "rows": 1871,
+        "usable": true,
+        "faint_rows": 375,
+        "p90": 11.576892195761655,
+        "p95": 11.598608276531461
+      },
+      "starforming": {
+        "rows": 1943,
+        "usable": true,
+        "faint_rows": 389,
+        "p90": 11.34991977646734,
+        "p95": 11.439403103268624
+      }
+    },
+    "usable": true,
+    "logmass_limit": 11.598608276531461
+  },
+  {
+    "zlo": 0.52,
+    "zhi": 0.53,
+    "populations": {
+      "all": {
+        "rows": 2975,
+        "usable": true,
+        "faint_rows": 595,
+        "p90": 11.583987721588649,
+        "p95": 11.610681745672464
+      },
+      "quiescent": {
+        "rows": 1485,
+        "usable": true,
+        "faint_rows": 297,
+        "p90": 11.61024189666939,
+        "p95": 11.623291848718964
+      },
+      "starforming": {
+        "rows": 1490,
+        "usable": true,
+        "faint_rows": 298,
+        "p90": 11.336343724803626,
+        "p95": 11.442114087302853
+      }
+    },
+    "usable": true,
+    "logmass_limit": 11.623291848718964
+  },
+  {
+    "zlo": 0.53,
+    "zhi": 0.54,
+    "populations": {
+      "all": {
+        "rows": 2617,
+        "usable": true,
+        "faint_rows": 524,
+        "p90": 11.620632835028193,
+        "p95": 11.644899514559674
+      },
+      "quiescent": {
+        "rows": 1300,
+        "usable": true,
+        "faint_rows": 260,
+        "p90": 11.644364836613107,
+        "p95": 11.656128041002525
+      },
+      "starforming": {
+        "rows": 1317,
+        "usable": true,
+        "faint_rows": 264,
+        "p90": 11.351276831109658,
+        "p95": 11.465930442587938
+      }
+    },
+    "usable": true,
+    "logmass_limit": 11.656128041002525
+  },
+  {
+    "zlo": 0.54,
+    "zhi": 0.55,
+    "populations": {
+      "all": {
+        "rows": 2225,
+        "usable": true,
+        "faint_rows": 445,
+        "p90": 11.64885037489166,
+        "p95": 11.668782810323473
+      },
+      "quiescent": {
+        "rows": 1014,
+        "usable": true,
+        "faint_rows": 203,
+        "p90": 11.668782810323473,
+        "p95": 11.683626698426401
+      },
+      "starforming": {
+        "rows": 1211,
+        "usable": true,
+        "faint_rows": 243,
+        "p90": 11.421864221972456,
+        "p95": 11.544058374861919
+      }
+    },
+    "usable": true,
+    "logmass_limit": 11.683626698426401
+  }
+]

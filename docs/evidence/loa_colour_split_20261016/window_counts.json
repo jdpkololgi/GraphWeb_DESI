@@ -1,0 +1,106 @@
+{
+  "windows": {
+    "z020030": {
+      "zhi": 0.3,
+      "logmass": 10.96,
+      "mass_msun": 91201083935.59116,
+      "rows": 611197,
+      "counts": {
+        "red": 532770,
+        "blue": 375
+      },
+      "hard_counts": {
+        "red": [
+          93257,
+          230087,
+          180328,
+          29098
+        ],
+        "blue": [
+          83,
+          165,
+          113,
+          14
+        ]
+      },
+      "adequate_counts": false
+    },
+    "z020025": {
+      "zhi": 0.25,
+      "logmass": 10.77,
+      "mass_msun": 58884365535.55884,
+      "rows": 510838,
+      "counts": {
+        "red": 506893,
+        "blue": 1805
+      },
+      "hard_counts": {
+        "red": [
+          92982,
+          217559,
+          168125,
+          28227
+        ],
+        "blue": [
+          463,
+          793,
+          485,
+          64
+        ]
+      },
+      "adequate_counts": false
+    },
+    "z020023": {
+      "zhi": 0.23,
+      "logmass": 10.73,
+      "mass_msun": 53703179637.02533,
+      "rows": 329370,
+      "counts": {
+        "red": 327096,
+        "blue": 1904
+      },
+      "hard_counts": {
+        "red": [
+          60987,
+          138785,
+          108865,
+          18459
+        ],
+        "blue": [
+          505,
+          814,
+          517,
+          68
+        ]
+      },
+      "adequate_counts": false
+    },
+    "z020022": {
+      "zhi": 0.22,
+      "logmass": 10.69,
+      "mass_msun": 48977881936.84457,
+      "rows": 232024,
+      "counts": {
+        "red": 229932,
+        "blue": 1922
+      },
+      "hard_counts": {
+        "red": [
+          43483,
+          98285,
+          75675,
+          12489
+        ],
+        "blue": [
+          477,
+          863,
+          517,
+          65
+        ]
+      },
+      "adequate_counts": false
+    }
+  },
+  "chosen": null,
+  "rule": "Smallest tested zmax >=.22 with >=20000 each colour and >=100 each hard class per colour; chosen without property outcomes"
+}

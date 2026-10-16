@@ -1,0 +1,582 @@
+{
+  "document": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/environment_gap_three_tests_20261015/environment_gap_three_tests.html",
+  "document_sha256": "f64daf0a926fe4a988ad66ab5bf7b9707f6998beb2233042010da18a71522eed",
+  "document_bytes": 28761734,
+  "assets": [
+    {
+      "path": "/global/u2/d/dkololgi/GraphWeb_DESI/docs/figures/environment_gap_three_tests_20261015/test1_ground_truth.png",
+      "sha256": "a7f9ce754fa2d770284ff3b683255a4f5502626c7ca75bb57725529f993de9be",
+      "kind": "figure"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/loa_actual_gat_overlay_20261015/legacy_targetfit_soft_controlled_quenched.png",
+      "sha256": "b4092451b4e2b1f9242f81563064900dc02e49ab3683b4912e1a1bbf4fefab4b",
+      "kind": "figure"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/GraphWeb_DESI/docs/figures/environment_gap_three_tests_20261015/test3_uncertainty.png",
+      "sha256": "0e74971735dc92f039d63828fb132c027787c89b29eb44073fd683e8969aedd9",
+      "kind": "figure"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/TNG/Illustris/docs/tng_density_control_20261015.md",
+      "sha256": "6880478f20575d732a64e64ee6ed2c87b1d9154b3bb0fe0a94c38b148e9d2b64",
+      "kind": "source_report"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/tng_density_control_20261015/tng_density_control.png",
+      "sha256": "47f19cb29a22aa53110c6ca12c5470e7b4db9ae61ea2be14a118a9eec6a5b10d",
+      "kind": "figure"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/tng_density_control_20261015/tng_density_control.pdf",
+      "sha256": "37cf2bdafafe15243f84efa715ddc95b37e6a16026f6f8c01df4d14cdc8f80b7",
+      "kind": "pdf"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/tng_density_control_20261015/RESULTS.json",
+      "sha256": "591563a7600b916bcbfcba0af0ac19c49eb7e0353d0b4c7c81bf6f6a0f865b1f",
+      "kind": "numeric_receipt"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/tng_density_control_20261015/VALIDATION.json",
+      "sha256": "9a94a13e0340fe96d7cdc0f5d894f6a7a7950174e1d61e754f5896f86dbbeecf",
+      "kind": "numeric_receipt"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/GraphWeb_DESI/docs/loa_actual_gat_overlay_20261015.md",
+      "sha256": "910056640786f06f8135bfbe84251da01735c2fa8fbb77aecb1305b972c385ff",
+      "kind": "source_report"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/TNG/Illustris/docs/legacy_gat_density_20261015.md",
+      "sha256": "e86c635e514030d34d71c620d9af6bd3b6925c89df92cb41360d820a51c57b09",
+      "kind": "source_report"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/GraphWeb_DESI/docs/loa_tng_abacus_overlay_20261015.md",
+      "sha256": "fce3258a5eed6037092e9dc9a0271ad6d4074cf6b7f695d973cdc251266a45b9",
+      "kind": "source_report"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/GraphWeb_DESI/docs/loa_selection_sensitivity_20261015.md",
+      "sha256": "0687163c029099cc382813592cb1229ec2f01f902e029dda25bface5d62f86f4",
+      "kind": "source_report"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/loa_actual_gat_overlay_20261015/frozen_hard_controlled_quenched.png",
+      "sha256": "c63b00351ca4d7207bead0c87d78f785f3095eb321b4a7190a9bac2f836ed795",
+      "kind": "figure"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/loa_actual_gat_overlay_20261015/frozen_hard_raw_quenched.png",
+      "sha256": "ea670c155beb930a6a46b3ebbdbd0b30254fe42e218b7459a7e1129b1dd23e94",
+      "kind": "figure"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/loa_actual_gat_overlay_20261015/frozen_soft_controlled_quenched.png",
+      "sha256": "b7161713ee4658a2fac6a032fa5aef8c624e2bdf7193160572cb3a0fbe0f032a",
+      "kind": "figure"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/loa_actual_gat_overlay_20261015/frozen_soft_raw_quenched.png",
+      "sha256": "2ea6ad2b3bb6d29b55eb8978694930e1710aaea3b7879927fd16965353dc0809",
+      "kind": "figure"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/loa_actual_gat_overlay_20261015/legacy_targetfit_hard_controlled_quenched.png",
+      "sha256": "1ba931a81b96fb52ade50008e7b0a4daee22218a0e5ee4eeed40bc39a711df87",
+      "kind": "figure"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/loa_actual_gat_overlay_20261015/legacy_targetfit_hard_raw_quenched.png",
+      "sha256": "2417fdef17b8ad9089f26afaec1adc9b0f6bdce3ec5cc7a1e9100a2653508c1f",
+      "kind": "figure"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/loa_actual_gat_overlay_20261015/legacy_targetfit_soft_raw_quenched.png",
+      "sha256": "3253728f164e9e0d402b6929d80c2ed2ace4ca6b9414be7aa2ce3d835b2318b5",
+      "kind": "figure"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/loa_actual_gat_overlay_20261015/actual_GAT_Abacus_overlays.pdf",
+      "sha256": "64360830720c256885e4d755c723386f1c8e0fb7d318975afc4e3cfab4c4916f",
+      "kind": "pdf"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/loa_actual_gat_overlay_20261015/RESULTS.json",
+      "sha256": "c4b14e8be09a29583ce87ea19839b00626dabc78a1ba4fdeb6411756b7f130f6",
+      "kind": "numeric_receipt"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/loa_actual_gat_overlay_20261015/VALIDATION.json",
+      "sha256": "7e6c5a3fe4cd26c549abcd163a69a09779dceee7e92d052d9bc5aaae51d8f964",
+      "kind": "numeric_receipt"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/loa_actual_gat_overlay_20261015/REPORT.md",
+      "sha256": "910056640786f06f8135bfbe84251da01735c2fa8fbb77aecb1305b972c385ff",
+      "kind": "source_report"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/loa_tng_abacus_overlay_20261015/class_occupancy.png",
+      "sha256": "7f54e0c340f3e9002c78a78772d461f87dc1d64c55cbd026951c4aebd22e485c",
+      "kind": "figure"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/loa_tng_abacus_overlay_20261015/class_raw.png",
+      "sha256": "f677da106e8defaf3bb447732649424305cf189418f6c7a951fd9ec0db488e6e",
+      "kind": "figure"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/loa_tng_abacus_overlay_20261015/class_soft_abacus.png",
+      "sha256": "906f9abf86a2d054daf90719fce8c1b431934ae1af6b4cab72fc9357e2880edc",
+      "kind": "figure"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/loa_tng_abacus_overlay_20261015/rank_controlled.png",
+      "sha256": "f619da5910c5653fdfd7ec48eba22e01dfad4ed46240ad4fc403086acb07184f",
+      "kind": "figure"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/loa_tng_abacus_overlay_20261015/rank_raw.png",
+      "sha256": "011cff28ddcd749e216b5b16070c27f0ad45a28a953cb02f73d7565f4d8451f3",
+      "kind": "figure"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/loa_tng_abacus_overlay_20261015/summary_class_raw.png",
+      "sha256": "7580d174bac201b1b2333465e4919ea5ffdfe3f23fae56cccf488cad3fccf155",
+      "kind": "figure"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/loa_tng_abacus_overlay_20261015/summary_class_soft_abacus.png",
+      "sha256": "2d5448981da653628548a7d48e5e26a5a2fc1e6aa4d73be34287f10525012c79",
+      "kind": "figure"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/loa_tng_abacus_overlay_20261015/summary_rank_controlled.png",
+      "sha256": "9f5b6097b278b3059e8a2242651b2bf0a9ae7d9c7f5585724025f08dc5132cb4",
+      "kind": "figure"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/loa_tng_abacus_overlay_20261015/LOA_TNG_Abacus_comparison.pdf",
+      "sha256": "80d3b0b891dc1f46a70ff31d8fc3f337b813fe21f6fbd1513904754ebd021f4a",
+      "kind": "pdf"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/loa_tng_abacus_overlay_20261015/class_occupancy.pdf",
+      "sha256": "9f62baff37773f5be6c32c9ba5f57afe38da0caa435ee627140829693af51387",
+      "kind": "pdf"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/loa_tng_abacus_overlay_20261015/class_raw.pdf",
+      "sha256": "70429478dae5b7b1392b6da8b9eb497280f38206984a721577742a4dad554e85",
+      "kind": "pdf"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/loa_tng_abacus_overlay_20261015/class_soft_abacus.pdf",
+      "sha256": "c06325cb226dd1ddb6bb6c5184e5dbf3236441e9accc8a387b5df34dc31f6c88",
+      "kind": "pdf"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/loa_tng_abacus_overlay_20261015/rank_controlled.pdf",
+      "sha256": "766205fdd43708011d9431e887272868989f6e7faf27f93e738d677814302ba6",
+      "kind": "pdf"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/loa_tng_abacus_overlay_20261015/rank_raw.pdf",
+      "sha256": "05504b0eb7fba0ec18aa3b0b777faeb464acd3416ed7bdc0b07b66c646239647",
+      "kind": "pdf"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/loa_tng_abacus_overlay_20261015/summary_class_raw.pdf",
+      "sha256": "7141cdb4462f1da8ffdc48e09e74c826219770f5b980603b20aabe9da870ce24",
+      "kind": "pdf"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/loa_tng_abacus_overlay_20261015/summary_class_soft_abacus.pdf",
+      "sha256": "463534256f6f95a54f65730945580eeeaee5634ed7a1dcd86e0910f435cf5a2f",
+      "kind": "pdf"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/loa_tng_abacus_overlay_20261015/summary_rank_controlled.pdf",
+      "sha256": "267391fb76004d2d78b1dd2df92af5b112817f399cc4ef22f2dbe2d8b9554402",
+      "kind": "pdf"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/loa_tng_abacus_overlay_20261015/RESULTS.json",
+      "sha256": "082f5de8c06e098d10c5fdc088e1dfd33e522985471717c0d02902bb5d2095a9",
+      "kind": "numeric_receipt"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/loa_tng_abacus_overlay_20261015/VALIDATION.json",
+      "sha256": "8d331593440611324e2734881383126df1d8337fc89906e11e4c2e7355f75bf7",
+      "kind": "numeric_receipt"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/loa_selection_sensitivity_20261015/class_raw_quenched.png",
+      "sha256": "60aaa03c0d3c102d5531a7717fe8009110b9d210e33954b816d4f73c73448742",
+      "kind": "figure"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/loa_selection_sensitivity_20261015/class_raw_ssfr.png",
+      "sha256": "59b7025ed38648b5a8363d4239e77e3ce56e9519e8eb7a6020242284bfa919ce",
+      "kind": "figure"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/loa_selection_sensitivity_20261015/rank_controlled_quenched.png",
+      "sha256": "afbbddc0cc89afb0aab67cd70405dba464087ccd79a38e61dde79bf334632e25",
+      "kind": "figure"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/loa_selection_sensitivity_20261015/rank_controlled_ssfr.png",
+      "sha256": "e46d4bc8e0e67599e8b4529103a6bb3a312dfb3d245c163fac5910fb6697f8dc",
+      "kind": "figure"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/loa_selection_sensitivity_20261015/rank_raw_quenched.png",
+      "sha256": "c8d8ef232c268e9d162514a9fa0c85378127668f79010876e98a74a7f32ae0d6",
+      "kind": "figure"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/loa_selection_sensitivity_20261015/rank_raw_ssfr.png",
+      "sha256": "d336214c0e5c793d15c4ac4bd5a0a01b1de5ddb8239102be89ffc617815bb55a",
+      "kind": "figure"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/loa_selection_sensitivity_20261015/selection_overlays.pdf",
+      "sha256": "8e28857e9c19d33e79cf48a483181444b2b49fcdc9dd781e7e6dd27e90270d56",
+      "kind": "pdf"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/loa_selection_sensitivity_20261015/RESULTS.json",
+      "sha256": "1e8d6f72d600926373609a8554620739fe75c17e8962b271b047fbebb1173bb2",
+      "kind": "numeric_receipt"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/legacy_gat_density_20261015/VALIDATION.json",
+      "sha256": "d54513e817f7ef669107b7fcd1f84140e502f89a9df6557502c29fabde399416",
+      "kind": "numeric_receipt"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/legacy_gat_density_20261015/REPORT.md",
+      "sha256": "e86c635e514030d34d71c620d9af6bd3b6925c89df92cb41360d820a51c57b09",
+      "kind": "source_report"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/GraphWeb_DESI/docs/legacy_gat_comparison_20261014.md",
+      "sha256": "b0b6b5b39a5d3813a6def91c86d37cb9cf38d4cfff4924c38abca85f33b88a2d",
+      "kind": "source_report"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/legacy_gat_comparison_20261014/cigale_mass_ssfr_distributions.png",
+      "sha256": "3f27042a612731058d172c6b3e7aa2173a4b45b18e66c3551f58731856cb7b7c",
+      "kind": "figure"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/legacy_gat_comparison_20261014/cigale_properties_controlled.png",
+      "sha256": "9fcee82ba5dd4ba77a30e8af6d4259e17f91022c1b52afb6a4c77fa83406d09a",
+      "kind": "figure"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/legacy_gat_comparison_20261014/cigale_properties_raw_same_rows.png",
+      "sha256": "898f6c24c2345c2954fc21bb506f6a9eb04ab0a445b2b7655563b90edb926356",
+      "kind": "figure"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/legacy_gat_comparison_20261014/completeness_notebook_saved.png",
+      "sha256": "7e65736102875632490aa8a804b70113a28571a5ff9f564e99c32c60ce2847e6",
+      "kind": "figure"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/legacy_gat_comparison_20261014/legacy_cigale_colour_mass.png",
+      "sha256": "ccfeb779df7ef37d3d81228270a31f8dc33c1fb6246b5924c22109640dc86a7f",
+      "kind": "figure"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/legacy_gat_comparison_20261014/legacy_colour_mass.png",
+      "sha256": "093192a9976765f72ce916271ae0e2b9d91b7ea0dfcd4b2c4804fb0fe7362420",
+      "kind": "figure"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/legacy_gat_comparison_20261014/legacy_rest_colour_mass.png",
+      "sha256": "60bad1be54754eba2b25c4a5ef87ca7bfdc4c0ab4a4c0558db5fa148661ec59a",
+      "kind": "figure"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/legacy_gat_comparison_20261014/selection_and_weighting_check.png",
+      "sha256": "8652bb48ddc90f9a348e62262c8eebcbac0a585d03c79cd4edafbf9e02726573",
+      "kind": "figure"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/legacy_gat_comparison_20261014/cigale_mass_ssfr_distributions.pdf",
+      "sha256": "701314592b9cb54f2f002ea4423b8c7436a804e83ebef514cf61c985201749f1",
+      "kind": "pdf"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/legacy_gat_comparison_20261014/cigale_properties_controlled.pdf",
+      "sha256": "8afb5cdfafd8913e28e16ae460e1a99e54e02a625b03587ec0aff5f397fe0662",
+      "kind": "pdf"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/legacy_gat_comparison_20261014/cigale_properties_raw_same_rows.pdf",
+      "sha256": "5253d50257cc8918655cb6bfdc5dd7e683dc5ca98bfa16ad7cf03062861eda00",
+      "kind": "pdf"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/legacy_gat_comparison_20261014/legacy_cigale_colour_mass.pdf",
+      "sha256": "a76f7a1303fa09cc9ebb41e51a7b746e87b8202f9ba0ba9b0ca8b79668c0d955",
+      "kind": "pdf"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/legacy_gat_comparison_20261014/legacy_colour_mass.pdf",
+      "sha256": "7a59d81c232d791b10a3b371cfdf3068d06279df21e5c177f34712996632d2b2",
+      "kind": "pdf"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/legacy_gat_comparison_20261014/legacy_rest_colour_mass.pdf",
+      "sha256": "24f6a761ce41581d47ca400802c2586935487fe9c6814c76f1194d6bae134d2e",
+      "kind": "pdf"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/legacy_gat_comparison_20261014/selection_and_weighting_check.pdf",
+      "sha256": "7b03164297873d6fcf09f17a4be171bd4cbb59633b0980419524369ebc7d7de0",
+      "kind": "pdf"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/legacy_gat_comparison_20261014/REPORT.md",
+      "sha256": "6b43b9bc04bd67edc0b9aff132a0c2639f49dcfc13acbef0902df19489a8cf2b",
+      "kind": "source_report"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/p12a_cg5_check_20261014/cg5_vs_cg15.png",
+      "sha256": "522fb4236204148f18c3dd670bc3d06413ba15a1d73783b4e5da6508d2cd064b",
+      "kind": "figure"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/p12a_cg5_check_20261014/cg5_vs_cg15.pdf",
+      "sha256": "1c25f5ea70f38ca4946b23139d36102bdd9d91c2080672f3ac5c9066457b8e21",
+      "kind": "pdf"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/p12a_cg5_check_20261014/RESULTS.json",
+      "sha256": "efc29ed53fcafcb74e53bbc672713c934a78713336db521c6a4b00c04f2e354b",
+      "kind": "numeric_receipt"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/TNG/Illustris/docs/tracer_density_causality_20261015.md",
+      "sha256": "6045094a34fa287937745d0250cfee6f2d3d50b1f1a785f9cbc2fd499e829656",
+      "kind": "source_report"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/GraphWeb_DESI/docs/raw_environment_checks_20261014.md",
+      "sha256": "4315444816e411c580668b7ee09f58ac6f8eb30f8cfc035c9495885d2d91eca7",
+      "kind": "source_report"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/GraphWeb_DESI/docs/density_property_checks_20261014.md",
+      "sha256": "d7a383046324e079d93b56457151d70336bef300c4cdf924a043199a606c847d",
+      "kind": "source_report"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/abacus_density_followup_20261015/RESULTS.json",
+      "sha256": "c43f4522930a5e1dc9057064d0c893cf1dca59d500fd19cdd007c6d417858786",
+      "kind": "numeric_receipt"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/abacus_density_followup_20261015/REPORT.md",
+      "sha256": "4832fa6e0ff62ce43017ef8ce69acf7266fba09d4d76d02e8935f2e6c1b03315",
+      "kind": "source_report"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/raw_environment_checks_20261014/concentration_properties.png",
+      "sha256": "4f99d850c095d9f4fd3720851786998d6256a8438b20b74fabb6a85d47453da7",
+      "kind": "figure"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/raw_environment_checks_20261014/geometry_comparison.png",
+      "sha256": "8ae8e272ff3594712e74f82d9aac29a7b5cbaa35a91cccece15678f9ee3419e6",
+      "kind": "figure"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/raw_environment_checks_20261014/geometry_fixed_density.png",
+      "sha256": "d197bf94825113dd022b882cf11e26bfc336b59c76bbfc75d5b16a134ec2b565",
+      "kind": "figure"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/raw_environment_checks_20261014/local_density_comparison.png",
+      "sha256": "234e03ca518dd2bd481f88888203b856eb0b4929ebd2c7202afa7d299a89e432",
+      "kind": "figure"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/raw_environment_checks_20261014/multiscale_density_comparison.png",
+      "sha256": "44eca5b8c3d67acf864b0570f040634ded90def81e38088e2efd2af4d6b1ae7f",
+      "kind": "figure"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/raw_environment_checks_20261014/n1_properties.png",
+      "sha256": "3e04bb776fde6a2ce270a8fe231da87a718f99315e55e0af51ef7b435a682284",
+      "kind": "figure"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/raw_environment_checks_20261014/n2_properties.png",
+      "sha256": "c5216d3ba88326a27bb4b1137d9d37017e7be5e296870c2b00d2d98d10b62920",
+      "kind": "figure"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/raw_environment_checks_20261014/n4_properties.png",
+      "sha256": "aa8003353668ac9ef61951ef9951e39f236b91d5a2440dc261829bee9db7df70",
+      "kind": "figure"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/raw_environment_checks_20261014/n7_properties.png",
+      "sha256": "6c08f0c4479b68df3347dbd1b55f725616d797420aa8ef0a52dc263ac3f0cecb",
+      "kind": "figure"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/raw_environment_checks_20261014/q3_properties.png",
+      "sha256": "0cef905ed051b87c85feb2325b71e440ce2984fd60ad199e87266b9ea52008fe",
+      "kind": "figure"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/raw_environment_checks_20261014/qsky_properties.png",
+      "sha256": "e5beb8ee2ee3d4d9e5d85cff6d6d010af14bfb60673966c07d899daa12d1d668",
+      "kind": "figure"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/raw_environment_checks_20261014/sigma5_properties.png",
+      "sha256": "ab70cfa5ccd3cd511019ddb2d80d700ffc95021fc6adaa9a697e029785e893af",
+      "kind": "figure"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/raw_environment_checks_20261014/concentration_properties.pdf",
+      "sha256": "87bb6b062595bce1bd7c157c765cc5cc6a0a87989f591f7d612674f58eec1167",
+      "kind": "pdf"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/raw_environment_checks_20261014/geometry_comparison.pdf",
+      "sha256": "27349c2f45ce6b84d69c8d6fc85c95762e046197d3ebdb1d4263e1a2ef1a310f",
+      "kind": "pdf"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/raw_environment_checks_20261014/geometry_fixed_density.pdf",
+      "sha256": "15aabe71650cbae96a7a1806a04693702e54e3d4bb83c581564811c9f75afc4a",
+      "kind": "pdf"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/raw_environment_checks_20261014/local_density_comparison.pdf",
+      "sha256": "3e0da02ca67514b435c1ad4e4116a95b1582721bf7ce0ed6c8d2dd5cb9a09ed4",
+      "kind": "pdf"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/raw_environment_checks_20261014/multiscale_density_comparison.pdf",
+      "sha256": "73713626d275d4e4621eadb9fdaffa68ea582e0ddb9686dc6921ffb50387326c",
+      "kind": "pdf"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/raw_environment_checks_20261014/n1_properties.pdf",
+      "sha256": "c1ab2c89a0d4e4fb427e02bcfc8af8dc7cf19487e87123a85b95076c0f5ec93f",
+      "kind": "pdf"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/raw_environment_checks_20261014/n2_properties.pdf",
+      "sha256": "19997f06c803aa5dbe58ea9183261547a098874f78af3c6308c75a47bcbe082c",
+      "kind": "pdf"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/raw_environment_checks_20261014/n4_properties.pdf",
+      "sha256": "44c06fa03862a1908423cbe5047fefcb616904908e9af8e6dda70983191a9457",
+      "kind": "pdf"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/raw_environment_checks_20261014/n7_properties.pdf",
+      "sha256": "fbaf12fea1b94a4b8a2b7ddf1cc49b9be1722a89e6a973a314947236b1277ed4",
+      "kind": "pdf"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/raw_environment_checks_20261014/q3_properties.pdf",
+      "sha256": "f4f30a7ee2262e9f6b3861aa0bee2295f83e3d078219f4249a9081c4447490f0",
+      "kind": "pdf"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/raw_environment_checks_20261014/qsky_properties.pdf",
+      "sha256": "c81fdda79cd8e86c5667d78206978a8f76f8dd3c2aaa765119ba4065509de224",
+      "kind": "pdf"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/raw_environment_checks_20261014/sigma5_properties.pdf",
+      "sha256": "fd3e1ba7ee81e199e2d90745ba1ad6e41ac9b6c8bfa7613657a9a0b79c100838",
+      "kind": "pdf"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/density_checks_20261014/eigenvalue_geometry.png",
+      "sha256": "9fc3fbdb72f4e1b6edd3c15487b79e9911dab21b03a5bb2787fa9012e46c9438",
+      "kind": "figure"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/density_checks_20261014/environment_comparison.png",
+      "sha256": "413bcb40e5f37b66230132bfaedddd3e047895e9ffcdad734f8a3d98fc71cffb",
+      "kind": "figure"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/density_checks_20261014/point_density_properties.png",
+      "sha256": "7a8c271fe4a7b0a1cb0b968ed77eeb1737f0f08d9280e884750e712443a39cac",
+      "kind": "figure"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/density_checks_20261014/eigenvalue_geometry.pdf",
+      "sha256": "b9f3023841751ddd1737e744958aaf285cf75b600bba065c0d1d75155876e667",
+      "kind": "pdf"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/density_checks_20261014/environment_comparison.pdf",
+      "sha256": "ffda3a1dd5eee79021028ba59e648f32d284e4c6d251550b511daf4b62486987",
+      "kind": "pdf"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/density_checks_20261014/point_density_properties.pdf",
+      "sha256": "6969a7df814fd07a69b767ccdd1d9d79fadaa074e8f9f0d01a2e320d564265b3",
+      "kind": "pdf"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/GraphWeb_DESI/docs/legacy_gat_sequential_tests_20261014.md",
+      "sha256": "9f202769167b44e2695f77da4a40ce1beec95426e5e14ffc55f68814e6f845cf",
+      "kind": "source_report"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/legacy_selection_tests_20261014/REPORT.md",
+      "sha256": "4d1f88e4b5f5ebe7425394a60d2fe13157593786e7244f40ecb2dbfdb1d0a585",
+      "kind": "source_report"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/legacy_selection_tests_20261014/RESULTS.json",
+      "sha256": "30478cd982faf28547b7e050b29c1aea30941f993a5af10bed9d64bdcb1be94f",
+      "kind": "numeric_receipt"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/legacy_selection_tests_20261014/VALIDATION.json",
+      "sha256": "0169bcf5b95ee3ed5b87a416097b5e5650a9c4b2abc2c252be7127e3b9e77391",
+      "kind": "numeric_receipt"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/GraphWeb_DESI/docs/figures/environment_gap_three_tests_20261015/VALIDATION.json",
+      "sha256": "69f267ac5e0a7a71d7d9b311731a0710525d78d31fc67d4a810c2e0628db3cf3",
+      "kind": "new_receipt"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/GraphWeb_DESI/docs/figures/environment_gap_three_tests_20261015/extraction.json",
+      "sha256": "06fe954915f7a48ea0ad8072e39c9063d77bc825693f7713c7e747a2ba09f756",
+      "kind": "new_receipt"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/GraphWeb_DESI/docs/figures/environment_gap_three_tests_20261015/test1.json",
+      "sha256": "84df2567e9f21cdc47c91203b135409f10046a99e11d032cbeef15e84cba9e2b",
+      "kind": "new_receipt"
+    },
+    {
+      "path": "/global/u2/d/dkololgi/GraphWeb_DESI/docs/figures/environment_gap_three_tests_20261015/test3.json",
+      "sha256": "79c2c51431f8350e65b2aeb094a077a82d7696d46f0ecc098902696a6a2980cc",
+      "kind": "new_receipt"
+    }
+  ]
+}

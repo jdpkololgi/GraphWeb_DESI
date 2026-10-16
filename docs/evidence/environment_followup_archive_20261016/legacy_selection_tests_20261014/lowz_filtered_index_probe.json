@@ -1,0 +1,31 @@
+{
+  "source": "/global/cfs/cdirs/desi/cosmosim/SecondGenMocks/AbacusSummit/CutSky/BGS/v0.1/z0.200/cutsky_BGS_z0.200_AbacusSummit_base_c000_ph000.fits",
+  "halo_source": "/global/cfs/cdirs/desi/public/cosmosim/AbacusSummit/AbacusSummit_base_c000_ph000/halos/z0.200/halo_info/halo_info_001.asdf",
+  "records": [
+    {
+      "cleaned": false,
+      "halo_rows": 11405762,
+      "filtered_rows": 1402279,
+      "sample_rows": 12000,
+      "inbounds": 12000,
+      "radius_hmpc": 461.082767975708,
+      "Omega_M": 0.315192,
+      "h": 0.6736,
+      "fraction_mass_within_1pct": 0.005333333333333333,
+      "median_ratio": 0.4861111203800299
+    },
+    {
+      "cleaned": true,
+      "halo_rows": 11405762,
+      "filtered_rows": 1332067,
+      "sample_rows": 12000,
+      "inbounds": 12000,
+      "radius_hmpc": 461.082767975708,
+      "Omega_M": 0.315192,
+      "h": 0.6736,
+      "fraction_mass_within_1pct": 0.0055,
+      "median_ratio": 0.4660605659300675
+    }
+  ],
+  "scope": "One slab and sampled resolved low-z rows. Mass/radius cuts reconstructed from public template, not certified production mapping. No catalogue modifications."
+}

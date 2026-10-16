@@ -1,0 +1,13 @@
+{
+  "unique_integer_ids": true,
+  "all_legacy_predictions_and_coordinates_exactly_preserved": true,
+  "fresh_source_row_checks": 128,
+  "source_properties_exact": true,
+  "position_redshift_checks_pass": true,
+  "old_vac_hash_unchanged": true,
+  "common_mass_independent_groupby_max_error": 3.552713678800501e-15,
+  "common_mass_retained_rows": {
+    "GAT": 63373,
+    "P12-A": 74816
+  }
+}

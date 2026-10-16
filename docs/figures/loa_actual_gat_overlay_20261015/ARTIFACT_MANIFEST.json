@@ -1,0 +1,74 @@
+{
+  "files": [
+    {
+      "name": "REPORT.md",
+      "bytes": 8011,
+      "sha256": "910056640786f06f8135bfbe84251da01735c2fa8fbb77aecb1305b972c385ff"
+    },
+    {
+      "name": "RESULTS.json",
+      "bytes": 1572032,
+      "sha256": "c4b14e8be09a29583ce87ea19839b00626dabc78a1ba4fdeb6411756b7f130f6"
+    },
+    {
+      "name": "VALIDATION.json",
+      "bytes": 499,
+      "sha256": "7e6c5a3fe4cd26c549abcd163a69a09779dceee7e92d052d9bc5aaae51d8f964"
+    },
+    {
+      "name": "actual_GAT_Abacus_overlays.pdf",
+      "bytes": 504584,
+      "sha256": "64360830720c256885e4d755c723386f1c8e0fb7d318975afc4e3cfab4c4916f"
+    },
+    {
+      "name": "curves.csv",
+      "bytes": 627484,
+      "sha256": "a995603d405216fed537ebe95983cf4dd9a07114f6b6eda30de7357ac7700daf"
+    },
+    {
+      "name": "frozen_hard_controlled_quenched.png",
+      "bytes": 147947,
+      "sha256": "c63b00351ca4d7207bead0c87d78f785f3095eb321b4a7190a9bac2f836ed795"
+    },
+    {
+      "name": "frozen_hard_raw_quenched.png",
+      "bytes": 242227,
+      "sha256": "ea670c155beb930a6a46b3ebbdbd0b30254fe42e218b7459a7e1129b1dd23e94"
+    },
+    {
+      "name": "frozen_soft_controlled_quenched.png",
+      "bytes": 148107,
+      "sha256": "b7161713ee4658a2fac6a032fa5aef8c624e2bdf7193160572cb3a0fbe0f032a"
+    },
+    {
+      "name": "frozen_soft_raw_quenched.png",
+      "bytes": 250991,
+      "sha256": "2ea6ad2b3bb6d29b55eb8978694930e1710aaea3b7879927fd16965353dc0809"
+    },
+    {
+      "name": "legacy_targetfit_hard_controlled_quenched.png",
+      "bytes": 258786,
+      "sha256": "1ba931a81b96fb52ade50008e7b0a4daee22218a0e5ee4eeed40bc39a711df87"
+    },
+    {
+      "name": "legacy_targetfit_hard_raw_quenched.png",
+      "bytes": 248132,
+      "sha256": "2417fdef17b8ad9089f26afaec1adc9b0f6bdce3ec5cc7a1e9100a2653508c1f"
+    },
+    {
+      "name": "legacy_targetfit_soft_controlled_quenched.png",
+      "bytes": 219372,
+      "sha256": "b4092451b4e2b1f9242f81563064900dc02e49ab3683b4912e1a1bbf4fefab4b"
+    },
+    {
+      "name": "legacy_targetfit_soft_raw_quenched.png",
+      "bytes": 232086,
+      "sha256": "3253728f164e9e0d402b6929d80c2ed2ace4ca6b9414be7aa2ce3d835b2318b5"
+    },
+    {
+      "name": "loa_actual_gat_overlay_20261015.py",
+      "bytes": 11563,
+      "sha256": "784a671797bd5291c078891fceee6de4da370a85c7987649e1227352faebf07f"
+    }
+  ]
+}

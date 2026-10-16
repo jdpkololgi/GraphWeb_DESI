@@ -1,0 +1,656 @@
+[
+  {
+    "path": "legacy_gat_comparison_20261014/selection_and_weighting_check.png",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/legacy_gat_comparison_20261014/selection_and_weighting_check.png",
+    "bytes": 115417,
+    "sha256": "8652bb48ddc90f9a348e62262c8eebcbac0a585d03c79cd4edafbf9e02726573"
+  },
+  {
+    "path": "legacy_gat_comparison_20261014/completeness_image_provenance.json",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/legacy_gat_comparison_20261014/completeness_image_provenance.json",
+    "bytes": 405,
+    "sha256": "99d7bb159477e4186ebd1efda565e912e66bb267384bf5fe4662d649da8096b7"
+  },
+  {
+    "path": "legacy_gat_comparison_20261014/selection_and_weighting_check.pdf",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/legacy_gat_comparison_20261014/selection_and_weighting_check.pdf",
+    "bytes": 36506,
+    "sha256": "7b03164297873d6fcf09f17a4be171bd4cbb59633b0980419524369ebc7d7de0"
+  },
+  {
+    "path": "legacy_gat_comparison_20261014/audit.json",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/legacy_gat_comparison_20261014/audit.json",
+    "bytes": 4712,
+    "sha256": "f46f2203e5579a87883ea2a9ab988e91468e694881f1a54659dd4ca360de5852"
+  },
+  {
+    "path": "legacy_gat_comparison_20261014/join.json",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/legacy_gat_comparison_20261014/join.json",
+    "bytes": 759,
+    "sha256": "708ec778be69dde4176ea48a0cae46e3c10b6f3b0a8b677938ffc75a1662634f"
+  },
+  {
+    "path": "legacy_gat_comparison_20261014/common_mass_check.json",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/legacy_gat_comparison_20261014/common_mass_check.json",
+    "bytes": 4178,
+    "sha256": "1d9812a09b50d012ca0c9bc931a4c2c68f5c084718f5e737883d1639b445c9c0"
+  },
+  {
+    "path": "legacy_gat_comparison_20261014/legacy_colour_mass.png",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/legacy_gat_comparison_20261014/legacy_colour_mass.png",
+    "bytes": 206590,
+    "sha256": "093192a9976765f72ce916271ae0e2b9d91b7ea0dfcd4b2c4804fb0fe7362420"
+  },
+  {
+    "path": "legacy_gat_comparison_20261014/cigale_mass_ssfr_distributions.pdf",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/legacy_gat_comparison_20261014/cigale_mass_ssfr_distributions.pdf",
+    "bytes": 525351,
+    "sha256": "701314592b9cb54f2f002ea4423b8c7436a804e83ebef514cf61c985201749f1"
+  },
+  {
+    "path": "legacy_gat_comparison_20261014/cigale_properties_raw_same_rows.pdf",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/legacy_gat_comparison_20261014/cigale_properties_raw_same_rows.pdf",
+    "bytes": 50083,
+    "sha256": "5253d50257cc8918655cb6bfdc5dd7e683dc5ca98bfa16ad7cf03062861eda00"
+  },
+  {
+    "path": "legacy_gat_comparison_20261014/selection_check.json",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/legacy_gat_comparison_20261014/selection_check.json",
+    "bytes": 335,
+    "sha256": "e85aa583a24949ad0c2095cc24ade79c5676924f5391f96ba32bc2bc3da22b60"
+  },
+  {
+    "path": "legacy_gat_comparison_20261014/ARTIFACT_SHA256.json",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/legacy_gat_comparison_20261014/ARTIFACT_SHA256.json",
+    "bytes": 3045,
+    "sha256": "d806cccbb9c3fdc7f798780ac27dcfe9dd7417465c557694176e1692fdea187b"
+  },
+  {
+    "path": "legacy_gat_comparison_20261014/ordering_audit.json",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/legacy_gat_comparison_20261014/ordering_audit.json",
+    "bytes": 2693,
+    "sha256": "35106ef97c3326075234257f8c63b9764d0bced2f11c81c7075d6d1f4cf3b0af"
+  },
+  {
+    "path": "legacy_gat_comparison_20261014/completeness_notebook_saved.png",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/legacy_gat_comparison_20261014/completeness_notebook_saved.png",
+    "bytes": 524291,
+    "sha256": "7e65736102875632490aa8a804b70113a28571a5ff9f564e99c32c60ce2847e6"
+  },
+  {
+    "path": "legacy_gat_comparison_20261014/cigale_properties_raw_same_rows.png",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/legacy_gat_comparison_20261014/cigale_properties_raw_same_rows.png",
+    "bytes": 278252,
+    "sha256": "898f6c24c2345c2954fc21bb506f6a9eb04ab0a445b2b7655563b90edb926356"
+  },
+  {
+    "path": "legacy_gat_comparison_20261014/cigale_properties_controlled.pdf",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/legacy_gat_comparison_20261014/cigale_properties_controlled.pdf",
+    "bytes": 51919,
+    "sha256": "8afb5cdfafd8913e28e16ae460e1a99e54e02a625b03587ec0aff5f397fe0662"
+  },
+  {
+    "path": "legacy_gat_comparison_20261014/validation.json",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/legacy_gat_comparison_20261014/validation.json",
+    "bytes": 390,
+    "sha256": "8472a72fa85ed6b324d81c1e5694737ff3f6234eeb3c235ad129453171db7348"
+  },
+  {
+    "path": "legacy_gat_comparison_20261014/cigale_properties_controlled.png",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/legacy_gat_comparison_20261014/cigale_properties_controlled.png",
+    "bytes": 271983,
+    "sha256": "9fcee82ba5dd4ba77a30e8af6d4259e17f91022c1b52afb6a4c77fa83406d09a"
+  },
+  {
+    "path": "legacy_gat_comparison_20261014/legacy_cigale_colour_mass.png",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/legacy_gat_comparison_20261014/legacy_cigale_colour_mass.png",
+    "bytes": 203134,
+    "sha256": "ccfeb779df7ef37d3d81228270a31f8dc33c1fb6246b5924c22109640dc86a7f"
+  },
+  {
+    "path": "legacy_gat_comparison_20261014/legacy_cigale_colour_mass.pdf",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/legacy_gat_comparison_20261014/legacy_cigale_colour_mass.pdf",
+    "bytes": 244051,
+    "sha256": "a76f7a1303fa09cc9ebb41e51a7b746e87b8202f9ba0ba9b0ca8b79668c0d955"
+  },
+  {
+    "path": "legacy_gat_comparison_20261014/legacy_colour_mass.pdf",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/legacy_gat_comparison_20261014/legacy_colour_mass.pdf",
+    "bytes": 243845,
+    "sha256": "7a59d81c232d791b10a3b371cfdf3068d06279df21e5c177f34712996632d2b2"
+  },
+  {
+    "path": "legacy_gat_comparison_20261014/legacy_rest_colour_mass.pdf",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/legacy_gat_comparison_20261014/legacy_rest_colour_mass.pdf",
+    "bytes": 246714,
+    "sha256": "24f6a761ce41581d47ca400802c2586935487fe9c6814c76f1194d6bae134d2e"
+  },
+  {
+    "path": "legacy_gat_comparison_20261014/cigale_mass_ssfr_distributions.png",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/legacy_gat_comparison_20261014/cigale_mass_ssfr_distributions.png",
+    "bytes": 197921,
+    "sha256": "3f27042a612731058d172c6b3e7aa2173a4b45b18e66c3551f58731856cb7b7c"
+  },
+  {
+    "path": "legacy_gat_comparison_20261014/legacy_rest_colour_mass.png",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/legacy_gat_comparison_20261014/legacy_rest_colour_mass.png",
+    "bytes": 218283,
+    "sha256": "60bad1be54754eba2b25c4a5ef87ca7bfdc4c0ab4a4c0558db5fa148661ec59a"
+  },
+  {
+    "path": "legacy_gat_comparison_20261014/REPORT.md",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/legacy_gat_comparison_20261014/REPORT.md",
+    "bytes": 17508,
+    "sha256": "6b43b9bc04bd67edc0b9aff132a0c2639f49dcfc13acbef0902df19489a8cf2b"
+  },
+  {
+    "path": "legacy_gat_comparison_20261014/comparison.json",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/legacy_gat_comparison_20261014/comparison.json",
+    "bytes": 99622,
+    "sha256": "4ce7611cdd087a0a9fd188489e1c39d2bd939cfed410e557a0623c8ec46d4142"
+  },
+  {
+    "path": "legacy_gat_comparison_20261014/legacy_colour_control.json",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/legacy_gat_comparison_20261014/legacy_colour_control.json",
+    "bytes": 667,
+    "sha256": "263ebe1269163660ceb96d566efac7479c1392ede757b20f872f61f7e2f876e3"
+  },
+  {
+    "path": "legacy_selection_tests_20261014/label_scale.json",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/legacy_selection_tests_20261014/label_scale.json",
+    "bytes": 2427,
+    "sha256": "c25eab9c22812597525ae6c07ecc7adda03af7b9b296ee7509411e29e421a779"
+  },
+  {
+    "path": "legacy_selection_tests_20261014/training_label_parity.json",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/legacy_selection_tests_20261014/training_label_parity.json",
+    "bytes": 678,
+    "sha256": "89d8154fdbabe15187c89721155ec819a507b205d8ea0e1730941db6b7dd2ef6"
+  },
+  {
+    "path": "legacy_selection_tests_20261014/lowz_filtered_index_probe.json",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/legacy_selection_tests_20261014/lowz_filtered_index_probe.json",
+    "bytes": 1139,
+    "sha256": "6547a3177417204270ca8fd802351474e71141c5aec927d600aaddf526d28760"
+  },
+  {
+    "path": "legacy_selection_tests_20261014/PREPARATION.json",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/legacy_selection_tests_20261014/PREPARATION.json",
+    "bytes": 11424,
+    "sha256": "62b78609dde3c23d2c40ad8e755ab2fc7a54e62aa8410af611702c8fbc73032f"
+  },
+  {
+    "path": "legacy_selection_tests_20261014/RESULTS.json",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/legacy_selection_tests_20261014/RESULTS.json",
+    "bytes": 173937,
+    "sha256": "30478cd982faf28547b7e050b29c1aea30941f993a5af10bed9d64bdcb1be94f"
+  },
+  {
+    "path": "legacy_selection_tests_20261014/lowz_product_probe.json",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/legacy_selection_tests_20261014/lowz_product_probe.json",
+    "bytes": 4832,
+    "sha256": "04852358556c3e4e6e1213ccd1090686a93b0c3321535f3c8fd44a4d9eb0d823"
+  },
+  {
+    "path": "legacy_selection_tests_20261014/p12a_mock_choice_20260928.md",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/legacy_selection_tests_20261014/p12a_mock_choice_20260928.md",
+    "bytes": 6066,
+    "sha256": "64db843b94367df5153ee1695b5287e99a49389bbc89ae39ad8ea4c33c3541ee"
+  },
+  {
+    "path": "legacy_selection_tests_20261014/checkpoint_replay.json",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/legacy_selection_tests_20261014/checkpoint_replay.json",
+    "bytes": 3347,
+    "sha256": "3ae1132d6cddbcc0776234f5d9d085029476ea4dbb4605a1dbde7e9045eecf41"
+  },
+  {
+    "path": "legacy_selection_tests_20261014/VALIDATION.json",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/legacy_selection_tests_20261014/VALIDATION.json",
+    "bytes": 1796,
+    "sha256": "0169bcf5b95ee3ed5b87a416097b5e5650a9c4b2abc2c252be7127e3b9e77391"
+  },
+  {
+    "path": "legacy_selection_tests_20261014/old_density_scale.json",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/legacy_selection_tests_20261014/old_density_scale.json",
+    "bytes": 1559,
+    "sha256": "9697d64e5f1cf53424a6351894ffe4d298d21c6b784126fedeed9d404e3de8b9"
+  },
+  {
+    "path": "legacy_selection_tests_20261014/tracer_thinning.json",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/legacy_selection_tests_20261014/tracer_thinning.json",
+    "bytes": 8875,
+    "sha256": "a61615975f0ba743966ff15ec5577f9b46d8ac55e60ba323984ff4aca7bdeec4"
+  },
+  {
+    "path": "legacy_selection_tests_20261014/p12a_alignment_execution_results_20260926.md",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/legacy_selection_tests_20261014/p12a_alignment_execution_results_20260926.md",
+    "bytes": 14030,
+    "sha256": "89714ace9914c9f40a1f6bcd7314ea6ce5e7257a76e01727fe189734d7849432"
+  },
+  {
+    "path": "legacy_selection_tests_20261014/REPORT.md",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/legacy_selection_tests_20261014/REPORT.md",
+    "bytes": 33483,
+    "sha256": "4d1f88e4b5f5ebe7425394a60d2fe13157593786e7244f40ecb2dbfdb1d0a585"
+  },
+  {
+    "path": "legacy_selection_tests_20261014/MANIFEST.json",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/legacy_selection_tests_20261014/MANIFEST.json",
+    "bytes": 5670,
+    "sha256": "8d6262634c5c2b47113bcb84bc730089619ad8d02a2f22726e42c57888d36d73"
+  },
+  {
+    "path": "p12a_cg5_check_20261014/RESULTS.json",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/p12a_cg5_check_20261014/RESULTS.json",
+    "bytes": 135743,
+    "sha256": "efc29ed53fcafcb74e53bbc672713c934a78713336db521c6a4b00c04f2e354b"
+  },
+  {
+    "path": "p12a_cg5_check_20261014/cg5_vs_cg15.pdf",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/p12a_cg5_check_20261014/cg5_vs_cg15.pdf",
+    "bytes": 52839,
+    "sha256": "1c25f5ea70f38ca4946b23139d36102bdd9d91c2080672f3ac5c9066457b8e21"
+  },
+  {
+    "path": "p12a_cg5_check_20261014/cg5_vs_cg15.png",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/p12a_cg5_check_20261014/cg5_vs_cg15.png",
+    "bytes": 310269,
+    "sha256": "522fb4236204148f18c3dd670bc3d06413ba15a1d73783b4e5da6508d2cd064b"
+  },
+  {
+    "path": "p12a_cg5_check_20261014/README.md",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/p12a_cg5_check_20261014/README.md",
+    "bytes": 1917,
+    "sha256": "a4ceddc3ebdfd674a02f8d880beae19c94b9744c370ea42064d3aa20ca8c0d60"
+  },
+  {
+    "path": "abacus_density_followup_20261015/RESULTS.json",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/abacus_density_followup_20261015/RESULTS.json",
+    "bytes": 68078,
+    "sha256": "c43f4522930a5e1dc9057064d0c893cf1dca59d500fd19cdd007c6d417858786"
+  },
+  {
+    "path": "abacus_density_followup_20261015/count_trace_density_probe_20261015.py",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/abacus_density_followup_20261015/count_trace_density_probe_20261015.py",
+    "bytes": 5670,
+    "sha256": "26e55d424b872742b37059f2357cdc5d99057052fb9a49372cb5a754cf69de76"
+  },
+  {
+    "path": "abacus_density_followup_20261015/REPORT.md",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/abacus_density_followup_20261015/REPORT.md",
+    "bytes": 10638,
+    "sha256": "4832fa6e0ff62ce43017ef8ce69acf7266fba09d4d76d02e8935f2e6c1b03315"
+  },
+  {
+    "path": "abacus_density_followup_20261015/multitracer_mt4_decision.json",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/abacus_density_followup_20261015/multitracer_mt4_decision.json",
+    "bytes": 2856,
+    "sha256": "67d96a2fe8a827ace0731699087dd6dd111179389bc53eaa86f01c22237dfffe"
+  },
+  {
+    "path": "abacus_density_followup_20261015/MANIFEST.json",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/abacus_density_followup_20261015/MANIFEST.json",
+    "bytes": 801,
+    "sha256": "7a46f445815f064cd455236ae45d5c6910456bf16bd1511644c4892de4e1d2a2"
+  },
+  {
+    "path": "environment_gap_three_tests_20261015/environment_gap_three_tests.html",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/environment_gap_three_tests_20261015/environment_gap_three_tests.html",
+    "bytes": 28761734,
+    "sha256": "f64daf0a926fe4a988ad66ab5bf7b9707f6998beb2233042010da18a71522eed"
+  },
+  {
+    "path": "loa_mass_redshift_completeness_20261015/completeness_curves.csv",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/loa_mass_redshift_completeness_20261015/completeness_curves.csv",
+    "bytes": 13442,
+    "sha256": "2588e1ca37cd58afcf9e1c162119351e4b9f43204ba2bdb10724813360c9449b"
+  },
+  {
+    "path": "loa_mass_redshift_completeness_20261015/loa_mass_z_property_wedge.png",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/loa_mass_redshift_completeness_20261015/loa_mass_z_property_wedge.png",
+    "bytes": 264512,
+    "sha256": "98b6e79c093710fd3c1fecd79a75c8ebcd49e65582d5b615639a9d598d3fafd6"
+  },
+  {
+    "path": "loa_mass_redshift_completeness_20261015/selection_conventions_full_footprint.pdf",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/loa_mass_redshift_completeness_20261015/selection_conventions_full_footprint.pdf",
+    "bytes": 69365,
+    "sha256": "bc035a6817880c54b594ea12cbcbad9593ec0193d253f929d5a44836abe531d2"
+  },
+  {
+    "path": "loa_mass_redshift_completeness_20261015/RESULTS.json",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/loa_mass_redshift_completeness_20261015/RESULTS.json",
+    "bytes": 36866,
+    "sha256": "f3b9c6e0f302cf8f42cd9aa577dfef8927f2f0d54af9792ceb47c344f5955229"
+  },
+  {
+    "path": "loa_mass_redshift_completeness_20261015/loa_mass_z_full_footprint.pdf",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/loa_mass_redshift_completeness_20261015/loa_mass_z_full_footprint.pdf",
+    "bytes": 72933,
+    "sha256": "a868d7f198186546b4528c2e59cf16711d3b57e0306faad780a7ab8a8bcd47a0"
+  },
+  {
+    "path": "loa_mass_redshift_completeness_20261015/selection_conventions_full_footprint.png",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/loa_mass_redshift_completeness_20261015/selection_conventions_full_footprint.png",
+    "bytes": 242167,
+    "sha256": "eb623b913e632881602ab7feb59fb72e9dcd0e2b4591d17dd413a044cf2739ab"
+  },
+  {
+    "path": "loa_mass_redshift_completeness_20261015/VALIDATION.json",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/loa_mass_redshift_completeness_20261015/VALIDATION.json",
+    "bytes": 641,
+    "sha256": "786b8fb4c13b3c6187dff8cc5f3607870a0ac7b92b109e24283f10046a95b944"
+  },
+  {
+    "path": "loa_mass_redshift_completeness_20261015/selection_conventions_property_wedge.png",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/loa_mass_redshift_completeness_20261015/selection_conventions_property_wedge.png",
+    "bytes": 213665,
+    "sha256": "b6989f300de1095e0321f8df9adc7c3758e474f997e148c5fcb6918b1b3dd5e8"
+  },
+  {
+    "path": "loa_mass_redshift_completeness_20261015/selection_conventions_property_wedge.pdf",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/loa_mass_redshift_completeness_20261015/selection_conventions_property_wedge.pdf",
+    "bytes": 55105,
+    "sha256": "0a20522cf74156dbe0ede26524c4b71f21ad2d3861d5e436cbba214b2fbe5ed6"
+  },
+  {
+    "path": "loa_mass_redshift_completeness_20261015/MANIFEST.json",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/loa_mass_redshift_completeness_20261015/MANIFEST.json",
+    "bytes": 1346,
+    "sha256": "5e3a51b3ae0890af2f080dd06c5241dd73d10f35b1f557f9fdab7f5578cfd8e8"
+  },
+  {
+    "path": "loa_mass_redshift_completeness_20261015/loa_mass_z_full_footprint.png",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/loa_mass_redshift_completeness_20261015/loa_mass_z_full_footprint.png",
+    "bytes": 277422,
+    "sha256": "c4ade900dfb032e3c5b1d9ed5ce20d0e4f17a620fcbe18b40f91589342f07c0a"
+  },
+  {
+    "path": "loa_mass_redshift_completeness_20261015/loa_mass_z_property_wedge.pdf",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/loa_mass_redshift_completeness_20261015/loa_mass_z_property_wedge.pdf",
+    "bytes": 58063,
+    "sha256": "d57a2b6295625d45e07a4a52ab12389eea871e11db3f58f8e7cbe552905c0180"
+  },
+  {
+    "path": "loa_selection_sensitivity_20261015/rank_controlled_ssfr.png",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/loa_selection_sensitivity_20261015/rank_controlled_ssfr.png",
+    "bytes": 253817,
+    "sha256": "e46d4bc8e0e67599e8b4529103a6bb3a312dfb3d245c163fac5910fb6697f8dc"
+  },
+  {
+    "path": "loa_selection_sensitivity_20261015/rank_raw_ssfr.png",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/loa_selection_sensitivity_20261015/rank_raw_ssfr.png",
+    "bytes": 277644,
+    "sha256": "d336214c0e5c793d15c4ac4bd5a0a01b1de5ddb8239102be89ffc617815bb55a"
+  },
+  {
+    "path": "loa_selection_sensitivity_20261015/RESULTS.json",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/loa_selection_sensitivity_20261015/RESULTS.json",
+    "bytes": 1169205,
+    "sha256": "1e8d6f72d600926373609a8554620739fe75c17e8962b271b047fbebb1173bb2"
+  },
+  {
+    "path": "loa_selection_sensitivity_20261015/rank_controlled_quenched.png",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/loa_selection_sensitivity_20261015/rank_controlled_quenched.png",
+    "bytes": 236138,
+    "sha256": "afbbddc0cc89afb0aab67cd70405dba464087ccd79a38e61dde79bf334632e25"
+  },
+  {
+    "path": "loa_selection_sensitivity_20261015/rank_raw_quenched.png",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/loa_selection_sensitivity_20261015/rank_raw_quenched.png",
+    "bytes": 250896,
+    "sha256": "c8d8ef232c268e9d162514a9fa0c85378127668f79010876e98a74a7f32ae0d6"
+  },
+  {
+    "path": "loa_selection_sensitivity_20261015/selection_overlays.pdf",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/loa_selection_sensitivity_20261015/selection_overlays.pdf",
+    "bytes": 577183,
+    "sha256": "8e28857e9c19d33e79cf48a483181444b2b49fcdc9dd781e7e6dd27e90270d56"
+  },
+  {
+    "path": "loa_selection_sensitivity_20261015/class_raw_ssfr.png",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/loa_selection_sensitivity_20261015/class_raw_ssfr.png",
+    "bytes": 306171,
+    "sha256": "59b7025ed38648b5a8363d4239e77e3ce56e9519e8eb7a6020242284bfa919ce"
+  },
+  {
+    "path": "loa_selection_sensitivity_20261015/class_raw_quenched.png",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/loa_selection_sensitivity_20261015/class_raw_quenched.png",
+    "bytes": 270312,
+    "sha256": "60aaa03c0d3c102d5531a7717fe8009110b9d210e33954b816d4f73c73448742"
+  },
+  {
+    "path": "supervisor_environment_figures_20261015/tng_truth_prediction_ssfr.png",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/supervisor_environment_figures_20261015/tng_truth_prediction_ssfr.png",
+    "bytes": 274705,
+    "sha256": "79f5aca42d5ff45afd70c20803e78d52879c03b35a4c38a51e134d37e4502b1d"
+  },
+  {
+    "path": "supervisor_environment_figures_20261015/tng_truth_prediction_colour.png",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/supervisor_environment_figures_20261015/tng_truth_prediction_colour.png",
+    "bytes": 262450,
+    "sha256": "7a9db4e05c87a008ed81615b12b8587aba1e79dc92648b4513db67a9071683ea"
+  },
+  {
+    "path": "supervisor_environment_figures_20261015/RESULTS.json",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/supervisor_environment_figures_20261015/RESULTS.json",
+    "bytes": 31066,
+    "sha256": "34a05953c3ae496133fb54f5a9d3ce2db61988b8ffd46d69fb7727220cffb98d"
+  },
+  {
+    "path": "supervisor_environment_figures_20261015/tng_contrast_summary.png",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/supervisor_environment_figures_20261015/tng_contrast_summary.png",
+    "bytes": 140592,
+    "sha256": "135e925577068da9920b54c046688ecb3506d157eb4ee06b73dfee3d58e26529"
+  },
+  {
+    "path": "supervisor_environment_figures_20261015/tng_truth_prediction_colour.pdf",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/supervisor_environment_figures_20261015/tng_truth_prediction_colour.pdf",
+    "bytes": 29983,
+    "sha256": "11f4d667cb1ecd5113bba426d1abd5356ba822c774b24c20a5ae0c72333b0571"
+  },
+  {
+    "path": "supervisor_environment_figures_20261015/tng_contrast_summary.pdf",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/supervisor_environment_figures_20261015/tng_contrast_summary.pdf",
+    "bytes": 20321,
+    "sha256": "6d1d11e99390e68bff528e6fefa907738063ed2625173070ab3acb6eefe22fa1"
+  },
+  {
+    "path": "supervisor_environment_figures_20261015/loa_all_properties_raw.png",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/supervisor_environment_figures_20261015/loa_all_properties_raw.png",
+    "bytes": 313997,
+    "sha256": "a4a55a9e5e8b388c428e4b5be07b47e4e32b0a09465aa30db467135c31ef92da"
+  },
+  {
+    "path": "supervisor_environment_figures_20261015/loa_completeness_explanation.png",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/supervisor_environment_figures_20261015/loa_completeness_explanation.png",
+    "bytes": 259114,
+    "sha256": "a219024494a2ab24725a9769557b68ae556eeccffbb2b788123364174b94c9f1"
+  },
+  {
+    "path": "supervisor_environment_figures_20261015/loa_completeness_explanation.pdf",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/supervisor_environment_figures_20261015/loa_completeness_explanation.pdf",
+    "bytes": 26026,
+    "sha256": "102f2f87de930758bb37375be6b411bc0957b49dae546f03e690b23112285eec"
+  },
+  {
+    "path": "supervisor_environment_figures_20261015/tng_truth_prediction_ssfr.pdf",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/supervisor_environment_figures_20261015/tng_truth_prediction_ssfr.pdf",
+    "bytes": 31112,
+    "sha256": "4601c87ca92ac83caeac7e346b8bbc053de3fed63dadb194f5b87864521cf136"
+  },
+  {
+    "path": "supervisor_environment_figures_20261015/tng_truth_prediction_quenched.pdf",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/supervisor_environment_figures_20261015/tng_truth_prediction_quenched.pdf",
+    "bytes": 29432,
+    "sha256": "40beffd9db8f086f77c2265a0be712d45a5e8554df36b96f457442a7c44659af"
+  },
+  {
+    "path": "supervisor_environment_figures_20261015/tng_truth_prediction_quenched.png",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/supervisor_environment_figures_20261015/tng_truth_prediction_quenched.png",
+    "bytes": 258308,
+    "sha256": "ddbae9596cfd4a0c1231a2402da2384fe2dd85f0ea2173fbfae5444f3ad05998"
+  },
+  {
+    "path": "supervisor_environment_figures_20261015/MANIFEST.json",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/supervisor_environment_figures_20261015/MANIFEST.json",
+    "bytes": 2392,
+    "sha256": "161984c5aab3942377e66fb981e049f751f63a4f04b57ebc8877034234d38380"
+  },
+  {
+    "path": "supervisor_environment_figures_20261015/loa_all_properties_raw.pdf",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/supervisor_environment_figures_20261015/loa_all_properties_raw.pdf",
+    "bytes": 26257,
+    "sha256": "dc23aa9fee29dfb8e91425c0046a51d20d9628bed02d47310d73fbf09149cf1e"
+  },
+  {
+    "path": "tng_loa_quenched_overlay_20261015/R7_tng_loa_overlay.png",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/tng_loa_quenched_overlay_20261015/R7_tng_loa_overlay.png",
+    "bytes": 272286,
+    "sha256": "1d5d14c621045c5e71a6abefd77ac12199236200292b31422fbea4d40430ac91"
+  },
+  {
+    "path": "tng_loa_quenched_overlay_20261015/curves.csv",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/tng_loa_quenched_overlay_20261015/curves.csv",
+    "bytes": 12785,
+    "sha256": "611ef42442e192acd266023cd317bf5b5f9433d3ca6a5f4477b383e292390a9c"
+  },
+  {
+    "path": "tng_loa_quenched_overlay_20261015/RESULTS.json",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/tng_loa_quenched_overlay_20261015/RESULTS.json",
+    "bytes": 34252,
+    "sha256": "ed1f99dcf46e0a137ccb03100e209fa573d67d6b171fcf4c7a363ea61123ed7e"
+  },
+  {
+    "path": "tng_loa_quenched_overlay_20261015/R7_tng_loa_overlay.pdf",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/tng_loa_quenched_overlay_20261015/R7_tng_loa_overlay.pdf",
+    "bytes": 30221,
+    "sha256": "0a45987f970c272ea05efdf9683a0c163ce9b567f213361e4141f2d3f04d74ac"
+  },
+  {
+    "path": "tng_loa_quenched_overlay_20261015/R2_tng_loa_overlay.pdf",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/tng_loa_quenched_overlay_20261015/R2_tng_loa_overlay.pdf",
+    "bytes": 30262,
+    "sha256": "f8e2003ab4892940daa437b394fe1a24886c85fff44fc1f02e7a286857bd2e6b"
+  },
+  {
+    "path": "tng_loa_quenched_overlay_20261015/R2_tng_loa_overlay.png",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/tng_loa_quenched_overlay_20261015/R2_tng_loa_overlay.png",
+    "bytes": 269980,
+    "sha256": "dc34a33200231220512900896eed03002547f52be1fc37f3129a9cb33a082aa7"
+  },
+  {
+    "path": "tng_loa_quenched_overlay_20261015/MANIFEST.json",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/tng_loa_quenched_overlay_20261015/MANIFEST.json",
+    "bytes": 556,
+    "sha256": "97d5cc05c97d35ae828183245ba9034d8e1c87c5238ea0a2e19ec8a68b6602db"
+  },
+  {
+    "path": "tng_bright_selection_20261015/curves.csv",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/tng_bright_selection_20261015/curves.csv",
+    "bytes": 1540,
+    "sha256": "ac8d318d840ca054d3f50c24b71457e948237b5f48598cc3ea69a5dfeef4a01a"
+  },
+  {
+    "path": "tng_bright_selection_20261015/RESULTS.json",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/tng_bright_selection_20261015/RESULTS.json",
+    "bytes": 41818,
+    "sha256": "e4a814997ea4d6d2dbebdcc410bcbc620b47f9a275799e388e13898e31008217"
+  },
+  {
+    "path": "tng_bright_selection_20261015/selection_overlay.png",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/tng_bright_selection_20261015/selection_overlay.png",
+    "bytes": 206302,
+    "sha256": "cffc82bc79c8be714837c9cca23be82369bea56f9494c667e044522aa79c77a5"
+  },
+  {
+    "path": "tng_bright_selection_20261015/photometry_sources.json",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/tng_bright_selection_20261015/photometry_sources.json",
+    "bytes": 102644,
+    "sha256": "7bcb89030173825f55ff69af5146d3b5725ad41e96563038a602680a00bb6a0e"
+  },
+  {
+    "path": "tng_bright_selection_20261015/selection_overlay.pdf",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/tng_bright_selection_20261015/selection_overlay.pdf",
+    "bytes": 28757,
+    "sha256": "b67825b68b5baa410cdcdd943db510bbc3702f2137a212dc349b5fcdc7f37787"
+  },
+  {
+    "path": "tng_bright_selection_20261015/validation.json",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/tng_bright_selection_20261015/validation.json",
+    "bytes": 470,
+    "sha256": "568782795968f02d6a9409b2814b83e0b86337f8cef084af1295d4b949e7487d"
+  },
+  {
+    "path": "tng_bright_refined_20261015/photometry_validation.json",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/tng_bright_refined_20261015/photometry_validation.json",
+    "bytes": 538,
+    "sha256": "0087bba7bc9b0a40d6d41fbe7fa0bae9dc78b584ef2ebba847bf3232236ea4a7"
+  },
+  {
+    "path": "tng_bright_refined_20261015/RESULTS.json",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/tng_bright_refined_20261015/RESULTS.json",
+    "bytes": 133855,
+    "sha256": "814576ab4911afac3209b129a9f390a2bde8dfaebc72cc78dddb9fe14fde42b9"
+  },
+  {
+    "path": "tng_bright_refined_20261015/refined_overlay.png",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/tng_bright_refined_20261015/refined_overlay.png",
+    "bytes": 297534,
+    "sha256": "20916f964fca38bb9d92bd66d21a6cd2f7e290b293cf03d8c61db232761bd8e1"
+  },
+  {
+    "path": "tng_bright_refined_20261015/validation.json",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/tng_bright_refined_20261015/validation.json",
+    "bytes": 2004,
+    "sha256": "eee51969d61321f2420b8de0a56ec3f9192021a6c4a72d14a5855ebae6c26589"
+  },
+  {
+    "path": "tng_bright_refined_20261015/refined_overlay.pdf",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/tng_bright_refined_20261015/refined_overlay.pdf",
+    "bytes": 33471,
+    "sha256": "ca41d89a2250f37204a64844dee018a2767ca100f6483f127029d372048ea628"
+  },
+  {
+    "path": "galaxy_population_dashboard_20261015/aggregation_audit.json",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/galaxy_population_dashboard_20261015/aggregation_audit.json",
+    "bytes": 10103,
+    "sha256": "c53c5b31a8da5bff5e3e52ddd02608d4032a91e887bc016e0dd9cf7726c0e6cb"
+  },
+  {
+    "path": "galaxy_population_dashboard_20261015/BUILD.json",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/galaxy_population_dashboard_20261015/BUILD.json",
+    "bytes": 256,
+    "sha256": "b782085ae268013625f3e66441f66661b2fcf49193cc9c3ba15a63d54830a2e7"
+  },
+  {
+    "path": "galaxy_population_dashboard_20261015/data.json",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/galaxy_population_dashboard_20261015/data.json",
+    "bytes": 162695,
+    "sha256": "8f15ae4caf43202747fa20c97107be99b50112effb77acf6058099b64bb93389"
+  },
+  {
+    "path": "galaxy_population_dashboard_20261015/dashboard.html",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/galaxy_population_dashboard_20261015/dashboard.html",
+    "bytes": 200625,
+    "sha256": "78c50f5bd660a408f8edcb3546c79f84742651eed7369f84e409cd5c92ae6f76"
+  },
+  {
+    "path": "galaxy_population_dashboard_20261015/frontend_validation.json",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/galaxy_population_dashboard_20261015/frontend_validation.json",
+    "bytes": 5162,
+    "sha256": "b5c47e7e05c7f601948bcc0d92b1b59704b52f8a1da54995a93eaf56a1fabbab"
+  },
+  {
+    "path": "galaxy_population_dashboard_20261015/reference_records.json",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/galaxy_population_dashboard_20261015/reference_records.json",
+    "bytes": 1598,
+    "sha256": "bdcc19033d494421e4084cf4b7c6909868cb90ba133ee01491f8ac713c605159"
+  },
+  {
+    "path": "galaxy_population_dashboard_20261015/PAGE.json",
+    "source": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/galaxy_population_dashboard_20261015/PAGE.json",
+    "bytes": 211,
+    "sha256": "15d6ab9ebcdd8ec0fbf9010a6444426db9380785a76485d8617b9db9a6ed78b6"
+  }
+]

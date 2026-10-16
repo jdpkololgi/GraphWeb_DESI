@@ -1,0 +1,18 @@
+{
+  "job_id": "59853892",
+  "node": "nid200058",
+  "account": "desi",
+  "qos": "interactive",
+  "requested_walltime": "01:00:00",
+  "actual_allocation_elapsed": "00:29:55",
+  "allocation_released": true,
+  "allocation_final_state": "CANCELLED by approved cleanup after payload completion",
+  "payload_success": true,
+  "successful_payload_steps": ["59853892.2", "59853892.4", "59853892.5", "59853892.6", "59853892.7", "59853892.8", "59853892.9", "59853892.10", "59853892.11", "59853892.12"],
+  "successful_payload_exit_code": "0:0",
+  "preliminary_scan": "59853892.1 cancelled before outputs to add explicit redshift-quality filtering",
+  "gpu_use": false,
+  "new_inference_or_training": false,
+  "other_jobs_modified": false,
+  "verification": "sacct readback and salloc-session termination; numerical receipts and output checksums are separate"
+}

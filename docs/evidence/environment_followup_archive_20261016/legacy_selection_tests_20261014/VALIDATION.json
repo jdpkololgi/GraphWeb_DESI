@@ -1,0 +1,39 @@
+{
+  "python_syntax": [
+    "/global/homes/d/dkololgi/GraphWeb_DESI/workflows/presentation/legacy_selection_tests_20261014.py",
+    "/global/homes/d/dkololgi/GraphWeb_DESI/workflows/presentation/legacy_gat_comparison_20261014.py",
+    "/global/homes/d/dkololgi/GraphWeb_DESI/workflows/presentation/legacy_checkpoint_replay_20261014.py",
+    "/global/homes/d/dkololgi/GraphWeb_DESI/workflows/presentation/legacy_label_scale_20261014.py",
+    "/global/homes/d/dkololgi/GraphWeb_DESI/workflows/presentation/legacy_density_scale_20261014.py",
+    "/global/homes/d/dkololgi/GraphWeb_DESI/workflows/presentation/p12a_cg5_check_20261014.py",
+    "/global/homes/d/dkololgi/GraphWeb_DESI/workflows/presentation/ordering_audit_20261014.py",
+    "/global/homes/d/dkololgi/TNG/Illustris/workflows/gcn_paper/tracer_thinning_probe_20261014.py",
+    "/global/homes/d/dkololgi/TNG/Illustris/workflows/abacus_tweb/lowz_product_probe_20261014.py",
+    "/global/homes/d/dkololgi/TNG/Illustris/workflows/abacus_tweb/lowz_filtered_index_probe_20261014.py"
+  ],
+  "report_relative_links": [
+    {
+      "target": "p12a_mock_choice_20260928.md",
+      "exists": true
+    },
+    {
+      "target": "p12a_alignment_execution_results_20260926.md",
+      "exists": true
+    }
+  ],
+  "json_files": [
+    "label_scale.json",
+    "training_label_parity.json",
+    "lowz_filtered_index_probe.json",
+    "PREPARATION.json",
+    "RESULTS.json",
+    "lowz_product_probe.json",
+    "checkpoint_replay.json",
+    "old_density_scale.json",
+    "tracer_thinning.json",
+    "public_source/PROVENANCE.json"
+  ],
+  "nonfinite_json_tokens": [],
+  "report_copy_exact": true,
+  "scope": "Syntax, JSON parse, local report links, identical report copy and bundle hashes. Numerical/source checks are separately documented in result receipts."
+}

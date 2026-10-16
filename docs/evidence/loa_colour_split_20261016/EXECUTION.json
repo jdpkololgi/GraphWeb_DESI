@@ -1,0 +1,18 @@
+{
+  "job_id": "59855238",
+  "host": "nid200002",
+  "account": "desi",
+  "qos": "interactive",
+  "approved_minutes": 45,
+  "elapsed": "00:10:19",
+  "state": "COMPLETED",
+  "exit_code": "0:0",
+  "payload_steps": {"0": "COMPLETED 0:0", "1": "COMPLETED 0:0", "2": "COMPLETED 0:0"},
+  "released": true,
+  "validated_mean_vectors": 194,
+  "successful_bootstrap_draws": 256,
+  "final_figures_visually_inspected": 3,
+  "copy_hashes_verified": true,
+  "other_jobs_modified": false,
+  "graphify": "command not found"
+}

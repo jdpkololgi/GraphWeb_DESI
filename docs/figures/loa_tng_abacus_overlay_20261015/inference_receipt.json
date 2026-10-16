@@ -1,0 +1,394 @@
+{
+  "source_cache_sha256": "3429000232bac3c299ab127ab408797205c6535c3ae67903e28efb5deccb22dd",
+  "source_provenance": {
+    "source": "/pscratch/sd/d/dkololgi/graphweb_desi/outputs/p12a_loa_full_20260925_v1/DESI_LOA_P12A_HALO48_FULL_SURVEY_VAC.fits",
+    "source_receipt": {
+      "path": "/pscratch/sd/d/dkololgi/graphweb_desi/outputs/p12a_loa_cigale_20260929_v1/DESI_LOA_P12A_CIGALE_FULL_VAC.fits",
+      "sha256": "5c0d8d50f0e6e0f0059f4be37efb6938f46b9622732d6ba3f6b866e5e712e969",
+      "rows": 5436413,
+      "original_columns": [
+        "TARGETID",
+        "RA",
+        "DEC",
+        "Z",
+        "CAP",
+        "CORE_ID",
+        "QUALITY",
+        "SUPPORTED",
+        "BASE_EIGENVALUES",
+        "EIGENVALUE_MEAN",
+        "EIGENVALUE_Q05",
+        "EIGENVALUE_Q16",
+        "EIGENVALUE_Q50",
+        "EIGENVALUE_Q84",
+        "EIGENVALUE_Q95",
+        "P_WEB",
+        "BOUNDARY_MPC",
+        "NTILDE_MPC3"
+      ],
+      "cigale_columns": [
+        "CIGALE_MATCHED",
+        "CIGALE_AMBIGUOUS",
+        "CIGALE_SOURCE_ROW",
+        "CIGALE_Z",
+        "CIGALE_SEP_ARCSEC",
+        "CIGALE_DZ_NORM",
+        "CIGALE_SPECTYPE",
+        "CIGALE_SURVEY",
+        "CIGALE_PROGRAM",
+        "CIGALE_TNAME",
+        "CIGALE_SNR_MED",
+        "CIGALE_FLUX_SCALE",
+        "MASS_CG_15",
+        "MASSERR_CG_15",
+        "SFR_CG_15",
+        "SFRERR_CG_15",
+        "AGE_CG_15",
+        "AGEERR_CG_15",
+        "AV_CG_15",
+        "AVERR_CG_15",
+        "FAGN_CG_15",
+        "FAGNERR_CG_15",
+        "MASS_CG_5",
+        "MASSERR_CG_5",
+        "SFR_CG_5",
+        "SFRERR_CG_5",
+        "AGE_CG_5",
+        "AGEERR_CG_5",
+        "AV_CG_5",
+        "AVERR_CG_5",
+        "FAGN_CG_5",
+        "FAGNERR_CG_5"
+      ],
+      "all_original_columns_exactly_preserved": true,
+      "join_receipt_sha256": "06808130125c584be6efc08859013ffd6f8380326377691342167ec1cc6d9527",
+      "script_sha256": "8cb16922e8024bcb661e5a1772812e528c96893ee3eb80ce33308c645d7514d8"
+    },
+    "full_fits_hash_recomputed": false,
+    "source_binding": "Frozen receipts, row count, exact TARGETID/redshift crosswalk; fresh extracted-output hash.",
+    "support_hashes": {
+      "INPUTS_READY.json": "4a308a14b7f92622715f3cd3068c728d34982bb803493dc087fd2dcf90ce8725",
+      "random_angular.npz": "e24e4fc820c87c3974ac8a9cb651f0028dceb9f6604de6848738e8b029b93829",
+      "boundary_angles.npz": "2eeb0948961b8e067afa67a05b195afb5f7acee8a6371489f2b9577ad76129a4"
+    },
+    "script_sha256": "2cdffd218017cbebcc489b068eec847f6ed1c6f7d9df3bf283830258f0a6a9de",
+    "catalogue_sha256": "3429000232bac3c299ab127ab408797205c6535c3ae67903e28efb5deccb22dd",
+    "queries": 103788,
+    "padded_tracers": 352198,
+    "candidate_pairs_processed": 10870554,
+    "elapsed_seconds": 13.857769136084244,
+    "selection": "SUPPORTED Loa RA[120,160),DEC[14.5,30.6),z[.20,.30); all selected rows measured before CIGALE cuts. Full Loa VAC neighbours within padded Cartesian bounding box, including outside wedge.",
+    "coordinates": "Planck18 comoving Mpc using 10001-point interpolation z=.1-.6; h=.6766.",
+    "sigma5": "5/(pi*d5^2), d5 in comoving h^-1 Mpc at target distance, angular great-circle separation; |c dz/(1+z_target)| <=1000 km/s; self excluded by TARGETID; search limited to10 h^-1Mpc, missing fifth neighbour flagged NaN.",
+    "counts": "Self-excluded redshift-space spheres R=1,2,4,7 h^-1Mpc. Inner/outer density ratio compares R<2 with2<R<7; no pseudocount.",
+    "Q3": "M=mean(unit-neighbour-vector outer product) within R7; A=(3tr(M^2)-1)/2; Q3=(N*A-1)/(N-1). Negative debiased values retained. A tests quadrupole anisotropy only.",
+    "Qsky": "Same R7 neighbours projected onto target sky plane; A2=|mean(exp(2i phi))|^2; Qsky=(N*A2-1)/(N-1). LOS_P2=mean(P2(unit_neighbour dot line_of_sight)).",
+    "shape_validity": "Statistics recorded for Ndir>1; property plots require Ndir>=20. Finite-N subtraction assumes independent isotropic directions; clustered correlations and redshift distortions remain.",
+    "boundaries": "Use stored nside256 angular distance at actual galaxy HEALPix, subtract2*max_pixrad for conservative finite-pixel buffer; exact target radius, mask/cap support. For spheres require lower distance>R7; projected require lower angle>d5/chi and full velocity window inside tracer radial limits. This addresses geometry, not variable angular completeness.",
+    "qa": {
+      "counts_and_sigma5_bruteforce_queries": [
+        12035,
+        17675,
+        35926,
+        42211,
+        49477,
+        61620,
+        61858,
+        64815,
+        69386,
+        81185,
+        90304,
+        99528
+      ],
+      "ids_unique": true,
+      "count_monotonic": true,
+      "valid_sphere_rows": 97840,
+      "valid_sigma5_rows": 99502,
+      "fewer_than_five_projected": 529
+    },
+    "execution": "Single-thread login execution requested by user; bounded wedge only, no Slurm changes or ML inference."
+  },
+  "training_manifest_sha256": "ee58f33bc57d97683eacec4c182bc6fe64f37e7fd33b4e3a17dec616e0c7b0c9",
+  "query_rows": 103788,
+  "tracer_rows": 587896,
+  "tracer_fields_sha256": "1acbf0bda59570a1fcdf88b4d118b28d8e98d5e151a0caaf41f09cd8b9e19934",
+  "coordinates": "Planck18 comoving h^-1 Mpc, h=0.6766; redshift space, no periodic wrapping",
+  "feature_contract": [
+    1.0,
+    2.0,
+    4.0,
+    7.0,
+    10.0,
+    14.0,
+    1,
+    5,
+    10,
+    20,
+    40
+  ],
+  "geometric_complete_rows": 92026,
+  "max_d40_hmpc": 25.977930727118977,
+  "brute_force_queries": [
+    0,
+    9435,
+    18870,
+    28305,
+    37740,
+    47175,
+    56611,
+    66046,
+    75481,
+    84916,
+    94351,
+    103787
+  ],
+  "first_four_counts_equal_cached": true,
+  "checkpoints": {
+    "R2_dense_seed20261015": {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/tng_density_control_20261015/R2_dense_seed20261015.pt",
+      "sha256": "3a7755e304b7de2fc7a5886f117572272646bef1f898a306cb71af8f6ff238a2"
+    },
+    "R2_dense_seed20261016": {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/tng_density_control_20261015/R2_dense_seed20261016.pt",
+      "sha256": "b31b6d8b2241eefb1dbef278e1db495ac164cf1bb4164c76904caf6ba3f962c0"
+    },
+    "R2_dense_seed20261017": {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/tng_density_control_20261015/R2_dense_seed20261017.pt",
+      "sha256": "b2387b14adc3032162c762507879e62b1beb0748db6ee229f16e5a039455706a"
+    },
+    "R2_thin_20261015_seed20261015": {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/tng_density_control_20261015/R2_thin_20261015_seed20261015.pt",
+      "sha256": "f4cc12cc742b32e861e8cfc79f3790a930152709eae14282383941df7cb595c2"
+    },
+    "R2_thin_20261016_seed20261016": {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/tng_density_control_20261015/R2_thin_20261016_seed20261016.pt",
+      "sha256": "9fcd21ddf8f44722bafdcafd9798f70228b76349a3d381d8a1e254fd6c25887f"
+    },
+    "R2_thin_20261017_seed20261017": {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/tng_density_control_20261015/R2_thin_20261017_seed20261017.pt",
+      "sha256": "0eea1149692b29736de9c7811df520cea234013a2d8d2cec942efa058cd39776"
+    },
+    "R7_dense_seed20261015": {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/tng_density_control_20261015/R7_dense_seed20261015.pt",
+      "sha256": "95ad0d02a196d1c88ea35ec983d6f2966c5378f8825bd8e3bc9d982ac68e11f5"
+    },
+    "R7_dense_seed20261016": {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/tng_density_control_20261015/R7_dense_seed20261016.pt",
+      "sha256": "1d550484e178d07bf50a2c9130facae9ba5927e1aed368d4427921ab83d6624c"
+    },
+    "R7_dense_seed20261017": {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/tng_density_control_20261015/R7_dense_seed20261017.pt",
+      "sha256": "1fef114db78b3bca1127ecf82070918b8ef2fb907135585650668992ee4cbde7"
+    },
+    "R7_thin_20261015_seed20261015": {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/tng_density_control_20261015/R7_thin_20261015_seed20261015.pt",
+      "sha256": "7f84d97a17dcb8882a644b6f2ad9a4bc80dd69e6b49978ac71a0fdbb20d7a40a"
+    },
+    "R7_thin_20261016_seed20261016": {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/tng_density_control_20261015/R7_thin_20261016_seed20261016.pt",
+      "sha256": "e2905234e33da810b934de4ea86b0b699fe55ae7eb43dfda0bde57f33deeab2c"
+    },
+    "R7_thin_20261017_seed20261017": {
+      "path": "/global/u2/d/dkololgi/fmsu_tokyo_20261010/tng_density_control_20261015/R7_thin_20261017_seed20261017.pt",
+      "sha256": "8205534898372e13a766c5ccecf4a1bdc5068ff9aa9195a6a270ef940cc080d2"
+    }
+  },
+  "feature_shift": {
+    "R2_dense_seed20261015": {
+      "any_feature_outside_5_training_sd_fraction": 0.09273466194336383,
+      "median_standardized_features": [
+        -1.1239635944366455,
+        -1.1518739461898804,
+        -1.51498281955719,
+        -1.9661860466003418,
+        -2.5063908100128174,
+        -3.3519201278686523,
+        1.1402530670166016,
+        1.22523832321167,
+        1.2611252069473267,
+        1.316904067993164,
+        1.4189339876174927
+      ]
+    },
+    "R2_dense_seed20261016": {
+      "any_feature_outside_5_training_sd_fraction": 0.09273466194336383,
+      "median_standardized_features": [
+        -1.1239635944366455,
+        -1.1518739461898804,
+        -1.51498281955719,
+        -1.9661860466003418,
+        -2.5063908100128174,
+        -3.3519201278686523,
+        1.1402530670166016,
+        1.22523832321167,
+        1.2611252069473267,
+        1.316904067993164,
+        1.4189339876174927
+      ]
+    },
+    "R2_dense_seed20261017": {
+      "any_feature_outside_5_training_sd_fraction": 0.09273466194336383,
+      "median_standardized_features": [
+        -1.1239635944366455,
+        -1.1518739461898804,
+        -1.51498281955719,
+        -1.9661860466003418,
+        -2.5063908100128174,
+        -3.3519201278686523,
+        1.1402530670166016,
+        1.22523832321167,
+        1.2611252069473267,
+        1.316904067993164,
+        1.4189339876174927
+      ]
+    },
+    "R2_thin_20261015_seed20261015": {
+      "any_feature_outside_5_training_sd_fraction": 0.0003477278160519853,
+      "median_standardized_features": [
+        -0.6689456701278687,
+        -0.19262084364891052,
+        0.01720019243657589,
+        0.19018632173538208,
+        0.23374491930007935,
+        0.2282545119524002,
+        0.2917487621307373,
+        0.16339696943759918,
+        0.12011393904685974,
+        0.08014492690563202,
+        0.05528827756643295
+      ]
+    },
+    "R2_thin_20261016_seed20261016": {
+      "any_feature_outside_5_training_sd_fraction": 0.0003477278160519853,
+      "median_standardized_features": [
+        -0.6708541512489319,
+        -0.19530892372131348,
+        0.011123890988528728,
+        0.19000396132469177,
+        0.2333260476589203,
+        0.22360414266586304,
+        0.2980887293815613,
+        0.16971299052238464,
+        0.12478659301996231,
+        0.08144952356815338,
+        0.05244961380958557
+      ]
+    },
+    "R2_thin_20261017_seed20261017": {
+      "any_feature_outside_5_training_sd_fraction": 0.0003477278160519853,
+      "median_standardized_features": [
+        -0.6686931848526001,
+        -0.18850098550319672,
+        0.02109772339463234,
+        0.19650766253471375,
+        0.24335747957229614,
+        0.24041347205638885,
+        0.29462510347366333,
+        0.16388988494873047,
+        0.12018963694572449,
+        0.07885630428791046,
+        0.040795162320137024
+      ]
+    },
+    "R7_dense_seed20261015": {
+      "any_feature_outside_5_training_sd_fraction": 0.09273466194336383,
+      "median_standardized_features": [
+        -1.1239635944366455,
+        -1.1518739461898804,
+        -1.51498281955719,
+        -1.9661860466003418,
+        -2.5063908100128174,
+        -3.3519201278686523,
+        1.1402530670166016,
+        1.22523832321167,
+        1.2611252069473267,
+        1.316904067993164,
+        1.4189339876174927
+      ]
+    },
+    "R7_dense_seed20261016": {
+      "any_feature_outside_5_training_sd_fraction": 0.09273466194336383,
+      "median_standardized_features": [
+        -1.1239635944366455,
+        -1.1518739461898804,
+        -1.51498281955719,
+        -1.9661860466003418,
+        -2.5063908100128174,
+        -3.3519201278686523,
+        1.1402530670166016,
+        1.22523832321167,
+        1.2611252069473267,
+        1.316904067993164,
+        1.4189339876174927
+      ]
+    },
+    "R7_dense_seed20261017": {
+      "any_feature_outside_5_training_sd_fraction": 0.09273466194336383,
+      "median_standardized_features": [
+        -1.1239635944366455,
+        -1.1518739461898804,
+        -1.51498281955719,
+        -1.9661860466003418,
+        -2.5063908100128174,
+        -3.3519201278686523,
+        1.1402530670166016,
+        1.22523832321167,
+        1.2611252069473267,
+        1.316904067993164,
+        1.4189339876174927
+      ]
+    },
+    "R7_thin_20261015_seed20261015": {
+      "any_feature_outside_5_training_sd_fraction": 0.0003477278160519853,
+      "median_standardized_features": [
+        -0.6689456701278687,
+        -0.19262084364891052,
+        0.01720019243657589,
+        0.19018632173538208,
+        0.23374491930007935,
+        0.2282545119524002,
+        0.2917487621307373,
+        0.16339696943759918,
+        0.12011393904685974,
+        0.08014492690563202,
+        0.05528827756643295
+      ]
+    },
+    "R7_thin_20261016_seed20261016": {
+      "any_feature_outside_5_training_sd_fraction": 0.0003477278160519853,
+      "median_standardized_features": [
+        -0.6708541512489319,
+        -0.19530892372131348,
+        0.011123890988528728,
+        0.19000396132469177,
+        0.2333260476589203,
+        0.22360414266586304,
+        0.2980887293815613,
+        0.16971299052238464,
+        0.12478659301996231,
+        0.08144952356815338,
+        0.05244961380958557
+      ]
+    },
+    "R7_thin_20261017_seed20261017": {
+      "any_feature_outside_5_training_sd_fraction": 0.0003477278160519853,
+      "median_standardized_features": [
+        -0.6686931848526001,
+        -0.18850098550319672,
+        0.02109772339463234,
+        0.19650766253471375,
+        0.24335747957229614,
+        0.24041347205638885,
+        0.29462510347366333,
+        0.16388988494873047,
+        0.12018963694572449,
+        0.07885630428791046,
+        0.040795162320137024
+      ]
+    }
+  },
+  "observed_tracers_thinned": false,
+  "note": "Normal/thinned identifies training populations. All models see the same observed Loa features with their own unchanged training scalers.",
+  "prediction_sha256": "88e8c7f348f27fb872f2d1ea98bbdf622733d741995caf4bd8aca023ef8a9d5d",
+  "script_sha256": "188382ffadc920e695a2a9c4b707dc10b8379bac28e241b71993d17ef8dd01fe"
+}

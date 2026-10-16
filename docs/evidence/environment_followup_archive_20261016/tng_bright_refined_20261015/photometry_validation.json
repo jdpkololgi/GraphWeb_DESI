@@ -1,0 +1,11 @@
+{
+  "input_reconstruction_abs_mag_error_quantiles": [
+    8.44213587924969e-12,
+    1.2448708730516955e-10,
+    1.4059420294643132e-10,
+    1.811817362806778e-10
+  ],
+  "flat_fnu_normalization": true,
+  "fiber_fraction_monotonic": true,
+  "method": "Four-band constrained positive smooth f_nu continuum; integrated SDSS2010 input and DECam2014 output response curves, 10A quadrature. Not a stellar-population template or dust model. Sersic n1/n4 profile proxy with Re=.75 Rhalf3D; 1arcsec Gaussian seeing and .75arcsec aperture radius."
+}

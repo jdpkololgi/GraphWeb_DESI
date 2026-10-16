@@ -1,0 +1,9 @@
+{
+  "source": "/pscratch/sd/d/dkololgi/graphweb_desi/catalogs/loa-combined-lowz.fits",
+  "source_rows": 768700,
+  "simple_cut_rows": 199314,
+  "legacy_rows": 199314,
+  "same_targetid_multiset": true,
+  "cuts": "ZWARN==0, DELTACHI2>=25, LOGMSTAR>=9, BGS_TARGET!=0",
+  "extra_mass_completeness_filter_visible_in_current_loader": false
+}

@@ -1,0 +1,13 @@
+{
+  "verified": true,
+  "actual_gat_pdf_pages": 32,
+  "mlp_selection_pdf_pages": 21,
+  "scenarios": 12,
+  "raw_mean_array_checks": 840,
+  "controlled_panels_reconstructed": 89,
+  "maximum_controlled_mean_error": 5.1514348342607263e-14,
+  "training_validation_sha256": "d54513e817f7ef669107b7fcd1f84140e502f89a9df6557502c29fabde399416",
+  "png_files_verified": 8,
+  "unsupported_frozen_panels_preserved": true,
+  "results_sha256": "c4b14e8be09a29583ce87ea19839b00626dabc78a1ba4fdeb6411756b7f130f6"
+}

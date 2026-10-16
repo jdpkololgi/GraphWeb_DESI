@@ -1,0 +1,171 @@
+{
+  "legacy_path": "/global/u2/d/dkololgi/GraphWeb_DESI/DESI_BGS_PRERELEASE_VAC.pkl",
+  "legacy_sha256": "220a55f95d6bd3ecfb6fdf4da6deb96974feaae94c2e7469e382f92523cb384e",
+  "legacy_bytes": 86509123,
+  "legacy_rows": 199314,
+  "unique_targetids": 198827,
+  "repeated_targetid_rows": 974,
+  "repeated_targetids_with_different_labels": 53,
+  "legacy_z_range": [
+    0.010029301794123592,
+    0.059999956266583686
+  ],
+  "legacy_logmass_range": [
+    9.000004768371582,
+    11.87637996673584
+  ],
+  "class_counts": {
+    "Void": 21494,
+    "Wall": 48894,
+    "Filament": 101576,
+    "Cluster": 27350
+  },
+  "probability_checks_passed": true,
+  "median_max_probability": 0.9280979037284851,
+  "p12_product_receipt": {
+    "path": "/pscratch/sd/d/dkololgi/graphweb_desi/outputs/p12a_loa_cigale_20260929_v1/DESI_LOA_P12A_CIGALE_FULL_VAC.fits",
+    "sha256": "5c0d8d50f0e6e0f0059f4be37efb6938f46b9622732d6ba3f6b866e5e712e969",
+    "rows": 5436413,
+    "original_columns": [
+      "TARGETID",
+      "RA",
+      "DEC",
+      "Z",
+      "CAP",
+      "CORE_ID",
+      "QUALITY",
+      "SUPPORTED",
+      "BASE_EIGENVALUES",
+      "EIGENVALUE_MEAN",
+      "EIGENVALUE_Q05",
+      "EIGENVALUE_Q16",
+      "EIGENVALUE_Q50",
+      "EIGENVALUE_Q84",
+      "EIGENVALUE_Q95",
+      "P_WEB",
+      "BOUNDARY_MPC",
+      "NTILDE_MPC3"
+    ],
+    "cigale_columns": [
+      "CIGALE_MATCHED",
+      "CIGALE_AMBIGUOUS",
+      "CIGALE_SOURCE_ROW",
+      "CIGALE_Z",
+      "CIGALE_SEP_ARCSEC",
+      "CIGALE_DZ_NORM",
+      "CIGALE_SPECTYPE",
+      "CIGALE_SURVEY",
+      "CIGALE_PROGRAM",
+      "CIGALE_TNAME",
+      "CIGALE_SNR_MED",
+      "CIGALE_FLUX_SCALE",
+      "MASS_CG_15",
+      "MASSERR_CG_15",
+      "SFR_CG_15",
+      "SFRERR_CG_15",
+      "AGE_CG_15",
+      "AGEERR_CG_15",
+      "AV_CG_15",
+      "AVERR_CG_15",
+      "FAGN_CG_15",
+      "FAGNERR_CG_15",
+      "MASS_CG_5",
+      "MASSERR_CG_5",
+      "SFR_CG_5",
+      "SFRERR_CG_5",
+      "AGE_CG_5",
+      "AGEERR_CG_5",
+      "AV_CG_5",
+      "AVERR_CG_5",
+      "FAGN_CG_5",
+      "FAGNERR_CG_5"
+    ],
+    "all_original_columns_exactly_preserved": true,
+    "join_receipt_sha256": "06808130125c584be6efc08859013ffd6f8380326377691342167ec1cc6d9527",
+    "script_sha256": "8cb16922e8024bcb661e5a1772812e528c96893ee3eb80ce33308c645d7514d8"
+  },
+  "p12_hash_freshly_computed": false,
+  "p12_rows": 5436413,
+  "p12_z_range": [
+    0.15000002443478705,
+    0.5499982762722194
+  ],
+  "overlap_targetids": [
+    39627532143691377,
+    39627783881627012,
+    39627784393329144,
+    39627821785550607,
+    39628376096377281,
+    39632931076967667,
+    39633149705062314
+  ],
+  "overlap_count": 7,
+  "overlap_redshift_check": [
+    {
+      "TARGETID": 39627532143691377,
+      "old_z": 0.032919588606891044,
+      "new_z": 0.5438784333971599,
+      "dz_over_1plusz": 0.33095795221774804
+    },
+    {
+      "TARGETID": 39627783881627012,
+      "old_z": 0.05346183103062818,
+      "new_z": 0.29456200214446104,
+      "dz_over_1plusz": 0.18624072907627975
+    },
+    {
+      "TARGETID": 39627784393329144,
+      "old_z": 0.0568159290656422,
+      "new_z": 0.3853135668178003,
+      "dz_over_1plusz": 0.23712872350391334
+    },
+    {
+      "TARGETID": 39627821785550607,
+      "old_z": 0.037596049922571734,
+      "new_z": 0.36001564552438103,
+      "dz_over_1plusz": 0.23707050478635786
+    },
+    {
+      "TARGETID": 39628376096377281,
+      "old_z": 0.058416227887026904,
+      "new_z": 0.3221772341987608,
+      "dz_over_1plusz": 0.1994899015725173
+    },
+    {
+      "TARGETID": 39632931076967667,
+      "old_z": 0.05622845149213319,
+      "new_z": 0.3844416078263643,
+      "dz_over_1plusz": 0.23707258903431874
+    },
+    {
+      "TARGETID": 39633149705062314,
+      "old_z": 0.05937996993379566,
+      "new_z": 0.3927886030057609,
+      "dz_over_1plusz": 0.23938208020401658
+    }
+  ],
+  "redshift_consistent_overlap_count": 0,
+  "colour_valid_rows": 199307,
+  "property_origin": "Legacy LOGMSTAR and fluxes are FastSpecFit catalogue columns; no CIGALE columns in pickle.",
+  "colour_definition": "-2.5 log10(FLUX_G/FLUX_R); observed bands, no extinction or redshift correction",
+  "exact_slide_provenance": "Unconfirmed: saved pickle timestamp is January 2026, supplied slide is September 2025.",
+  "script_sha256": "090eaca75fdb2da5425dcddb8174d0e26c0157d1c56347b6483cff377bbf54c4",
+  "legacy_raw_means": {
+    "Void": {
+      "mass": 9.794405937194824,
+      "colour": 0.6180105463903135
+    },
+    "Wall": {
+      "mass": 9.855876922607422,
+      "colour": 0.6383976793828892
+    },
+    "Filament": {
+      "mass": 9.898513793945312,
+      "colour": 0.6716616245396746
+    },
+    "Cluster": {
+      "mass": 9.91064453125,
+      "colour": 0.7229905387385931
+    }
+  }
+}

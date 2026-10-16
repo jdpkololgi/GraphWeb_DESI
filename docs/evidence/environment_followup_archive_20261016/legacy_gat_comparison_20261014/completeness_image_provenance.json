@@ -1,0 +1,7 @@
+{
+  "source": "/global/homes/d/dkololgi/GraphWeb_DESI/2_loaSelectedSample_massCompletenessCut_forDK.ipynb",
+  "source_sha256": "fb34ce35aabd1f1a8ad9a49d5cba62cf654624cdf39fa893d324a675450f2d16",
+  "cell_index_zero_based": 35,
+  "image": "completeness_notebook_saved.png",
+  "method": "Unmodified base64 PNG extracted from saved notebook output; curve values read approximately from plot, not refitted."
+}

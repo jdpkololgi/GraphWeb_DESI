@@ -1,0 +1,31 @@
+{
+  "files": [
+    {
+      "name": "REPORT.md",
+      "sha256": "4832fa6e0ff62ce43017ef8ce69acf7266fba09d4d76d02e8935f2e6c1b03315",
+      "bytes": 10638
+    },
+    {
+      "name": "RESULTS.json",
+      "sha256": "c43f4522930a5e1dc9057064d0c893cf1dca59d500fd19cdd007c6d417858786",
+      "bytes": 68078
+    },
+    {
+      "name": "count_trace_density_probe_20261015.py",
+      "sha256": "26e55d424b872742b37059f2357cdc5d99057052fb9a49372cb5a754cf69de76",
+      "bytes": 5670
+    },
+    {
+      "name": "multitracer_mt4_decision.json",
+      "sha256": "67d96a2fe8a827ace0731699087dd6dd111179389bc53eaa86f01c22237dfffe",
+      "bytes": 2856
+    }
+  ],
+  "checks": {
+    "syntax": true,
+    "script_receipt_hash": true,
+    "query_rows": 32424,
+    "brute_checks": 48,
+    "cache_count_parity": true
+  }
+}

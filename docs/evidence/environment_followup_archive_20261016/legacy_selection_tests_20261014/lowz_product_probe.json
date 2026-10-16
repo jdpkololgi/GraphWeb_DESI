@@ -1,0 +1,213 @@
+{
+  "source": "/global/cfs/cdirs/desi/cosmosim/SecondGenMocks/AbacusSummit/CutSky/BGS/v0.1/z0.200/cutsky_BGS_z0.200_AbacusSummit_base_c000_ph000.fits",
+  "sample_rows": 512000,
+  "sampling": "128 evenly spaced contiguous blocks of 4000 rows; descriptive probe, not full census",
+  "groups": [
+    {
+      "zlo": 0,
+      "zhi": 0.06,
+      "RES": 0,
+      "rows": 5055,
+      "box_minus_one": 5055,
+      "file_negative": 0,
+      "halo_index_min": 84,
+      "halo_mass_min": 2.0485727787017822,
+      "halo_mass_median": 4.659175395965576,
+      "halo_mass_max": 9.999951362609863
+    },
+    {
+      "zlo": 0,
+      "zhi": 0.06,
+      "RES": 1,
+      "rows": 8348,
+      "box_minus_one": 8348,
+      "file_negative": 0,
+      "halo_index_min": 106577,
+      "halo_mass_min": 10.123591423034668,
+      "halo_mass_median": 47.55978775024414,
+      "halo_mass_max": 27513.8125
+    },
+    {
+      "zlo": 0.06,
+      "zhi": 0.1,
+      "RES": 0,
+      "rows": 2876,
+      "box_minus_one": 2876,
+      "file_negative": 0,
+      "halo_index_min": 313568,
+      "halo_mass_min": 6.098799705505371,
+      "halo_mass_median": 9.62942123413086,
+      "halo_mass_max": 9.999995231628418
+    },
+    {
+      "zlo": 0.06,
+      "zhi": 0.1,
+      "RES": 1,
+      "rows": 34138,
+      "box_minus_one": 34138,
+      "file_negative": 0,
+      "halo_index_min": 15045,
+      "halo_mass_min": 10.123591423034668,
+      "halo_mass_median": 32.479854583740234,
+      "halo_mass_max": 83316.1015625
+    },
+    {
+      "zlo": 0.1,
+      "zhi": 0.149,
+      "RES": 0,
+      "rows": 69,
+      "box_minus_one": 69,
+      "file_negative": 0,
+      "halo_index_min": 466930,
+      "halo_mass_min": 9.462035179138184,
+      "halo_mass_median": 9.873600006103516,
+      "halo_mass_max": 9.998623847961426
+    },
+    {
+      "zlo": 0.1,
+      "zhi": 0.149,
+      "RES": 1,
+      "rows": 55959,
+      "box_minus_one": 55780,
+      "file_negative": 0,
+      "halo_index_min": 2740,
+      "halo_mass_min": 10.123591423034668,
+      "halo_mass_median": 38.59619140625,
+      "halo_mass_max": 215835.390625
+    },
+    {
+      "zlo": 0.149,
+      "zhi": 0.151,
+      "RES": 1,
+      "rows": 2612,
+      "box_minus_one": 1404,
+      "file_negative": 0,
+      "halo_index_min": 2401,
+      "halo_mass_min": 14.13084602355957,
+      "halo_mass_median": 44.18525695800781,
+      "halo_mass_max": 21015.310546875
+    },
+    {
+      "zlo": 0.151,
+      "zhi": 0.2,
+      "RES": 1,
+      "rows": 71407,
+      "box_minus_one": 330,
+      "file_negative": 0,
+      "halo_index_min": 13,
+      "halo_mass_min": 14.55266284942627,
+      "halo_mass_median": 49.985233306884766,
+      "halo_mass_max": 72852.1015625
+    },
+    {
+      "zlo": 0.2,
+      "zhi": 0.3,
+      "RES": 1,
+      "rows": 153847,
+      "box_minus_one": 0,
+      "file_negative": 0,
+      "halo_index_min": 24,
+      "halo_mass_min": 19.192642211914062,
+      "halo_mass_median": 92.7995834350586,
+      "halo_mass_max": 125389.328125
+    },
+    {
+      "zlo": 0.3,
+      "zhi": 0.6,
+      "RES": 1,
+      "rows": 176349,
+      "box_minus_one": 0,
+      "file_negative": 0,
+      "halo_index_min": 48,
+      "halo_mass_min": 32.90167236328125,
+      "halo_mass_median": 434.4707946777344,
+      "halo_mass_max": 234032.125
+    }
+  ],
+  "cubic_box_versions": {
+    "v0": [
+      "z0.100",
+      "z0.200",
+      "z0.400"
+    ],
+    "v0.1": [
+      "z0.200"
+    ],
+    "v1": [
+      "z0.200"
+    ]
+  },
+  "public_ph000_halo_snapshots": [
+    "z0.100",
+    "z0.150",
+    "z0.200",
+    "z0.250",
+    "z0.300",
+    "z0.350",
+    "z0.400",
+    "z0.450",
+    "z0.500",
+    "z0.575",
+    "z0.650",
+    "z0.725",
+    "z0.800",
+    "z0.875",
+    "z0.950",
+    "z1.025",
+    "z1.100",
+    "z1.175",
+    "z1.250",
+    "z1.325",
+    "z1.400",
+    "z1.475",
+    "z1.550",
+    "z1.625",
+    "z1.700",
+    "z1.850",
+    "z2.000",
+    "z2.250",
+    "z2.500",
+    "z2.750",
+    "z3.000",
+    "z5.000",
+    "z8.000"
+  ],
+  "halo_index_mass_probe": [
+    {
+      "epoch": "0.100",
+      "file_num": 1,
+      "zlo": 0,
+      "zhi": 0.15,
+      "rows": 12000,
+      "fraction_within_one_percent": 0.0031666666666666666,
+      "median_mass_ratio": 0.3533634174696856
+    },
+    {
+      "epoch": "0.100",
+      "file_num": 1,
+      "zlo": 0.2,
+      "zhi": 0.3,
+      "rows": 6608,
+      "fraction_within_one_percent": 0.0028753026634382567,
+      "median_mass_ratio": 0.23030301996784258
+    },
+    {
+      "epoch": "0.200",
+      "file_num": 1,
+      "zlo": 0,
+      "zhi": 0.15,
+      "rows": 12000,
+      "fraction_within_one_percent": 0.0036666666666666666,
+      "median_mass_ratio": 0.348584516668503
+    },
+    {
+      "epoch": "0.200",
+      "file_num": 1,
+      "zlo": 0.2,
+      "zhi": 0.3,
+      "rows": 6608,
+      "fraction_within_one_percent": 0.9270581113801453,
+      "median_mass_ratio": 0.9999999962303594
+    }
+  ]
+}
