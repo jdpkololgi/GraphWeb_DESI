@@ -1,0 +1,62 @@
+[
+  {
+    "source": "/pscratch/sd/d/dkololgi/graphweb_desi/outputs/loa_colour_lowz_20261016_v1/relationships.json",
+    "destination": "docs/evidence/loa_colour_lowz_20261016/relationships.json",
+    "sha256": "a52e830974fd2ef7fc8fd17e71b161e1f79efcff431a2f88bd04f2af82d6bf3d",
+    "bytes": 316034
+  },
+  {
+    "source": "/pscratch/sd/d/dkololgi/graphweb_desi/outputs/loa_colour_lowz_20261016_v1/windows.json",
+    "destination": "docs/evidence/loa_colour_lowz_20261016/windows.json",
+    "sha256": "088c2eb4439dc4f4713346e62f44b9d89d29840e0cd8427a3e79484672740f97",
+    "bytes": 416
+  },
+  {
+    "source": "/pscratch/sd/d/dkololgi/graphweb_desi/outputs/loa_colour_lowz_20261016_v1/MANIFEST.json",
+    "destination": "docs/evidence/loa_colour_lowz_20261016/MANIFEST.json",
+    "sha256": "816e1594b4269eff4d74b9ac32392114ed3b744c97c466f73274fc93626d6bbf",
+    "bytes": 1650
+  },
+  {
+    "source": "/pscratch/sd/d/dkololgi/graphweb_desi/outputs/loa_colour_lowz_20261016_v1/colour_mass_limits.json",
+    "destination": "docs/evidence/loa_colour_lowz_20261016/colour_mass_limits.json",
+    "sha256": "53ec1b8d34281a0f26041dc6fb05528e6b0909bca96afd44818b73966cf43aa2",
+    "bytes": 4782
+  },
+  {
+    "source": "/pscratch/sd/d/dkololgi/graphweb_desi/outputs/loa_colour_lowz_20261016_v1/presentation/properties_z015020.png",
+    "destination": "docs/figures/loa_colour_lowz_20261016/properties_z015020.png",
+    "sha256": "b44091a64ac978bf3e36a2163c346bb44f7b91587a09fe94ca25158209b7aae2",
+    "bytes": 302245
+  },
+  {
+    "source": "/pscratch/sd/d/dkololgi/graphweb_desi/outputs/loa_colour_lowz_20261016_v1/presentation/contrasts_z015020.pdf",
+    "destination": "docs/figures/loa_colour_lowz_20261016/contrasts_z015020.pdf",
+    "sha256": "4e7f04446948a652bd6d37d081034e6e495e3b23266f41da8697ad0dad897536",
+    "bytes": 28764
+  },
+  {
+    "source": "/pscratch/sd/d/dkololgi/graphweb_desi/outputs/loa_colour_lowz_20261016_v1/presentation/curves_and_contrasts.csv",
+    "destination": "docs/evidence/loa_colour_lowz_20261016/presentation_curves_and_contrasts.csv",
+    "sha256": "cdad2c1012396f361fc247a0853339ff6afa1e870cf8f65f952b9a43ba7add14",
+    "bytes": 22413
+  },
+  {
+    "source": "/pscratch/sd/d/dkololgi/graphweb_desi/outputs/loa_colour_lowz_20261016_v1/presentation/contrasts_z015020.png",
+    "destination": "docs/figures/loa_colour_lowz_20261016/contrasts_z015020.png",
+    "sha256": "202b0090929ec4897b5eb0e5123b42dfe237f07e852fa5daacd29eb23b4fe046",
+    "bytes": 149611
+  },
+  {
+    "source": "/pscratch/sd/d/dkololgi/graphweb_desi/outputs/loa_colour_lowz_20261016_v1/presentation/MANIFEST.json",
+    "destination": "docs/evidence/loa_colour_lowz_20261016/presentation_MANIFEST.json",
+    "sha256": "1983c1602a9b563ae10a8e3c1c95771a4abd20e475fc505338115009c803be0d",
+    "bytes": 717
+  },
+  {
+    "source": "/pscratch/sd/d/dkololgi/graphweb_desi/outputs/loa_colour_lowz_20261016_v1/presentation/properties_z015020.pdf",
+    "destination": "docs/figures/loa_colour_lowz_20261016/properties_z015020.pdf",
+    "sha256": "1e40174adebbc2776793e9205feff78f33321b01b460704d298d3ef0d3d8e3a0",
+    "bytes": 40980
+  }
+]

@@ -69,6 +69,7 @@ within-colour analysis for 0.15<=z<0.20. The input is the existing variable-cut
 sub-VAC: the new fixed threshold must exceed every old bin limit in this range,
 so it cannot omit any qualifying object through the input selection. Fresh
 original-VAC parity is checked in 257 rows through SOURCE_ROW. Outputs use a
-new `loa_colour_lowz_20261016_v1` directory. Preparation/syntax checks are
-complete; execution requires the separately requested CPU approval and its
-results must not be inferred from this code's presence.
+new `loa_colour_lowz_20261016_v1` directory. Execution completed after explicit CPU approval on allocation 59857020.
+The fixed limit is 10.60, with 518,962 red and 14,909 blue galaxies. The
+20,000-blue gate still fails. Results, sensitivity checks and validation are
+recorded in `docs/loa_colour_lowz_20261016.md`; the allocation is released.

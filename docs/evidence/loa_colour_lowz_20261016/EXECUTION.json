@@ -1,0 +1,10 @@
+{
+  "job": "59857020",
+  "host": "nid200019",
+  "analysis_exit_code": 0,
+  "export_exit_code": 0,
+  "mean_vectors_checked": 128,
+  "bootstrap_draws": 256,
+  "allocation_released": true,
+  "queue_verification": "squeue -j 59857020 -h returned empty stdout and stderr, exit 0"
+}

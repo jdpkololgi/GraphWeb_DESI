@@ -1,0 +1,19 @@
+{
+  "job": "59857020",
+  "host": "nid200019",
+  "source_manifest_sha256": "a23d2fb301c03a20b41a6e45b13e1733e53ce14d190bd9fc40d570e071b08baa",
+  "code": {
+    "/global/u2/d/dkololgi/GraphWeb_DESI/workflows/presentation/loa_mass_complete_20261016/colour_lowz.py": "77b585ca9d2930daf7fc0bf1696507ff2db8abb36406341c1329e35459e273dd",
+    "/global/u2/d/dkololgi/GraphWeb_DESI/workflows/presentation/loa_mass_complete_20261016/run.py": "d0fffaa14c2cdab17dfd02e05908d9ef1652a2d72a9b516ecc710e9ec85449f4",
+    "/global/u2/d/dkololgi/GraphWeb_DESI/workflows/presentation/loa_mass_complete_20261016/colour_split.py": "01555f33e4987d977d7aa5c9869bb33f70ed8c2cddbbb152d7fd429b20afbccb",
+    "/global/u2/d/dkololgi/GraphWeb_DESI/workflows/presentation/loa_mass_complete_20261016/colour_followup.py": "157c14ab70eb128b1c1c2c1e42ff3a26a828be0f1a0e30fcedd90b8699712388"
+  },
+  "outputs": {
+    "relationships.json": "a52e830974fd2ef7fc8fd17e71b161e1f79efcff431a2f88bd04f2af82d6bf3d",
+    "windows.json": "088c2eb4439dc4f4713346e62f44b9d89d29840e0cd8427a3e79484672740f97",
+    "colour_mass_limits.json": "53ec1b8d34281a0f26041dc6fb05528e6b0909bca96afd44818b73966cf43aa2",
+    "LOA_COLOUR_MASS_COMPLETE_z015020.fits": "17723d0ce1bc806f07ab0b05ee659c56476c3f912fae2d90ce5ded3679eaca9f"
+  },
+  "validation": "10 colour percentiles, every raw/controlled mean, 257-row FITS roundtrip and fresh all-original-column VAC parity passed; fixed threshold >= every old bin limit proves no source truncation",
+  "limitations": "Empirical flux completeness; observed colour; separate red/blue support; conditional sky bootstrap excludes SED/selection/model-transfer systematics."
+}

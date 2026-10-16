@@ -1,0 +1,217 @@
+[
+  {
+    "zlo": 0.15,
+    "zhi": 0.16,
+    "populations": {
+      "all": {
+        "rows": 270383,
+        "usable": true,
+        "faint_rows": 54077,
+        "p90": 10.174257263256301,
+        "p95": 10.274944649854241
+      },
+      "quiescent": {
+        "rows": 96568,
+        "usable": true,
+        "faint_rows": 19314,
+        "p90": 10.222139492088765,
+        "p95": 10.283654920814612
+      },
+      "starforming": {
+        "rows": 173815,
+        "usable": true,
+        "faint_rows": 34763,
+        "p90": 10.135213773420668,
+        "p95": 10.267859580778568
+      }
+    },
+    "usable": true,
+    "logmass_limit": 10.381925802299177,
+    "colour_populations": {
+      "red": {
+        "rows": 168148,
+        "usable": true,
+        "p95": 10.381925802299177,
+        "faint_rows": 33630
+      },
+      "blue": {
+        "rows": 102224,
+        "usable": true,
+        "p95": 9.888711959198629,
+        "faint_rows": 20445
+      }
+    }
+  },
+  {
+    "zlo": 0.16,
+    "zhi": 0.17,
+    "populations": {
+      "all": {
+        "rows": 272949,
+        "usable": true,
+        "faint_rows": 54590,
+        "p90": 10.250152120766158,
+        "p95": 10.353835944795666
+      },
+      "quiescent": {
+        "rows": 101430,
+        "usable": true,
+        "faint_rows": 20286,
+        "p90": 10.289405087802448,
+        "p95": 10.357765172064493
+      },
+      "starforming": {
+        "rows": 171519,
+        "usable": true,
+        "faint_rows": 34304,
+        "p90": 10.21710121881319,
+        "p95": 10.350219337309994
+      }
+    },
+    "usable": true,
+    "logmass_limit": 10.44456847737455,
+    "colour_populations": {
+      "red": {
+        "rows": 179342,
+        "usable": true,
+        "p95": 10.44456847737455,
+        "faint_rows": 35869
+      },
+      "blue": {
+        "rows": 93579,
+        "usable": true,
+        "p95": 9.934094888295244,
+        "faint_rows": 18716
+      }
+    }
+  },
+  {
+    "zlo": 0.17,
+    "zhi": 0.18,
+    "populations": {
+      "all": {
+        "rows": 278012,
+        "usable": true,
+        "faint_rows": 55603,
+        "p90": 10.321835215948727,
+        "p95": 10.422794170310363
+      },
+      "quiescent": {
+        "rows": 106733,
+        "usable": true,
+        "faint_rows": 21347,
+        "p90": 10.354174252789642,
+        "p95": 10.416783162725572
+      },
+      "starforming": {
+        "rows": 171279,
+        "usable": true,
+        "faint_rows": 34256,
+        "p90": 10.291453033355339,
+        "p95": 10.422950221517409
+      }
+    },
+    "usable": true,
+    "logmass_limit": 10.501679111777383,
+    "colour_populations": {
+      "red": {
+        "rows": 191544,
+        "usable": true,
+        "p95": 10.501679111777383,
+        "faint_rows": 38309
+      },
+      "blue": {
+        "rows": 86417,
+        "usable": true,
+        "p95": 9.981352740432383,
+        "faint_rows": 17284
+      }
+    }
+  },
+  {
+    "zlo": 0.18,
+    "zhi": 0.19,
+    "populations": {
+      "all": {
+        "rows": 289357,
+        "usable": true,
+        "faint_rows": 57872,
+        "p90": 10.385176944074425,
+        "p95": 10.48499526900472
+      },
+      "quiescent": {
+        "rows": 116422,
+        "usable": true,
+        "faint_rows": 23285,
+        "p90": 10.416382766491797,
+        "p95": 10.476310700027677
+      },
+      "starforming": {
+        "rows": 172935,
+        "usable": true,
+        "faint_rows": 34587,
+        "p90": 10.356116231468087,
+        "p95": 10.486450727805892
+      }
+    },
+    "usable": true,
+    "logmass_limit": 10.549005160349074,
+    "colour_populations": {
+      "red": {
+        "rows": 209382,
+        "usable": true,
+        "p95": 10.549005160349074,
+        "faint_rows": 41877
+      },
+      "blue": {
+        "rows": 79913,
+        "usable": true,
+        "p95": 10.021642799702127,
+        "faint_rows": 15983
+      }
+    }
+  },
+  {
+    "zlo": 0.19,
+    "zhi": 0.2,
+    "populations": {
+      "all": {
+        "rows": 285776,
+        "usable": true,
+        "faint_rows": 57157,
+        "p90": 10.449815422856028,
+        "p95": 10.539615038502472
+      },
+      "quiescent": {
+        "rows": 119023,
+        "usable": true,
+        "faint_rows": 23805,
+        "p90": 10.480029576567839,
+        "p95": 10.53698874558501
+      },
+      "starforming": {
+        "rows": 166753,
+        "usable": true,
+        "faint_rows": 33351,
+        "p90": 10.421536605896586,
+        "p95": 10.540970964489416
+      }
+    },
+    "usable": true,
+    "logmass_limit": 10.596137445051497,
+    "colour_populations": {
+      "red": {
+        "rows": 217296,
+        "usable": true,
+        "p95": 10.596137445051497,
+        "faint_rows": 43461
+      },
+      "blue": {
+        "rows": 68408,
+        "usable": true,
+        "p95": 10.05553211218535,
+        "faint_rows": 13682
+      }
+    }
+  }
+]
