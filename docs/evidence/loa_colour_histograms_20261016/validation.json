@@ -1,0 +1,231 @@
+{
+  "source_sha256": "1ce0c47173d112e657531e524380525de943982318a8c48646a27430484b5a10",
+  "audit_sha256": "256a84dceba05814a28794f4453f04120ff919c0515461927fc69e149e3bdae2",
+  "script_sha256": "c9898e69575481339331f02cf32e6a651fb8c7229fa5210ae17aa55a28428892",
+  "checks": [
+    {
+      "method": "hard",
+      "window": "z015020",
+      "environment": "Void",
+      "total": 101865.0,
+      "displayed": 101865.0,
+      "omitted": 0.0,
+      "integral": 1.0
+    },
+    {
+      "method": "hard",
+      "window": "z015020",
+      "environment": "Wall",
+      "total": 229478.0,
+      "displayed": 229477.0,
+      "omitted": 1.0,
+      "integral": 1.0
+    },
+    {
+      "method": "hard",
+      "window": "z015020",
+      "environment": "Filament",
+      "total": 171474.0,
+      "displayed": 171474.0,
+      "omitted": 0.0,
+      "integral": 1.0
+    },
+    {
+      "method": "hard",
+      "window": "z015020",
+      "environment": "Cluster",
+      "total": 31253.0,
+      "displayed": 31253.0,
+      "omitted": 0.0,
+      "integral": 1.0
+    },
+    {
+      "method": "hard",
+      "window": "z020022",
+      "environment": "Void",
+      "total": 44019.0,
+      "displayed": 44019.0,
+      "omitted": 0.0,
+      "integral": 1.0
+    },
+    {
+      "method": "hard",
+      "window": "z020022",
+      "environment": "Wall",
+      "total": 99223.0,
+      "displayed": 99222.0,
+      "omitted": 1.0,
+      "integral": 1.0
+    },
+    {
+      "method": "hard",
+      "window": "z020022",
+      "environment": "Filament",
+      "total": 76222.0,
+      "displayed": 76222.0,
+      "omitted": 0.0,
+      "integral": 1.0
+    },
+    {
+      "method": "hard",
+      "window": "z020022",
+      "environment": "Cluster",
+      "total": 12560.0,
+      "displayed": 12560.0,
+      "omitted": 0.0,
+      "integral": 1.0
+    },
+    {
+      "method": "hard",
+      "window": "z020030",
+      "environment": "Void",
+      "total": 104151.0,
+      "displayed": 104149.0,
+      "omitted": 2.0,
+      "integral": 1.0
+    },
+    {
+      "method": "hard",
+      "window": "z020030",
+      "environment": "Wall",
+      "total": 262655.0,
+      "displayed": 262652.0,
+      "omitted": 3.0,
+      "integral": 1.0
+    },
+    {
+      "method": "hard",
+      "window": "z020030",
+      "environment": "Filament",
+      "total": 210268.0,
+      "displayed": 210268.0,
+      "omitted": 0.0,
+      "integral": 1.0
+    },
+    {
+      "method": "hard",
+      "window": "z020030",
+      "environment": "Cluster",
+      "total": 34123.0,
+      "displayed": 34121.0,
+      "omitted": 2.0,
+      "integral": 1.0
+    },
+    {
+      "method": "soft",
+      "window": "z015020",
+      "environment": "Void",
+      "total": 106223.435546875,
+      "displayed": 106223.212890625,
+      "omitted": 0.22265625,
+      "integral": 1.0
+    },
+    {
+      "method": "soft",
+      "window": "z015020",
+      "environment": "Wall",
+      "total": 220416.818359375,
+      "displayed": 220416.0625,
+      "omitted": 0.755859375,
+      "integral": 1.0
+    },
+    {
+      "method": "soft",
+      "window": "z015020",
+      "environment": "Filament",
+      "total": 165179.125,
+      "displayed": 165179.103515625,
+      "omitted": 0.021484375,
+      "integral": 1.0
+    },
+    {
+      "method": "soft",
+      "window": "z015020",
+      "environment": "Cluster",
+      "total": 42250.62109375,
+      "displayed": 42250.62109375,
+      "omitted": 0.0,
+      "integral": 1.0
+    },
+    {
+      "method": "soft",
+      "window": "z020022",
+      "environment": "Void",
+      "total": 45873.697265625,
+      "displayed": 45873.6953125,
+      "omitted": 0.001953125,
+      "integral": 1.0
+    },
+    {
+      "method": "soft",
+      "window": "z020022",
+      "environment": "Wall",
+      "total": 95531.75390625,
+      "displayed": 95530.779296875,
+      "omitted": 0.974609375,
+      "integral": 1.0
+    },
+    {
+      "method": "soft",
+      "window": "z020022",
+      "environment": "Filament",
+      "total": 72821.841796875,
+      "displayed": 72821.826171875,
+      "omitted": 0.015625,
+      "integral": 1.0
+    },
+    {
+      "method": "soft",
+      "window": "z020022",
+      "environment": "Cluster",
+      "total": 17796.70703125,
+      "displayed": 17796.69921875,
+      "omitted": 0.0078125,
+      "integral": 1.0
+    },
+    {
+      "method": "soft",
+      "window": "z020030",
+      "environment": "Void",
+      "total": 109537.7265625,
+      "displayed": 109536.201171875,
+      "omitted": 1.525390625,
+      "integral": 1.0
+    },
+    {
+      "method": "soft",
+      "window": "z020030",
+      "environment": "Wall",
+      "total": 251420.935546875,
+      "displayed": 251417.986328125,
+      "omitted": 2.94921875,
+      "integral": 1.0
+    },
+    {
+      "method": "soft",
+      "window": "z020030",
+      "environment": "Filament",
+      "total": 200219.583984375,
+      "displayed": 200218.337890625,
+      "omitted": 1.24609375,
+      "integral": 1.0
+    },
+    {
+      "method": "soft",
+      "window": "z020030",
+      "environment": "Cluster",
+      "total": 50018.75390625,
+      "displayed": 50017.474609375,
+      "omitted": 1.279296875,
+      "integral": 1.0
+    }
+  ],
+  "normalization": "Per-environment unit area within archived 2-D display bounds",
+  "outputs": {
+    "docs/figures/loa_colour_histograms_20261016/observed_colour_hard.pdf": "d1a25214c08c73865b9165b36fa1d018eb68e9103c06da0ad14c83d981a401ab",
+    "docs/figures/loa_colour_histograms_20261016/observed_colour_hard.png": "8fe65a21699bac3c5dc3817d7078ed9f6047b6f50ea506e3bea1851d9a31600d",
+    "docs/figures/loa_colour_histograms_20261016/observed_colour_soft.pdf": "bbfe642c42243f57f3eb834f47304dca0324a69230b5f7e9cb9876ce66195870",
+    "docs/figures/loa_colour_histograms_20261016/observed_colour_soft.png": "1db0c83d9c65bca6fbcc8b0d3bc61102fde4bed4d5c4244562531aeb848bbce8"
+  },
+  "table_sha256": "96f4dc2c1b2af601ea6b01a61c59666d17fe373d5921525a2157b1383232e5ce"
+}
