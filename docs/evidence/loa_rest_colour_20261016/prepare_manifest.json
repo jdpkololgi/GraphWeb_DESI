@@ -1,0 +1,22 @@
+{
+  "job": "59858561",
+  "host": "nid200021",
+  "code_sha256": "a750062127b28dd6247374157344f8678dd58dde89d4ced8cb550ed5f19c2f50",
+  "input_vac_sha256": "93a2cfd3a0b831611dab115b9d5cd08d412c8dbe5ebf234e4dddd6542d876a68",
+  "outputs": {
+    "rest_primary_z015020.fits": "b4fa6fa13f49598f70dd0c05c4e8ece3b6b88aceeeb6f0e868a6c488a5273302",
+    "rest_primary_z020030.fits": "a8a80644b7a82df962166c2c7da931c79631e20ccbfc52deb296fa5922b3f2dd",
+    "observed_original_z020022.fits": "a715190a4a2e9cfb6b322dd74fbde6f1461c8cb2844892854a7ef2ba0838beec",
+    "windows.json": "f2b25c2cac6be99129ce0cab1d023e19f9f01a433109c2b6c04fb56b7f87326e",
+    "paired_z020030.fits": "a8a80644b7a82df962166c2c7da931c79631e20ccbfc52deb296fa5922b3f2dd",
+    "observed_original_z020030.fits": "15a13201cb5d50cf6c9e0090e18f2edb03bfd1e917ff919ed85a74412ee210c0",
+    "paired_z020022.fits": "c2a04784ff896f7a18b1e904fee0c0acd923e5885716a285eb6ff8f82d3c6fe9",
+    "rest_primary_z020022.fits": "c2a04784ff896f7a18b1e904fee0c0acd923e5885716a285eb6ff8f82d3c6fe9",
+    "fixed_mass_colour_fractions.json": "98dcc4d3b7c69bbcc5f08fdf9f35d3569beb5642b95e13766804e6bf8dda13b3",
+    "paired_z015020.fits": "b4fa6fa13f49598f70dd0c05c4e8ece3b6b88aceeeb6f0e868a6c488a5273302",
+    "observed_original_z015020.fits": "ad1bdb6dd709ff3f6e40fa15db8a893c0053c1d29145c7d8039e83adc2bbb457",
+    "parent_rest_join.npy": "aed5e3ca6d67cb6dbd701dc6b8635eb0ee60a0bd5988bbd8c17e08aaba896e4b",
+    "rest_completeness.json": "59ec7dd2f8683b5e996e65871ad5607f37d04669bb455e9f47f38c7fa78c392a",
+    "join_audit.json": "8f2d038342775ea41d3a243ee331b5046cab693648e660ce043b1e811d279329"
+  }
+}

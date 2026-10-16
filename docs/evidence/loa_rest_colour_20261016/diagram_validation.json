@@ -1,0 +1,272 @@
+{
+  "observed_hard_z015020_0": {
+    "weight_total": 101865.0,
+    "weight_displayed": 101865.0,
+    "weight_outside": 0.0
+  },
+  "observed_hard_z015020_1": {
+    "weight_total": 229478.0,
+    "weight_displayed": 229477.0,
+    "weight_outside": 1.0
+  },
+  "observed_hard_z015020_2": {
+    "weight_total": 171474.0,
+    "weight_displayed": 171474.0,
+    "weight_outside": 0.0
+  },
+  "observed_hard_z015020_3": {
+    "weight_total": 31253.0,
+    "weight_displayed": 31253.0,
+    "weight_outside": 0.0
+  },
+  "observed_soft_z015020_0": {
+    "weight_total": 106223.435546875,
+    "weight_displayed": 106223.212890625,
+    "weight_outside": 0.22265625
+  },
+  "observed_soft_z015020_1": {
+    "weight_total": 220416.818359375,
+    "weight_displayed": 220416.0625,
+    "weight_outside": 0.755859375
+  },
+  "observed_soft_z015020_2": {
+    "weight_total": 165179.125,
+    "weight_displayed": 165179.103515625,
+    "weight_outside": 0.021484375
+  },
+  "observed_soft_z015020_3": {
+    "weight_total": 42250.62109375,
+    "weight_displayed": 42250.62109375,
+    "weight_outside": 0.0
+  },
+  "rest_hard_z015020_0": {
+    "weight_total": 89515.0,
+    "weight_displayed": 89515.0,
+    "weight_outside": 0.0
+  },
+  "rest_hard_z015020_1": {
+    "weight_total": 204244.0,
+    "weight_displayed": 204244.0,
+    "weight_outside": 0.0
+  },
+  "rest_hard_z015020_2": {
+    "weight_total": 153682.0,
+    "weight_displayed": 153682.0,
+    "weight_outside": 0.0
+  },
+  "rest_hard_z015020_3": {
+    "weight_total": 28120.0,
+    "weight_displayed": 28120.0,
+    "weight_outside": 0.0
+  },
+  "rest_soft_z015020_0": {
+    "weight_total": 93492.201171875,
+    "weight_displayed": 93492.201171875,
+    "weight_outside": 0.0
+  },
+  "rest_soft_z015020_1": {
+    "weight_total": 196173.640625,
+    "weight_displayed": 196173.640625,
+    "weight_outside": 0.0
+  },
+  "rest_soft_z015020_2": {
+    "weight_total": 147939.34765625,
+    "weight_displayed": 147939.34765625,
+    "weight_outside": 0.0
+  },
+  "rest_soft_z015020_3": {
+    "weight_total": 37955.810546875,
+    "weight_displayed": 37955.810546875,
+    "weight_outside": 0.0
+  },
+  "paired_observed_z015020": {
+    "weight_total": 475561.0,
+    "weight_displayed": 475560.0,
+    "weight_outside": 1.0
+  },
+  "paired_rest_z015020": {
+    "weight_total": 475561.0,
+    "weight_displayed": 475561.0,
+    "weight_outside": 0.0
+  },
+  "observed_hard_z020022_0": {
+    "weight_total": 44019.0,
+    "weight_displayed": 44019.0,
+    "weight_outside": 0.0
+  },
+  "observed_hard_z020022_1": {
+    "weight_total": 99223.0,
+    "weight_displayed": 99222.0,
+    "weight_outside": 1.0
+  },
+  "observed_hard_z020022_2": {
+    "weight_total": 76222.0,
+    "weight_displayed": 76222.0,
+    "weight_outside": 0.0
+  },
+  "observed_hard_z020022_3": {
+    "weight_total": 12560.0,
+    "weight_displayed": 12560.0,
+    "weight_outside": 0.0
+  },
+  "observed_soft_z020022_0": {
+    "weight_total": 45873.697265625,
+    "weight_displayed": 45873.6953125,
+    "weight_outside": 0.001953125
+  },
+  "observed_soft_z020022_1": {
+    "weight_total": 95531.75390625,
+    "weight_displayed": 95530.779296875,
+    "weight_outside": 0.974609375
+  },
+  "observed_soft_z020022_2": {
+    "weight_total": 72821.841796875,
+    "weight_displayed": 72821.826171875,
+    "weight_outside": 0.015625
+  },
+  "observed_soft_z020022_3": {
+    "weight_total": 17796.70703125,
+    "weight_displayed": 17796.69921875,
+    "weight_outside": 0.0078125
+  },
+  "rest_hard_z020022_0": {
+    "weight_total": 38185.0,
+    "weight_displayed": 38185.0,
+    "weight_outside": 0.0
+  },
+  "rest_hard_z020022_1": {
+    "weight_total": 87065.0,
+    "weight_displayed": 87065.0,
+    "weight_outside": 0.0
+  },
+  "rest_hard_z020022_2": {
+    "weight_total": 67441.0,
+    "weight_displayed": 67441.0,
+    "weight_outside": 0.0
+  },
+  "rest_hard_z020022_3": {
+    "weight_total": 11094.0,
+    "weight_displayed": 11094.0,
+    "weight_outside": 0.0
+  },
+  "rest_soft_z020022_0": {
+    "weight_total": 39830.576171875,
+    "weight_displayed": 39830.576171875,
+    "weight_outside": 0.0
+  },
+  "rest_soft_z020022_1": {
+    "weight_total": 83826.55859375,
+    "weight_displayed": 83826.55859375,
+    "weight_outside": 0.0
+  },
+  "rest_soft_z020022_2": {
+    "weight_total": 64373.49609375,
+    "weight_displayed": 64373.49609375,
+    "weight_outside": 0.0
+  },
+  "rest_soft_z020022_3": {
+    "weight_total": 15754.369140625,
+    "weight_displayed": 15754.369140625,
+    "weight_outside": 0.0
+  },
+  "paired_observed_z020022": {
+    "weight_total": 203785.0,
+    "weight_displayed": 203784.0,
+    "weight_outside": 1.0
+  },
+  "paired_rest_z020022": {
+    "weight_total": 203785.0,
+    "weight_displayed": 203785.0,
+    "weight_outside": 0.0
+  },
+  "observed_hard_z020030_0": {
+    "weight_total": 104151.0,
+    "weight_displayed": 104149.0,
+    "weight_outside": 2.0
+  },
+  "observed_hard_z020030_1": {
+    "weight_total": 262655.0,
+    "weight_displayed": 262652.0,
+    "weight_outside": 3.0
+  },
+  "observed_hard_z020030_2": {
+    "weight_total": 210268.0,
+    "weight_displayed": 210268.0,
+    "weight_outside": 0.0
+  },
+  "observed_hard_z020030_3": {
+    "weight_total": 34123.0,
+    "weight_displayed": 34121.0,
+    "weight_outside": 2.0
+  },
+  "observed_soft_z020030_0": {
+    "weight_total": 109537.7265625,
+    "weight_displayed": 109536.201171875,
+    "weight_outside": 1.525390625
+  },
+  "observed_soft_z020030_1": {
+    "weight_total": 251420.935546875,
+    "weight_displayed": 251417.986328125,
+    "weight_outside": 2.94921875
+  },
+  "observed_soft_z020030_2": {
+    "weight_total": 200219.583984375,
+    "weight_displayed": 200218.337890625,
+    "weight_outside": 1.24609375
+  },
+  "observed_soft_z020030_3": {
+    "weight_total": 50018.75390625,
+    "weight_displayed": 50017.474609375,
+    "weight_outside": 1.279296875
+  },
+  "rest_hard_z020030_0": {
+    "weight_total": 95317.0,
+    "weight_displayed": 95315.0,
+    "weight_outside": 2.0
+  },
+  "rest_hard_z020030_1": {
+    "weight_total": 242144.0,
+    "weight_displayed": 242143.0,
+    "weight_outside": 1.0
+  },
+  "rest_hard_z020030_2": {
+    "weight_total": 195318.0,
+    "weight_displayed": 195318.0,
+    "weight_outside": 0.0
+  },
+  "rest_hard_z020030_3": {
+    "weight_total": 31686.0,
+    "weight_displayed": 31685.0,
+    "weight_outside": 1.0
+  },
+  "rest_soft_z020030_0": {
+    "weight_total": 100291.22265625,
+    "weight_displayed": 100289.69921875,
+    "weight_outside": 1.5234375
+  },
+  "rest_soft_z020030_1": {
+    "weight_total": 231867.30078125,
+    "weight_displayed": 231866.185546875,
+    "weight_outside": 1.115234375
+  },
+  "rest_soft_z020030_2": {
+    "weight_total": 185821.388671875,
+    "weight_displayed": 185820.568359375,
+    "weight_outside": 0.8203125
+  },
+  "rest_soft_z020030_3": {
+    "weight_total": 46485.087890625,
+    "weight_displayed": 46484.546875,
+    "weight_outside": 0.541015625
+  },
+  "paired_observed_z020030": {
+    "weight_total": 564465.0,
+    "weight_displayed": 564458.0,
+    "weight_outside": 7.0
+  },
+  "paired_rest_z020030": {
+    "weight_total": 564465.0,
+    "weight_displayed": 564461.0,
+    "weight_outside": 4.0
+  }
+}

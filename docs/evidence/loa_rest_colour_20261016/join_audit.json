@@ -1,0 +1,109 @@
+{
+  "parent_rows": 3734198,
+  "valid": 3734189,
+  "unmatched": 0,
+  "duplicate": 0,
+  "invalid_single": 9,
+  "source_row_checks": 384,
+  "files": [
+    {
+      "index": 0,
+      "path": "/global/cfs/cdirs/desi/vac/dr2/fastspecfit/loa/v1.0/catalogs/fastspec-loa-main-bright-nside1-hp00.fits",
+      "bytes": 1432036800,
+      "mtime_ns": 1743125151000000000,
+      "matched_rows": 84430,
+      "matched_input_columns_sha256": "8ea326752215c56e9accc4651cf4f15f05ab2e1fad0bc51fb4b17c8c073197b2"
+    },
+    {
+      "index": 1,
+      "path": "/global/cfs/cdirs/desi/vac/dr2/fastspecfit/loa/v1.0/catalogs/fastspec-loa-main-bright-nside1-hp01.fits",
+      "bytes": 11848570560,
+      "mtime_ns": 1743125403000000000,
+      "matched_rows": 755195,
+      "matched_input_columns_sha256": "88db7f863f94a5b8419e8b185aa9bd2140a067cec22c422486fb0028498675f4"
+    },
+    {
+      "index": 2,
+      "path": "/global/cfs/cdirs/desi/vac/dr2/fastspecfit/loa/v1.0/catalogs/fastspec-loa-main-bright-nside1-hp02.fits",
+      "bytes": 13819789440,
+      "mtime_ns": 1743125707000000000,
+      "matched_rows": 900537,
+      "matched_input_columns_sha256": "ef644c7ebdeb2a0ab7f6d648e40dec79be7ea40be817ac07350010fd52a176d7"
+    },
+    {
+      "index": 3,
+      "path": "/global/cfs/cdirs/desi/vac/dr2/fastspecfit/loa/v1.0/catalogs/fastspec-loa-main-bright-nside1-hp03.fits",
+      "bytes": 2820818880,
+      "mtime_ns": 1743125773000000000,
+      "matched_rows": 177738,
+      "matched_input_columns_sha256": "e95128fd5f7d4c06670f0b143c2e10f5a794789fdaaa066c95aedf9b5374c9c7"
+    },
+    {
+      "index": 4,
+      "path": "/global/cfs/cdirs/desi/vac/dr2/fastspecfit/loa/v1.0/catalogs/fastspec-loa-main-bright-nside1-hp04.fits",
+      "bytes": 10055180160,
+      "mtime_ns": 1743125977000000000,
+      "matched_rows": 666504,
+      "matched_input_columns_sha256": "12f9e41eec964f37cecdfc0e4046d42aa26c2819ccdac3089042d9b7b263cfb8"
+    },
+    {
+      "index": 5,
+      "path": "/global/cfs/cdirs/desi/vac/dr2/fastspecfit/loa/v1.0/catalogs/fastspec-loa-main-bright-nside1-hp05.fits",
+      "bytes": 1798297920,
+      "mtime_ns": 1743126018000000000,
+      "matched_rows": 118256,
+      "matched_input_columns_sha256": "087ddecd403c45889cfba00f8be49e7063abc363d7210e2a0cf67a79b44c4db2"
+    },
+    {
+      "index": 6,
+      "path": "/global/cfs/cdirs/desi/vac/dr2/fastspecfit/loa/v1.0/catalogs/fastspec-loa-main-bright-nside1-hp06.fits",
+      "bytes": 10381622400,
+      "mtime_ns": 1743126217000000000,
+      "matched_rows": 663839,
+      "matched_input_columns_sha256": "18a7c15c5b9300f1ffbaec32308e6b33ccd2aa04ff1fb386fa68eada7f627b09"
+    },
+    {
+      "index": 7,
+      "path": "/global/cfs/cdirs/desi/vac/dr2/fastspecfit/loa/v1.0/catalogs/fastspec-loa-main-bright-nside1-hp07.fits",
+      "bytes": 3298227840,
+      "mtime_ns": 1743126289000000000,
+      "matched_rows": 199788,
+      "matched_input_columns_sha256": "1d8bc9181718b015dc8fb02f7f80ebbce97c0c16fecc6c34c0cd9953cd6623a0"
+    },
+    {
+      "index": 8,
+      "path": "/global/cfs/cdirs/desi/vac/dr2/fastspecfit/loa/v1.0/catalogs/fastspec-loa-main-bright-nside1-hp08.fits",
+      "bytes": 1353533760,
+      "mtime_ns": 1743126314000000000,
+      "matched_rows": 92796,
+      "matched_input_columns_sha256": "423242e2265bffd6df24e0541cd95a056ff268ae1245475d8cbae54823d745ea"
+    },
+    {
+      "index": 9,
+      "path": "/global/cfs/cdirs/desi/vac/dr2/fastspecfit/loa/v1.0/catalogs/fastspec-loa-main-bright-nside1-hp09.fits",
+      "bytes": 306676800,
+      "mtime_ns": 1743126322000000000,
+      "matched_rows": 20672,
+      "matched_input_columns_sha256": "71c1baf5525c921750d93b86d97d9360636900df925e159976dbff9998a92056"
+    },
+    {
+      "index": 10,
+      "path": "/global/cfs/cdirs/desi/vac/dr2/fastspecfit/loa/v1.0/catalogs/fastspec-loa-main-bright-nside1-hp10.fits",
+      "bytes": 266178240,
+      "mtime_ns": 1743126328000000000,
+      "matched_rows": 17000,
+      "matched_input_columns_sha256": "107a5d5aa95f73e266e3a7449ae10a0da9882f35fd44831741b714d0c79158f8"
+    },
+    {
+      "index": 11,
+      "path": "/global/cfs/cdirs/desi/vac/dr2/fastspecfit/loa/v1.0/catalogs/fastspec-loa-main-bright-nside1-hp11.fits",
+      "bytes": 624346560,
+      "mtime_ns": 1743126339000000000,
+      "matched_rows": 37443,
+      "matched_input_columns_sha256": "b756624115eeb49573399460e10355c4e62c46e8cf44e621c9a495f26d83aa2e"
+    }
+  ],
+  "source_parent_sha256": "766ab9c56543bdba09029424029a6d4bcf1f52d15091abf800ccfe8d286e686c",
+  "definition": "ABSMAG01_SDSS_G - ABSMAG01_SDSS_R; SDSS bands shifted to zref=0.1, not zref=0; no internal dust correction",
+  "quality": "Unique main-bright match, both magnitude IVAR>0, finite nonzero magnitudes, RCHI2_CONT>0 finite, ZWARN_RR=0, DELTACHI2>40, sep<=1arcsec, normalized z and z_RR agreement<=0.001"
+}

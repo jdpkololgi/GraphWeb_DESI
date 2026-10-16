@@ -1,0 +1,231 @@
+{
+  "logmass": 10.98,
+  "bins": [
+    {
+      "zlo": 0.15,
+      "zhi": 0.16,
+      "rows": 27160,
+      "observed": {
+        "red": 26921,
+        "blue": 235,
+        "blue_fraction_all": 0.008652430044182622
+      },
+      "rest": {
+        "red": 25782,
+        "blue": 1377,
+        "blue_fraction_all": 0.05069955817378498
+      }
+    },
+    {
+      "zlo": 0.16,
+      "zhi": 0.17,
+      "rows": 29956,
+      "observed": {
+        "red": 29784,
+        "blue": 169,
+        "blue_fraction_all": 0.005641607691280545
+      },
+      "rest": {
+        "red": 28311,
+        "blue": 1644,
+        "blue_fraction_all": 0.05488049138736814
+      }
+    },
+    {
+      "zlo": 0.17,
+      "zhi": 0.18,
+      "rows": 33559,
+      "observed": {
+        "red": 33366,
+        "blue": 177,
+        "blue_fraction_all": 0.005274293036145296
+      },
+      "rest": {
+        "red": 31556,
+        "blue": 1997,
+        "blue_fraction_all": 0.059507136684644954
+      }
+    },
+    {
+      "zlo": 0.18,
+      "zhi": 0.19,
+      "rows": 38249,
+      "observed": {
+        "red": 38101,
+        "blue": 132,
+        "blue_fraction_all": 0.0034510706162252606
+      },
+      "rest": {
+        "red": 35855,
+        "blue": 2385,
+        "blue_fraction_all": 0.06235457136134278
+      }
+    },
+    {
+      "zlo": 0.19,
+      "zhi": 0.2,
+      "rows": 41834,
+      "observed": {
+        "red": 41734,
+        "blue": 80,
+        "blue_fraction_all": 0.001912320122388488
+      },
+      "rest": {
+        "red": 39044,
+        "blue": 2787,
+        "blue_fraction_all": 0.06662045226370894
+      }
+    },
+    {
+      "zlo": 0.2,
+      "zhi": 0.21,
+      "rows": 45018,
+      "observed": {
+        "red": 44915,
+        "blue": 79,
+        "blue_fraction_all": 0.0017548536141099116
+      },
+      "rest": {
+        "red": 41913,
+        "blue": 3104,
+        "blue_fraction_all": 0.0689501976986983
+      }
+    },
+    {
+      "zlo": 0.21,
+      "zhi": 0.22,
+      "rows": 47178,
+      "observed": {
+        "red": 47060,
+        "blue": 67,
+        "blue_fraction_all": 0.001420153461359108
+      },
+      "rest": {
+        "red": 43657,
+        "blue": 3519,
+        "blue_fraction_all": 0.07458985120183136
+      }
+    },
+    {
+      "zlo": 0.22,
+      "zhi": 0.23,
+      "rows": 53150,
+      "observed": {
+        "red": 52950,
+        "blue": 50,
+        "blue_fraction_all": 0.0009407337723424271
+      },
+      "rest": {
+        "red": 49094,
+        "blue": 4056,
+        "blue_fraction_all": 0.07631232361241769
+      }
+    },
+    {
+      "zlo": 0.23,
+      "zhi": 0.24,
+      "rows": 52570,
+      "observed": {
+        "red": 52204,
+        "blue": 34,
+        "blue_fraction_all": 0.000646756705345254
+      },
+      "rest": {
+        "red": 48671,
+        "blue": 3898,
+        "blue_fraction_all": 0.07414875404222941
+      }
+    },
+    {
+      "zlo": 0.24,
+      "zhi": 0.25,
+      "rows": 51392,
+      "observed": {
+        "red": 50387,
+        "blue": 16,
+        "blue_fraction_all": 0.00031133250311332503
+      },
+      "rest": {
+        "red": 47599,
+        "blue": 3792,
+        "blue_fraction_all": 0.07378580323785804
+      }
+    },
+    {
+      "zlo": 0.25,
+      "zhi": 0.26,
+      "rows": 56402,
+      "observed": {
+        "red": 53452,
+        "blue": 7,
+        "blue_fraction_all": 0.00012410907414630687
+      },
+      "rest": {
+        "red": 52164,
+        "blue": 4234,
+        "blue_fraction_all": 0.07506825999078047
+      }
+    },
+    {
+      "zlo": 0.26,
+      "zhi": 0.27,
+      "rows": 60925,
+      "observed": {
+        "red": 52850,
+        "blue": 15,
+        "blue_fraction_all": 0.00024620434961017645
+      },
+      "rest": {
+        "red": 56124,
+        "blue": 4799,
+        "blue_fraction_all": 0.07876897825194912
+      }
+    },
+    {
+      "zlo": 0.27,
+      "zhi": 0.28,
+      "rows": 63062,
+      "observed": {
+        "red": 49636,
+        "blue": 21,
+        "blue_fraction_all": 0.0003330056135231994
+      },
+      "rest": {
+        "red": 57752,
+        "blue": 5308,
+        "blue_fraction_all": 0.08417113317053058
+      }
+    },
+    {
+      "zlo": 0.28,
+      "zhi": 0.29,
+      "rows": 65514,
+      "observed": {
+        "red": 45410,
+        "blue": 13,
+        "blue_fraction_all": 0.00019843086973776597
+      },
+      "rest": {
+        "red": 59688,
+        "blue": 5822,
+        "blue_fraction_all": 0.08886650181640565
+      }
+    },
+    {
+      "zlo": 0.29,
+      "zhi": 0.3,
+      "rows": 69254,
+      "observed": {
+        "red": 40767,
+        "blue": 11,
+        "blue_fraction_all": 0.0001588355907240015
+      },
+      "rest": {
+        "red": 63057,
+        "blue": 6193,
+        "blue_fraction_all": 0.08942443757761284
+      }
+    }
+  ],
+  "denominator": "All valid matched galaxies above the same mass floor in each bin, including those outside red/blue cuts"
+}

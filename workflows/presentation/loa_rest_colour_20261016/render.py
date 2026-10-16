@@ -1,6 +1,7 @@
 """Render audited environment-resolved colour–mass diagrams and trend products."""
 import os
 os.environ['MPLBACKEND']='Agg'
+import argparse
 import csv
 import json
 from pathlib import Path
@@ -8,6 +9,7 @@ import socket
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.colors import LogNorm
+from matplotlib.ticker import MaxNLocator
 from run import OUT, WINDOWS, ENV, masks, sha, write
 
 LABELS={'quenched':'Quenched fraction (sSFR < 10⁻¹¹ yr⁻¹)','logmass':'Mean log₁₀ stellar mass [M☉]',
@@ -127,13 +129,13 @@ def trends(windows):
             fig.text(.5,.02,'Inferred environment probabilities; red/blue curves have different support. Colour is not a quenching label. No causal or calibration claim.',ha='center',fontsize=10)
             save(fig,f'properties_{variant}_{key}')
         # Compact sensitivity plot for the requested red/blue environment trends.
-        fig,axs=plt.subplots(2,3,figsize=(14,8))
+        fig,axs=plt.subplots(2,3,figsize=(15,11))
         for i,(group,col) in enumerate([('red','#b52c3c'),('blue','#176bad')]):
             for j,prop in enumerate(['quenched','logssfr','colour']):
                 ax=axs[i,j];factor=100 if prop=='quenched' else 1
-                specs=[(.75,'0.1_soft','0.75 / 0.10 / soft'),(.75,'0.05_soft','0.75 / 0.05 / soft'),
-                       (.75,'0.1_joint','0.75 / 0.10 / joint'),(.75,'0.05_joint','0.75 / 0.05 / joint'),
-                       (.70,'0.1_soft','0.70 / 0.10 / soft'),(.80,'0.1_soft','0.80 / 0.10 / soft')]
+                specs=[(cut,f'{width}_{support}',f'{cut:.2f} / {width:.2f} / {support}')
+                       for cut in [.75,.70,.80]
+                       for width,support in [(.1,'soft'),(.05,'soft'),(.1,'joint'),(.05,'joint')]]
                 for y,(cut,mode,name) in enumerate(specs):
                     d=json.loads((OUT/f'relationships_rest_primary_{key}_cut{round(cut*100):02d}.json').read_text())[group][prop]['controlled'][mode]
                     if d['status']=='measured':
@@ -143,6 +145,7 @@ def trends(windows):
                 ax.axvline(0,ls=':',color='gray');ax.set_yticks(range(len(specs)),[s[2] for s in specs],fontsize=8);ax.invert_yaxis()
                 label={'quenched':'Δ quenched [percentage points]','logssfr':'Δ log sSFR [dex]','colour':'Δ rest-frame colour [mag]'}[prop]
                 ax.set_title(group.capitalize()+' · '+label,fontsize=11);ax.grid(axis='x',alpha=.2)
+                ax.xaxis.set_major_locator(MaxNLocator(nbins=4))
         fig.suptitle(f"Rest-frame cluster − void contrasts · {w['zlo']:.2f} ≤ z < {w['zhi']:.2f}\nSensitivity: colour boundary / mass-cell width [dex] / support mode · conditional 95% intervals",fontsize=13)
         fig.tight_layout(rect=[0,.05,1,.90]);fig.text(.5,.015,'Joint means soft + hard common support; plotted estimate remains soft. All variants use the same audited mass cut.',ha='center',fontsize=9)
         save(fig,f'contrasts_rest_sensitivity_{key}')
@@ -161,6 +164,10 @@ def trends(windows):
 
 
 def main():
+    global FIG
+    ap=argparse.ArgumentParser();ap.add_argument('--output-name',default='presentation');args=ap.parse_args()
+    if Path(args.output_name).name!=args.output_name:raise ValueError('Output must be one directory name')
+    FIG=OUT/args.output_name
     if not os.environ.get('SLURM_JOB_ID') or not socket.gethostname().startswith('nid'):raise RuntimeError('Approved compute allocation required')
     FIG.mkdir(exist_ok=False)
     windows=json.loads((OUT/'windows.json').read_text())
@@ -177,7 +184,7 @@ def main():
     ax.legend();ax.grid(alpha=.2)
     fig.text(.5,.02,'Descriptive counts; denominator includes colours outside the red/blue cuts. No volume weighting.',ha='center',fontsize=9)
     fig.tight_layout(rect=[0,.06,1,1]);save(fig,'blue_fraction_fixed_mass')
-    write('presentation_manifest.json',dict(job=os.environ['SLURM_JOB_ID'],host=socket.gethostname(),code_sha256=sha(Path(__file__)),
+    write('presentation_manifest.json' if FIG.name=='presentation' else FIG.name+'_manifest.json',dict(job=os.environ['SLURM_JOB_ID'],host=socket.gethostname(),code_sha256=sha(Path(__file__)),
         analysis_sha256=sha(OUT/'analysis_manifest.json'),outputs={p.name:sha(p) for p in FIG.iterdir() if p.is_file()}))
     print('Rendering complete',str(FIG),flush=True)
 

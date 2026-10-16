@@ -1,0 +1,380 @@
+[
+  {
+    "source": "/pscratch/sd/d/dkololgi/graphweb_desi/outputs/loa_rest_colour_20261016_v1/relationships_paired_observed_z015020_cut75.json",
+    "destination": "docs/evidence/loa_rest_colour_20261016/relationships_paired_observed_z015020_cut75.json",
+    "bytes": 286999,
+    "sha256": "c9e7a10f64e542bd183477cfda355ae349fea88acd987f569d704eae8ca7c0c1"
+  },
+  {
+    "source": "/pscratch/sd/d/dkololgi/graphweb_desi/outputs/loa_rest_colour_20261016_v1/presentation_manifest.json",
+    "destination": "docs/evidence/loa_rest_colour_20261016/presentation_manifest.json",
+    "bytes": 4382,
+    "sha256": "94723dd413a7151568623bd44d045a66bb4439a1466941f5253c8af3ce89d9fa"
+  },
+  {
+    "source": "/pscratch/sd/d/dkololgi/graphweb_desi/outputs/loa_rest_colour_20261016_v1/relationships_rest_primary_z020022_cut70.json",
+    "destination": "docs/evidence/loa_rest_colour_20261016/relationships_rest_primary_z020022_cut70.json",
+    "bytes": 83344,
+    "sha256": "e507fe1a73bdb26b53ccc5d3e13e10c35e869f809b6e1771c761977dd5669190"
+  },
+  {
+    "source": "/pscratch/sd/d/dkololgi/graphweb_desi/outputs/loa_rest_colour_20261016_v1/presentation_v2_manifest.json",
+    "destination": "docs/evidence/loa_rest_colour_20261016/presentation_v2_manifest.json",
+    "bytes": 4382,
+    "sha256": "188e95f6c4c8cd79564e38084c608a6fe012beb4ce01a35824eef3f10ac0482b"
+  },
+  {
+    "source": "/pscratch/sd/d/dkololgi/graphweb_desi/outputs/loa_rest_colour_20261016_v1/prepare_manifest.json",
+    "destination": "docs/evidence/loa_rest_colour_20261016/prepare_manifest.json",
+    "bytes": 1628,
+    "sha256": "11fe96429dd0f92f42dff5ae3fa4938f8969f419305b6cc41af2a69a065fa80a"
+  },
+  {
+    "source": "/pscratch/sd/d/dkololgi/graphweb_desi/outputs/loa_rest_colour_20261016_v1/relationships_paired_rest_z020030_cut75.json",
+    "destination": "docs/evidence/loa_rest_colour_20261016/relationships_paired_rest_z020030_cut75.json",
+    "bytes": 397505,
+    "sha256": "03fe1bc154438574401efa48dc5e0f3676d607700b4fc245d169d75ab03e1e1a"
+  },
+  {
+    "source": "/pscratch/sd/d/dkololgi/graphweb_desi/outputs/loa_rest_colour_20261016_v1/relationships_paired_observed_z020030_cut75.json",
+    "destination": "docs/evidence/loa_rest_colour_20261016/relationships_paired_observed_z020030_cut75.json",
+    "bytes": 258071,
+    "sha256": "36b4b024e234f39faaa883f40945c9523c932ca992869caf8206e4dd14d10924"
+  },
+  {
+    "source": "/pscratch/sd/d/dkololgi/graphweb_desi/outputs/loa_rest_colour_20261016_v1/windows.json",
+    "destination": "docs/evidence/loa_rest_colour_20261016/windows.json",
+    "bytes": 18927,
+    "sha256": "f2b25c2cac6be99129ce0cab1d023e19f9f01a433109c2b6c04fb56b7f87326e"
+  },
+  {
+    "source": "/pscratch/sd/d/dkololgi/graphweb_desi/outputs/loa_rest_colour_20261016_v1/validation.json",
+    "destination": "docs/evidence/loa_rest_colour_20261016/validation.json",
+    "bytes": 1392,
+    "sha256": "998a91b93f5c61f84100944f70702e7f5a166616278fbe60f58cfe33d117ca7e"
+  },
+  {
+    "source": "/pscratch/sd/d/dkololgi/graphweb_desi/outputs/loa_rest_colour_20261016_v1/relationships_rest_primary_z020030_cut80.json",
+    "destination": "docs/evidence/loa_rest_colour_20261016/relationships_rest_primary_z020030_cut80.json",
+    "bytes": 168462,
+    "sha256": "927f6971df56e2440aedac95260d490927262d5f993626ec496e251238bc556f"
+  },
+  {
+    "source": "/pscratch/sd/d/dkololgi/graphweb_desi/outputs/loa_rest_colour_20261016_v1/fixed_mass_colour_fractions.json",
+    "destination": "docs/evidence/loa_rest_colour_20261016/fixed_mass_colour_fractions.json",
+    "bytes": 4826,
+    "sha256": "98dcc4d3b7c69bbcc5f08fdf9f35d3569beb5642b95e13766804e6bf8dda13b3"
+  },
+  {
+    "source": "/pscratch/sd/d/dkololgi/graphweb_desi/outputs/loa_rest_colour_20261016_v1/relationships_rest_primary_z015020_cut80.json",
+    "destination": "docs/evidence/loa_rest_colour_20261016/relationships_rest_primary_z015020_cut80.json",
+    "bytes": 135036,
+    "sha256": "120f39afd4c72b99b22b7c1bf7d1a0b0915badd436c8649a9e42d92d59c6ae73"
+  },
+  {
+    "source": "/pscratch/sd/d/dkololgi/graphweb_desi/outputs/loa_rest_colour_20261016_v1/relationships_rest_primary_z020030_cut75.json",
+    "destination": "docs/evidence/loa_rest_colour_20261016/relationships_rest_primary_z020030_cut75.json",
+    "bytes": 397505,
+    "sha256": "03fe1bc154438574401efa48dc5e0f3676d607700b4fc245d169d75ab03e1e1a"
+  },
+  {
+    "source": "/pscratch/sd/d/dkololgi/graphweb_desi/outputs/loa_rest_colour_20261016_v1/relationships_rest_primary_z020030_cut70.json",
+    "destination": "docs/evidence/loa_rest_colour_20261016/relationships_rest_primary_z020030_cut70.json",
+    "bytes": 149775,
+    "sha256": "9d5ac254880f95882bd2c93848ef2c16695054d295c6394bb91719e50c64a705"
+  },
+  {
+    "source": "/pscratch/sd/d/dkololgi/graphweb_desi/outputs/loa_rest_colour_20261016_v1/rest_completeness.json",
+    "destination": "docs/evidence/loa_rest_colour_20261016/rest_completeness.json",
+    "bytes": 13417,
+    "sha256": "59ec7dd2f8683b5e996e65871ad5607f37d04669bb455e9f47f38c7fa78c392a"
+  },
+  {
+    "source": "/pscratch/sd/d/dkololgi/graphweb_desi/outputs/loa_rest_colour_20261016_v1/relationships_rest_primary_z015020_cut70.json",
+    "destination": "docs/evidence/loa_rest_colour_20261016/relationships_rest_primary_z015020_cut70.json",
+    "bytes": 125379,
+    "sha256": "89b73bfc83c1ab36dcdd432dc6426229247ef88659289c393399c1e795420ce4"
+  },
+  {
+    "source": "/pscratch/sd/d/dkololgi/graphweb_desi/outputs/loa_rest_colour_20261016_v1/analysis_manifest.json",
+    "destination": "docs/evidence/loa_rest_colour_20261016/analysis_manifest.json",
+    "bytes": 2422,
+    "sha256": "3f7651606e6f68f281acbb959e11ec18dcc26d1537d88092be06fcf8e181fb72"
+  },
+  {
+    "source": "/pscratch/sd/d/dkololgi/graphweb_desi/outputs/loa_rest_colour_20261016_v1/relationships_paired_rest_z020022_cut75.json",
+    "destination": "docs/evidence/loa_rest_colour_20261016/relationships_paired_rest_z020022_cut75.json",
+    "bytes": 218978,
+    "sha256": "3a3799daff157254fb3a78bd83e289ae22cdbe967b8c5e37c1a9983a74368d13"
+  },
+  {
+    "source": "/pscratch/sd/d/dkololgi/graphweb_desi/outputs/loa_rest_colour_20261016_v1/relationships_rest_primary_z020022_cut75.json",
+    "destination": "docs/evidence/loa_rest_colour_20261016/relationships_rest_primary_z020022_cut75.json",
+    "bytes": 218978,
+    "sha256": "3a3799daff157254fb3a78bd83e289ae22cdbe967b8c5e37c1a9983a74368d13"
+  },
+  {
+    "source": "/pscratch/sd/d/dkololgi/graphweb_desi/outputs/loa_rest_colour_20261016_v1/relationships_paired_observed_z020022_cut75.json",
+    "destination": "docs/evidence/loa_rest_colour_20261016/relationships_paired_observed_z020022_cut75.json",
+    "bytes": 164497,
+    "sha256": "1991bcc52a02f221c67cd6860ab25e72aadc4db1da3bdf75dafe0400558a7100"
+  },
+  {
+    "source": "/pscratch/sd/d/dkololgi/graphweb_desi/outputs/loa_rest_colour_20261016_v1/relationships_paired_rest_z015020_cut75.json",
+    "destination": "docs/evidence/loa_rest_colour_20261016/relationships_paired_rest_z015020_cut75.json",
+    "bytes": 324554,
+    "sha256": "02e48917203da8d1b1071e97cd04b3d7a65bd09d0f4c42e53ee6a6a6971bbdeb"
+  },
+  {
+    "source": "/pscratch/sd/d/dkololgi/graphweb_desi/outputs/loa_rest_colour_20261016_v1/relationships_rest_primary_z015020_cut75.json",
+    "destination": "docs/evidence/loa_rest_colour_20261016/relationships_rest_primary_z015020_cut75.json",
+    "bytes": 324554,
+    "sha256": "02e48917203da8d1b1071e97cd04b3d7a65bd09d0f4c42e53ee6a6a6971bbdeb"
+  },
+  {
+    "source": "/pscratch/sd/d/dkololgi/graphweb_desi/outputs/loa_rest_colour_20261016_v1/relationships_rest_primary_z020022_cut80.json",
+    "destination": "docs/evidence/loa_rest_colour_20261016/relationships_rest_primary_z020022_cut80.json",
+    "bytes": 86514,
+    "sha256": "51d6974117d85bff15ba916e8e86542350cfe5a831ea32ddc539ec41b9690df5"
+  },
+  {
+    "source": "/pscratch/sd/d/dkololgi/graphweb_desi/outputs/loa_rest_colour_20261016_v1/diagram_validation.json",
+    "destination": "docs/evidence/loa_rest_colour_20261016/diagram_validation.json",
+    "bytes": 7098,
+    "sha256": "256a84dceba05814a28794f4453f04120ff919c0515461927fc69e149e3bdae2"
+  },
+  {
+    "source": "/pscratch/sd/d/dkololgi/graphweb_desi/outputs/loa_rest_colour_20261016_v1/join_audit.json",
+    "destination": "docs/evidence/loa_rest_colour_20261016/join_audit.json",
+    "bytes": 4787,
+    "sha256": "8f2d038342775ea41d3a243ee331b5046cab693648e660ce043b1e811d279329"
+  },
+  {
+    "source": "/pscratch/sd/d/dkololgi/graphweb_desi/outputs/loa_rest_colour_20261016_v1/presentation_v2/properties_paired_observed_z020022.pdf",
+    "destination": "docs/figures/loa_rest_colour_20261016/properties_paired_observed_z020022.pdf",
+    "bytes": 41065,
+    "sha256": "c7204ba59b69ccd343922da204e854d0a506edb98c017e196b1a86e8f657ef88"
+  },
+  {
+    "source": "/pscratch/sd/d/dkololgi/graphweb_desi/outputs/loa_rest_colour_20261016_v1/presentation_v2/properties_paired_observed_z020030.pdf",
+    "destination": "docs/figures/loa_rest_colour_20261016/properties_paired_observed_z020030.pdf",
+    "bytes": 37780,
+    "sha256": "0c709c5787c0e1dc10ff450d621d8005d7243a3ec848226dfcc0aa9e8bcaccfd"
+  },
+  {
+    "source": "/pscratch/sd/d/dkololgi/graphweb_desi/outputs/loa_rest_colour_20261016_v1/presentation_v2/colour_mass_rest_soft.pdf",
+    "destination": "docs/figures/loa_rest_colour_20261016/colour_mass_rest_soft.pdf",
+    "bytes": 168818,
+    "sha256": "dfd12f5eadc04cedcb95ab41a41666ece0184c78f18dae9e02f9ae4b0235ea39"
+  },
+  {
+    "source": "/pscratch/sd/d/dkololgi/graphweb_desi/outputs/loa_rest_colour_20261016_v1/presentation_v2/contrasts_rest_sensitivity_z020030.pdf",
+    "destination": "docs/figures/loa_rest_colour_20261016/contrasts_rest_sensitivity_z020030.pdf",
+    "bytes": 34291,
+    "sha256": "e06b71869717c07c6d6d2e0d095ba1b11032ca0ca997ed173731cf1231dc8285"
+  },
+  {
+    "source": "/pscratch/sd/d/dkololgi/graphweb_desi/outputs/loa_rest_colour_20261016_v1/presentation_v2/properties_rest_primary_z015020.png",
+    "destination": "docs/figures/loa_rest_colour_20261016/properties_rest_primary_z015020.png",
+    "bytes": 302807,
+    "sha256": "8aceaf40be2c334a2d98234b905e6acbe663b75071be1f833fb148668a0b7cfc"
+  },
+  {
+    "source": "/pscratch/sd/d/dkololgi/graphweb_desi/outputs/loa_rest_colour_20261016_v1/presentation_v2/properties_paired_rest_z015020.png",
+    "destination": "docs/figures/loa_rest_colour_20261016/properties_paired_rest_z015020.png",
+    "bytes": 303666,
+    "sha256": "0e22a59204b0b337ca1468a337683acf74a3045ec7f0a163aa09f27538071182"
+  },
+  {
+    "source": "/pscratch/sd/d/dkololgi/graphweb_desi/outputs/loa_rest_colour_20261016_v1/presentation_v2/properties_rest_primary_z020030.png",
+    "destination": "docs/figures/loa_rest_colour_20261016/properties_rest_primary_z020030.png",
+    "bytes": 297835,
+    "sha256": "2cb355ba9a1e68270c57403b9d1a3ae144ce67d6732c1316d6b83bde45b3ccd0"
+  },
+  {
+    "source": "/pscratch/sd/d/dkololgi/graphweb_desi/outputs/loa_rest_colour_20261016_v1/presentation_v2/contrasts_rest_sensitivity_z020022.pdf",
+    "destination": "docs/figures/loa_rest_colour_20261016/contrasts_rest_sensitivity_z020022.pdf",
+    "bytes": 34213,
+    "sha256": "68e2c0a03eccc6ca4cdc3f7a3cabe31d5bd6d96284d98d538a3167b44f3337f7"
+  },
+  {
+    "source": "/pscratch/sd/d/dkololgi/graphweb_desi/outputs/loa_rest_colour_20261016_v1/presentation_v2/contrasts_rest_sensitivity_z015020.pdf",
+    "destination": "docs/figures/loa_rest_colour_20261016/contrasts_rest_sensitivity_z015020.pdf",
+    "bytes": 33917,
+    "sha256": "87d98c88217b79fafcec590ff1a4fa778d1e45afe7d792c77c6c4f8cf3141aaa"
+  },
+  {
+    "source": "/pscratch/sd/d/dkololgi/graphweb_desi/outputs/loa_rest_colour_20261016_v1/presentation_v2/diagram_bins.npz",
+    "destination": "docs/evidence/loa_rest_colour_20261016/diagram_bins.npz",
+    "bytes": 472524,
+    "sha256": "1ce0c47173d112e657531e524380525de943982318a8c48646a27430484b5a10"
+  },
+  {
+    "source": "/pscratch/sd/d/dkololgi/graphweb_desi/outputs/loa_rest_colour_20261016_v1/presentation_v2/contrasts_rest_sensitivity_z020022.png",
+    "destination": "docs/figures/loa_rest_colour_20261016/contrasts_rest_sensitivity_z020022.png",
+    "bytes": 194148,
+    "sha256": "8b63881bc42ec8a1f20bd1b60f609c12407ae45aaf337ee82885e33106eaa5e3"
+  },
+  {
+    "source": "/pscratch/sd/d/dkololgi/graphweb_desi/outputs/loa_rest_colour_20261016_v1/presentation_v2/colour_mass_observed_hard.pdf",
+    "destination": "docs/figures/loa_rest_colour_20261016/colour_mass_observed_hard.pdf",
+    "bytes": 127372,
+    "sha256": "b9343e6a2a63a966a94e125658b62711bdaec8092ebdb46dd6b5b4252fb50435"
+  },
+  {
+    "source": "/pscratch/sd/d/dkololgi/graphweb_desi/outputs/loa_rest_colour_20261016_v1/presentation_v2/properties_paired_rest_z020022.png",
+    "destination": "docs/figures/loa_rest_colour_20261016/properties_paired_rest_z020022.png",
+    "bytes": 306945,
+    "sha256": "b38b0576d191471e2663470df897367affdf4acb481f66e1dd9834685958a133"
+  },
+  {
+    "source": "/pscratch/sd/d/dkololgi/graphweb_desi/outputs/loa_rest_colour_20261016_v1/presentation_v2/curves_and_contrasts.csv",
+    "destination": "docs/evidence/loa_rest_colour_20261016/curves_and_contrasts.csv",
+    "bytes": 289468,
+    "sha256": "068bebbb8884eeaf8bd352712ca1e5fe5ac1a15c2bf8ea3c3d8fd050c425405a"
+  },
+  {
+    "source": "/pscratch/sd/d/dkololgi/graphweb_desi/outputs/loa_rest_colour_20261016_v1/presentation_v2/colour_mass_observed_soft.pdf",
+    "destination": "docs/figures/loa_rest_colour_20261016/colour_mass_observed_soft.pdf",
+    "bytes": 189934,
+    "sha256": "331e272bce1dd53f668d6b132d690edffb5dbc810ed1b6111852138dd9ffc147"
+  },
+  {
+    "source": "/pscratch/sd/d/dkololgi/graphweb_desi/outputs/loa_rest_colour_20261016_v1/presentation_v2/properties_paired_observed_z015020.png",
+    "destination": "docs/figures/loa_rest_colour_20261016/properties_paired_observed_z015020.png",
+    "bytes": 280671,
+    "sha256": "58e6c3ed97795059a34e0eb56bb8f087e9fddabebb0cdc83b19f1e251ac553c2"
+  },
+  {
+    "source": "/pscratch/sd/d/dkololgi/graphweb_desi/outputs/loa_rest_colour_20261016_v1/presentation_v2/properties_rest_primary_z020022.png",
+    "destination": "docs/figures/loa_rest_colour_20261016/properties_rest_primary_z020022.png",
+    "bytes": 306107,
+    "sha256": "fcf3a466250bb524ce42ff0d9fd3ec95bb10b3da017baa32e0d6e4ac7ae43c07"
+  },
+  {
+    "source": "/pscratch/sd/d/dkololgi/graphweb_desi/outputs/loa_rest_colour_20261016_v1/presentation_v2/blue_fraction_fixed_mass.png",
+    "destination": "docs/figures/loa_rest_colour_20261016/blue_fraction_fixed_mass.png",
+    "bytes": 80836,
+    "sha256": "f3101230a664b04e5ba50a428f89500721b2209e3265bf5fb711a46db4d9c955"
+  },
+  {
+    "source": "/pscratch/sd/d/dkololgi/graphweb_desi/outputs/loa_rest_colour_20261016_v1/presentation_v2/colour_mass_rest_soft.png",
+    "destination": "docs/figures/loa_rest_colour_20261016/colour_mass_rest_soft.png",
+    "bytes": 452775,
+    "sha256": "0c09db33f57cc9f503b326efb7fdcdf6a54928423d357b80a3dde8b08c6c4c63"
+  },
+  {
+    "source": "/pscratch/sd/d/dkololgi/graphweb_desi/outputs/loa_rest_colour_20261016_v1/presentation_v2/colour_mass_observed_rest_paired.png",
+    "destination": "docs/figures/loa_rest_colour_20261016/colour_mass_observed_rest_paired.png",
+    "bytes": 286301,
+    "sha256": "99198db0f2437147fe11c4000b4352b0f94574b951971c47c2f493132434122f"
+  },
+  {
+    "source": "/pscratch/sd/d/dkololgi/graphweb_desi/outputs/loa_rest_colour_20261016_v1/presentation_v2/colour_mass_observed_rest_paired.pdf",
+    "destination": "docs/figures/loa_rest_colour_20261016/colour_mass_observed_rest_paired.pdf",
+    "bytes": 86637,
+    "sha256": "34c7163061ab279f124f61372e707ebf4b01e954a397c6a2593743e8625ca257"
+  },
+  {
+    "source": "/pscratch/sd/d/dkololgi/graphweb_desi/outputs/loa_rest_colour_20261016_v1/presentation_v2/colour_mass_rest_hard.pdf",
+    "destination": "docs/figures/loa_rest_colour_20261016/colour_mass_rest_hard.pdf",
+    "bytes": 113731,
+    "sha256": "0c3cb01184f94e2f676a48828bb80373a52fb4ba83416c8987318c6d4f9a53a6"
+  },
+  {
+    "source": "/pscratch/sd/d/dkololgi/graphweb_desi/outputs/loa_rest_colour_20261016_v1/presentation_v2/properties_paired_observed_z020022.png",
+    "destination": "docs/figures/loa_rest_colour_20261016/properties_paired_observed_z020022.png",
+    "bytes": 288663,
+    "sha256": "d974e2446bd43c0f6ed9b60d123277e30c397d5292860c2c340d4055350bb1d6"
+  },
+  {
+    "source": "/pscratch/sd/d/dkololgi/graphweb_desi/outputs/loa_rest_colour_20261016_v1/presentation_v2/colour_mass_observed_hard.png",
+    "destination": "docs/figures/loa_rest_colour_20261016/colour_mass_observed_hard.png",
+    "bytes": 415116,
+    "sha256": "1cf390b4b63182a6de8d9cc8a7611a2d23849e4a87e2356bc1e97f7919bc2895"
+  },
+  {
+    "source": "/pscratch/sd/d/dkololgi/graphweb_desi/outputs/loa_rest_colour_20261016_v1/presentation_v2/properties_paired_observed_z020030.png",
+    "destination": "docs/figures/loa_rest_colour_20261016/properties_paired_observed_z020030.png",
+    "bytes": 290423,
+    "sha256": "81330de7e80956088bec2947776cb10b3579578622699229fd2de131237351db"
+  },
+  {
+    "source": "/pscratch/sd/d/dkololgi/graphweb_desi/outputs/loa_rest_colour_20261016_v1/presentation_v2/properties_rest_primary_z020022.pdf",
+    "destination": "docs/figures/loa_rest_colour_20261016/properties_rest_primary_z020022.pdf",
+    "bytes": 41548,
+    "sha256": "b23d53770dd10cbb31e1ac4a29a1464efe8a1204beee5e326ec98642f6055c20"
+  },
+  {
+    "source": "/pscratch/sd/d/dkololgi/graphweb_desi/outputs/loa_rest_colour_20261016_v1/presentation_v2/properties_rest_primary_z020030.pdf",
+    "destination": "docs/figures/loa_rest_colour_20261016/properties_rest_primary_z020030.pdf",
+    "bytes": 41189,
+    "sha256": "02713cdd028a4063ef830c5ecc8db9f42b565f812fc635be8e9caaf17a60effa"
+  },
+  {
+    "source": "/pscratch/sd/d/dkololgi/graphweb_desi/outputs/loa_rest_colour_20261016_v1/presentation_v2/blue_fraction_fixed_mass.pdf",
+    "destination": "docs/figures/loa_rest_colour_20261016/blue_fraction_fixed_mass.pdf",
+    "bytes": 20821,
+    "sha256": "eee7ef958d1474b039a855299ee56a71061054c9551985ef4277fb7c39661e2c"
+  },
+  {
+    "source": "/pscratch/sd/d/dkololgi/graphweb_desi/outputs/loa_rest_colour_20261016_v1/presentation_v2/contrasts_rest_sensitivity_z015020.png",
+    "destination": "docs/figures/loa_rest_colour_20261016/contrasts_rest_sensitivity_z015020.png",
+    "bytes": 193986,
+    "sha256": "bcc8e4c907e5a64ffd4d3cddc92e57cb893982f51c1f331319d9f2a84745ccc6"
+  },
+  {
+    "source": "/pscratch/sd/d/dkololgi/graphweb_desi/outputs/loa_rest_colour_20261016_v1/presentation_v2/properties_paired_rest_z015020.pdf",
+    "destination": "docs/figures/loa_rest_colour_20261016/properties_paired_rest_z015020.pdf",
+    "bytes": 41622,
+    "sha256": "9002ea32782cfa399a1d282fe102f85044ea03fd5900632e4720942f31e577bb"
+  },
+  {
+    "source": "/pscratch/sd/d/dkololgi/graphweb_desi/outputs/loa_rest_colour_20261016_v1/presentation_v2/colour_mass_rest_hard.png",
+    "destination": "docs/figures/loa_rest_colour_20261016/colour_mass_rest_hard.png",
+    "bytes": 386438,
+    "sha256": "0e6861274318fa98e03036f65c14e21bbc818b97331229e5dc7a68eceb9cca0a"
+  },
+  {
+    "source": "/pscratch/sd/d/dkololgi/graphweb_desi/outputs/loa_rest_colour_20261016_v1/presentation_v2/properties_paired_observed_z015020.pdf",
+    "destination": "docs/figures/loa_rest_colour_20261016/properties_paired_observed_z015020.pdf",
+    "bytes": 40845,
+    "sha256": "3d281aed9a45af9828761241541bdbb233eb706104e3b11267f26a1dfe4277bd"
+  },
+  {
+    "source": "/pscratch/sd/d/dkololgi/graphweb_desi/outputs/loa_rest_colour_20261016_v1/presentation_v2/properties_paired_rest_z020030.pdf",
+    "destination": "docs/figures/loa_rest_colour_20261016/properties_paired_rest_z020030.pdf",
+    "bytes": 41395,
+    "sha256": "c936c790bf4b98b04176dbaa55a49c2a2507aba61e0d184da9389fe4529ae367"
+  },
+  {
+    "source": "/pscratch/sd/d/dkololgi/graphweb_desi/outputs/loa_rest_colour_20261016_v1/presentation_v2/properties_paired_rest_z020030.png",
+    "destination": "docs/figures/loa_rest_colour_20261016/properties_paired_rest_z020030.png",
+    "bytes": 298725,
+    "sha256": "578efa726cce748e9149cce02e0f182e9dcaf491fd24a408fa6fa6ee0bef4c28"
+  },
+  {
+    "source": "/pscratch/sd/d/dkololgi/graphweb_desi/outputs/loa_rest_colour_20261016_v1/presentation_v2/properties_rest_primary_z015020.pdf",
+    "destination": "docs/figures/loa_rest_colour_20261016/properties_rest_primary_z015020.pdf",
+    "bytes": 41413,
+    "sha256": "7beaf9ab5910a5c92e736c5fa7701029c9ba15a921b43cd7920f09cbe01b26c7"
+  },
+  {
+    "source": "/pscratch/sd/d/dkololgi/graphweb_desi/outputs/loa_rest_colour_20261016_v1/presentation_v2/properties_paired_rest_z020022.pdf",
+    "destination": "docs/figures/loa_rest_colour_20261016/properties_paired_rest_z020022.pdf",
+    "bytes": 41758,
+    "sha256": "cf6a536afaacf39b1b266c1af8480c63fcb6969b1e1e95e5ef374840a51a4b07"
+  },
+  {
+    "source": "/pscratch/sd/d/dkololgi/graphweb_desi/outputs/loa_rest_colour_20261016_v1/presentation_v2/contrasts_rest_sensitivity_z020030.png",
+    "destination": "docs/figures/loa_rest_colour_20261016/contrasts_rest_sensitivity_z020030.png",
+    "bytes": 193143,
+    "sha256": "5dc633ed48513eda6e02642d51f6a61c0f86dea11e4d8f5d1479c42b55c30285"
+  },
+  {
+    "source": "/pscratch/sd/d/dkololgi/graphweb_desi/outputs/loa_rest_colour_20261016_v1/presentation_v2/colour_mass_observed_soft.png",
+    "destination": "docs/figures/loa_rest_colour_20261016/colour_mass_observed_soft.png",
+    "bytes": 492566,
+    "sha256": "9f737e5763baf72aa3328d053b034e4fb2c51db75e6b5d52e12539639b04da4d"
+  }
+]

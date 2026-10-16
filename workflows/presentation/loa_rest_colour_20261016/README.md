@@ -57,6 +57,11 @@ A separate blue-fraction diagnostic holds one common mass floor across every
 Its denominator includes objects outside the red/blue cuts; it is descriptive,
 not a volume-corrected evolutionary measurement.
 
-Preparation status: syntax checks and four small contract tests passed. Full
-catalogue execution is pending the separately requested explicit CPU approval.
-No results should be inferred from the presence of these scripts.
+Execution completed on approved CPU allocation 59858561 (nid200021). Syntax
+checks, four contract tests, 384 fresh FastSpecFit source rows, all selected
+FITS roundtrips and independent original-VAC checks passed. The numerical
+audit checked 1,364 reported curve vectors; every available calculation had
+256 valid bootstrap draws. 46 unsupported controls remain explicitly unavailable.
+Final plots are in `presentation_v2`: this expands sensitivity figures to all
+12 predeclared combinations; the first render is retained on Scratch.
+See `docs/loa_rest_colour_20261016.md` for results and release verification.

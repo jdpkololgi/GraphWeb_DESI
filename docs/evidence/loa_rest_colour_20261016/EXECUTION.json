@@ -1,0 +1,11 @@
+{
+  "job": "59858561",
+  "host": "nid200021",
+  "analysis_and_first_render_exit_code": 0,
+  "independent_validation_exit_code": 0,
+  "final_render_exit_code": 0,
+  "released": true,
+  "release_verification": "squeue empty stdout/stderr; exit 0",
+  "final_presentation": "presentation_v2",
+  "stellar_mass_source": "CIGALE MASS_CG_15 throughout; no FastSpecFit stellar masses"
+}

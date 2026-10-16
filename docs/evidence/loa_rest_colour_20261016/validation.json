@@ -1,0 +1,61 @@
+{
+  "job": "59858561",
+  "host": "nid200021",
+  "code_sha256": "ab07e9d75add4aa4b942448840a3e310e942dd26b5f1902f982795f40ff472d5",
+  "source_checks": [
+    {
+      "window": "z015020",
+      "variant": "rest_primary",
+      "rows": 475561,
+      "fresh_original_vac_rows": 257,
+      "source_columns": 50
+    },
+    {
+      "window": "z015020",
+      "variant": "paired",
+      "rows": 475561,
+      "fresh_original_vac_rows": 257,
+      "source_columns": 50
+    },
+    {
+      "window": "z020022",
+      "variant": "rest_primary",
+      "rows": 203785,
+      "fresh_original_vac_rows": 257,
+      "source_columns": 50
+    },
+    {
+      "window": "z020022",
+      "variant": "paired",
+      "rows": 203785,
+      "fresh_original_vac_rows": 257,
+      "source_columns": 50
+    },
+    {
+      "window": "z020030",
+      "variant": "rest_primary",
+      "rows": 564465,
+      "fresh_original_vac_rows": 257,
+      "source_columns": 50
+    },
+    {
+      "window": "z020030",
+      "variant": "paired",
+      "rows": 564465,
+      "fresh_original_vac_rows": 257,
+      "source_columns": 50
+    }
+  ],
+  "curve_vectors_checked": 1364,
+  "unavailable_controls": 46,
+  "raw_bootstrap_valid_range": [
+    256,
+    256
+  ],
+  "controlled_bootstrap_valid_range": [
+    256,
+    256
+  ],
+  "original_observed_targetid_sets": "Exact agreement for all three windows",
+  "all_manifest_hashes": "passed"
+}

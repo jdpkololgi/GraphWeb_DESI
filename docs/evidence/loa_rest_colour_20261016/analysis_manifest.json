@@ -1,0 +1,25 @@
+{
+  "job": "59858561",
+  "host": "nid200021",
+  "code_sha256": "a750062127b28dd6247374157344f8678dd58dde89d4ced8cb550ed5f19c2f50",
+  "estimator_sha256": "d0fffaa14c2cdab17dfd02e05908d9ef1652a2d72a9b516ecc710e9ec85449f4",
+  "outputs": {
+    "relationships_rest_primary_z015020_cut75.json": "02e48917203da8d1b1071e97cd04b3d7a65bd09d0f4c42e53ee6a6a6971bbdeb",
+    "relationships_paired_observed_z015020_cut75.json": "c9e7a10f64e542bd183477cfda355ae349fea88acd987f569d704eae8ca7c0c1",
+    "relationships_paired_rest_z015020_cut75.json": "02e48917203da8d1b1071e97cd04b3d7a65bd09d0f4c42e53ee6a6a6971bbdeb",
+    "relationships_rest_primary_z020022_cut75.json": "3a3799daff157254fb3a78bd83e289ae22cdbe967b8c5e37c1a9983a74368d13",
+    "relationships_paired_observed_z020022_cut75.json": "1991bcc52a02f221c67cd6860ab25e72aadc4db1da3bdf75dafe0400558a7100",
+    "relationships_paired_rest_z020022_cut75.json": "3a3799daff157254fb3a78bd83e289ae22cdbe967b8c5e37c1a9983a74368d13",
+    "relationships_rest_primary_z020030_cut75.json": "03fe1bc154438574401efa48dc5e0f3676d607700b4fc245d169d75ab03e1e1a",
+    "relationships_paired_observed_z020030_cut75.json": "36b4b024e234f39faaa883f40945c9523c932ca992869caf8206e4dd14d10924",
+    "relationships_paired_rest_z020030_cut75.json": "03fe1bc154438574401efa48dc5e0f3676d607700b4fc245d169d75ab03e1e1a",
+    "relationships_rest_primary_z015020_cut70.json": "89b73bfc83c1ab36dcdd432dc6426229247ef88659289c393399c1e795420ce4",
+    "relationships_rest_primary_z015020_cut80.json": "120f39afd4c72b99b22b7c1bf7d1a0b0915badd436c8649a9e42d92d59c6ae73",
+    "relationships_rest_primary_z020022_cut70.json": "e507fe1a73bdb26b53ccc5d3e13e10c35e869f809b6e1771c761977dd5669190",
+    "relationships_rest_primary_z020022_cut80.json": "51d6974117d85bff15ba916e8e86542350cfe5a831ea32ddc539ec41b9690df5",
+    "relationships_rest_primary_z020030_cut70.json": "9d5ac254880f95882bd2c93848ef2c16695054d295c6394bb91719e50c64a705",
+    "relationships_rest_primary_z020030_cut80.json": "927f6971df56e2440aedac95260d490927262d5f993626ec496e251238bc556f"
+  },
+  "validation": "All raw and controlled mean vectors independently reconstructed; 256 attempted sky bootstraps; unsupported controls explicitly unavailable",
+  "limitations": "Conditional on selection, colour cuts and inferred environment; excludes SED, colour-boundary, matching/selection and simulation-transfer systematics; no causal or calibration claim"
+}
