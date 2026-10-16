@@ -1,0 +1,67 @@
+{
+  "job": "59858009",
+  "host": "nid200041",
+  "code_sha256": "b13469e99602db868b593cf399604249f64397310409520be1c017ba7c824ebf",
+  "selections": [
+    {
+      "key": "z015020",
+      "zlo": 0.15,
+      "zhi": 0.2,
+      "logmass": 10.6,
+      "rows": 534070,
+      "red": 518962,
+      "blue": 14909,
+      "excluded": 199,
+      "nonfinite": 0,
+      "outside_axes": 1,
+      "displayed": 534069,
+      "source": "/pscratch/sd/d/dkololgi/graphweb_desi/outputs/loa_colour_lowz_20261016_v1/LOA_COLOUR_MASS_COMPLETE_z015020.fits",
+      "source_sha256": "17723d0ce1bc806f07ab0b05ee659c56476c3f912fae2d90ce5ded3679eaca9f",
+      "windows_sha256": "088c2eb4439dc4f4713346e62f44b9d89d29840e0cd8427a3e79484672740f97"
+    },
+    {
+      "key": "z020022",
+      "zlo": 0.2,
+      "zhi": 0.22,
+      "logmass": 10.69,
+      "rows": 232024,
+      "red": 229932,
+      "blue": 1922,
+      "excluded": 170,
+      "nonfinite": 0,
+      "outside_axes": 1,
+      "displayed": 232023,
+      "source": "/pscratch/sd/d/dkololgi/graphweb_desi/outputs/loa_colour_split_20261016_v2/LOA_COLOUR_MASS_COMPLETE_z020022.fits",
+      "source_sha256": "57ee007645f08fce7c4455dce1d3a70cf8f1db27b87a0bf05d9676449ac46144",
+      "windows_sha256": "3241a588b723ae6b5761bdde81b3955539434db60f243145dba66543247062bb"
+    },
+    {
+      "key": "z020030",
+      "zlo": 0.2,
+      "zhi": 0.3,
+      "logmass": 10.96,
+      "rows": 611197,
+      "red": 532770,
+      "blue": 375,
+      "excluded": 78052,
+      "nonfinite": 0,
+      "outside_axes": 7,
+      "displayed": 611190,
+      "source": "/pscratch/sd/d/dkololgi/graphweb_desi/outputs/loa_colour_split_20261016_v1/LOA_COLOUR_MASS_COMPLETE_z020030.fits",
+      "source_sha256": "6b783d2b17e09d3334decf6609e17c93d5db30c332981ddcb340a17975162f29",
+      "windows_sha256": "06d79592a08352f8b08b0528a1d8bcb4d5e88559ea34a4ce99bbeae0bcdc5039"
+    }
+  ],
+  "validation": "Exact saved counts, unique IDs, redshift and mass limits, colour membership, histogram sum and independent bin reconstruction passed",
+  "outputs": {
+    "colour_mass_z015020.png": "9710db2b7a48ce632fc5e5348de997b9a5b3b38b74506df4ee794c03d7941c5f",
+    "colour_mass_z015020.pdf": "90ccc5514514ab48ecded297b0bf48734c7b52d4ddbc4c6eb02025f306238f86",
+    "colour_mass_z020030.pdf": "94805003ffd04734da15bca350ef3177c620bac48c8d1fede32ffd519c2e25f0",
+    "colour_mass_comparison.png": "21b816d3a1654e0d611c6c0bbadd3097114905b948e3d410bf35468f78b2ffc9",
+    "colour_mass_z020022.pdf": "e3b24734275173a71be8daff9d60f684ee006551c8d97fc39796f5ef15edeb4a",
+    "histograms.npz": "622d85f129d84b52174079be84f4195ad82b8a3b91bc2ca44992c55b5b7df0d1",
+    "colour_mass_z020022.png": "8f5c1935c7a49ae44df5548b74d5fcab2853b53a74187480b00699e1f2bfaa2f",
+    "colour_mass_comparison.pdf": "44b5c5a49e74d06cb1c64b0c3691b3ef613ff778df20c4facaee78786a24a32d",
+    "colour_mass_z020030.png": "b6de22b2f5e686594f85e2a064fcb4a797bdbab10117969be51fd5fd517b2cf9"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "job": "59858009",
+  "host": "nid200041",
+  "render_exit_code": 0,
+  "released": true,
+  "verification": "squeue returned empty stdout/stderr with exit 0"
+}
