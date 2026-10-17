@@ -1,0 +1,89 @@
+{
+  "checks": 183,
+  "secondary_summaries": {
+    "low_fil_wall": {
+      "paired_3d_shape_transition_slab_rows_full_columns_LPS": [
+        [
+          149,
+          27,
+          2
+        ],
+        [
+          2,
+          12,
+          0
+        ],
+        [
+          0,
+          0,
+          1
+        ]
+      ],
+      "same_targets_depth20_40_80_n": 297,
+      "same_targets_depth20_40_80_line_counts": [
+        288,
+        63,
+        9
+      ],
+      "median_full_neighbors_main": 13.0
+    },
+    "low_fil_void": {
+      "paired_3d_shape_transition_slab_rows_full_columns_LPS": [
+        [
+          76,
+          12,
+          0
+        ],
+        [
+          6,
+          13,
+          1
+        ],
+        [
+          1,
+          0,
+          0
+        ]
+      ],
+      "same_targets_depth20_40_80_n": 185,
+      "same_targets_depth20_40_80_line_counts": [
+        185,
+        46,
+        4
+      ],
+      "median_full_neighbors_main": 9.0
+    },
+    "line_fil_argmax": {
+      "paired_3d_shape_transition_slab_rows_full_columns_LPS": [
+        [
+          98,
+          28,
+          6
+        ],
+        [
+          2,
+          15,
+          0
+        ],
+        [
+          1,
+          0,
+          2
+        ]
+      ],
+      "same_targets_depth20_40_80_n": 173,
+      "same_targets_depth20_40_80_line_counts": [
+        161,
+        41,
+        8
+      ],
+      "median_full_neighbors_main": 22.0
+    },
+    "sheet_normal": {
+      "n": 49,
+      "median_absolute_dot_original_slab_normal": 0.37110076215755966,
+      "fraction_abs_dot_lt_half": 0.6530612244897959
+    }
+  },
+  "note": "20/40/80 paired diagnostic is secondary after all-five-depth common cohort proved tiny. No threshold or target definition changed."
+}
