@@ -1,0 +1,58 @@
+{
+  "stage": "parent extraction only; no scientific verdict",
+  "catalogue_sha256": "cf472cb4e8fb327620629f347115ad26c55a3f985320b293e6753e07f50ebfbc",
+  "manifest_sha256": "d9200034660f7075a600d0138c88f2934d573d444597bd16401cd7c4292ca1a1",
+  "script_sha256": "5b14c125beaa19d066d1a6b45f5642a4f7a9da4c3feb6b549d19e382851947ed",
+  "model_bindings_verified": {
+    "/pscratch/sd/d/dkololgi/abacus/p10_multiphase/p12a_halo48_candidate_20260924_v1/posterior/fmpe_estimator.pt": "c4abd94e3b5881c7ba5db2d4e88fac9cbf84f000f170be640bf6615cb6a14277",
+    "/pscratch/sd/d/dkololgi/abacus/p10_multiphase/p12a_halo48_candidate_20260924_v1/RUN_MANIFEST.json": "27284588eb58a40722a7395941b0d423613e266b6fa1e3ccbef762e7e205c096",
+    "/pscratch/sd/d/dkololgi/abacus/p10_multiphase/arm_a_training/arm_a_r0_v1/unet/seed_42/best_checkpoint.pt": "cd7c280602b3496753d21d236d30c50bde96335fa69ccc60cd12c0dfe3ccdfab"
+  },
+  "parent_sha256": "7a60a47f7bd0107611ece6c1e0f7338769151784d18bd8abf080994c4c3905fb",
+  "rows": 180977,
+  "original_targets": 4459,
+  "job": "59904097",
+  "config": {
+    "center_Mpc": [
+      0.0,
+      1025.0,
+      0.0
+    ],
+    "parent_radius_Mpc": 320.0,
+    "full_depths_Mpc": [
+      5,
+      10,
+      20,
+      40,
+      80
+    ],
+    "rotation_about_radial_y_degrees": [
+      0,
+      30,
+      60,
+      90
+    ],
+    "normal_offsets_Mpc": [
+      -5,
+      0,
+      5
+    ],
+    "half_widths_Mpc": [
+      180,
+      225
+    ],
+    "radii_Mpc": [
+      5.1729234407330775,
+      10.345846881466155,
+      15.518770322199233
+    ],
+    "min_neighbors": [
+      6,
+      8,
+      12
+    ],
+    "shape_cut_frozen": 0.5847730874520835,
+    "low_Pfil_cut": 0.2,
+    "note": "Fixed original target IDs tracked; targets outside each newly selected slab are excluded and counted, never silently replaced. Geometry/count eligibility must be intersected for paired tests. Parent-padding completeness is not survey-mask completeness. VAC parent is not automatically identical to full inference context tracer sample."
+  }
+}

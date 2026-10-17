@@ -77,3 +77,18 @@ Active chat still advertises workspace-write/auto-review and restricted profile,
 inconsistent with newer user preference for native execution. Do not alter the
 profile or bypass security hooks. Graphify query returned a scoped graph plus a
 MUNGE socket error; this is not a successful Slurm preflight. No Slurm action taken.
+
+## Execution completed — 2026-10-17
+
+Approved CPU allocation59904097 on nid200020 completed0:0; step9s and total16s.
+Ordinary sandbox launch failed before Slurm (bwrap directory permission error);
+explicit native execution succeeded without changing profile/security settings.
+Allocation released automatically; concurrent jobs untouched.
+
+Parent contains180977 rows and all4459 original targets. Fresh full VAC SHA256
+before/after extraction matches cf472cb4e8fb327620629f347115ad26c55a3f985320b293e6753e07f50ebfbc.
+Posterior, encoder and model-manifest hashes match A06 bindings. Exact original
+ID/RA/DEC/Z/quality/support/Pfil checks passed, geometry within1e-8Mpc. READY
+receipt copied to docs/evidence/filament_parent_20261017/READY.json; arrays remain
+in isolated Scratch output. No off-slab shape analysis has yet run. Verdict
+remains unresolved; parent verification is not evidence that structures are walls.
