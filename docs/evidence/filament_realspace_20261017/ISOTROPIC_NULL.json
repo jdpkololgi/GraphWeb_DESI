@@ -1,0 +1,64 @@
+{
+  "seed": 171020,
+  "rows": [
+    {
+      "key": "true_wall_line",
+      "n": 17,
+      "draws": 512,
+      "LPS_median": [
+        0.3109894548017114,
+        0.2525707322375531,
+        0.4077806089286029
+      ],
+      "dominant_counts": [
+        147,
+        102,
+        263
+      ],
+      "L_95_range": [
+        0.07820011240912811,
+        0.6035950677314734
+      ]
+    },
+    {
+      "key": "true_wall_sheet",
+      "n": 14,
+      "draws": 512,
+      "LPS_median": [
+        0.35977348756257266,
+        0.266270669317117,
+        0.353387881982213
+      ],
+      "dominant_counts": [
+        214,
+        129,
+        169
+      ],
+      "L_95_range": [
+        0.0727057567363811,
+        0.6114387795169655
+      ]
+    },
+    {
+      "key": "filament_error",
+      "n": 13,
+      "draws": 512,
+      "LPS_median": [
+        0.36886883200780196,
+        0.27415863646599525,
+        0.338893341153073
+      ],
+      "dominant_counts": [
+        238,
+        107,
+        167
+      ],
+      "L_95_range": [
+        0.0746599833722587,
+        0.6538358892445425
+      ]
+    }
+  ],
+  "script_sha256": "ffb5e2c9f43e6fc48f214375ed76ddb55a4167a5b0b91a310bf871230b84b120",
+  "interpretation": "Post-analysis finite-count reference. Covariance line dominance is not a significance test. Uniform real-space sphere without galaxy clustering or DESI selection."
+}

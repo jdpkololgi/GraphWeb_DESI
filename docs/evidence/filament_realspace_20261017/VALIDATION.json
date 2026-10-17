@@ -1,0 +1,19 @@
+{
+  "pass": true,
+  "checks": 4180,
+  "script_sha256": "240024e89446b196743417b0e4ca0b5f4ebe55ae7a5efd10e9ac87d4a0ea6bed",
+  "comparison_sha256": "0a624361053ae55f4ed76522d4f185fa45e9964f9fa379fe27778e15b9656db2",
+  "figure_sha256": {
+    "true_wall_line_realspace.png": "738eef5e463025d50078641b60744235b580c5453fa9582c5393db1c6bbfdce8",
+    "true_wall_line_realspace.pdf": "35ae3f4359c6fc16d9da4a42f84080f5ab5701cd559357ffcd48b3b6c7bf814f",
+    "true_wall_sheet_realspace.png": "5307bb7ffef9d345e98d15f2ee48275bd0299f10e6c7ae6dea691e6357fcfb86",
+    "true_wall_sheet_realspace.pdf": "b01a4d82aac5d5c3b415c8734229837503ad583898fca99cec657f88aa2b307f",
+    "filament_error_realspace.png": "7836d52cca8428457ee7a9a5d10e5161e108aa7abe095f066ac1b323764761f1",
+    "filament_error_realspace.pdf": "a43a085d4364ca8eda0156f68f49173ab0c7d6a31d60d706d94814f0fa2aa1be"
+  },
+  "raw_vs_observed_rs_max_difference_Mpc": {
+    "true_wall_line": 2.898457019905882e-13,
+    "true_wall_sheet": 5.684785957944772e-13,
+    "filament_error": 9.099386826154683e-13
+  }
+}
