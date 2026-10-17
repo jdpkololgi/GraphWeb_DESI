@@ -1,0 +1,17 @@
+{
+  "pass": true,
+  "examples": 3,
+  "same_rows_across_columns_per_view": true,
+  "central_saved_probability_replay": true,
+  "projected_anisotropy_replay": true,
+  "neighbourhood_geometry_replay": "verified during extraction at R and 1.5R",
+  "plot_script_sha256": "077e88fa110f59bc6b53ca3e8626067979f2b4c880e18ce026389ae94c8d3cbb",
+  "files": {
+    "true_wall_line.png": "a141a08ede6440d3d469f93974464c43ec68754f8e0238e9ed7cb670a30d5878",
+    "true_wall_line.pdf": "0a566037c6e79c9e0feb0f6c3029eaa833ed10f59e3b6536077ea297ab25cb38",
+    "true_wall_sheet.png": "b972a60c09587daf3704610217d85a5aee683cbaf09a39aa225e2987aa2590ae",
+    "true_wall_sheet.pdf": "ac3f3aa44a58aa2ad3363506c5a9aae5511faaadbd21493ddceec8188014ece5",
+    "filament_error.png": "55e47c6e127803bd19ff9b6089ff989c44e42131698327d4c4d37459c0c51f8a",
+    "filament_error.pdf": "36125f5254a5cf8b6c76c0a42a5c6e1514c421dc9380317be1a8e249c6d922dd"
+  }
+}

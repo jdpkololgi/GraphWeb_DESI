@@ -1,0 +1,130 @@
+{
+  "job": "59904866",
+  "examples": [
+    {
+      "key": "true_wall_line",
+      "title": "True wall with a string-like tracer neighbourhood",
+      "selection_pool_rows": 522,
+      "selection_rule": "Median parent ID in the specified geometry/truth cohort; no visual selection",
+      "parent_node_id": 3599892,
+      "targetid": 6032112,
+      "geometry_row": 10845,
+      "truth_eigenvalues": [
+        -0.12151491641998291,
+        0.10574404150247574,
+        0.3120502233505249
+      ],
+      "probability": [
+        0.1328125,
+        0.6640625,
+        0.19921875,
+        0.00390625
+      ],
+      "LPS_R": [
+        0.6636621706950325,
+        0.2722989295030007,
+        0.06403889980196682
+      ],
+      "LPS_1p5R": [
+        0.626734980630383,
+        0.143101217391694,
+        0.23016380197792294
+      ],
+      "neighbors_R": 17,
+      "neighbors_1p5R": 47,
+      "projected_anisotropy": 0.7021891316048184,
+      "display_rows": 48,
+      "truth_available": 48,
+      "prediction_available": 48,
+      "array_sha256": "b2adb4580d8d43d0fd17a785faf5ddef38cff88da20834865d41d5d0b995f854"
+    },
+    {
+      "key": "true_wall_sheet",
+      "title": "True wall with a sheet-dominated tracer neighbourhood",
+      "selection_pool_rows": 118,
+      "selection_rule": "Median parent ID in the specified geometry/truth cohort; no visual selection",
+      "parent_node_id": 4042823,
+      "targetid": 3743465,
+      "geometry_row": 9641,
+      "truth_eigenvalues": [
+        -0.2623816728591919,
+        0.12853004038333893,
+        0.38931116461753845
+      ],
+      "probability": [
+        0.017578125,
+        0.91796875,
+        0.05859375,
+        0.005859375
+      ],
+      "LPS_R": [
+        0.042350784571895055,
+        0.644134876683511,
+        0.31351433874459395
+      ],
+      "LPS_1p5R": [
+        0.4013052754994269,
+        0.45938239380530155,
+        0.1393123306952715
+      ],
+      "neighbors_R": 14,
+      "neighbors_1p5R": 44,
+      "projected_anisotropy": 0.731881672955689,
+      "display_rows": 45,
+      "truth_available": 45,
+      "prediction_available": 45,
+      "array_sha256": "76dadb13a59dfbb762764ea62e95844bd39f0e6d425b309dc875a8143ed96778"
+    },
+    {
+      "key": "filament_error",
+      "title": "True filament assigned highest probability to wall",
+      "selection_pool_rows": 28,
+      "selection_rule": "Median parent ID in the specified geometry/truth cohort; no visual selection",
+      "parent_node_id": 3358556,
+      "targetid": 1493453,
+      "geometry_row": 11809,
+      "truth_eigenvalues": [
+        -0.2317432314157486,
+        0.21771426498889923,
+        0.2790883183479309
+      ],
+      "probability": [
+        0.15234375,
+        0.673828125,
+        0.16796875,
+        0.005859375
+      ],
+      "LPS_R": [
+        0.7620477947666952,
+        0.18871822281296874,
+        0.04923398242033609
+      ],
+      "LPS_1p5R": [
+        0.5481130691130022,
+        0.18016306059078105,
+        0.27172387029621675
+      ],
+      "neighbors_R": 13,
+      "neighbors_1p5R": 39,
+      "projected_anisotropy": 0.6965638675836708,
+      "display_rows": 40,
+      "truth_available": 40,
+      "prediction_available": 40,
+      "array_sha256": "11460fecc5288b317a57aec55f6f485b451073747151db1d4a379deac0aef4b7"
+    }
+  ],
+  "sampling_seed": 171018,
+  "samples": 512,
+  "new_draw_rows": 133,
+  "reused_original_probability_rows": 7,
+  "context_replay_rows": 13,
+  "source_sha256": {
+    "/global/u2/d/dkololgi/GraphWeb_DESI/workflows/p12a_vac/filament_geometry/mock_examples.py": "2a70e2d3d17697da184ff00fc5631656528336dc7ac23334669fbae3db182a12",
+    "/global/u2/d/dkololgi/GraphWeb_DESI/docs/evidence/filament_mock_truth_20261017/geometry.npz": "9445223c2797233f050cf4785ec9ef8f8e453f21964ffc0423b5f3d44903a760",
+    "/pscratch/sd/d/dkololgi/abacus/p10_multiphase/p12a_halo48_candidate_20260924_v1/posterior/fmpe_estimator.pt": "c4abd94e3b5881c7ba5db2d4e88fac9cbf84f000f170be640bf6615cb6a14277",
+    "/pscratch/sd/d/dkololgi/abacus/p10_multiphase/p12a_halo48_candidate_20260924_v1/dataset/P12A_DATASET_READY.json": "8abb1b626ba6c78404f3f6a0b8122c99e0295b04aa4c95efd96f300a454b6280",
+    "/pscratch/sd/d/dkololgi/abacus/p10_multiphase/p12a_halo48_candidate_20260924_v1/summaries/ph006/OOF_SUMMARY_COMPLETE.json": "09db405dee1ca551c64b6463ba0632b8c09484f85e23e5f323b1684349842129",
+    "/pscratch/sd/d/dkololgi/abacus/p10_multiphase/p12a_random_support_parent_cache_v2/ph006/P12A_RANDOM_SUPPORT_CACHE_READY.json": "b3380f217d936555e3b5819d866ae3e5b341c331720ca28cb18d73793bcf4f63"
+  },
+  "scope": "Already-exposed ph006. Native host tidal labels displayed at observed galaxy positions, not a reconstructed matter field. Frozen FMPE new draws on saved encoder summaries; original evaluation probabilities retained where present. No refit. Unknown truth/predictions shown grey."
+}
