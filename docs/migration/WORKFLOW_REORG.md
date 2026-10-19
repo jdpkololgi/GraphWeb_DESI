@@ -38,7 +38,17 @@ Newer workflow groups were added after the original four-script migration:
   and wedge subsetting.
 - `workflows/jraph_inference/` for Abacus-trained Jraph DESI wedge inference and
   experiments.
-- `shared/` for config and Abacus/Jraph parity helpers.
+- `workflows/sbi_inference/` for FlowJAX NPE posteriors, property joins, and
+  transfer diagnostics (README there is the detailed companion).
+- `workflows/visualization/` for the path1 Jraph 3D notebook (plus `archive/`).
+- `shared/` for config, Abacus/Jraph parity helpers, and plot style.
+- `scripts/` / `templates/job.sbatch` for NERSC helpers and a minimal sbatch
+  template.
+
+Catalog note: `load_catalog.py` (low-z FastSpecFit, `RA`/`DEC`) and
+`build_bgs_maglim_catalog.py` (bright zall, `TARGET_RA`/`TARGET_DEC`) are
+different products. Root shims exist only for the original four scripts plus
+`config_paths.py`.
 
 ## Usage policy
 
