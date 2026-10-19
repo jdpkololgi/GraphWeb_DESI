@@ -118,7 +118,8 @@ are inside original slab; green crosses are off-slab. All panels equal physical
 scales, no smoothing/jitter. Figures visually inspected for clipping/labels.
 
 Scripts: workflows/p12a_vac/filament_geometry/{compare_offslab,validate_offslab,
-plot_offslab,test_offslab}.py. Three synthetic shape tests pass: line/plane/sphere,
+plot_offslab,test_offslab}.py. Developer locks and launch commands:
+`p12a_vac_operations.md`. Three synthetic shape tests pass: line/plane/sphere,
 rotation+translation invariance, and edge-on slice of a true plane.183 independent
 saved-result checks pass. Empty-bin validator bug fixed; no numerical rerun or
 scientific values changed. Analysis59904230 completed0:0 in34s step; validator

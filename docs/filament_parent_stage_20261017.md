@@ -2,6 +2,9 @@
 
 Current verdict: **unresolved**. Cached projection statistics do not warrant
 retraining, visual relabelling, or a change to the production catalogue.
+The geometry that followed this extraction is
+`filament_offslab_results_20261017.md`. This page is the parent-extraction gate.
+Developer commands and locks: `p12a_vac_operations.md`.
 
 Read authoritative current SCIENCE_LOG, both repository instructions/contexts,
 original A06 manifest, filament audit and slab scripts. Original734 line-like
@@ -26,7 +29,7 @@ Manifest pins the September25 full-survey VAC SHA256 cf472cb4e8fb327620629f34711
 and the posterior/encoder hashes. Original geometry uses Planck18 redshift-space
 Mpc and h=.6766 to convert7Mpc/h. No inference weights or selection changed.
 
-## Prepared extraction (not run)
+## Prepared extraction
 
 `workflows/p12a_vac/filament_geometry/prepare_parent.py`:
 - Fail closed on full catalogue hash, original saved-row hash, or any A06 model
@@ -46,14 +49,13 @@ seeing new neighbours/probabilities. They are sensitivity choices, not exhaustiv
 views or a calibrated3D classification. Tests pass for coordinate axes, rotation
 orthogonality, padding and original slab selection (3tests, no catalogue scan).
 
-This stage only extracts/validates parent; no new morphology results exist yet.
-Check whether the VAC-selected parent matches inference context selection before
-calling the result a full-context test. Guard radial/sky masks separately from
-parent padding; BOUNDARY_MPC alone is not a newly validated3D mask certificate.
-Then implement/save fixed-target membership transitions, common cohorts, paired
-count-thinning and spatial-block uncertainty. Track original482 suspicious rows
-and representative probability-independent controls; never optimize viewing angles.
-Fresh core-draw P_WEB reconstruction and training/preprocessing parity remain open.
+This stage only extracts and validates the parent. The off-slab comparison,
+paired count-thinning, and fixed-target views ran afterwards; see
+`filament_offslab_results_20261017.md`. Check whether the VAC-selected parent
+matches inference context selection before calling a result a full-context test.
+Guard radial/sky masks separately from parent padding; BOUNDARY_MPC alone is
+not a newly validated 3D mask certificate. Fresh core-draw P_WEB reconstruction
+and training/preprocessing parity remain open.
 
 Mock gate: inventory exposed ph006 controls versus genuinely untouched phases
 before reading new payloads. ph006 has been used for selection; it is development,
@@ -90,5 +92,7 @@ before/after extraction matches cf472cb4e8fb327620629f347115ad26c55a3f985320b293
 Posterior, encoder and model-manifest hashes match A06 bindings. Exact original
 ID/RA/DEC/Z/quality/support/Pfil checks passed, geometry within1e-8Mpc. READY
 receipt copied to docs/evidence/filament_parent_20261017/READY.json; arrays remain
-in isolated Scratch output. No off-slab shape analysis has yet run. Verdict
-remains unresolved; parent verification is not evidence that structures are walls.
+in isolated Scratch output. Off-slab shape analysis ran afterwards
+(job 59904230); measurements are in `filament_offslab_results_20261017.md`.
+Parent verification is not evidence that structures are walls. The tidal-class
+question remains unresolved.
