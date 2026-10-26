@@ -63,7 +63,8 @@ products, not the fundamental inference target.
   the necessary truth-free observational check.
 - October 2026 colour, mass-completeness, and off-slab geometry scripts are
   read-only audits of the frozen VAC. Neighbour covariance shapes are not a
-  replacement T-web label. See `docs/p12a_vac_operations.md`.
+  replacement T-web label. Colour-chain order, locked window counts, and
+  overwrite rules are in `docs/p12a_vac_operations.md`.
 
 Operational entrypoints in this repo (see `ACTIVE_WORKFLOWS.md` / `RUNBOOK.md`):
 

@@ -477,8 +477,14 @@ with `P_WEB[:, 2] < 0.2` and argmax 1, and 185 with argmax 0. A different
 audit file fails closed.
 
 Radii are `0.5, 1, 1.5` times `7/0.6766` Mpc (about 5.173, 10.346, 15.519).
-Minimum neighbour counts are 6, 8, and 12. Count-matched subsets use 32 draws,
-seed 17017. Intervals are 512 resamples of 30 Mpc Cartesian blocks, same seed.
+Minimum neighbour counts are 6, 8, and 12. Count-matched subsets use 32 draws
+from one `default_rng(17017)` created before the radius loop, so later radii
+continue that stream. Each block-bootstrap interval builds its own
+`default_rng(17017)` (512 resamples of 30 Mpc Cartesian blocks) and does not
+continue the count-match stream. `plot_offslab.py` and `validate_offslab.py`
+hard-code the projected line threshold `0.5847730874520835`.
+`compare_offslab.py` reads the same number from `shape_cut_frozen` in the
+parent receipt.
 A target is eligible only when the ball stays inside the 320 Mpc parent, inside
 the catalogue radial limits at z = 0.15 and 0.55, and outside inherited
 `BOUNDARY_MPC`. That guards truncation. It is not a new angular-mask
@@ -532,15 +538,160 @@ Do not fold those notes into this page.
 | Rest-frame colour audit | `loa_rest_colour_20261016.md`, `loa_colour_histograms_20261016.md` | `loa_rest_colour_20261016/` (`README.md`) |
 | Mass/redshift-matched colour distributions | `loa_matched_colour_20261016.md` | `loa_matched_colour_20261016/` (`README.md`) |
 
-Payload scripts in the three packaged workflows raise `RuntimeError` unless
-`SLURM_JOB_ID` is set and the hostname starts with `nid`. Their READMEs state
-the selection arithmetic. `loa_mass_complete_20261016/run.py` takes
-`--stage {prepare,analyse,analyse_full,render,all}`. Its JSON writer uses
-`open('x')`, and the two sub-VAC FITS files raise `FileExistsError` if present.
-`loa_rest_colour_20261016/run.py` takes `--stage {prepare,analyse,all}`.
-Rest colour there is FastSpecFit
-`ABSMAG01_SDSS_G - ABSMAG01_SDSS_R` (SDSS at z = 0.1), not a z = 0 colour and
-not LSS `ABSMAG_RP1`.
+The three packaged workflows are one chain. Later stages read the previous
+stage's Scratch products and do not re-infer environments. Local READMEs hold
+the selection arithmetic. This section is the launch contract.
+
+### What the numbers are
+
+The Bright parent is stricter than the P12-A VAC cut. `run.py` in
+`loa_mass_complete_20261016/` keeps LSS rows with `ZWARN==0` and
+`DELTACHI2 > 40` (the VAC writer uses `>= 25`) and joins them to unique
+GALAXY SED rows with that same `DELTACHI2` cut and positive finite CG15 mass.
+The join then requires flat-sky separation `<= 1` arcsec and
+`|Δz|/(1+z) <= 0.001`. North/South flux limits are extinction-corrected
+`r < 19.54` / `r < 19.5`, with
+`r = 22.5 − 2.5 log10(FLUX_R / MW_TRANSMISSION_R)`. Observed `GR_OBS` is the
+same Milky-Way-corrected Legacy Survey flux ratio. It is not FastSpecFit
+`ABSMAG01` and not LSS `ABSMAG_RP1`.
+
+Rest-frame colour, only in `loa_rest_colour_20261016/`, is
+`ABSMAG01_SDSS_G − ABSMAG01_SDSS_R` (SDSS bands at z = 0.1). A match also
+needs unique main-bright FastSpecFit rows (the glob must return 12 files),
+both magnitude IVARs `> 0`, finite nonzero magnitudes, `RCHI2_CONT > 0`,
+`ZWARN_RR==0`, `DELTACHI2 > 40`, separation `<= 1` arcsec, and both FastSpecFit
+`Z` and Redrock `Z_RR` within `0.001` in `|Δz|/(1+z)` of the parent redshift.
+Zero inverse variance is treated as a synthetic magnitude and dropped.
+
+Colour class codes, shared by the contract test, are `0` blue (`c < cut`),
+`1` red (`cut < c < 1.5`), and `2` for the boundaries, `c >= 1.5`, and
+non-finite values. The primary cut is `0.75`. Sensitivity cuts are `0.70` and
+`0.80`. None of these is a quenching definition. Quenched remains CIGALE
+`SFR/M < 1e-11 yr⁻¹`. Zero SFR counts as quenched. Negative or non-finite SFR
+is invalid (`QUENCHED_SSFR11 = -1` on the mass-complete sub-VAC).
+
+Figure tick labels are `Void`, `Wall`, `Filament`, `Cluster`. Those are
+`P_WEB` columns 0–3. The VAC receipt still names columns 1 and 3 sheet and
+knot. Wall on these plots is the sheet slot.
+
+`loa_rest_colour_20261016/run.py` and `loa_matched_colour_20261016/run.py`
+both lock three windows. The fourth field is the previous log-mass floor and
+the fifth is the observed-original row count:
+
+| Window | Redshift | log10 M★ floor | Rows |
+|---|---|---|---|
+| `z015020` | `0.15 <= z < 0.20` | 10.60 | 534,070 |
+| `z020022` | `0.20 <= z < 0.22` | 10.69 | 232,024 |
+| `z020030` | `0.20 <= z < 0.30` | 10.96 | 611,197 |
+
+`assert len(old) == expected` (and the same check on matched-colour input
+rows) fails closed if the upstream FITS changes. Rest-colour completeness
+also asserts 15 redshift bins from 0.15 to 0.30. These are not CLI parameters.
+
+Common-support curves use HEALPix nside 8 and seed `20261016`, 256 draws.
+`controlled()` drops a cell unless every class has Kish effective count at
+least 20, and it discards the result unless at least 80% of draws (205 of
+256) have positive weight in every class. Rest-colour `raw()` and matched
+colour use that same 205-draw floor. `colour_followup.py`'s own `raw()` does
+not: it will store an interval from however many draws stayed positive.
+The stellar-mass panel matches redshift only. Matched-colour histograms use `linspace(-0.5, 2.5, 91)` plus
+explicit under/overflow bins, so every finite colour enters the normalisation.
+The plotted window is 0.3–1.9 mag.
+
+### Order and paths
+
+Scratch root:
+`/pscratch/sd/d/dkololgi/graphweb_desi/outputs/`. Inputs are hard-coded:
+
+- CIGALE VAC: `p12a_loa_cigale_20260929_v1/DESI_LOA_P12A_CIGALE_FULL_VAC.fits`
+- LSS parent: `.../LSScats/v2.1/BGS_BRIGHT_full_HPmapcut.dat.fits`
+- SED: `.../zouhu/vac/dr2/dr2_galaxy_sedfitting_v1.0.fits`
+- FastSpecFit: `/global/cfs/cdirs/desi/vac/dr2/fastspecfit/loa/v1.0/catalogs/`
+
+| Step | Script | Writes | CLI |
+|---|---|---|---|
+| 1 | `loa_mass_complete_20261016/run.py` | `loa_mass_complete_20261016_v1/` | `--stage {prepare,analyse,analyse_full,render,all}`, optional `--out` |
+| 2 | `colour_split.py`, then `colour_followup.py`, then `colour_lowz.py` | `loa_colour_split_20261016_v1`, `_v2`, `loa_colour_lowz_20261016_v1` | none |
+| 3 | `colour_mass_diagrams.py` | `loa_colour_mass_diagrams_20261016_v1` | none; reads those three window dirs |
+| 4 | `loa_rest_colour_20261016/run.py` | sibling `loa_rest_colour_20261016_v1/` | `--stage {prepare,analyse,all}` only |
+| 5 | `loa_rest_colour_20261016/render.py` | `<out>/<output-name>/` | `--output-name` must be a single path component; default `presentation` |
+| 6 | `loa_matched_colour_20261016/run.py` | sibling `loa_matched_colour_20261016_v1/` | none; reads `observed_original_*.fits` |
+
+`colour_export.py` writes `presentation/` under the v2 follow-up directory.
+`colour_lowz_export.py` does the same under the low-z directory. Both refuse
+an existing `presentation/` directory. `colour_followup.py` imports
+`colour_split.OUT`, so v1 must already exist. Rest-colour `validate.py` also
+re-reads `loa_colour_lowz_20261016_v1`, `loa_colour_split_20261016_v2`, and
+`loa_colour_split_20261016_v1` for TARGETID parity. It is not a check of the
+rest-colour directory alone.
+
+Launchers `loa_rest_colour_20261016/launch.sh` and
+`loa_matched_colour_20261016/launch.sh` unset `PYTHONPATH`, `PYTHONHOME`,
+`PYTHONUSERBASE`, and `LD_PRELOAD`, set `PYTHONNOUSERSITE=1`, and call
+`cosmic_env` Python. Rest colour forces one BLAS thread. Matched colour's
+launcher sets eight threads and the script uses three processes. The scripts
+themselves still require `SLURM_JOB_ID` and a `nid` host.
+
+### Fail-closed versus overwrite
+
+- Mass-complete JSON uses `open('x')`. The two sub-VAC FITS files raise
+  `FileExistsError`. `validate.py` and `validate_relationships.py` also use
+  `open('x')`. The output directory itself is created with `exist_ok=True`.
+- `np.savez` / `np.save` still replace `bright_parent.npz`,
+  `parent_histograms.npz`, and `analysis_input.npy` before a later exclusive
+  JSON write can fail. A second `prepare` on the same `--out` can change those
+  arrays and then stop.
+- `sed_parent.npy`, if already in that `--out`, is loaded and not rebuilt.
+  A changed SED file is invisible until that cache is absent.
+- Rest colour and matched colour use `mkdir(exist_ok=False)` on the run
+  directory. There is no `--out`, so a rerun needs a code edit or a removed
+  directory. Their `write()` helpers use `write_text` and will replace JSON
+  inside a directory that already exists. Rest `validate.py` replaces
+  `validation.json`. Matched `validate.py` replaces
+  `INDEPENDENT_VALIDATION.json`.
+- `render.py` refuses an existing figure directory. Matched `render()` creates
+  `figures/` with `exist_ok=True` and replaces files inside it.
+- `colour_histograms.py` has no allocation check. It rewrites
+  `docs/figures/loa_colour_histograms_20261016/` and
+  `docs/evidence/loa_colour_histograms_20261016/` (`histograms.csv`,
+  `validation.json`). Do not run it as a smoke test.
+
+### Import side effects
+
+`loa_rest_colour_20261016/run.py` loads
+`loa_mass_complete_20261016/run.py` through `importlib` at import and sets
+`OMP_NUM_THREADS`, `OPENBLAS_NUM_THREADS`, and `MKL_NUM_THREADS` to `1`. The
+contract test does this. It does not open a catalogue and does not check
+Slurm.
+
+`loa_matched_colour_20261016/render_v2.py` asserts a `nid` allocation and
+calls `render('figures_v2', 'histograms_v2.csv')` at import. Importing the
+module rewrites `figures_v2/`, `histograms_v2.csv`, and
+`PRESENTATION_V2.json`. Run it as a script, not an import.
+
+### Commands
+
+Contract tests stay in each script directory. They do not open catalogues.
+
+```bash
+cd workflows/presentation/loa_mass_complete_20261016 && python -m unittest test_run.py
+cd workflows/presentation/loa_rest_colour_20261016 && python -m unittest test_contract.py
+cd workflows/presentation/loa_matched_colour_20261016 && python -m unittest test_run.py
+```
+
+Payload stages belong on an approved CPU node (`nid*`, `SLURM_JOB_ID` set).
+Completed v1 directories already exist; a new scientific selection needs a new
+directory, which for steps 4–6 means editing the hard-coded `OUT`.
+
+```bash
+PY=/pscratch/sd/d/dkololgi/conda/envs/cosmic_env/bin/python
+$PY workflows/presentation/loa_mass_complete_20261016/run.py --stage prepare
+$PY workflows/presentation/loa_mass_complete_20261016/run.py --stage analyse
+$PY workflows/presentation/loa_rest_colour_20261016/run.py --stage prepare
+$PY workflows/presentation/loa_rest_colour_20261016/run.py --stage analyse
+$PY workflows/presentation/loa_rest_colour_20261016/render.py
+$PY workflows/presentation/loa_matched_colour_20261016/run.py
+```
 
 ## Pitfalls
 
@@ -577,4 +728,13 @@ not LSS `ABSMAG_RP1`.
 | Geometry cohort assert `297` or `185` | Those counts are locked to the A06 audit npz. This is not a reusable catalogue tool. |
 | LPS read as `P_WEB` or as T-web | L, P, S are neighbour-covariance shape fractions. T-web is the smoothed matter tidal tensor. Cohort "wall" is `P_WEB` argmax 1 (sheet). |
 | Off-slab neighbours look too inclusive | The ball keeps unsupported and low-quality VAC tracers. The slab cut is global absolute Cartesian z below 10 Mpc, not a cut around the target. |
-| Presentation payload refuses on a login node | Mass-complete, rest-colour, and matched-colour scripts require `SLURM_JOB_ID` and a hostname starting with `nid`. |
+| Thickness fraction ignores an edited shape cut | `plot_offslab.py` and `validate_offslab.py` hard-code `0.5847730874520835`. Only `compare_offslab.py` reads `shape_cut_frozen` from the parent receipt. |
+| Presentation payload refuses on a login node | Mass-complete, rest-colour, matched-colour, and the colour-split follow-ups require `SLURM_JOB_ID` and a hostname starting with `nid`. Contract tests under those directories do not. |
+| Colour window assert on 534070, 232024, or 611197 | Those observed-original row counts, and floors 10.60 / 10.69 / 10.96, are literals in both rest-colour and matched-colour `run.py`. |
+| Rest-colour `FileExistsError` with no `--out` | `prepare()` uses `mkdir(exist_ok=False)` on `loa_rest_colour_20261016_v1`. Matched colour does the same for its sibling directory. |
+| Mass-complete re-prepare changed `bright_parent.npz` then died | NumPy saves overwrite. JSON and the two sub-VAC FITS do not. `sed_parent.npy` is reused when present. |
+| `import render_v2` rewrote figures | `loa_matched_colour_20261016/render_v2.py` renders at import and requires a `nid` host. |
+| `colour_histograms.py` dirties git | It rewrites committed histogram figures, `histograms.csv`, and `validation.json`. It does not check Slurm. |
+| Colour plots say Wall/Cluster | Tick labels use those words for `P_WEB` columns 1 and 3. The VAC receipt says sheet and knot. |
+| Follow-up colour interval looks too narrow | `colour_followup.py` `raw()` does not require 205 valid bootstrap draws. Rest-colour and matched colour do. |
+| Mass-complete parent disagrees with the VAC cut | The presentation parent requires `DELTACHI2 > 40` plus the Bright `r` limits. The VAC writer uses `DELTACHI2 >= 25` and does not apply that flux cut. |

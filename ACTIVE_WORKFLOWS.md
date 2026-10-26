@@ -1,6 +1,6 @@
 # Active Workflow Index
 
-## P12-A Loa provisional delivery (updated 2026-10-19)
+## P12-A Loa provisional delivery (updated 2026-10-26)
 
 The existing full-survey halo48 VAC is technically complete and provisional.
 Current work preserves its trained model, original mocks, selection and posterior
@@ -37,8 +37,10 @@ interface, FITS columns, quality bits, and pitfalls:
   covariance shapes. Cohort "wall" is `P_WEB` argmax 1 (sheet). Results:
   `docs/filament_offslab_results_20261017.md`.
 - October presentation audits under `workflows/presentation/` are read-only.
-  Packaged entrypoints with local READMEs: `loa_mass_complete_20261016/`,
-  `loa_rest_colour_20261016/`, `loa_matched_colour_20261016/`. Index:
+  Order is mass-complete, then rest colour, then matched colour. The later two
+  scripts have no `--out` and refuse an existing v1 directory. Do not import
+  `loa_matched_colour_20261016/render_v2.py` (it renders at import) and do not
+  smoke-test `colour_histograms.py` (it rewrites committed figures). Contract:
   `docs/p12a_vac_operations.md`.
 
 Real-DESI coverage is unverified. Known high-redshift population mismatch remains;

@@ -606,10 +606,20 @@ python workflows/p12a_vac/filament_geometry/prepare_parent.py \
   --out /pscratch/sd/d/dkololgi/graphweb_desi/outputs/filament_parent_NEW
 ```
 
-October presentation audits live under `workflows/presentation/`. The packaged
+October presentation audits live under `workflows/presentation/`. The
 mass-complete, rest-colour, and matched-colour payloads also require a `nid`
-hostname. Local READMEs and the index in `docs/p12a_vac_operations.md` are the
-contracts; dated notes under `docs/` are the measurements.
+hostname. Run them in that order: rest colour reads the mass-complete
+`zdependent` FITS, and matched colour reads `observed_original_*.fits`.
+Neither later script has `--out`. Local READMEs and
+`docs/p12a_vac_operations.md` are the contracts; dated notes under `docs/`
+are the measurements.
+
+```bash
+# From each directory. No catalogue open.
+cd workflows/presentation/loa_mass_complete_20261016 && python -m unittest test_run.py
+cd workflows/presentation/loa_rest_colour_20261016 && python -m unittest test_contract.py
+cd workflows/presentation/loa_matched_colour_20261016 && python -m unittest test_run.py
+```
 
 ### NERSC helper scripts
 
@@ -671,7 +681,12 @@ These are login-node sanity checks, not pipeline stages:
 | Filament geometry `ImportError: prepare_parent` | Launch the file path. Those scripts are not a package. |
 | Filament `RuntimeError` / `FileExistsError` | `prepare_parent.py` and `compare_offslab.py` need `SLURM_JOB_ID` and a new `--out`. Plotting overwrites figures; validation rewrites `VALIDATION.json`. |
 | Filament cohort assert on 297 or 185 | Locked to the A06 audit npz. LPS values are covariance shapes, not `P_WEB`. |
-| Presentation colour/mass script refuses immediately | Those payloads need `SLURM_JOB_ID` and a hostname starting with `nid`. |
+| Presentation colour/mass script refuses immediately | Those payloads need `SLURM_JOB_ID` and a hostname starting with `nid`. Contract tests do not. |
+| Rest or matched colour `FileExistsError` on the v1 directory | Neither script has `--out`. `mkdir(exist_ok=False)` targets the sibling of `loa_mass_complete_20261016_v1`. |
+| Mass-complete arrays changed but JSON was refused | `prepare` overwrites `.npz` / `.npy`, then `open('x')` stops on existing JSON. `sed_parent.npy` is reused if it is already in `--out`. |
+| Importing `render_v2.py` rewrites figures or raises | The module asserts a `nid` host and calls `render()` at import. |
+| `colour_histograms.py` shows up in `git status` | It rewrites `docs/figures/loa_colour_histograms_20261016/` and the evidence CSV. It is not a dry run. |
+| Colour-figure "Wall" disagrees with the VAC header | Plot labels use Wall/Cluster for `P_WEB` columns 1 and 3. The receipt says sheet/knot. The presentation parent also uses `DELTACHI2 > 40`, not the VAC's `>= 25`. |
 
 ## Notes
 
