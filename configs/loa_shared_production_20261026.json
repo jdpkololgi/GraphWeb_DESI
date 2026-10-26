@@ -1,0 +1,22 @@
+{
+  "schema": "loa-shared-production-contract-v1",
+  "approved": true,
+  "approval": "User approved four single-80GB-GPU, 32-CPU desi_g/shared/Scratch jobs: two NGC at 32 hours and two SGC at 18 hours; no automatic retries.",
+  "output_root": "/pscratch/sd/d/dkololgi/graphweb_desi/outputs/loa_shared_sixfit_20261026_v1/production_v1",
+  "atlas": "/pscratch/sd/d/dkololgi/abacus/e2e_field_v3/loa_field_atlas_20260930_v1",
+  "draws": 4,
+  "nfe": 128,
+  "families": ["legacy_v", "unet_x", "transformer_v"],
+  "tf32": false,
+  "expanded_autocast": "bfloat16",
+  "posterior_qualified": false,
+  "automatic_retries": false,
+  "automatic_resume": false,
+  "resources": {"account": "desi_g", "qos": "shared", "constraint": "gpu&hbm80g", "nodes": 1, "gpus": 1, "cpus_per_task": 32, "licenses": "scratch", "maximum_total_gpu_hours": 100},
+  "tasks": {
+    "NGC_seed17": {"cap": "NGC", "seed": 17, "walltime_seconds": 115200},
+    "NGC_seed29": {"cap": "NGC", "seed": 29, "walltime_seconds": 115200},
+    "SGC_seed17": {"cap": "SGC", "seed": 17, "walltime_seconds": 64800},
+    "SGC_seed29": {"cap": "SGC", "seed": 29, "walltime_seconds": 64800}
+  }
+}
