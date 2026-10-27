@@ -61,3 +61,6 @@ assets/fonts/
 
 # Generated SBI TensorBoard training logs
 /sbi-logs/FMPE/
+
+# Generated local presentation run logs; preserve scripts and evidence.
+/workflows/presentation/loa_page_*.log
