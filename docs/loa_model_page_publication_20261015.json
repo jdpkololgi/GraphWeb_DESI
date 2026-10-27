@@ -1,0 +1,39 @@
+{
+  "page_id": "page_ac5434c5e9e88191967a300a10ade530",
+  "url": "https://chatgpt.com/space/page_ac5434c5e9e88191967a300a10ade530",
+  "title": "Loa field model pilot and galaxy properties",
+  "readback_verified": true,
+  "live_page_browser_preview": false,
+  "local_browser_checked": true,
+  "files": {
+    "field_NGC": {
+      "bytes": 138379,
+      "sha256": "a6314cccc2d86c7cafb6b7ab16af04861759936e32654fafe1941ad67242578e"
+    },
+    "field_SGC": {
+      "bytes": 138189,
+      "sha256": "e9b667dba8e8aa5f869e38d1d29b0166c4bd30f5463f5c5dcc067cd37aa42218"
+    },
+    "properties": {
+      "bytes": 121214,
+      "sha256": "2a29a5cb1b78701b3d68c9bf4c212a79476bae041cee28f43ec8d8a3a7c1cdea"
+    }
+  },
+  "embeds": [
+    {
+      "name": "field_NGC",
+      "file_reference": "fde1_bGliZmlsZV9rRGZaS0lOV3JCdmkyTkRYLUc0bmdn_FileDrive_a92829e351a88191bec4b91b99dfa784"
+    },
+    {
+      "name": "field_SGC",
+      "file_reference": "fde1_bGliZmlsZV9tclVXYnBGUlllLUVITUNpczZwbEZR_FileDrive_a92829e351a88191bec4b91b99dfa784"
+    },
+    {
+      "name": "properties",
+      "file_reference": "fde1_bGliZmlsZV83WC1WOXU3MDVpQUoxRzI3dEU3TGhB_FileDrive_a92829e351a88191bec4b91b99dfa784"
+    }
+  ],
+  "inference_job": "59827704",
+  "final_verification_job": "59828019",
+  "scope": "Two local observed cores, six fits, four draws; not full survey or calibration qualification"
+}
