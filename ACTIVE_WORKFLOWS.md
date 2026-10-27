@@ -1,5 +1,18 @@
 # Active Workflow Index
 
+## Upstream retraining phase decision (2026-10-27)
+
+Illustris has adopted a shared P12-A/CFM 20/3/2 split: train ph000–005,
+ph007–011, ph014–017, ph020–024; development/calibration ph006/012/013;
+final test ph018/019 after model/calibration freeze. Gaussian R7 is unchanged.
+Authority: `../TNG/Illustris/configs/shared_phase_policy_20261027.json` and
+`../TNG/Illustris/docs/shared_phase_policy_20261027.md`, plus its SCIENCE_LOG.
+Expanded training products and runtime contracts are not yet ready. This
+supersedes old exclusions for NEW fits only; preserve existing VAC/checkpoint
+provenance and historical results. A replacement handoff needs new checkpoint,
+transforms and phase-policy bindings, fresh calibration and golden-mock parity.
+No DESI deployment, file replacement or scheduler work is authorized here.
+
 ## P12-A Loa provisional delivery (2026-09-28)
 
 The existing full-survey halo48 VAC is technically complete and provisional.
