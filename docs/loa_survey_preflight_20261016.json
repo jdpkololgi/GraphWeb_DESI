@@ -1,0 +1,63 @@
+{
+  "status": "preflight_passed_production_not_authorized",
+  "scratch_root": "/pscratch/sd/d/dkololgi/graphweb_desi/outputs/loa_survey_preflight_20261016_v2",
+  "allocations": {
+    "cpu": {"job_id": 59833970, "account": "desi", "state": "COMPLETED", "exit_code": "0:0", "elapsed_seconds": 681, "approved_seconds": 3600},
+    "gpu": {"job_id": 59834307, "account": "desi_g", "state": "COMPLETED", "exit_code": "0:0", "elapsed_seconds": 4657, "approved_seconds": 7200, "gpus": 1, "model": "NVIDIA A100-SXM4-80GB"}
+  },
+  "validation": {
+    "focused_tests_passed": 9,
+    "main_panel_tiles": 16,
+    "main_panel_fine_draws": 720,
+    "main_panel_coarse_draws": 240,
+    "independent_replay_exact": true,
+    "completed_draw_preserved_on_resume": true,
+    "noop_resume_new_draws": 0,
+    "empty_tile_six_fit_check_passed": true,
+    "archive_verified_members": 514,
+    "archive_bytes": 117422080,
+    "original_outputs_deleted": false,
+    "initial_failure": "v1 CPU reader lock contention; corrected and retested in fresh v2 outputs"
+  },
+  "coverage": {
+    "tiles": 2472,
+    "parent_galaxies": 5436413,
+    "retained_after_interpolation_edge_cut": 4628192,
+    "excluded_at_interpolation_edges": 808221,
+    "zero_retained_galaxy_tiles": 49,
+    "redshift_range": [0.15, 0.55]
+  },
+  "measured_projections": {
+    "four_draw_gpu_hours_with_restart_overhead": 99.59930740395639,
+    "additional_28_draw_gpu_hours_with_restart_overhead": 697.1951518276948,
+    "full_32_draw_gpu_hours_with_restart_overhead": 796.7944592316511,
+    "parallel_preparation_cpu_node_hours": 0.6238097174720063,
+    "preparation_plus_fresh_index_cpu_node_hours": 0.676277089153671,
+    "cpu_workers": 8,
+    "cpu_observed_speedup": 3.182454273723049,
+    "merge_and_page_packaging_benchmarked": false
+  },
+  "proposed_not_authorized_ceiling": {
+    "gpu_hours": 1236,
+    "cpu_node_hours": 10,
+    "gpu_array_tasks_per_stage": 103,
+    "gpu_array_concurrency": 8,
+    "tiles_per_task": 24,
+    "preview_task_walltime_hours": 2,
+    "extension_task_walltime_hours": 10,
+    "preparation_cpu_node_walltime_hours": 2,
+    "merge_cpu_node_walltime_hours_provisional": 8,
+    "scratch_headroom_bytes": 1000000000000
+  },
+  "receipt_hashes": {
+    "INDEX.json": "5b30ad1261b7da27a8ad6065aabf8576c73abc794b065b6d2c3bc617269a375a",
+    "MEASURED_BUDGET.json_original": "22e9107ce2d087f2c1e0d7668b2c4cf59d9637ad0ac139050043b45e79fe2f77",
+    "GPU_PREFLIGHT.json": "2847886d5237a65e17f44f65d4d43bac68ffea9dbe428c606332406566686481",
+    "SOURCE_SNAPSHOT/sources.tar": "b528bf90a282cebce27e77635e167dae8d3ce883766d35aa88ac1469685f4325",
+    "budget_closeout_source.tar": "d65335c54271079ef72757039f2ab19f7816bcc88161b745702f71f310ad54bb"
+  },
+  "production_launched": false,
+  "page_changed": false,
+  "posterior_calibration_claimed": false,
+  "production_gates": ["explicit approval", "frozen production launcher and partition manifest", "archive staging cleanup and recovery policy", "full-preview coverage and numerical review before extension"]
+}
