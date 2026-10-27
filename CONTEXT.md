@@ -1,5 +1,21 @@
 # Research context — GraphWeb_DESI
 
+## Abacus label-provenance warning (2026-10-19)
+
+The shared Illustris SCIENCE_LOG records a low-redshift halo-index namespace bug
+and the migration from host-centre to own-galaxy tidal targets. The v2 annotator
+uses RA/DEC/Z_COSMO for every population, including HOD satellites, and keeps
+exact independent-position checks separate in INDEP_POS. Existing DESI predictions
+must retain their original checkpoint/target provenance; do not call an old model
+corrected merely because a new label catalogue exists. Trace actual training-label
+dependencies before deciding whether predictions require replacement.
+
+The bounded product register is `../TNG/Illustris/configs/product_lifecycle_20261019.json`;
+its scope is the named Abacus roots, not an exhaustive GraphWeb output audit.
+See `../TNG/Illustris/docs/product_lifecycle_20261019.md`. Conditional-field models
+with direct native-density targets are not automatically affected by this bug.
+No DESI model or prediction file was moved, changed or recertified by this notice.
+
 ## Role
 
 GraphWeb_DESI is the DESI observational application layer of GraphWeb. It
