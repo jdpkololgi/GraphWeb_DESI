@@ -1,5 +1,20 @@
 # Active Workflow Index
 
+## Exploratory six-fit field displays (2026-10-16 to 2026-10-26)
+
+Independent-tile survey archives and shared-state cap fields from six frozen
+fits. Both are `posterior_qualified: false`. They do not replace the frozen
+P12-A VAC below, and they are not the same noise field.
+
+- Launch contract, overwrite rules, and the two noise namespaces:
+  `docs/loa_sixfit_operations.md`.
+- Survey lifecycle: `workflows/presentation/loa_survey_production_20261016.py`
+  and `workflows/presentation/loa_survey_runner_20261016.py`.
+- Shared-state production, from a hash-bound snapshot only:
+  `workflows/presentation/loa_shared_production_20261026.py`.
+- Filament-geometry follow-ups on the frozen VAC, and the Tokyo slide scripts,
+  are indexed from that same operations page.
+
 ## P12-A Loa provisional delivery (2026-09-28)
 
 The existing full-survey halo48 VAC is technically complete and provisional.

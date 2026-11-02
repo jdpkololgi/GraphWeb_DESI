@@ -141,6 +141,31 @@ python galaxy_catalog.py --help
 python investigate_edges.py --help
 ```
 
+### Six-fit Loa field displays
+
+This path samples frozen field models on observed Loa. It is not a command for
+the GAT VAC or the Jraph wedge above, and a finished run is not a calibrated
+posterior. Contracts, roots, and the distinction between per-tile draws and
+shared-cap draws are in `docs/loa_sixfit_operations.md`.
+
+The production modules do not submit Slurm. Payloads require an allocated
+`nid` host. The runner's default `--root` is the 16-tile preflight; pass the
+production root explicitly. Shared-state production refuses an existing output
+directory, including one that already holds checkpoints.
+
+The survey CLIs parse with the standard library:
+
+```bash
+python workflows/presentation/loa_survey_production_20261016.py --help
+python workflows/presentation/loa_survey_runner_20261016.py --help
+```
+
+`loa_shared_sixfit_20261026.py` and `loa_shared_production_20261026.py` import
+the Illustris samplers before `argparse`, so `--help` needs `ILLUSTRIS_ROOT`
+and the training environment. Flags are `--mode {smoke,benchmark}`, `--out`,
+`--cap`, `--seed`, `--seconds`, and `--draws` for the engineering script, and
+`--snapshot`, `--manifest-sha256`, `--cap`, and `--seed` for production.
+
 ## Notes
 
 - Active workflows and statuses: `ACTIVE_WORKFLOWS.md`
