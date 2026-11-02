@@ -45,6 +45,14 @@ The validated Jraph path uses comoving Mpc coordinates (`--coord-units mpc`,
 the graph-builder default) for Abacus training parity. Older Mpc/h wedge
 artifacts are deprecated; see `workflows/catalog/to-delete_README.md`.
 
+### C. Exploratory six-fit field displays
+
+`workflows/presentation/loa_survey_runner_20261016.py` writes independent-tile
+density draws for six frozen fits. `workflows/presentation/loa_shared_production_20261026.py`
+writes one shared-state field per cap and seed from those prepared tiles.
+Neither product replaces the P12-A per-galaxy VAC, and the two noise namespaces
+differ. See `docs/loa_sixfit_operations.md`.
+
 ## Quick start
 
 Run from repo root:

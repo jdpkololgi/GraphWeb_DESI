@@ -1,5 +1,13 @@
 # Frozen P12-A filament morphology investigation: first compute gate
 
+Parent extraction later completed; see "Execution completed" at the end of this
+file. Morphology measurements are not in the planning paragraphs below. Read
+`docs/filament_offslab_results_20261017.md`,
+`docs/filament_mock_truth_20261017.md`,
+`docs/filament_mock_examples_20261017.md`, and
+`docs/filament_realspace_20261017.md`. The operations index is
+`docs/loa_sixfit_operations.md`.
+
 Current verdict: **unresolved**. Cached projection statistics do not warrant
 retraining, visual relabelling, or a change to the production catalogue.
 

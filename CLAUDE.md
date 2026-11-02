@@ -10,6 +10,7 @@ Guidance for Claude Code / automation agents working in this repository.
 - `README.md` — repository orientation.
 - `ACTIVE_WORKFLOWS.md` — current canonical entrypoints and their status.
 - `RUNBOOK.md` — validated launch commands and environment setup.
+- `docs/loa_sixfit_operations.md` — six-fit survey versus shared-cap launch contract. Not a VAC.
 - `~/.claude/CLAUDE.md` — cross-repo map, conda envs, and Perlmutter job recipes.
 - the `nersc` skill — NERSC/Slurm depth (auto-loads for Perlmutter work).
 
@@ -18,9 +19,11 @@ Guidance for Claude Code / automation agents working in this repository.
 This repository processes DESI (Dark Energy Spectroscopic Instrument) BGS
 (Bright Galaxy Survey) galaxy catalogs and applies graph neural network models
 trained on simulations to infer cosmic-web environments for observed galaxies.
-It currently contains two analysis paths: a PyTorch GAT classifier for
-VAC-style environment labels and a Gudhi/cuGraph/Jraph wedge workflow for
-Abacus-parity eigenvalue regression.
+It currently contains a PyTorch GAT classifier for VAC-style environment
+labels, a Gudhi/cuGraph/Jraph wedge workflow for Abacus-parity eigenvalue
+regression, and an exploratory six-fit Loa field-display path. The field
+displays are not a replacement VAC; their launch contract is
+`docs/loa_sixfit_operations.md`.
 
 ## Running the Pipeline
 

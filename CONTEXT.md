@@ -56,6 +56,11 @@ products, not the fundamental inference target.
 
 ## Current DESI state
 
+- The October 2026 six-fit field displays are a separate exploratory product.
+  Independent-tile archives and shared-cap fields both leave
+  `posterior_qualified` false and do not replace the frozen P12-A VAC.
+  Launch contracts and the two noise namespaces are in
+  `docs/loa_sixfit_operations.md`.
 - DESI BGS DR2 Loa / FastSpecFit integration is the observational basis.
 - Approximately 112,755 galaxies have zero-shot eigenvalue inference with a
   roughly 99.7% TARGETID match to FastSpecFit.
