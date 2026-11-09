@@ -47,6 +47,20 @@ for launch commands see `RUNBOOK.md`.
   - Config paths: `shared/config_paths.py` (shim: `config_paths.py`)
   - Abacus/Jraph coordinate and edge-feature parity: `shared/abacus_gnn_parity.py`
 
+## Frozen October follow-ups
+
+The slab audit reads the frozen plotted Loa rows. The wall slides and the
+real-space comparison use the exposed ph006 mock. None of these scripts
+replaces the P12-A VAC.
+
+- Tokyo slide renderers write under `~/fmsu_tokyo_20261010` and four of the
+  five scripts do that work at import. Launch contract:
+  `docs/tokyo_source_inventory_20261027.md`.
+- Matter, sampling, and redshift-space comparison for the three fixed mock
+  regions: `docs/filament_realspace_20261017.md`. Run from
+  `workflows/p12a_vac/filament_geometry` (bare imports). `realspace_sampling_null.py`
+  overwrites its JSON on import.
+
 ## Visualization
 
 - Active: `workflows/visualization/visualize_desi_wedge_cweb_3d.ipynb`
