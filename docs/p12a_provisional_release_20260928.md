@@ -128,5 +128,8 @@ explicit decision and validation programme.
 ## Galaxy-property follow-up
 
 [Current VAC versus saved CIGALE wedge properties](p12a_cigale_environment_20260928.md)
-provides raw and mass/redshift-controlled star-formation comparisons. This
-property cross-check does not change the VAC or its provisional status.
+and the [full-survey CIGALE join](p12a_loa_cigale_20260929.md) are descriptive
+property checks. The matched CFM comparison and offline Mpc/h viewer are
+indexed in [P12-A operations](p12a_vac_operations.md). None of these change
+the VAC or its provisional status. The spatial atlas on this page is Planck18
+comoving Mpc; do not overlay it on the viewer grid.
