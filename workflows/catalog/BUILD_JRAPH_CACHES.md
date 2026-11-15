@@ -80,24 +80,52 @@ treated as legacy unless rebuilt with `--coord-units mpc`.
 source /global/homes/d/dkololgi/GraphWeb_DESI/workflows/catalog/JRAPH_INPUTS_expanded_wedge.txt
 ```
 
+**Do not use** `workflows/jraph_inference/build_desi_wedge_jraph_cache.py` for
+this path. That script induces a wedge from the GAT Delaunay NetworkX cache
+(`{repo}/cache/DESI_delaunay_*.pt`) and stores reverse density-contrast as
+`-dc`. Production inference uses cuGraph `*_gnn_arrays.npz` plus
+`shared/abacus_gnn_parity.py`, which inverts density-contrast as `1/dc` on the
+reverse edge. `experiment_desi_feature_parity.py` is a frozen 2026-05-29
+Mpc/h diagnostic, not a current launcher.
+
 **Graph construction chain:** build the bright catalog with
-`workflows/catalog/build_bgs_maglim_catalog.py`, build the full Mpc graph with
-`workflows/graph_construction/build_desi_bgs_gudhi_graph.py`, export features
-with `workflows/graph_construction/desi_graph_features_cugraph.py`, and induce
-the wedge with `workflows/graph_construction/subset_desi_graph_wedge.py`.
+`workflows/catalog/build_bgs_maglim_catalog.py` (`ZWARN==0`, `DELTACHI2>=25`,
+`SPECTYPE==GALAXY`, BGS_BRIGHT bits; **no** z or mass cut; columns
+`TARGET_RA`/`TARGET_DEC`). Default `--zall-path` is
+`/global/cfs/cdirs/desi/public/dr2/spectro/redux/loa/zcatalog/v1/zall-pix-loa.fits`
+(public DR2), which is not `DESI_ZCAT_FILE`. Then build the full Mpc graph with
+`workflows/graph_construction/build_desi_bgs_gudhi_graph.py` (hemisphere-split;
+no north–south edges; keep catalog row order), export features with
+`workflows/graph_construction/desi_graph_features_cugraph.py` (`--out-prefix
+desi_bgs_cugraph` for the validated products; script default is
+`desi_delaunay_cugraph`), and induce the wedge with
+`workflows/graph_construction/subset_desi_graph_wedge.py`.
+
+On Perlmutter, `workflows/catalog/sbatch_desi_bgs_bright_pipeline.sh` wraps
+those three stages as `STEP=2|2b|3` (or `SUBMIT_CHAIN=1` from login). Treat its
+hard-coded output dirs / sky cut as the older narrow bright wedge unless you
+retarget them to the expanded Mpc paths in `JRAPH_INPUTS_expanded_wedge.txt`
+(see `RUNBOOK.md`).
 
 **Inference prerequisites from the code path:**
 
 - The calibration cache should contain the training `target_scaler` and, for the
-  validated 15-d run, `node_feature_scaler`.
+  validated 15-d run, `node_feature_scaler`. Feeding raw DESI `x` when training
+  used `--power-scale-node-features` collapses class fractions (~100% void).
+- 15-d halo_xcom caches store ordered linear increments after
+  `target_scaler.inverse_transform` (`v1=λ1`, `v2=λ2−λ1`, `v3=λ3−λ2`).
+  Reconstruct physical eigenvalues before plotting or classifying.
 - DESI edges are duplicated to the bidirectional Abacus cache convention before
-  the Jraph forward pass.
+  the Jraph forward pass (`shared/abacus_gnn_parity.py`).
 - Edge length and density-contrast columns are log-transformed and standardized
   from the Abacus GNN NPZ; pass `--abacus-gnn-arrays`.
+- Put `ILLUSTRIS_ROOT` on `sys.path` before this repo so `import shared.*`
+  resolves to Illustris `graph_net_models`, not GraphWeb_DESI `shared/`.
 
 **Inference (CPU or GPU):** see
-`GraphWeb_DESI/workflows/jraph_inference/jraph_infer_desi_wedge_from_gnn_npz.py`
-and `JRAPH_INPUTS_expanded_wedge.txt`.
+`GraphWeb_DESI/workflows/jraph_inference/jraph_infer_desi_wedge_from_gnn_npz.py`,
+`JRAPH_INPUTS_expanded_wedge.txt`, and the thin wrapper
+`workflows/catalog/run_infer_expanded_wedge_mpc.sh`.
 
 ```bash
 conda activate cosmic_env
