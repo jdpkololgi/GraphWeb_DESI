@@ -125,6 +125,96 @@ the basename as `--run-name`. Jraph inference uses `ILLUSTRIS_ROOT` to find
 `shared/graph_net_models.py`; the GAT classifier uses `ILLUSTRIS_REPO_ROOT` from
 `shared/config_paths.py`.
 
+### FlowJAX/SBI DESI wedge posterior inference
+
+This path uses the expanded Mpc-parity DESI wedge graph arrays from the
+Gudhi/cuGraph/Jraph workflow, but it runs an Abacus-trained FlowJAX neural
+posterior estimator (NPE). Use it when you need posterior widths and class
+probabilities, not only deterministic eigenvalue point estimates.
+
+The inference step needs a GPU node, JAX/Haiku/Jraph/FlowJAX dependencies,
+`ILLUSTRIS_ROOT` pointing at the Illustris training repo, and a FlowJAX model
+checkpoint with its matching training cache. The cache must contain
+`node_feature_scaler`; for scale-invariant production runs, the model and cache
+must both have been trained/built with the matching scale-invariant feature
+transform.
+
+```bash
+source workflows/catalog/JRAPH_INPUTS_expanded_wedge.txt
+
+export ILLUSTRIS_ROOT=/global/homes/d/dkololgi/TNG/Illustris
+export FLOWJAX_MODEL_PATH=/path/to/flowjax_sbi_model_seed_42_best.pkl
+export FLOWJAX_CACHE=/path/to/processed_jraph_data_scaled_linear_eig.pkl
+export PATH1_EDGE_SCALER_NPZ=/pscratch/sd/d/dkololgi/abacus/graph_constructions/wedges/path1_fiberassign/path1_fiberassign_mock_bgs_maglim_rs7_wedge_ra120_160_dec14p5_30p6_z0p2_0p3_cugraph_gnn_arrays.npz
+
+python workflows/sbi_inference/infer_desi_wedge_flowjax.py \
+  --model-path "${FLOWJAX_MODEL_PATH}" \
+  --calibration-cache "${FLOWJAX_CACHE}" \
+  --abacus-gnn-arrays "${PATH1_EDGE_SCALER_NPZ}" \
+  --desi-gnn-arrays "${DESI_GNN_ARRAYS}" \
+  --desi-gnn-metadata "${DESI_GNN_METADATA}" \
+  --desi-global-node-ids "${DESI_GLOBAL_NODE_IDS}" \
+  --desi-wedge-catalog-npz "${DESI_WEDGE_CATALOG_NPZ}" \
+  --num-posterior-samples 128 \
+  --lambda-threshold 0.2 \
+  --scale-invariant-features \
+  --output-dir /pscratch/sd/d/dkololgi/graphweb_desi/flowjax_inference_outputs \
+  --run-name desi_wedge_flowjax_linear_si
+```
+
+Important constraints:
+
+- `DESI_GNN_METADATA` must report `coordinate_units: "mpc"`; Mpc/h wedge
+  artifacts are rejected.
+- The DESI node-feature order must be `Degree, Clustering, Density,
+  Neigh Density, I_eig1, I_eig2, I_eig3`.
+- `--abacus-gnn-arrays` must be the path1 fiberassign wedge used to fit the edge
+  scaler for the FlowJAX training graph. A same-sized regression wedge can pass
+  shape checks but fail the scaler-constant assertion.
+- `--scale-invariant-features` is only valid with a matching scale-invariant
+  model/cache. `--edge-domain-adapt` and `--node-domain-adapt` are diagnostic
+  domain-adaptation experiments, not neutral defaults.
+- Posterior eigenvalue samples are sorted into ascending physical order by
+  default; pass `--no-sort` only when studying the raw flow output.
+
+Expected inference outputs in `<output-dir>/<run-name>/`:
+
+- `desi_wedge_flowjax_preds.npz`: `lambda_mean`, `lambda_std`, `classprob`,
+  `hard_class`, `p_exceed`, sky coordinates, `global_node_id`, embeddings, and a
+  posterior-sample subset.
+- `summary.json`: provenance, scaler constants, class fractions, and consistency
+  diagnostics.
+
+Generate truth-free DESI figures and optional Abacus overlays:
+
+```bash
+PRED_DIR=/pscratch/sd/d/dkololgi/graphweb_desi/flowjax_inference_outputs/desi_wedge_flowjax_linear_si
+
+python workflows/sbi_inference/plot_desi_wedge_flowjax.py \
+  --preds-npz "${PRED_DIR}/desi_wedge_flowjax_preds.npz" \
+  --summary-json "${PRED_DIR}/summary.json" \
+  --calibration-cache "${FLOWJAX_CACHE}" \
+  --abacus-self-npz /path/to/abacus_self_flowjax_preds.npz \
+  --output-dir "${PRED_DIR}/figures"
+```
+
+Join the NPE environment products to LOA FastSpecFit galaxy properties and plot
+property/environment closure diagnostics:
+
+```bash
+python workflows/sbi_inference/build_desi_wedge_property_join.py \
+  --preds "${PRED_DIR}/desi_wedge_flowjax_preds.npz"
+
+python workflows/sbi_inference/plot_property_environment_closure.py \
+  --table "${PRED_DIR}/desi_wedge_env_props.parquet"
+```
+
+Mirror finished figures into the canonical browsable figure tree:
+
+```bash
+scripts/sync_figures_to_canonical.sh "${PRED_DIR}/figures" desi_wedge_flowjax_linear_si
+```
+
 ### Utility workflows
 
 Canonical:
