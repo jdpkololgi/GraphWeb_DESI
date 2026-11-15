@@ -142,10 +142,12 @@ curl -L -o assets/fonts/IBMPlexSans-Italic.ttf \
 ```
 
 `plot_style.register_fonts()` (called automatically by `apply_style()`) loads
-these from `assets/fonts/` if present, and falls back to DejaVu Sans with a
-single `warnings.warn(...)` if they're missing — it will never hard-crash a
-notebook over a missing font file, but the fallback is visually obvious
-(different typeface) so it won't go unnoticed.
+these from `GRAPHWEB_FONT_DIR` if set, otherwise `assets/fonts/` next to the
+repo root. The `assets/fonts/` tree is gitignored (`.gitignore`); each machine
+needs the one-time download. Missing files fall back to DejaVu Sans with a
+single `warnings.warn(...)` — it will never hard-crash a notebook over a
+missing font file, but the fallback is visually obvious (different typeface)
+so it won't go unnoticed.
 
 ---
 
