@@ -86,6 +86,12 @@ source /global/homes/d/dkololgi/GraphWeb_DESI/workflows/catalog/JRAPH_INPUTS_exp
 with `workflows/graph_construction/desi_graph_features_cugraph.py`, and induce
 the wedge with `workflows/graph_construction/subset_desi_graph_wedge.py`.
 
+On Perlmutter, `workflows/catalog/sbatch_desi_bgs_bright_pipeline.sh` wraps
+those three stages as `STEP=2|2b|3` (or `SUBMIT_CHAIN=1` from login). Treat its
+hard-coded output dirs / sky cut as the older narrow bright wedge unless you
+retarget them to the expanded Mpc paths in `JRAPH_INPUTS_expanded_wedge.txt`
+(see `RUNBOOK.md`).
+
 **Inference prerequisites from the code path:**
 
 - The calibration cache should contain the training `target_scaler` and, for the
@@ -96,8 +102,9 @@ the wedge with `workflows/graph_construction/subset_desi_graph_wedge.py`.
   from the Abacus GNN NPZ; pass `--abacus-gnn-arrays`.
 
 **Inference (CPU or GPU):** see
-`GraphWeb_DESI/workflows/jraph_inference/jraph_infer_desi_wedge_from_gnn_npz.py`
-and `JRAPH_INPUTS_expanded_wedge.txt`.
+`GraphWeb_DESI/workflows/jraph_inference/jraph_infer_desi_wedge_from_gnn_npz.py`,
+`JRAPH_INPUTS_expanded_wedge.txt`, and the thin wrapper
+`workflows/catalog/run_infer_expanded_wedge_mpc.sh`.
 
 ```bash
 conda activate cosmic_env
