@@ -1,5 +1,14 @@
 # Research context — GraphWeb_DESI
 
+## Upstream low-z handoff (2026-11-18)
+
+Illustris has verified P12-A encoder and CFM training inputs for observed
+redshifts 0.01–0.55 (R7, shared 20/3/2 split). This supersedes the October
+preparation status below. There are no new trained checkpoints to adopt here:
+keep observational inference and VAC defaults unchanged pending retraining
+and validation. See the upstream SCIENCE_LOG and
+`../TNG/Illustris/docs/lowz_preparation_checkpoint_20261029.md`.
+
 ## Upstream retraining phase decision (2026-10-27)
 
 Illustris has adopted a shared P12-A/CFM 20/3/2 split: train ph000–005,
